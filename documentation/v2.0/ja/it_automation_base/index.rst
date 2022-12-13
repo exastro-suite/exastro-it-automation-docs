@@ -1,14 +1,14 @@
-====================================
-Exastro-it-automation のシステム構成
-====================================
+==========================
+Exastro IT Automation BASE
+==========================
 
 .. toctree::
    :maxdepth: 2
 
-   architecture
+   .. architecture
    basic_console
    .. connecting_ad
    .. sso
-   .. management_console
+   management_console
    .. rbac
    conductor

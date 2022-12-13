@@ -1,0 +1,28 @@
+name: Auto merge
+
+on:
+  push:
+    branches:
+    - '**'
+    - '!main'
+
+jobs:
+  auto-merge:
+    if: github.ref_name != 'main' && github.repository_owner != 'exastro-suite'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+      - name: Create Pull Request ${{ github.ref_name }} to main
+        id: create-pull-request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PULL_REQUEST_URI=$(gh pr create -B main -t 'Create pull request to main' -b "")
+          echo "::set-output name=PULL_REQUEST_URI::$PULL_REQUEST_URI"
+      - name: Merge Pull Request ${{ github.ref_name }} to main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr merge ${{steps.create-pull-request.outputs.PULL_REQUEST_URI}} --merge
