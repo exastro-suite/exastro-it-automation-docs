@@ -21,7 +21,7 @@ jobs:
         GITHUB_USER: "builduser"
         GITHUB_EMAIL: "test-builduser@example.com"
       run: |
-          git merge ${{ github.ref_name }}
+          git merge -m "automerge" ${{ github.ref_name }}
 
     - name: Set up Python
       uses: actions/setup-python@v1
