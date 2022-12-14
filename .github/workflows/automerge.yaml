@@ -13,18 +13,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           ref: ${{ github.ref }}
-          persist-credentials: false
       - name: Create Pull Request ${{ github.ref_name }} to main
         id: create-pull-request
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.AUTO_MERGE_TOKEN }}
         run: |
           PULL_REQUEST_URI=$(gh pr create -B main -t 'Create pull request to main' -b "")
           echo "::set-output name=PULL_REQUEST_URI::$PULL_REQUEST_URI"
       - name: Merge Pull Request ${{ github.ref_name }} to main
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.AUTO_MERGE_TOKEN }}
         run: |
           gh pr merge ${{steps.create-pull-request.outputs.PULL_REQUEST_URI}} --merge
