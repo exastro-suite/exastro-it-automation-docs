@@ -12,15 +12,16 @@ jobs:
     if: "!contains(github.event.head_commit.message, 'auto rebuilding site')"
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        ref: "main"
+      run: |
+          env
+          git clone git@github.com:${GITHUB_REPOSITORY}.git src
 
     - name: Merge ${{ github.ref_name }} to main
       env:
         GITHUB_USER: "builduser"
         GITHUB_EMAIL: "test-builduser@example.com"
       run: |
+          cd src
           git merge -m "automerge" ${{ github.ref_name }}
 
     - name: Set up Python
