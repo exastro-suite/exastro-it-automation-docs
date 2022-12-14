@@ -1,5 +1,6 @@
 # exastro-it-automation-docs
 [![Auto merge](../../actions/workflows/automerge.yaml/badge.svg)](../../actions/workflows/automerge.yaml) 
+[![RST2HTML](../../actions/workflows/main.yaml/badge.svg)](actions/workflows/main.yaml)
 [![pages-build-deployment](../../actions/workflows/pages/pages-build-deployment/badge.svg)](actions/workflows/pages/pages-build-deployment)
 
 Exastro IT Automation のドキュメントは reStructuredText 形式で記述されています。
