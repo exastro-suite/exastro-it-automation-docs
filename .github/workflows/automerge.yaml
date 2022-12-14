@@ -13,6 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           ref: ${{ github.ref }}
           persist-credentials: false
       - name: Create Pull Request ${{ github.ref_name }} to main
