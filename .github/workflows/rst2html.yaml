@@ -19,8 +19,10 @@ jobs:
           chmod 400 ~/.ssh/id_rsa
     - name: Checkout
       run: |
-          env
           git clone git@github.com:${GITHUB_REPOSITORY}.git src -b main
+          cd src
+          git config --local user.name "${GITHUB_USER}"
+          git config --local user.email "${GITHUB_EMAIL}"
 
     - name: Merge ${{ github.ref_name }} to main
       env:
@@ -50,8 +52,6 @@ jobs:
         GITHUB_EMAIL: "test-builduser@example.com"
       run: |
           cd src
-          git config --local user.name "${GITHUB_USER}"
-          git config --local user.email "${GITHUB_EMAIL}"
           git remote set-url origin git@github.com:${GITHUB_REPOSITORY}.git
           git add -f documentation/html
           git commit -m "auto rebuilding site"
