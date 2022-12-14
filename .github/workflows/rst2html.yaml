@@ -1,19 +1,27 @@
 name: RST2HTML
 on:
-  pull_request:
-    types:
-      - closed
+  push:
+    branches:
+    - '**'
+    - '!main'
 
 jobs:
   if_merged:
     name: Build
     runs-on: ubuntu-latest
-    if: "github.event.pull_request.merged == true && !contains(github.event.head_commit.message, 'auto rebuilding site')"
+    if: "!contains(github.event.head_commit.message, 'auto rebuilding site')"
     steps:
     - name: Checkout
       uses: actions/checkout@v2
       with:
         ref: "main"
+
+    - name: Merge ${{ github.ref_name }} to main
+      env:
+        GITHUB_USER: "builduser"
+        GITHUB_EMAIL: "test-builduser@example.com"
+      run: |
+          git merge ${{ github.ref_name }}
 
     - name: Set up Python
       uses: actions/setup-python@v1
@@ -37,7 +45,7 @@ jobs:
     - name: Push
       env:
         GITHUB_USER: "builduser"
-        GITHUB_EMAIL: "test-builduser@sample.com"
+        GITHUB_EMAIL: "test-builduser@example.com"
       run: |
           git config --local user.name "${GITHUB_USER}"
           git config --local user.email "${GITHUB_EMAIL}"
