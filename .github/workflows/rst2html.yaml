@@ -37,23 +37,31 @@ jobs:
           git merge -m "auto merge" origin/${{ github.ref_name }}
 
     - name: Set up Python
+      if: "github.repository_owner != exastro-suite"
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
 
     - name: Install dependencies
+      if: "github.repository_owner != exastro-suite"
       run: |
           cd src
           python -m pip install --upgrade pip
           pip install -r documentation/requirements.txt
     - name: Build
+      if: "github.repository_owner != exastro-suite"
       run: |
           cd src/documentation
           make html
-    - name: Push
+    - name: Commit
+      if: "github.repository_owner != exastro-suite"
       run: |
           cd src
           git remote set-url origin git@github.com:${GITHUB_REPOSITORY}.git
           git add -f documentation/html
           git commit -m "auto rebuilding site"
+          git push origin main
+    - name: Push
+      run: |
+          cd src
           git push origin main
