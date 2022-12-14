@@ -1,6 +1,6 @@
 # exastro-it-automation-docs
-[![Auto merge](../../actions/workflows/automerge.yaml/badge.svg)](../../actions/workflows/automerge.yaml) 
-[![pages-build-deployment](../../actions/workflows/pages/pages-build-deployment/badge.svg)](actions/workflows/pages/pages-build-deployment)
+[![RST2HTML](../../actions/workflows/rst2html.yaml/badge.svg)](../../actions/workflows/rst2html.yaml) 
+[![pages-build-deployment](../../actions/workflows/pages/pages-build-deployment/badge.svg)](../../actions/workflows/pages/pages-build-deployment) 
 
 Exastro IT Automation のドキュメントは reStructuredText 形式で記述されています。
 通常、reStructuredText はビルドをすることで HTML 形式に変換をしますが、本プロジェクトでは GitHub Actions を利用することで自動的にビルドを行っています。
