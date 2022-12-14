@@ -18,7 +18,11 @@ jobs:
           echo "${{ secrets.MY_ACTIONS_DEPLOY_KEY }}" > ~/.ssh/id_rsa
           chmod 400 ~/.ssh/id_rsa
     - name: Checkout
+      env:
+        GITHUB_USER: "builduser"
+        GITHUB_EMAIL: "test-builduser@example.com"
       run: |
+          env
           git clone git@github.com:${GITHUB_REPOSITORY}.git src -b main
           cd src
           git config --local user.name "${GITHUB_USER}"
@@ -47,9 +51,6 @@ jobs:
           cd src/documentation
           make html
     - name: Push
-      env:
-        GITHUB_USER: "builduser"
-        GITHUB_EMAIL: "test-builduser@example.com"
       run: |
           cd src
           git remote set-url origin git@github.com:${GITHUB_REPOSITORY}.git
