@@ -6,33 +6,6 @@ Exastro IT Automation システム構成
    :width: 3.35079in
    :height: 0.78559in
 
-| 基本編
-| －第1.10版－
-| Copyright © NEC Corporation 2021. All rights reserved.
-| 免責事項
-| 本書の内容はすべて日本電気株式会社が所有する著作権に保護されています。
-| 本書の内容の一部または全部を無断で転載および複写することは禁止されています。
-| 本書の内容は将来予告なしに変更することがあります。
-| 日本電気株式会社は、本書の技術的もしくは編集上の間違い、欠落について、一切責任を負いません。
-| 日本電気株式会社は、本書の内容に関し、その正確性、有用性、確実性その他いかなる保証もいたしません。
-| 商標
-
--  LinuxはLinus
-      Torvalds氏の米国およびその他の国における登録商標または商標です。
-
--  Red Hatは、Red Hat,
-      Inc.の米国およびその他の国における登録商標または商標です。
-
--  Apache、Apache Tomcat、Tomcatは、Apache Software
-      Foundationの登録商標または商標です。
-
--  Oracle、MySQLは、Oracle Corporation
-      およびその子会社、関連会社の米国およびその他の国における登録商標です。
-
--  MariaDBは、MariaDB Foundationの登録商標または商標です。
-| その他、本書に記載のシステム名、会社名、製品名は、各社の登録商標もしくは商標です。
-| なお、® マーク、TMマークは本書に明記しておりません。
-| ※本書では「Exastro IT Automation」を「ITA」として記載します。
 
 はじめに
 ========
