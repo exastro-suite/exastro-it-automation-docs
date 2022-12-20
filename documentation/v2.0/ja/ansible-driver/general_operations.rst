@@ -967,7 +967,7 @@ Ansible driver機能・操作方法説明
 
 #. | 「登録」-「登録開始」ボタンより、機器情報の登録を行います。
 
-   .. figure:: ./general_operations/image6.png
+   .. figure:: ./general_operations/image_2a_7.png
       :width: 3.8781in
       :height: 1.61202in
       :alt: 登録画面（機器一覧 - 共通項目）
@@ -1292,8 +1292,11 @@ Ansible driver機能・操作方法説明
         | Ansible Automation Controllerのawxユーザーから作業対象ホストにssh接続しています。
         | awxユーザーの公開鍵ファイルをログイン先ユーザーのauthorized_keysにコピーして下さい。ブラウザよりAnsible Automation Controllerにログインし、「設定」→「ジョブ」→「分離されたジョブに公開するパス」に「/var/lib/awx/.ssh/」を設定します。
       
-        |image1|
-   
+        .. image:: ./general_operations/image8.png
+           :width: 4.97986in
+           :height: 1.51304in
+           :align: center
+         
         | 尚、AnsibleTower4.x以降、awxユーザーの.sshディレクトリが扱えない為、作業対象ホストと鍵認証（鍵交換済み）での接続は出来ません。
 
    .. note:: | ※2 Ansible driverのバックヤード機能 「Ansible Automation Controllerデータ同期」により取得したデータから選択します。
@@ -1500,7 +1503,7 @@ Ansible 共通コンソール
       |                 |                 | :ref:`general_operations\    |           |              |                 |
       |                 |                 | _data_resources_deleted\     |           |              |                 |
       |                 |                 | _when_executing` \           |           |              |                 |
-      |                 |                 | ソース」を参照して下さい。   |           |              |                 |
+      |                 |                 | 」を参照して下さい。         |           |              |                 |
       +-----------------+--------+--------+------------------------------+-----------+--------------+-----------------+
       |                 | A\              | プロキシサー\                | -         | 手動\        | 最\             |
       |                 | d\              | バのアドレスを入力します。   |           | 入力         | 大128バイト     |
@@ -1693,7 +1696,7 @@ Ansible 共通コンソール
       |                                   | ラメータの詳細については、\  |           |              |                 |
       |                                   | 「 :ref:`general_operations\ |           |              |                 |
       |                                   | _option_parameter_list` 」\  |           |              |                 |
-      |                                   | 覧を参照してください。       |           |              |                 |
+      |                                   | を参照してください。         |           |              |                 |
       +-----------------+--------+--------+------------------------------+-----------+--------------+-----------------+
       | 並\                               | 同時に実行でき\              | ○         | 手動\        |                 |
       | 列\                               | るMovement(Legacy/Pioneer/\  |           | 入力         |                 |
@@ -3241,7 +3244,7 @@ Movement-Playbook紐付（Movement-対話種別紐付、Movement-ロール紐付
 ~~~~~~~~~~~~~~~~~~
 
 #. | メニュー作成機能で作成したパラメータシートと、Movementの変数を紐付けます。登録した情報は内部の処理により代入値管理と作業対象ホストに反映されます。
-   | :ref:`general_operations_substitution_value_auto_registration_setting` に反映ルールを記載しています。
+   | :ref:`general_operations_substitution_value_auto_registration_setting2` に反映ルールを記載しています。
 
    .. figure:: ./general_operations/image45.png
       :width: 6.08053in
@@ -3252,7 +3255,7 @@ Movement-Playbook紐付（Movement-対話種別紐付、Movement-ロール紐付
 
 #. | 「登録」-「登録開始」ボタンより代入値自動登録設定を行います。
 
-   .. figure:: ./general_operations/image46.png
+   .. figure:: ./general_operations/image_2a_8.png
       :width: 5.59977in
       :height: 0.73063in
       :alt: 登録画面（代入値自動登録設定）
@@ -3547,7 +3550,7 @@ Movement-Playbook紐付（Movement-対話種別紐付、Movement-ロール紐付
 
 #. | 「登録」-「登録開始」ボタンより、作業対象ホスト登録を行います。
 
-   .. figure:: ./general_operations/image57.png
+   .. figure:: ./general_operations/image_2a_9.png
       :width: 5.39203in
       :height: 1.33953in
       :alt: 登録画面（作業対象ホスト）
@@ -4123,15 +4126,13 @@ Movement-Playbook紐付（Movement-対話種別紐付、Movement-ロール紐付
    | Movement一覧、オペレーション一覧で選択したMovementとオペレーションの各アクセス許可ロールで一致するロールがあるかを判定します。一致するロールが無い場合、その旨のエラーメッセージが表示され作業実行は出来ません。また、一致するロールが作業管理のアクセス許可ロールとして設定されます。また、アクセス許可ロールが空白の場合は、全てのロールへのアクセスが可能として扱われます。各アクセス許可ロールが空白の場合、作業管理のアクセス許可ロールも空白に設定されます。
    | アクセス許可ロールの詳細については :doc:`../it_automation_base/rbac` を参照して下さい。
 
-※以下、鎌倉担当
-----------------
 
 構築コード記述方法
 ==================
 .. _general_operations_write_playbook_ansible_legacy:
 Playbook（Ansible-Legacy）の記述
 --------------------------------
-| 「5.3.3. :ref:`general_operations_playbook_file_list_ansible_legacy_only` 」でアップロードされたPlaybookは、ITAで生成するマスターPlaybookよりinclude形式で実行されます。
+| 「 :ref:`general_operations_playbook_file_list_ansible_legacy_only` 」でアップロードされたPlaybookは、ITAで生成するマスターPlaybookよりinclude形式で実行されます。
 | ITAで作成するマスターPlaybookはへッダーセクションとtasksセクションで構成されます。
 
 
@@ -4139,7 +4140,7 @@ Playbook（Ansible-Legacy）の記述
 ~~~~~~~~~~~~~~~~~~~~~
 
 | アップロードアップロードするPlaybookにはヘッダーセクションは含む必要はありません。
-| ヘッダーセクションは、デフォルト値が決まっていますが、「5.3.2. :ref:`general_operations_movement_list` 」のヘッダーセクションで変更することが出来ます。
+| ヘッダーセクションは、デフォルト値が決まっていますが、「 :ref:`general_operations_movement_list` 」のヘッダーセクションで変更することが出来ます。
 |
 | ▼ヘッダーセクションのデフォルト値について 
 - | Ansible Coreの場合 
@@ -4181,7 +4182,7 @@ tasksセクション
 .. warning:: | Playbook内のインデントは2倍数で調整して下さい。
  | 文字コードは、UTF-8のBOMなしで作成して下さい。
 
-| アップロードさたPlaybookは、「5.3.7. :ref:`general_operations_movement_details` 」のインクルード順序に従いincludeします。
+| アップロードさたPlaybookは、「 :ref:`general_operations_movement_details` 」のインクルード順序に従いincludeします。
    
 .. figure:: ./general_operations/image_2b_1.png
    :align: center
@@ -5278,7 +5279,7 @@ tasksセクション
 
 ② rolesセクション
 *******************
-| アップロードさたロールパッケージ内のロールを、「5.3.7. :ref:`general_operations_movement_details` 」のインクルード順序に従いroleで実行します。
+| アップロードさたロールパッケージ内のロールを、「 :ref:`general_operations_movement_details` 」のインクルード順序に従いroleで実行します。
 
 .. figure:: ./general_operations/image_2b_2.png
    :align: center
@@ -5412,7 +5413,7 @@ ITA readmeのファイル名の命名規則
 .. _general_operations_write_translation_table_ansible_legacy_role_only:
 読替表（Ansible-Legacy Roleのみ）の記述
 ---------------------------------------
-| defaults変数定義ファイルまたはITA readmeに定義されている「VAR_xxx」以外の変数に対して、「\ *5.3.11代入値管理*\ 」機能で変数の具体値を設定出来るようにするための設定を行うファイルです。
+| defaults変数定義ファイルまたはITA readmeに定義されている「VAR_xxx」以外の変数に対して、「 :ref:`general_operations_substitution_value_list` 」機能で変数の具体値を設定出来るようにするための設定を行うファイルです。
 | defaults変数定義ファイルまたはITA readmeに定義されている「VAR_xxx」以外の変数「任意変数」に対して代入値管理機能で扱う変数「読替変数」の紐付を定義します。
 
 読替表のファイル名は以下の命名規則
@@ -5743,7 +5744,7 @@ BackYardコンテンツ
     | ロールパッケージを跨って同じ変数名を使用しているが変数構造が違う場合。
     | ⇒ アップロード時にエラーとなります。
 
-.. _general_operations_substitution_value_auto_registration_setting:
+.. _general_operations_substitution_value_auto_registration_setting2:
 代入自動値登録設定
 ~~~~~~~~~~~~~~~~~~
 | 連携対象としたパラメータシートのオペレーションとホスト毎の項目の設定値と紐付けたMovementと変数の情報を代入値管理と作業対象ホストに反映されます。
@@ -6271,7 +6272,7 @@ Legacy結果データに保存されるファイル一覧
    +---------------+-----------------------------------------+----+------+
    | I             | 分割された実行ログファイルです。        |    | 〇   |
    | ta_<mode名>\_ |                                         |    |      |
-   |               | ファイル名の命名規則は5.3.12 :ref:`gen\ |    |      |
+   |               | ファイル名の命名規則は :ref:`gen\       |    |      |
    | execut        | eral_operations_check_operation_stat\   |    |      |
    | ions_jobtpl\_ | us` の⑥実行ログ表示を参照下さい。       |    |      |
    |               |                                         |    |      |
@@ -6333,7 +6334,7 @@ Pioneer結果データに保存されるファイル一覧
    +---------------+-----------------------------------------+----+------+
    | I             | 分割された実行ログファイルです。        |    | 〇   |
    | ta_<mode名>\_ |                                         |    |      |
-   |               | ファイル名の命名規則は5.3.12 :ref:`gene\|    |      |
+   |               | ファイル名の命名規則は :ref:`gene\      |    |      |
    | execut        | ral_operations_check_operation_sta\     |    |      |
    | ions_jobtpl\_ | tus` の⑥実行ログ表示を参照下さい。      |    |      |
    |               |                                         |    |      |
@@ -6390,7 +6391,7 @@ Legacy-Role 結果データに保存されるファイル一覧
    +---------------+-----------------------------------------+----+------+
    | I\            | 分割された実行ログファイルです。        |    | 〇   |
    | ta_<mode名>\_ |                                         |    |      |
-   |               | ファイル名の命名規則は5.3.12 :ref:`gen\ |    |      |
+   |               | ファイル名の命名規則は :ref:`gen\       |    |      |
    | execut\       | eral_operations_check_operation_sta\    |    |      |
    | ions_jobtpl\_ | tus` の⑥実行ログ表示を参照下さい。      |    |      |
    |               |                                         |    |      |
