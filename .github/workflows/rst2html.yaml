@@ -9,8 +9,8 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, 'auto rebuilding site') \
-      && ((github.repository_owner == 'exastro-suite' && github.ref_name != 'main') \
-       || (github.repository_owner != 'exastro-suite' && github.ref_name != '**'))"
+      && ((github.repository_owner == 'exastro-suite' && github.ref_name == 'main') \
+       || (github.repository_owner != 'exastro-suite' && github.ref_name != 'main'))"
     steps:
     - name: Deploy Configuration
       env:
