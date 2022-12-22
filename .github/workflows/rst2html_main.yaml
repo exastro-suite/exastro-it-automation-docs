@@ -2,31 +2,29 @@ name: RST2HTML
 on:
   push:
     branches:
-    - '**'
-    - '!main'
+    - 'main'
 
 jobs:
   if_merged:
     name: Build
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'auto rebuilding site')"
+    if: "!contains(github.event.head_commit.message, 'auto rebuilding site') && github.repository_owner == 'exastro-suite'"
     steps:
     - name: Deploy Configuration
+      env:
+        GITHUB_USER: "builduser"
+        GITHUB_EMAIL: "test-builduser@example.com"
       run: |
           mkdir ~/.ssh
           ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
           echo "${{ secrets.MY_ACTIONS_DEPLOY_KEY }}" > ~/.ssh/id_rsa
           chmod 400 ~/.ssh/id_rsa
-    - name: Checkout
-      env:
-        GITHUB_USER: "builduser"
-        GITHUB_EMAIL: "test-builduser@example.com"
-      run: |
-          env
-          git clone git@github.com:${GITHUB_REPOSITORY}.git src -b main
-          cd src
           git config --local user.name "${GITHUB_USER}"
           git config --local user.email "${GITHUB_EMAIL}"
+
+    - name: Checkout
+      run: |
+          git clone git@github.com:${GITHUB_REPOSITORY}.git src -b main
 
     - name: Merge ${{ github.ref_name }} to main
       env:
@@ -37,30 +35,29 @@ jobs:
           git merge -m "auto merge" origin/${{ github.ref_name }}
 
     - name: Set up Python
-      if: "github.repository_owner != 'exastro-suite'"
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
 
     - name: Install dependencies
-      if: "github.repository_owner != 'exastro-suite'"
       run: |
           cd src
           python -m pip install --upgrade pip
           pip install -r documentation/requirements.txt
+
     - name: Build
-      if: "github.repository_owner != 'exastro-suite'"
       run: |
           cd src/documentation
           make html
+
     - name: Commit
-      if: "github.repository_owner != 'exastro-suite'"
       run: |
           cd src
           git remote set-url origin git@github.com:${GITHUB_REPOSITORY}.git
           git add -f documentation/html
           git commit -m "auto rebuilding site"
           git push origin main
+
     - name: Push
       run: |
           cd src
