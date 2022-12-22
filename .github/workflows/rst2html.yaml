@@ -2,13 +2,15 @@ name: RST2HTML
 on:
   push:
     branches:
-    - 'main'
+    - '**'
 
 jobs:
   if_merged:
     name: Build
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'auto rebuilding site') && github.repository_owner == 'exastro-suite'"
+    if: "!contains(github.event.head_commit.message, 'auto rebuilding site') \
+      && ((github.repository_owner == 'exastro-suite' && github.ref_name != 'main') \
+       || (github.repository_owner != 'exastro-suite' && github.ref_name != '**'))"
     steps:
     - name: Deploy Configuration
       env:
