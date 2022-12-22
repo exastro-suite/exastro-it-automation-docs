@@ -20,17 +20,14 @@ jobs:
           ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
           echo "${{ secrets.MY_ACTIONS_DEPLOY_KEY }}" > ~/.ssh/id_rsa
           chmod 400 ~/.ssh/id_rsa
-          git config --local user.name "${GITHUB_USER}"
-          git config --local user.email "${GITHUB_EMAIL}"
+          git config --global user.name "${GITHUB_USER}"
+          git config --global user.email "${GITHUB_EMAIL}"
 
     - name: Checkout
       run: |
           git clone git@github.com:${GITHUB_REPOSITORY}.git src -b main
 
     - name: Merge ${{ github.ref_name }} to main
-      env:
-        GITHUB_USER: "builduser"
-        GITHUB_EMAIL: "test-builduser@example.com"
       run: |
           cd src
           git merge -m "auto merge" origin/${{ github.ref_name }}
