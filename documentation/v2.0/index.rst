@@ -6,12 +6,22 @@ Exastro IT Automation Documentation
 
    </div>
    <div id="homeIndex">
+   
+日本語
+======
 
 .. toctree::
    :maxdepth: 1
 
    ja/index
-   ja_manual_design/index
+   ja/manual_design/index
+
+.. English
+.. =======
+
+.. .. toctree::
+..    :maxdepth: 1
+
    .. en/index
    .. ja_manual_design/index
    .. en_manual_design/index
