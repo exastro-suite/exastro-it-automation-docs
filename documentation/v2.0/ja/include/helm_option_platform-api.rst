@@ -1,0 +1,21 @@
+
+.. list-table:: Exastro Platform API 機能のオプションパラメータ
+   :widths: 25 25 5 5 20
+   :header-rows: 1
+   :align: left
+
+   * - パラメータ
+     - 説明
+     - 設定・変更
+     - 必須
+     - デフォルト値・選択可能な設定値
+   * - platform-api.image.repository
+     -
+     - 不可
+     - ○
+     - "exastro/exastro-platform-api"
+   * - platform-api.image.tag
+     -
+     - 不可
+     - ○
+     - "1.0.6"
