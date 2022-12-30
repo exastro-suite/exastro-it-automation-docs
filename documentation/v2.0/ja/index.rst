@@ -28,7 +28,7 @@
    .. create_param/index
    .. ansible-driver/index
    .. rest_api/index
-   .. installation_appendix/index
+   appendix/index
 
 .. raw:: html
 

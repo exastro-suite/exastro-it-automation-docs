@@ -95,159 +95,161 @@
 
    .. code:: yaml
 
-       # Default values for platform.
-       # This is a YAML-formatted file.
-       # Declare variables to be passed into your templates.
-       global:
-         authGlobalDefinition:
-           name: auth-global
-           enabled: true
-           image:
-             registry: "docker.io"
-             organization: exastro
-             package: exastro-platform
-           config:
-             DEFAULT_LANGUAGE: "ja"
-             LANGUAGE: "en"
-             TZ: "Asia/Tokyo"
-             PYTHONIOENCODING: utf-8
-             PLATFORM_API_PROTOCOL: "http"
-             PLATFORM_API_HOST: "platform-api"
-             PLATFORM_API_PORT: "8000"
-             PLATFORM_WEB_PROTOCOL: "http"
-             PLATFORM_WEB_HOST: "platform-web"
-             PLATFORM_WEB_PORT: "8000"
-           persistence:
-             enabled: true
-             accessMode: ReadWriteMany
-             size: 10Gi
-             volumeType: hostPath # e.g.) hostPath or AKS
-             storageClass: "-" # e.g.) azurefile or - (None)
-             # matchLabels:
-             #   release: "stable"
-             # matchExpressions:
-             #   - {key: environment, operator: In, values: [dev]}
-         keycloakDefinition:
-           name: keycloak
-           enabled: true
-           config:
-             API_KEYCLOAK_PROTOCOL: "http"
-             API_KEYCLOAK_HOST: "keycloak.exastro-platform.svc"
-             API_KEYCLOAK_PORT: "8080"
-             KEYCLOAK_PROTOCOL: "http"
-             KEYCLOAK_HOST: "keycloak.exastro-platform.svc"
-             KEYCLOAK_PORT: "8080"
-             KEYCLOAK_MASTER_REALM: "master"
-             KEYCLOAK_DB_DATABASE: "keycloak"
-           secret:
-             KEYCLOAK_USER: ""
-             KEYCLOAK_PASSWORD: ""
-             KEYCLOAK_DB_USER: ""
-             KEYCLOAK_DB_PASSWORD: ""
-         itaDefinition:
-           name: ita
-           enabled: true
-           config:
-             ITA_WEB_PROTOCOL: "http"
-             ITA_WEB_HOST: "ita-web-server.exastro-it-automation.svc"
-             ITA_WEB_PORT: "8000"
-             ITA_API_PROTOCOL: "http"
-             ITA_API_HOST: "ita-api-organization.exastro-it-automation.svc"
-             ITA_API_PORT: "8080"
-             ITA_API_ADMIN_PROTOCOL: "http"
-             ITA_API_ADMIN_HOST: "ita-api-admin.exastro-it-automation.svc"
-             ITA_API_ADMIN_PORT: "8080"
-         authDatabaseDefinition:
-           name: auth-database
-           enabled: true
-           config:
-             DB_VENDOR: "mariadb"
-             DB_HOST: "mariadb.exastro-platform.svc"
-             DB_PORT: "3306"
-             DB_DATABASE: "platform"
-           secret:
-             DB_ADMIN_USER: ""
-             DB_ADMIN_PASSWORD: ""
-             DB_USER: ""
-             DB_PASSWORD: ""
-         databaseDefinition:
-           name: mariadb
-           enabled: true
-           secret:
-             MARIADB_ROOT_PASSWORD: ""
-           persistence:
-             enabled: true
-             reinstall: false
-             accessMode: ReadWriteOnce
-             size: 20Gi
-             volumeType: hostPath # e.g.) hostPath or AKS
-             storageClass: "-" # e.g.) azurefile or - (None)
-             # matchLabels:
-             #   release: "stable"
-             # matchExpressions:
-             #   - {key: environment, operator: In, values: [dev]}
+      # Default values for platform.
+      # This is a YAML-formatted file.
+      # Declare variables to be passed into your templates.
+      global:
+        authGlobalDefinition:
+          name: auth-global
+          enabled: true
+          image:
+            registry: "docker.io"
+            organization: exastro
+            package: exastro-platform
+          config:
+            DEFAULT_LANGUAGE: "ja"
+            LANGUAGE: "en"
+            TZ: "Asia/Tokyo"
+            PYTHONIOENCODING: utf-8
+            PLATFORM_API_PROTOCOL: "http"
+            PLATFORM_API_HOST: "platform-api"
+            PLATFORM_API_PORT: "8000"
+            PLATFORM_WEB_PROTOCOL: "http"
+            PLATFORM_WEB_HOST: "platform-web"
+            PLATFORM_WEB_PORT: "8000"
+          secret:
+            ENCRYPT_KEY: ""
+          persistence:
+            enabled: true
+            accessMode: ReadWriteMany
+            size: 10Gi
+            volumeType: hostPath # e.g.) hostPath or AKS
+            storageClass: "-" # e.g.) azurefile or - (None)
+            # matchLabels:
+            #   release: "stable"
+            # matchExpressions:
+            #   - {key: environment, operator: In, values: [dev]}
+        keycloakDefinition:
+          name: keycloak
+          enabled: true
+          config:
+            API_KEYCLOAK_PROTOCOL: "http"
+            API_KEYCLOAK_HOST: "keycloak.exastro-platform.svc"
+            API_KEYCLOAK_PORT: "8080"
+            KEYCLOAK_PROTOCOL: "http"
+            KEYCLOAK_HOST: "keycloak.exastro-platform.svc"
+            KEYCLOAK_PORT: "8080"
+            KEYCLOAK_MASTER_REALM: "master"
+            KEYCLOAK_DB_DATABASE: "keycloak"
+          secret:
+            KEYCLOAK_USER: ""
+            KEYCLOAK_PASSWORD: ""
+            KEYCLOAK_DB_USER: ""
+            KEYCLOAK_DB_PASSWORD: ""
+        itaDefinition:
+          name: ita
+          enabled: true
+          config:
+            ITA_WEB_PROTOCOL: "http"
+            ITA_WEB_HOST: "ita-web-server.exastro-it-automation.svc"
+            ITA_WEB_PORT: "8000"
+            ITA_API_PROTOCOL: "http"
+            ITA_API_HOST: "ita-api-organization.exastro-it-automation.svc"
+            ITA_API_PORT: "8080"
+            ITA_API_ADMIN_PROTOCOL: "http"
+            ITA_API_ADMIN_HOST: "ita-api-admin.exastro-it-automation.svc"
+            ITA_API_ADMIN_PORT: "8080"
+        authDatabaseDefinition:
+          name: auth-database
+          enabled: true
+          config:
+            DB_VENDOR: "mariadb"
+            DB_HOST: "mariadb.exastro-platform.svc"
+            DB_PORT: "3306"
+            DB_DATABASE: "platform"
+          secret:
+            DB_ADMIN_USER: ""
+            DB_ADMIN_PASSWORD: ""
+            DB_USER: ""
+            DB_PASSWORD: ""
+        databaseDefinition:
+          name: mariadb
+          enabled: true
+          secret:
+            MARIADB_ROOT_PASSWORD: ""
+          persistence:
+            enabled: true
+            reinstall: false
+            accessMode: ReadWriteOnce
+            size: 20Gi
+            volumeType: hostPath # e.g.) hostPath or AKS
+            storageClass: "-" # e.g.) azurefile or - (None)
+            # matchLabels:
+            #   release: "stable"
+            # matchExpressions:
+            #   - {key: environment, operator: In, values: [dev]}
 
-       platform-api:
-         image:
-           repository: "exastro/exastro-platform-api"
-           tag: "1.0.2"
+      platform-api:
+        image:
+          repository: "exastro/exastro-platform-api"
+          tag: "1.1.0"
 
-       platform-auth:
-         ingress:
-           enabled: true
-           hosts:
-             - host: exastro-suite.example.local
-               paths:
-                 - path: /
-                   pathType: Prefix
-                   backend: "http"
-             - host: exastro-suite-mng.example.local
-               paths:
-                 - path: /
-                   pathType: Prefix
-                   backend: "httpMng"
-         service:
-           type: ClusterIP
-         image:
-           repository: "exastro/exastro-platform-auth"
-           tag: "1.0.2"
+      platform-auth:
+        ingress:
+          enabled: true
+          hosts:
+            - host: exastro-suite.example.local
+              paths:
+                - path: /
+                  pathType: Prefix
+                  backend: "http"
+            - host: exastro-suite-mng.example.local
+              paths:
+                - path: /
+                  pathType: Prefix
+                  backend: "httpMng"
+        service:
+          type: ClusterIP
+        image:
+          repository: "exastro/exastro-platform-auth"
+          tag: "1.1.0"
 
-       platform-setup:
-         keycloak:
-           image:
-             repository: "exastro/exastro-platform-job"
-             tag: "1.0.2"
+      platform-setup:
+        keycloak:
+          image:
+            repository: "exastro/exastro-platform-job"
+            tag: "1.1.0"
 
-       platform-web:
-         image:
-           repository: "exastro/exastro-platform-web"
-           tag: "1.0.2"
+      platform-web:
+        image:
+          repository: "exastro/exastro-platform-web"
+          tag: "1.1.0"
 
-       mariadb:
-         image:
-           repository: "mariadb"
-           tag: "10.9"
-           pullPolicy: IfNotPresent
-         resources:
-           requests:
-             memory: "256Mi"
-             cpu: "1m"
-           limits:
-             memory: "2Gi"
-             cpu: "4"
+      mariadb:
+        image:
+          repository: "mariadb"
+          tag: "10.9"
+          pullPolicy: IfNotPresent
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "1m"
+          limits:
+            memory: "2Gi"
+            cpu: "4"
 
-       keycloak:
-         image:
-           repository: "exastro/keycloak"
-           tag: "1.0.2"
-           pullPolicy: IfNotPresent
-         resources:
-           requests:
-             memory: "256Mi"
-             cpu: "1m"
-           limits:
-             memory: "2Gi"
-             cpu: "4"
+      keycloak:
+        image:
+          repository: "exastro/keycloak"
+          tag: "1.1.0"
+          pullPolicy: IfNotPresent
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "1m"
+          limits:
+            memory: "2Gi"
+            cpu: "4"
 
    .. raw:: html
 
@@ -664,6 +666,23 @@
              hostPath:
                path: /var/data/exastro-suite/exastro-it-automation/ita-common
                type: DirectoryOrCreate
+
+     -  PersistentVolume の作成
+  
+        .. code:: bash
+  
+           # pv-database.yaml
+           kubectl apply -f pv-database.yaml
+
+           # pv-ita-common.yaml
+           kubectl apply -f pv-ita-common.yaml
+
+           # 確認
+           kubectl get pv
+
+           NAME            CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   REASON   AGE
+           pv-database     20Gi       RWO            Retain           Available                                   19s
+           pv-ita-common   10Gi       RWX            Retain           Available                                   9s
 
 .. _インストール-1:
 
