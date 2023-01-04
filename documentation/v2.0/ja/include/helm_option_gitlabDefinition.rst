@@ -1,41 +1,35 @@
 
 .. list-table:: 共通設定 (GitLab) のオプションパラメータ
-   :widths: 25 25 5 5 20
+   :widths: 25 25 10 20
    :header-rows: 1
    :align: left
 
    * - パラメータ
      - 説明
-     - 設定・変更
-     - 必須
+     - 変更
      - デフォルト値・選択可能な設定値
    * - global.gitlabDefinition.name
-     - 
+     - GitLab の定義名
      - 不可
-     - ○
-     - gitlab 
+     - gitlab
    * - global.gitlabDefinition.enabled
-     - 
-     - 不可
-     - ○
-     - true 
+     - | GitLab のデプロイ要否
+       | ※現在このパラメータは使用していません。
+     - 可 (無効)
+     - true
    * - global.gitlabDefinition.config.GITLAB_PROTOCOL
-     - 
-     - 不可
-     - ○
-     - http 
+     - GitLab エンドポイントのプロトコル
+     - 可
+     - http
    * - global.gitlabDefinition.config.GITLAB_HOST
-     - 
-     - 不可
-     - ○
-     - gitlab.exastro-platform.svc 
+     - GitLab エンドポイントへのホスト名、もしくは、FQDN
+     - 可
+     - gitlab.exastro-platform.svc
    * - global.gitlabDefinition.config.GITLAB_PORT
-     - 
-     - 不可
-     - ○
-     - 80 
+     - GitLab エンドポイントのポート番号
+     - 可
+     - 80
    * - global.gitlabDefinition.secret.GITLAB_ROOT_TOKEN
-     - 
-     - 不可
-     - ○
-     -  
+     - GitLab の root 権限アカウントのアクセストークン
+     - 必須
+     - アクセエストークン(平文)
