@@ -10,6 +10,7 @@ Exastro IT Automation Organization API (開発用)
    <script src="../../../_static/jquery-1.11.3.js" charset="UTF-8"></script>
    <script src="../../../_static/swagger/swagger-ui-bundle.js" charset="UTF-8"></script>
    <script src="../../../_static/swagger/swagger-ui-standalone-preset.js" charset="UTF-8"></script>
+   <script>
 
    $(function(){
 
