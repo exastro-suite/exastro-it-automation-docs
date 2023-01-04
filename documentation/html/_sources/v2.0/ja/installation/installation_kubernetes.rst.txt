@@ -58,612 +58,919 @@
 ==================
 
 1. Helm リポジトリの登録
+-------------------------
 
-   | Exastro Suite は、以下の2つのアプリケーションから構成されています。
-   - 共通基盤 (Exastro Platform)
-   - Exastro IT Automation
-   | そのため、以下の Helm リポジトリより、2つのHelmリポジトリを登録する必要があります。
+| Exastro Suite は、以下の2つのアプリケーションから構成されています。
 
-   .. csv-table::
-    :header: アプリケーション名, リポジトリ
-    :widths: 20, 50
+- 共通基盤 (Exastro Platform)
+- Exastro IT Automation
 
-    共通基盤, https://exastro-suite.github.io/exastro-platform/charts/
-    Exastro IT Automation, https://exastro-suite.github.io/exastro-it-automation/charts/
+| そのため、以下の Helm リポジトリより、2つのHelmリポジトリを登録する必要があります。
 
-   .. code:: shell
+.. csv-table::
+ :header: アプリケーション名, リポジトリ
+ :widths: 20, 50
 
-      # 共通基盤 (Exastro Platform) の Helm リポジトリを登録
-      helm repo add exastro-platform https://exastro-suite.github.io/exastro-platform/charts/ -n exastro-platform
-      # Exastro IT Automation の Helm リポジトリを登録
-      helm repo add exastro-it-automation https://exastro-suite.github.io/exastro-it-automation/charts/ -n exastro-it-automation
-      # リポジトリ情報の更新
-      helm repo update
+ 共通基盤, https://exastro-suite.github.io/exastro-platform/charts/
+ Exastro IT Automation, https://exastro-suite.github.io/exastro-it-automation/charts/
+
+.. code:: shell
+
+   # 共通基盤 (Exastro Platform) の Helm リポジトリを登録
+   helm repo add exastro-platform https://exastro-suite.github.io/exastro-platform/charts/ -n exastro-platform
+   # Exastro IT Automation の Helm リポジトリを登録
+   helm repo add exastro-it-automation https://exastro-suite.github.io/exastro-it-automation/charts/ -n exastro-it-automation
+   # リポジトリ情報の更新
+   helm repo update
 
 2. デフォルト設定値の取得
+-------------------------
 
-   | 下記のコマンドから共通基盤 values.yaml のデフォルト値を出力します。
+| 投入するパラメータを管理しやすくするために、下記のコマンドから共通基盤 values.yaml のデフォルト値を出力します。
 
-   .. code:: shell
+.. code:: shell
 
-      helm show values exastro-platform/exastro-platform > exastro-platform.yaml
+   helm show values exastro-platform/exastro-platform > exastro-platform.yaml
 
-   .. raw:: html
+.. raw:: html
 
-      <details>
-        <summary>exastro-platform.yaml</summary>
+   <details>
+     <summary>exastro-platform.yaml</summary>
 
-   .. code:: yaml
+.. code:: yaml
 
-       # Default values for platform.
-       # This is a YAML-formatted file.
-       # Declare variables to be passed into your templates.
-       global:
-         authGlobalDefinition:
-           name: auth-global
-           enabled: true
-           image:
-             registry: "docker.io"
-             organization: exastro
-             package: exastro-platform
-           config:
-             DEFAULT_LANGUAGE: "ja"
-             LANGUAGE: "en"
-             TZ: "Asia/Tokyo"
-             PYTHONIOENCODING: utf-8
-             PLATFORM_API_PROTOCOL: "http"
-             PLATFORM_API_HOST: "platform-api"
-             PLATFORM_API_PORT: "8000"
-             PLATFORM_WEB_PROTOCOL: "http"
-             PLATFORM_WEB_HOST: "platform-web"
-             PLATFORM_WEB_PORT: "8000"
-           persistence:
-             enabled: true
-             accessMode: ReadWriteMany
-             size: 10Gi
-             volumeType: hostPath # e.g.) hostPath or AKS
-             storageClass: "-" # e.g.) azurefile or - (None)
-             # matchLabels:
-             #   release: "stable"
-             # matchExpressions:
-             #   - {key: environment, operator: In, values: [dev]}
-         keycloakDefinition:
-           name: keycloak
-           enabled: true
-           config:
-             API_KEYCLOAK_PROTOCOL: "http"
-             API_KEYCLOAK_HOST: "keycloak.exastro-platform.svc"
-             API_KEYCLOAK_PORT: "8080"
-             KEYCLOAK_PROTOCOL: "http"
-             KEYCLOAK_HOST: "keycloak.exastro-platform.svc"
-             KEYCLOAK_PORT: "8080"
-             KEYCLOAK_MASTER_REALM: "master"
-             KEYCLOAK_DB_DATABASE: "keycloak"
-           secret:
-             KEYCLOAK_USER: ""
-             KEYCLOAK_PASSWORD: ""
-             KEYCLOAK_DB_USER: ""
-             KEYCLOAK_DB_PASSWORD: ""
-         itaDefinition:
-           name: ita
-           enabled: true
-           config:
-             ITA_WEB_PROTOCOL: "http"
-             ITA_WEB_HOST: "ita-web-server.exastro-it-automation.svc"
-             ITA_WEB_PORT: "8000"
-             ITA_API_PROTOCOL: "http"
-             ITA_API_HOST: "ita-api-organization.exastro-it-automation.svc"
-             ITA_API_PORT: "8080"
-             ITA_API_ADMIN_PROTOCOL: "http"
-             ITA_API_ADMIN_HOST: "ita-api-admin.exastro-it-automation.svc"
-             ITA_API_ADMIN_PORT: "8080"
-         authDatabaseDefinition:
-           name: auth-database
-           enabled: true
-           config:
-             DB_VENDOR: "mariadb"
-             DB_HOST: "mariadb.exastro-platform.svc"
-             DB_PORT: "3306"
-             DB_DATABASE: "platform"
-           secret:
-             DB_ADMIN_USER: ""
-             DB_ADMIN_PASSWORD: ""
-             DB_USER: ""
-             DB_PASSWORD: ""
-         databaseDefinition:
-           name: mariadb
-           enabled: true
-           secret:
-             MARIADB_ROOT_PASSWORD: ""
-           persistence:
-             enabled: true
-             reinstall: false
-             accessMode: ReadWriteOnce
-             size: 20Gi
-             volumeType: hostPath # e.g.) hostPath or AKS
-             storageClass: "-" # e.g.) azurefile or - (None)
-             # matchLabels:
-             #   release: "stable"
-             # matchExpressions:
-             #   - {key: environment, operator: In, values: [dev]}
+   # Default values for platform.
+   # This is a YAML-formatted file.
+   # Declare variables to be passed into your templates.
+   global:
+     authGlobalDefinition:
+       name: auth-global
+       enabled: true
+       image:
+         registry: "docker.io"
+         organization: exastro
+         package: exastro-platform
+       config:
+         DEFAULT_LANGUAGE: "ja"
+         LANGUAGE: "en"
+         TZ: "Asia/Tokyo"
+         PYTHONIOENCODING: utf-8
+         PLATFORM_API_PROTOCOL: "http"
+         PLATFORM_API_HOST: "platform-api"
+         PLATFORM_API_PORT: "8000"
+         PLATFORM_WEB_PROTOCOL: "http"
+         PLATFORM_WEB_HOST: "platform-web"
+         PLATFORM_WEB_PORT: "8000"
+       secret:
+         ENCRYPT_KEY: ""
+       persistence:
+         enabled: true
+         accessMode: ReadWriteMany
+         size: 10Gi
+         volumeType: hostPath # e.g.) hostPath or AKS
+         storageClass: "-" # e.g.) azurefile or - (None)
+         # matchLabels:
+         #   release: "stable"
+         # matchExpressions:
+         #   - {key: environment, operator: In, values: [dev]}
+     keycloakDefinition:
+       name: keycloak
+       enabled: true
+       config:
+         API_KEYCLOAK_PROTOCOL: "http"
+         API_KEYCLOAK_HOST: "keycloak.exastro-platform.svc"
+         API_KEYCLOAK_PORT: "8080"
+         KEYCLOAK_PROTOCOL: "http"
+         KEYCLOAK_HOST: "keycloak.exastro-platform.svc"
+         KEYCLOAK_PORT: "8080"
+         KEYCLOAK_MASTER_REALM: "master"
+         KEYCLOAK_DB_DATABASE: "keycloak"
+       secret:
+         KEYCLOAK_USER: ""
+         KEYCLOAK_PASSWORD: ""
+         KEYCLOAK_DB_USER: ""
+         KEYCLOAK_DB_PASSWORD: ""
+     itaDefinition:
+       name: ita
+       enabled: true
+       config:
+         ITA_WEB_PROTOCOL: "http"
+         ITA_WEB_HOST: "ita-web-server.exastro-it-automation.svc"
+         ITA_WEB_PORT: "8000"
+         ITA_API_PROTOCOL: "http"
+         ITA_API_HOST: "ita-api-organization.exastro-it-automation.svc"
+         ITA_API_PORT: "8080"
+         ITA_API_ADMIN_PROTOCOL: "http"
+         ITA_API_ADMIN_HOST: "ita-api-admin.exastro-it-automation.svc"
+         ITA_API_ADMIN_PORT: "8080"
+     authDatabaseDefinition:
+       name: auth-database
+       enabled: true
+       config:
+         DB_VENDOR: "mariadb"
+         DB_HOST: "mariadb.exastro-platform.svc"
+         DB_PORT: "3306"
+         DB_DATABASE: "platform"
+       secret:
+         DB_ADMIN_USER: ""
+         DB_ADMIN_PASSWORD: ""
+         DB_USER: ""
+         DB_PASSWORD: ""
+     databaseDefinition:
+       name: mariadb
+       enabled: true
+       secret:
+         MARIADB_ROOT_PASSWORD: ""
+       persistence:
+         enabled: true
+         reinstall: false
+         accessMode: ReadWriteOnce
+         size: 20Gi
+         volumeType: hostPath # e.g.) hostPath or AKS
+         storageClass: "-" # e.g.) azurefile or - (None)
+         # matchLabels:
+         #   release: "stable"
+         # matchExpressions:
+         #   - {key: environment, operator: In, values: [dev]}
 
-       platform-api:
-         image:
-           repository: "exastro/exastro-platform-api"
-           tag: "1.0.2"
+   platform-api:
+     image:
+       repository: "exastro/exastro-platform-api"
+       tag: "1.1.0"
 
-       platform-auth:
-         ingress:
-           enabled: true
-           hosts:
-             - host: exastro-suite.example.local
-               paths:
-                 - path: /
-                   pathType: Prefix
-                   backend: "http"
-             - host: exastro-suite-mng.example.local
-               paths:
-                 - path: /
-                   pathType: Prefix
-                   backend: "httpMng"
-         service:
-           type: ClusterIP
-         image:
-           repository: "exastro/exastro-platform-auth"
-           tag: "1.0.2"
+   platform-auth:
+     ingress:
+       enabled: true
+       hosts:
+         - host: exastro-suite.example.local
+           paths:
+             - path: /
+               pathType: Prefix
+               backend: "http"
+         - host: exastro-suite-mng.example.local
+           paths:
+             - path: /
+               pathType: Prefix
+               backend: "httpMng"
+     service:
+       type: ClusterIP
+     image:
+       repository: "exastro/exastro-platform-auth"
+       tag: "1.1.0"
 
-       platform-setup:
-         keycloak:
-           image:
-             repository: "exastro/exastro-platform-job"
-             tag: "1.0.2"
+   platform-setup:
+     keycloak:
+       image:
+         repository: "exastro/exastro-platform-job"
+         tag: "1.1.0"
 
-       platform-web:
-         image:
-           repository: "exastro/exastro-platform-web"
-           tag: "1.0.2"
+   platform-web:
+     image:
+       repository: "exastro/exastro-platform-web"
+       tag: "1.1.0"
 
-       mariadb:
-         image:
-           repository: "mariadb"
-           tag: "10.9"
-           pullPolicy: IfNotPresent
-         resources:
-           requests:
-             memory: "256Mi"
-             cpu: "1m"
-           limits:
-             memory: "2Gi"
-             cpu: "4"
+   mariadb:
+     image:
+       repository: "mariadb"
+       tag: "10.9"
+       pullPolicy: IfNotPresent
+     resources:
+       requests:
+         memory: "256Mi"
+         cpu: "1m"
+       limits:
+         memory: "2Gi"
+         cpu: "4"
 
-       keycloak:
-         image:
-           repository: "exastro/keycloak"
-           tag: "1.0.2"
-           pullPolicy: IfNotPresent
-         resources:
-           requests:
-             memory: "256Mi"
-             cpu: "1m"
-           limits:
-             memory: "2Gi"
-             cpu: "4"
+   keycloak:
+     image:
+       repository: "exastro/keycloak"
+       tag: "1.1.0"
+       pullPolicy: IfNotPresent
+     resources:
+       requests:
+         memory: "256Mi"
+         cpu: "1m"
+       limits:
+         memory: "2Gi"
+         cpu: "4"
 
-   .. raw:: html
+.. raw:: html
 
-      </details>
+   </details>
 
-   | 同様に、下記のコマンドから Exastro IT Automation の values.yaml のデフォルト値を出力します。
+| 同様に、下記のコマンドから Exastro IT Automation の values.yaml のデフォルト値を出力します。
 
-   .. code:: shell
+.. code:: shell
 
-      helm show values exastro-it-automation/exastro-it-automation > exastro-it-automation.yaml
+   helm show values exastro-it-automation/exastro-it-automation > exastro-it-automation.yaml
 
-   .. raw:: html
+.. raw:: html
 
-      <details>
-      <summary>exastro-it-automation.yaml</summary>
+   <details>
+   <summary>exastro-it-automation.yaml</summary>
 
-   .. code:: yaml
+.. code:: yaml
 
-       # Default values for Exastro IT Automation.
-       # This is a YAML-formatted file.
-       # Declare variables to be passed into your templates.
-       global:
-         itaGlobalDefinition:
-           name: ita-global
-           enabled: true
-           image:
-             registry: "docker.io"
-             organization: exastro
-             package: exastro-it-automation
-           config:
-             DEFAULT_LANGUAGE: "ja"
-             LANGUAGE: "en"
-             CONTAINER_BASE: "kubernetes"
-             TZ: "Asia/Tokyo"
-             STORAGEPATH: "/storage/"
-           persistence:
-             enabled: true
-             accessMode: ReadWriteMany
-             size: 10Gi
-             volumeType: hostPath # e.g.) hostPath or AKS
-             storageClass: "-" # e.g.) azurefile or - (None)
-             # matchLabels:
-             #   release: "stable"
-             # matchExpressions:
-             #   - {key: environment, operator: In, values: [dev]}
-         gitlabDefinition:
-           name: gitlab
-           enabled: true
-           config:
-             GITLAB_PROTOCOL: "http"
-             GITLAB_HOST: "gitlab.exastro-platform.svc"
-             GITLAB_PORT: "80"
-           secret:
-             GITLAB_ROOT_TOKEN: ""
-         itaDatabaseDefinition:
-           name: ita-database
-           enabled: true
-           config:
-             DB_VENDOR: "mariadb"
-             DB_HOST: "mariadb.exastro-platform.svc"
-             DB_PORT: "3306"
-             DB_DATABASE: "ITA_DB"
-           secret:
-             DB_ROOT_PASSWORD: ""
-             DB_USER: ""
-             DB_PASSWORD: ""
+   # Default values for Exastro IT Automation.
+   # This is a YAML-formatted file.
+   # Declare variables to be passed into your templates.
+   global:
+     itaGlobalDefinition:
+       name: ita-global
+       enabled: true
+       image:
+         registry: "docker.io"
+         organization: exastro
+         package: exastro-it-automation
+       config:
+         DEFAULT_LANGUAGE: "ja"
+         LANGUAGE: "en"
+         CONTAINER_BASE: "kubernetes"
+         TZ: "Asia/Tokyo"
+         STORAGEPATH: "/storage/"
+       secret:
+         ENCRYPT_KEY: ""
+       persistence:
+         enabled: true
+         accessMode: ReadWriteMany
+         size: 10Gi
+         volumeType: hostPath # e.g.) hostPath or AKS
+         storageClass: "-" # e.g.) azurefile or - (None)
+         # matchLabels:
+         #   release: "stable"
+         # matchExpressions:
+         #   - {key: environment, operator: In, values: [dev]}
+     gitlabDefinition:
+       name: gitlab
+       enabled: true
+       config:
+         GITLAB_PROTOCOL: "http"
+         GITLAB_HOST: "gitlab.exastro-platform.svc"
+         GITLAB_PORT: "80"
+       secret:
+         GITLAB_ROOT_TOKEN: ""
+     itaDatabaseDefinition:
+       name: ita-database
+       enabled: true
+       config:
+         DB_VENDOR: "mariadb"
+         DB_HOST: "mariadb.exastro-platform.svc"
+         DB_PORT: "3306"
+         DB_DATABASE: "ITA_DB"
+       secret:
+         DB_ADMIN_USER: ""
+         DB_ADMIN_PASSWORD: ""
+         DB_USER: ""
+         DB_PASSWORD: ""
 
-       ita-api-admin:
-         replicaCount: 1
-         image:
-           repository: "exastro/exastro-it-automation-api-admin"
-           tag: "2.0.0"
-           pullPolicy: IfNotPresent
+   ita-api-admin:
+     replicaCount: 1
+     image:
+       repository: "exastro/exastro-it-automation-api-admin"
+       tag: "2.0.2"
+       pullPolicy: IfNotPresent
 
-       ita-api-organization:
-         replicaCount: 1
-         image:
-           repository: "exastro/exastro-it-automation-api-organization"
-           tag: "2.0.0"
-           pullPolicy: IfNotPresent
+   ita-api-organization:
+     replicaCount: 1
+     image:
+       repository: "exastro/exastro-it-automation-api-organization"
+       tag: "2.0.2"
+       pullPolicy: IfNotPresent
 
-       ita-by-ansible-execute:
-         replicaCount: 1
-         image:
-           repository: "exastro/exastro-it-automation-by-ansible-execute"
-           tag: "2.0.0"
-           pullPolicy: IfNotPresent
-         extraEnv:
-           EXECUTE_INTERVAL: "10"
-           ANSIBLE_AGENT_IMAGE: "exastro/exastro-it-automation-by-ansible-agent"
-           ANSIBLE_AGENT_IMAGE_TAG: "2.0.0"
+   ita-by-ansible-execute:
+     replicaCount: 1
+     image:
+       repository: "exastro/exastro-it-automation-by-ansible-execute"
+       tag: "2.0.2"
+       pullPolicy: IfNotPresent
+     extraEnv:
+       EXECUTE_INTERVAL: "10"
+       ANSIBLE_AGENT_IMAGE: "exastro/exastro-it-automation-by-ansible-agent"
+       ANSIBLE_AGENT_IMAGE_TAG: "2.0.2"
+     serviceAccount:
+       create: false
+       name: "ita-by-ansible-execute-sa"
 
-       ita-by-ansible-legacy-role-vars-listup:
-         replicaCount: 1
-         extraEnv:
-           EXECUTE_INTERVAL: "10"
-         image:
-           repository: "exastro/exastro-it-automation-by-ansible-legacy-role-vars-listup"
-           tag: "2.0.0"
-           pullPolicy: IfNotPresent
+   ita-by-ansible-legacy-role-vars-listup:
+     replicaCount: 1
+     extraEnv:
+       EXECUTE_INTERVAL: "10"
+     image:
+       repository: "exastro/exastro-it-automation-by-ansible-legacy-role-vars-listup"
+       tag: "2.0.2"
+       pullPolicy: IfNotPresent
 
-       ita-by-ansible-towermaster-sync:
-         replicaCount: 1
-         extraEnv:
-           EXECUTE_INTERVAL: "10"
-         image:
-           repository: "exastro/exastro-it-automation-by-ansible-towermaster-sync"
-           tag: "2.0.0"
-           pullPolicy: IfNotPresent
+   ita-by-ansible-towermaster-sync:
+     replicaCount: 1
+     extraEnv:
+       EXECUTE_INTERVAL: "10"
+     image:
+       repository: "exastro/exastro-it-automation-by-ansible-towermaster-sync"
+       tag: "2.0.2"
+       pullPolicy: IfNotPresent
 
-       ita-by-conductor-synchronize:
-         replicaCount: 1
-         extraEnv:
-           EXECUTE_INTERVAL: "10"
-         image:
-           repository: "exastro/exastro-it-automation-by-conductor-synchronize"
-           tag: "2.0.0"
-           pullPolicy: IfNotPresent
+   ita-by-conductor-synchronize:
+     replicaCount: 1
+     extraEnv:
+       EXECUTE_INTERVAL: "10"
+     image:
+       repository: "exastro/exastro-it-automation-by-conductor-synchronize"
+       tag: "2.0.2"
+       pullPolicy: IfNotPresent
 
-       ita-by-menu-create:
-         replicaCount: 1
-         extraEnv:
-           EXECUTE_INTERVAL: "10"
-         image:
-           repository: "exastro/exastro-it-automation-by-menu-create"
-           tag: "2.0.0"
-           pullPolicy: IfNotPresent
+   ita-by-menu-create:
+     replicaCount: 1
+     extraEnv:
+       EXECUTE_INTERVAL: "10"
+     image:
+       repository: "exastro/exastro-it-automation-by-menu-create"
+       tag: "2.0.2"
+       pullPolicy: IfNotPresent
 
-       ita-database-setup-job:
-         image:
-           repository: ""
-           tag: ""
-           pullPolicy: IfNotPresent
+   ita-database-setup-job:
+     image:
+       repository: ""
+       tag: ""
+       pullPolicy: IfNotPresent
 
-       ita-web-server:
-         replicaCount: 1
-         image:
-           repository: "exastro/exastro-it-automation-web-server"
-           tag: "2.0.0"
-           pullPolicy: IfNotPresent
+   ita-web-server:
+     replicaCount: 1
+     image:
+       repository: "exastro/exastro-it-automation-web-server"
+       tag: "2.0.2"
+       pullPolicy: IfNotPresent
 
-   .. raw:: html
+.. raw:: html
 
-      </details>
+   </details>
 
 .. _ingress_setting:
 
 3. サービス公開の設定 (Ingress の設定)
+--------------------------------------
 
-   | サービス公開用のドメイン情報を Ingress に登録することでDNSを使ったサービス公開を行います。
-   | Azure におけるドメイン名の確認方法については :ref:`aks-dns` を確認してください。
-   | 下記は、AKSのIngress Controller を使用する際の例を記載しております。
+| サービス公開用のドメイン情報を Ingress に登録することでDNSを使ったサービス公開を行います。
+| パラメータの詳細は下記のとおりです。
 
-   -  exastro-platform.yaml
+.. list-table:: Exastro Platform 認証機能のオプションパラメータ
+   :widths: 25 25 10 20
+   :header-rows: 1
+   :align: left
 
-      .. code:: diff
+   * - パラメータ
+     - 説明
+     - 変更
+     - デフォルト値・選択可能な設定値
+   * - platform-auth.ingress.enabled
+     - Exastro Platform における Ingress 利用の要否
+     - 可
+     - | :program:`true` (デフォルト): Exastro Platform にアクセスするための Ingress Controller をデプロイします。
+       | :program:`false` : Ingress Controller をデプロイしません。
+   * - platform-auth.ingress.hosts[0].host
+     - | Exastro Platform 管理コンソールエンドポイントのホスト名、もしくは、FQDN
+       | 別途、DNSへのレコード登録が必要です。
+     - 可 (Ingress利用時)
+     - "exastro-suite.example.local"
+   * - platform-auth.ingress.hosts[1].host
+     - | Exastro Platform エンドポイントのホスト名、もしくは、FQDN
+       | 別途、DNSへのレコード登録が必要です。
+     - 可 (Ingress利用時)
+     - "exastro-suite-mng.example.local"
 
-          platform-auth:
-            ingress:
-              enabled: true
-         +    annotations:
-         +      kubernetes.io/ingress.class: addon-http-application-routing
-         +      nginx.ingress.kubernetes.io/proxy-body-size: 100m
-         +      nginx.ingress.kubernetes.io/proxy-buffer-size: 256k
-         +      nginx.ingress.kubernetes.io/server-snippet: |
-         +        client_header_buffer_size 100k;
-         +        large_client_header_buffers 4 100k;
-              hosts:
-         -      - host: exastro-suite.example.local
-         +      - host: exastro-suite.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io ★ここにドメイン名を記載
-                  paths:
-                    - path: /
-                      pathType: Prefix
-                      backend: "http"
-         -      - host: exastro-suite-mng.example.local
-         +      - host: exastro-suite-mng.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io ★ここにドメイン名を記載
-                  paths:
-                    - path: /
-                      pathType: Prefix
-                      backend: "httpMng"
 
-.. _DATABASE_SETUP:
+| Azure におけるドメイン名の確認方法については :ref:`aks-dns` を確認してください。
+| 下記は、AKS の Ingress Controller を使用する際の例を記載しております。
 
-4. データベース起動の有無
-
-   Kubernetes クラスタ内にデータベース用Podの起動有無を選択します。
-
-   -  データベースコンテナ起動ありの場合: 対応不要
-
-   -  データベースコンテナ起動なし(外部DB利用)の場合: DB接続情報の修正
-
-      .. code:: diff
-
-          # exastro-platform.yaml
-          global:
-            keycloakDefinition:
-              name: keycloak
-              enabled: true
-              secret:
-         -      KEYCLOAK_USER: ""
-         -      KEYCLOAK_PASSWORD: ""
-         -      KEYCLOAK_DB_USER: ""
-         -      KEYCLOAK_DB_PASSWORD: ""
-         +      KEYCLOAK_USER: "KeyCloakログインユーザ"
-         +      KEYCLOAK_PASSWORD: "KeyCloakログインパスワード"
-         +      KEYCLOAK_DB_USER: "KeyCloak用DBユーザ"
-         +      KEYCLOAK_DB_PASSWORD: "KeyCloak用DBパスワード"
-            authDatabaseDefinition:
-              name: auth-database
-              enabled: true
-              config:
-                DB_VENDOR: "mariadb"
-         -      DB_HOST: "mariadb.exastro-platform.svc"
-         -      DB_PORT: "3306"
-         +      DB_HOST: "外部DBの接続先"
-         +      DB_PORT: "外部DBのポート番号"
-                DB_DATABASE: "platform"
-           databaseDefinition:
-             name: mariadb
-         -   enabled: true
-         +   enabled: false
-
-      .. code:: diff
-
-          # exastro-it-automation.yaml
-          global:
-            itaDatabaseDefinition:
-              name: ita-database
-              enabled: true
-              config:
-                DB_VENDOR: "mariadb"
-         -      DB_HOST: "mariadb.exastro-platform.svc"
-         -      DB_PORT: "3306"
-         +      DB_HOST: "外部DBの接続先"
-         +      DB_PORT: "外部DBのポート番号"
-                DB_DATABASE: "platform"
-
-5. データベース接続アカウントの設定
-
-   | データベース接続のためのアカウント情報を登録します。
-
-   .. warning::
-     | アカウントには、データベースを作成する権限が必要です。
-
-   .. warning::
-     | 認証情報などはすべて平文で問題ありません。(Base64エンコードは不要)
+-  exastro-platform.yaml
 
    .. code:: diff
 
-      # exastro-platform.yaml
-      global:
-          authDatabaseDefinition:
-          name: auth-database
+       # exastro-platform.yaml
+       platform-auth:
+         ingress:
+           enabled: true
+      +    annotations:
+      +      kubernetes.io/ingress.class: addon-http-application-routing
+      +      nginx.ingress.kubernetes.io/proxy-body-size: 100m
+      +      nginx.ingress.kubernetes.io/proxy-buffer-size: 256k
+      +      nginx.ingress.kubernetes.io/server-snippet: |
+      +        client_header_buffer_size 100k;
+      +        large_client_header_buffers 4 100k;
+           hosts:
+      -      - host: exastro-suite.example.local
+      +      - host: exastro-suite.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io ★ここにドメイン名を記載
+               paths:
+                 - path: /
+                   pathType: Prefix
+                   backend: "http"
+      -      - host: exastro-suite-mng.example.local
+      +      - host: exastro-suite-mng.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io ★ここにドメイン名を記載
+               paths:
+                 - path: /
+                   pathType: Prefix
+                   backend: "httpMng"
+
+.. _DATABASE_SETUP:
+
+4. データベースコンテナの設定
+-----------------------------
+
+| Kubernetes クラスタ内にデータベース用Podの起動有無を選択します。
+| パラメータの詳細は下記のとおりです。
+
+.. list-table:: 共通設定 (Exastro 共用データベース) のオプションパラメータ
+   :widths: 25 25 10 20
+   :header-rows: 1
+   :align: left
+
+   * - パラメータ
+     - 説明
+     - 変更
+     - デフォルト値・選択可能な設定値
+   * - global.databaseDefinition.secret.MARIADB_ROOT_PASSWORD
+     - Exastro 共用データベースの root アカウントに設定するパスワード(エンコードなし)
+     - 必須
+     - 任意の文字列
+   * - global.databaseDefinition.persistence.enabled
+     - Exastro 共用データベースのデータ永続化の有効フラグ
+     - 可
+     - | :program:`"true"` (デフォルト): データを永続化する
+       | :program:`"false"`: データを永続化しない
+   * - global.databaseDefinition.persistence.reinstall
+     - 再インストール時にデータ領域の初期化の要否
+     - 可 (データ永続化時)
+     - | :program:`"true"` (デフォルト): データを初期化(削除)する
+       | :program:`"false"`: データを初期化(削除)しない
+   * - global.databaseDefinition.persistence.size
+     - 永続ボリュームのディスク容量
+     - 可 (データ永続化時)
+     - "20Gi"
+   * - global.databaseDefinition.persistence.volumeType
+     - 永続ボリュームのボリュームタイプ
+     - 可 (現在無効)
+     - | :program:`"hostPath"` (デフォルト): Kubernetes クラスタのノード上にデータを保存(非推奨)
+       | :program:`"AKS"`: AKS のストレージクラスを利用
+   * - global.databaseDefinition.persistence.storageClass
+     - 永続ボリュームにストレージクラスを利用する場合のクラスを指定
+     - 可 (データ永続化時)
+     - | :program:`"-"` (デフォルト): ストレージクラスを指定しない。
+       | :program:`ストレージクラス名`: クラウドプロバイダなどから提供されるストレージクラス名を指定。
+
+| 下記は、データベースコンテナを使用する際の例を記載しております。
+
+.. danger::
+   | 永続データはクラスタ内にあるノード上のローカルディスク(hostPath)に保存されますが、本番利用の際には外部ストレージを利用してください。
+   | 物理的にノードが置き換わった場合データが消失します。
+
+.. code:: diff
+
+    # exastro-platform.yaml
+    global:
+      databaseDefinition:
+        name: mariadb
+        enabled: true
+        secret:
+   -      MARIADB_ROOT_PASSWORD: ""
+   +      MARIADB_ROOT_PASSWORD: "root に設定するパスワード"
+        persistence:
           enabled: true
-          config:
-              DB_VENDOR: "mariadb"
-              DB_HOST: "mariadb.exastro-platform.svc"
-              DB_PORT: "3306"
-              DB_DATABASE: "platform"
-          secret:
-      -      DB_ADMIN_USER: ""
-      -      DB_ADMIN_PASSWORD: ""
-      -      DB_USER: ""
-      -      DB_PASSWORD: ""
-      +      DB_ADMIN_USER: "DBの管理ユーザ名"
-      +      DB_ADMIN_PASSWORD: "DBの管理ユーザのパスワード"
-      +      DB_USER: "認証基盤用ユーザ名"
-      +      DB_PASSWORD: "認証基盤用ユーザのパスワード"
-          databaseDefinition:
-          name: mariadb
-          enabled: true
-          secret:
-      -      MARIADB_ROOT_PASSWORD: ""
-      +      MARIADB_ROOT_PASSWORD: "DBのルートパスワード"
-          persistence:
-              enabled: true
-              reinstall: false
-              accessMode: ReadWriteOnce
+          reinstall: false
+          accessMode: ReadWriteOnce
+          size: 20Gi
+          volumeType: hostPath # e.g.) hostPath or AKS
+          storageClass: "-" # e.g.) azurefile or - (None)
+
+5. Keycloak 設定
+----------------
+
+| Keycloak 利用時に必要な認証情報やデータベースのアカウント情報を選択します。
+| パラメータの詳細は下記のとおりです。
+
+.. list-table:: 共通設定 (Keycloak) のオプションパラメータ
+   :widths: 25 25 10 20
+   :header-rows: 1
+   :align: left
+
+   * - パラメータ
+     - 説明
+     - 変更
+     - デフォルト値・選択可能な設定値
+   * - global.keycloakDefinition.config.KEYCLOAK_MASTER_REALM
+     - Keycloak のマスターレルム名
+     - 可
+     - "master"
+   * - global.keycloakDefinition.config.KEYCLOAK_DB_DATABASE
+     - Keycloak が利用するデータベース名
+     - 可
+     - "keycloak"
+   * - global.keycloakDefinition.secret.KEYCLOAK_USER
+     - | Keycloak のマスターレルムにおける管理権限を持ったユーザ名を指定。
+       | 指定したユーザが作成される。
+     - 必須
+     - 任意の文字列
+   * - global.keycloakDefinition.secret.KEYCLOAK_PASSWORD
+     - Keycloak のマスターレルムにおける管理権限を持ったユーザに設定するパスワード(エンコードなし)
+     - 必須
+     - 任意の文字列
+   * - global.keycloakDefinition.secret.KEYCLOAK_DB_USER
+     - Keycloak が使用するデータベースユーザ
+     - 必須
+     - 任意の文字列
+   * - global.keycloakDefinition.secret.KEYCLOAK_DB_PASSWORD
+     - Keycloak が使用するデータベースユーザのパスワード(エンコードなし)
+     - 必須
+     - 任意の文字列
+
+| 下記は、Keycloak コンテナを使用する際の例を記載しております。
+
+.. code:: diff
+
+    # exastro-platform.yaml
+    global:
+      keycloakDefinition:
+        name: keycloak
+        enabled: true
+        config:
+          API_KEYCLOAK_PROTOCOL: "http"
+          API_KEYCLOAK_HOST: "keycloak.exastro-platform.svc"
+          API_KEYCLOAK_PORT: "8080"
+          KEYCLOAK_PROTOCOL: "http"
+          KEYCLOAK_HOST: "keycloak.exastro-platform.svc"
+          KEYCLOAK_PORT: "8080"
+          KEYCLOAK_MASTER_REALM: "master"
+          KEYCLOAK_DB_DATABASE: "keycloak"
+        secret:
+   -      KEYCLOAK_USER: ""
+   -      KEYCLOAK_PASSWORD: ""
+   -      KEYCLOAK_DB_USER: ""
+   -      KEYCLOAK_DB_PASSWORD: ""
+   +      KEYCLOAK_USER: "Keycloakログインユーザ"
+   +      KEYCLOAK_PASSWORD: "Keycloakログインパスワード"
+   +      KEYCLOAK_DB_USER: "Keycloak用DBユーザ"
+   +      KEYCLOAK_DB_PASSWORD: "Keycloak用DBパスワード"
+
+6. 認証機能用のデータベース設定
+-------------------------------
+
+| 認証機能情報やデータベースのアカウント情報を選択します。
+| パラメータの詳細は下記のとおりです。
+
+.. list-table:: 共通設定 (認証機能用データベース) のオプションパラメータ
+   :widths: 25 25 10 20
+   :header-rows: 1
+   :align: left
+
+   * - パラメータ
+     - 説明
+     - 変更
+     - デフォルト値・選択可能な設定値
+   * - global.authDatabaseDefinition.config.DB_VENDOR
+     - 認証機能用データベースで使用するデータベース
+     - 可 (外部データベース利用時)
+     - | :program:`"mariadb"` (デフォルト): MariaDB を利用
+       | :program:`"mysql"`: MySQL を利用
+   * - global.authDatabaseDefinition.config.DB_HOST
+     - | 認証機能用データベース利用するDB
+       | デフォルト状態では、同一の Kubernetes クラスタ内にデプロイされるコンテナを指定しています。
+       | クラスタ外部の DB を利用する場合には設定が必要となります。 
+     - 可 (外部データベース利用時)
+     - "mariadb.exastro-platform.svc"
+   * - global.authDatabaseDefinition.config.DB_PORT
+     - 認証機能用データベースで利用するポート番号(TCP)
+     - 可 (外部データベース利用時)
+     - "3306"
+   * - global.authDatabaseDefinition.config.DB_DATABASE
+     - 認証機能用データベースで利用するデータベース名
+     - 可 (外部データベース利用時)
+     - "platform"
+   * - global.authDatabaseDefinition.secret.DB_ADMIN_USER
+     - 認証機能用データベースで利用する管理権限を持つDBユーザ名
+     - 必須
+     - 管理権限を持つDBユーザ名
+   * - global.authDatabaseDefinition.secret.DB_ADMIN_PASSWORD
+     - 認証機能用データベースで利用する管理権限を持つDBユーザのパスワード(エンコードなし)
+     - 必須
+     - 管理権限を持つDBユーザ名のパスワード
+   * - global.authDatabaseDefinition.secret.DB_USER
+     - 認証機能用データベースに作成するDBユーザ名
+     - 必須
+     - 任意の文字列
+   * - global.authDatabaseDefinition.secret.DB_PASSWORD
+     - 認証機能用データベースに作成するDBユーザのパスワード(エンコードなし)
+     - 必須
+     - 任意の文字列
+
+| 下記は、データベースコンテナを使用する際の例を記載しております。
+
+.. code:: diff
+
+    # exastro-platform.yaml
+    global:
+      authDatabaseDefinition:
+        name: auth-database
+        enabled: true
+        config:
+          DB_VENDOR: "mariadb"
+          DB_HOST: "mariadb.exastro-platform.svc"
+          DB_PORT: "3306"
+          DB_DATABASE: "platform"
+        secret:
+   -      DB_ADMIN_USER: ""
+   -      DB_ADMIN_PASSWORD: ""
+   -      DB_USER: ""
+   -      DB_PASSWORD: ""
+   +      DB_ADMIN_USER: "DBの管理ユーザ名"
+   +      DB_ADMIN_PASSWORD: "DBの管理ユーザのパスワード"
+   +      DB_USER: "認証基盤用ユーザ名"
+   +      DB_PASSWORD: "認証基盤用ユーザのパスワード"
+
+6. Exastro IT Automation 用のデータベース設定
+---------------------------------------------
+
+.. list-table:: 共通設定 (Exastro IT Automation 用データベース) のオプションパラメータ
+   :widths: 25 25 10 20
+   :header-rows: 1
+   :align: left
+
+   * - パラメータ
+     - 説明
+     - 変更
+     - デフォルト値・選択可能な設定値
+   * - global.itaDatabaseDefinition.config.DB_VENDOR
+
+     - Exastro IT Automation 用データベースで使用するデータベース
+     - 可 (外部データベース利用時)
+     - | :program:`"mariadb"` (デフォルト): MariaDB を利用
+       | :program:`"mysql"`: MySQL を利用
+   * - global.itaDatabaseDefinition.config.DB_HOST
+     - | Exastro IT Automation 用データベース利用するDB
+       | デフォルト状態では、同一の Kubernetes クラスタ内にデプロイされるコンテナを指定しています。
+       | クラスタ外部の DB を利用する場合には設定が必要となります。 
+     - 可 (外部データベース利用時)
+     - "mariadb.exastro-platform.svc"
+   * - global.itaDatabaseDefinition.config.DB_PORT
+     - Exastro IT Automation 用データベースで利用するポート番号(TCP)
+     - 可 (外部データベース利用時)
+     - "3306"
+   * - global.itaDatabaseDefinition.config.DB_DATABASE
+     - Exastro IT Automation 用データベースで利用するデータベース名
+     - 可 (外部データベース利用時)
+     - "platform"
+   * - global.itaDatabaseDefinition.secret.DB_ADMIN_USER
+     - Exastro IT Automation 用データベースで利用する管理権限を持つDBユーザ名
+     - 必須
+     - 管理権限を持つDBユーザ名
+   * - global.itaDatabaseDefinition.secret.DB_ADMIN_PASSWORD
+     - Exastro IT Automation 用データベースで利用する管理権限を持つDBユーザのパスワード(エンコードなし)
+     - 必須
+     - 管理権限を持つDBユーザ名のパスワード
+   * - global.itaDatabaseDefinition.secret.DB_USER
+     - Exastro IT Automation 用データベースに作成するDBユーザ名
+     - 必須
+     - 任意の文字列
+   * - global.itaDatabaseDefinition.secret.DB_PASSWORD
+     - Exastro IT Automation 用データベースに作成するDBユーザのパスワード(エンコードなし)
+     - 必須
+     - 任意の文字列
+
+| 下記は、データベースコンテナを使用する際の例を記載しております。
+
+.. code:: diff
+
+    # exastro-it-automation.yaml
+    global:
+      itaDatabaseDefinition:
+        name: ita-database
+        enabled: true
+        config:
+          DB_VENDOR: "mariadb"
+   -      DB_ADMIN_USER: ""
+   -      DB_ADMIN_PASSWORD: ""
+   -      DB_USER: ""
+   -      DB_PASSWORD: ""
+   +      DB_ADMIN_USER: "DBの管理ユーザ名"
+   +      DB_ADMIN_PASSWORD: "DBの管理ユーザのパスワード"
+   +      DB_USER: "認証基盤用ユーザ名"
+   +      DB_PASSWORD: "認証基盤用ユーザのパスワード"
+    -      DB_HOST: "mariadb.exastro-platform.svc"
+    -      DB_PORT: "3306"
+    +      DB_HOST: "外部DBの接続先"
+    +      DB_PORT: "外部DBのポート番号"
+          DB_DATABASE: "platform"
+
+7. データベース接続アカウントの設定
+-----------------------------------
+
+| データベース接続のためのアカウント情報を登録します。
+
+.. warning::
+  | アカウントには、データベースを作成する権限が必要です。
+
+.. warning::
+  | 認証情報などはすべて平文で問題ありません。(Base64エンコードは不要)
+
+.. code:: diff
+
+   # exastro-platform.yaml
+   global:
+       authDatabaseDefinition:
+       name: auth-database
+       enabled: true
+       config:
+           DB_VENDOR: "mariadb"
+           DB_HOST: "mariadb.exastro-platform.svc"
+           DB_PORT: "3306"
+           DB_DATABASE: "platform"
+       secret:
+   -      DB_ADMIN_USER: ""
+   -      DB_ADMIN_PASSWORD: ""
+   -      DB_USER: ""
+   -      DB_PASSWORD: ""
+   +      DB_ADMIN_USER: "DBの管理ユーザ名"
+   +      DB_ADMIN_PASSWORD: "DBの管理ユーザのパスワード"
+   +      DB_USER: "認証基盤用ユーザ名"
+   +      DB_PASSWORD: "認証基盤用ユーザのパスワード"
+       databaseDefinition:
+       name: mariadb
+       enabled: true
+       secret:
+   -      MARIADB_ROOT_PASSWORD: ""
+   +      MARIADB_ROOT_PASSWORD: "DBのルートパスワード"
+       persistence:
+           enabled: true
+           reinstall: false
+           accessMode: ReadWriteOnce
+
+.. code:: diff
+
+   # exastro-it-automation.yaml
+   global:
+       itaDatabaseDefinition:
+       name: ita-database
+       enabled: true
+       config:
+           DB_VENDOR: "mariadb"
+           DB_HOST: "mariadb.exastro-platform.svc"
+           DB_PORT: "3306"
+           DB_DATABASE: "ITA_DB"
+       secret:
+   -      DB_ADMIN_USER: ""
+   -      DB_ADMIN_PASSWORD: ""
+   -      DB_USER: ""
+   -      DB_PASSWORD: ""
+   +      DB_ADMIN_USER: "DBの管理ユーザ名"
+   +      DB_ADMIN_PASSWORD: "DBの管理ユーザのパスワード"
+   +      DB_USER: "認証基盤用ユーザ名"
+   +      DB_PASSWORD: "認証基盤用ユーザのパスワード"
+
+8. GitLab 連携設定
+------------------
+
+| GitLab 連携のためのアカウント情報を登録します。
+
+.. warning::
+  | アカウントには、GitLab のアカウントを作成する権限が必要です。
+
+-  exastro-it-automation.yaml (Exastro IT Automation) の修正箇所
 
    .. code:: diff
 
       # exastro-it-automation.yaml
       global:
-          itaDatabaseDefinition:
-          name: ita-database
+        gitlabDefinition:
+          name: gitlab
           enabled: true
           config:
-              DB_VENDOR: "mariadb"
-              DB_HOST: "mariadb.exastro-platform.svc"
-              DB_PORT: "3306"
-              DB_DATABASE: "ITA_DB"
+      -     GITLAB_PROTOCOL: "http"
+      -     GITLAB_HOST: "gitlab.exastro-platform.svc"
+      -     GITLAB_PORT: "80"
+      +     GITLAB_PROTOCOL: "接続プロトコル http or https"
+      +     GITLAB_HOST: "接続先"
+      +     GITLAB_PORT: "接続ポート"
           secret:
-      -      DB_ADMIN_USER: ""
-      -      DB_ADMIN_PASSWORD: ""
-      -      DB_USER: ""
-      -      DB_PASSWORD: ""
-      +      DB_ADMIN_USER: "DBの管理ユーザ名"
-      +      DB_ADMIN_PASSWORD: "DBの管理ユーザのパスワード"
-      +      DB_USER: "認証基盤用ユーザ名"
-      +      DB_PASSWORD: "認証基盤用ユーザのパスワード"
+      -     GITLAB_ROOT_TOKEN: ""
+      +     GITLAB_ROOT_TOKEN: "GitLabのRoot権限を持ったトークン"
+        itaDatabaseDefinition:
+          name: ita-database
 
-6. GitLab 連携設定
+9. 永続ボリューム - PersistentVolume(pv)の設定例
+------------------------------------------------
 
-   | GitLab 連携のためのアカウント情報を登録します。
+| データベースのデータ永続化 (クラスタ内コンテナがある場合)、および、ファイルの永続化のために、永続ボリュームを設定する必要があります。
 
-   .. warning::
-     | アカウントには、GitLab のアカウントを作成する権限が必要です。
+- マネージドディスクを使用する場合 (本番向け)
 
-   -  exastro-it-automation.yaml (Exastro IT Automation) の修正箇所
+  | Azure のストレージを利用する場合、下記のように StorageClass を定義することで利用が可能です。
+  | ※以下を適用した際は、values.yaml ファイルの値も合わせて修正する必要があります。
 
-      .. code:: diff
+  -  storage-class-exastro-suite.yaml
 
-         # exastro-it-automation.yaml
-         global:
-           gitlabDefinition:
-             name: gitlab
-             enabled: true
-             config:
-         -     GITLAB_PROTOCOL: "http"
-         -     GITLAB_HOST: "gitlab.exastro-platform.svc"
-         -     GITLAB_PORT: "80"
-         +     GITLAB_PROTOCOL: "接続プロトコル http or https"
-         +     GITLAB_HOST: "接続先"
-         +     GITLAB_PORT: "接続ポート"
-             secret:
-         -     GITLAB_ROOT_TOKEN: ""
-         +     GITLAB_ROOT_TOKEN: "GitLabのRoot権限を持ったトークン"
-           itaDatabaseDefinition:
-             name: ita-database
+     .. code:: yaml
 
-7. 永続ボリューム - PersistentVolume(pv)の設定例
+        apiVersion: storage.k8s.io/v1
+        kind: StorageClass
+        metadata:
+          name: exastro-suite-azurefile-csi-nfs
+        provisioner: file.csi.azure.com
+        allowVolumeExpansion: true
+        parameters:
+          protocol: nfs
+        mountOptions:
+          - nconnect=8
 
-   | データベースのデータ永続化 (クラスタ内コンテナがある場合)、および、ファイルの永続化のために、永続ボリュームを設定する必要があります。
-  
-   - マネージドディスクを使用する場合 (本番向け)
+  -  exastro-platform.yaml (helm valuesファイル)
 
-     | Azure のストレージを利用する場合、下記のように StorageClass を定義することで利用が可能です。
-     | ※以下を適用した際は、values.yaml ファイルの値も合わせて修正する必要があります。
-  
-     -  storage-class-exastro-suite.yaml
-  
-        .. code:: yaml
-  
-           apiVersion: storage.k8s.io/v1
-           kind: StorageClass
-           metadata:
-             name: exastro-suite-azurefile-csi-nfs
-           provisioner: file.csi.azure.com
-           allowVolumeExpansion: true
-           parameters:
-             protocol: nfs
-           mountOptions:
-             - nconnect=8
-  
-     -  exastro-it-automation.yaml (helm valuesファイル)
-  
-        .. code:: diff
-  
-               persistence:
-                 enabled: true
-                 accessMode: ReadWriteMany
-                 size: 10Gi
-                 volumeType: hostPath # e.g.) hostPath or AKS
-           -     storageClass: "-" # e.g.) azurefile or - (None)
-           +     storageClass: "exastro-suite-azurefile-csi-nfs" # e.g.) azurefile or - (None)
-                 # matchLabels:
-                 #   release: "stable"
-                 # matchExpressions:
-                 #   - {key: environment, operator: In, values: [dev]}
+     .. code:: diff
 
-   - Kubernetes ノードのディレクトリを利用する場合 (テスト・検証向け)
+        global:
+          databaseDefinition:
+            persistence:
+              enabled: true
+              reinstall: false
+              accessMode: ReadWriteOnce
+              size: 20Gi
+              volumeType: hostPath # e.g.) hostPath or AKS
+       -      storageClass: "-" # e.g.) azurefile or - (None)
+       +      storageClass: "exastro-suite-azurefile-csi-nfs" # e.g.) azurefile or - (None)
 
-     | 設定方法は各サーバやサービスなどによって異なりますが、ここでは hostPath を使用した例を記載します。
-     | ※マネージドサービスを利用する場合は、後続の例を参照してください。
+  -  exastro-it-automation.yaml (helm valuesファイル)
 
-     .. danger::
-        | データの永続化自体は可能ですが、コンピュートノードの増減や変更によりデータが消えてしまう可能性があるため本番環境では使用しないでください。
-        | また、Azure で構築した AKS クラスタは、クラスタを停止すると AKS クラスターの Node が解放されるため、保存していた情報は消えてしまいます。そのため、Node が停止しないように注意が必要となります。
-  
-     -  pv-database.yaml (データベース用ボリューム)
-  
-        .. code:: yaml
-  
-           # pv-database.yaml
-           apiVersion: v1
-           kind: PersistentVolume
-           metadata:
-             name: pv-database
-           spec:
-             capacity:
-               storage: 20Gi
-             accessModes:
-               - ReadWriteOnce
-             persistentVolumeReclaimPolicy: Retain
-             hostPath:
-               path: /var/data/exastro-suite/exastro-platform/database
-               type: DirectoryOrCreate
-  
-     -  pv-ita-common.yaml (ファイル用ボリューム)
-  
-        .. code:: yaml
-  
-           # pv-ita-common.yaml
-           apiVersion: v1
-           kind: PersistentVolume
-           metadata:
-             name: pv-ita-common
-           spec:
-             capacity:
-               storage: 10Gi
-             accessModes:
-               - ReadWriteMany
-             persistentVolumeReclaimPolicy: Retain
-             hostPath:
-               path: /var/data/exastro-suite/exastro-it-automation/ita-common
-               type: DirectoryOrCreate
+     .. code:: diff
+
+        global:
+          itaGlobalDefinition:
+            persistence:
+              enabled: true
+              accessMode: ReadWriteMany
+              size: 10Gi
+              volumeType: hostPath # e.g.) hostPath or AKS
+       -      storageClass: "-" # e.g.) azurefile or - (None)
+       +      storageClass: "azurefile" # e.g.) azurefile or - (None)
+
+- Kubernetes ノードのディレクトリを利用する場合 (テスト・検証向け)
+
+  | 設定方法は各サーバやサービスなどによって異なりますが、ここでは hostPath を使用した例を記載します。
+  | ※マネージドサービスを利用する場合は、後続の例を参照してください。
+
+  .. danger::
+     | データの永続化自体は可能ですが、コンピュートノードの増減や変更によりデータが消えてしまう可能性があるため本番環境では使用しないでください。
+     | また、Azure で構築した AKS クラスタは、クラスタを停止すると AKS クラスターの Node が解放されるため、保存していた情報は消えてしまいます。そのため、Node が停止しないように注意が必要となります。
+
+  -  pv-database.yaml (データベース用ボリューム)
+
+     .. code:: yaml
+
+        # pv-database.yaml
+        apiVersion: v1
+        kind: PersistentVolume
+        metadata:
+          name: pv-database
+        spec:
+          capacity:
+            storage: 20Gi
+          accessModes:
+            - ReadWriteOnce
+          persistentVolumeReclaimPolicy: Retain
+          hostPath:
+            path: /var/data/exastro-suite/exastro-platform/database
+            type: DirectoryOrCreate
+
+  -  pv-ita-common.yaml (ファイル用ボリューム)
+
+     .. code:: yaml
+
+        # pv-ita-common.yaml
+        apiVersion: v1
+        kind: PersistentVolume
+        metadata:
+          name: pv-ita-common
+        spec:
+          capacity:
+            storage: 10Gi
+          accessModes:
+            - ReadWriteMany
+          persistentVolumeReclaimPolicy: Retain
+          hostPath:
+            path: /var/data/exastro-suite/exastro-it-automation/ita-common
+            type: DirectoryOrCreate
+
+  -  PersistentVolume の作成
+
+     .. code:: bash
+
+        # pv-database.yaml
+        kubectl apply -f pv-database.yaml
+
+        # pv-ita-common.yaml
+        kubectl apply -f pv-ita-common.yaml
+
+        # 確認
+        kubectl get pv
+
+        NAME            CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   REASON   AGE
+        pv-database     20Gi       RWO            Retain           Available                                   19s
+        pv-ita-common   10Gi       RWX            Retain           Available                                   9s
 
 .. _インストール-1:
 

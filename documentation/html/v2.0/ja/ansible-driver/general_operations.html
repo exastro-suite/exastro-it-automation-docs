@@ -235,7 +235,7 @@
 <p>Playbook内の変数は {{△VAR_xxx△}} で記述してください。</p>
 <p>△:半角スペース　xxx: 半角英数字とアンダースコア（ _ ）</p>
 <p>e.g.)</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_users</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_users</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
 </pre></div>
 </div>
 </td>
@@ -248,9 +248,9 @@
 <p>Playbook内の変数は {{△VAR_xxx△}} で記述してください。</p>
 <p>△:半角スペース　xxx: 半角英数字とアンダースコア（ _ ）</p>
 <p>e.g.)</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_users</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_users</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
 </pre></div>
 </div>
 </td>
@@ -263,9 +263,9 @@
 <p>Playbook内の変数は {{△VAR_xxx△}} で記述してください。</p>
 <p>△:半角スペース　xxx: 半角英数字とアンダースコア（ _ ）</p>
 <p>e.g.)</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_users</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">user-name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice</span><span class="w"></span>
-<span class="w">      </span><span class="nt">authorized</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_users</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">user-name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice</span>
+<span class="w">      </span><span class="nt">authorized</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
 </pre></div>
 </div>
 <p>メンバー変数名は、下記の7文字を除くascii文字(0x20～0x7e)が使用出来ます。</p>
@@ -1401,7 +1401,7 @@ Controllerにファイル転送するために必要な情報を管理します�
 <td><p>ホスト名を記入します。</p>
 <p>※ホスト名をlocalhostに設定しpioneerで作業対象ホストとし使用する場合、作業実行でエラーになる場合があります。その場合、インベントリファイル追加オプションに下記パラメータでansibleサーバーにインストールされているpython3のパスを追記して下さい。</p>
 <p>Exp)</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">ansible_python_interpreter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/bin/python3</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">ansible_python_interpreter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/bin/python3</span>
 </pre></div>
 </div>
 </td>
@@ -1516,7 +1516,7 @@ Controllerにファイル転送するために必要な情報を管理します�
 <td><p>WinRM接続ポートでhttpsのポート番号を指定した場合にサーバﾞ証明書を入力します。
 アップロードしたファイルは暗号化されて保存されます。※登録後はダウンロード不可となります。</p>
 <p>サーバ証明書の認証を省く場合、インベントリファイル追加オプションに下記を追記して下さい。</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">ansible_winrm_server_cert_validation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ignore</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">ansible_winrm_server_cert_validation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ignore</span>
 </pre></div>
 </div>
 </td>
@@ -1583,14 +1583,14 @@ Controllerにファイル転送するために必要な情報を管理します�
 <tr class="row-odd"><td colspan="3"><p>インベントリファイル追加オプション「Pioneer利用時は、本項目は適用されません。」</p></td>
 <td><p>ITAが設定していないインベントリファイルのオプションパラメータをyaml形式で入力します。</p>
 <p>Exp)</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">ansible_connection</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">network_cli</span><span class="w"></span>
-<span class="nt">ansible_network_os</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ios</span><span class="w"></span>
-<span class="nt">ansible_become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span><span class="w"></span>
-<span class="nt">ansible_become_method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enable</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">ansible_connection</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">network_cli</span>
+<span class="nt">ansible_network_os</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ios</span>
+<span class="nt">ansible_become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="nt">ansible_become_method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enable</span>
 </pre></div>
 </div>
 <p>各パラメータ値を変数で記述することも出来ます。</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">ansible_become_password</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_passwd</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">ansible_become_password</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_passwd</span><span class="nv"> </span><span class="s">}}&#39;</span>
 </pre></div>
 </div>
 <p>具体値に変数を記述する場合</p>
@@ -1632,9 +1632,9 @@ Controllerにファイル転送するために必要な情報を管理します�
 <p>Exp)</p>
 <p>インベントリファイル追加オプションの設定例</p>
 <p>Network OSがiosの場合の設定値</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">ansible_network_os</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ios</span><span class="w"></span>
-<span class="nt">ansible_become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span><span class="w"></span>
-<span class="nt">ansible_become_method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enable</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">ansible_network_os</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ios</span>
+<span class="nt">ansible_become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="nt">ansible_become_method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enable</span>
 </pre></div>
 </div>
 <p>Ansible Automation Controllerの認証情報の接続タイプについては、ドキュメント <a class="reference external" href="https://docs.ansible.com/ansible-tower/3.6.4/html_ja/userguide/credentials.html">認証情報
@@ -2396,8 +2396,8 @@ _
 <tr class="row-even"><td><p>通常変数</p></td>
 <td><p>具体値は省略可能です。</p>
 <p>e.g.)</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_sample_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span><span class="w"></span>
-<span class="nt">VAR_sample_2</span><span class="p">:</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_sample_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="nt">VAR_sample_2</span><span class="p">:</span>
 </pre></div>
 </div>
 </td>
@@ -2405,9 +2405,9 @@ _
 <tr class="row-odd"><td><p>複数具体値変数</p></td>
 <td><p>具体値は省略可能です。</p>
 <p>e.g.)</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_sample_1</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span><span class="w"></span>
-<span class="nt">VAR_sample_2</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_sample_1</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="nt">VAR_sample_2</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </pre></div>
 </div>
 </td>
@@ -2415,13 +2415,13 @@ _
 <tr class="row-even"><td><p>多段変数</p></td>
 <td><p>階層化された変数構造が定義出来ます。</p>
 <p>e.g.)</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_sample_1</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">item1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span><span class="w"></span>
-<span class="w">    </span><span class="nt">item2</span><span class="p">:</span><span class="w"></span>
-<span class="nt">VAR_sample_2</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">array</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">item1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span><span class="w"></span>
-<span class="w">        </span><span class="nt">item2</span><span class="p">:</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_sample_1</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">item1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">    </span><span class="nt">item2</span><span class="p">:</span>
+<span class="nt">VAR_sample_2</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">array</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">item1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">        </span><span class="nt">item2</span><span class="p">:</span>
 </pre></div>
 </div>
 <p>多段変数を定義したテンプレートはAnsible-Roleでのみ使用することが出来ます。</p>
@@ -2431,8 +2431,8 @@ _
 <tr class="row-odd"><td><p>グローバル変数</p></td>
 <td><p>具体値は省略可能です。</p>
 <p>e.g.)</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">GBL_sample_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span><span class="w"></span>
-<span class="nt">GBL_sample_2</span><span class="p">:</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">GBL_sample_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="nt">GBL_sample_2</span><span class="p">:</span>
 </pre></div>
 </div>
 </td>
@@ -2447,11 +2447,11 @@ _
 <p>・多段変数</p>
 <p>各変数定義の留意事項は同様です。</p>
 <p>e.g.)</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">LCA_sample_1</span><span class="p">:</span><span class="w"></span>
-<span class="nt">LCA_sample_2</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
-<span class="nt">LCA_sample_3</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">item1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span><span class="w"></span>
-<span class="w">    </span><span class="nt">item2</span><span class="p">:</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">LCA_sample_1</span><span class="p">:</span>
+<span class="nt">LCA_sample_2</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="nt">LCA_sample_3</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">item1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">    </span><span class="nt">item2</span><span class="p">:</span>
 </pre></div>
 </div>
 <p>読替変数を定義したテンプレートはAnsible-Roleでのみ使用することが出来ます。</p>
@@ -2486,7 +2486,7 @@ _
 <div class="line">②Playbookは下記の記述となります。</div>
 <div class="line"><strong>Playbookの記述</strong></div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src=&#39;{{ TPF_hosts }}&#39; dest=/etc/hosts</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src=&#39;{{ TPF_hosts }}&#39; dest=/etc/hosts</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -2522,11 +2522,11 @@ _
 <div class="line">②対話ファイルは下記の記述となります。</div>
 <div class="line"><strong>対話ファイルの記述</strong></div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;scp</span><span class="nv"> </span><span class="s">ITAユーザ@ITAホスト名:{{</span><span class="nv"> </span><span class="s">TPF_hosts</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">転送先&#39;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;scp</span><span class="nv"> </span><span class="s">ITAユーザ@ITAホスト名:{{</span><span class="nv"> </span><span class="s">TPF_hosts</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">転送先&#39;</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ITAユーザのパスワード&#39;</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
+<span class="w">  </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ITAユーザのパスワード&#39;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -2650,7 +2650,7 @@ _
 <div class="line">②Playbookは下記の記述となります。</div>
 <div class="line"><strong>Playbookの記述</strong></div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">copy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src=&#39;{{ CPF_hosts }}&#39; dest=/etc/hosts</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">copy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src=&#39;{{ CPF_hosts }}&#39; dest=/etc/hosts</span>
 </pre></div>
 </div>
 </li>
@@ -2675,7 +2675,7 @@ _
 <div class="line">②Playbookは下記の記述となります。</div>
 <div class="line"><strong>Playbookの記述</strong></div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">unarchive</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src={{ CPF_tool_tgz }} dest=/usr/local/bin</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">unarchive</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src={{ CPF_tool_tgz }} dest=/usr/local/bin</span>
 </pre></div>
 </div>
 </li>
@@ -2713,11 +2713,11 @@ _
 <div class="line">②対話ファイルは下記の記述となります。</div>
 <div class="line"><strong>対話ファイルの記述</strong></div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;scp</span><span class="nv"> </span><span class="s">ITAユーザ@ITAホスト名:{{</span><span class="nv"> </span><span class="s">CPF_hosts</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">転送先&#39;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;scp</span><span class="nv"> </span><span class="s">ITAユーザ@ITAホスト名:{{</span><span class="nv"> </span><span class="s">CPF_hosts</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">転送先&#39;</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ITAユーザのパスワード&#39;</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
+<span class="w">  </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ITAユーザのパスワード&#39;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -3009,16 +3009,16 @@ _
 </td>
 <td><p>ITAが自動生成する親Playbookの先頭からtasksまたはrolesセクションまでのセクションを編集します。</p>
 <p>未入力の場合は、以下を適用します。</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ansible</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span><span class="w"></span>
-<span class="w">  </span><span class="nt">remote_user</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span><span class="w"></span>
-<span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ansible</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span>
+<span class="w">  </span><span class="nt">remote_user</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">  </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span>
+<span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
 
-<span class="c1"># Ansible Automation Controller</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span><span class="w"></span>
-<span class="w">  </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span><span class="w"></span>
-<span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span><span class="w"></span>
+<span class="c1"># Ansible Automation Controller</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span>
+<span class="w">  </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span>
+<span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
 </pre></div>
 </div>
 <p>※winrm接続の場合は become: yesは適用しません。</p>
@@ -3741,17 +3741,17 @@ _
 <div class="line">e.g.)</div>
 <div class="line"><strong>変数定義</strong></div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_users</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice</span><span class="w"></span>
-<span class="w">    </span><span class="nt">authorized</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/alice/onekey.pub</span><span class="w"></span>
-<span class="w">    </span><span class="nt">nested</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">craete_users</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">Name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span><span class="w"></span>
-<span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xxxxxxxxx</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">craete_users</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">Name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span><span class="w"></span>
-<span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xxxxxxxxx</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_users</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice</span>
+<span class="w">    </span><span class="nt">authorized</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/alice/onekey.pub</span>
+<span class="w">    </span><span class="nt">nested</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">craete_users</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+<span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xxxxxxxxx</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">craete_users</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
+<span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xxxxxxxxx</span>
 </pre></div>
 </div>
 <table class="docutils align-left">
@@ -4580,23 +4580,23 @@ _
 <div class="line">e.g.)</div>
 <div class="line"><strong>変数定義</strong></div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_users</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice</span><span class="w"></span>
-<span class="w">    </span><span class="nt">authorized</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/alice/onekey.pub</span><span class="w"></span>
-<span class="w">    </span><span class="nt">mysql</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql-password</span><span class="w"></span>
-<span class="w">        </span><span class="nt">hosts</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;127.0.0.1&quot;</span><span class="w"></span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;localhost&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bob</span><span class="w"></span>
-<span class="w">    </span><span class="nt">authorized</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/alice/onekey.pub</span><span class="w"></span>
-<span class="w">    </span><span class="nt">mysql</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql-password</span><span class="w"></span>
-<span class="w">        </span><span class="nt">hosts</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;127.0.0.1&quot;</span><span class="w"></span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;localhost&quot;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_users</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice</span>
+<span class="w">    </span><span class="nt">authorized</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/alice/onekey.pub</span>
+<span class="w">    </span><span class="nt">mysql</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql-password</span>
+<span class="w">        </span><span class="nt">hosts</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;127.0.0.1&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;localhost&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bob</span>
+<span class="w">    </span><span class="nt">authorized</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/alice/onekey.pub</span>
+<span class="w">    </span><span class="nt">mysql</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql-password</span>
+<span class="w">        </span><span class="nt">hosts</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;127.0.0.1&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;localhost&quot;</span>
 </pre></div>
 </div>
 <table class="docutils align-left">
@@ -4678,12 +4678,12 @@ _
 <div class="line-block">
 <div class="line"><strong>HOST_Aのホスト変数ファイルへの出力内容</strong></div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_std</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value1</span><span class="w"></span>
-<span class="nt">VAR_list_a</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value2</span><span class="w"></span>
-<span class="nt">VAR_list_b</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value3</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value4</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_std</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value1</span>
+<span class="nt">VAR_list_a</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value2</span>
+<span class="nt">VAR_list_b</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value3</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value4</span>
 </pre></div>
 </div>
 </li>
@@ -4697,17 +4697,17 @@ _
 <div class="line-block">
 <div class="line"><strong>変数定義</strong></div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_users</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice</span><span class="w"></span>
-<span class="w">    </span><span class="nt">authorized</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/alice/onekey.pub</span><span class="w"></span>
-<span class="w">    </span><span class="nt">mysql</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql-password</span><span class="w"></span>
-<span class="w">        </span><span class="nt">hosts</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;127.0.0.1&quot;</span><span class="w"></span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;localhost&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bob</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># 略</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_users</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice</span>
+<span class="w">    </span><span class="nt">authorized</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/alice/onekey.pub</span>
+<span class="w">    </span><span class="nt">mysql</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql-password</span>
+<span class="w">        </span><span class="nt">hosts</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;127.0.0.1&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;localhost&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bob</span>
+<span class="w">    </span><span class="c1"># 略</span>
 </pre></div>
 </div>
 <table class="docutils align-left" id="id150">
@@ -4738,9 +4738,9 @@ _
 <div class="line-block">
 <div class="line"><strong>HOST_Aのホスト変数ファイルへの出力内容</strong></div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_users</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value1</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">.authorized</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value2</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_users</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value1</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">.authorized</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value2</span>
 </pre></div>
 </div>
 </li>
@@ -4989,11 +4989,11 @@ _
 </div>
 </li>
 </ul>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># ヘッダーセクションのデフォルト値</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span><span class="w"></span>
-<span class="w">    </span><span class="nt">remote_user</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span><span class="w"></span>
-<span class="w">    </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># ヘッダーセクションのデフォルト値</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span>
+<span class="w">    </span><span class="nt">remote_user</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">    </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span>
+<span class="w">    </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span>
 </pre></div>
 </div>
 <ul>
@@ -5002,10 +5002,10 @@ _
 </div>
 </li>
 </ul>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># ヘッダーセクションのデフォルト値</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span><span class="w"></span>
-<span class="w">    </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span><span class="w"></span>
-<span class="w">    </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># ヘッダーセクションのデフォルト値</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span>
+<span class="w">    </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span>
+<span class="w">    </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
 </pre></div>
 </div>
 </section>
@@ -5017,13 +5017,13 @@ _
 <div class="line"><br /></div>
 <div class="line">例)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">コメント</span><span class="w"></span>
-<span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w">   </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">item.src</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w">  </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">item.dest</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">item.owner</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">none</span><span class="nv"> </span><span class="s">|ternary(&#39;root&#39;,</span><span class="nv"> </span><span class="s">item.owner)</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">group</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">item.group</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">none</span><span class="nv"> </span><span class="s">|ternary(&#39;bacula&#39;,</span><span class="nv"> </span><span class="s">item.group)</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">mode</span><span class="p">:</span><span class="w">  </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">item.mode</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">none</span><span class="nv"> </span><span class="s">|ternary(&#39;0654&#39;,</span><span class="nv"> </span><span class="s">item.mode)</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">コメント</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w">   </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">item.src</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w">  </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">item.dest</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">item.owner</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">none</span><span class="nv"> </span><span class="s">|ternary(&#39;root&#39;,</span><span class="nv"> </span><span class="s">item.owner)</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">    </span><span class="nt">group</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">item.group</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">none</span><span class="nv"> </span><span class="s">|ternary(&#39;bacula&#39;,</span><span class="nv"> </span><span class="s">item.group)</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">    </span><span class="nt">mode</span><span class="p">:</span><span class="w">  </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">item.mode</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">none</span><span class="nv"> </span><span class="s">|ternary(&#39;0654&#39;,</span><span class="nv"> </span><span class="s">item.mode)</span><span class="nv"> </span><span class="s">}}&quot;</span>
 </pre></div>
 </div>
 <div class="admonition warning">
@@ -5080,10 +5080,10 @@ _
 <div class="line">以降に対話コマンドを記述します。</div>
 <div class="line">例1-1)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># コメント</span><span class="w"></span>
-<span class="nt">conf</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"></span>
-<span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># コメント</span>
+<span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="nt">exec_list</span><span class="p">:</span>
 </pre></div>
 </div>
 <div class="admonition tip">
@@ -5131,8 +5131,8 @@ _
 <div class="line">期待する文字列を受取ると次へ進みます。また、timeoutパラメータで指定された時間内に受取れない場合は対話ファイルを異常終了します。</div>
 <div class="line">例2-1)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># telnet接続でパスワード入力のプロンプトを待ち合せます。</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Password&#39;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># telnet接続でパスワード入力のプロンプトを待ち合せます。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Password&#39;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -5149,9 +5149,9 @@ _
 <div class="line">execモジュールとexpectモジュールは対で使用します。</div>
 <div class="line">例2-2)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># telnet接続でパスワード入力のプロンプトを待ち合せてパスワードを投入します。</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Password&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">itapassword</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># telnet接続でパスワード入力のプロンプトを待ち合せてパスワードを投入します。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Password&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">itapassword</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -5223,106 +5223,106 @@ _
 <div class="line-block">
 <div class="line">例2-3)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># hostsファイルをcatし、表示結果をparameter値でgrepしている。139.0.0.1、lalhostを含む行があれば正常と判定し次に進みます。</span><span class="w"></span>
-<span class="c1"># 行がなければ異常と判定し対話ファイルを異常終了します。</span><span class="w"></span>
-<span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cat</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;139.0.0.1&#39;</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;lalhost&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># hostsファイルをcatし、表示結果をparameter値でgrepしている。139.0.0.1、lalhostを含む行があれば正常と判定し次に進みます。</span>
+<span class="c1"># 行がなければ異常と判定し対話ファイルを異常終了します。</span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cat</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;139.0.0.1&#39;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;lalhost&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line">例2-4)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># hostsファイルをcatし、表示結果をparameter値でgrepしている。</span><span class="w"></span>
-<span class="c1"># 139.0.0.1、lalhostを含む行があれば正常と判定しますがsuccess_exit: yesの設定により対話ファイルを正常終了します。</span><span class="w"></span>
-<span class="c1"># 行がなければ異常と判定し対話ファイルを異常終了します。</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># hostsファイルをcatし、表示結果をparameter値でgrepしている。</span>
+<span class="c1"># 139.0.0.1、lalhostを含む行があれば正常と判定しますがsuccess_exit: yesの設定により対話ファイルを正常終了します。</span>
+<span class="c1"># 行がなければ異常と判定し対話ファイルを異常終了します。</span>
 
-<span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cat</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;139.0.0.1&#39;</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;lalhost&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">success_exit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span><span class="w"></span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cat</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;139.0.0.1&#39;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;lalhost&#39;</span>
+<span class="w">    </span><span class="nt">success_exit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line">例2-5)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># hostsファイルをcatし、表示結果をparameter値でgrepしている。139.0.0.1、lalhostを含む</span><span class="w"></span>
-<span class="c1"># 139.0.0.1、lalhostを含む行があれば正常と判定し次に進みます。</span><span class="w"></span>
-<span class="c1"># 行がなければ異常と判定しますがignore_errors: yesの設定により次に進みます。</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># hostsファイルをcatし、表示結果をparameter値でgrepしている。139.0.0.1、lalhostを含む</span>
+<span class="c1"># 139.0.0.1、lalhostを含む行があれば正常と判定し次に進みます。</span>
+<span class="c1"># 行がなければ異常と判定しますがignore_errors: yesの設定により次に進みます。</span>
 
-<span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cat</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;139.0.0.1&#39;</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;lalhost&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">ignore_errors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span><span class="w"></span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cat</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;139.0.0.1&#39;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;lalhost&#39;</span>
+<span class="w">    </span><span class="nt">ignore_errors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line">例2-6)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># hostsファイルをcatし、ユーザー作成のshellで表示結果をparameter値でgrepしている。</span><span class="w"></span>
-<span class="c1"># 139.0.0.1、lalhostを含む行があれば正常と判定し次に進みます。</span><span class="w"></span>
-<span class="c1"># 行がなければ異常と判定し対話ファイルを異常終了します。</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># hostsファイルをcatし、ユーザー作成のshellで表示結果をparameter値でgrepしている。</span>
+<span class="c1"># 139.0.0.1、lalhostを含む行があれば正常と判定し次に進みます。</span>
+<span class="c1"># 行がなければ異常と判定し対話ファイルを異常終了します。</span>
 
-<span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cat</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/tmp/grep.sh&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">stdout_file</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/tmp/stdout.txt&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;139.0.0.1&#39;</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;lalhost&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span><span class="w"></span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cat</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/tmp/grep.sh&#39;</span>
+<span class="w">    </span><span class="nt">stdout_file</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/tmp/stdout.txt&#39;</span>
+<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;139.0.0.1&#39;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;lalhost&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 
-<span class="c1"># ユーザー作成 shell(/tmp/grep.sh)</span><span class="w"></span>
-<span class="c1">#!/bin/bash</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">STDOUT=/tmp/STDOUT.tmp</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">STDERR=/tmp/STDERR.tmp</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">cat /tmp/stdout.txt|grep $1|grep $2 | wc -l &gt;${STDOUT} 2&gt;${STDERR}</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">RET=$?</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">if [ $RET -ne 0 ]; then</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">EXIT_CODE=$RET</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">else</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">if [ -s ${STDERR} ]; then</span><span class="w"></span>
-<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">EXIT_CODE=1</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">else</span><span class="w"></span>
-<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">CNT=`cat ${STDOUT}`</span><span class="w"></span>
-<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">if [ ${CNT} -eq 0 ]; then</span><span class="w"></span>
-<span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">EXIT_CODE=1</span><span class="w"></span>
-<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">else</span><span class="w"></span>
-<span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">EXIT_CODE=0</span><span class="w"></span>
-<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">fi</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">fi</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">fi</span><span class="w"></span>
+<span class="c1"># ユーザー作成 shell(/tmp/grep.sh)</span>
+<span class="c1">#!/bin/bash</span>
+<span class="l l-Scalar l-Scalar-Plain">STDOUT=/tmp/STDOUT.tmp</span>
+<span class="l l-Scalar l-Scalar-Plain">STDERR=/tmp/STDERR.tmp</span>
+<span class="l l-Scalar l-Scalar-Plain">cat /tmp/stdout.txt|grep $1|grep $2 | wc -l &gt;${STDOUT} 2&gt;${STDERR}</span>
+<span class="l l-Scalar l-Scalar-Plain">RET=$?</span>
+<span class="l l-Scalar l-Scalar-Plain">if [ $RET -ne 0 ]; then</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">EXIT_CODE=$RET</span>
+<span class="l l-Scalar l-Scalar-Plain">else</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">if [ -s ${STDERR} ]; then</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">EXIT_CODE=1</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">else</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">CNT=`cat ${STDOUT}`</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">if [ ${CNT} -eq 0 ]; then</span>
+<span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">EXIT_CODE=1</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">else</span>
+<span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">EXIT_CODE=0</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">fi</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">fi</span>
+<span class="l l-Scalar l-Scalar-Plain">fi</span>
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line">例2-7)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># hostsファイルをcatし、表示結果をstdout_file で指定したファイルに保存し次に進みます。</span><span class="w"></span>
-<span class="c1"># デフォルトのshellはparameterの設定がないと異常と判定します。次に進める為にignore_errors: yesを設定します。</span><span class="w"></span>
-<span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cat</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">stdout_file</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__symphony_workflowdir__</span><span class="nv"> </span><span class="s">}}/hosts&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">ignore_errors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># hostsファイルをcatし、表示結果をstdout_file で指定したファイルに保存し次に進みます。</span>
+<span class="c1"># デフォルトのshellはparameterの設定がないと異常と判定します。次に進める為にignore_errors: yesを設定します。</span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cat</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">stdout_file</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__symphony_workflowdir__</span><span class="nv"> </span><span class="s">}}/hosts&#39;</span>
+<span class="w">    </span><span class="nt">ignore_errors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 </pre></div>
 </div>
 </section>
@@ -5436,25 +5436,25 @@ _
 <div class="line-block">
 <div class="line">registerパラメータの有効範囲</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;assword:&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">httpd&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">register</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">httpd_status_register</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">restart</span><span class="nv"> </span><span class="s">httpd&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">httpd_status_register no match(running)</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">mysql&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">register</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql_status_register</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">restart</span><span class="nv"> </span><span class="s">mysql&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql_status_register no match(running)</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;assword:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">httpd&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">register</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">httpd_status_register</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">restart</span><span class="nv"> </span><span class="s">httpd&#39;</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">httpd_status_register no match(running)</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">mysql&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">register</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql_status_register</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">restart</span><span class="nv"> </span><span class="s">mysql&#39;</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql_status_register no match(running)</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 </pre></div>
 </div>
 <div class="admonition tip">
@@ -5464,15 +5464,15 @@ _
 </div>
 </div>
 <p>例)　with_itemsで定義した変数はregister/when以外でitem.Xでスコープすることが出来ます。</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">with_items</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_item1</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">   </span><span class="c1">#item.0</span><span class="w"></span>
-<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_item2</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">   </span><span class="c1">#item.1</span><span class="w"></span>
-<span class="nt">exec_when</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">active&#39;</span><span class="w"></span>
-<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_status</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;register変数</span><span class="nv"> </span><span class="s">match({{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}})&#39;</span><span class="w"></span>
-<span class="nt">failed_when</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;stdout</span><span class="nv"> </span><span class="s">match({{</span><span class="nv"> </span><span class="s">item.1</span><span class="nv"> </span><span class="s">}})&#39;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">with_items</span><span class="p">:</span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_item1</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">   </span><span class="c1">#item.0</span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_item2</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">   </span><span class="c1">#item.1</span>
+<span class="nt">exec_when</span><span class="p">:</span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">active&#39;</span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_status</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;register変数</span><span class="nv"> </span><span class="s">match({{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}})&#39;</span>
+<span class="nt">failed_when</span><span class="p">:</span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;stdout</span><span class="nv"> </span><span class="s">match({{</span><span class="nv"> </span><span class="s">item.1</span><span class="nv"> </span><span class="s">}})&#39;</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -5488,14 +5488,14 @@ _
 <div class="line-block">
 <div class="line">▼対話ファイルの記述内容</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;systemctl</span><span class="nv">  </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}</span><span class="nv">  </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.1</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">item.2</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">item.3</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">with_items</span><span class="p">:</span><span class="w"></span>
-<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_status_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">    </span><span class="c1"># item.0</span><span class="w"></span>
-<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">   </span><span class="c1"># item.1</span><span class="w"></span>
-<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_prompt_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">    </span><span class="c1"># item.2</span><span class="w"></span>
-<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_timeout_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">   </span><span class="c1"># item.3</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;systemctl</span><span class="nv">  </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}</span><span class="nv">  </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.1</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">  </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">item.2</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">item.3</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="nt">with_items</span><span class="p">:</span>
+<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_status_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">    </span><span class="c1"># item.0</span>
+<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">   </span><span class="c1"># item.1</span>
+<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_prompt_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">    </span><span class="c1"># item.2</span>
+<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_timeout_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">   </span><span class="c1"># item.3</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -5513,162 +5513,162 @@ _
 <div class="line-block">
 <div class="line">例3-1)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
 
-<span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
-<span class="c1"># プロンプト以外の文字列で待合せが必要な場合は、expect/execの組合せでする。</span><span class="w"></span>
-<span class="c1"># パスワードが必要な場合</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="c1"># プロンプト以外の文字列で待合せが必要な場合は、expect/execの組合せでする。</span>
+<span class="c1"># パスワードが必要な場合</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
 
-<span class="c1"># VAR_hosts_makeというITA変数がホスト変数ファイルに記載されている場合、</span><span class="w"></span>
-<span class="c1"># hostsファイルをcatします。記載されていない場合は、スキップします。</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cat /etc/hosts</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span><span class="w"></span>
-<span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VAR_hosts_make is define</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span><span class="w"></span>
+<span class="c1"># VAR_hosts_makeというITA変数がホスト変数ファイルに記載されている場合、</span>
+<span class="c1"># hostsファイルをcatします。記載されていない場合は、スキップします。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cat /etc/hosts</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VAR_hosts_make is define</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line">例3-2)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
 
-<span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
-<span class="c1"># プロンプト以外の文字列で待合せが必要な場合は、expect/execの組合せでする。</span><span class="w"></span>
-<span class="c1"># パスワードが必要な場合</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="c1"># プロンプト以外の文字列で待合せが必要な場合は、expect/execの組合せでする。</span>
+<span class="c1"># パスワードが必要な場合</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
 
-<span class="c1"># VAR_hosts_makeというITA変数がホスト変数ファイルに記載されている場合、</span><span class="w"></span>
-<span class="c1"># hostsファイルをcatします。記載されていない場合は、スキップします。</span><span class="w"></span>
-<span class="c1"># catにより、標準出力されたhostsファイルの内容をresult_stdoutに退避します。</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cat /etc/hosts</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span><span class="w"></span>
-<span class="w">    </span><span class="nt">register</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">result_stdout</span><span class="w"></span>
-<span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VAR_hosts_make is define</span><span class="w"></span>
+<span class="c1"># VAR_hosts_makeというITA変数がホスト変数ファイルに記載されている場合、</span>
+<span class="c1"># hostsファイルをcatします。記載されていない場合は、スキップします。</span>
+<span class="c1"># catにより、標準出力されたhostsファイルの内容をresult_stdoutに退避します。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cat /etc/hosts</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span>
+<span class="w">    </span><span class="nt">register</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">result_stdout</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VAR_hosts_make is define</span>
 
-<span class="c1"># VAR_hosts_makeというITA変数がホスト変数ファイルに記載されている場合、</span><span class="w"></span>
-<span class="c1"># command実行します。記載されていない場合は、スキップします。</span><span class="w"></span>
-<span class="c1"># with_itemsの複数具体値変数に設定されている具体値数分command実行します。</span><span class="w"></span>
-<span class="c1"># ループ毎の条件判定として、hostsファイルに「ipアドレス ホスト名」が該当しない場合</span><span class="w"></span>
-<span class="c1"># command実行します。</span><span class="w"></span>
-<span class="c1"># hostsファイルの最終行にechoによる、「IPアドレス ホスト名」を追記します。</span><span class="w"></span>
+<span class="c1"># VAR_hosts_makeというITA変数がホスト変数ファイルに記載されている場合、</span>
+<span class="c1"># command実行します。記載されていない場合は、スキップします。</span>
+<span class="c1"># with_itemsの複数具体値変数に設定されている具体値数分command実行します。</span>
+<span class="c1"># ループ毎の条件判定として、hostsファイルに「ipアドレス ホスト名」が該当しない場合</span>
+<span class="c1"># command実行します。</span>
+<span class="c1"># hostsファイルの最終行にechoによる、「IPアドレス ホスト名」を追記します。</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;echo</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}</span><span class="nv">  </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.1</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">&gt;&gt;</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VAR_hosts_make is define</span><span class="w"></span>
-<span class="w">    </span><span class="nt">with_items</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_hosts_ip</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">      </span><span class="c1"># item.0</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_hosts_name</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">   </span><span class="c1"># item.1</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec_when</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">result_stdout no match({{ item.0 }} *{{ item.1 }})</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;echo</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}</span><span class="nv">  </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.1</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">&gt;&gt;</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VAR_hosts_make is define</span>
+<span class="w">    </span><span class="nt">with_items</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_hosts_ip</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">      </span><span class="c1"># item.0</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_hosts_name</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">   </span><span class="c1"># item.1</span>
+<span class="w">    </span><span class="nt">exec_when</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">result_stdout no match({{ item.0 }} *{{ item.1 }})</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line">例3-3)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
 
-<span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
-<span class="c1"># プロンプト以外の文字列で待合せが必要な場合は、expect/execの組合せでする。</span><span class="w"></span>
-<span class="c1"># パスワードが必要な場合</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="c1"># プロンプト以外の文字列で待合せが必要な場合は、expect/execの組合せでする。</span>
+<span class="c1"># パスワードが必要な場合</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
 
-<span class="c1"># with_itemsの複数具体値変数に設定されている具体値数分command実行します。</span><span class="w"></span>
-<span class="c1"># 自動起動設定を実行します。</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">enable</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">with_items</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_name_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">  </span><span class="c1"># item.0</span><span class="w"></span>
+<span class="c1"># with_itemsの複数具体値変数に設定されている具体値数分command実行します。</span>
+<span class="c1"># 自動起動設定を実行します。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">enable</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">with_items</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_name_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">  </span><span class="c1"># item.0</span>
 
-<span class="c1"># with_itemsの複数具体値変数に設定されている具体値数分command実行します。</span><span class="w"></span>
-<span class="c1"># サービスの起動を実行します。</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">start</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">with_items</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_name_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">  </span><span class="c1"># item.0</span><span class="w"></span>
+<span class="c1"># with_itemsの複数具体値変数に設定されている具体値数分command実行します。</span>
+<span class="c1"># サービスの起動を実行します。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">start</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">with_items</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_name_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">  </span><span class="c1"># item.0</span>
 
-<span class="c1"># with_itemsの複数具体値変数に設定されている具体値数分command実行します。</span><span class="w"></span>
-<span class="c1"># サービスのステータスを標準出力します。</span><span class="w"></span>
-<span class="c1"># 標準出力された結果の内容に、item.1の正規表現がある場合、正となります。</span><span class="w"></span>
-<span class="c1"># 例えば、VAR_service_status_listの具体値をrunningと設定し、サービスが起動している場合、</span><span class="w"></span>
-<span class="c1"># 「Active: active (running)」のrunnigが一致するので正となります。(次のループに移ります)</span><span class="w"></span>
-<span class="c1"># そうでない場合は、異常と判断し、対話ファイルは異常終了となります。</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">with_items</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_name_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">  </span><span class="c1"># item.0</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_status_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">  </span><span class="c1"># item.1</span><span class="w"></span>
-<span class="w">    </span><span class="nt">failed_when</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stdout match({{ item.1 }})</span><span class="w"></span>
+<span class="c1"># with_itemsの複数具体値変数に設定されている具体値数分command実行します。</span>
+<span class="c1"># サービスのステータスを標準出力します。</span>
+<span class="c1"># 標準出力された結果の内容に、item.1の正規表現がある場合、正となります。</span>
+<span class="c1"># 例えば、VAR_service_status_listの具体値をrunningと設定し、サービスが起動している場合、</span>
+<span class="c1"># 「Active: active (running)」のrunnigが一致するので正となります。(次のループに移ります)</span>
+<span class="c1"># そうでない場合は、異常と判断し、対話ファイルは異常終了となります。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">with_items</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_name_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">  </span><span class="c1"># item.0</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_status_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">  </span><span class="c1"># item.1</span>
+<span class="w">    </span><span class="nt">failed_when</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stdout match({{ item.1 }})</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line">例3-4)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span><span class="w"></span>
-<span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
-<span class="c1"># プロンプト以外の文字列で待合せが必要な場合は、expect/execの組合せでする。</span><span class="w"></span>
-<span class="c1"># パスワードが必要な場合</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="c1"># プロンプト以外の文字列で待合せが必要な場合は、expect/execの組合せでする。</span>
+<span class="c1"># パスワードが必要な場合</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
 
-<span class="c1"># with_itemsの複数具体値変数に設定されている具体値数分command実行します。</span><span class="w"></span>
-<span class="c1"># commandに「{{ item.0 }}」のみの記述をする場合は、ダブルクォーテーションで囲みます。</span><span class="w"></span>
-<span class="c1"># promptやtimeoutでwith_itemsを利用する場合、具体値数に注意が必要です。</span><span class="w"></span>
-<span class="c1"># prompt→command→prompt→command→prompt ・・・(以下ループ)となり、command数+1</span><span class="w"></span>
-<span class="c1"># 設定する必要があります。(timeoutも同様)</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">item.1</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">item.2</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">with_items</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_command_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">  </span><span class="c1"># item.0</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_prompt_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">    </span><span class="c1"># item.1</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_timeout_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">    </span><span class="c1"># item.2</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span><span class="w"></span>
+<span class="c1"># with_itemsの複数具体値変数に設定されている具体値数分command実行します。</span>
+<span class="c1"># commandに「{{ item.0 }}」のみの記述をする場合は、ダブルクォーテーションで囲みます。</span>
+<span class="c1"># promptやtimeoutでwith_itemsを利用する場合、具体値数に注意が必要です。</span>
+<span class="c1"># prompt→command→prompt→command→prompt ・・・(以下ループ)となり、command数+1</span>
+<span class="c1"># 設定する必要があります。(timeoutも同様)</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">item.1</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">item.2</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">with_items</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_command_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">  </span><span class="c1"># item.0</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_prompt_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">    </span><span class="c1"># item.1</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_timeout_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">    </span><span class="c1"># item.2</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line">例3-5)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
 
-<span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
-<span class="c1"># プロンプト以外の文字列で待合せが必要な場合は、expect/execの組合せでする。</span><span class="w"></span>
-<span class="c1"># パスワードが必要な場合</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="c1"># プロンプト以外の文字列で待合せが必要な場合は、expect/execの組合せでする。</span>
+<span class="c1"># パスワードが必要な場合</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
 
-<span class="c1"># with_itemsの複数具体値変数に設定されている具体値数分command実行します。</span><span class="w"></span>
-<span class="c1"># 代入値管理の具体値に{{ item.X }} を設定することができます。その際は対話ファイルに記載する</span><span class="w"></span>
-<span class="c1"># item.Xより具体値に記載するitem.Xの数値が大きくなるようにしてください。</span><span class="w"></span>
-<span class="c1"># 今回の例で実行するcommandは「systemctl status ky_pioneer_execute-workflow.service」</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">with_items</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_command_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">      </span><span class="c1"># item.0</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_name_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">  </span><span class="c1"># item.1</span><span class="w"></span>
+<span class="c1"># with_itemsの複数具体値変数に設定されている具体値数分command実行します。</span>
+<span class="c1"># 代入値管理の具体値に{{ item.X }} を設定することができます。その際は対話ファイルに記載する</span>
+<span class="c1"># item.Xより具体値に記載するitem.Xの数値が大きくなるようにしてください。</span>
+<span class="c1"># 今回の例で実行するcommandは「systemctl status ky_pioneer_execute-workflow.service」</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">with_items</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_command_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">      </span><span class="c1"># item.0</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_name_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">  </span><span class="c1"># item.1</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -5678,27 +5678,27 @@ _
 <div class="line-block">
 <div class="line">例3-6)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
 
-<span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
-<span class="c1"># プロンプト以外の文字列で待合せが必要な場合は、expect/execの組合せでする。</span><span class="w"></span>
-<span class="c1"># パスワードが必要な場合</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="c1"># プロンプト以外の文字列で待合せが必要な場合は、expect/execの組合せでする。</span>
+<span class="c1"># パスワードが必要な場合</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
 
-<span class="c1"># and/orによる複合条件の記述例です。</span><span class="w"></span>
-<span class="c1"># or条件を行いたい場合、if文を横に記述することができます。</span><span class="w"></span>
-<span class="c1"># and条件を行いたい場合、複数行に分けて記述するとand条件になります。</span><span class="w"></span>
-<span class="c1"># 今回、whenを例にしていますが、exec_when、failed_whenも同様です。</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo aaa</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10 == 9 OR 10 != 9 OR 10 &gt;= 9</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10 &gt; 9 OR 10 &lt;= 9 OR 10 &lt; 9</span><span class="w"></span>
+<span class="c1"># and/orによる複合条件の記述例です。</span>
+<span class="c1"># or条件を行いたい場合、if文を横に記述することができます。</span>
+<span class="c1"># and条件を行いたい場合、複数行に分けて記述するとand条件になります。</span>
+<span class="c1"># 今回、whenを例にしていますが、exec_when、failed_whenも同様です。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo aaa</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;root@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10 == 9 OR 10 != 9 OR 10 &gt;= 9</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10 &gt; 9 OR 10 &lt;= 9 OR 10 &lt; 9</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 </pre></div>
 </div>
 </section>
@@ -5735,17 +5735,17 @@ _
 <div class="line-block">
 <div class="line">例4-1)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Symphony実行時の各Movementで共有するディレクトリ({{ __symphony_workflowdir__ }})にホスト毎のディレクトリを設けて、hostsファイルを退避します。</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Symphony実行時の各Movementで共有するディレクトリ({{ __symphony_workflowdir__ }})にホスト毎のディレクトリを設けて、hostsファイルを退避します。</span>
 
-<span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">localaction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdir -p 755 {{ __symphony_workflowdir__ }}/{{ __loginhostname__ }}</span><span class="w"></span>
-<span class="w">    </span><span class="nt">ignore_errors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cat /etc/hosts</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">stdout_file</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__symphony_workflowdir__</span><span class="nv"> </span><span class="s">}}/{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}/hosts&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">ignore_errors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span><span class="w"></span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">localaction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdir -p 755 {{ __symphony_workflowdir__ }}/{{ __loginhostname__ }}</span>
+<span class="w">    </span><span class="nt">ignore_errors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cat /etc/hosts</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">stdout_file</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__symphony_workflowdir__</span><span class="nv"> </span><span class="s">}}/{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}/hosts&#39;</span>
+<span class="w">    </span><span class="nt">ignore_errors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@{{ __loginhostname__ }}</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 </pre></div>
 </div>
 </section>
@@ -5766,13 +5766,13 @@ _
 <div class="line-block">
 <div class="line">正しい例)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">XAMPP Developer Files ¥[Y¥/n¥] exec_list</span><span class="p p-Indicator">:</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">XAMPP Developer Files ¥[Y¥/n¥] exec_list</span><span class="p p-Indicator">:</span>
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line">誤った例)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">XAMPP Developer Files [Y/n] exec_list</span><span class="p p-Indicator">:</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">XAMPP Developer Files [Y/n] exec_list</span><span class="p p-Indicator">:</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -5810,42 +5810,42 @@ _
 <div class="line-block">
 <div class="line">例)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># ssh-keygenを対話ファイルで処理する。</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># ssh-keygenを対話ファイルで処理する。</span>
 
-<span class="nt">conf</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"></span>
+<span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
 
 
-<span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
-<span class="c1"># ssh接続　パスワード認証</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;assword:&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="c1"># ssh接続　パスワード認証</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;assword:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
 
-<span class="c1"># ssh-keygenコマンド実行</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssh-keygen</span><span class="w"></span>
+<span class="c1"># ssh-keygenコマンド実行</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssh-keygen</span>
 
-<span class="c1"># 以降がコマンドプロンプト以外のプロンプトに対する処理</span><span class="w"></span>
-<span class="c1"># 秘密鍵ファイルのパスを設定</span><span class="w"></span>
-<span class="c1"># expectは正規表記で評価されるので、エスケープが必要なメタ文字にはエスケープ文字(\)を挿入する必要があります。</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;id_rsa\):&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_id_rsa_path</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
+<span class="c1"># 以降がコマンドプロンプト以外のプロンプトに対する処理</span>
+<span class="c1"># 秘密鍵ファイルのパスを設定</span>
+<span class="c1"># expectは正規表記で評価されるので、エスケープが必要なメタ文字にはエスケープ文字(\)を挿入する必要があります。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;id_rsa\):&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_id_rsa_path</span><span class="nv"> </span><span class="s">}}&#39;</span>
 
-<span class="c1"># パスフレーズを設定</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;</span><span class="nv"> </span><span class="s">passphrase\):&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_passphrase</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
+<span class="c1"># パスフレーズを設定</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;</span><span class="nv"> </span><span class="s">passphrase\):&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_passphrase</span><span class="nv"> </span><span class="s">}}&#39;</span>
 
-<span class="c1"># パスフレーズを確認</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;</span><span class="nv"> </span><span class="s">passphrase</span><span class="nv"> </span><span class="s">again:&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_passphrase</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
+<span class="c1"># パスフレーズを確認</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;</span><span class="nv"> </span><span class="s">passphrase</span><span class="nv"> </span><span class="s">again:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_passphrase</span><span class="nv"> </span><span class="s">}}&#39;</span>
 
-<span class="c1"># 生成された 秘密鍵ファイルを確認</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ls</span><span class="nv"> </span><span class="s">-al</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_id_rsa_path</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
+<span class="c1"># 生成された 秘密鍵ファイルを確認</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ls</span><span class="nv"> </span><span class="s">-al</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_id_rsa_path</span><span class="nv"> </span><span class="s">}}&#39;</span>
 
-<span class="c1"># ssh接続クローズ</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span><span class="w"></span>
+<span class="c1"># ssh接続クローズ</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -5856,7 +5856,7 @@ _
 <div class="line">変数使用の場合は具体値を空白(未入力)にします。</div>
 <div class="line">変数を使用していない場合は空文字列(コーテーションを2個並べます)を記載します。</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span>
 </pre></div>
 </div>
 </section>
@@ -5869,21 +5869,21 @@ _
 <div class="line-block">
 <div class="line">例)</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
 
-<span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
-<span class="c1"># ssh接続　パスワード認証</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;assword:&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="c1"># ssh接続　パスワード認証</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;assword:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
 
-<span class="c1"># ファイルコピー</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cp</span><span class="nv"> </span><span class="s">-rfp</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_src_path</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_dest_path</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
+<span class="c1"># ファイルコピー</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cp</span><span class="nv"> </span><span class="s">-rfp</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_src_path</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_dest_path</span><span class="nv"> </span><span class="s">}}&#39;</span>
 
-<span class="c1"># 直前のコマンド終了をコマンドプロンプトで待ち合わせ、exitコマンドを投入する記載を対話ファイルの最後に挿入</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span><span class="w"></span>
+<span class="c1"># 直前のコマンド終了をコマンドプロンプトで待ち合わせ、exitコマンドを投入する記載を対話ファイルの最後に挿入</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 </pre></div>
 </div>
 </section>
@@ -5902,26 +5902,26 @@ _
 <div class="line-block">
 <div class="line">正しい例）</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;assword:&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">exec</span><span class="p">:</span><span class="w">  </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ls&#39;</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;echo</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">exec_when</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">item.1</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">run&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">with_items</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_echo</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_exec_when</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_failed_when</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">failed_when</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stdout == match({{ item.2 }})</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_command</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">parameter</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_p1</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_p2</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">success_exit</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;yes&#39;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;assword:&#39;</span>
+<span class="w">  </span><span class="nt">exec</span><span class="p">:</span><span class="w">  </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ls&#39;</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;echo</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="nt">exec_when</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">item.1</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">run&#39;</span>
+<span class="w">  </span><span class="nt">with_items</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_echo</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_exec_when</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_failed_when</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="nt">failed_when</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stdout == match({{ item.2 }})</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_command</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_p1</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_p2</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="nt">success_exit</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;yes&#39;</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -5965,18 +5965,18 @@ _
 <section id="id43">
 <h4>構築対象機器へ投入するコマンドの終端コードについての注意事項<a class="headerlink" href="#id43" title="この見出しへのパーマリンク">¶</a></h4>
 <p>構築対象機器へ投入するコマンドの終端コードは「LF」を送信します。構築対象機器のコマンド終端コードが「CRLF」の場合、対話ファイルで構築対象機器に投入するコマンドの末尾に「r」を追加して下さい。</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"></span>
-<span class="nt">exec_list</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;XXXXXXXX\r&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_command</span><span class="nv"> </span><span class="s">}}\r&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_state</span><span class="nv"> </span><span class="s">}}\r&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span><span class="w"></span>
-<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_parameter1</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
-<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_parameter2</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;XXXXXXXX\r&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_command</span><span class="nv"> </span><span class="s">}}\r&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_state</span><span class="nv"> </span><span class="s">}}\r&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_parameter1</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_parameter2</span><span class="nv"> </span><span class="s">}}&#39;</span>
 </pre></div>
 </div>
 </section>
@@ -6160,11 +6160,11 @@ _
 </div>
 </li>
 </ul>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># ヘッダーセクションのデフォルト値</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span><span class="w"></span>
-<span class="w">    </span><span class="nt">remote_user</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span><span class="w"></span>
-<span class="w">    </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># ヘッダーセクションのデフォルト値</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span>
+<span class="w">    </span><span class="nt">remote_user</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">    </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span>
+<span class="w">    </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span>
 </pre></div>
 </div>
 <ul>
@@ -6173,10 +6173,10 @@ _
 </div>
 </li>
 </ul>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># ヘッダーセクションのデフォルト値</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span><span class="w"></span>
-<span class="w">    </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span><span class="w"></span>
-<span class="w">    </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># ヘッダーセクションのデフォルト値</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span>
+<span class="w">    </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span>
+<span class="w">    </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
 </pre></div>
 </div>
 </section>
@@ -8161,7 +8161,7 @@ ITAインストールディレクトリ/ita-root/repositorys/ansible_driver/&lt;
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2022 NEC Corporation</small>
+    <small>Copyright © 2023 NEC Corporation</small>
   </footer>
 </div><!-- End #footer -->
 

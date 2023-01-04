@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-    <title>Helm 関連 &#8212; Documentation  ドキュメント</title>
+    <title>4.1. Helm オプションパラメータ &#8212; Documentation  ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/option.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
@@ -28,7 +28,9 @@
     <script type="text/javascript" src="../../../_static/exastro_documents.js"></script>
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="索引" href="../../../genindex.html" />
-    <link rel="search" title="検索" href="../../../search.html" /> 
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="ドキュメント記載方法" href="../manual_design/index.html" />
+    <link rel="prev" title="4. 付録" href="index.html" /> 
   </head>
 <body id="page" class="ja">
 
@@ -95,6 +97,8 @@
     </div>
     <div id="toolbarNavigation">
       <ul>
+        <li class="prev"><a href="index.html" title="前のトピックへ"><span class="section-number">4. </span>付録</a></li>
+        <li class="next"><a href="../manual_design/index.html" title="次のトピックへ">ドキュメント記載方法</a></li>
       </ul>
     </div>
   </div>
@@ -105,8 +109,24 @@
   <div id="menuButton"></div>
   
   <aside class="divInner">
-    <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">Exastro IT Automation Documentation</a></li>
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Exastro IT Automation Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id1">日本語</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../installation/index.html">1. インストール</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../platform/index.html">2. 共通基盤</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference/index.html">3. API リファレンス</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">4. 付録</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">4.1. Helm オプションパラメータ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../manual_design/index.html">ドキュメント記載方法</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
     <!-- <ul>
@@ -123,8 +143,11 @@
 <div id="breadcrumbs">
   <ul>
     <li><a href="../../../index.html">HOME</a></li>
+    <li><a href="../../index.html">Exastro IT Automation Documentation</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html"><span class="section-number">4. </span>付録</a></li>
     
-    <li>Helm 関連</li>
+    <li><span class="section-number">4.1. </span>Helm オプションパラメータ</li>
   </ul>
 </div>
 
@@ -134,158 +157,153 @@
 <div class="body" role="main">
 
   <section id="helm">
-<h1>Helm 関連<a class="headerlink" href="#helm" title="この見出しへのパーマリンク">¶</a></h1>
-<section id="id1">
-<h2>設定値<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h2>
+<h1><span class="section-number">4.1. </span>Helm オプションパラメータ<a class="headerlink" href="#helm" title="この見出しへのパーマリンク">¶</a></h1>
+<div class="line-block">
+<div class="line">Helm を使ってインストールする際にはコマンドラインオプション、もしくは、values.yaml 内の設定値として下記のオプションパラメータが利用できます。</div>
+</div>
 <section id="exastro-platform">
-<h3>Exastro Platform<a class="headerlink" href="#exastro-platform" title="この見出しへのパーマリンク">¶</a></h3>
-<table class="docutils align-left" id="id2">
-<caption><span class="caption-text">Exastro Platform における Values 一覧</span><a class="headerlink" href="#id2" title="このテーブルへのパーマリンク">¶</a></caption>
+<h2><span class="section-number">4.1.1. </span>Exastro Platform<a class="headerlink" href="#exastro-platform" title="この見出しへのパーマリンク">¶</a></h2>
+<section id="id1">
+<h3>共通設定 (認証機能)<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id8">
+<caption><span class="caption-number">表 4.1 </span><span class="caption-text">共通設定 (認証機能) のオプションパラメータ</span><a class="headerlink" href="#id8" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
-<col style="width: 6.2%" />
-<col style="width: 6.2%" />
+<col style="width: 12.5%" />
 <col style="width: 25.0%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>キー</p></th>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
 <th class="head"><p>説明</p></th>
-<th class="head"><p>変更可否</p></th>
-<th class="head"><p>必須</p></th>
-<th class="head"><p>設定値</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>.global.authGlobalDefinition.name</p></td>
+<tr class="row-even"><td><p>global.authGlobalDefinition.name</p></td>
 <td><p>認証機能の定義名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>auth-global</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.authGlobalDefinition.enabled</p></td>
-<td><p>認証機能の利用有無</p></td>
+<tr class="row-odd"><td><p>global.authGlobalDefinition.enabled</p></td>
+<td><p>認証機能の有効フラグ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>true</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.authGlobalDefinition.image.registry</p></td>
+<tr class="row-even"><td><p>global.authGlobalDefinition.image.registry</p></td>
 <td><p>認証機能で利用するデフォルトイメージレジストリ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;docker.io&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.authGlobalDefinition.image.organization</p></td>
+<tr class="row-odd"><td><p>global.authGlobalDefinition.image.organization</p></td>
 <td><p>認証機能で利用するデフォルトイメージレジストリの組織名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>exastro</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.authGlobalDefinition.image.package</p></td>
+<tr class="row-even"><td><p>global.authGlobalDefinition.image.package</p></td>
 <td><p>認証機能で利用するデフォルトイメージレジストリのパッケージ名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>exastro-platform</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.authGlobalDefinition.config.DEFAULT_LANGUAGE</p></td>
+<tr class="row-odd"><td><p>global.authGlobalDefinition.config.DEFAULT_LANGUAGE</p></td>
 <td><p>認証機能で使用する既定の言語</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;ja&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.authGlobalDefinition.config.LANGUAGE</p></td>
+<tr class="row-even"><td><p>global.authGlobalDefinition.config.LANGUAGE</p></td>
 <td><p>認証機能で使用する言語</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;en&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.authGlobalDefinition.config.TZ</p></td>
+<tr class="row-odd"><td><p>global.authGlobalDefinition.config.TZ</p></td>
 <td><p>認証機能で使用するタイムゾーン</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;Asia/Tokyo&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.authGlobalDefinition.config.PYTHONIOENCODING</p></td>
+<tr class="row-even"><td><p>global.authGlobalDefinition.config.PYTHONIOENCODING</p></td>
 <td><p>認証機能で使用する Python ファイルの文字コード</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>utf-8</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.authGlobalDefinition.config.PLATFORM_API_PROTOCOL</p></td>
+<tr class="row-odd"><td><p>global.authGlobalDefinition.config.PLATFORM_API_PROTOCOL</p></td>
 <td><p>認証機能で公開する内部の API エンドポイントで利用するプロトコル</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;http&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.authGlobalDefinition.config.PLATFORM_API_HOST</p></td>
+<tr class="row-even"><td><p>global.authGlobalDefinition.config.PLATFORM_API_HOST</p></td>
 <td><p>認証機能で公開する内部の API エンドポイントで利用するホスト名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;platform-api&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.authGlobalDefinition.config.PLATFORM_API_PORT</p></td>
+<tr class="row-odd"><td><p>global.authGlobalDefinition.config.PLATFORM_API_PORT</p></td>
 <td><p>認証機能で公開する内部の API エンドポイントで利用するポート番号(TCP)</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;8000&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.authGlobalDefinition.config.PLATFORM_WEB_PROTOCOL</p></td>
+<tr class="row-even"><td><p>global.authGlobalDefinition.config.PLATFORM_WEB_PROTOCOL</p></td>
 <td><p>認証機能で公開する内部の Web エンドポイントで利用するプロトコル</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;http&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.authGlobalDefinition.config.PLATFORM_WEB_HOST</p></td>
+<tr class="row-odd"><td><p>global.authGlobalDefinition.config.PLATFORM_WEB_HOST</p></td>
 <td><p>認証機能で公開する内部の Web エンドポイントで利用するホスト名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;platform-web&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.authGlobalDefinition.config.PLATFORM_WEB_PORT</p></td>
+<tr class="row-even"><td><p>global.authGlobalDefinition.config.PLATFORM_WEB_PORT</p></td>
 <td><p>認証機能で公開する内部の Web エンドポイントで利用するポート番号(TCP)</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;8000&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.authGlobalDefinition.persistence.enabled</p></td>
+<tr class="row-odd"><td><p>global.authGlobalDefinition.secret.ENCRYPT_KEY</p></td>
+<td><div class="line-block">
+<div class="line">Exastro Platform 内で保管するデータの暗号化と復号のための AES キー。</div>
+<div class="line">任意の32バイト ASCII 文字を BASE64 エンコードした値</div>
+</div>
+</td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line">ランダムな32バイト ASCII 文字を BASE64 エンコードした値</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>global.authGlobalDefinition.persistence.enabled</p></td>
 <td><div class="line-block">
 <div class="line">認証機能におけるデータの永続化の有無</div>
 <div class="line">※現在このパラメータは使用していません。</div>
 </div>
 </td>
 <td><p>可 (無効)</p></td>
-<td><p>○</p></td>
 <td><div class="line-block">
 <div class="line"><strong class="program">true</strong> (デフォルト): 永続化する。</div>
 <div class="line"><strong class="program">false</strong>: 永続化しない。</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>.global.authGlobalDefinition.persistence.accessMode</p></td>
+<tr class="row-odd"><td><p>global.authGlobalDefinition.persistence.accessMode</p></td>
 <td><div class="line-block">
 <div class="line">認証機能における Persisten Volume Claim のアクセスモード</div>
 <div class="line">※現在このパラメータは使用していません。</div>
 </div>
 </td>
 <td><p>可 (無効)</p></td>
-<td><p>○</p></td>
 <td><div class="line-block">
 <div class="line"><strong class="program">ReadWriteMany</strong> (デフォルト): ボリュームは多数のNodeで読み取り専用としてマウント。</div>
 <div class="line"><strong class="program">ReadWriteOnce</strong>: ボリュームは単一のNodeで読み取り/書き込みとしてマウント。</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>.global.authGlobalDefinition.persistence.size</p></td>
+<tr class="row-even"><td><p>global.authGlobalDefinition.persistence.size</p></td>
 <td><div class="line-block">
 <div class="line">認証機能における Persisten Volume Claim のボリュームに要求するサイズ(Bytes)</div>
 <div class="line">※現在このパラメータは使用していません。</div>
 </div>
 </td>
 <td><p>可 (無効)</p></td>
-<td><p>○</p></td>
 <td><p>&quot;10Gi&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.authGlobalDefinition.persistence.volumeType</p></td>
+<tr class="row-odd"><td><p>global.authGlobalDefinition.persistence.volumeType</p></td>
 <td><div class="line-block">
 <div class="line">認証機能における Persisten Volume のボリュームタイプ</div>
 <div class="line">Storage Class を利用する場合は設定は不要です。</div>
@@ -293,10 +311,9 @@
 </div>
 </td>
 <td><p>可 (無効)</p></td>
-<td><p>○</p></td>
 <td><p>&quot;hostPath&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.authGlobalDefinition.persistence.storageClass</p></td>
+<tr class="row-even"><td><p>global.authGlobalDefinition.persistence.storageClass</p></td>
 <td><div class="line-block">
 <div class="line">認証機能におけるデータの永続化のために利用する Storage Class</div>
 <div class="line">Persistent Volume を利用する場合は設定は不要です。</div>
@@ -304,938 +321,1416 @@
 </div>
 </td>
 <td><p>可 (無効)</p></td>
-<td><p>○</p></td>
-<td><p>&quot;-&quot;</p></td>
+<td><p>不可</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.keycloakDefinition.name</p></td>
+</tbody>
+</table>
+</section>
+<section id="keycloak">
+<h3>共通設定 (Keycloak)<a class="headerlink" href="#keycloak" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id9">
+<caption><span class="caption-number">表 4.2 </span><span class="caption-text">共通設定 (Keycloak) のオプションパラメータ</span><a class="headerlink" href="#id9" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>global.keycloakDefinition.name</p></td>
 <td><p>Keycloak の定義名</p></td>
-<td><p>可</p></td>
-<td><p>○</p></td>
+<td><p>不可</p></td>
 <td><p>&quot;keycloak&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.keycloakDefinition.enabled</p></td>
-<td><p>Exastro Platform と同一のクラスタ内への Keycloak のデプロイ要否</p></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<tr class="row-odd"><td><p>global.keycloakDefinition.enabled</p></td>
+<td><div class="line-block">
+<div class="line">Exastro Platform と同一のクラスタ内への Keycloak のデプロイ要否</div>
+<div class="line">※現在このパラメータは使用していません。</div>
+</div>
+</td>
+<td><p>可 (無効)</p></td>
 <td><div class="line-block">
 <div class="line"><strong class="program">true</strong> (デフォルト): 同一クラスタ内に Keycloak をデプロイします。</div>
 <div class="line"><strong class="program">false</strong> : 同一クラスタ内に Keycloak をデプロイしません。(別途 Keycloak の容易が必要です。)</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>.global.keycloakDefinition.config.API_KEYCLOAK_PROTOCOL</p></td>
+<tr class="row-even"><td><p>global.keycloakDefinition.config.API_KEYCLOAK_PROTOCOL</p></td>
 <td><p>Keycloak API エンドポイントのプロトコル</p></td>
-<td><p>可</p></td>
-<td><p>○</p></td>
+<td><p>可 (外部Keycloak利用時)</p></td>
 <td><p>&quot;http”</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.keycloakDefinition.config.API_KEYCLOAK_HOST</p></td>
+<tr class="row-odd"><td><p>global.keycloakDefinition.config.API_KEYCLOAK_HOST</p></td>
 <td><p>Keycloak API エンドポイントのホスト名、もしくは、FQDN</p></td>
-<td><p>可</p></td>
-<td><p>○</p></td>
+<td><p>可 (外部Keycloak利用時)</p></td>
 <td><p>&quot;keycloak.exastro-platform.svc&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.keycloakDefinition.config.API_KEYCLOAK_PORT</p></td>
+<tr class="row-even"><td><p>global.keycloakDefinition.config.API_KEYCLOAK_PORT</p></td>
 <td><p>Keycloak API エンドポイントのポート番号</p></td>
-<td><p>可</p></td>
-<td><p>○</p></td>
+<td><p>可 (外部Keycloak利用時)</p></td>
 <td><p>&quot;8080&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.keycloakDefinition.config.KEYCLOAK_PROTOCOL</p></td>
+<tr class="row-odd"><td><p>global.keycloakDefinition.config.KEYCLOAK_PROTOCOL</p></td>
 <td><p>Keycloak エンドポイントのプロトコル</p></td>
-<td><p>可</p></td>
-<td><p>○</p></td>
+<td><p>可 (外部Keycloak利用時)</p></td>
 <td><p>&quot;http&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.keycloakDefinition.config.KEYCLOAK_HOST</p></td>
+<tr class="row-even"><td><p>global.keycloakDefinition.config.KEYCLOAK_HOST</p></td>
 <td><p>Keycloak エンドポイントのホスト名、もしくは、FQDN</p></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<td><p>可 (外部Keycloak利用時)</p></td>
 <td><p>&quot;keycloak.exastro-platform.svc&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.keycloakDefinition.config.KEYCLOAK_PORT</p></td>
+<tr class="row-odd"><td><p>global.keycloakDefinition.config.KEYCLOAK_PORT</p></td>
 <td><p>Keycloak API エンドポイントのポート番号</p></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<td><p>可 (外部Keycloak利用時)</p></td>
 <td><p>&quot;8080&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.keycloakDefinition.config.KEYCLOAK_MASTER_REALM</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<tr class="row-even"><td><p>global.keycloakDefinition.config.KEYCLOAK_MASTER_REALM</p></td>
+<td><p>Keycloak のマスターレルム名</p></td>
+<td><p>可</p></td>
 <td><p>&quot;master&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.keycloakDefinition.config.KEYCLOAK_DB_DATABASE</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<tr class="row-odd"><td><p>global.keycloakDefinition.config.KEYCLOAK_DB_DATABASE</p></td>
+<td><p>Keycloak が利用するデータベース名</p></td>
+<td><p>可</p></td>
 <td><p>&quot;keycloak&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.keycloakDefinition.secret.KEYCLOAK_USER</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;&quot;</p></td>
+<tr class="row-even"><td><p>global.keycloakDefinition.secret.KEYCLOAK_USER</p></td>
+<td><div class="line-block">
+<div class="line">Keycloak のマスターレルムにおける管理権限を持ったユーザ名を指定。</div>
+<div class="line">指定したユーザが作成される。</div>
+</div>
+</td>
+<td><p>必須</p></td>
+<td><p>任意の文字列</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.keycloakDefinition.secret.KEYCLOAK_PASSWORD</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;&quot;</p></td>
+<tr class="row-odd"><td><p>global.keycloakDefinition.secret.KEYCLOAK_PASSWORD</p></td>
+<td><p>Keycloak のマスターレルムにおける管理権限を持ったユーザに設定するパスワード(エンコードなし)</p></td>
+<td><p>必須</p></td>
+<td><p>任意の文字列</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.keycloakDefinition.secret.KEYCLOAK_DB_USER</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;&quot;</p></td>
+<tr class="row-even"><td><p>global.keycloakDefinition.secret.KEYCLOAK_DB_USER</p></td>
+<td><p>Keycloak が使用するデータベースユーザ</p></td>
+<td><p>必須</p></td>
+<td><p>任意の文字列</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.keycloakDefinition.secret.KEYCLOAK_DB_PASSWORD</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;&quot;</p></td>
+<tr class="row-odd"><td><p>global.keycloakDefinition.secret.KEYCLOAK_DB_PASSWORD</p></td>
+<td><p>Keycloak が使用するデータベースユーザのパスワード(エンコードなし)</p></td>
+<td><p>必須</p></td>
+<td><p>任意の文字列</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.itaDefinition.name</p></td>
-<td></td>
+</tbody>
+</table>
+</section>
+<section id="exastro-ita">
+<h3>共通設定 (Exastro ITA)<a class="headerlink" href="#exastro-ita" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id10">
+<caption><span class="caption-number">表 4.3 </span><span class="caption-text">共通設定 (Exastro ITA) のオプションパラメータ</span><a class="headerlink" href="#id10" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>global.itaDefinition.name</p></td>
+<td><p>Exastro IT Automation の定義名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;ita&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.itaDefinition.enabled</p></td>
-<td></td>
+<tr class="row-odd"><td><p>global.itaDefinition.enabled</p></td>
+<td><div class="line-block">
+<div class="line">Exastro Platform と同一のクラスタ内への Exastro IT Automation のデプロイ要否</div>
+<div class="line">現在は同一クラスタ内でのみ利用可能。(マルチクラスタへの分散配置は不可)</div>
+</div>
+</td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;true&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.itaDefinition.config     &quot;.global.itaDefinition.config.ITA_WEB_PROTOCOL</p></td>
-<td></td>
+<tr class="row-even"><td><p>global.itaDefinition.config.ITA_WEB_PROTOCOL</p></td>
+<td><p>Exastro IT Automation エンドポイントのプロトコル</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>http&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.itaDefinition.config.ITA_WEB_HOST</p></td>
-<td></td>
+<tr class="row-odd"><td><p>global.itaDefinition.config.ITA_WEB_HOST</p></td>
+<td><p>Exastro IT Automation エンドポイントのホスト名、もしくは、FQDN</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;ita-web-server.exastro-it-automation.svc&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.itaDefinition.config.ITA_WEB_PORT</p></td>
-<td></td>
+<tr class="row-even"><td><p>global.itaDefinition.config.ITA_WEB_PORT</p></td>
+<td><p>Exastro IT Automation エンドポイントのポート番号</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;8000&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.itaDefinition.config.ITA_API_PROTOCOL</p></td>
-<td></td>
+<tr class="row-odd"><td><p>global.itaDefinition.config.ITA_API_PROTOCOL</p></td>
+<td><p>Exastro IT Automation API エンドポイントのプロトコル</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;http&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.itaDefinition.config.ITA_API_HOST</p></td>
-<td></td>
+<tr class="row-even"><td><p>global.itaDefinition.config.ITA_API_HOST</p></td>
+<td><p>Exastro IT Automation API エンドポイントのホスト名、もしくは、FQDN</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;ita-api-organization.exastro-it-automation.svc&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.itaDefinition.config.ITA_API_PORT</p></td>
-<td></td>
+<tr class="row-odd"><td><p>global.itaDefinition.config.ITA_API_PORT</p></td>
+<td><p>Exastro IT Automation API エンドポイントのポート番号</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;8080&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.itaDefinition.config.ITA_API_ADMIN_PROTOCOL</p></td>
-<td></td>
+<tr class="row-even"><td><p>global.itaDefinition.config.ITA_API_ADMIN_PROTOCOL</p></td>
+<td><p>Exastro IT Automation API Admin エンドポイントのプロトコル</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;http&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.itaDefinition.config.ITA_API_ADMIN_HOST</p></td>
-<td></td>
+<tr class="row-odd"><td><p>global.itaDefinition.config.ITA_API_ADMIN_HOST</p></td>
+<td><p>Exastro IT Automation API Admin エンドポイントのホスト名、もしくは、FQDN</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;ita-api-admin.exastro-it-automation.svc&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.itaDefinition.config.ITA_API_ADMIN_PORT</p></td>
-<td></td>
+<tr class="row-even"><td><p>global.itaDefinition.config.ITA_API_ADMIN_PORT</p></td>
+<td><p>Exastro IT Automation API Admin エンドポイントのポート番号</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;8080&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.authDatabaseDefinition.name</p></td>
-<td></td>
+</tbody>
+</table>
+</section>
+<section id="id2">
+<h3>共通設定 (認証機能用データベース)<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id11">
+<caption><span class="caption-number">表 4.4 </span><span class="caption-text">共通設定 (認証機能用データベース) のオプションパラメータ</span><a class="headerlink" href="#id11" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>global.authDatabaseDefinition.name</p></td>
+<td><p>認証機能用データベースの定義名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;auth-database&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.authDatabaseDefinition.enabled</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;true&quot;</p></td>
+<tr class="row-odd"><td><p>global.authDatabaseDefinition.enabled</p></td>
+<td><div class="line-block">
+<div class="line">認証機能用データベースの有効フラグ</div>
+<div class="line">※現在このパラメータは使用していません。</div>
+</div>
+</td>
+<td><p>可 (無効)</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">true</strong> (デフォルト): -</div>
+</div>
+</td>
 </tr>
-<tr class="row-odd"><td><p>.global.authDatabaseDefinition.config.DB_VENDOR</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;mariadb&quot;</p></td>
+<tr class="row-even"><td><p>global.authDatabaseDefinition.config.DB_VENDOR</p></td>
+<td><p>認証機能用データベースで使用するデータベース</p></td>
+<td><p>可 (外部データベース利用時)</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">&quot;mariadb&quot;</strong> (デフォルト): MariaDB を利用</div>
+<div class="line"><strong class="program">&quot;mysql&quot;</strong>: MySQL を利用</div>
+</div>
+</td>
 </tr>
-<tr class="row-even"><td><p>.global.authDatabaseDefinition.config.DB_HOST</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<tr class="row-odd"><td><p>global.authDatabaseDefinition.config.DB_HOST</p></td>
+<td><div class="line-block">
+<div class="line">認証機能用データベース利用するDB</div>
+<div class="line">デフォルト状態では、同一の Kubernetes クラスタ内にデプロイされるコンテナを指定しています。</div>
+<div class="line">クラスタ外部の DB を利用する場合には設定が必要となります。</div>
+</div>
+</td>
+<td><p>可 (外部データベース利用時)</p></td>
 <td><p>&quot;mariadb.exastro-platform.svc&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.authDatabaseDefinition.config.DB_PORT</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<tr class="row-even"><td><p>global.authDatabaseDefinition.config.DB_PORT</p></td>
+<td><p>認証機能用データベースで利用するポート番号(TCP)</p></td>
+<td><p>可 (外部データベース利用時)</p></td>
 <td><p>&quot;3306&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.authDatabaseDefinition.config.DB_DATABASE</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<tr class="row-odd"><td><p>global.authDatabaseDefinition.config.DB_DATABASE</p></td>
+<td><p>認証機能用データベースで利用するデータベース名</p></td>
+<td><p>可 (外部データベース利用時)</p></td>
 <td><p>&quot;platform&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.authDatabaseDefinition.secret.DB_ADMIN_USER</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;&quot;</p></td>
+<tr class="row-even"><td><p>global.authDatabaseDefinition.secret.DB_ADMIN_USER</p></td>
+<td><p>認証機能用データベースで利用する管理権限を持つDBユーザ名</p></td>
+<td><p>必須</p></td>
+<td><p>管理権限を持つDBユーザ名</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.authDatabaseDefinition.secret.DB_ADMIN_PASSWORD</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;&quot;</p></td>
+<tr class="row-odd"><td><p>global.authDatabaseDefinition.secret.DB_ADMIN_PASSWORD</p></td>
+<td><p>認証機能用データベースで利用する管理権限を持つDBユーザのパスワード(エンコードなし)</p></td>
+<td><p>必須</p></td>
+<td><p>管理権限を持つDBユーザ名のパスワード</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.authDatabaseDefinition.secret.DB_USER</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;&quot;</p></td>
+<tr class="row-even"><td><p>global.authDatabaseDefinition.secret.DB_USER</p></td>
+<td><p>認証機能用データベースに作成するDBユーザ名</p></td>
+<td><p>必須</p></td>
+<td><p>任意の文字列</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.authDatabaseDefinition.secret.DB_PASSWORD</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;&quot;</p></td>
+<tr class="row-odd"><td><p>global.authDatabaseDefinition.secret.DB_PASSWORD</p></td>
+<td><p>認証機能用データベースに作成するDBユーザのパスワード(エンコードなし)</p></td>
+<td><p>必須</p></td>
+<td><p>任意の文字列</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.databaseDefinition.name</p></td>
-<td></td>
+</tbody>
+</table>
+</section>
+<section id="exastro">
+<h3>共通設定 (Exastro 共用データベース)<a class="headerlink" href="#exastro" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id12">
+<caption><span class="caption-number">表 4.5 </span><span class="caption-text">共通設定 (Exastro 共用データベース) のオプションパラメータ</span><a class="headerlink" href="#id12" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>global.databaseDefinition.name</p></td>
+<td><p>Exastro 共用データベースの定義名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;mariadb&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.databaseDefinition.enabled</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;true&quot;</p></td>
+<tr class="row-odd"><td><p>global.databaseDefinition.enabled</p></td>
+<td><p>Exastro 共用データベースのデプロイ要否</p></td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">&quot;true&quot;</strong> (デフォルト): DBコンテナをデプロイする</div>
+<div class="line"><strong class="program">&quot;false&quot;</strong>: DBコンテナをデプロイしない</div>
+</div>
+</td>
 </tr>
-<tr class="row-odd"><td><p>.global.databaseDefinition.secret.MARIADB_ROOT_PASSWORD</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;&quot;</p></td>
+<tr class="row-even"><td><p>global.databaseDefinition.secret.MARIADB_ROOT_PASSWORD</p></td>
+<td><p>Exastro 共用データベースの root アカウントに設定するパスワード(エンコードなし)</p></td>
+<td><p>必須</p></td>
+<td><p>任意の文字列</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.databaseDefinition.persistence.enabled</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;true&quot;</p></td>
+<tr class="row-odd"><td><p>global.databaseDefinition.persistence.enabled</p></td>
+<td><p>Exastro 共用データベースのデータ永続化の有効フラグ</p></td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">&quot;true&quot;</strong> (デフォルト): データを永続化する</div>
+<div class="line"><strong class="program">&quot;false&quot;</strong>: データを永続化しない</div>
+</div>
+</td>
 </tr>
-<tr class="row-odd"><td><p>.global.databaseDefinition.persistence.reinstall</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;false&quot;</p></td>
+<tr class="row-even"><td><p>global.databaseDefinition.persistence.reinstall</p></td>
+<td><p>再インストール時にデータ領域の初期化の要否</p></td>
+<td><p>可 (データ永続化時)</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">&quot;true&quot;</strong> (デフォルト): データを初期化(削除)する</div>
+<div class="line"><strong class="program">&quot;false&quot;</strong>: データを初期化(削除)しない</div>
+</div>
+</td>
 </tr>
-<tr class="row-even"><td><p>.global.databaseDefinition.persistence.accessMode</p></td>
-<td></td>
+<tr class="row-odd"><td><p>global.databaseDefinition.persistence.accessMode</p></td>
+<td><p>永続ボリュームのアクセスモードの指定。</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;ReadWriteOnce&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.databaseDefinition.persistence.size</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<tr class="row-even"><td><p>global.databaseDefinition.persistence.size</p></td>
+<td><p>永続ボリュームのディスク容量</p></td>
+<td><p>可 (データ永続化時)</p></td>
 <td><p>&quot;20Gi&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.databaseDefinition.persistence.volumeType</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;hostPath&quot;</p></td>
+<tr class="row-odd"><td><p>global.databaseDefinition.persistence.volumeType</p></td>
+<td><p>永続ボリュームのボリュームタイプ</p></td>
+<td><p>可 (現在無効)</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">&quot;hostPath&quot;</strong> (デフォルト): Kubernetes クラスタのノード上にデータを保存(非推奨)</div>
+<div class="line"><strong class="program">&quot;AKS&quot;</strong>: AKS のストレージクラスを利用</div>
+</div>
+</td>
 </tr>
-<tr class="row-odd"><td><p>.global.databaseDefinition.persistence.storageClass</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;-&quot;</p></td>
+<tr class="row-even"><td><p>global.databaseDefinition.persistence.storageClass</p></td>
+<td><p>永続ボリュームにストレージクラスを利用する場合のクラスを指定</p></td>
+<td><p>可 (データ永続化時)</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">&quot;-&quot;</strong> (デフォルト): ストレージクラスを指定しない。</div>
+<div class="line"><strong class="program">ストレージクラス名</strong>: クラウドプロバイダなどから提供されるストレージクラス名を指定。</div>
+</div>
+</td>
 </tr>
-<tr class="row-even"><td><p>.platform-api.image.repository</p></td>
-<td></td>
+</tbody>
+</table>
+</section>
+<section id="exastro-platform-api">
+<h3>Exastro Platform API 機能<a class="headerlink" href="#exastro-platform-api" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id13">
+<caption><span class="caption-number">表 4.6 </span><span class="caption-text">Exastro Platform API 機能のオプションパラメータ</span><a class="headerlink" href="#id13" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>platform-api.image.repository</p></td>
+<td><p>コンテナイメージのリポジトリ名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;exastro/exastro-platform-api&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.platform-api.image.tag</p></td>
-<td></td>
+<tr class="row-odd"><td><p>platform-api.image.tag</p></td>
+<td><p>コンテナイメージのタグ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;1.0.6&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.platform-auth.ingress.enabled</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;true&quot;</p></td>
+</tbody>
+</table>
+</section>
+<section id="id3">
+<h3>Exastro Platform 認証機能<a class="headerlink" href="#id3" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id14">
+<caption><span class="caption-number">表 4.7 </span><span class="caption-text">Exastro Platform 認証機能のオプションパラメータ</span><a class="headerlink" href="#id14" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
 </tr>
-<tr class="row-odd"><td><p>.platform-auth.ingress.hosts[0].host</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>platform-auth.ingress.enabled</p></td>
+<td><p>Exastro Platform における Ingress 利用の要否</p></td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">true</strong> (デフォルト): Exastro Platform にアクセスするための Ingress Controller をデプロイします。</div>
+<div class="line"><strong class="program">false</strong> : Ingress Controller をデプロイしません。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>platform-auth.ingress.hosts[0].host</p></td>
+<td><div class="line-block">
+<div class="line">Exastro Platform 管理コンソールエンドポイントのホスト名、もしくは、FQDN</div>
+<div class="line">別途、DNSへのレコード登録が必要です。</div>
+</div>
+</td>
+<td><p>可 (Ingress利用時)</p></td>
 <td><p>&quot;exastro-suite.example.local&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.platform-auth.ingress.hosts[0].paths[0].path</p></td>
-<td></td>
+<tr class="row-even"><td><p>platform-auth.ingress.hosts[0].paths[0].path</p></td>
+<td><p>Exastro Platform 管理コンソールエンドポイントのパスのルール</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;/&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.platform-auth.ingress.hosts[0].paths[0].pathType</p></td>
-<td></td>
+<tr class="row-odd"><td><p>platform-auth.ingress.hosts[0].paths[0].pathType</p></td>
+<td><p>Exastro Platform 管理コンソールエンドポイントのパスの一致条件</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;Prefix&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.platform-auth.ingress.hosts[0].paths[0].backend</p></td>
-<td></td>
+<tr class="row-even"><td><p>platform-auth.ingress.hosts[0].paths[0].backend</p></td>
+<td><p>Exastro Platform 管理コンソールのサービス名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;http&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.platform-auth.ingress.hosts[1].host</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<tr class="row-odd"><td><p>platform-auth.ingress.hosts[1].host</p></td>
+<td><div class="line-block">
+<div class="line">Exastro Platform エンドポイントのホスト名、もしくは、FQDN</div>
+<div class="line">別途、DNSへのレコード登録が必要です。</div>
+</div>
+</td>
+<td><p>可 (Ingress利用時)</p></td>
 <td><p>&quot;exastro-suite-mng.example.local&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.platform-auth.ingress.hosts[1].paths[0].path</p></td>
-<td></td>
+<tr class="row-even"><td><p>platform-auth.ingress.hosts[1].paths[0].path</p></td>
+<td><p>Exastro Platform エンドポイントのパスのルール</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;/&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.platform-auth.ingress.hosts[1].paths[0].pathType</p></td>
-<td></td>
+<tr class="row-odd"><td><p>platform-auth.ingress.hosts[1].paths[0].pathType</p></td>
+<td><p>Exastro Platform エンドポイントのパスの一致条件</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;Prefix&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.platform-auth.ingress.hosts[1].paths[0].backend</p></td>
-<td></td>
+<tr class="row-even"><td><p>platform-auth.ingress.hosts[1].paths[0].backend</p></td>
+<td><p>Exastro Platform エンドポイントのエンドポイントのサービス名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;httpMng&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.platform-auth.service.type</p></td>
-<td></td>
+<tr class="row-odd"><td><p>platform-auth.service.type</p></td>
+<td><div class="line-block">
+<div class="line">Exastro Platform のサービスタイプ</div>
+<div class="line">※ 現在 ClusterIP 以外のタイプには対応していません。</div>
+</div>
+</td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;ClusterIP&quot;</p></td>
+<td><p><strong class="program">ClusterIP</strong></p></td>
 </tr>
-<tr class="row-even"><td><p>.platform-auth.image.repository</p></td>
-<td></td>
+<tr class="row-even"><td><p>platform-auth.image.repository</p></td>
+<td><p>コンテナイメージのリポジトリ名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;exastro/exastro-platform-auth&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.platform-auth.image.tag</p></td>
-<td></td>
+<tr class="row-odd"><td><p>platform-auth.image.tag</p></td>
+<td><p>コンテナイメージのタグ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;1.0.6&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.platform-setup.keycloak.image.repository</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;exastro/exastro-platform-job&quot;</p></td>
+</tbody>
+</table>
+</section>
+<section id="exastro-platform-web">
+<h3>Exastro Platform Web 機能<a class="headerlink" href="#exastro-platform-web" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id15">
+<caption><span class="caption-number">表 4.8 </span><span class="caption-text">Exastro Platform Web 機能のオプションパラメータ</span><a class="headerlink" href="#id15" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
 </tr>
-<tr class="row-odd"><td><p>.platform-setup.keycloak.image.tag</p></td>
-<td></td>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>platform-web.image.repository</p></td>
+<td><p>コンテナイメージのリポジトリ名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;1.0.6&quot;</p></td>
-</tr>
-<tr class="row-even"><td><p>.platform-web.image.repository</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;exastro/exastro-platform-web&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.platform-web.image.tag</p></td>
-<td></td>
+<tr class="row-odd"><td><p>platform-web.image.tag</p></td>
+<td><p>コンテナイメージのタグ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;1.0.6&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.mariadb.image.repository</p></td>
-<td></td>
+</tbody>
+</table>
+</section>
+<section id="id4">
+<h3>Exastro Platform セットアップ機能<a class="headerlink" href="#id4" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id16">
+<caption><span class="caption-number">表 4.9 </span><span class="caption-text">Exastro Platform セットアップ機能のオプションパラメータ</span><a class="headerlink" href="#id16" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>platform-setup.keycloak.image.repository</p></td>
+<td><p>コンテナイメージのリポジトリ名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
+<td><p>&quot;exastro/exastro-platform-job&quot;</p></td>
+</tr>
+<tr class="row-odd"><td><p>platform-setup.keycloak.image.tag</p></td>
+<td><p>コンテナイメージのタグ</p></td>
+<td><p>不可</p></td>
+<td><p>&quot;1.0.6&quot;</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mariadb">
+<h3>MariaDB<a class="headerlink" href="#mariadb" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id17">
+<caption><span class="caption-number">表 4.10 </span><span class="caption-text">MariaDB のオプションパラメータ</span><a class="headerlink" href="#id17" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>mariadb.image.repository</p></td>
+<td><p>コンテナイメージのリポジトリ名</p></td>
+<td><p>不可</p></td>
 <td><p>&quot;mariadb&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.mariadb.image.tag</p></td>
-<td></td>
+<tr class="row-odd"><td><p>mariadb.image.tag</p></td>
+<td><p>コンテナイメージのタグ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>&quot;10.9&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.mariadb.image.pullPolicy</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;IfNotPresent&quot;</p></td>
+<tr class="row-even"><td><p>mariadb.image.pullPolicy</p></td>
+<td><p>イメージプルポリシー</p></td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">IfNotPresent</strong> (デフォルト): コンテナイメージが存在しない場合のみプル</div>
+<div class="line"><strong class="program">Always</strong>: 毎回必ずプル</div>
+<div class="line"><strong class="program">None</strong>: プルしない</div>
+</div>
+</td>
 </tr>
-<tr class="row-odd"><td><p>.mariadb.resources.requests.memory</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<tr class="row-odd"><td><p>mariadb.resources.requests.memory</p></td>
+<td><p>メモリ要求</p></td>
+<td><p>可</p></td>
 <td><p>&quot;256Mi&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.mariadb.resources.requests.cpu</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<tr class="row-even"><td><p>mariadb.resources.requests.cpu</p></td>
+<td><p>CPU要求</p></td>
+<td><p>可</p></td>
 <td><p>&quot;1m&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.mariadb.resources.limits.memory</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<tr class="row-odd"><td><p>mariadb.resources.limits.memory</p></td>
+<td><p>メモリ上限</p></td>
+<td><p>可</p></td>
 <td><p>&quot;2Gi&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.mariadb.resources.limits.cpu</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;4&quot;</p></td>
-</tr>
-<tr class="row-odd"><td><p>.keycloak.image.repository</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;exastro/keycloak&quot;</p></td>
-</tr>
-<tr class="row-even"><td><p>.keycloak.image.tag</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;1.0.6&quot;</p></td>
-</tr>
-<tr class="row-odd"><td><p>.keycloak.image.pullPolicy</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;IfNotPresent&quot;</p></td>
-</tr>
-<tr class="row-even"><td><p>.keycloak.resources.requests.memory</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;256Mi&quot;</p></td>
-</tr>
-<tr class="row-odd"><td><p>.keycloak.resources.requests.cpu</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;1m&quot;</p></td>
-</tr>
-<tr class="row-even"><td><p>.keycloak.resources.limits.memory</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>&quot;2Gi&quot;</p></td>
-</tr>
-<tr class="row-odd"><td><p>.keycloak.resources.limits.cpu</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<tr class="row-even"><td><p>mariadb.resources.limits.cpu</p></td>
+<td><p>CPU上限</p></td>
+<td><p>可</p></td>
 <td><p>&quot;4&quot;</p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="exastro-it-automation">
-<h3>Exastro IT Automation<a class="headerlink" href="#exastro-it-automation" title="この見出しへのパーマリンク">¶</a></h3>
-<table class="docutils align-left" id="id3">
-<caption><span class="caption-text">Exastro IT Automation における Values 一覧</span><a class="headerlink" href="#id3" title="このテーブルへのパーマリンク">¶</a></caption>
+<section id="id5">
+<h3>Keycloak<a class="headerlink" href="#id5" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id18">
+<caption><span class="caption-number">表 4.11 </span><span class="caption-text">Keycloak 機能のオプションパラメータ</span><a class="headerlink" href="#id18" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
-<col style="width: 6.2%" />
-<col style="width: 6.2%" />
+<col style="width: 12.5%" />
 <col style="width: 25.0%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>.global.itaGlobalDefinition.name</p></th>
-<th class="head"></th>
-<th class="head"><p>不可</p></th>
-<th class="head"><p>○</p></th>
-<th class="head"><p>ita-global</p></th>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>.global.itaGlobalDefinition.enabled</p></td>
-<td></td>
+<tr class="row-even"><td><p>keycloak.image.repository</p></td>
+<td><p>コンテナイメージのリポジトリ名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>true</p></td>
+<td><p>&quot;exastro/keycloak&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.itaGlobalDefinition.image.registry</p></td>
-<td></td>
+<tr class="row-odd"><td><p>keycloak.image.tag</p></td>
+<td><p>コンテナイメージのタグ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>docker.io</p></td>
+<td><p>&quot;1.0.6&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.itaGlobalDefinition.image.organization</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>exastro</p></td>
-</tr>
-<tr class="row-odd"><td><p>.global.itaGlobalDefinition.image.package</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>exastro-it-automation</p></td>
-</tr>
-<tr class="row-even"><td><p>.global.itaGlobalDefinition.config.DEFAULT_LANGUAGE</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>ja</p></td>
-</tr>
-<tr class="row-odd"><td><p>.global.itaGlobalDefinition.config.LANGUAGE</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>en</p></td>
-</tr>
-<tr class="row-even"><td><p>.global.itaGlobalDefinition.config.CONTAINER_BASE</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>kubernetes</p></td>
-</tr>
-<tr class="row-odd"><td><p>.global.itaGlobalDefinition.config.TZ</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>Asia/Tokyo</p></td>
-</tr>
-<tr class="row-even"><td><p>.global.itaGlobalDefinition.config.STORAGEPATH</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>/storage/</p></td>
-</tr>
-<tr class="row-odd"><td><p>.global.itaGlobalDefinition.persistence.enabled</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>true</p></td>
-</tr>
-<tr class="row-even"><td><p>.global.itaGlobalDefinition.persistence.accessMode</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>ReadWriteMany</p></td>
-</tr>
-<tr class="row-odd"><td><p>.global.itaGlobalDefinition.persistence.size</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>10Gi</p></td>
-</tr>
-<tr class="row-even"><td><p>.global.itaGlobalDefinition.persistence.volumeType</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>hostPath</p></td>
-</tr>
-<tr class="row-odd"><td><p>.global.itaGlobalDefinition.persistence.storageClass</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
+<tr class="row-even"><td><p>keycloak.image.pullPolicy</p></td>
+<td><p>イメージプルポリシー</p></td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">IfNotPresent</strong> (デフォルト): コンテナイメージが存在しない場合のみプル</div>
+<div class="line"><strong class="program">Always</strong>: 毎回必ずプル</div>
+<div class="line"><strong class="program">None</strong>: プルしない</div>
+</div>
 </td>
 </tr>
-<tr class="row-even"><td><p>.global.gitlabDefinition.name</p></td>
-<td></td>
+<tr class="row-odd"><td><p>keycloak.resources.requests.memory</p></td>
+<td><p>メモリ要求</p></td>
+<td><p>可</p></td>
+<td><p>&quot;256Mi&quot;</p></td>
+</tr>
+<tr class="row-even"><td><p>keycloak.resources.requests.cpu</p></td>
+<td><p>CPU要求</p></td>
+<td><p>可</p></td>
+<td><p>&quot;1m&quot;</p></td>
+</tr>
+<tr class="row-odd"><td><p>keycloak.resources.limits.memory</p></td>
+<td><p>メモリ上限</p></td>
+<td><p>可</p></td>
+<td><p>&quot;2Gi&quot;</p></td>
+</tr>
+<tr class="row-even"><td><p>keycloak.resources.limits.cpu</p></td>
+<td><p>CPU上限</p></td>
+<td><p>可</p></td>
+<td><p>&quot;4&quot;</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="exastro-it-automation">
+<h2><span class="section-number">4.1.2. </span>Exastro IT Automation<a class="headerlink" href="#exastro-it-automation" title="この見出しへのパーマリンク">¶</a></h2>
+<section id="id6">
+<h3>共通設定 (Exastro IT Automation)<a class="headerlink" href="#id6" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id19">
+<caption><span class="caption-number">表 4.12 </span><span class="caption-text">共通設定 (Exastro IT Automation) のオプションパラメータ</span><a class="headerlink" href="#id19" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>global.itaGlobalDefinition.name</p></td>
+<td><p>Exastro IT Automation の定義名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
+<td><p>ita-global</p></td>
+</tr>
+<tr class="row-odd"><td><p>global.itaGlobalDefinition.enabled</p></td>
+<td><p>Exastro IT Automation の有効フラグ</p></td>
+<td><p>不可</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>global.itaGlobalDefinition.image.registry</p></td>
+<td><p>Exastro IT Automation で利用するデフォルトイメージレジストリ</p></td>
+<td><p>不可</p></td>
+<td><p>docker.io</p></td>
+</tr>
+<tr class="row-odd"><td><p>global.itaGlobalDefinition.image.organization</p></td>
+<td><p>Exastro IT Automation で利用するデフォルトイメージレジストリの組織名</p></td>
+<td><p>不可</p></td>
+<td><p>exastro</p></td>
+</tr>
+<tr class="row-even"><td><p>global.itaGlobalDefinition.image.package</p></td>
+<td><p>Exastro IT Automation で利用するデフォルトイメージレジストリのパッケージ名</p></td>
+<td><p>不可</p></td>
+<td><p>exastro-it-automation</p></td>
+</tr>
+<tr class="row-odd"><td><p>global.itaGlobalDefinition.config.DEFAULT_LANGUAGE</p></td>
+<td><p>Exastro IT Automation で使用する既定の言語</p></td>
+<td><p>不可</p></td>
+<td><p>&quot;ja&quot;</p></td>
+</tr>
+<tr class="row-even"><td><p>global.itaGlobalDefinition.config.LANGUAGE</p></td>
+<td><p>Exastro IT Automation で使用する言語</p></td>
+<td><p>不可</p></td>
+<td><p>en</p></td>
+</tr>
+<tr class="row-odd"><td><p>global.itaGlobalDefinition.config.CONTAINER_BASE</p></td>
+<td><p>デプロイ先のコンテナ環境</p></td>
+<td><p>不可</p></td>
+<td><p>kubernetes</p></td>
+</tr>
+<tr class="row-even"><td><p>global.itaGlobalDefinition.config.TZ</p></td>
+<td><p>Exastro IT Automation で使用するタイムゾーン</p></td>
+<td><p>不可</p></td>
+<td><p>Asia/Tokyo</p></td>
+</tr>
+<tr class="row-odd"><td><p>global.itaGlobalDefinition.config.STORAGEPATH</p></td>
+<td><p>共有ディレクトリのマウントポイント</p></td>
+<td><p>不可</p></td>
+<td><p>/storage/</p></td>
+</tr>
+<tr class="row-even"><td><p>global.itaGlobalDefinition.secret.ENCRYPT_KEY</p></td>
+<td><div class="line-block">
+<div class="line">Exastro Platform 内で保管するデータの暗号化と復号のための AES キー。</div>
+<div class="line">任意の32バイト ASCII 文字を BASE64 エンコードした値</div>
+</div>
+</td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line">ランダムな32バイト ASCII 文字を BASE64 エンコードした値</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>global.itaGlobalDefinition.persistence.enabled</p></td>
+<td><div class="line-block">
+<div class="line">Exastro IT Automation におけるデータの永続化の有無</div>
+</div>
+</td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">true</strong> (デフォルト): 永続化する。</div>
+<div class="line"><strong class="program">false</strong>: 永続化しない。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>global.itaGlobalDefinition.persistence.accessMode</p></td>
+<td><div class="line-block">
+<div class="line">Exastro IT Automation における Persisten Volume Claim のアクセスモード</div>
+</div>
+</td>
+<td><p>可 (データ永続化時)</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">ReadWriteMany</strong> (デフォルト): ボリュームは多数のNodeで読み取り専用としてマウント。</div>
+<div class="line"><strong class="program">ReadWriteOnce</strong>: ボリュームは単一のNodeで読み取り/書き込みとしてマウント。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>global.itaGlobalDefinition.persistence.size</p></td>
+<td><div class="line-block">
+<div class="line">Exastro IT Automation における Persisten Volume Claim のボリュームに要求するサイズ(Bytes)</div>
+</div>
+</td>
+<td><p>可 (データ永続化時)</p></td>
+<td><p>&quot;10Gi&quot;</p></td>
+</tr>
+<tr class="row-even"><td><p>global.itaGlobalDefinition.persistence.volumeType</p></td>
+<td><div class="line-block">
+<div class="line">Exastro IT Automation における Persisten Volume のボリュームタイプ</div>
+<div class="line">Storage Class を利用する場合は設定は不要です。</div>
+</div>
+</td>
+<td><p>可 (データ永続化時)</p></td>
+<td><p>&quot;hostPath&quot;</p></td>
+</tr>
+<tr class="row-odd"><td><p>global.itaGlobalDefinition.persistence.storageClass</p></td>
+<td><div class="line-block">
+<div class="line">Exastro IT Automation におけるデータの永続化のために利用する Storage Class</div>
+<div class="line">Persistent Volume を利用する場合は設定は不要です。</div>
+</div>
+</td>
+<td><p>可 (データ永続化時)</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">&quot;-&quot;</strong> (デフォルト): ストレージクラスを指定しない。</div>
+<div class="line"><strong class="program">ストレージクラス名</strong>: クラウドプロバイダなどから提供されるストレージクラス名を指定。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id7">
+<h3>共通設定 (Exastro IT Automation 用データベース)<a class="headerlink" href="#id7" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id20">
+<caption><span class="caption-number">表 4.13 </span><span class="caption-text">共通設定 (Exastro IT Automation 用データベース) のオプションパラメータ</span><a class="headerlink" href="#id20" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>global.itaDatabaseDefinition.name</p></td>
+<td><p>Exastro IT Automation 用データベースの定義名</p></td>
+<td><p>不可</p></td>
+<td><p>&quot;ita-database&quot;</p></td>
+</tr>
+<tr class="row-odd"><td><p>global.itaDatabaseDefinition.enabled</p></td>
+<td><div class="line-block">
+<div class="line">Exastro IT Automation 用データベースの有効フラグ</div>
+<div class="line">※現在このパラメータは使用していません。</div>
+</div>
+</td>
+<td><p>可 (無効)</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">true</strong> (デフォルト): -</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>global.itaDatabaseDefinition.config.DB_VENDOR</p></td>
+<td><p>Exastro IT Automation 用データベースで使用するデータベース</p></td>
+<td><p>可 (外部データベース利用時)</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">&quot;mariadb&quot;</strong> (デフォルト): MariaDB を利用</div>
+<div class="line"><strong class="program">&quot;mysql&quot;</strong>: MySQL を利用</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>global.itaDatabaseDefinition.config.DB_HOST</p></td>
+<td><div class="line-block">
+<div class="line">Exastro IT Automation 用データベース利用するDB</div>
+<div class="line">デフォルト状態では、同一の Kubernetes クラスタ内にデプロイされるコンテナを指定しています。</div>
+<div class="line">クラスタ外部の DB を利用する場合には設定が必要となります。</div>
+</div>
+</td>
+<td><p>可 (外部データベース利用時)</p></td>
+<td><p>&quot;mariadb.exastro-platform.svc&quot;</p></td>
+</tr>
+<tr class="row-even"><td><p>global.itaDatabaseDefinition.config.DB_PORT</p></td>
+<td><p>Exastro IT Automation 用データベースで利用するポート番号(TCP)</p></td>
+<td><p>可 (外部データベース利用時)</p></td>
+<td><p>&quot;3306&quot;</p></td>
+</tr>
+<tr class="row-odd"><td><p>global.itaDatabaseDefinition.config.DB_DATABASE</p></td>
+<td><p>Exastro IT Automation 用データベースで利用するデータベース名</p></td>
+<td><p>可 (外部データベース利用時)</p></td>
+<td><p>&quot;platform&quot;</p></td>
+</tr>
+<tr class="row-even"><td><p>global.itaDatabaseDefinition.secret.DB_ADMIN_USER</p></td>
+<td><p>Exastro IT Automation 用データベースで利用する管理権限を持つDBユーザ名</p></td>
+<td><p>必須</p></td>
+<td><p>管理権限を持つDBユーザ名</p></td>
+</tr>
+<tr class="row-odd"><td><p>global.itaDatabaseDefinition.secret.DB_ADMIN_PASSWORD</p></td>
+<td><p>Exastro IT Automation 用データベースで利用する管理権限を持つDBユーザのパスワード(エンコードなし)</p></td>
+<td><p>必須</p></td>
+<td><p>管理権限を持つDBユーザ名のパスワード</p></td>
+</tr>
+<tr class="row-even"><td><p>global.itaDatabaseDefinition.secret.DB_USER</p></td>
+<td><p>Exastro IT Automation 用データベースに作成するDBユーザ名</p></td>
+<td><p>必須</p></td>
+<td><p>任意の文字列</p></td>
+</tr>
+<tr class="row-odd"><td><p>global.itaDatabaseDefinition.secret.DB_PASSWORD</p></td>
+<td><p>Exastro IT Automation 用データベースに作成するDBユーザのパスワード(エンコードなし)</p></td>
+<td><p>必須</p></td>
+<td><p>任意の文字列</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="gitlab">
+<h3>共通設定 (GitLab)<a class="headerlink" href="#gitlab" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id21">
+<caption><span class="caption-number">表 4.14 </span><span class="caption-text">共通設定 (GitLab) のオプションパラメータ</span><a class="headerlink" href="#id21" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>global.gitlabDefinition.name</p></td>
+<td><p>GitLab の定義名</p></td>
+<td><p>不可</p></td>
 <td><p>gitlab</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.gitlabDefinition.enabled</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<tr class="row-odd"><td><p>global.gitlabDefinition.enabled</p></td>
+<td><div class="line-block">
+<div class="line">GitLab のデプロイ要否</div>
+<div class="line">※現在このパラメータは使用していません。</div>
+</div>
+</td>
+<td><p>可 (無効)</p></td>
 <td><p>true</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.gitlabDefinition.config.GITLAB_PROTOCOL</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<tr class="row-even"><td><p>global.gitlabDefinition.config.GITLAB_PROTOCOL</p></td>
+<td><p>GitLab エンドポイントのプロトコル</p></td>
+<td><p>可</p></td>
 <td><p>http</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.gitlabDefinition.config.GITLAB_HOST</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<tr class="row-odd"><td><p>global.gitlabDefinition.config.GITLAB_HOST</p></td>
+<td><p>GitLab エンドポイントへのホスト名、もしくは、FQDN</p></td>
+<td><p>可</p></td>
 <td><p>gitlab.exastro-platform.svc</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.gitlabDefinition.config.GITLAB_PORT</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
+<tr class="row-even"><td><p>global.gitlabDefinition.config.GITLAB_PORT</p></td>
+<td><p>GitLab エンドポイントのポート番号</p></td>
+<td><p>可</p></td>
 <td><p>80</p></td>
 </tr>
-<tr class="row-odd"><td><p>.global.gitlabDefinition.secret.GITLAB_ROOT_TOKEN</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td></td>
+<tr class="row-odd"><td><p>global.gitlabDefinition.secret.GITLAB_ROOT_TOKEN</p></td>
+<td><p>GitLab の root 権限アカウントのアクセストークン</p></td>
+<td><p>必須</p></td>
+<td><p>アクセエストークン(平文)</p></td>
 </tr>
-<tr class="row-even"><td><p>.global.itaDatabaseDefinition.name</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>ita-database</p></td>
+</tbody>
+</table>
+</section>
+<section id="ita-api-admin">
+<h3>ita-api-admin<a class="headerlink" href="#ita-api-admin" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id22">
+<caption><span class="caption-number">表 4.15 </span><span class="caption-text">ita-api-admin における Values 一覧</span><a class="headerlink" href="#id22" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
 </tr>
-<tr class="row-odd"><td><p>.global.itaDatabaseDefinition.enabled</p></td>
-<td></td>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ita-api-admin.replicaCount</p></td>
+<td><p>Pod のレプリカ数</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>true</p></td>
-</tr>
-<tr class="row-even"><td><p>.global.itaDatabaseDefinition.config.DB_VENDOR</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>mariadb</p></td>
-</tr>
-<tr class="row-odd"><td><p>.global.itaDatabaseDefinition.config.DB_HOST</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>mariadb.exastro-platform.svc</p></td>
-</tr>
-<tr class="row-even"><td><p>.global.itaDatabaseDefinition.config.DB_PORT</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>3306</p></td>
-</tr>
-<tr class="row-odd"><td><p>.global.itaDatabaseDefinition.config.DB_DATABASE</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>ITA_DB</p></td>
-</tr>
-<tr class="row-even"><td><p>.global.itaDatabaseDefinition.secret.DB_ADMIN_USER</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>.global.itaDatabaseDefinition.secret.DB_ADMIN_PASSWORD</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>.global.itaDatabaseDefinition.secret.DB_USER</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>.global.itaDatabaseDefinition.secret.DB_PASSWORD</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>.ita-api-admin.replicaCount</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-api-admin.image.repository</p></td>
-<td></td>
+<tr class="row-odd"><td><p>ita-api-admin.image.repository</p></td>
+<td><p>コンテナイメージのリポジトリ名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>exastro/exastro-it-automation-api-admin</p></td>
 </tr>
-<tr class="row-even"><td><p>.ita-api-admin.image.tag</p></td>
-<td></td>
+<tr class="row-even"><td><p>ita-api-admin.image.tag</p></td>
+<td><p>コンテナイメージのタグ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>2.0.1</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-api-admin.image.pullPolicy</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>IfNotPresent</p></td>
+<tr class="row-odd"><td><p>ita-api-admin.image.pullPolicy</p></td>
+<td><p>イメージプルポリシー</p></td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">IfNotPresent</strong> (デフォルト): コンテナイメージが存在しない場合のみプル</div>
+<div class="line"><strong class="program">Always</strong>: 毎回必ずプル</div>
+<div class="line"><strong class="program">None</strong>: プルしない</div>
+</div>
+</td>
 </tr>
-<tr class="row-even"><td><p>.ita-api-organization.replicaCount</p></td>
-<td></td>
+</tbody>
+</table>
+</section>
+<section id="ita-api-organization">
+<h3>ita-api-organization<a class="headerlink" href="#ita-api-organization" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id23">
+<caption><span class="caption-number">表 4.16 </span><span class="caption-text">ita-api-organization における Values 一覧</span><a class="headerlink" href="#id23" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ita-api-organization.replicaCount</p></td>
+<td><p>Pod のレプリカ数</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-api-organization.image.repository</p></td>
-<td></td>
+<tr class="row-odd"><td><p>ita-api-organization.image.repository</p></td>
+<td><p>コンテナイメージのリポジトリ名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>exastro/exastro-it-automation-api-organization</p></td>
 </tr>
-<tr class="row-even"><td><p>.ita-api-organization.image.tag</p></td>
-<td></td>
+<tr class="row-even"><td><p>ita-api-organization.image.tag</p></td>
+<td><p>コンテナイメージのタグ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>2.0.1</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-api-organization.image.pullPolicy</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>IfNotPresent</p></td>
+<tr class="row-odd"><td><p>ita-api-organization.image.pullPolicy</p></td>
+<td><p>イメージプルポリシー</p></td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">IfNotPresent</strong> (デフォルト): コンテナイメージが存在しない場合のみプル</div>
+<div class="line"><strong class="program">Always</strong>: 毎回必ずプル</div>
+<div class="line"><strong class="program">None</strong>: プルしない</div>
+</div>
+</td>
 </tr>
-<tr class="row-even"><td><p>.ita-by-ansible-execute.replicaCount</p></td>
-<td></td>
+</tbody>
+</table>
+</section>
+<section id="ita-by-ansible-execute">
+<h3>ita-by-ansible-execute<a class="headerlink" href="#ita-by-ansible-execute" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id24">
+<caption><span class="caption-number">表 4.17 </span><span class="caption-text">ita-by-ansible-execute における Values 一覧</span><a class="headerlink" href="#id24" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ita-by-ansible-execute.replicaCount</p></td>
+<td><p>Pod のレプリカ数</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-by-ansible-execute.image.repository</p></td>
-<td></td>
+<tr class="row-odd"><td><p>ita-by-ansible-execute.image.repository</p></td>
+<td><p>コンテナイメージのリポジトリ名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>exastro/exastro-it-automation-by-ansible-execute</p></td>
 </tr>
-<tr class="row-even"><td><p>.ita-by-ansible-execute.image.tag</p></td>
-<td></td>
+<tr class="row-even"><td><p>ita-by-ansible-execute.image.tag</p></td>
+<td><p>コンテナイメージのタグ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>2.0.1</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-by-ansible-execute.image.pullPolicy</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>IfNotPresent</p></td>
+<tr class="row-odd"><td><p>ita-by-ansible-execute.image.pullPolicy</p></td>
+<td><p>イメージプルポリシー</p></td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">IfNotPresent</strong> (デフォルト): コンテナイメージが存在しない場合のみプル</div>
+<div class="line"><strong class="program">Always</strong>: 毎回必ずプル</div>
+<div class="line"><strong class="program">None</strong>: プルしない</div>
+</div>
+</td>
 </tr>
-<tr class="row-even"><td><p>.ita-by-ansible-execute.extraEnv.EXECUTE_INTERVAL</p></td>
-<td></td>
+<tr class="row-even"><td><p>ita-by-ansible-execute.extraEnv.EXECUTE_INTERVAL</p></td>
+<td><p>処理終了後から次回実行時までの待機時間</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>10</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-by-ansible-execute.extraEnv.ANSIBLE_AGENT_IMAGE</p></td>
-<td></td>
+<tr class="row-odd"><td><p>ita-by-ansible-execute.extraEnv.ANSIBLE_AGENT_IMAGE</p></td>
+<td><p>Ansible Agent のコンテナイメージのリポジトリ名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>exastro/exastro-it-automation-by-ansible-agent</p></td>
 </tr>
-<tr class="row-even"><td><p>.ita-by-ansible-execute.extraEnv.ANSIBLE_AGENT_IMAGE_TAG</p></td>
-<td></td>
+<tr class="row-even"><td><p>ita-by-ansible-execute.extraEnv.ANSIBLE_AGENT_IMAGE_TAG</p></td>
+<td><p>Ansible Agent のコンテナイメージのタグ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>2.0.0</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-by-ansible-execute.serviceAccount.create</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>false</p></td>
+<tr class="row-odd"><td><p>ita-by-ansible-execute.serviceAccount.create</p></td>
+<td><p>Ansible Agent 用のサービスアカウントの作成要否</p></td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">false</strong> (デフォルト): サービスアカウントを作成しない</div>
+<div class="line"><strong class="program">true</strong>: サービスアカウントを作成する</div>
+</div>
+</td>
 </tr>
-<tr class="row-even"><td><p>.ita-by-ansible-execute.serviceAccount.name</p></td>
-<td></td>
+<tr class="row-even"><td><p>ita-by-ansible-execute.serviceAccount.name</p></td>
+<td><p>作成するサービスアカウント名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>ita-by-ansible-execute-sa</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-by-ansible-legacy-role-vars-listup.replicaCount</p></td>
-<td></td>
+</tbody>
+</table>
+</section>
+<section id="ita-by-ansible-legacy-role-vars-listup">
+<h3>ita-by-ansible-legacy-role-vars-listup<a class="headerlink" href="#ita-by-ansible-legacy-role-vars-listup" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id25">
+<caption><span class="caption-number">表 4.18 </span><span class="caption-text">ita-by-ansible-legacy-role-vars-listup における Values 一覧</span><a class="headerlink" href="#id25" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ita-by-ansible-legacy-role-vars-listup.replicaCount</p></td>
+<td><p>Pod のレプリカ数</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>1</p></td>
 </tr>
-<tr class="row-even"><td><p>.ita-by-ansible-legacy-role-vars-listup.extraEnv.EXECUTE_INTERVAL</p></td>
-<td></td>
+<tr class="row-odd"><td><p>ita-by-ansible-legacy-role-vars-listup.extraEnv.EXECUTE_INTERVAL</p></td>
+<td><p>処理終了後から次回実行時までの待機時間</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>10</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-by-ansible-legacy-role-vars-listup.image.repository</p></td>
-<td></td>
+<tr class="row-even"><td><p>ita-by-ansible-legacy-role-vars-listup.image.repository</p></td>
+<td><p>コンテナイメージのリポジトリ名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>exastro/exastro-it-automation-by-ansible-legacy-role-vars-listup</p></td>
 </tr>
-<tr class="row-even"><td><p>.ita-by-ansible-legacy-role-vars-listup.image.tag</p></td>
-<td></td>
+<tr class="row-odd"><td><p>ita-by-ansible-legacy-role-vars-listup.image.tag</p></td>
+<td><p>コンテナイメージのタグ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>2.0.1</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-by-ansible-legacy-role-vars-listup.image.pullPolicy</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>IfNotPresent</p></td>
+<tr class="row-even"><td><p>ita-by-ansible-legacy-role-vars-listup.image.pullPolicy</p></td>
+<td><p>イメージプルポリシー</p></td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">IfNotPresent</strong> (デフォルト): コンテナイメージが存在しない場合のみプル</div>
+<div class="line"><strong class="program">Always</strong>: 毎回必ずプル</div>
+<div class="line"><strong class="program">None</strong>: プルしない</div>
+</div>
+</td>
 </tr>
-<tr class="row-even"><td><p>.ita-by-ansible-towermaster-sync.replicaCount</p></td>
-<td></td>
+</tbody>
+</table>
+</section>
+<section id="ita-by-ansible-towermaster-sync">
+<h3>ita-by-ansible-towermaster-sync<a class="headerlink" href="#ita-by-ansible-towermaster-sync" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id26">
+<caption><span class="caption-number">表 4.19 </span><span class="caption-text">ita-by-ansible-towermaster-sync における Values 一覧</span><a class="headerlink" href="#id26" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ita-by-ansible-towermaster-sync.replicaCount</p></td>
+<td><p>Pod のレプリカ数</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-by-ansible-towermaster-sync.extraEnv.EXECUTE_INTERVAL</p></td>
-<td></td>
+<tr class="row-odd"><td><p>ita-by-ansible-towermaster-sync.extraEnv.EXECUTE_INTERVAL</p></td>
+<td><p>処理終了後から次回実行時までの待機時間</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>10</p></td>
 </tr>
-<tr class="row-even"><td><p>.ita-by-ansible-towermaster-sync.image.repository</p></td>
-<td></td>
+<tr class="row-even"><td><p>ita-by-ansible-towermaster-sync.image.repository</p></td>
+<td><p>コンテナイメージのリポジトリ名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>exastro/exastro-it-automation-by-ansible-towermaster-sync</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-by-ansible-towermaster-sync.image.tag</p></td>
-<td></td>
+<tr class="row-odd"><td><p>ita-by-ansible-towermaster-sync.image.tag</p></td>
+<td><p>コンテナイメージのタグ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>2.0.1</p></td>
 </tr>
-<tr class="row-even"><td><p>.ita-by-ansible-towermaster-sync.image.pullPolicy</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>IfNotPresent</p></td>
+<tr class="row-even"><td><p>ita-by-ansible-towermaster-sync.image.pullPolicy</p></td>
+<td><p>イメージプルポリシー</p></td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">IfNotPresent</strong> (デフォルト): コンテナイメージが存在しない場合のみプル</div>
+<div class="line"><strong class="program">Always</strong>: 毎回必ずプル</div>
+<div class="line"><strong class="program">None</strong>: プルしない</div>
+</div>
+</td>
 </tr>
-<tr class="row-odd"><td><p>.ita-by-conductor-synchronize.replicaCount</p></td>
-<td></td>
+</tbody>
+</table>
+</section>
+<section id="ita-by-conductor-synchronize">
+<h3>ita-by-conductor-synchronize<a class="headerlink" href="#ita-by-conductor-synchronize" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id27">
+<caption><span class="caption-number">表 4.20 </span><span class="caption-text">ita-by-conductor-synchronize における Values 一覧</span><a class="headerlink" href="#id27" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ita-by-conductor-synchronize.replicaCount</p></td>
+<td><p>Pod のレプリカ数</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>1</p></td>
 </tr>
-<tr class="row-even"><td><p>.ita-by-conductor-synchronize.extraEnv.EXECUTE_INTERVAL</p></td>
-<td></td>
+<tr class="row-odd"><td><p>ita-by-conductor-synchronize.extraEnv.EXECUTE_INTERVAL</p></td>
+<td><p>処理終了後から次回実行時までの待機時間</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>10</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-by-conductor-synchronize.image.repository</p></td>
-<td></td>
+<tr class="row-even"><td><p>ita-by-conductor-synchronize.image.repository</p></td>
+<td><p>コンテナイメージのリポジトリ名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>exastro/exastro-it-automation-by-conductor-synchronize</p></td>
 </tr>
-<tr class="row-even"><td><p>.ita-by-conductor-synchronize.image.tag</p></td>
-<td></td>
+<tr class="row-odd"><td><p>ita-by-conductor-synchronize.image.tag</p></td>
+<td><p>コンテナイメージのタグ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>2.0.1</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-by-conductor-synchronize.image.pullPolicy</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>IfNotPresent</p></td>
+<tr class="row-even"><td><p>ita-by-conductor-synchronize.image.pullPolicy</p></td>
+<td><p>イメージプルポリシー</p></td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">IfNotPresent</strong> (デフォルト): コンテナイメージが存在しない場合のみプル</div>
+<div class="line"><strong class="program">Always</strong>: 毎回必ずプル</div>
+<div class="line"><strong class="program">None</strong>: プルしない</div>
+</div>
+</td>
 </tr>
-<tr class="row-even"><td><p>.ita-by-menu-create.replicaCount</p></td>
-<td></td>
+</tbody>
+</table>
+</section>
+<section id="ita-by-menu-create">
+<h3>ita-by-menu-create<a class="headerlink" href="#ita-by-menu-create" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id28">
+<caption><span class="caption-number">表 4.21 </span><span class="caption-text">ita-by-menu-create における Values 一覧</span><a class="headerlink" href="#id28" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ita-by-menu-create.replicaCount</p></td>
+<td><p>Pod のレプリカ数</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-by-menu-create.extraEnv.EXECUTE_INTERVAL</p></td>
-<td></td>
+<tr class="row-odd"><td><p>ita-by-menu-create.extraEnv.EXECUTE_INTERVAL</p></td>
+<td><p>処理終了後から次回実行時までの待機時間</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>10</p></td>
 </tr>
-<tr class="row-even"><td><p>.ita-by-menu-create.image.repository</p></td>
-<td></td>
+<tr class="row-even"><td><p>ita-by-menu-create.image.repository</p></td>
+<td><p>コンテナイメージのリポジトリ名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>exastro/exastro-it-automation-by-menu-create</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-by-menu-create.image.tag</p></td>
-<td></td>
+<tr class="row-odd"><td><p>ita-by-menu-create.image.tag</p></td>
+<td><p>コンテナイメージのタグ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>2.0.1</p></td>
 </tr>
-<tr class="row-even"><td><p>.ita-by-menu-create.image.pullPolicy</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>IfNotPresent</p></td>
+<tr class="row-even"><td><p>ita-by-menu-create.image.pullPolicy</p></td>
+<td><p>イメージプルポリシー</p></td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">IfNotPresent</strong> (デフォルト): コンテナイメージが存在しない場合のみプル</div>
+<div class="line"><strong class="program">Always</strong>: 毎回必ずプル</div>
+<div class="line"><strong class="program">None</strong>: プルしない</div>
+</div>
+</td>
 </tr>
-<tr class="row-odd"><td><p>.ita-database-setup-job.image.repository</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td></td>
+</tbody>
+</table>
+</section>
+<section id="ita-database-setup-job">
+<h3>ita-database-setup-job<a class="headerlink" href="#ita-database-setup-job" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id29">
+<caption><span class="caption-number">表 4.22 </span><span class="caption-text">ita-database-setup-job における Values 一覧</span><a class="headerlink" href="#id29" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
 </tr>
-<tr class="row-even"><td><p>.ita-database-setup-job.image.tag</p></td>
-<td></td>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ita-database-setup-job.image.repository</p></td>
+<td><p>コンテナイメージのリポジトリ名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
-<td></td>
+<td><p>※現在このパラメータは使用していません。</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-database-setup-job.image.pullPolicy</p></td>
-<td></td>
+<tr class="row-odd"><td><p>ita-database-setup-job.image.tag</p></td>
+<td><p>コンテナイメージのタグ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>IfNotPresent</p></td>
+<td><p>※現在このパラメータは使用していません。</p></td>
 </tr>
-<tr class="row-even"><td><p>.ita-web-server.replicaCount</p></td>
-<td></td>
+<tr class="row-even"><td><p>ita-database-setup-job.image.pullPolicy</p></td>
+<td><p>イメージプルポリシー</p></td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">IfNotPresent</strong> (デフォルト): コンテナイメージが存在しない場合のみプル</div>
+<div class="line"><strong class="program">Always</strong>: 毎回必ずプル</div>
+<div class="line"><strong class="program">None</strong>: プルしない</div>
+<div class="line">※現在このパラメータは使用していません。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ita-web-server">
+<h3>ita-web-server<a class="headerlink" href="#ita-web-server" title="この見出しへのパーマリンク">¶</a></h3>
+<table class="docutils align-left" id="id30">
+<caption><span class="caption-number">表 4.23 </span><span class="caption-text">ita-web-server における Values 一覧</span><a class="headerlink" href="#id30" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>変更</p></th>
+<th class="head"><p>デフォルト値・選択可能な設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ita-web-server.replicaCount</p></td>
+<td><p>Pod のレプリカ数</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-web-server.image.repository</p></td>
-<td></td>
+<tr class="row-odd"><td><p>ita-web-server.image.repository</p></td>
+<td><p>コンテナイメージのリポジトリ名</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>exastro/exastro-it-automation-web-server</p></td>
 </tr>
-<tr class="row-even"><td><p>.ita-web-server.image.tag</p></td>
-<td></td>
+<tr class="row-even"><td><p>ita-web-server.image.tag</p></td>
+<td><p>コンテナイメージのタグ</p></td>
 <td><p>不可</p></td>
-<td><p>○</p></td>
 <td><p>2.0.1</p></td>
 </tr>
-<tr class="row-odd"><td><p>.ita-web-server.image.pullPolicy</p></td>
-<td></td>
-<td><p>不可</p></td>
-<td><p>○</p></td>
-<td><p>IfNotPresent</p></td>
+<tr class="row-odd"><td><p>ita-web-server.image.pullPolicy</p></td>
+<td><p>イメージプルポリシー</p></td>
+<td><p>可</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">IfNotPresent</strong> (デフォルト): コンテナイメージが存在しない場合のみプル</div>
+<div class="line"><strong class="program">Always</strong>: 毎回必ずプル</div>
+<div class="line"><strong class="program">None</strong>: プルしない</div>
+</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1249,6 +1744,8 @@
 
 <div id="articleNavigation">
   <ul>
+    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">4. </span>付録</a></li>
+    <li class="next"><a href="../manual_design/index.html" title="次のトピックへ"><span>次のトピックへ</span>ドキュメント記載方法</a></li>
   </ul>
 </div>
 
@@ -1263,7 +1760,7 @@
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2022 NEC Corporation</small>
+    <small>Copyright © 2023 NEC Corporation</small>
   </footer>
 </div><!-- End #footer -->
 
