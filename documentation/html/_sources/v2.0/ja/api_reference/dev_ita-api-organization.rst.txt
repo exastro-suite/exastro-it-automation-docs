@@ -17,13 +17,7 @@ Exastro IT Automation Organization API (開発用)
      $('h1').remove();
      $('#article').attr('id', 'swaggerBody');
 
-     $dir = location.href.split("/");
-     $ver = $dir[3].replace("v","");
-
-     $api_url = "";
-     $api_url += "https://raw.githubusercontent.com/exastro-suite/exastro-it-automation"
-     $api_url += "/" + $ver;
-     $api_url += "/ita_root/ita_api_organization/swagger/swagger.yaml";
+     $api_url = "https://raw.githubusercontent.com/exastro-suite/exastro-it-automation/2.0/ita_root/ita_api_organization/swagger/swagger.yaml";
 
      // Begin Swagger UI call region
      const ui = SwaggerUIBundle({

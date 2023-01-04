@@ -17,13 +17,7 @@ Exastro Platform API
      $('h1').remove();
      $('#article').attr('id', 'swaggerBody');
 
-     $dir = location.href.split("/");
-     $ver = $dir[3].replace("v","");
-
-     $api_url = "";
-     $api_url += "https://raw.githubusercontent.com/exastro-suite/exastro-platform"
-     $api_url += "/1.2";
-     $api_url += "/platform_root/platform_api/swagger/swagger.yaml";
+     $api_url = "https://raw.githubusercontent.com/exastro-suite/exastro-platform/1.2/platform_root/platform_api/swagger/swagger.yaml";
 
      // Begin Swagger UI call region
      const ui = SwaggerUIBundle({
