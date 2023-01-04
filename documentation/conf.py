@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Documentation'
-copyright = '2022 NEC Corporation'
+copyright = '2023 NEC Corporation'
 author = 'NEC'
 
 # The full version, including alpha/beta/rc tags

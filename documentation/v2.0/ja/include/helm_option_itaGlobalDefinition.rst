@@ -1,87 +1,81 @@
 
 .. list-table:: 共通設定 (Exastro IT Automation) のオプションパラメータ
-   :widths: 25 25 5 5 20
+   :widths: 25 25 10 20
    :header-rows: 1
    :align: left
 
    * - パラメータ
      - 説明
-     - 設定・変更
-     - 必須
+     - 変更
      - デフォルト値・選択可能な設定値
 
    * - global.itaGlobalDefinition.name
-     - 
+     - Exastro IT Automation の定義名
      - 不可
-     - ○
-     - ita-global 
+     - ita-global
    * - global.itaGlobalDefinition.enabled
-     - 
+     - Exastro IT Automation の有効フラグ
      - 不可
-     - ○
-     - true 
+     - true
    * - global.itaGlobalDefinition.image.registry
-     - 
+     - Exastro IT Automation で利用するデフォルトイメージレジストリ
      - 不可
-     - ○
-     - docker.io 
+     - docker.io
    * - global.itaGlobalDefinition.image.organization
-     - 
+     - Exastro IT Automation で利用するデフォルトイメージレジストリの組織名
      - 不可
-     - ○
-     - exastro 
+     - exastro
    * - global.itaGlobalDefinition.image.package
-     - 
+     - Exastro IT Automation で利用するデフォルトイメージレジストリのパッケージ名
      - 不可
-     - ○
-     - exastro-it-automation 
+     - exastro-it-automation
    * - global.itaGlobalDefinition.config.DEFAULT_LANGUAGE
-     - 
+     - Exastro IT Automation で使用する既定の言語
      - 不可
-     - ○
-     - ja 
+     - "ja"
    * - global.itaGlobalDefinition.config.LANGUAGE
-     - 
+     - Exastro IT Automation で使用する言語
      - 不可
-     - ○
-     - en 
+     - en
    * - global.itaGlobalDefinition.config.CONTAINER_BASE
-     - 
+     - デプロイ先のコンテナ環境
      - 不可
-     - ○
-     - kubernetes 
+     - kubernetes
    * - global.itaGlobalDefinition.config.TZ
-     - 
+     - Exastro IT Automation で使用するタイムゾーン
      - 不可
-     - ○
-     - Asia/Tokyo 
+     - Asia/Tokyo
    * - global.itaGlobalDefinition.config.STORAGEPATH
-     - 
+     - 共有ディレクトリのマウントポイント
      - 不可
-     - ○
-     - /storage/ 
+     - /storage/
+   * - global.itaGlobalDefinition.secret.ENCRYPT_KEY
+     - | Exastro Platform 内で保管するデータの暗号化と復号のための AES キー。
+       | 任意の32バイト ASCII 文字を BASE64 エンコードした値
+     - 可
+     - | ランダムな32バイト ASCII 文字を BASE64 エンコードした値
    * - global.itaGlobalDefinition.persistence.enabled
-     - 
-     - 不可
-     - ○
-     - true 
+     - | Exastro IT Automation におけるデータの永続化の有無
+     - 可
+     - | :program:`true` (デフォルト): 永続化する。
+       | :program:`false`: 永続化しない。
    * - global.itaGlobalDefinition.persistence.accessMode
-     - 
-     - 不可
-     - ○
-     - ReadWriteMany 
+     - | Exastro IT Automation における Persisten Volume Claim のアクセスモード
+     - 可 (データ永続化時)
+     - | :program:`ReadWriteMany` (デフォルト): ボリュームは多数のNodeで読み取り専用としてマウント。
+       | :program:`ReadWriteOnce`: ボリュームは単一のNodeで読み取り/書き込みとしてマウント。
    * - global.itaGlobalDefinition.persistence.size
-     - 
-     - 不可
-     - ○
-     - 10Gi 
+     - | Exastro IT Automation における Persisten Volume Claim のボリュームに要求するサイズ(Bytes)
+     - 可 (データ永続化時)
+     - "10Gi"
    * - global.itaGlobalDefinition.persistence.volumeType
-     - 
-     - 不可
-     - ○
-     - hostPath 
+     - | Exastro IT Automation における Persisten Volume のボリュームタイプ
+       | Storage Class を利用する場合は設定は不要です。
+     - 可 (データ永続化時)
+     - "hostPath"
    * - global.itaGlobalDefinition.persistence.storageClass
-     - 
-     - 不可
-     - ○
-     - - 
+     - | Exastro IT Automation におけるデータの永続化のために利用する Storage Class
+       | Persistent Volume を利用する場合は設定は不要です。
+     - 可 (データ永続化時)
+     - | :program:`"-"` (デフォルト): ストレージクラスを指定しない。
+       | :program:`ストレージクラス名`: クラウドプロバイダなどから提供されるストレージクラス名を指定。

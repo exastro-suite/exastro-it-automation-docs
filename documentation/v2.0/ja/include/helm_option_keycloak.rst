@@ -1,46 +1,40 @@
 
 .. list-table:: Keycloak 機能のオプションパラメータ
-   :widths: 25 25 5 5 20
+   :widths: 25 25 10 20
    :header-rows: 1
    :align: left
 
    * - パラメータ
      - 説明
-     - 設定・変更
-     - 必須
+     - 変更
      - デフォルト値・選択可能な設定値
    * - keycloak.image.repository
-     -
+     - コンテナイメージのリポジトリ名
      - 不可
-     - ○
      - "exastro/keycloak"
    * - keycloak.image.tag
-     -
+     - コンテナイメージのタグ
      - 不可
-     - ○
      - "1.0.6"
    * - keycloak.image.pullPolicy
-     -
-     - 不可
-     - ○
-     - "IfNotPresent"
+     - イメージプルポリシー
+     - 可
+     - | :program:`IfNotPresent` (デフォルト): コンテナイメージが存在しない場合のみプル
+       | :program:`Always`: 毎回必ずプル
+       | :program:`None`: プルしない
    * - keycloak.resources.requests.memory
-     -
-     - 不可
-     - ○
+     - メモリ要求
+     - 可
      - "256Mi"
    * - keycloak.resources.requests.cpu
-     -
-     - 不可
-     - ○
+     - CPU要求
+     - 可
      - "1m"
    * - keycloak.resources.limits.memory
-     -
-     - 不可
-     - ○
+     - メモリ上限
+     - 可
      - "2Gi"
    * - keycloak.resources.limits.cpu
-     -
-     - 不可
-     - ○
+     - CPU上限
+     - 可
      - "4"

@@ -27,7 +27,7 @@
    .. it_automation_base/index
    .. create_param/index
    .. ansible-driver/index
-   .. rest_api/index
+   api_reference/index
    appendix/index
 
 .. raw:: html
