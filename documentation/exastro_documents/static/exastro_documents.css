@@ -1884,6 +1884,75 @@ span.highlighted {
   color: #333;
 }
 
+#swaggerBody {
+  padding: 16px 0 32px;
+  background-color: #FFF;
+  background-image: url(/docs/asset/img/content_back.png);
+  line-height: 1.5;
+  font-size: 14px;
+  color: #002B62;
+ }
+ 
+ #swaggerBody::after {
+   content: '';
+   display: block;
+   clear: both;
+ }
+
+ #swaggerBody ul {
+   margin: 1em 0;
+ }
+
+ #swaggerBody .topbar {
+   display: none;
+ }
+
+ #swaggerBody .main {
+   margin-bottom: 24px;
+   padding-bottom: 16px;
+   border-bottom: 1px solid #002B62;
+ }
+
+ #swaggerBody .title {margin-bottom: 8px;color: #002B62;}
+ #swaggerBody .description ul {
+   list-style: none;
+ }
+
+ #swaggerBody .swagger-ui .opblock-tag {
+   padding: 8px 16px 7px;
+   line-height: 1.3;
+   font-size: 24px;
+   font-weight: bold;
+   background-color: #002B62 ;
+   background-image: linear-gradient( 90deg, #002B62, #6680A1 );
+   border-left: 8px solid #F7931E;
+   border-bottom: none;
+   letter-spacing: 0.05em;
+   color: #FFF;
+ }
+
+ #swaggerBody .opblock-tag {
+   margin-bottom: 16px;
+ }
+
+ #swaggerBody .opblock-tag .arrow {
+   fill: #FFEE00;
+ }
+
+ #swaggerBody .swagger-ui .opblock-tag small {
+   color: #FFF;
+ }
+
+ #swaggerBody .operation-tag-content {
+   background-color: #FFF;
+   margin-bottom: 32px;
+ }
+
+ #swaggerBody.renderedMarkdown p {
+   margin: 0 0 8px;
+ }
+ 
+
 @media screen and (max-width: 1200px) {
   #logo {
     width: 80px;

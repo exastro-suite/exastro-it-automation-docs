@@ -1,5 +1,5 @@
 # exastro-it-automation-docs
-[![RST2HTML](../../actions/workflows/rst2html.yaml/badge.svg)](../../actions/workflows/rst2html.yaml) 
+[![RST2HTML](../../actions/workflows/rst2html.yaml/badge.svg?branch=main)](../../actions/workflows/rst2html.yaml) 
 [![pages-build-deployment](../../actions/workflows/pages/pages-build-deployment/badge.svg)](../../actions/workflows/pages/pages-build-deployment) 
 
 Exastro IT Automation のドキュメントは reStructuredText 形式で記述されています。
