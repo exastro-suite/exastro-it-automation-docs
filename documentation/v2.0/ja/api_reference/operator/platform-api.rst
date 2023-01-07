@@ -7,7 +7,7 @@ Exastro Platform API
    <div id="swagger-ui"></div>
 
    <link href="../../../../_static/swagger/swagger-ui.css" rel="stylesheet">
-   <script src="../../../../_static/jquery-1.11.3.js" charset="UTF-8"></script>
+   <script src="../../../../_static/jquery-3.6.3.min.js" charset="UTF-8"></script>
    <script src="../../../../_static/swagger/swagger-ui-bundle.js" charset="UTF-8"></script>
    <script src="../../../../_static/swagger/swagger-ui-standalone-preset.js" charset="UTF-8"></script>
    <script>
@@ -31,8 +31,8 @@ Exastro Platform API
        plugins: [
          SwaggerUIBundle.plugins.DownloadUrl
        ],
+       defaultModelsExpandDepth: -1,
        layout: "StandaloneLayout",
-       supportedSubmitMethods: []
      });
      // End Swagger UI call region
 
