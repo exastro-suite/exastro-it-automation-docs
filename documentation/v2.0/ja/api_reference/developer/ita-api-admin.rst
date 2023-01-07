@@ -26,13 +26,12 @@ Exastro IT Automation Admin API
        deepLinking: true,
        presets: [
          SwaggerUIBundle.presets.apis,
-         SwaggerUIStandalonePreset.slice(1)
+         SwaggerUIStandalonePreset
        ],
        plugins: [
          SwaggerUIBundle.plugins.DownloadUrl
        ],
        layout: "StandaloneLayout",
-       supportedSubmitMethods: []
      });
      // End Swagger UI call region
 

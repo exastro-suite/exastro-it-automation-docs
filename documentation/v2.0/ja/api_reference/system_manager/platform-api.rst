@@ -32,7 +32,6 @@ Exastro Platform API
          SwaggerUIBundle.plugins.DownloadUrl
        ],
        layout: "StandaloneLayout",
-       supportedSubmitMethods: []
      });
      // End Swagger UI call region
 
