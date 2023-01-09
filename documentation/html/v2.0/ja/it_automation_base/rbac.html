@@ -25,6 +25,7 @@
     <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/translations.js"></script>
   
+    <script type="text/javascript" src="../../../_static/jquery-3.6.3.min.js"></script>
     <script type="text/javascript" src="../../../_static/exastro_documents.js"></script>
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="索引" href="../../../genindex.html" />
@@ -116,11 +117,68 @@
   </aside>
 </div><!-- End #sideMenu -->
 
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">はじめに</a></li>
+<li><a class="reference internal" href="#rbac">データレコード毎のロールベースアクセス制御（RBAC）の概要</a></li>
+<li><a class="reference internal" href="#id2">ロールベースアクセス制御 (RBAC)の主要機能</a></li>
+<li><a class="reference internal" href="#id3">ユーザ毎のロール紐付</a><ul>
+<li><a class="reference internal" href="#id4">アクセスを制御するロールを設計しロール管理に登録</a></li>
+<li><a class="reference internal" href="#id5">ロールとメニューの紐付をロール・メニュー紐付管理に登録</a></li>
+<li><a class="reference internal" href="#id6">ユーザ（アカウント）をユーザ管理に登録</a></li>
+<li><a class="reference internal" href="#id7">ユーザとロールの紐付をロール・ユーザ管理に登録</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">データ毎のロール紐付</a><ul>
+<li><a class="reference internal" href="#id35">新規データ</a><ul>
+<li><a class="reference internal" href="#id38">**</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id39">データ更新</a><ul>
+<li><a class="reference internal" href="#id42">**</a><ul>
+<li><a class="reference internal" href="#id43">ユーザとロールの紐付を廃止したロールの扱い</a></li>
+<li><a class="reference internal" href="#id44">特定のデータを複数のロールで共有した場合の扱い</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id45">データ廃止</a></li>
+<li><a class="reference internal" href="#id46">データ復活</a></li>
+<li><a class="reference internal" href="#excel">Excelからのアップロード</a><ul>
+<li><a class="reference internal" href="#id57">**</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#restapi">RestAPIからのアップロード</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id58">紐付けロールによる表示制御</a><ul>
+<li><a class="reference internal" href="#id59">一覧表示</a><ul>
+<li><a class="reference internal" href="#id66">**</a></li>
+<li><a class="reference internal" href="#id77">**</a></li>
+<li><a class="reference internal" href="#id86">**</a></li>
+<li><a class="reference internal" href="#id97">**</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id102">変更履歴</a><ul>
+<li><a class="reference internal" href="#id105">**</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id106">表示フィルタ</a></li>
+<li><a class="reference internal" href="#id107">RestAPI表示フィルタ</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
 <div id="contents">
 <main class="divInner">
 
-
-<div id="breadcrumbs">
+ 
+ <div id="breadcrumbs">
   <ul>
     <li><a href="../../../index.html">HOME</a></li>
     

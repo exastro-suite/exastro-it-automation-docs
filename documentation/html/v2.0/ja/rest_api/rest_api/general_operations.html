@@ -25,6 +25,7 @@
     <script src="../../../../_static/copybutton.js"></script>
     <script src="../../../../_static/translations.js"></script>
   
+    <script type="text/javascript" src="../../../../_static/jquery-3.6.3.min.js"></script>
     <script type="text/javascript" src="../../../../_static/exastro_documents.js"></script>
     <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="索引" href="../../../../genindex.html" />
@@ -116,11 +117,80 @@
   </aside>
 </div><!-- End #sideMenu -->
 
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">目次</a></li>
+<li><a class="reference internal" href="#id2">はじめに</a></li>
+<li><a class="reference internal" href="#ita-rest-api">ITAシステム　REST APIの概要</a><ul>
+<li><a class="reference internal" href="#rest-api">REST APIについて</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rest">標準REST機能の利用</a><ul>
+<li><a class="reference internal" href="#id3">リクエストの形式</a></li>
+<li><a class="reference internal" href="#id4">利用可能なメソッドとコマンド</a><ul>
+<li><a class="reference internal" href="#get-method">GET（Method）</a></li>
+<li><a class="reference internal" href="#info-x-command">INFO(X-Command)</a></li>
+<li><a class="reference internal" href="#filterfilter-dataonly-x-command">FILTER・FILTER_DATAONLY (X-Command)</a></li>
+<li><a class="reference internal" href="#edit-x-command">EDIT(X-Command)</a></li>
+<li><a class="reference internal" href="#list-options-x-command">LIST_OPTIONS(X-Command)</a></li>
+<li><a class="reference internal" href="#download-spreadsheet-x-command">DOWNLOAD_SPREADSHEET(X-Command)</a></li>
+<li><a class="reference internal" href="#upload-spreadsheet-x-command">UPLOAD_SPREADSHEET(X-Command)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">メニューエクスポート/インポート利用編</a><ul>
+<li><a class="reference internal" href="#restapi">メニューエクスポートを対象としたRestAPI</a></li>
+<li><a class="reference internal" href="#id7">メニューインポートを対象としたRestAPI</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#excel">Excel一括エクスポート/インポート利用編</a><ul>
+<li><a class="reference internal" href="#execlrestapi">Execl一括エクスポートを対象としたRestAPI</a></li>
+<li><a class="reference internal" href="#excelrestapi">Excel一括インポートを対象としたRestAPI</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#symphony">Symphony利用編</a><ul>
+<li><a class="reference internal" href="#symphonyrestapi">Symphony登録作業を対象としたRestAPI</a></li>
+<li><a class="reference internal" href="#id12">Symphony作業実行を対象としたRestAPI</a></li>
+<li><a class="reference internal" href="#id14">Symphony作業確認を対象としたRestAPI</a></li>
+<li><a class="reference internal" href="#id17">Symphony作業一覧を対象としたRestAPI</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#conductor">Conductor利用編</a><ul>
+<li><a class="reference internal" href="#conductorrestapi">Conductor登録作業を対象としたRestAPI</a></li>
+<li><a class="reference internal" href="#id20">Conductor作業実行を対象としたRestAPI</a></li>
+<li><a class="reference internal" href="#id23">Conductor作業確認を対象としたRestAPI</a></li>
+<li><a class="reference internal" href="#id26">Conductor作業一覧を対象としたRestAPI</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#movement">Movement利用編</a><ul>
+<li><a class="reference internal" href="#movementrestapi">Movement作業実行を対象としたRestAPI</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id30">バージョン確認</a><ul>
+<li><a class="reference internal" href="#id31">バージョン確認を対象としたRestAPI</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id33">比較実行</a><ul>
+<li><a class="reference internal" href="#id34">比較実行を対象としたRestAPI</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id36">付録</a><ul>
+<li><a class="reference internal" href="#id37">トラブルシューティング</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
 <div id="contents">
 <main class="divInner">
 
-
-<div id="breadcrumbs">
+ 
+ <div id="breadcrumbs">
   <ul>
     <li><a href="../../../../index.html">HOME</a></li>
     

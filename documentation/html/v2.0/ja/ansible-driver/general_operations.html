@@ -25,6 +25,7 @@
     <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/translations.js"></script>
   
+    <script type="text/javascript" src="../../../_static/jquery-3.6.3.min.js"></script>
     <script type="text/javascript" src="../../../_static/exastro_documents.js"></script>
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="索引" href="../../../genindex.html" />
@@ -116,11 +117,180 @@
   </aside>
 </div><!-- End #sideMenu -->
 
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">8. Ansible-driver</a><ul>
+<li><a class="reference internal" href="#id1">8.1. はじめに</a></li>
+<li><a class="reference internal" href="#id2">8.2. Ansible driver概要</a><ul>
+<li><a class="reference internal" href="#ansible-core">Ansible Coreについて</a></li>
+<li><a class="reference internal" href="#ansible-automation-controller">Ansible Automation Controllerについて</a></li>
+<li><a class="reference internal" href="#id3">Ansible driverについて</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#general-operations-variable-handling-in-ansible-driver">8.3. Ansible driverでの変数取り扱い</a><ul>
+<li><a class="reference internal" href="#id5">変数の種類</a></li>
+<li><a class="reference internal" href="#id6">変数の抜出および具体値登録</a></li>
+<li><a class="reference internal" href="#id7">代入値登録による変数の扱い</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">8.4. Ansible driver コンソールメニュー構成</a><ul>
+<li><a class="reference internal" href="#id9">メニュー/画面一覧</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10">8.5. Ansible driver利用手順</a><ul>
+<li><a class="reference internal" href="#id11">作業フロー</a><ul>
+<li><a class="reference internal" href="#ansible-legacy">Ansible-Legacy作業フロー</a></li>
+<li><a class="reference internal" href="#ansible-legacy-role">Ansible-Legacy Role作業フロー</a></li>
+<li><a class="reference internal" href="#ansible-pioneer">Ansible-Pioneer作業フロー</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id12">8.6. Ansible driver機能・操作方法説明</a><ul>
+<li><a class="reference internal" href="#id13">基本コンソール</a><ul>
+<li><a class="reference internal" href="#general-operations-device-list">機器一覧</a></li>
+<li><a class="reference internal" href="#general-operations-input-operation-list">オペレーション一覧</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ansible">Ansible 共通コンソール</a><ul>
+<li><a class="reference internal" href="#general-operations-interface-information">インターフェース情報</a></li>
+<li><a class="reference internal" href="#id17">Ansible Automation Controllerホスト一覧</a></li>
+<li><a class="reference internal" href="#general-operations-global-variable-list">グローバル変数管理</a></li>
+<li><a class="reference internal" href="#general-operations-template-list">テンプレート管理</a></li>
+<li><a class="reference internal" href="#general-operations-file-list">ファイル管理</a></li>
+<li><a class="reference internal" href="#id21">収集インターフェース情報</a></li>
+<li><a class="reference internal" href="#id22">収集項目値管理</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ansibel-legacy-legacy-role-pioneer">Ansibel-Legacy／Legacy Role／Pioneer　コンソール</a><ul>
+<li><a class="reference internal" href="#os">OS種別マスタ</a></li>
+<li><a class="reference internal" href="#movement">Movement一覧</a></li>
+<li><a class="reference internal" href="#playbook-ansible-legacy">Playbook素材集（Ansible-Legacyのみ）</a></li>
+<li><a class="reference internal" href="#general-operations-role-package-list-ansible-legacy-role-only">ロールパッケージ管理（Ansible-Legacy Roleのみ）</a></li>
+<li><a class="reference internal" href="#general-operations-dialog-type-list-ansible-pioneer-only">対話種別リスト（Ansible-Pioneerのみ）</a></li>
+<li><a class="reference internal" href="#general-operations-dialog-files-ansible-pioneer-only">対話ファイル素材集（Ansible-Pioneerのみ）</a></li>
+<li><a class="reference internal" href="#movement-playbook-movement-movement">Movement-Playbook紐付（Movement-対話種別紐付、Movement-ロール紐付）</a></li>
+<li><a class="reference internal" href="#general-operations-nested-variable-list-ansible-legacy-role-only">変数ネスト管理（Ansible-Legacy Roleのみ）</a></li>
+<li><a class="reference internal" href="#general-operations-substitution-value-auto-registration-setting">代入値自動登録設定</a></li>
+<li><a class="reference internal" href="#general-operations-target-host">作業対象ホスト</a></li>
+<li><a class="reference internal" href="#general-operations-substitution-value-list">代入値管理</a></li>
+<li><a class="reference internal" href="#general-operations-check-operation-status">作業状態確認</a></li>
+<li><a class="reference internal" href="#general-operations-execution-list">作業管理</a></li>
+<li><a class="reference internal" href="#general-operations-execution">作業実行</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id33">8.7. 構築コード記述方法</a><ul>
+<li><a class="reference internal" href="#general-operations-write-playbook-ansible-legacy">Playbook（Ansible-Legacy）の記述</a><ul>
+<li><a class="reference internal" href="#id35">ヘッダーセクション</a></li>
+<li><a class="reference internal" href="#tasks">tasksセクション</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#general-operations-write-dialog-file-ansible-pioneer">対話ファイル（Ansible-Pioneer）の記述</a><ul>
+<li><a class="reference internal" href="#id37">対話ファイルの構成</a></li>
+<li><a class="reference internal" href="#id38">対話コマンド</a><ul>
+<li><a class="reference internal" href="#expect">①expectモジュール</a></li>
+<li><a class="reference internal" href="#exec">②execモジュール</a></li>
+<li><a class="reference internal" href="#state">③stateモジュール</a></li>
+<li><a class="reference internal" href="#command">④commandモジュール</a></li>
+<li><a class="reference internal" href="#localaction">⑤localactionモジュール</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id39">正規表記</a></li>
+<li><a class="reference internal" href="#id40">複数具体値変数使用時の注意事項</a></li>
+<li><a class="reference internal" href="#id41">コマンドプロンプト以外のプロンプトを処理する場合の注意事項</a></li>
+<li><a class="reference internal" href="#id42">対話ファイル終了時の注意事項</a></li>
+<li><a class="reference internal" href="#yaml">対話ファイルをyaml形式で記載する際の注意事項</a></li>
+<li><a class="reference internal" href="#lang">構築対象機器のログインユーザーのLANGについての注意事項</a></li>
+<li><a class="reference internal" href="#id43">構築対象機器へ投入するコマンドの終端コードについての注意事項</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#general-operations-write-role-package-ansible-legacy-role">ロールパッケージ（Ansible-Legacy Role）の記述</a><ul>
+<li><a class="reference internal" href="#playbook">マスターPlaybook</a><ul>
+<li><a class="reference internal" href="#id45">① へッダーセクション</a></li>
+<li><a class="reference internal" href="#roles">② rolesセクション</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id46">変数名の一意管理</a></li>
+<li><a class="reference internal" href="#defaults-main-yml-ita">デフォルト変数定義ファイル(defaults-&gt;main.yml)のITA独自仕様</a></li>
+<li><a class="reference internal" href="#ansible-role-directory-structure">Ansible Role Directory Structureにおける所定ディクレトリのサブディレクトリについて注意事項</a></li>
+<li><a class="reference internal" href="#id47">ロールパッケージ内のロール名をディレクトリ階層にした場合の留意点</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#itareadme-ansible-legacy-role">ITAreadme（Ansible-Legacy Roleのみ）の記述</a><ul>
+<li><a class="reference internal" href="#ita-readme">ITA readmeのファイル名の命名規則</a></li>
+<li><a class="reference internal" href="#id48">読替表のフォーマット</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#general-operations-write-translation-table-ansible-legacy-role-only">読替表（Ansible-Legacy Roleのみ）の記述</a><ul>
+<li><a class="reference internal" href="#id50">読替表のファイル名は以下の命名規則</a></li>
+<li><a class="reference internal" href="#id51">読替表のフォーマット</a></li>
+<li><a class="reference internal" href="#id52">注意事項</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ita-readme-ansible-legacy-role">「ita_readme」と「読替表」の活用例（Ansible-Legacy Roleのみ）</a></li>
+<li><a class="reference internal" href="#backyard">BackYardコンテンツ</a><ul>
+<li><a class="reference internal" href="#id53">変数自動登録</a></li>
+<li><a class="reference internal" href="#general-operations-substitution-value-auto-registration-setting2">代入自動値登録設定</a><ul>
+<li><a class="reference internal" href="#id55">① 代入値自動登録に登録されている情報を代入値管理へ反映時</a></li>
+<li><a class="reference internal" href="#id56">② 代入値自動登録に登録されていない情報（代入値管理のみに登録）を代入値管理へ反映時</a></li>
+<li><a class="reference internal" href="#id57">③ 代入値自動登録に登録されている情報を作業対象ホストへの反映時</a></li>
+<li><a class="reference internal" href="#id58">④ 代入値自動登録に登録されていない情報（作業対象ホストのみに登録）を作業対象ホストへ反映時</a></li>
+<li><a class="reference internal" href="#id59">⑤ 同一Movementと変数と代入順序に、複数項目の紐付が登録されている場合</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ansibleita">Ansible利用ガイドラインITA追加ルール</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id60">8.8. 運用操作</a><ul>
+<li><a class="reference internal" href="#id61">メンテナンス</a></li>
+<li><a class="reference internal" href="#general-operations-about-the-maintenance-method">メンテナンス方法について</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id63">8.9. 付録</a><ul>
+<li><a class="reference internal" href="#general-operations-the-linkage-between-the-input-data-used-during-ansible-execution-and-ita-menu">Ansible実行時に使用される投入データとITAメニューの紐づけ</a><ul>
+<li><a class="reference internal" href="#id65">Ansible-Legacy投入データ</a></li>
+<li><a class="reference internal" href="#id66">Ansible-Pioneer投入データ</a></li>
+<li><a class="reference internal" href="#ansible-legacyrole">Ansible-LegacyRole投入データ</a></li>
+<li><a class="reference internal" href="#id67">投入データを直接実行する方法</a><ul>
+<li><a class="reference internal" href="#id68">① 投入データの解凍先ディレクトリの作成</a></li>
+<li><a class="reference internal" href="#id69">② 投入データを直接実行するコマンド</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id70">Ansible実行時に作成される結果データ</a><ul>
+<li><a class="reference internal" href="#legacy">Legacy結果データに保存されるファイル一覧</a></li>
+<li><a class="reference internal" href="#pioneer">Pioneer結果データに保存されるファイル一覧</a></li>
+<li><a class="reference internal" href="#legacy-role">Legacy-Role 結果データに保存されるファイル一覧</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#general-operations-option-parameter-list">オプションパラメータ一覧</a></li>
+<li><a class="reference internal" href="#ansible-automation-controllerita">Ansible Automation ControllerでITA独自変数を利用する場合の留意事項</a><ul>
+<li><a class="reference internal" href="#ita">ITA独自変数を利用して作成したファイルの取り扱い</a></li>
+<li><a class="reference internal" href="#id72">留意事項</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#general-operations-data-resources-deleted-when-executing">実行時データ削除で削除されるデータリソース</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
 <div id="contents">
 <main class="divInner">
 
-
-<div id="breadcrumbs">
+ 
+ <div id="breadcrumbs">
   <ul>
     <li><a href="../../../index.html">HOME</a></li>
     

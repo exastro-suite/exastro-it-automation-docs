@@ -25,6 +25,7 @@
     <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/translations.js"></script>
   
+    <script type="text/javascript" src="../../../_static/jquery-3.6.3.min.js"></script>
     <script type="text/javascript" src="../../../_static/exastro_documents.js"></script>
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="索引" href="../../../genindex.html" />
@@ -116,11 +117,74 @@
   </aside>
 </div><!-- End #sideMenu -->
 
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">メニュー作成機能</a><ul>
+<li><a class="reference internal" href="#id2">はじめに</a></li>
+<li><a class="reference internal" href="#id3">メニュー作成機能の概要</a></li>
+<li><a class="reference internal" href="#id4">メニュー作成機能の主要機能</a></li>
+<li><a class="reference internal" href="#id5">メニュー作成機能のメニューグループ</a></li>
+<li><a class="reference internal" href="#id6">メニュー（パラメータシート/データシート）説明</a></li>
+<li><a class="reference internal" href="#about-operation">「メニュー定義・作成」メニューの操作説明</a><ul>
+<li><a class="reference internal" href="#a">(A) 項目・グループの設定</a></li>
+<li><a class="reference internal" href="#b">(B) 「メニュー作成情報」タブ</a></li>
+<li><a class="reference internal" href="#c">(C) 「プレビュー」</a></li>
+<li><a class="reference internal" href="#d">(D) 「作成」</a></li>
+<li><a class="reference internal" href="#id8">メニュー作成受付後の「メニュー定義・作成」メニューの使い方</a></li>
+<li><a class="reference internal" href="#menu-confirmation">「メニュー定義一覧」メニューでメニューを確認</a></li>
+<li><a class="reference internal" href="#checking-status">「メニュー作成履歴」メニューで作成状況の確認</a></li>
+<li><a class="reference internal" href="#id11">作成されたメニューの確認</a><ul>
+<li><a class="reference internal" href="#id12">1.「作成対象」欄で”データシート”を選択した場合</a><ul>
+<li><a class="reference internal" href="#id13">A) 入力用メニューグループ</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14">2.「作成対象」欄で”パラメータシート（ホスト/オペレーションあり）”を選択した場合</a><ul>
+<li><a class="reference internal" href="#id15">A) 入力用メニューグループ</a></li>
+<li><a class="reference internal" href="#id16">B) 代入値自動登録用メニューグループ</a></li>
+<li><a class="reference internal" href="#id17">C) 参照用メニューグループ</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id18">3.「作成対象」欄で”パラメータシート”を選択し、「縦メニュー利用」チェックボックスにチェックを入れた場合</a><ul>
+<li><a class="reference internal" href="#id19">A) 入力用メニューグループ</a></li>
+<li><a class="reference internal" href="#id20">B) 代入値自動登録用メニューグループ</a></li>
+<li><a class="reference internal" href="#id21">C) 参照用メニューグループ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id22">「メニュー作成」メニューグループのインストール時非表示メニュー</a><ul>
+<li><a class="reference internal" href="#registering-column-g">「カラムグループ管理」メニューでカラムグループを登録</a></li>
+<li><a class="reference internal" href="#registering-menu-items">「メニュー項目作成情報」メニューで設定する項目を登録</a></li>
+<li><a class="reference internal" href="#registering-unique">「一意制約(複数項目)作成情報」メニューで一意制約(複数項目)を登録</a></li>
+<li><a class="reference internal" href="#id26">「メニューロール作成情報」作成したメニューに紐づくロールを登録</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id27">付録</a><ul>
+<li><a class="reference internal" href="#mapping-menu-table">メニュー定義-テーブル紐付管理</a></li>
+<li><a class="reference internal" href="#work-with-other-table">他メニュー連携</a></li>
+<li><a class="reference internal" href="#selection1">選択1</a></li>
+<li><a class="reference internal" href="#selection2">選択2</a></li>
+<li><a class="reference internal" href="#target-available">「プルダウン選択」の「選択項目」で利用できる対象について</a></li>
+<li><a class="reference internal" href="#reference-item">「プルダウン選択」利用時の「参照項目」について</a></li>
+<li><a class="reference internal" href="#info-item-ro">参照項目情報</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
 <div id="contents">
 <main class="divInner">
 
-
-<div id="breadcrumbs">
+ 
+ <div id="breadcrumbs">
   <ul>
     <li><a href="../../../index.html">HOME</a></li>
     
