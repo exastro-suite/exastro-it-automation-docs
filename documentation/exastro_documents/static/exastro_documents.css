@@ -1225,10 +1225,10 @@ span.highlighted {
   padding: 12px 24px 10px;
   /* background-image: linear-gradient( #FFF, #F6F6F6); */
   /* border-radius: 0 0 4px 4px; */
-  line-height: 2.0;
+  /* line-height: 2.0; */
   font-size: 1.8rem;
   font-weight: bold;
-  color: #444;
+  /* color: #444; */
 }
 
 #article h2,
@@ -2161,7 +2161,7 @@ span.highlighted {
  @media screen and (max-width: 1850px) {
 
   #tableOfContents {
-    right: -350px;
+    right: -352px;
     width: 352px;
     background-color: #FFF;
     border: 1px solid #CCC;
@@ -2435,7 +2435,7 @@ span.highlighted {
   }
 
   #tableOfContents {
-    right: -240px;
+    right: -272px;
     width: 272px;
     max-width: 100%;
   }
