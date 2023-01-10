@@ -981,6 +981,7 @@ span.highlighted {
  text-decoration: none;
  font-size: 1rem;
  color: #333;
+ font-weight: normal;
 }
 
 #tableOfContents li a:hover {
@@ -1120,7 +1121,7 @@ span.highlighted {
 /* Current */
 
 #tableOfContents li.current>a {
- font-weight: bold;
+ /* font-weight: bold; */
  color: #333;
  cursor: default;
  background-color: #DDD;
@@ -1134,7 +1135,7 @@ span.highlighted {
  top: 50%;
  transform: translateY(-50%);
  text-shadow: 1px 1px 0 #000;
- font-weight: bold;
+ /* font-weight: bold; */
  font-size: 1.6rem;
  color: #FF0;
 }
@@ -2333,7 +2334,6 @@ span.highlighted {
   }
 
   #sideMenu,
-  #tableOfContents,
   #contents {
     padding-top: 60px;
   }
@@ -2441,11 +2441,14 @@ span.highlighted {
   }
 
   #sideMenu,
-  #tableOfContents,
   #contents {
     padding-top: 120px;
   }
 
+  #tableOfContents.on #tocButton::before {
+    right: 231px;
+  }
+  
   #breadcrumbs {
     padding: 8px 8px 0;
   }
