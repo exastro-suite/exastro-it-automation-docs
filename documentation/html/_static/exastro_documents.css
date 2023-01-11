@@ -981,6 +981,7 @@ span.highlighted {
  text-decoration: none;
  font-size: 1rem;
  color: #333;
+ font-weight: normal;
 }
 
 #tableOfContents li a:hover {
@@ -1120,7 +1121,7 @@ span.highlighted {
 /* Current */
 
 #tableOfContents li.current>a {
- font-weight: bold;
+ /* font-weight: bold; */
  color: #333;
  cursor: default;
  background-color: #DDD;
@@ -1134,7 +1135,7 @@ span.highlighted {
  top: 50%;
  transform: translateY(-50%);
  text-shadow: 1px 1px 0 #000;
- font-weight: bold;
+ /* font-weight: bold; */
  font-size: 1.6rem;
  color: #FF0;
 }
@@ -1225,10 +1226,10 @@ span.highlighted {
   padding: 12px 24px 10px;
   /* background-image: linear-gradient( #FFF, #F6F6F6); */
   /* border-radius: 0 0 4px 4px; */
-  line-height: 2.0;
+  /* line-height: 2.0; */
   font-size: 1.8rem;
   font-weight: bold;
-  color: #444;
+  /* color: #444; */
 }
 
 #article h2,
@@ -2161,7 +2162,7 @@ span.highlighted {
  @media screen and (max-width: 1850px) {
 
   #tableOfContents {
-    right: -350px;
+    right: -352px;
     width: 352px;
     background-color: #FFF;
     border: 1px solid #CCC;
@@ -2333,7 +2334,6 @@ span.highlighted {
   }
 
   #sideMenu,
-  #tableOfContents,
   #contents {
     padding-top: 60px;
   }
@@ -2435,17 +2435,20 @@ span.highlighted {
   }
 
   #tableOfContents {
-    right: -240px;
+    right: -272px;
     width: 272px;
     max-width: 100%;
   }
 
   #sideMenu,
-  #tableOfContents,
   #contents {
     padding-top: 120px;
   }
 
+  #tableOfContents.on #tocButton::before {
+    right: 231px;
+  }
+  
   #breadcrumbs {
     padding: 8px 8px 0;
   }
