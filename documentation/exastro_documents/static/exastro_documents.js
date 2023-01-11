@@ -56,21 +56,13 @@ $(window).on('load', function () {
 
   // Table of Contents
   const headings = document.querySelectorAll('h1,h2,h3,h4,h5,h6,h7,h8,h9');
-  let set_position = 0;
   window.addEventListener('scroll', function () {
-    if (set_position < document.documentElement.scrollTop) {
-      direction = 'down';
-    } else {
-      direction = 'up';
-    }
-    set_position = document.documentElement.scrollTop;
-    let offset = 100;
+    let offset = 200;
     const targets = document.querySelectorAll('#tableOfContents li');
     if (targets.length > 1) {
       let hasCurrent = false;
       headings.forEach(function (heading, index) {
         let target = targets[index];
-        target.classList.remove('current');
         if ( offset < heading.getBoundingClientRect().top && ! hasCurrent ) {
           target.classList.add('current');
           hasCurrent = true;
@@ -80,6 +72,8 @@ $(window).on('load', function () {
           && offset < headings[index + 1].getBoundingClientRect().top) {
           target.classList.add('current');
           hasCurrent = true;
+        } else if ( target.classList.contains('current') ) {
+          target.classList.remove('current');
         }
       });
     } else {
