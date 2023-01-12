@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-    <title>6.1. Helm オプションパラメータ &#8212; Documentation  ドキュメント</title>
+    <title>7.1. Helm オプションパラメータ &#8212; Documentation  ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/option.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
@@ -34,7 +34,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
     <link rel="next" title="ドキュメント記載方法" href="../manual_design/index.html" />
-    <link rel="prev" title="6. 付録" href="index.html" /> 
+    <link rel="prev" title="7. 付録" href="index.html" /> 
   </head>
 <body id="page" class="ja">
 
@@ -101,7 +101,7 @@
     </div>
     <div id="toolbarNavigation">
       <ul>
-        <li class="prev"><a href="index.html" title="前のトピックへ"><span class="section-number">6. </span>付録</a></li>
+        <li class="prev"><a href="index.html" title="前のトピックへ"><span class="section-number">7. </span>付録</a></li>
         <li class="next"><a href="../manual_design/index.html" title="次のトピックへ">ドキュメント記載方法</a></li>
       </ul>
     </div>
@@ -117,11 +117,11 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Exastro IT Automation Documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id1">日本語</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../installation/index.html">1. インストール</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../platform/index.html">2. 共通基盤</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../api_reference/index.html">5. API リファレンス</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="index.html">6. 付録</a><ul class="current">
-<li class="toctree-l5 current"><a class="current reference internal" href="#">6.1. Helm オプションパラメータ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/check.html">1. インストール</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../platform/check.html">2. 共通基盤</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference/index.html">6. API リファレンス</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">7. 付録</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">7.1. Helm オプションパラメータ</a></li>
 </ul>
 </li>
 </ul>
@@ -144,8 +144,8 @@
 <div id="tableOfContents">
   <div id="tocButton"></div>
   <ul>
-<li><a class="reference internal" href="#">6.1. Helm オプションパラメータ</a><ul>
-<li><a class="reference internal" href="#exastro-platform">6.1.1. Exastro Platform</a><ul>
+<li><a class="reference internal" href="#">7.1. Helm オプションパラメータ</a><ul>
+<li><a class="reference internal" href="#exastro-platform">7.1.1. Exastro Platform</a><ul>
 <li><a class="reference internal" href="#id1">共通設定 (認証機能)</a></li>
 <li><a class="reference internal" href="#keycloak">共通設定 (Keycloak)</a></li>
 <li><a class="reference internal" href="#exastro-ita">共通設定 (Exastro ITA)</a></li>
@@ -159,7 +159,7 @@
 <li><a class="reference internal" href="#id5">Keycloak</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#exastro-it-automation">6.1.2. Exastro IT Automation</a><ul>
+<li><a class="reference internal" href="#exastro-it-automation">7.1.2. Exastro IT Automation</a><ul>
 <li><a class="reference internal" href="#id6">共通設定 (Exastro IT Automation)</a></li>
 <li><a class="reference internal" href="#id7">共通設定 (Exastro IT Automation 用データベース)</a></li>
 <li><a class="reference internal" href="#gitlab">共通設定 (GitLab)</a></li>
@@ -190,9 +190,9 @@
     <li><a href="../../../index.html">HOME</a></li>
     <li><a href="../../index.html">Exastro IT Automation Documentation</a></li>
     <li><a href="../index.html">マニュアル</a></li>
-    <li><a href="index.html"><span class="section-number">6. </span>付録</a></li>
+    <li><a href="index.html"><span class="section-number">7. </span>付録</a></li>
     
-    <li><span class="section-number">6.1. </span>Helm オプションパラメータ</li>
+    <li><span class="section-number">7.1. </span>Helm オプションパラメータ</li>
   </ul>
 </div>
 
@@ -202,16 +202,16 @@
 <div class="body" role="main">
 
   <section id="helm">
-<h1><span class="section-number">6.1. </span>Helm オプションパラメータ<a class="headerlink" href="#helm" title="この見出しへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">7.1. </span>Helm オプションパラメータ<a class="headerlink" href="#helm" title="この見出しへのパーマリンク">¶</a></h1>
 <div class="line-block">
 <div class="line">Helm を使ってインストールする際にはコマンドラインオプション、もしくは、values.yaml 内の設定値として下記のオプションパラメータが利用できます。</div>
 </div>
 <section id="exastro-platform">
-<h2><span class="section-number">6.1.1. </span>Exastro Platform<a class="headerlink" href="#exastro-platform" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">7.1.1. </span>Exastro Platform<a class="headerlink" href="#exastro-platform" title="この見出しへのパーマリンク">¶</a></h2>
 <section id="id1">
 <h3>共通設定 (認証機能)<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id8">
-<caption><span class="caption-number">表 6.1 </span><span class="caption-text">共通設定 (認証機能) のオプションパラメータ</span><a class="headerlink" href="#id8" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.1 </span><span class="caption-text">共通設定 (認証機能) のオプションパラメータ</span><a class="headerlink" href="#id8" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -374,7 +374,7 @@
 <section id="keycloak">
 <h3>共通設定 (Keycloak)<a class="headerlink" href="#keycloak" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id9">
-<caption><span class="caption-number">表 6.2 </span><span class="caption-text">共通設定 (Keycloak) のオプションパラメータ</span><a class="headerlink" href="#id9" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.2 </span><span class="caption-text">共通設定 (Keycloak) のオプションパラメータ</span><a class="headerlink" href="#id9" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -477,7 +477,7 @@
 <section id="exastro-ita">
 <h3>共通設定 (Exastro ITA)<a class="headerlink" href="#exastro-ita" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id10">
-<caption><span class="caption-number">表 6.3 </span><span class="caption-text">共通設定 (Exastro ITA) のオプションパラメータ</span><a class="headerlink" href="#id10" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.3 </span><span class="caption-text">共通設定 (Exastro ITA) のオプションパラメータ</span><a class="headerlink" href="#id10" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -557,7 +557,7 @@
 <section id="id2">
 <h3>共通設定 (認証機能用データベース)<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id11">
-<caption><span class="caption-number">表 6.4 </span><span class="caption-text">共通設定 (認証機能用データベース) のオプションパラメータ</span><a class="headerlink" href="#id11" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.4 </span><span class="caption-text">共通設定 (認証機能用データベース) のオプションパラメータ</span><a class="headerlink" href="#id11" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -644,7 +644,7 @@
 <section id="exastro">
 <h3>共通設定 (Exastro 共用データベース)<a class="headerlink" href="#exastro" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id12">
-<caption><span class="caption-number">表 6.5 </span><span class="caption-text">共通設定 (Exastro 共用データベース) のオプションパラメータ</span><a class="headerlink" href="#id12" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.5 </span><span class="caption-text">共通設定 (Exastro 共用データベース) のオプションパラメータ</span><a class="headerlink" href="#id12" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -730,7 +730,7 @@
 <section id="exastro-platform-api">
 <h3>Exastro Platform API 機能<a class="headerlink" href="#exastro-platform-api" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id13">
-<caption><span class="caption-number">表 6.6 </span><span class="caption-text">Exastro Platform API 機能のオプションパラメータ</span><a class="headerlink" href="#id13" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.6 </span><span class="caption-text">Exastro Platform API 機能のオプションパラメータ</span><a class="headerlink" href="#id13" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -761,7 +761,7 @@
 <section id="id3">
 <h3>Exastro Platform 認証機能<a class="headerlink" href="#id3" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id14">
-<caption><span class="caption-number">表 6.7 </span><span class="caption-text">Exastro Platform 認証機能のオプションパラメータ</span><a class="headerlink" href="#id14" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.7 </span><span class="caption-text">Exastro Platform 認証機能のオプションパラメータ</span><a class="headerlink" href="#id14" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -858,7 +858,7 @@
 <section id="exastro-platform-web">
 <h3>Exastro Platform Web 機能<a class="headerlink" href="#exastro-platform-web" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id15">
-<caption><span class="caption-number">表 6.8 </span><span class="caption-text">Exastro Platform Web 機能のオプションパラメータ</span><a class="headerlink" href="#id15" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.8 </span><span class="caption-text">Exastro Platform Web 機能のオプションパラメータ</span><a class="headerlink" href="#id15" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -889,7 +889,7 @@
 <section id="id4">
 <h3>Exastro Platform セットアップ機能<a class="headerlink" href="#id4" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id16">
-<caption><span class="caption-number">表 6.9 </span><span class="caption-text">Exastro Platform セットアップ機能のオプションパラメータ</span><a class="headerlink" href="#id16" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.9 </span><span class="caption-text">Exastro Platform セットアップ機能のオプションパラメータ</span><a class="headerlink" href="#id16" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -920,7 +920,7 @@
 <section id="mariadb">
 <h3>MariaDB<a class="headerlink" href="#mariadb" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id17">
-<caption><span class="caption-number">表 6.10 </span><span class="caption-text">MariaDB のオプションパラメータ</span><a class="headerlink" href="#id17" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.10 </span><span class="caption-text">MariaDB のオプションパラメータ</span><a class="headerlink" href="#id17" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -981,7 +981,7 @@
 <section id="id5">
 <h3>Keycloak<a class="headerlink" href="#id5" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id18">
-<caption><span class="caption-number">表 6.11 </span><span class="caption-text">Keycloak 機能のオプションパラメータ</span><a class="headerlink" href="#id18" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.11 </span><span class="caption-text">Keycloak 機能のオプションパラメータ</span><a class="headerlink" href="#id18" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1041,11 +1041,11 @@
 </section>
 </section>
 <section id="exastro-it-automation">
-<h2><span class="section-number">6.1.2. </span>Exastro IT Automation<a class="headerlink" href="#exastro-it-automation" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">7.1.2. </span>Exastro IT Automation<a class="headerlink" href="#exastro-it-automation" title="この見出しへのパーマリンク">¶</a></h2>
 <section id="id6">
 <h3>共通設定 (Exastro IT Automation)<a class="headerlink" href="#id6" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id19">
-<caption><span class="caption-number">表 6.12 </span><span class="caption-text">共通設定 (Exastro IT Automation) のオプションパラメータ</span><a class="headerlink" href="#id19" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.12 </span><span class="caption-text">共通設定 (Exastro IT Automation) のオプションパラメータ</span><a class="headerlink" href="#id19" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1182,7 +1182,7 @@
 <section id="id7">
 <h3>共通設定 (Exastro IT Automation 用データベース)<a class="headerlink" href="#id7" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id20">
-<caption><span class="caption-number">表 6.13 </span><span class="caption-text">共通設定 (Exastro IT Automation 用データベース) のオプションパラメータ</span><a class="headerlink" href="#id20" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.13 </span><span class="caption-text">共通設定 (Exastro IT Automation 用データベース) のオプションパラメータ</span><a class="headerlink" href="#id20" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1269,7 +1269,7 @@
 <section id="gitlab">
 <h3>共通設定 (GitLab)<a class="headerlink" href="#gitlab" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id21">
-<caption><span class="caption-number">表 6.14 </span><span class="caption-text">共通設定 (GitLab) のオプションパラメータ</span><a class="headerlink" href="#id21" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.14 </span><span class="caption-text">共通設定 (GitLab) のオプションパラメータ</span><a class="headerlink" href="#id21" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1324,7 +1324,7 @@
 <section id="ita-api-admin">
 <h3>ita-api-admin<a class="headerlink" href="#ita-api-admin" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id22">
-<caption><span class="caption-number">表 6.15 </span><span class="caption-text">ita-api-admin における Values 一覧</span><a class="headerlink" href="#id22" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.15 </span><span class="caption-text">ita-api-admin における Values 一覧</span><a class="headerlink" href="#id22" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1370,7 +1370,7 @@
 <section id="ita-api-organization">
 <h3>ita-api-organization<a class="headerlink" href="#ita-api-organization" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id23">
-<caption><span class="caption-number">表 6.16 </span><span class="caption-text">ita-api-organization における Values 一覧</span><a class="headerlink" href="#id23" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.16 </span><span class="caption-text">ita-api-organization における Values 一覧</span><a class="headerlink" href="#id23" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1416,7 +1416,7 @@
 <section id="ita-by-ansible-execute">
 <h3>ita-by-ansible-execute<a class="headerlink" href="#ita-by-ansible-execute" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id24">
-<caption><span class="caption-number">表 6.17 </span><span class="caption-text">ita-by-ansible-execute における Values 一覧</span><a class="headerlink" href="#id24" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.17 </span><span class="caption-text">ita-by-ansible-execute における Values 一覧</span><a class="headerlink" href="#id24" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1491,7 +1491,7 @@
 <section id="ita-by-ansible-legacy-role-vars-listup">
 <h3>ita-by-ansible-legacy-role-vars-listup<a class="headerlink" href="#ita-by-ansible-legacy-role-vars-listup" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id25">
-<caption><span class="caption-number">表 6.18 </span><span class="caption-text">ita-by-ansible-legacy-role-vars-listup における Values 一覧</span><a class="headerlink" href="#id25" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.18 </span><span class="caption-text">ita-by-ansible-legacy-role-vars-listup における Values 一覧</span><a class="headerlink" href="#id25" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1542,7 +1542,7 @@
 <section id="ita-by-ansible-towermaster-sync">
 <h3>ita-by-ansible-towermaster-sync<a class="headerlink" href="#ita-by-ansible-towermaster-sync" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id26">
-<caption><span class="caption-number">表 6.19 </span><span class="caption-text">ita-by-ansible-towermaster-sync における Values 一覧</span><a class="headerlink" href="#id26" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.19 </span><span class="caption-text">ita-by-ansible-towermaster-sync における Values 一覧</span><a class="headerlink" href="#id26" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1593,7 +1593,7 @@
 <section id="ita-by-conductor-synchronize">
 <h3>ita-by-conductor-synchronize<a class="headerlink" href="#ita-by-conductor-synchronize" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id27">
-<caption><span class="caption-number">表 6.20 </span><span class="caption-text">ita-by-conductor-synchronize における Values 一覧</span><a class="headerlink" href="#id27" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.20 </span><span class="caption-text">ita-by-conductor-synchronize における Values 一覧</span><a class="headerlink" href="#id27" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1644,7 +1644,7 @@
 <section id="ita-by-menu-create">
 <h3>ita-by-menu-create<a class="headerlink" href="#ita-by-menu-create" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id28">
-<caption><span class="caption-number">表 6.21 </span><span class="caption-text">ita-by-menu-create における Values 一覧</span><a class="headerlink" href="#id28" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.21 </span><span class="caption-text">ita-by-menu-create における Values 一覧</span><a class="headerlink" href="#id28" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1695,7 +1695,7 @@
 <section id="ita-database-setup-job">
 <h3>ita-database-setup-job<a class="headerlink" href="#ita-database-setup-job" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id29">
-<caption><span class="caption-number">表 6.22 </span><span class="caption-text">ita-database-setup-job における Values 一覧</span><a class="headerlink" href="#id29" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.22 </span><span class="caption-text">ita-database-setup-job における Values 一覧</span><a class="headerlink" href="#id29" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1737,7 +1737,7 @@
 <section id="ita-web-server">
 <h3>ita-web-server<a class="headerlink" href="#ita-web-server" title="この見出しへのパーマリンク">¶</a></h3>
 <table class="docutils align-left" id="id30">
-<caption><span class="caption-number">表 6.23 </span><span class="caption-text">ita-web-server における Values 一覧</span><a class="headerlink" href="#id30" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 7.23 </span><span class="caption-text">ita-web-server における Values 一覧</span><a class="headerlink" href="#id30" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1789,7 +1789,7 @@
 
 <div id="articleNavigation">
   <ul>
-    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">6. </span>付録</a></li>
+    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">7. </span>付録</a></li>
     <li class="next"><a href="../manual_design/index.html" title="次のトピックへ"><span>次のトピックへ</span>ドキュメント記載方法</a></li>
   </ul>
 </div>

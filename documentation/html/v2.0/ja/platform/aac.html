@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-    <title>2.2. Ansible Automation Controller &#8212; Documentation  ドキュメント</title>
+    <title>2.3. Ansible Automation Controller &#8212; Documentation  ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/option.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
@@ -33,8 +33,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
-    <link rel="next" title="5. API リファレンス" href="../api_reference/index.html" />
-    <link rel="prev" title="2.1. Organization (オーガナイゼーション)" href="organization.html" /> 
+    <link rel="next" title="6. API リファレンス" href="../api_reference/index.html" />
+    <link rel="prev" title="2.2. Workspace (ワークスペース)" href="workspace.html" /> 
   </head>
 <body id="page" class="ja">
 
@@ -101,8 +101,8 @@
     </div>
     <div id="toolbarNavigation">
       <ul>
-        <li class="prev"><a href="organization.html" title="前のトピックへ"><span class="section-number">2.1. </span>Organization (オーガナイゼーション)</a></li>
-        <li class="next"><a href="../api_reference/index.html" title="次のトピックへ"><span class="section-number">5. </span>API リファレンス</a></li>
+        <li class="prev"><a href="workspace.html" title="前のトピックへ"><span class="section-number">2.2. </span>Workspace (ワークスペース)</a></li>
+        <li class="next"><a href="../api_reference/index.html" title="次のトピックへ"><span class="section-number">6. </span>API リファレンス</a></li>
       </ul>
     </div>
   </div>
@@ -113,25 +113,8 @@
   <div id="menuButton"></div>
   
   <aside class="divInner">
-    <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Exastro IT Automation Documentation</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id1">日本語</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../installation/index.html">1. インストール</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="index.html">2. 共通基盤</a><ul class="current">
-<li class="toctree-l5"><a class="reference internal" href="organization.html">2.1. Organization (オーガナイゼーション)</a></li>
-<li class="toctree-l5 current"><a class="current reference internal" href="#">2.2. Ansible Automation Controller</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="../api_reference/index.html">5. API リファレンス</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../appendix/index.html">6. 付録</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../manual_design/index.html">ドキュメント記載方法</a></li>
-</ul>
-</li>
-</ul>
-</li>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Exastro IT Automation Documentation</a></li>
 </ul>
 
     <!-- <ul>
@@ -145,10 +128,10 @@
 <div id="tableOfContents">
   <div id="tocButton"></div>
   <ul>
-<li><a class="reference internal" href="#">2.2. Ansible Automation Controller</a><ul>
-<li><a class="reference internal" href="#id1">2.2.1. はじめに</a></li>
-<li><a class="reference internal" href="#id2">2.2.2. Ansible Automation Controllerとは</a></li>
-<li><a class="reference internal" href="#id3">2.2.3. Ansible Automation Controllerの登録</a><ul>
+<li><a class="reference internal" href="#">2.3. Ansible Automation Controller</a><ul>
+<li><a class="reference internal" href="#id1">2.3.1. はじめに</a></li>
+<li><a class="reference internal" href="#id2">2.3.2. Ansible Automation Controllerとは</a></li>
+<li><a class="reference internal" href="#id3">2.3.3. Ansible Automation Controllerの登録</a><ul>
 <li><a class="reference internal" href="#id4">前提条件</a></li>
 <li><a class="reference internal" href="#id5">Ansible Automation Controllerの一括登録</a><ul>
 <li><a class="reference internal" href="#aac-create-method-1">方法1: 設定ファイルを使った作成方法</a></li>
@@ -178,9 +161,9 @@
     <li><a href="../../../index.html">HOME</a></li>
     <li><a href="../../index.html">Exastro IT Automation Documentation</a></li>
     <li><a href="../index.html">マニュアル</a></li>
-    <li><a href="index.html"><span class="section-number">2. </span>共通基盤</a></li>
+    <li><a href="check.html"><span class="section-number">2. </span>共通基盤</a></li>
     
-    <li><span class="section-number">2.2. </span>Ansible Automation Controller</li>
+    <li><span class="section-number">2.3. </span>Ansible Automation Controller</li>
   </ul>
 </div>
 
@@ -190,21 +173,21 @@
 <div class="body" role="main">
 
   <section id="ansible-automation-controller">
-<h1><span class="section-number">2.2. </span>Ansible Automation Controller<a class="headerlink" href="#ansible-automation-controller" title="この見出しへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">2.3. </span>Ansible Automation Controller<a class="headerlink" href="#ansible-automation-controller" title="この見出しへのパーマリンク">¶</a></h1>
 <section id="id1">
-<h2><span class="section-number">2.2.1. </span>はじめに<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.3.1. </span>はじめに<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h2>
 <div class="line-block">
 <div class="line">本章では、Exastro Suite における Ansible Automation Controller について説明します。</div>
 </div>
 </section>
 <section id="id2">
-<h2><span class="section-number">2.2.2. </span>Ansible Automation Controllerとは<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.3.2. </span>Ansible Automation Controllerとは<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h2>
 <div class="line-block">
 <div class="line">Ansible Automation Controllerとは、PF構築自動化ツールであるAnsibleにアクセスコントロール、ジョブスケジューリング、タスクの可視化などの機能を拡張した管理プラットフォームです。</div>
 </div>
 </section>
 <section id="id3">
-<h2><span class="section-number">2.2.3. </span>Ansible Automation Controllerの登録<a class="headerlink" href="#id3" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.3.3. </span>Ansible Automation Controllerの登録<a class="headerlink" href="#id3" title="この見出しへのパーマリンク">¶</a></h2>
 <div class="line-block">
 <div class="line">Ansible Automation Controllerの登録をすることで、“プロジェクト”、”インベントリ”、”認証情報”の組合せで”ジョブテンプレート”を作成しAnsibleを実行できます。</div>
 <div class="line">複数の“ジョブテンプレート”を組み合せて”ワークフロージョブテンプレート”を作成することによって、より多彩な作業フローを表現することができます。</div>
@@ -311,7 +294,7 @@ vi<span class="w"> </span>./exastro-platform/test/tools/initial-settings-ansible
 </tbody>
 </table>
 <table class="docutils align-left" id="id10">
-<caption><span class="caption-number">表 2.4 </span><span class="caption-text">Ansible共通「Ansible Automation Controllerホスト一覧」の初期設定データ</span><a class="headerlink" href="#id10" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 2.7 </span><span class="caption-text">Ansible共通「Ansible Automation Controllerホスト一覧」の初期設定データ</span><a class="headerlink" href="#id10" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 40.0%" />
@@ -388,7 +371,7 @@ vi<span class="w"> </span>./exastro-platform/test/tools/initial-settings-ansible
 </div>
 </div>
 <table class="docutils align-left" id="id11">
-<caption><span class="caption-number">表 2.5 </span><span class="caption-text">Ansible共通「インターフェース情報」用の初期設定データ</span><a class="headerlink" href="#id11" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 2.8 </span><span class="caption-text">Ansible共通「インターフェース情報」用の初期設定データ</span><a class="headerlink" href="#id11" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 40.0%" />
@@ -629,7 +612,7 @@ resultが”000-00000”が、 Ansible Automation Controller の作成に成功�
 </tbody>
 </table>
 <table class="docutils align-left" id="id12">
-<caption><span class="caption-number">表 2.6 </span><span class="caption-text">Ansible共通「Ansible Automation Controllerホスト一覧」の初期設定データ</span><a class="headerlink" href="#id12" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 2.9 </span><span class="caption-text">Ansible共通「Ansible Automation Controllerホスト一覧」の初期設定データ</span><a class="headerlink" href="#id12" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 40.0%" />
@@ -693,7 +676,7 @@ resultが”000-00000”が、 Ansible Automation Controller の作成に成功�
 </tbody>
 </table>
 <table class="docutils align-left" id="id13">
-<caption><span class="caption-number">表 2.7 </span><span class="caption-text">Ansible共通「インターフェース情報」用の初期設定データ</span><a class="headerlink" href="#id13" title="このテーブルへのパーマリンク">¶</a></caption>
+<caption><span class="caption-number">表 2.10 </span><span class="caption-text">Ansible共通「インターフェース情報」用の初期設定データ</span><a class="headerlink" href="#id13" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 40.0%" />
@@ -878,8 +861,8 @@ curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>
 
 <div id="articleNavigation">
   <ul>
-    <li class="prev"><a href="organization.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">2.1. </span>Organization (オーガナイゼーション)</a></li>
-    <li class="next"><a href="../api_reference/index.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">5. </span>API リファレンス</a></li>
+    <li class="prev"><a href="workspace.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">2.2. </span>Workspace (ワークスペース)</a></li>
+    <li class="next"><a href="../api_reference/index.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">6. </span>API リファレンス</a></li>
   </ul>
 </div>
 

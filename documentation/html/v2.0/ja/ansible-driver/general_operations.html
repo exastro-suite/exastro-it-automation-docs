@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-    <title>8. Ansible-driver &#8212; Documentation  ドキュメント</title>
+    <title>5.1. Ansible-driver &#8212; Documentation  ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/option.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
@@ -124,25 +124,25 @@
 <div id="tableOfContents">
   <div id="tocButton"></div>
   <ul>
-<li><a class="reference internal" href="#">8. Ansible-driver</a><ul>
-<li><a class="reference internal" href="#id1">8.1. はじめに</a></li>
-<li><a class="reference internal" href="#id2">8.2. Ansible driver概要</a><ul>
+<li><a class="reference internal" href="#">5.1. Ansible-driver</a><ul>
+<li><a class="reference internal" href="#id1">5.1.1. はじめに</a></li>
+<li><a class="reference internal" href="#id2">5.1.2. Ansible driver概要</a><ul>
 <li><a class="reference internal" href="#ansible-core">Ansible Coreについて</a></li>
 <li><a class="reference internal" href="#ansible-automation-controller">Ansible Automation Controllerについて</a></li>
 <li><a class="reference internal" href="#id3">Ansible driverについて</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#general-operations-variable-handling-in-ansible-driver">8.3. Ansible driverでの変数取り扱い</a><ul>
+<li><a class="reference internal" href="#general-operations-variable-handling-in-ansible-driver">5.1.3. Ansible driverでの変数取り扱い</a><ul>
 <li><a class="reference internal" href="#id5">変数の種類</a></li>
 <li><a class="reference internal" href="#id6">変数の抜出および具体値登録</a></li>
 <li><a class="reference internal" href="#id7">代入値登録による変数の扱い</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id8">8.4. Ansible driver コンソールメニュー構成</a><ul>
+<li><a class="reference internal" href="#id8">5.1.4. Ansible driver コンソールメニュー構成</a><ul>
 <li><a class="reference internal" href="#id9">メニュー/画面一覧</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id10">8.5. Ansible driver利用手順</a><ul>
+<li><a class="reference internal" href="#id10">5.1.5. Ansible driver利用手順</a><ul>
 <li><a class="reference internal" href="#id11">作業フロー</a><ul>
 <li><a class="reference internal" href="#ansible-legacy">Ansible-Legacy作業フロー</a></li>
 <li><a class="reference internal" href="#ansible-legacy-role">Ansible-Legacy Role作業フロー</a></li>
@@ -151,7 +151,7 @@
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id12">8.6. Ansible driver機能・操作方法説明</a><ul>
+<li><a class="reference internal" href="#id12">5.1.6. Ansible driver機能・操作方法説明</a><ul>
 <li><a class="reference internal" href="#id13">基本コンソール</a><ul>
 <li><a class="reference internal" href="#general-operations-device-list">機器一覧</a></li>
 <li><a class="reference internal" href="#general-operations-input-operation-list">オペレーション一覧</a></li>
@@ -186,7 +186,7 @@
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id33">8.7. 構築コード記述方法</a><ul>
+<li><a class="reference internal" href="#id33">5.1.7. 構築コード記述方法</a><ul>
 <li><a class="reference internal" href="#general-operations-write-playbook-ansible-legacy">Playbook（Ansible-Legacy）の記述</a><ul>
 <li><a class="reference internal" href="#id35">ヘッダーセクション</a></li>
 <li><a class="reference internal" href="#tasks">tasksセクション</a></li>
@@ -250,12 +250,12 @@
 <li><a class="reference internal" href="#ansibleita">Ansible利用ガイドラインITA追加ルール</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id60">8.8. 運用操作</a><ul>
+<li><a class="reference internal" href="#id60">5.1.8. 運用操作</a><ul>
 <li><a class="reference internal" href="#id61">メンテナンス</a></li>
 <li><a class="reference internal" href="#general-operations-about-the-maintenance-method">メンテナンス方法について</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id63">8.9. 付録</a><ul>
+<li><a class="reference internal" href="#id63">5.1.9. 付録</a><ul>
 <li><a class="reference internal" href="#general-operations-the-linkage-between-the-input-data-used-during-ansible-execution-and-ita-menu">Ansible実行時に使用される投入データとITAメニューの紐づけ</a><ul>
 <li><a class="reference internal" href="#id65">Ansible-Legacy投入データ</a></li>
 <li><a class="reference internal" href="#id66">Ansible-Pioneer投入データ</a></li>
@@ -297,7 +297,7 @@
   <ul>
     <li><a href="../../../index.html">HOME</a></li>
     
-    <li><span class="section-number">8. </span>Ansible-driver</li>
+    <li><span class="section-number">5.1. </span>Ansible-driver</li>
   </ul>
 </div>
 
@@ -307,15 +307,15 @@
 <div class="body" role="main">
 
   <section id="ansible-driver">
-<h1><span class="section-number">8. </span>Ansible-driver<a class="headerlink" href="#ansible-driver" title="この見出しへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">5.1. </span>Ansible-driver<a class="headerlink" href="#ansible-driver" title="この見出しへのパーマリンク">¶</a></h1>
 <section id="id1">
-<h2><span class="section-number">8.1. </span>はじめに<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">5.1.1. </span>はじめに<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h2>
 <div class="line-block">
 <div class="line">本書では、ITAの機能および操作方法について説明します。</div>
 </div>
 </section>
 <section id="id2">
-<h2><span class="section-number">8.2. </span>Ansible driver概要<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">5.1.2. </span>Ansible driver概要<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h2>
 <div class="line-block">
 <div class="line">本章ではAnsible、Ansible Automation ControllerおよびAnsible driverについて説明します。</div>
 </div>
@@ -376,7 +376,7 @@
 </section>
 </section>
 <section id="general-operations-variable-handling-in-ansible-driver">
-<span id="id4"></span><h2><span class="section-number">8.3. </span>Ansible driverでの変数取り扱い<a class="headerlink" href="#general-operations-variable-handling-in-ansible-driver" title="この見出しへのパーマリンク">¶</a></h2>
+<span id="id4"></span><h2><span class="section-number">5.1.3. </span>Ansible driverでの変数取り扱い<a class="headerlink" href="#general-operations-variable-handling-in-ansible-driver" title="この見出しへのパーマリンク">¶</a></h2>
 <section id="id5">
 <h3>変数の種類<a class="headerlink" href="#id5" title="この見出しへのパーマリンク">¶</a></h3>
 <div class="line-block">
@@ -775,7 +775,7 @@
 </section>
 </section>
 <section id="id8">
-<h2><span class="section-number">8.4. </span>Ansible driver コンソールメニュー構成<a class="headerlink" href="#id8" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">5.1.4. </span>Ansible driver コンソールメニュー構成<a class="headerlink" href="#id8" title="この見出しへのパーマリンク">¶</a></h2>
 <div class="line-block">
 <div class="line">本章では、ITAコンソールのメニュー構成について説明します。</div>
 </div>
@@ -1094,7 +1094,7 @@ Controllerにファイル転送するために必要な情報を管理します�
 </section>
 </section>
 <section id="id10">
-<h2><span class="section-number">8.5. </span>Ansible driver利用手順<a class="headerlink" href="#id10" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">5.1.5. </span>Ansible driver利用手順<a class="headerlink" href="#id10" title="この見出しへのパーマリンク">¶</a></h2>
 <div class="line-block">
 <div class="line">各Ansibleコンソールの利用手順について説明します。</div>
 </div>
@@ -1490,7 +1490,7 @@ Controllerにファイル転送するために必要な情報を管理します�
 </section>
 </section>
 <section id="id12">
-<h2><span class="section-number">8.6. </span>Ansible driver機能・操作方法説明<a class="headerlink" href="#id12" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">5.1.6. </span>Ansible driver機能・操作方法説明<a class="headerlink" href="#id12" title="この見出しへのパーマリンク">¶</a></h2>
 <div class="line-block">
 <div class="line">本章では、Ansible driverで利用する各コンソールの機能について説明します。</div>
 </div>
@@ -5141,7 +5141,7 @@ _
 </section>
 </section>
 <section id="id33">
-<h2><span class="section-number">8.7. </span>構築コード記述方法<a class="headerlink" href="#id33" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">5.1.7. </span>構築コード記述方法<a class="headerlink" href="#id33" title="この見出しへのパーマリンク">¶</a></h2>
 <section id="general-operations-write-playbook-ansible-legacy">
 <span id="id34"></span><h3>Playbook（Ansible-Legacy）の記述<a class="headerlink" href="#general-operations-write-playbook-ansible-legacy" title="この見出しへのパーマリンク">¶</a></h3>
 <div class="line-block">
@@ -7069,7 +7069,7 @@ _
 </section>
 </section>
 <section id="id60">
-<h2><span class="section-number">8.8. </span>運用操作<a class="headerlink" href="#id60" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">5.1.8. </span>運用操作<a class="headerlink" href="#id60" title="この見出しへのパーマリンク">¶</a></h2>
 <div class="line-block">
 <div class="line">本機能を活用する操作は、クライアントPCのブラウザ画面からのユーザー利用による入力だけでなく、システム運用・保守による操作もあります。用意している運用・保守の操作は次のとおりです。</div>
 </div>
@@ -7191,7 +7191,7 @@ _valautostup-workflow.service</p></td>
 </section>
 </section>
 <section id="id63">
-<h2><span class="section-number">8.9. </span>付録<a class="headerlink" href="#id63" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">5.1.9. </span>付録<a class="headerlink" href="#id63" title="この見出しへのパーマリンク">¶</a></h2>
 <section id="general-operations-the-linkage-between-the-input-data-used-during-ansible-execution-and-ita-menu">
 <span id="id64"></span><h3>Ansible実行時に使用される投入データとITAメニューの紐づけ<a class="headerlink" href="#general-operations-the-linkage-between-the-input-data-used-during-ansible-execution-and-ita-menu" title="この見出しへのパーマリンク">¶</a></h3>
 <div class="line-block">
