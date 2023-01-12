@@ -972,12 +972,16 @@ span.highlighted {
 #tableOfContents li {
  list-style: none;
  line-height: 1.5;
- margin-left: 3em;
+ margin-left: 2.5em;
 }
 
 #tableOfContents>ul>li {
   margin-left: 0;
- }
+}
+
+#tableOfContents>ul>li>ul>li {
+  margin-left: 2em;
+}
 
 #tableOfContents li a {
  display: block;
@@ -992,9 +996,9 @@ span.highlighted {
 #tableOfContents li li>a::before {
   content: '';
   position: absolute;
-  left: -1.5em;
+  left: -1.0em;
   top: 50%;
-  width: 1em;
+  width: 0.5em;
   height: 1px;
   background-color: #999;
  }
@@ -1003,7 +1007,7 @@ span.highlighted {
  #tableOfContents li li>a::after {
   content: '';
   position: absolute;
-  left: -1.5em;
+  left: -1.0em;
   top: 0;
   width: 1px;
   height: 100%;
@@ -1012,11 +1016,10 @@ span.highlighted {
 
  #tableOfContents li li ul {
   border-left: solid 1px #999;
-  margin-left: -1.5em;
+  margin-left: -1.0em;
  }
  #tableOfContents li li:last-child>ul {
   border-left: none;
-  margin-left: -1.5em;
  }
 
  #tableOfContents li li:last-child>a::after {

@@ -5,5 +5,4 @@
 .. toctree::
    :maxdepth: 2
 
-   architecture
    menu_creation

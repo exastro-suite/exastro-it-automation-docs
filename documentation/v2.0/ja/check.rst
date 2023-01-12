@@ -21,12 +21,11 @@
    :maxdepth: 1
    :numbered: 3
 
-   installation/index
-   platform/index
-   it_automation_base/management_console
-   it_automation_base/basic_console
-   .. create_param/index
-   .. ansible-driver/index
+   installation/check
+   platform/check
+   it_automation_base/check
+   create_param/check
+   ansible-driver/check
    api_reference/index
    appendix/index
 

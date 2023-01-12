@@ -21,8 +21,8 @@
    :maxdepth: 1
    :numbered: 3
 
-   installation/index
-   platform/index
+   installation/check
+   platform/check
    .. designing_this_manual/index
    .. it_automation_base/index
    .. create_param/index
