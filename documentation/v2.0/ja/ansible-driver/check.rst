@@ -3,6 +3,6 @@ Ansible ドライバ
 ================
 
 .. toctree::
-   :numbered: 2
+   :maxdepth: 2
 
    general_operations
