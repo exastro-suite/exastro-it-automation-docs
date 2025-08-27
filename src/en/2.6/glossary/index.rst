@@ -4,8 +4,7 @@ Glossary
 .. glossary::
 
     Movement
-        It refers to the smallest work unit in Exastro IT Automation.
-        A single Movement execution is equivalent to a single ansible-playbook command execution.
+        This describes the smallest unit of work in ITA. A single Movement execution is the same as a single run of an Ansible Playbook.
 
     Operation
         The operation is associated with a target and parameters for the task to be performed.

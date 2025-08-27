@@ -2024,7 +2024,7 @@ span.highlighted {
  font-size: 1.2rem;
  font-weight: bold;
  margin: 0;
- color: #888;
+ color: #223377;
 }
 
 #article .glossary dt:last-child {
@@ -2034,6 +2034,7 @@ span.highlighted {
 #article .glossary dd {
  padding-left: 2em;
  text-indent: 1em;
+ padding-bottom: 1em;
 }
 
 #article .toctree-wrapper ul {
