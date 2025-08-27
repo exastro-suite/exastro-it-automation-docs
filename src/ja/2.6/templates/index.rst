@@ -22,6 +22,8 @@
 
    vmware/index
 
+   deploymentGuide/index
+
 .. raw:: html
 
    </div>
