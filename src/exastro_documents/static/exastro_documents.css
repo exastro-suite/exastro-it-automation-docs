@@ -2562,7 +2562,7 @@ span.highlighted {
 
 #swaggerBody .swagger-ui img {
  max-width: 200px;
- content: url(/_static/img/exastro.png);
+ content: url(../_static/img/exastro.png);
 }
 
 @media screen and (max-width: 1850px) {
