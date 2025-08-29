@@ -61,11 +61,11 @@
    | 　　　　　legacy: legacy
    | 　　　　　legacy role: legacy_role
    | 　　　　　pioneer: pioneer
-         
 
-.. table:: 実行時データ削除で削除されるデータリソース一覧(ITA側)  
+
+.. table:: 実行時データ削除で削除されるデータリソース一覧(ITA側)
    :align: Left
-   
+
    +-----------------------------------------------------------------------+-----------------------+-----------------------------------------------+
    | データリソース                                                        | リソースタイプ        | 備考                                          |
    |                                                                       |                       |                                               |
@@ -81,7 +81,7 @@
 :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Execution Agent」の場合
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. table:: 実行時データ削除で削除されるデータリソース一覧(Ansible Execution Agent側) 
+.. table:: 実行時データ削除で削除されるデータリソース一覧(Ansible Execution Agent側)
    :align: Left
 
    +-------------------------------------------------------------------+-----------------------+-----------------------------------------------+
@@ -100,4 +100,3 @@
    | <storage>: Ansible Execution Agentインストール時にSpecify full path for the data storage locationで設定したバス
    | <org>:Ansible Execution Agentインストール時にInput ORGANIZATION_ID.で設定したORGANIZATION ID
    | <ws>:Ansible Execution Agentインストール時にInput WORKSPACE_ID.で設定したWORKSPACE ID
-   

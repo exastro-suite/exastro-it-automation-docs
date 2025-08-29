@@ -36,7 +36,7 @@ Ansible Core
      - 説明
      - Ansibleスケールアウト可否
    * - Ansible Core
-     - Exastro IT Automation システムと Ansible Core を同一環境に構成 
+     - Exastro IT Automation システムと Ansible Core を同一環境に構成
      - ○ (Kubernetes環境に限る)
 
 
@@ -55,11 +55,11 @@ Ansible Core
    :align: left
 
    * - | 通信番号
-       | ※1 
+       | ※1
      - FROM
      - TO
      - | プロトコル
-       | (ポート番号※2) 
+       | (ポート番号※2)
      - 主な用途
    * - ①
      - Ansible Core

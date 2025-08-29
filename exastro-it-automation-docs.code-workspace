@@ -7,7 +7,7 @@
 	"settings": {
   "esbonio.server.enabled": true,
   "esbonio.sphinx.buildDir": "${workspaceFolder}/_build",
-  "esbonio.sphinx.srcDir": "${workspaceFolder}/src/ja/2.5",
-  "esbonio.sphinx.confDir": "${workspaceFolder}/src/ja/2.5"
+  "esbonio.sphinx.srcDir": "${workspaceFolder}/src/ja/2.6",
+  "esbonio.sphinx.confDir": "${workspaceFolder}/src/ja/2.6"
 	},
 }

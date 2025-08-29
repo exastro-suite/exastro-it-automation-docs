@@ -38,11 +38,11 @@ Terraform Cloud/EP
    :align: left
 
    * - | 通信番号
-       | ※1 
+       | ※1
      - FROM
      - TO
      - | プロトコル
-       | (ポート番号※2) 
+       | (ポート番号※2)
      - 主な用途
    * - ①
      - | ITAサーバ
@@ -105,11 +105,11 @@ Terraform Cloud/EP
    * - | Terraform Enterprise
      - | ・1.4.6
        | ・1.1.0
-     - | 
+     - |
    * - | Terraform Cloud
      - | ・1.4.6
        | ・1.4.0
-     - | 
+     - |
 
 
 .. _configuration_terraform_cloud_ep_initial_setting:

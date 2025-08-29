@@ -4,7 +4,7 @@
    :header-rows: 1
    :align: left
    :class: filter-table
-        
+
    * - パラメータ
      - 説明
      - 設定値
@@ -30,7 +30,7 @@
      - Ansible Automation Controller のコントロールノードのホスト名
    * - initial_data.ansible_automation_controller_host_list[*].parameter.authentication_method
      - | 認証方式の選択
-       | Ansible Core または Ansible Automation Controller から作業対象の機器へ接続する際の認証方式を選択します。 
+       | Ansible Core または Ansible Automation Controller から作業対象の機器へ接続する際の認証方式を選択します。
      - | :kbd:`パスワード認証` : ログインパスワードの管理で●の選択と、ログインパスワードの入力が必須です。
        | :kbd:`鍵認証(パスフレーズなし)` : SSH 秘密鍵ファイル(id_ras)のアップロードが必須です。
        | :kbd:`鍵認証(パスフレーズあり)` : SSH 秘密鍵ファイル(id_ras)のアップロードと、パスフレーズの入力が必須です。
@@ -72,22 +72,22 @@
        | ※ 実行エンジンが Ansible Automation Controller の場合に入力必須
      - Ansible Automation Controller ホスト
    * - initial_data.parameter.ansible_automation_controller_protocol
-     - | Ansible Automation Controller サーバとの通信プロトコルを :kbd:`http` か :kbd:`https` のどちらかを入力します。 
+     - | Ansible Automation Controller サーバとの通信プロトコルを :kbd:`http` か :kbd:`https` のどちらかを入力します。
        | 通常は https です。
        | ※ 実行エンジンが Ansible Automation Controller の場合に入力必須
      - | :kbd:`http`
        | :kbd:`https`
        | 上記のいずれか。
    * - initial_data.parameter.ansible_automation_controller_port
-     - | Ansible Automation Controller サーバの接続ポート(80/443)を入力します。通常は HTTPS(443)です。 
+     - | Ansible Automation Controller サーバの接続ポート(80/443)を入力します。通常は HTTPS(443)です。
        | ※ 実行エンジンが Ansible Automation Controller の場合に入力必須
      - ポート番号
    * - initial_data.parameter.organization_name
-     - | Ansible Automation Controller サーバに登録されている組織名を選択します。 
+     - | Ansible Automation Controller サーバに登録されている組織名を選択します。
        | ※ 実行エンジンが Ansible Core 以外の場合に入力必須
      - 組織名の文字列
    * - initial_data.parameter.authentication_token
-     - | Exastro IT Automation から Ansible Automation Controller サーバに接続するユーザーの認証トークンを入力します。 
+     - | Exastro IT Automation から Ansible Automation Controller サーバに接続するユーザーの認証トークンを入力します。
        | ※ 実行エンジンが Ansible Automation Controller の場合に入力必須
      - 認証トークン文字列
    * - initial_data.parameter.delete_runtime_data

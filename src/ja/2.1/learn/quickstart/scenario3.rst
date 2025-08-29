@@ -66,7 +66,7 @@
 
 | :menuselection:`Ansible共通 --> 機器一覧` から、作業対象である db01 のホスト名を web01 に更新します。
 
-.. figure:: /images/learn/quickstart/scenario3/機器情報の更新.gif
+.. figure:: /images/learn/quickstart/scenario3/機器情報更新.gif
    :width: 1200px
    :alt: 機器情報の更新
 
@@ -171,7 +171,7 @@
 
 | :menuselection:`入力用 --> サーバー基本情報` から、ホスト名に関するパラメータを登録します。
 
-.. figure:: /images/learn/quickstart/scenario3/サーバ基本情報登録.png
+.. figure:: /images/learn/quickstart/scenario3/サーバ基本情報登録設定.png
    :width: 1200px
    :alt: サーバ基本情報登録
 

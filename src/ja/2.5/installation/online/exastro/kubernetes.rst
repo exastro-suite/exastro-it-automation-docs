@@ -206,7 +206,7 @@ Helm リポジトリの登録
            :caption: exastro.yaml
            :language: yaml
 
-        | ※ 大容量ファイルのアップロードなどで処理に時間が掛かる場合は、想定する最大時間(秒数)の設定が必要となります。  
+        | ※ 大容量ファイルのアップロードなどで処理に時間が掛かる場合は、想定する最大時間(秒数)の設定が必要となります。
 
         .. code-block:: shell
            :caption: ingress - annotations

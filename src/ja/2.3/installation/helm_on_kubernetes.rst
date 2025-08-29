@@ -845,7 +845,9 @@ GitLab 連携設定
             +     nodePort: 30082
    
    .. _create_system_manager:
- 
+
+.. _install_helm:
+
 Exastro システム管理者の作成
 ----------------------------
 

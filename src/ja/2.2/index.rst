@@ -14,6 +14,7 @@ Exastro IT Automation Documentation 2.2
    installation/index
    learn/index
    manuals/index
+   addons/index
    reference/index
    contribute/index
 
