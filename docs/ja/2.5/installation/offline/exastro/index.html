@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=57fb2187" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=99e5f627" />
     <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../../_static/documentation_options.js?v=c033477b"></script>
@@ -39,7 +39,7 @@
     <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
-    <link rel="next" title="Exastro on Docker Compose - Offline" href="docker_compose.html" />
+    <link rel="next" title="Exastro on Kubernetes - Offline" href="kubernetes.html" />
     <link rel="prev" title="オフライン" href="../index.html" /> 
   </head>
 <body id="page" class="ja">
@@ -72,9 +72,10 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
-              <option value="../../../../../ja/2.5/installation/offline/exastro/index.html" selected>current</option>
-              <option value="../../../../../ja/2.5/installation/offline/exastro/index.html" selected>2.5(current)</option>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../ja/2.6/installation/offline/exastro/index.html">current</option>
+              <option value="../../../../../ja/2.6/installation/offline/exastro/index.html">2.6(current)</option>
+              <option value="../../../../../ja/2.5/installation/offline/exastro/index.html" selected>2.5</option>
               <option value="../../../../../ja/2.4/installation/offline/exastro/index.html">2.4</option>
               <option value="../../../../../ja/2.3/installation/offline/exastro/index.html">2.3</option>
               <option value="../../../../../ja/2.2/installation/offline/exastro/index.html">2.2</option>
@@ -91,7 +92,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               <option value="../../../../../ja/2.5/installation/offline/exastro/index.html" selected>日本語</option>
               <option value="../../../../../en/2.5/installation/offline/exastro/index.html">English</option>
             </select>
@@ -102,7 +103,7 @@
     <div id="toolbarNavigation">
       <ul>
         <li class="prev"><a href="../index.html" title="前のトピックへ">オフライン</a></li>
-        <li class="next"><a href="docker_compose.html" title="次のトピックへ">Exastro on Docker Compose - Offline</a></li>
+        <li class="next"><a href="kubernetes.html" title="次のトピックへ">Exastro on Kubernetes - Offline</a></li>
       </ul>
     </div>
   </div>
@@ -119,6 +120,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../online/index.html">オンライン</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">オフライン</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Exastro</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kubernetes.html">Exastro on Kubernetes - Offline</a></li>
 <li class="toctree-l4"><a class="reference internal" href="docker_compose.html">Exastro on Docker Compose - Offline</a></li>
 </ul>
 </li>
@@ -131,6 +133,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../templates/index.html">テンプレート</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">リファレンス</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">貢献</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kb/index.html">ナレッジベース</a></li>
 </ul>
 
     <!-- <ul>
@@ -164,6 +167,18 @@
 </div>
 <div id="multiColumnIndex"><div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="kubernetes.html">Exastro on Kubernetes - Offline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kubernetes.html#id1">目的</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kubernetes.html#id2">特徴</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kubernetes.html#id3">前提条件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kubernetes.html#id4">全体の流れ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kubernetes.html#id7">オンライン環境(インターネットに接続できる環境)での作業</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kubernetes.html#id18">オフライン環境(インターネットに接続できない環境)での作業</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kubernetes.html#id28">オーガナイゼーションの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kubernetes.html#id29">ワークスペースの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kubernetes.html#kubesprayexastro">kubespray及びExastroのインストール時にエラーが発生した場合の対応</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="docker_compose.html">Exastro on Docker Compose - Offline</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="docker_compose.html#id1">目的</a></li>
 <li class="toctree-l2"><a class="reference internal" href="docker_compose.html#id2">特徴</a></li>
@@ -172,9 +187,9 @@
 <li class="toctree-l2"><a class="reference internal" href="docker_compose.html#id5">全体の流れ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="docker_compose.html#id8">オンライン環境(インターネットに接続できる環境)での作業</a></li>
 <li class="toctree-l2"><a class="reference internal" href="docker_compose.html#id11">オフライン環境(インターネットに接続できない環境)での作業</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docker_compose.html#id16">ログイン</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docker_compose.html#id17">オーガナイゼーションの作成</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docker_compose.html#id18">ワークスペースの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker_compose.html#id17">ログイン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker_compose.html#id18">オーガナイゼーションの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker_compose.html#id19">ワークスペースの作成</a></li>
 </ul>
 </li>
 </ul>
@@ -196,8 +211,8 @@
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2023 NEC Corporation</small>
-    <small><a href="/terms/ja.html">サイト規約</a></small>
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.5/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

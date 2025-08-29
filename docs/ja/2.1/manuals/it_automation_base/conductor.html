@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=57fb2187" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,9 +72,10 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
-              <option value="../../../../ja/2.5/manuals/it_automation_base/conductor.html">current</option>
-              <option value="../../../../ja/2.5/manuals/it_automation_base/conductor.html">2.5(current)</option>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/it_automation_base/conductor.html">current</option>
+              <option value="../../../../ja/2.6/manuals/it_automation_base/conductor.html">2.6(current)</option>
+              <option value="../../../../ja/2.5/manuals/it_automation_base/conductor.html">2.5</option>
               <option value="../../../../ja/2.4/manuals/it_automation_base/conductor.html">2.4</option>
               <option value="../../../../ja/2.3/manuals/it_automation_base/conductor.html">2.3</option>
               <option value="../../../../ja/2.2/manuals/it_automation_base/conductor.html">2.2</option>
@@ -91,7 +92,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               <option value="../../../../ja/2.1/manuals/it_automation_base/conductor.html" selected>日本語</option>
               <option value="../../../../en/2.1/manuals/it_automation_base/conductor.html">English</option>
             </select>
@@ -372,7 +373,7 @@
 </ol>
 <ul>
 <li><div class="line-block">
-<div class="line">「機器情報」の登録方法については、「Ansible共通 <span class="xref std std-ref">general_operations_device_list</span> 」を参照して下さい。</div>
+<div class="line">「機器情報」の登録方法については、「Ansible共通 <a class="reference internal" href="../ansible-driver/ansible_common.html#ansible-common-device-list"><span class="std std-ref">機器一覧</span></a> 」を参照して下さい。</div>
 </div>
 </li>
 <li><div class="line-block">
@@ -1898,7 +1899,7 @@ callの実行結果による条件分岐を設定します。</p>
 <div class="line"><strong>オペレーションの指定について</strong></div>
 <div class="line">グリッド内の「Movement」Nodeを選択し、 <span class="guilabel">オペレーション選択</span> をクリックすると、オペレーションのリストが表示されます。</div>
 <div class="line">作業実行設定画面のラジオボタンで指定したオペレーションのオペレーションIDとは別のオペレーションを指定することが出来ます。</div>
-<div class="line">これにより、そのMovementの属するオーケストレータの「 <span class="xref std std-ref">general_operations_substitution_value_list</span> 」メニューで、ほかのオペレーションIDのものとして登録した「具体値」を代入して実行することが出来ます。</div>
+<div class="line">これにより、そのMovementの属するオーケストレータの「 <a class="reference internal" href="../ansible-driver/ansible_legacy.html#ansible-legacy-substitution-value-list"><span class="std std-ref">代入値管理</span></a> 」メニューで、ほかのオペレーションIDのものとして登録した「具体値」を代入して実行することが出来ます。</div>
 <div class="line">Conductor編集画面で個別指定したオペレーションIDはConductor <span class="guilabel">登録</span> / <span class="guilabel">更新</span> により設定が保存されます。</div>
 <div class="line">また、Conductor実行画面でも実行前に個別指定ができ、既に <a class="reference internal" href="#conductor-editandexcute"><span class="std std-ref">Conductor編集/作業実行</span></a> で個別指定登録をして保存されているオペレーションIDについても更に変更を行いConductor実行することが出来ます。</div>
 <div class="line">ただし、Conductor実行画面で個別指定したオペレーションIDは実行時のみの反映となり、設定は保存されません。</div>
@@ -2640,8 +2641,8 @@ ductorインスタンスID:__CONDUCTOR_INSTANCE_ID__,
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2023 NEC Corporation</small>
-    <small><a href="/terms/ja.html">サイト規約</a></small>
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.1/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

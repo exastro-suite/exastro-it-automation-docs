@@ -35,29 +35,29 @@ Ansible実行環境での準備
       :caption: コマンド
 
       sudo su -
- 
+
 #. | Python3.9の導入
 
    .. code-block:: bash
       :caption: コマンド
 
       yum -y install python39
- 
+
 #. | pip3.9の導入
 
    .. code-block:: bash
       :caption: コマンド
 
       pip3.9 install ruamel-yaml
- 
+
 #. | gitの導入
 
    .. code-block:: bash
       :caption: コマンド
 
-      yum -y install git  
+      yum -y install git
 
-.. note:: 
+.. note::
    | すでに導入済みのコマンドは手順を省略して構いません。
 
 HOST設定
@@ -80,7 +80,7 @@ HOST設定
    192.168.1.2 ha-conf-k8s-02.cluster.local ha-conf-k8s-02
    192.168.1.3 ha-conf-k8s-03.cluster.local ha-conf-k8s-03
 
-.. note:: 
+.. note::
    | クラスタ名やIPアドレスは、使用する環境に合わせて変更してください。
 
 SSH key の作成
@@ -126,7 +126,7 @@ IPv4 フォワーディングの有効化
       :caption: コマンド
 
       sudo su -
- 
+
 #. | :file:`/etc/sysctl.conf` の書き換え
 
    | net.ipv4.ip_forward=1 の行を追加します。
@@ -137,7 +137,6 @@ IPv4 フォワーディングの有効化
       vi /etc/sysctl.conf
 
    .. code-block:: diff
-      :name: /etc/sysctl.conf
       :caption: sysctl.conf
 
       # sysctl settings are defined through files in
@@ -164,7 +163,7 @@ IPv4 フォワーディングの有効化
       stop firewalld
 
       status firewalld
- 
+
 #. | SELinux の無効化
 
    | 現状の確認
@@ -228,7 +227,7 @@ hosts.ymlの作成
       :caption: コマンド
 
       sudo su -
- 
+
 #. | :kbd:`git clone` したKubesprayフォルダにカレントを変更
 
    .. code-block:: bash
@@ -310,4 +309,3 @@ Kubernetes環境の確認
    v2ha-k8s-node1   Ready    control-plane   8m48s   v1.27.7
    v2ha-k8s-node2   Ready    control-plane   7m28s   v1.27.7
    v2ha-k8s-node3   Ready    control-plane   7m17s   v1.27.7
-   

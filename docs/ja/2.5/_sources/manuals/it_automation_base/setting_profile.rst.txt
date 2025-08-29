@@ -2,9 +2,9 @@
 アカウント管理
 --------------
 
-アカウント管理では、自身のアカウント編集、パスワード変更、二要素認証設定、トークン発行が行えます。
+アカウント管理では、自身のアカウント編集、パスワード変更、二要素認証設定、トークン発行ができます。
 
-#. | アカウント管理はログインユーザーのアイコンを選択して表示されるメニューから :menuselection:`アカウント管理` を選択することにより設定できます。
+#. | アカウント管理はログインユーザーのアイコンを選択して表示されるメニューから :guilabel:`アカウント管理` を選択することにより設定できます。
 
    .. figure:: /images/ja/manuals/platform/login/setting_profile_v2-4.png
       :alt: アカウント管理
@@ -18,7 +18,7 @@
 アカウント編集
 ^^^^^^^^^^^^^^
 
-#. | アカウント編集（Personal info）より、Eメール、名、姓、所属、説明を変更することができます。
+#. | :menuselection:`アカウント管理` 画面のPersonal infoより、言語切り替え、およびEメール、名、姓、所属、説明を変更することができます。
 
    .. figure:: /images/ja/manuals/platform/login/setting_profile_account_v2-4.png
       :alt: アカウント管理_アカウント編集
@@ -32,7 +32,7 @@
 パスワード変更
 ^^^^^^^^^^^^^^
 
-#. | [Account security] > [Signing in] > [Basic authentication]より、パスワード変更画面を表示します。
+#. | [Account security] > [Signing in] > [Basic authentication]より、:guilabel:`Update` を押下します。
 
    .. figure:: /images/ja/manuals/platform/login/setting_profile_password_v2-4.png
       :alt: アカウント管理_パスワード変更画面
@@ -40,7 +40,7 @@
       :align: left
       :class: with-border-thin
 
-#. | [Update]より、自身のパスワードを変更することができます。
+#. | 自身のパスワードを変更することができます。
 
    .. figure:: /images/ja/manuals/platform/login/setting_profile_password_update.png
       :alt: アカウント管理_パスワード変更
@@ -52,15 +52,15 @@
 二要素認証設定
 ^^^^^^^^^^^^^^
 
-#. | [Account security] > [Signing in] > [Two-factor authentication]より、二要素認証設定画面を表示します。
+#. | [Account security] > [Signing in] > [Two-factor authentication]より、:guilabel:` Set up Authenticator application` を押下します。
 
    .. figure:: /images/ja/manuals/platform/login/two_factor_authentication.png
-      :alt: アカウント管理_二要素認証設定外面
+      :alt: アカウント管理_二要素認証設定画面
       :width: 600px
       :align: left
       :class: with-border-thin
 
-#. | [Set up Authenticator application]より、パスワードを入力してログイン後、二段階認証の設定を行うことができます。
+#. | パスワードを入力してログイン後、二要素認証の設定を行うことができます。
 
    .. figure:: /images/ja/manuals/platform/login/two_factor_authentication_login.png
       :alt: アカウント管理_二要素認証設定_パスワード
@@ -74,13 +74,10 @@
       :align: left
       :class: with-border-thin
 
-
-.. _exastro_refresh_token:
-
 トークン発行
 ------------
 
-本システムにおいて、APIを呼び出す際に必要となるアクセストークンがありますが、アクセストークンの発行には、本説明で説明するリフレッシュトークンが必要となります。
+本システムにおいて、APIを呼び出すにはアクセストークンが必要です。アクセストークンの発行には、本説明で扱うリフレッシュトークンが必要となります。
 
 .. tip::
    | APIの認証については、:doc:`../../reference/index` - :doc:`../../reference/api/index` - :doc:`../../reference/api/operator/index` - :doc:`../../reference/api/operator/certification` 、 :doc:`../../reference/api/system_manager/index` - :doc:`../../reference/api/system_manager/certification` 参照

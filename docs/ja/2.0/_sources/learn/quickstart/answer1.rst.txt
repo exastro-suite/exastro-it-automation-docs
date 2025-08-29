@@ -111,7 +111,7 @@
    :width: 1200px
    :alt: グループのパラメータシート
 
-.. figure:: /images/learn/quickstart/answer1/グループのパラメータシート作成.gif
+.. figure:: /images/learn/quickstart/answer1/グループパラメータシート作成.gif
    :width: 1200px
    :alt: グループのパラメータシート作成
 
@@ -253,7 +253,7 @@
    :width: 1200px
    :alt: ユーザーのパラメータシート
 
-.. figure:: /images/learn/quickstart/answer1/ユーザーのパラメータシート作成_1.gif
+.. figure:: /images/learn/quickstart/answer1/ユーザーパラメータシート作成_1.gif
    :width: 1200px
    :alt: ユーザーのパラメータシートの作成1
 
@@ -353,7 +353,7 @@
      - 
      - 
 
-.. figure:: /images/learn/quickstart/answer1/ユーザーのパラメータシート作成_2.gif
+.. figure:: /images/learn/quickstart/answer1/ユーザーパラメータシート作成_2.gif
    :width: 1200px
    :alt: ユーザーのパラメータシート作成_2
 
@@ -488,7 +488,7 @@ Movement 登録
 
 | :menuselection:`Ansible-LegacyRole --> Movement一覧` から、ホスト名設定のための Movement を登録します。
 
-.. figure:: /images/learn/quickstart/answer1/Movement登録.png
+.. figure:: /images/learn/quickstart/answer1/ユーザーMovement登録設定.png
    :width: 1200px
    :alt: Movement登録
    

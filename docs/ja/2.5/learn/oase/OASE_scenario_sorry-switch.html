@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=57fb2187" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,9 +72,10 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
-              <option value="../../../../ja/2.5/learn/oase/OASE_scenario_sorry-switch.html" selected>current</option>
-              <option value="../../../../ja/2.5/learn/oase/OASE_scenario_sorry-switch.html" selected>2.5(current)</option>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/learn/oase/OASE_scenario_sorry-switch.html">current</option>
+              <option value="../../../../ja/2.6/learn/oase/OASE_scenario_sorry-switch.html">2.6(current)</option>
+              <option value="../../../../ja/2.5/learn/oase/OASE_scenario_sorry-switch.html" selected>2.5</option>
               <option value="../../../../ja/2.4/learn/oase/OASE_scenario_sorry-switch.html">2.4</option>
               <option value="../../../../ja/2.3/learn/oase/OASE_scenario_sorry-switch.html">2.3</option>
               <option value="../../../../ja/2.2/learn/oase/OASE_scenario_sorry-switch.html">2.2</option>
@@ -91,7 +92,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               <option value="../../../../ja/2.5/learn/oase/OASE_scenario_sorry-switch.html" selected>日本語</option>
               <option value="../../../../en/2.5/learn/oase/OASE_scenario_sorry-switch.html">English</option>
             </select>
@@ -152,6 +153,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
 </ul>
 
     <!-- <ul>
@@ -310,7 +312,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id14">
-<caption><span class="caption-number">表 1.37 </span><span class="caption-text">イベント収集設定値</span><a class="headerlink" href="#id14" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 1.38 </span><span class="caption-text">イベント収集設定値</span><a class="headerlink" href="#id14" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 20.0%" />
 <col style="width: 13.3%" />
@@ -340,8 +342,8 @@
 </thead>
 <tbody>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">リクエスト監視</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">IMAP</kbd> <kbd class="kbd docutils literal notranslate">パスワード認証</kbd></kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">IMAP:</kbd> <kbd class="kbd docutils literal notranslate">Plaintext</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">IMAP</kbd> <kbd class="kbd docutils literal notranslate">パスワード認証</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">IMAP:</kbd> <kbd class="kbd docutils literal notranslate">Plaintext</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">**.***.**.***</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">*****&#64;**.***</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">**</kbd></p></td>
@@ -365,14 +367,11 @@
 <div class="line-block">
 <div class="line">収集するイベントに付与するラベルの作成と付与する条件を設定します。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-0">ラベル<a class="headerlink" href="#term-0" title="Link to this term">¶</a></dt><dt id="term-1">ラベルは「キー」と「値」から成り、付与されたイベントの属性を表します。<a class="headerlink" href="#term-1" title="Link to this term">¶</a></dt><dt id="term-2">イベントは、付与された「キー」と「値」によって認識されます。<a class="headerlink" href="#term-2" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <div class="line-block">
 <div class="line">今回必要なラベルは以下の通りです。</div>
 </div>
 <table class="docutils align-default" id="id15">
-<caption><span class="caption-number">表 1.38 </span><span class="caption-text">ラベル一覧</span><a class="headerlink" href="#id15" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 1.39 </span><span class="caption-text">ラベル一覧</span><a class="headerlink" href="#id15" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 40.0%" />
 <col style="width: 60.0%" />
@@ -423,7 +422,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id16">
-<caption><span class="caption-number">表 1.39 </span><span class="caption-text">ラベル作成の設定値</span><a class="headerlink" href="#id16" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 1.40 </span><span class="caption-text">ラベル作成の設定値</span><a class="headerlink" href="#id16" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -479,7 +478,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id17">
-<caption><span class="caption-number">表 1.40 </span><span class="caption-text">ラベル付与の設定値</span><a class="headerlink" href="#id17" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 1.41 </span><span class="caption-text">ラベル付与の設定値</span><a class="headerlink" href="#id17" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 11.1%" />
 <col style="width: 11.1%" />
@@ -516,7 +515,7 @@
 <td><p><kbd class="kbd docutils literal notranslate">subject</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">文字列</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">==</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">[alert]</kbd> <kbd class="kbd docutils literal notranslate">Requests:</kbd> <kbd class="kbd docutils literal notranslate">Threshold</kbd> <kbd class="kbd docutils literal notranslate">reached</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">[alert]</kbd> <kbd class="kbd docutils literal notranslate">Requests:</kbd> <kbd class="kbd docutils literal notranslate">Threshold</kbd> <kbd class="kbd docutils literal notranslate">reached</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">subject</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">リクエスト数超過</kbd></p></td>
 </tr>
@@ -525,7 +524,7 @@
 <td><p><kbd class="kbd docutils literal notranslate">body.plain</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">その他</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">RegExp</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">RequestCount</kbd> <kbd class="kbd docutils literal notranslate">.</kbd> <kbd class="kbd docutils literal notranslate">(\d{2,3})</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">RequestCount</kbd> <kbd class="kbd docutils literal notranslate">.</kbd> <kbd class="kbd docutils literal notranslate">(\d{2,3})</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">requestcount</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">\1</kbd></p></td>
 </tr>
@@ -576,7 +575,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id18">
-<caption><span class="caption-number">表 1.41 </span><span class="caption-text">.envの設定値</span><a class="headerlink" href="#id18" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 1.42 </span><span class="caption-text">.envの設定値</span><a class="headerlink" href="#id18" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -588,7 +587,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">AGENT_NAME</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ita</kbd>-<kbd class="kbd docutils literal notranslate">oase</kbd>-<kbd class="kbd docutils literal notranslate">agent</kbd>-<kbd class="kbd docutils literal notranslate">01</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ita</kbd>-<kbd class="kbd docutils literal notranslate">oase</kbd>-<kbd class="kbd docutils literal notranslate">agent</kbd>-<kbd class="kbd docutils literal notranslate">01</kbd></p></td>
 </tr>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">EXASTRO_URL</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">http://********</kbd></p></td>
@@ -694,7 +693,7 @@
 <div class="line">今回は、3台稼働の時にリクエスト数超過のイベントを発生させて、設定を進めましょう。</div>
 </div>
 <table class="docutils align-default" id="id23">
-<caption><span class="caption-number">表 1.42 </span><span class="caption-text">通知メール一覧</span><a class="headerlink" href="#id23" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 1.43 </span><span class="caption-text">通知メール一覧</span><a class="headerlink" href="#id23" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 66.7%" />
@@ -706,12 +705,12 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">件名</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">[alert]</kbd> <kbd class="kbd docutils literal notranslate">Requests:</kbd> <kbd class="kbd docutils literal notranslate">Threshold</kbd> <kbd class="kbd docutils literal notranslate">reached</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">[alert]</kbd> <kbd class="kbd docutils literal notranslate">Requests:</kbd> <kbd class="kbd docutils literal notranslate">Threshold</kbd> <kbd class="kbd docutils literal notranslate">reached</kbd></p></td>
 </tr>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">本文</kbd></p></td>
 <td><div class="line-block">
 <div class="line"><kbd class="kbd docutils literal notranslate">リクエスト数が、閾値を超えました。</kbd></div>
-<div class="line"><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">RequestCount</kbd> <kbd class="kbd docutils literal notranslate">&gt;</kbd> <kbd class="kbd docutils literal notranslate">150</kbd></kbd></div>
+<div class="line"><kbd class="kbd docutils literal notranslate">RequestCount</kbd> <kbd class="kbd docutils literal notranslate">&gt;</kbd> <kbd class="kbd docutils literal notranslate">150</kbd></div>
 </div>
 </td>
 </tr>
@@ -740,7 +739,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id24">
-<caption><span class="caption-number">表 1.43 </span><span class="caption-text">フィルターの設定値</span><a class="headerlink" href="#id24" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 1.44 </span><span class="caption-text">フィルターの設定値</span><a class="headerlink" href="#id24" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 20.0%" />
 <col style="width: 20.0%" />
@@ -757,7 +756,7 @@
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">True</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">request_limit_max</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">[[&quot;subject&quot;,</kbd> <kbd class="kbd docutils literal notranslate">&quot;==&quot;,</kbd> <kbd class="kbd docutils literal notranslate">&quot;リクエスト数超過&quot;],</kbd> <kbd class="kbd docutils literal notranslate">[&quot;requestcount&quot;,</kbd> <kbd class="kbd docutils literal notranslate">&quot;==&quot;,</kbd> <kbd class="kbd docutils literal notranslate">&quot;150&quot;]]</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">[[&quot;subject&quot;,</kbd> <kbd class="kbd docutils literal notranslate">&quot;==&quot;,</kbd> <kbd class="kbd docutils literal notranslate">&quot;リクエスト数超過&quot;],</kbd> <kbd class="kbd docutils literal notranslate">[&quot;requestcount&quot;,</kbd> <kbd class="kbd docutils literal notranslate">&quot;==&quot;,</kbd> <kbd class="kbd docutils literal notranslate">&quot;150&quot;]]</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">ユニーク</kbd></p></td>
 </tr>
 </tbody>
@@ -818,7 +817,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id25">
-<caption><span class="caption-number">表 1.44 </span><span class="caption-text">アクションの設定値</span><a class="headerlink" href="#id25" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 1.45 </span><span class="caption-text">アクションの設定値</span><a class="headerlink" href="#id25" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -893,7 +892,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id26">
-<caption><span class="caption-number">表 1.45 </span><span class="caption-text">ルールの設定値</span><a class="headerlink" href="#id26" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 1.46 </span><span class="caption-text">ルールの設定値</span><a class="headerlink" href="#id26" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 7.7%" />
 <col style="width: 11.5%" />
@@ -946,11 +945,11 @@
 <td><p><kbd class="kbd docutils literal notranslate">sorry画面切り替え</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">sorry画面切り替え</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">request</kbd>-<kbd class="kbd docutils literal notranslate">limit_max</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">request</kbd>-<kbd class="kbd docutils literal notranslate">limit_max</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">sorry_switch</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">True</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">False</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">[&quot;page&quot;,</kbd> <kbd class="kbd docutils literal notranslate">&quot;sorry&quot;]</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">[&quot;page&quot;,</kbd> <kbd class="kbd docutils literal notranslate">&quot;sorry&quot;]</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">3600</kbd></p></td>
 </tr>
 </tbody>
@@ -1003,7 +1002,7 @@
 </div>
 </div>
 <table class="docutils align-default" id="id27">
-<caption><span class="caption-number">表 1.46 </span><span class="caption-text">通知メール一覧</span><a class="headerlink" href="#id27" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 1.47 </span><span class="caption-text">通知メール一覧</span><a class="headerlink" href="#id27" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 66.7%" />
@@ -1015,12 +1014,12 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">件名</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">[alert]</kbd> <kbd class="kbd docutils literal notranslate">Requests:</kbd> <kbd class="kbd docutils literal notranslate">Threshold</kbd> <kbd class="kbd docutils literal notranslate">reached</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">[alert]</kbd> <kbd class="kbd docutils literal notranslate">Requests:</kbd> <kbd class="kbd docutils literal notranslate">Threshold</kbd> <kbd class="kbd docutils literal notranslate">reached</kbd></p></td>
 </tr>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">本文</kbd></p></td>
 <td><div class="line-block">
 <div class="line"><kbd class="kbd docutils literal notranslate">リクエスト数が、閾値を超えました。</kbd></div>
-<div class="line"><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">RequestCount</kbd> <kbd class="kbd docutils literal notranslate">&gt;</kbd> <kbd class="kbd docutils literal notranslate">150</kbd></kbd></div>
+<div class="line"><kbd class="kbd docutils literal notranslate">RequestCount</kbd> <kbd class="kbd docutils literal notranslate">&gt;</kbd> <kbd class="kbd docutils literal notranslate">150</kbd></div>
 </div>
 </td>
 </tr>
@@ -1060,8 +1059,8 @@
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2023 NEC Corporation</small>
-    <small><a href="/terms/ja.html">サイト規約</a></small>
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.5/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

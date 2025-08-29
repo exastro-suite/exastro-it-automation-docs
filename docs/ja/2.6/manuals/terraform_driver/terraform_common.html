@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>1. Terraform driver 共通 &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="2. Terraform Cloud/EP driver" href="terraform_cloud_ep.html" />
+    <link rel="prev" title="Terraform ドライバ" href="index.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/terraform_driver/terraform_common.html" selected>current</option>
+              <option value="../../../../ja/2.6/manuals/terraform_driver/terraform_common.html" selected>2.6(current)</option>
+              <option value="../../../../ja/2.5/manuals/terraform_driver/terraform_common.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/terraform_driver/terraform_common.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/terraform_driver/terraform_common.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/terraform_driver/terraform_common.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/terraform_driver/terraform_common.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/terraform_driver/terraform_common.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/terraform_driver/terraform_common.html" selected>日本語</option>
+              <option value="../../../../en/2.6/manuals/terraform_driver/terraform_common.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="index.html" title="前のトピックへ">Terraform ドライバ</a></li>
+        <li class="next"><a href="terraform_cloud_ep.html" title="次のトピックへ"><span class="section-number">2. </span>Terraform Cloud/EP driver</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../it_automation_base/index.html">基本操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../host_group/index.html">ホストグループ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible-driver/index.html">Ansible ドライバ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Terraform ドライバ</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. Terraform driver 共通</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">1.1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1.2. 概要</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#terraform">1.2.1. Terraformについて</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#terrform-driver">1.2.2. Terrform driverについて</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#terraform-common-variable-handling">1.3. 変数の取り扱い</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id4">1.3.1. 変数の種類</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id5">1.3.2. 変数の抜出および具体値登録</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#terraform-common-variable-type">1.3.3. 変数のタイプについて</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">1.4. 構築コード記述方法</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#module">1.4.1. Moduleの記述</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#policy">1.4.2. Policyの記述</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">1.5. 付録</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#modulevariable">1.5.1. Module素材「Variableブロック」記入例・登録例</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#terraform-nested-example">1.5.2. 変数ネスト管理フロー例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="terraform_cloud_ep.html">2. Terraform Cloud/EP driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="terraform_cli.html">3. Terraform CLI driver</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import/index.html">エクスポート・インポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cicd_for_iac/index.html">CI/CD for IaC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintenance/index.html">メンテナンス</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">1. Terraform driver 共通</a><ul>
+<li><a class="reference internal" href="#id1">1.1. はじめに</a></li>
+<li><a class="reference internal" href="#id2">1.2. 概要</a><ul>
+<li><a class="reference internal" href="#terraform">1.2.1. Terraformについて</a></li>
+<li><a class="reference internal" href="#terrform-driver">1.2.2. Terrform driverについて</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#terraform-common-variable-handling">1.3. 変数の取り扱い</a><ul>
+<li><a class="reference internal" href="#id4">1.3.1. 変数の種類</a></li>
+<li><a class="reference internal" href="#id5">1.3.2. 変数の抜出および具体値登録</a></li>
+<li><a class="reference internal" href="#terraform-common-variable-type">1.3.3. 変数のタイプについて</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7">1.4. 構築コード記述方法</a><ul>
+<li><a class="reference internal" href="#module">1.4.1. Moduleの記述</a></li>
+<li><a class="reference internal" href="#policy">1.4.2. Policyの記述</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">1.5. 付録</a><ul>
+<li><a class="reference internal" href="#modulevariable">1.5.1. Module素材「Variableブロック」記入例・登録例</a></li>
+<li><a class="reference internal" href="#terraform-nested-example">1.5.2. 変数ネスト管理フロー例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">Terraform ドライバ</a></li>
+    
+    <li><span class="section-number">1. </span>Terraform driver 共通</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="terraform-driver">
+<h1><span class="section-number">1. </span>Terraform driver 共通<a class="headerlink" href="#terraform-driver" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2><span class="section-number">1.1. </span>はじめに<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書では、「<a class="reference internal" href="terraform_cloud_ep.html"><span class="doc">Terraform Cloud/EP driver</span></a>」「<a class="reference internal" href="terraform_cli.html"><span class="doc">Terraform CLI driver</span></a>」（以下、Terraform driver）における共通の機能について説明します。</div>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">1.2. </span>概要<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本章ではTerraformおよびTerraform driverについて説明します。</div>
+</div>
+<section id="terraform">
+<h3><span class="section-number">1.2.1. </span>Terraformについて<a class="headerlink" href="#terraform" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Terraform とは HashiCorp社 が提供するインフラストラクチャを効率化するオーケストレーションツールです。</div>
+<div class="line">HCL(HashiCorp ConfigurationLanguage)という言語でコード化したインフラストラクチャ構成について、実行計画を生成したうえで構築を実行します。</div>
+<div class="line">また、Terraform CloudおよびTerraform EnterpriseではPolicy as Codeによるアクセスポリシーをコード化して管理することが可能です。</div>
+<div class="line">Terraformの詳細情報については、Terraformの製品マニュアルを参照してください。</div>
+</div>
+</section>
+<section id="terrform-driver">
+<h3><span class="section-number">1.2.2. </span>Terrform driverについて<a class="headerlink" href="#terrform-driver" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Terraform driverはITAの機能として、Teraformへの実行および実行ログの取得を行うことができます。</div>
+<div class="line">作業の実行（Plan /Apply）に利用するModuleファイルや、PolicyCheckを行うためのPolicyファイルをITA上で部品化し、再利用できるよう管理することができます。</div>
+<div class="line">また、Terraform driverは、Module中の変数を画面から設定することができます。</div>
+<div class="line">詳細は「<a class="reference internal" href="#terraform-common-variable-handling"><span class="std std-ref">変数の取り扱い</span></a>」を参照してください。</div>
+</div>
+<figure class="align-default" id="id10">
+<a class="reference internal image-reference" href="../../_images/overview.png"><img alt="ITAシステム概要" src="../../_images/overview.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.109 </span><span class="caption-text">ITAシステム概要</span><a class="headerlink" href="#id10" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">Terraform driverには以下の2種類があります。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line"><strong>Terraform Cloud/EP driver</strong></div>
+<div class="line">ITAで登録した Terraform Cloud もしくは Terraform Enterprise に対し、Organizationの作成、Workspaceの作成、作業の実行（Plan/ PolicyCheck / Apply）および作業ログの取得を行うことができます。</div>
+<div class="line">操作方法等については「<a class="reference internal" href="terraform_cloud_ep.html"><span class="doc">Terraform Cloud/EP driver</span></a>」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>Terraform CLI driver</strong></div>
+<div class="line">ITAと同一の環境内にインストールしたTerraformに対し、作業の実行（Plan/ Apply）および作業ログの取得を行うことができます。</div>
+<div class="line">操作方法等については「<a class="reference internal" href="terraform_cli.html"><span class="doc">Terraform CLI driver</span></a>」を参照してください。</div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section id="terraform-common-variable-handling">
+<span id="id3"></span><h2><span class="section-number">1.3. </span>変数の取り扱い<a class="headerlink" href="#terraform-common-variable-handling" title="Link to this heading">¶</a></h2>
+<section id="id4">
+<h3><span class="section-number">1.3.1. </span>変数の種類<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Terraform driverでは、Module中の変数の具体値をITAの設定画面から設定することができます。</div>
+</div>
+<div class="line-block">
+<div class="line">※設定方法の詳細は、「<a class="reference internal" href="terraform_cloud_ep.html"><span class="doc">Terraform Cloud/EP driver</span></a> -&gt; <a class="reference internal" href="terraform_cloud_ep.html#terraform-cloud-ep-substitution-value-auto-registration-setting"><span class="std std-ref">代入値自動登録設定</span></a>」「<a class="reference internal" href="terraform_cli.html"><span class="doc">Terraform CLI driver</span></a> -&gt; <a class="reference internal" href="terraform_cli.html#terraform-cli-substitution-value-auto-registration-setting"><span class="std std-ref">代入値自動登録設定</span></a>」を参照してください。</div>
+<div class="line">Moduleファイルの中のVariableブロックに定義した対象を変数として扱えます。</div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>種類</p></th>
+<th class="head"><p>内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>通常変数</p></td>
+<td><p>変数名に対して具体値を定義できる変数です。</p>
+<p>Module内の変数は HCL（HashiCorp Configuration Language）のVariableブロックのルールに従い以下の形式で記述してください。</p>
+<p>この場合「xxx」がModuleから変数として抜出されます。</p>
+<p>また、typeとdefault値を設定することができます。</p>
+<p>この場合、
+「○○」がtypeとして、「△△」がdefaultとして抜出されます。</p>
+<p>typeとdefaultの設定は必須ではありません。</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>variable &quot;xxx&quot; {</p>
+<p>　type = ○○</p>
+<p>　default = △△</p>
+<p>　～省略～</p>
+<p>}</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id5">
+<h3><span class="section-number">1.3.2. </span>変数の抜出および具体値登録<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">ITAにアップロードされたModule素材から変数を抜出して具体値を登録できます。</div>
+<div class="line">抜出した変数の具体値は「<a class="reference internal" href="terraform_cloud_ep.html"><span class="doc">Terraform Cloud/EP driver</span></a> -&gt; <a class="reference internal" href="terraform_cloud_ep.html#terraform-cloud-ep-substitution-value-auto-registration-setting"><span class="std std-ref">代入値自動登録設定</span></a>」「<a class="reference internal" href="terraform_cli.html"><span class="doc">Terraform CLI driver</span></a> -&gt; <a class="reference internal" href="terraform_cli.html#terraform-cli-substitution-value-auto-registration-setting"><span class="std std-ref">代入値自動登録設定</span></a>」にて、パラメータシートと連携させることで具体値を登録します。</div>
+</div>
+<div class="line-block">
+<div class="line">Terraform Cloud/EP driverでは、登録された変数と具体値は作業実行時に連携先TerraformのWorkspaceで管理するVariablesに対し、「変数名」が「Key」、「具体値」が「Value」として登録されます。</div>
+<div class="line">Terraform CLI driverでは、登録された変数と具体値は、作業実行時に生成されるterraform.tfvarsファイルに「変数名」が「Key」、「具体値」が「Value」として記載され、作業実行で使用されます。</div>
+</div>
+</section>
+<section id="terraform-common-variable-type">
+<span id="id6"></span><h3><span class="section-number">1.3.3. </span>変数のタイプについて<a class="headerlink" href="#terraform-common-variable-type" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">変数内でtypeを設定することができます。</div>
+<div class="line">Module内の変数は HCL（HashiCorp ConfigurationLanguage）の変数ルールに従い記述してください。</div>
+</div>
+<div class="line-block">
+<div class="line">ITA内で扱う変数は以下の通りです。</div>
+</div>
+<table class="docutils align-left" id="id11">
+<caption><span class="caption-number">表 1.153 </span><span class="caption-text">変数タイプ</span><a class="headerlink" href="#id11" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 30.0%" />
+<col style="width: 10.0%" />
+<col style="width: 10.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>type</p></th>
+<th class="head"><p>詳細</p></th>
+<th class="head"><div class="line-block">
+<div class="line">メンバー変数対象</div>
+<div class="line">※1</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">代入順序対象</div>
+<div class="line">※2</div>
+</div>
+</th>
+<th class="head"><p>typeの記述例</p></th>
+<th class="head"><p>defaultの記述例</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>string</p></td>
+<td><p>文字列型。</p></td>
+<td><p>×</p></td>
+<td><p>×</p></td>
+<td><p>string</p></td>
+<td><p>あいう</p></td>
+</tr>
+<tr class="row-odd"><td><p>number</p></td>
+<td><p>数字型。</p></td>
+<td><p>×</p></td>
+<td><p>×</p></td>
+<td><p>number</p></td>
+<td><p>123</p></td>
+</tr>
+<tr class="row-even"><td><p>bool</p></td>
+<td><p>Boolean型（trueまたはfalse）。</p></td>
+<td><p>×</p></td>
+<td><p>×</p></td>
+<td><p>bool</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>list</p></td>
+<td><p>配列型。</p></td>
+<td><p>×</p></td>
+<td><p>〇</p></td>
+<td><p>list(string)</p></td>
+<td><p>[&quot;あ&quot;, &quot;い&quot;, &quot;う&quot;]</p></td>
+</tr>
+<tr class="row-even"><td><p>set</p></td>
+<td><div class="line-block">
+<div class="line">配列型。ユニークな値の設定が求められる。</div>
+<div class="line">ITA上では具体値がユニークか否かは判定されません。</div>
+</div>
+</td>
+<td><p>×</p></td>
+<td><p>〇</p></td>
+<td><p>set(number)</p></td>
+<td><p>[1, 2, 3]</p></td>
+</tr>
+<tr class="row-odd"><td><p>tuple</p></td>
+<td><div class="line-block">
+<div class="line">配列型。予めn番目にどのtypeを設定するか決めておく必要があります。</div>
+<div class="line">値の入力数が決められているため、ITシステムA上ではメンバー変数としてプルダウンで選択します。</div>
+</div>
+</td>
+<td><p>〇</p></td>
+<td><p>×</p></td>
+<td><p>tuple([string, number])</p></td>
+<td><p>[&quot;あいう&quot;, 2023]</p></td>
+</tr>
+<tr class="row-even"><td><p>map</p></td>
+<td><div class="line-block">
+<div class="line">key-value（連想配列）型。ITA上ではmap型が一つ以上含まれているtypeを設定した場合、type情報からkey値を特定できないため、代入値自動登録設定をする場合はHCL設定をONする必要があります。</div>
+<div class="line">HCL設定については「<a class="reference internal" href="terraform_cloud_ep.html#terraform-cloud-ep-substitution-value-auto-registration-setting"><span class="std std-ref">代入値自動登録設定</span></a>」を参照してください。</div>
+</div>
+</td>
+<td><p>×</p></td>
+<td><p>×</p></td>
+<td><p>map(string)</p></td>
+<td><p>{&quot;test_key&quot; = &quot;test_value&quot;}</p></td>
+</tr>
+<tr class="row-odd"><td><p>object</p></td>
+<td><div class="line-block">
+<div class="line">key-value（連想配列）型。ITA上ではkey名をメンバー変数として扱います。key名に日本語は含まないでください。</div>
+</div>
+</td>
+<td><p>〇</p></td>
+<td><p>×</p></td>
+<td><p>object({test_key = string})</p></td>
+<td><p>{&quot;test_key&quot; = &quot;test_value&quot;}</p></td>
+</tr>
+<tr class="row-even"><td><p>any</p></td>
+<td><p>すべてに適合する型ですが、ITA上ではstring型と同じ扱いになります。</p></td>
+<td><p>×</p></td>
+<td><p>×</p></td>
+<td><p>any</p></td>
+<td><p>あいう</p></td>
+</tr>
+<tr class="row-odd"><td><p>記載なし</p></td>
+<td><p>typeを記載しなかった場合、ITA上では string型と同じ扱いになります。</p></td>
+<td><p>×</p></td>
+<td><p>×</p></td>
+<td></td>
+<td><p>あいう</p></td>
+</tr>
+</tbody>
+</table>
+<ul id="terraform-common-member-vars-description">
+<li><div class="line-block">
+<div class="line"><strong>※1 …メンバー変数対象</strong></div>
+<div class="line">変数がkey-value型である場合のkey名です。</div>
+<div class="line">変数のタイプがobjectの場合、&lt;KEY&gt; = &lt;TYPE&gt; の &lt;KEY&gt; をメンバー変数とします。</div>
+<div class="line">変数のタイプがtupleの場合、tuple内に定義した変数を先頭から[0],[1],[2]…と採番してメンバー変数となります。</div>
+</div>
+<div class="line-block">
+<div class="line">変数のタイプが変数ネスト管理メニューの登録対象の場合、最大繰返数をもとに[0],[1],[2]…と採番してメンバー変数となります。</div>
+<div class="line">変数ネストに関しては「<a class="reference internal" href="terraform_cloud_ep.html"><span class="doc">Terraform Cloud/EP driver</span></a> -&gt; <a class="reference internal" href="terraform_cloud_ep.html#terraform-cloud-ep-nested-variable"><span class="std std-ref">変数ネスト管理</span></a>」「<a class="reference internal" href="terraform_cli.html"><span class="doc">Terraform CLI driver</span></a> -&gt; <a class="reference internal" href="terraform_cli.html#terraform-cli-nested-variable"><span class="std std-ref">変数ネスト管理</span></a>」を参照してください。</div>
+</div>
+<blockquote>
+<div><ul>
+<li><div class="line-block">
+<div class="line"><strong>例: 変数タイプがobjectの場合</strong></div>
+</div>
+</li>
+</ul>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">tfファイルと登録値</div>
+</div>
+<div class="highlight-hcl notranslate"><div class="highlight"><pre><span></span><span class="kr">variable</span><span class="w"> </span><span class="nv">&quot;VAR_hoge&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">object</span><span class="p">({</span>
+<span class="w">      </span><span class="na">NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span>
+<span class="w">      </span><span class="na">IP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="w">    </span><span class="nb">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="s2">&quot;NAME&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;machine_01&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;IP&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">代入値例(代入値自動登録設定)</div>
+</div>
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項番</p></th>
+<th class="head"><p>変数名</p></th>
+<th class="head"><p>メンバー変数</p></th>
+<th class="head"><p>代入順序</p></th>
+<th class="head"><p>パラメータシートの入力値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>VAR_hoge</p></td>
+<td><p>NAME</p></td>
+<td><p>入力不可</p></td>
+<td><p>my_machine</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>VAR_hoge</p></td>
+<td><p>IP</p></td>
+<td><p>入力不可</p></td>
+<td><p>192.168.100.1</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">Terraformに送信される値</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
+<span class="w">    </span><span class="nv">NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my_machine&quot;</span>
+<span class="w">    </span><span class="nv">IP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;192.168.100.1&quot;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><ul>
+<li><div class="line-block">
+<div class="line"><strong>例: 変数のタイプがtupleの場合</strong></div>
+</div>
+</li>
+</ul>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">tfファイルと登録値</div>
+</div>
+<div class="highlight-hcl notranslate"><div class="highlight"><pre><span></span><span class="kr">variable</span><span class="w"> </span><span class="nv">&quot;VAR_hoge&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">tuple</span><span class="p">([</span><span class="nb">string,number</span><span class="p">])</span>
+<span class="w">    </span><span class="na">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;abc&quot;</span><span class="p">,</span><span class="m">2023</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">代入値例(代入値自動登録設定)</div>
+</div>
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項番</p></th>
+<th class="head"><p>変数名</p></th>
+<th class="head"><p>メンバー変数</p></th>
+<th class="head"><p>代入順序</p></th>
+<th class="head"><p>パラメータシートの入力値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>VAR_hoge</p></td>
+<td><p>[0]</p></td>
+<td><p>入力不可</p></td>
+<td><p>def</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>VAR_hoge</p></td>
+<td><p>[1]</p></td>
+<td><p>入力不可</p></td>
+<td><p>2024</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">Terraformに送信される値</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="s2">&quot;def&quot;</span>,<span class="w"> </span><span class="m">2024</span><span class="o">]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><ul>
+<li><div class="line-block">
+<div class="line"><strong>例: 変数のタイプがネスト管理対象の場合</strong></div>
+</div>
+</li>
+</ul>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">tfファイルと登録値</div>
+</div>
+<div class="highlight-hcl notranslate"><div class="highlight"><pre><span></span><span class="kr">variable</span><span class="w"> </span><span class="nv">&quot;VAR_hoge&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="kt">set</span><span class="p">(</span><span class="kt">string</span><span class="p">))</span>
+<span class="w">    </span><span class="na">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">[</span><span class="s2">&quot;aaa&quot;,&quot;bbb&quot;</span><span class="p">]</span>
+<span class="w">      </span><span class="p">[</span><span class="s2">&quot;ccc&quot;,&quot;ddd&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">代入値例(代入値自動登録設定)</div>
+</div>
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項番</p></th>
+<th class="head"><p>変数名</p></th>
+<th class="head"><p>メンバー変数</p></th>
+<th class="head"><p>代入順序</p></th>
+<th class="head"><p>パラメータシートの入力値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>VAR_hoge</p></td>
+<td><p>[0]</p></td>
+<td><p>1</p></td>
+<td><p>あああ</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>VAR_hoge</p></td>
+<td><p>[0]</p></td>
+<td><p>2</p></td>
+<td><p>いいい</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>VAR_hoge</p></td>
+<td><p>[1]</p></td>
+<td><p>1</p></td>
+<td><p>ううう</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>VAR_hoge</p></td>
+<td><p>[1]</p></td>
+<td><p>2</p></td>
+<td><p>えええ</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">Terraformに送信される値</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>
+<span class="w">   </span><span class="o">[</span><span class="s2">&quot;あああ&quot;</span>,<span class="w"> </span><span class="s2">&quot;いいい&quot;</span><span class="o">]</span>,
+<span class="w">   </span><span class="o">[</span><span class="s2">&quot;ううう&quot;</span>,<span class="w"> </span><span class="s2">&quot;えええ&quot;</span><span class="o">]</span>
+<span class="o">]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+<ul id="terraform-common-substitution-order-description">
+<li><div class="line-block">
+<div class="line"><strong>※2 …代入順序対象</strong></div>
+<div class="line">変数に複数具体値を設定する際の先頭から代入する順序です。</div>
+<div class="line">変数または階層構造の変数の最下層の変数のタイプがlist,setの場合、「<a class="reference internal" href="terraform_cloud_ep.html"><span class="doc">Terraform Cloud/EP driver</span></a> -&gt; <a class="reference internal" href="terraform_cloud_ep.html#terraform-cloud-ep-substitution-value-auto-registration-setting"><span class="std std-ref">代入値自動登録設定</span></a>」「<a class="reference internal" href="terraform_cli.html"><span class="doc">Terraform CLI driver</span></a> -&gt; <a class="reference internal" href="terraform_cli.html#terraform-cli-substitution-value-auto-registration-setting"><span class="std std-ref">代入値自動登録設定</span></a>」にて設定可能です。</div>
+</div>
+<blockquote>
+<div><ul>
+<li><div class="line-block">
+<div class="line"><strong>例: 変数タイプがlistの場合</strong></div>
+</div>
+</li>
+</ul>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">tfファイルと登録値</div>
+</div>
+<div class="highlight-hcl notranslate"><div class="highlight"><pre><span></span><span class="kr">variable</span><span class="w"> </span><span class="nv">&quot;VAR_hoge&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="kt">string</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">代入値例(代入値自動登録設定)</div>
+</div>
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項番</p></th>
+<th class="head"><p>変数名</p></th>
+<th class="head"><p>メンバー変数</p></th>
+<th class="head"><p>代入順序</p></th>
+<th class="head"><p>パラメータシートの入力値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>VAR_hoge</p></td>
+<td><p>入力不要</p></td>
+<td><p>1</p></td>
+<td><p>あいう</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>VAR_hoge</p></td>
+<td><p>入力不要</p></td>
+<td><p>2</p></td>
+<td><p>かきく</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">Terraformに送信される値</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="s2">&quot;あいう&quot;</span>,<span class="s2">&quot;かきく&quot;</span><span class="o">]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><ul>
+<li><div class="line-block">
+<div class="line"><strong>例: 階層構造の変数の最下層の変数タイプがsetの場合</strong></div>
+</div>
+</li>
+</ul>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">tfファイルと登録値</div>
+</div>
+<div class="highlight-hcl notranslate"><div class="highlight"><pre><span></span><span class="kr">variable</span><span class="w"> </span><span class="nv">&quot;VAR_hoge&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">object</span><span class="p">({</span>
+<span class="w">      </span><span class="na">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">set</span><span class="p">(</span><span class="kt">number</span><span class="p">)</span>
+<span class="w">   </span><span class="p">})</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">代入値例(代入値自動登録設定)</div>
+</div>
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項番</p></th>
+<th class="head"><p>変数名</p></th>
+<th class="head"><p>メンバー変数</p></th>
+<th class="head"><p>代入順序</p></th>
+<th class="head"><p>パラメータシートの入力値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>VAR_hoge</p></td>
+<td><p>key</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>VAR_hoge</p></td>
+<td><p>key</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">Terraformに送信される値</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
+<span class="w">    </span><span class="nv">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">1</span>,2<span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+<section id="id7">
+<h2><span class="section-number">1.4. </span>構築コード記述方法<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Terraform driverでModuleおよびPolicyの記述について説明します。</div>
+<div class="line">Policyについては Terraform Cloud/EP driver のみ有効な機能です。</div>
+</div>
+<section id="module">
+<span id="terraform-common-module-description"></span><h3><span class="section-number">1.4.1. </span>Moduleの記述<a class="headerlink" href="#module" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Moduleファイルは、HCL（HashiCorp ConfigurationLanguage）というHashiCorp社独自の言語により記述します。</div>
+<div class="line">HCLの詳細については、Terraformの製品マニュアルを参照してください。</div>
+</div>
+</section>
+<section id="policy">
+<span id="terraform-common-policy-description"></span><h3><span class="section-number">1.4.2. </span>Policyの記述<a class="headerlink" href="#policy" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Policyファイルは、Sentinel languageいうHashiCorp社独自の言語により記述します。</div>
+<div class="line">Sentinel languageの詳細については、Terraformの製品マニュアルを参照してください。</div>
+</div>
+</section>
+</section>
+<section id="id8">
+<h2><span class="section-number">1.5. </span>付録<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h2>
+<section id="modulevariable">
+<span id="terraform-cloud-ep-module-example"></span><h3><span class="section-number">1.5.1. </span>Module素材「Variableブロック」記入例・登録例<a class="headerlink" href="#modulevariable" title="Link to this heading">¶</a></h3>
+<p>Module素材の「Variableブロック」の記入例と、代入値自動登録設定への登録例を、変数のタイプ毎に記載します。</p>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><strong>シンプルなパターン</strong></div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">string型</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/variable_string.png"><img alt="string型" src="../../_images/variable_string.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">number型</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/variable_number.png"><img alt="number型" src="../../_images/variable_number.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">bool型</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/variable_bool.png"><img alt="bool型" src="../../_images/variable_bool.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">list型</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/variable_list.png"><img alt="list型" src="../../_images/variable_list.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">set型</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/variable_set.png"><img alt="set型" src="../../_images/variable_set.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">tuple型</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/variable_tuple.png"><img alt="tuple型" src="../../_images/variable_tuple.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">map型</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/variable_map.png"><img alt="map型" src="../../_images/variable_map.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">object型</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/variable_object.png"><img alt="object型" src="../../_images/variable_object.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">any型</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/variable_any.png"><img alt="map型" src="../../_images/variable_any.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">typeの記載がない</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/variable_no_type.png"><img alt="typeの記載がない" src="../../_images/variable_no_type.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+</ol>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>複雑なパターン</strong></div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">list型の中にlist型</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/variable_list_list.png"><img alt="list型の中にlist型" src="../../_images/variable_list_list.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">list型の中にobject型</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/variable_list_object.png"><img alt="list型の中にobject型" src="../../_images/variable_list_object.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">object型の中のlist型の中にobject型</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/variable_object_list_object.png"><img alt="object型の中のlist型の中にobject型" src="../../_images/variable_object_list_object.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+</ol>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>特殊なパターン</strong></div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">list型の中にmap型</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/variable_list_map.png"><img alt="list型の中にmap型" src="../../_images/variable_list_map.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="terraform-nested-example">
+<span id="id9"></span><h3><span class="section-number">1.5.2. </span>変数ネスト管理フロー例<a class="headerlink" href="#terraform-nested-example" title="Link to this heading">¶</a></h3>
+<p>変数ネスト管理の操作例を記載します。</p>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><strong>最大繰返数を増加させる</strong></div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/nested_gain.png"><img alt="最大繰返数を増加させる" src="../../_images/nested_gain.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>最大繰返数を減少させる</strong></div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/nested_decrease.png"><img alt="最大繰返数を減少させる" src="../../_images/nested_decrease.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+</ol>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span>Terraform ドライバ</a></li>
+    <li class="next"><a href="terraform_cloud_ep.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">2. </span>Terraform Cloud/EP driver</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

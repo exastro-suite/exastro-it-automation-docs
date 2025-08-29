@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=57fb2187" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,9 +72,10 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
-              <option value="../../../../ja/2.5/configuration/kubernetes/kubernetes.html" selected>current</option>
-              <option value="../../../../ja/2.5/configuration/kubernetes/kubernetes.html" selected>2.5(current)</option>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/configuration/kubernetes/kubernetes.html">current</option>
+              <option value="../../../../ja/2.6/configuration/kubernetes/kubernetes.html">2.6(current)</option>
+              <option value="../../../../ja/2.5/configuration/kubernetes/kubernetes.html" selected>2.5</option>
               <option value="../../../../ja/2.4/configuration/kubernetes/kubernetes.html">2.4</option>
               <option value="../../../../ja/2.3/configuration/kubernetes/kubernetes.html">2.3</option>
               <option value="../../../../ja/2.2/configuration/kubernetes/kubernetes.html">2.2</option>
@@ -91,7 +92,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               <option value="../../../../ja/2.5/configuration/kubernetes/kubernetes.html" selected>日本語</option>
               <option value="../../../../en/2.5/configuration/kubernetes/kubernetes.html">English</option>
             </select>
@@ -143,6 +144,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
 </ul>
 
     <!-- <ul>
@@ -323,7 +325,7 @@
 <section id="kubespray">
 <h4>Kubesprayインストール<a class="headerlink" href="#kubespray" title="Link to this heading">¶</a></h4>
 <div class="line-block">
-<div class="line">Kubesprayのインストールは <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">git</kbd> <kbd class="kbd docutils literal notranslate">clone</kbd></kbd> を用いてインストールします。</div>
+<div class="line">Kubesprayのインストールは <kbd class="kbd docutils literal notranslate">git</kbd> <kbd class="kbd docutils literal notranslate">clone</kbd> を用いてインストールします。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id16">
 <div class="code-block-caption"><span class="caption-number">リスト 2.8 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id16" title="Link to this code">¶</a></div>
@@ -335,7 +337,7 @@ pip3.9<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> 
 </pre></div>
 </div>
 </div>
-<p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Successfully</kbd> <kbd class="kbd docutils literal notranslate">installed</kbd></kbd> が最後に表示されれば、<kbd class="kbd docutils literal notranslate">Kubespray</kbd> のインストールは完了となります。</p>
+<p><kbd class="kbd docutils literal notranslate">Successfully</kbd> <kbd class="kbd docutils literal notranslate">installed</kbd> が最後に表示されれば、<kbd class="kbd docutils literal notranslate">Kubespray</kbd> のインストールは完了となります。</p>
 </section>
 </section>
 <section id="id5">
@@ -368,8 +370,8 @@ pip3.9<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> 
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="etc-sysctl-conf">
-<div class="code-block-caption"><span class="caption-number">リスト 2.11 </span><span class="caption-text">sysctl.conf</span><a class="headerlink" href="#etc-sysctl-conf" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-number">リスト 2.11 </span><span class="caption-text">sysctl.conf</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span># sysctl settings are defined through files in
 # /usr/lib/sysctl.d/, /run/sysctl.d/, and /etc/sysctl.d/.
 #
@@ -388,8 +390,8 @@ pip3.9<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> 
 <li><div class="line-block">
 <div class="line">ファイアーウォールのインストール・無効化</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id19">
-<div class="code-block-caption"><span class="caption-number">リスト 2.12 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-number">リスト 2.12 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id20" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dnf<span class="w"> </span>install<span class="w"> </span>firewalld
 
 disable<span class="w"> </span>firewalld
@@ -407,8 +409,8 @@ status<span class="w"> </span>firewalld
 <div class="line-block">
 <div class="line">現状の確認</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id20">
-<div class="code-block-caption"><span class="caption-number">リスト 2.13 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id20" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-number">リスト 2.13 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>getenforce
 </pre></div>
 </div>
@@ -419,14 +421,14 @@ status<span class="w"> </span>firewalld
 <div class="line-block">
 <div class="line">SELINUX=disabled オプションを設定</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id21">
-<div class="code-block-caption"><span class="caption-number">リスト 2.14 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id22">
+<div class="code-block-caption"><span class="caption-number">リスト 2.14 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id22" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>/etc/selinux/config
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id22">
-<div class="code-block-caption"><span class="caption-number">リスト 2.15 </span><span class="caption-text">sysctl.conf</span><a class="headerlink" href="#id22" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id23">
+<div class="code-block-caption"><span class="caption-number">リスト 2.15 </span><span class="caption-text">sysctl.conf</span><a class="headerlink" href="#id23" title="Link to this code">¶</a></div>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span># This file controls the state of SELinux on the system.
 # SELINUX= can take one of these three values:
 #       enforcing - SELinux security policy is enforced.
@@ -443,8 +445,8 @@ SELINUXTYPE=targeted
 <div class="line-block">
 <div class="line">設定後、システム再起動します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id23">
-<div class="code-block-caption"><span class="caption-number">リスト 2.16 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id23" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id24">
+<div class="code-block-caption"><span class="caption-number">リスト 2.16 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id24" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>reboot
 </pre></div>
 </div>
@@ -452,8 +454,8 @@ SELINUXTYPE=targeted
 <div class="line-block">
 <div class="line">Disabled となっているか確認します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id24">
-<div class="code-block-caption"><span class="caption-number">リスト 2.17 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id24" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id25">
+<div class="code-block-caption"><span class="caption-number">リスト 2.17 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id25" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>getenforce
 </pre></div>
 </div>
@@ -477,18 +479,18 @@ SELINUXTYPE=targeted
 <li><div class="line-block">
 <div class="line">ルートユーザーに切り替え</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id25">
-<div class="code-block-caption"><span class="caption-number">リスト 2.18 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id25" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id26">
+<div class="code-block-caption"><span class="caption-number">リスト 2.18 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>su<span class="w"> </span>-
 </pre></div>
 </div>
 </div>
 </li>
 <li><div class="line-block">
-<div class="line"><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">git</kbd> <kbd class="kbd docutils literal notranslate">clone</kbd></kbd> したKubesprayフォルダにカレントを変更</div>
+<div class="line"><kbd class="kbd docutils literal notranslate">git</kbd> <kbd class="kbd docutils literal notranslate">clone</kbd> したKubesprayフォルダにカレントを変更</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id26">
-<div class="code-block-caption"><span class="caption-number">リスト 2.19 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id27">
+<div class="code-block-caption"><span class="caption-number">リスト 2.19 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>kubespray/
 </pre></div>
 </div>
@@ -497,8 +499,8 @@ SELINUXTYPE=targeted
 <li><div class="line-block">
 <div class="line">サンプルのinventoryファイルをコピー</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id27">
-<div class="code-block-caption"><span class="caption-number">リスト 2.20 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id28">
+<div class="code-block-caption"><span class="caption-number">リスト 2.20 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-rfp<span class="w"> </span>inventory/sample<span class="w"> </span>inventory/k8s_cluster
 </pre></div>
 </div>
@@ -507,24 +509,24 @@ SELINUXTYPE=targeted
 <li><div class="line-block">
 <div class="line">使用するKubernetesクラスター環境のIPの変数設定</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id28">
-<div class="code-block-caption"><span class="caption-number">リスト 2.21 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id29">
+<div class="code-block-caption"><span class="caption-number">リスト 2.21 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">declare</span><span class="w"> </span>-a<span class="w"> </span><span class="nv">IPS</span><span class="o">=(</span><span class="m">192</span>.168.1.1<span class="w"> </span><span class="m">192</span>.168.1.2<span class="w"> </span><span class="m">192</span>.168.1.3<span class="o">)</span>
 </pre></div>
 </div>
 </div>
 </li>
 <li><p><code class="file docutils literal notranslate"><span class="pre">hosts.yml</span></code> の作成</p>
-<div class="literal-block-wrapper docutils container" id="id29">
-<div class="code-block-caption"><span class="caption-number">リスト 2.22 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id30">
+<div class="code-block-caption"><span class="caption-number">リスト 2.22 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CONFIG_FILE</span><span class="o">=</span>inventory/k8s_cluster/hosts.yml<span class="w"> </span>python3.9<span class="w"> </span>contrib/inventory_builder/inventory.py<span class="w"> </span><span class="si">${</span><span class="nv">IPS</span><span class="p">[@]</span><span class="si">}</span>
 </pre></div>
 </div>
 </div>
 </li>
 <li><p><code class="file docutils literal notranslate"><span class="pre">hosts.yml</span></code> の確認</p>
-<div class="literal-block-wrapper docutils container" id="id30">
-<div class="code-block-caption"><span class="caption-number">リスト 2.23 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id31">
+<div class="code-block-caption"><span class="caption-number">リスト 2.23 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>inventory/k8s_cluster/hosts.yml
 </pre></div>
 </div>
@@ -538,8 +540,8 @@ SELINUXTYPE=targeted
 <div class="line">作成された <code class="file docutils literal notranslate"><span class="pre">hosts.yml</span></code> を構成したいKubernetesクラスターの情報に置き換えます。</div>
 <div class="line">本説明では、各Kubernetesクラスターがコントロールプレーン、ワーカーノードを兼ねた設定で作成します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id31">
-<div class="code-block-caption"><span class="caption-number">リスト 2.24 </span><span class="caption-text">hosts.yml</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id32">
+<div class="code-block-caption"><span class="caption-number">リスト 2.24 </span><span class="caption-text">hosts.yml</span><a class="headerlink" href="#id32" title="Link to this code">¶</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">all</span><span class="p">:</span>
 <span class="linenos"> 2</span><span class="w">  </span><span class="nt">hosts</span><span class="p">:</span>
 <span class="linenos"> 3</span><span class="w">    </span><span class="nt">v2ha-k8s-node1</span><span class="p">:</span>
@@ -594,8 +596,8 @@ SELINUXTYPE=targeted
 <div class="line-block">
 <div class="line">Kubesparayを実行して、Kubernetesクラスター環境へKubernetesをインストールします。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id32">
-<div class="code-block-caption"><span class="caption-number">リスト 2.25 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id32" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id33">
+<div class="code-block-caption"><span class="caption-number">リスト 2.25 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id33" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory/k8s_cluster/hosts.yml<span class="w"> </span>--become<span class="w"> </span>--become-user<span class="o">=</span>root<span class="w"> </span>cluster.yml<span class="w"> </span>--private-key<span class="o">=</span>~/.ssh/id_rsa<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;download_retries=10&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>~/kubespray_<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d%H%M<span class="k">)</span>.log
 </pre></div>
 </div>
@@ -609,8 +611,8 @@ SELINUXTYPE=targeted
 <div class="line-block">
 <div class="line">作成されましたら、実際に作成されたKubernetesクラスター環境に接続して以下のコマンドでコントロールプレーンやワーカーノードを確認します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id33">
-<div class="code-block-caption"><span class="caption-number">リスト 2.26 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id33" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id34">
+<div class="code-block-caption"><span class="caption-number">リスト 2.26 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>nodes
 </pre></div>
 </div>
@@ -618,8 +620,8 @@ SELINUXTYPE=targeted
 <div class="line-block">
 <div class="line">以下のような結果が表示されていれば、作成完了です。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id34">
-<div class="code-block-caption"><span class="caption-number">リスト 2.27 </span><span class="caption-text">結果</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id35">
+<div class="code-block-caption"><span class="caption-number">リスト 2.27 </span><span class="caption-text">結果</span><a class="headerlink" href="#id35" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME<span class="w">             </span>STATUS<span class="w">   </span>ROLES<span class="w">           </span>AGE<span class="w">     </span>VERSION
 v2ha-k8s-node1<span class="w">   </span>Ready<span class="w">    </span>control-plane<span class="w">   </span>8m48s<span class="w">   </span>v1.27.7
 v2ha-k8s-node2<span class="w">   </span>Ready<span class="w">    </span>control-plane<span class="w">   </span>7m28s<span class="w">   </span>v1.27.7
@@ -654,8 +656,8 @@ v2ha-k8s-node3<span class="w">   </span>Ready<span class="w">    </span>control-
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2023 NEC Corporation</small>
-    <small><a href="/terms/ja.html">サイト規約</a></small>
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.5/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

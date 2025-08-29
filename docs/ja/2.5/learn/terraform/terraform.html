@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=57fb2187" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -70,9 +70,10 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
-              <option value="../../../../ja/2.5/learn/terraform/terraform.html" selected>current</option>
-              <option value="../../../../ja/2.5/learn/terraform/terraform.html" selected>2.5(current)</option>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/learn/terraform/terraform.html">current</option>
+              <option value="../../../../ja/2.6/learn/terraform/terraform.html">2.6(current)</option>
+              <option value="../../../../ja/2.5/learn/terraform/terraform.html" selected>2.5</option>
               <option value="../../../../ja/2.4/learn/terraform/terraform.html">2.4</option>
               <option value="../../../../ja/2.3/learn/terraform/terraform.html">2.3</option>
               <option value="../../../../ja/2.2/learn/terraform/terraform.html">2.2</option>
@@ -89,7 +90,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               <option value="../../../../ja/2.5/learn/terraform/terraform.html" selected>日本語</option>
               <option value="../../../../en/2.5/learn/terraform/terraform.html">English</option>
             </select>
@@ -117,6 +118,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
 </ul>
 
     <!-- <ul>
@@ -206,9 +208,6 @@
 <div class="line">オペレーション登録では、作業を実施する際の作業概要を定義します。</div>
 <div class="line">先に決めた作業の方針を元にオペレーション情報を記入しましょう。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-0">オペレーション<a class="headerlink" href="#term-0" title="Link to this term">¶</a></dt><dt id="term-1">実施する作業のことで、オペレーションに対して作業対象とパラメータが紐づきます。<a class="headerlink" href="#term-1" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <div class="line-block">
 <div class="line"><span class="menuselection">基本コンソール ▶ オペレーション一覧</span> から、作業実施日時や作業名を登録します。</div>
 </div>
@@ -228,8 +227,8 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">TF</kbd>-<kbd class="kbd docutils literal notranslate">AzureVM構築</kbd></kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></kbd></p></td>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">TF</kbd>-<kbd class="kbd docutils literal notranslate">AzureVM構築</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></p></td>
 </tr>
 </tbody>
 </table>
@@ -247,9 +246,6 @@
 <div class="line-block">
 <div class="line">Workspace管理では、Terraformで利用するWorkspaceについてのメンテナンス（閲覧/登録/更新／/廃止リソース削除）を行います。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-Workspace">Workspace<a class="headerlink" href="#term-Workspace" title="Link to this term">¶</a></dt><dt id="term-WorkspaceTerraform">WorkspaceはTerraformコマンドを実行するためのディレクトリとして利用します。<a class="headerlink" href="#term-WorkspaceTerraform" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <div class="line-block">
 <div class="line">Terraformコマンドを実行するためにWorkspaceを作成します。</div>
 <div class="line"><span class="menuselection">Terraform CLI ▶ Workspace管理</span> から、Terraformコマンドを実行するために、「tfe_ws001」というWorkspaceを作成します。</div>
@@ -314,9 +310,6 @@
 <div class="line-block">
 <div class="line">Module素材集では、ユーザーが作成したModuleのメンテナンス（閲覧/登録/更新/廃止）を行います。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-Module">Moduleの記述<a class="headerlink" href="#term-Module" title="Link to this term">¶</a></dt><dt id="term-ModuleHCL-HashiCorp-ConfigurationLanguage-HashiCorp">Moduleファイルは、HCL（HashiCorp ConfigurationLanguage）というHashiCorp社独自の言語により記述します。<a class="headerlink" href="#term-ModuleHCL-HashiCorp-ConfigurationLanguage-HashiCorp" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <div class="line-block">
 <div class="line">使用するModuleファイルをModule素材集から登録します。</div>
 <div class="line">利用する Moduleファイル は下記になります。</div>
@@ -324,125 +317,125 @@
 </div>
 <div class="literal-block-wrapper docutils container" id="id14">
 <div class="code-block-caption"><span class="caption-text">main.tf</span><a class="headerlink" href="#id14" title="Link to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>provider<span class="w"> </span><span class="s2">&quot;azurerm&quot;</span><span class="w"> </span><span class="o">{</span>
-<span class="w">  </span>features<span class="w"> </span><span class="o">{}</span>
-<span class="w">  </span><span class="nv">subscription_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>var.subscription_id
-<span class="w">  </span><span class="nv">client_id</span><span class="w">       </span><span class="o">=</span><span class="w"> </span>var.client_id
-<span class="w">  </span><span class="nv">client_secret</span><span class="w">   </span><span class="o">=</span><span class="w"> </span>var.client_secret
-<span class="w">  </span><span class="nv">tenant_id</span><span class="w">       </span><span class="o">=</span><span class="w"> </span>var.tenant_id
-<span class="o">}</span>
+<div class="highlight-hcl notranslate"><div class="highlight"><pre><span></span><span class="kr">provider</span><span class="w"> </span><span class="nv">&quot;azurerm&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nb">features</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="na">subscription_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.subscription_id</span>
+<span class="w">  </span><span class="na">client_id</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nv">var.client_id</span>
+<span class="w">  </span><span class="na">client_secret</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nv">var.client_secret</span>
+<span class="w">  </span><span class="na">tenant_id</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nv">var.tenant_id</span>
+<span class="p">}</span>
 
-resource<span class="w"> </span><span class="s2">&quot;azurerm_resource_group&quot;</span><span class="w"> </span><span class="s2">&quot;hogehoge&quot;</span><span class="w"> </span><span class="o">{</span>
-<span class="w">  </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>var.resource_group_name
-<span class="w">  </span><span class="nv">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>var.location
-<span class="o">}</span>
+<span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;azurerm_resource_group&quot;</span><span class="w"> </span><span class="nv">&quot;hogehoge&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.resource_group_name</span>
+<span class="w">  </span><span class="na">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.location</span>
+<span class="p">}</span>
 
-resource<span class="w"> </span><span class="s2">&quot;azurerm_resource_group&quot;</span><span class="w"> </span><span class="s2">&quot;hogehoge&quot;</span><span class="w"> </span><span class="o">{</span>
-<span class="w">  </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;terraform-ita-test99&quot;</span>
-<span class="w">  </span><span class="nv">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>var.location
-<span class="o">}</span>
+<span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;azurerm_resource_group&quot;</span><span class="w"> </span><span class="nv">&quot;hogehoge&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;terraform-ita-test99&quot;</span>
+<span class="w">  </span><span class="na">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.location</span>
+<span class="p">}</span>
 
-/*
-resource<span class="w"> </span><span class="s2">&quot;azurerm_network_security_group&quot;</span><span class="w"> </span><span class="s2">&quot;hogehoge&quot;</span><span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span>var.security_group
-<span class="w">    </span><span class="nv">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>azurerm_resource_group.hogehoge.location
-<span class="w">    </span><span class="nv">resource_group_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>azurerm_resource_group.hogehoge.name
+<span class="cm">/*</span>
+<span class="cm">resource &quot;azurerm_network_security_group&quot; &quot;hogehoge&quot; {</span>
+<span class="cm">    name =var.security_group</span>
+<span class="cm">    location = azurerm_resource_group.hogehoge.location</span>
+<span class="cm">    resource_group_name = azurerm_resource_group.hogehoge.name</span>
 
-<span class="w">    </span>security_rule<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span><span class="nv">name</span><span class="w">                       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;SSH&quot;</span>
-<span class="w">        </span><span class="nv">priority</span><span class="w">                   </span><span class="o">=</span><span class="w"> </span><span class="m">1001</span>
-<span class="w">        </span><span class="nv">direction</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Inbound&quot;</span>
-<span class="w">        </span><span class="nv">access</span><span class="w">                     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span>
-<span class="w">        </span><span class="nv">protocol</span><span class="w">                   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Tcp&quot;</span>
-<span class="w">        </span><span class="nv">source_port_range</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
-<span class="w">        </span><span class="nv">destination_port_range</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;22&quot;</span>
-<span class="w">        </span><span class="nv">source_address_prefix</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
-<span class="w">        </span><span class="nv">destination_address_prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
-<span class="w">    </span><span class="o">}</span>
-<span class="w">    </span>security_rule<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span><span class="nv">name</span><span class="w">                       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;HTTP&quot;</span>
-<span class="w">        </span><span class="nv">priority</span><span class="w">                   </span><span class="o">=</span><span class="w"> </span><span class="m">1002</span>
-<span class="w">        </span><span class="nv">direction</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Inbound&quot;</span>
-<span class="w">        </span><span class="nv">access</span><span class="w">                     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span>
-<span class="w">        </span><span class="nv">protocol</span><span class="w">                   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Tcp&quot;</span>
-<span class="w">        </span><span class="nv">source_port_range</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
-<span class="w">        </span><span class="nv">destination_port_range</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;80&quot;</span>
-<span class="w">        </span><span class="nv">source_address_prefix</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
-<span class="w">        </span><span class="nv">destination_address_prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
-<span class="w">    </span><span class="o">}</span>
-<span class="o">}</span>
+<span class="cm">    security_rule {</span>
+<span class="cm">        name                       = &quot;SSH&quot;</span>
+<span class="cm">        priority                   = 1001</span>
+<span class="cm">        direction                  = &quot;Inbound&quot;</span>
+<span class="cm">        access                     = &quot;Allow&quot;</span>
+<span class="cm">        protocol                   = &quot;Tcp&quot;</span>
+<span class="cm">        source_port_range          = &quot;*&quot;</span>
+<span class="cm">        destination_port_range     = &quot;22&quot;</span>
+<span class="cm">        source_address_prefix      = &quot;*&quot;</span>
+<span class="cm">        destination_address_prefix = &quot;*&quot;</span>
+<span class="cm">    }</span>
+<span class="cm">    security_rule {</span>
+<span class="cm">        name                       = &quot;HTTP&quot;</span>
+<span class="cm">        priority                   = 1002</span>
+<span class="cm">        direction                  = &quot;Inbound&quot;</span>
+<span class="cm">        access                     = &quot;Allow&quot;</span>
+<span class="cm">        protocol                   = &quot;Tcp&quot;</span>
+<span class="cm">        source_port_range          = &quot;*&quot;</span>
+<span class="cm">        destination_port_range     = &quot;80&quot;</span>
+<span class="cm">        source_address_prefix      = &quot;*&quot;</span>
+<span class="cm">        destination_address_prefix = &quot;*&quot;</span>
+<span class="cm">    }</span>
+<span class="cm">}</span>
 
-resource<span class="w"> </span><span class="s2">&quot;azurerm_virtual_network&quot;</span><span class="w"> </span><span class="s2">&quot;hogehoge&quot;</span><span class="w"> </span><span class="o">{</span>
-<span class="w">  </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>var.Vnet_name
-<span class="w">  </span><span class="nv">address_space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>var.Vnet_address_space<span class="o">]</span>
-<span class="w">  </span><span class="nv">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>azurerm_resource_group.hogehoge.location
-<span class="w">  </span><span class="nv">resource_group_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>azurerm_resource_group.hogehoge.name
-<span class="o">}</span>
+<span class="cm">resource &quot;azurerm_virtual_network&quot; &quot;hogehoge&quot; {</span>
+<span class="cm">  name = var.Vnet_name</span>
+<span class="cm">  address_space = [var.Vnet_address_space]</span>
+<span class="cm">  location = azurerm_resource_group.hogehoge.location</span>
+<span class="cm">  resource_group_name = azurerm_resource_group.hogehoge.name</span>
+<span class="cm">}</span>
 
-resource<span class="w"> </span><span class="s2">&quot;azurerm_subnet&quot;</span><span class="w"> </span><span class="s2">&quot;hogehoge&quot;</span><span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="nv">name</span><span class="w">                 </span><span class="o">=</span><span class="w"> </span>var.subnet_name
-<span class="w">    </span><span class="nv">resource_group_name</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>azurerm_resource_group.hogehoge.name
-<span class="w">    </span><span class="nv">virtual_network_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>azurerm_virtual_network.hogehoge.name
-<span class="w">    </span><span class="nv">address_prefixes</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>var.address_prefixes<span class="o">]</span>
-<span class="o">}</span>
+<span class="cm">resource &quot;azurerm_subnet&quot; &quot;hogehoge&quot; {</span>
+<span class="cm">    name                 = var.subnet_name</span>
+<span class="cm">    resource_group_name  = azurerm_resource_group.hogehoge.name</span>
+<span class="cm">    virtual_network_name = azurerm_virtual_network.hogehoge.name</span>
+<span class="cm">    address_prefixes     = [var.address_prefixes]</span>
+<span class="cm">}</span>
 
-resource<span class="w"> </span><span class="s2">&quot;azurerm_public_ip&quot;</span><span class="w"> </span><span class="s2">&quot;hogehoge&quot;</span><span class="w"> </span><span class="o">{</span>
-<span class="w">  </span><span class="nv">count</span><span class="w">                 </span><span class="o">=</span><span class="w"> </span>var.VM_count
-<span class="w">  </span><span class="nv">name</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">var</span><span class="p">.public_ip_name</span><span class="si">}</span><span class="s2">-</span><span class="si">${</span><span class="nv">count</span><span class="p">.index</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="w">  </span><span class="nv">location</span><span class="w">              </span><span class="o">=</span><span class="w"> </span>azurerm_resource_group.hogehoge.location
-<span class="w">  </span><span class="nv">resource_group_name</span><span class="w">   </span><span class="o">=</span><span class="w"> </span>azurerm_resource_group.hogehoge.name
-<span class="w">  </span><span class="nv">allocation_method</span><span class="w">     </span><span class="o">=</span><span class="w"> </span>var.allocation_method
-<span class="w">  </span><span class="nv">domain_name_label</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">var</span><span class="p">.domain_name_label</span><span class="si">}</span><span class="s2">-</span><span class="si">${</span><span class="nv">count</span><span class="p">.index</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="o">}</span>
+<span class="cm">resource &quot;azurerm_public_ip&quot; &quot;hogehoge&quot; {</span>
+<span class="cm">  count                 = var.VM_count</span>
+<span class="cm">  name                  = &quot;${var.public_ip_name}-${count.index}&quot;</span>
+<span class="cm">  location              = azurerm_resource_group.hogehoge.location</span>
+<span class="cm">  resource_group_name   = azurerm_resource_group.hogehoge.name</span>
+<span class="cm">  allocation_method     = var.allocation_method</span>
+<span class="cm">  domain_name_label     = &quot;${var.domain_name_label}-${count.index}&quot;</span>
+<span class="cm">}</span>
 
-resource<span class="w"> </span><span class="s2">&quot;azurerm_network_interface&quot;</span><span class="w"> </span><span class="s2">&quot;hogehoge&quot;</span><span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="nv">count</span><span class="w">               </span><span class="o">=</span><span class="w"> </span>var.VM_count
-<span class="w">    </span><span class="nv">name</span><span class="w">                </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">var</span><span class="p">.network_interface_name</span><span class="si">}</span><span class="s2">-</span><span class="si">${</span><span class="nv">count</span><span class="p">.index</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="w">    </span><span class="nv">location</span><span class="w">            </span><span class="o">=</span><span class="w"> </span>azurerm_resource_group.hogehoge.location
-<span class="w">    </span><span class="nv">resource_group_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>azurerm_resource_group.hogehoge.name
+<span class="cm">resource &quot;azurerm_network_interface&quot; &quot;hogehoge&quot; {</span>
+<span class="cm">    count               = var.VM_count</span>
+<span class="cm">    name                = &quot;${var.network_interface_name}-${count.index}&quot;</span>
+<span class="cm">    location            = azurerm_resource_group.hogehoge.location</span>
+<span class="cm">    resource_group_name = azurerm_resource_group.hogehoge.name</span>
 
-<span class="w">    </span>ip_configuration<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span><span class="nv">name</span><span class="w">                          </span><span class="o">=</span><span class="w"> </span>var.NIC_name
-<span class="w">        </span><span class="nv">subnet_id</span><span class="w">                     </span><span class="o">=</span><span class="w"> </span>azurerm_subnet.hogehoge.id
-<span class="w">        </span><span class="nv">private_ip_address_allocation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>var.allocation_method
-<span class="w">        </span><span class="nv">public_ip_address_id</span><span class="w">          </span><span class="o">=</span><span class="w"> </span>azurerm_public_ip.hogehoge<span class="o">[</span>count.index<span class="o">]</span>.id
-<span class="w">    </span><span class="o">}</span>
-<span class="o">}</span>
+<span class="cm">    ip_configuration {</span>
+<span class="cm">        name                          = var.NIC_name</span>
+<span class="cm">        subnet_id                     = azurerm_subnet.hogehoge.id</span>
+<span class="cm">        private_ip_address_allocation = var.allocation_method</span>
+<span class="cm">        public_ip_address_id          = azurerm_public_ip.hogehoge[count.index].id</span>
+<span class="cm">    }</span>
+<span class="cm">}</span>
 
-resource<span class="w"> </span><span class="s2">&quot;azurerm_network_interface_security_group_association&quot;</span><span class="w"> </span><span class="s2">&quot;hogehoge&quot;</span><span class="w"> </span><span class="o">{</span>
-<span class="w">  </span><span class="nv">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>var.VM_count
-<span class="w">  </span><span class="nv">network_interface_id</span><span class="w">      </span><span class="o">=</span><span class="w"> </span>azurerm_network_interface.hogehoge<span class="o">[</span>count.index<span class="o">]</span>.id
-<span class="w">  </span><span class="nv">network_security_group_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>azurerm_network_security_group.hogehoge.id
-<span class="o">}</span>
+<span class="cm">resource &quot;azurerm_network_interface_security_group_association&quot; &quot;hogehoge&quot; {</span>
+<span class="cm">  count = var.VM_count</span>
+<span class="cm">  network_interface_id      = azurerm_network_interface.hogehoge[count.index].id</span>
+<span class="cm">  network_security_group_id = azurerm_network_security_group.hogehoge.id</span>
+<span class="cm">}</span>
 
-resource<span class="w"> </span><span class="s2">&quot;azurerm_linux_virtual_machine&quot;</span><span class="w"> </span><span class="s2">&quot;hogehoge&quot;</span><span class="w"> </span><span class="o">{</span>
-<span class="w">  </span><span class="nv">count</span><span class="w">                 </span><span class="o">=</span><span class="w"> </span>var.VM_count
-<span class="w">  </span><span class="nv">name</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">var</span><span class="p">.VM_name</span><span class="si">}</span><span class="s2">-</span><span class="si">${</span><span class="nv">count</span><span class="p">.index</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="w">  </span><span class="nv">resource_group_name</span><span class="w">   </span><span class="o">=</span><span class="w"> </span>azurerm_resource_group.hogehoge.name
-<span class="w">  </span><span class="nv">location</span><span class="w">              </span><span class="o">=</span><span class="w"> </span>azurerm_resource_group.hogehoge.location
-<span class="w">  </span><span class="nv">size</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span>var.VM_size
-<span class="w">  </span><span class="nv">admin_username</span><span class="w">        </span><span class="o">=</span><span class="w"> </span>var.admin_username
-<span class="w">  </span><span class="nv">network_interface_ids</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>azurerm_network_interface.hogehoge<span class="o">[</span>count.index<span class="o">]</span>.id<span class="o">]</span>
+<span class="cm">resource &quot;azurerm_linux_virtual_machine&quot; &quot;hogehoge&quot; {</span>
+<span class="cm">  count                 = var.VM_count</span>
+<span class="cm">  name                  = &quot;${var.VM_name}-${count.index}&quot;</span>
+<span class="cm">  resource_group_name   = azurerm_resource_group.hogehoge.name</span>
+<span class="cm">  location              = azurerm_resource_group.hogehoge.location</span>
+<span class="cm">  size                  = var.VM_size</span>
+<span class="cm">  admin_username        = var.admin_username</span>
+<span class="cm">  network_interface_ids = [azurerm_network_interface.hogehoge[count.index].id]</span>
 
-<span class="w">  </span>admin_ssh_key<span class="w"> </span><span class="o">{</span>
-<span class="w">  </span><span class="nv">username</span><span class="w">   </span><span class="o">=</span><span class="w"> </span>var.admin_username
-<span class="w">  </span><span class="nv">public_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>var.ssh_public_key
-<span class="w">  </span><span class="o">}</span>
+<span class="cm">  admin_ssh_key {</span>
+<span class="cm">  username   = var.admin_username</span>
+<span class="cm">  public_key = var.ssh_public_key</span>
+<span class="cm">  }</span>
 
-<span class="w">  </span>os_disk<span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="nv">name</span><span class="w">                 </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">var</span><span class="p">.os_disk_name</span><span class="si">}</span><span class="s2">-</span><span class="si">${</span><span class="nv">count</span><span class="p">.index</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="w">    </span><span class="nv">caching</span><span class="w">              </span><span class="o">=</span><span class="w"> </span>var.caching
-<span class="w">    </span><span class="nv">storage_account_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>var.storage_account_type
-<span class="w">  </span><span class="o">}</span>
+<span class="cm">  os_disk {</span>
+<span class="cm">    name                 = &quot;${var.os_disk_name}-${count.index}&quot;</span>
+<span class="cm">    caching              = var.caching</span>
+<span class="cm">    storage_account_type = var.storage_account_type</span>
+<span class="cm">  }</span>
 
-<span class="w">  </span>source_image_reference<span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="nv">publisher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>var.publisher
-<span class="w">    </span><span class="nv">offer</span><span class="w">     </span><span class="o">=</span><span class="w"> </span>var.offer
-<span class="w">    </span><span class="nv">sku</span><span class="w">       </span><span class="o">=</span><span class="w"> </span>var.sku
-<span class="w">    </span><span class="nv">version</span><span class="w">   </span><span class="o">=</span><span class="w"> </span>var.source_image_version
-<span class="w">  </span><span class="o">}</span>
-<span class="o">}</span>
-*/
+<span class="cm">  source_image_reference {</span>
+<span class="cm">    publisher = var.publisher</span>
+<span class="cm">    offer     = var.offer</span>
+<span class="cm">    sku       = var.sku</span>
+<span class="cm">    version   = var.source_image_version</span>
+<span class="cm">  }</span>
+<span class="cm">}</span>
+<span class="cm">*/</span>
 </pre></div>
 </div>
 </div>
@@ -544,9 +537,6 @@ variable<span class="w"> </span><span class="s2">&quot;VM_count&quot;</span><spa
 <div class="line-block">
 <div class="line"><span class="menuselection">パラメータシート作成</span> では、作業時に利用する設定値(パラメータ)を登録するためのパラメータシートを管理します。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-2">パラメータシート<a class="headerlink" href="#term-2" title="Link to this term">¶</a></dt><dt id="term-3">システムのパラメータ情報を管理するデータ構造のことです。<a class="headerlink" href="#term-3" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <div class="line-block">
 <div class="line">Azure認証情報として、パラメータシートを作成します。</div>
 <div class="line"><span class="menuselection">パラメータシート作成 ▶ パラメータシート定義・作成</span> から、Azure認証情報を管理するために、「Azureパラメータ」というパラメータシートを作成します。</div>
@@ -849,7 +839,7 @@ variable<span class="w"> </span><span class="s2">&quot;VM_count&quot;</span><spa
 <li><p>作業実行</p>
 <div class="line-block">
 <div class="line"><span class="menuselection">Terraform ▶ 作業実行</span> から、<kbd class="kbd docutils literal notranslate">tfe_mov001</kbd> Movement を選択し、<span class="guilabel"> 作業実行</span> を押下します。</div>
-<div class="line">次に、<span class="menuselection">作業実行設定</span> で、オペレーションに <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">TF</kbd>-<kbd class="kbd docutils literal notranslate">AzureVM構築</kbd></kbd> を選択し <span class="guilabel">選択決定</span> を押下します。</div>
+<div class="line">次に、<span class="menuselection">作業実行設定</span> で、オペレーションに <kbd class="kbd docutils literal notranslate">TF</kbd>-<kbd class="kbd docutils literal notranslate">AzureVM構築</kbd> を選択し <span class="guilabel">選択決定</span> を押下します。</div>
 </div>
 <div class="line-block">
 <div class="line"><span class="menuselection">作業状態確認</span> 画面が開き、実行が完了した後に、ステータスが「完了」になったことを確認します。</div>
@@ -898,8 +888,8 @@ variable<span class="w"> </span><span class="s2">&quot;VM_count&quot;</span><spa
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2023 NEC Corporation</small>
-    <small><a href="/terms/ja.html">サイト規約</a></small>
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.5/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

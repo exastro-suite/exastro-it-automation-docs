@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=57fb2187" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -73,9 +73,10 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
-              <option value="../../../../ja/2.5/manuals/platform_management/aap.html">current</option>
-              <option value="../../../../ja/2.5/manuals/platform_management/aap.html">2.5(current)</option>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/platform_management/aap.html">current</option>
+              <option value="../../../../ja/2.6/manuals/platform_management/aap.html">2.6(current)</option>
+              <option value="../../../../ja/2.5/manuals/platform_management/aap.html">2.5</option>
               <option value="../../../../ja/2.4/manuals/platform_management/aap.html">2.4</option>
               <option value="../../../../ja/2.3/manuals/platform_management/aap.html" selected>2.3</option>
               <option value="../../../../ja/2.2/manuals/platform_management/aap.html">2.2</option>
@@ -92,7 +93,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               <option value="../../../../ja/2.3/manuals/platform_management/aap.html" selected>日本語</option>
               <option value="../../../../en/2.3/manuals/platform_management/aap.html">English</option>
             </select>
@@ -249,7 +250,7 @@
 <div class="line">GitHub リポジトリから取得した資材の中にある、シェルスクリプトを実行し Ansible Automation Controller を登録します。</div>
 </div>
 <ol class="arabic">
-<li><p>Ansible Automation Controller 登録用シェルスクリプトを、リポジトリから <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">git</kbd> <kbd class="kbd docutils literal notranslate">clone</kbd></kbd> により取得します。</p>
+<li><p>Ansible Automation Controller 登録用シェルスクリプトを、リポジトリから <kbd class="kbd docutils literal notranslate">git</kbd> <kbd class="kbd docutils literal notranslate">clone</kbd> により取得します。</p>
 <div class="literal-block-wrapper docutils container" id="id6">
 <div class="code-block-caption"><span class="caption-number">リスト 4.24 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id6" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exastro Platform の資材を入手</span>
@@ -281,7 +282,7 @@ vi<span class="w"> </span>./exastro-platform/tools/api-auth.conf
 <p class="admonition-title">Tip</p>
 <div class="line-block">
 <div class="line">自己証明書を利用している場合、証明書エラーが発生します。</div>
-<div class="line">設定ファイル内の <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">CURL_OPT=</kbd>-<kbd class="kbd docutils literal notranslate">sv</kbd></kbd> を <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">CURL_OPT=</kbd>-<kbd class="kbd docutils literal notranslate">svk</kbd></kbd> に変更することで証明書エラーを回避できますが、認証機関から発行された正しい証明書をインストールすることを推奨します。</div>
+<div class="line">設定ファイル内の <kbd class="kbd docutils literal notranslate">CURL_OPT=</kbd>-<kbd class="kbd docutils literal notranslate">sv</kbd> を <kbd class="kbd docutils literal notranslate">CURL_OPT=</kbd>-<kbd class="kbd docutils literal notranslate">svk</kbd> に変更することで証明書エラーを回避できますが、認証機関から発行された正しい証明書をインストールすることを推奨します。</div>
 </div>
 </div>
 </li>
@@ -378,8 +379,8 @@ vi<span class="w"> </span>./exastro-platform/tools/initial-settings-ansible.json
 </div>
 </td>
 <td><div class="line-block">
-<div class="line"><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ansible</kbd>-<kbd class="kbd docutils literal notranslate">Core</kbd></kbd>: コミュニティ版Ansible</div>
-<div class="line"><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ansible</kbd> <kbd class="kbd docutils literal notranslate">Automation</kbd> <kbd class="kbd docutils literal notranslate">Controller</kbd></kbd>: Red Hat Ansible Automation Controller</div>
+<div class="line"><kbd class="kbd docutils literal notranslate">Ansible</kbd>-<kbd class="kbd docutils literal notranslate">Core</kbd>: コミュニティ版Ansible</div>
+<div class="line"><kbd class="kbd docutils literal notranslate">Ansible</kbd> <kbd class="kbd docutils literal notranslate">Automation</kbd> <kbd class="kbd docutils literal notranslate">Controller</kbd>: Red Hat Ansible Automation Controller</div>
 <div class="line">上記のいずれか、または、その両方を指定。</div>
 </div>
 </td>
@@ -460,8 +461,8 @@ vi<span class="w"> </span>./exastro-platform/tools/initial-settings-ansible.json
 </div>
 </td>
 <td><div class="line-block">
-<div class="line"><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ansible</kbd>-<kbd class="kbd docutils literal notranslate">Core</kbd></kbd>: コミュニティ版Ansible</div>
-<div class="line"><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ansible</kbd> <kbd class="kbd docutils literal notranslate">Automation</kbd> <kbd class="kbd docutils literal notranslate">Controller</kbd></kbd>: Red Hat Ansible Automation Controller</div>
+<div class="line"><kbd class="kbd docutils literal notranslate">Ansible</kbd>-<kbd class="kbd docutils literal notranslate">Core</kbd>: コミュニティ版Ansible</div>
+<div class="line"><kbd class="kbd docutils literal notranslate">Ansible</kbd> <kbd class="kbd docutils literal notranslate">Automation</kbd> <kbd class="kbd docutils literal notranslate">Controller</kbd>: Red Hat Ansible Automation Controller</div>
 <div class="line">上記のいずれかを指定。</div>
 </div>
 </td>
@@ -688,8 +689,8 @@ Create<span class="w"> </span>an<span class="w"> </span>organization,<span class
 </div>
 </td>
 <td><div class="line-block">
-<div class="line"><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ansible</kbd>-<kbd class="kbd docutils literal notranslate">Core</kbd></kbd>: コミュニティ版Ansible</div>
-<div class="line"><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ansible</kbd> <kbd class="kbd docutils literal notranslate">Automation</kbd> <kbd class="kbd docutils literal notranslate">Controller</kbd></kbd>: Red Hat Ansible Automation Controller</div>
+<div class="line"><kbd class="kbd docutils literal notranslate">Ansible</kbd>-<kbd class="kbd docutils literal notranslate">Core</kbd>: コミュニティ版Ansible</div>
+<div class="line"><kbd class="kbd docutils literal notranslate">Ansible</kbd> <kbd class="kbd docutils literal notranslate">Automation</kbd> <kbd class="kbd docutils literal notranslate">Controller</kbd>: Red Hat Ansible Automation Controller</div>
 <div class="line">上記のいずれか、または、その両方を指定。</div>
 </div>
 </td>
@@ -770,8 +771,8 @@ Create<span class="w"> </span>an<span class="w"> </span>organization,<span class
 </div>
 </td>
 <td><div class="line-block">
-<div class="line"><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ansible</kbd>-<kbd class="kbd docutils literal notranslate">Core</kbd></kbd>: コミュニティ版Ansible</div>
-<div class="line"><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ansible</kbd> <kbd class="kbd docutils literal notranslate">Automation</kbd> <kbd class="kbd docutils literal notranslate">Controller</kbd></kbd>: Red Hat Ansible Automation Controller</div>
+<div class="line"><kbd class="kbd docutils literal notranslate">Ansible</kbd>-<kbd class="kbd docutils literal notranslate">Core</kbd>: コミュニティ版Ansible</div>
+<div class="line"><kbd class="kbd docutils literal notranslate">Ansible</kbd> <kbd class="kbd docutils literal notranslate">Automation</kbd> <kbd class="kbd docutils literal notranslate">Controller</kbd>: Red Hat Ansible Automation Controller</div>
 <div class="line">上記のいずれかを指定。</div>
 </div>
 </td>
@@ -1138,8 +1139,8 @@ your<span class="w"> </span>password<span class="w"> </span>:<span class="w"> </
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2023 NEC Corporation</small>
-    <small><a href="/terms/ja.html">サイト規約</a></small>
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.3/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

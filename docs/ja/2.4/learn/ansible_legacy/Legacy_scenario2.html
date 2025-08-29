@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=57fb2187" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,9 +72,10 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
-              <option value="../../../../ja/2.5/learn/ansible_legacy/Legacy_scenario2.html">current</option>
-              <option value="../../../../ja/2.5/learn/ansible_legacy/Legacy_scenario2.html">2.5(current)</option>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/learn/ansible_legacy/Legacy_scenario2.html">current</option>
+              <option value="../../../../ja/2.6/learn/ansible_legacy/Legacy_scenario2.html">2.6(current)</option>
+              <option value="../../../../ja/2.5/learn/ansible_legacy/Legacy_scenario2.html">2.5</option>
               <option value="../../../../ja/2.4/learn/ansible_legacy/Legacy_scenario2.html" selected>2.4</option>
               <option value="../../../../ja/2.3/learn/ansible_legacy/Legacy_scenario2.html">2.3</option>
               <option value="../../../../ja/2.2/learn/ansible_legacy/Legacy_scenario2.html">2.2</option>
@@ -91,7 +92,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               <option value="../../../../ja/2.4/learn/ansible_legacy/Legacy_scenario2.html" selected>日本語</option>
               <option value="../../../../en/2.4/learn/ansible_legacy/Legacy_scenario2.html">English</option>
             </select>
@@ -186,17 +187,17 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#id11">パッケージのインストール実施(1回目)</a><ul>
-<li><a class="reference internal" href="#id12">作業概要の作成</a></li>
-<li><a class="reference internal" href="#id13">作業概要登録</a></li>
-<li><a class="reference internal" href="#id14">パラメータ設定</a></li>
-<li><a class="reference internal" href="#id15">作業実行</a></li>
+<li><a class="reference internal" href="#id12">作業概要の作成(1回目)</a></li>
+<li><a class="reference internal" href="#id13">作業概要登録(1回目)</a></li>
+<li><a class="reference internal" href="#id14">パラメータ設定(1回目)</a></li>
+<li><a class="reference internal" href="#id15">作業実行(1回目)</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#id16">パッケージのインストール実施(2回目)</a><ul>
-<li><a class="reference internal" href="#id17">作業概要の作成</a></li>
-<li><a class="reference internal" href="#id18">作業概要登録</a></li>
-<li><a class="reference internal" href="#id19">パラメータ設定</a></li>
-<li><a class="reference internal" href="#id20">作業実行</a></li>
+<li><a class="reference internal" href="#id17">作業概要の作成(2回目)</a></li>
+<li><a class="reference internal" href="#id18">作業概要登録(2回目)</a></li>
+<li><a class="reference internal" href="#id19">パラメータ設定(2回目)</a></li>
+<li><a class="reference internal" href="#id20">作業実行(2回目)</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#id21">まとめ</a></li>
@@ -257,9 +258,6 @@
 <div class="line">まずは、「あるべきインストール状態」である <kbd class="kbd docutils literal notranslate">present</kbd> (インストールされている状態) と <kbd class="kbd docutils literal notranslate">absent</kbd> (インストールされていない状態) の選択肢を作成します。</div>
 <div class="line">具体的には、データシートを作成し、その中に選択肢として表示するパラメータを投入します。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-0">データシート<a class="headerlink" href="#term-0" title="Link to this term">¶</a></dt><dt id="term-Exastro-IT-Automation">Exastro IT Automation が使用する固定値のパラメータを管理するデータ構造のことです。<a class="headerlink" href="#term-Exastro-IT-Automation" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <section id="quickstart-legacy-create-datasheet">
 <span id="id4"></span><h4>データシートの作成<a class="headerlink" href="#quickstart-legacy-create-datasheet" title="Link to this heading">¶</a></h4>
 <div class="line-block">
@@ -285,10 +283,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>項目の名前</p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">present</kbd>-<kbd class="kbd docutils literal notranslate">absent</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">present</kbd>-<kbd class="kbd docutils literal notranslate">absent</kbd></p></td>
 </tr>
 <tr class="row-odd"><td><p>項目の名前(Rest API用)</p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">present</kbd>-<kbd class="kbd docutils literal notranslate">absent</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">present</kbd>-<kbd class="kbd docutils literal notranslate">absent</kbd></p></td>
 </tr>
 <tr class="row-even"><td><p>入力方式</p></td>
 <td><p><kbd class="kbd docutils literal notranslate">文字列(単一行)</kbd></p></td>
@@ -444,7 +442,7 @@
 </tr>
 <tr class="row-odd"><td><p>選択項目</p></td>
 <td><p>(項目なし)</p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">入力用:状態:present</kbd>-<kbd class="kbd docutils literal notranslate">absent</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">入力用:状態:present</kbd>-<kbd class="kbd docutils literal notranslate">absent</kbd></p></td>
 </tr>
 <tr class="row-even"><td><p>参照項目</p></td>
 <td><p>(項目なし)</p></td>
@@ -852,7 +850,7 @@
 <section id="id11">
 <h2>パッケージのインストール実施(1回目)<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h2>
 <section id="id12">
-<h3>作業概要の作成<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<h3>作業概要の作成(1回目)<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="Legacy_scenario1.html"><span class="doc">前のシナリオ</span></a> と同様に、まずは作業計画を立てましょう。</div>
 </div>
@@ -876,7 +874,7 @@
 </table>
 </section>
 <section id="id13">
-<h3>作業概要登録<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<h3>作業概要登録(1回目)<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line"><span class="menuselection">基本コンソール ▶ オペレーション一覧</span> から、作業実施日時や作業名を登録します。</div>
 </div>
@@ -897,16 +895,16 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">RHEL8のパッケージ管理</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="id14">
-<h3>パラメータ設定<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<h3>パラメータ設定(1回目)<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line">パラメータシートには、設定したい値を機器ごとに登録します。</div>
-<div class="line">本シナリオでは、db01 というホストに対して、 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">postgresql</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd></kbd> というパッケージをインストールし DB サーバーを構築します。</div>
+<div class="line">本シナリオでは、db01 というホストに対して、 <kbd class="kbd docutils literal notranslate">postgresql</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd> というパッケージをインストールし DB サーバーを構築します。</div>
 </div>
 <div class="line-block">
 <div class="line"><span class="menuselection">入力用 ▶ 導入パッケージ</span> から、ホストに対するパラメータを登録します。</div>
@@ -940,16 +938,16 @@
 </thead>
 <tbody>
 <tr class="row-odd"><td><p>db01</p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8のパッケージ管理</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8のパッケージ管理</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">postgresql</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">postgresql</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">present</kbd></p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="id15">
-<h3>作業実行<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
+<h3>作業実行(1回目)<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><p>事前確認</p>
 <div class="line-block">
@@ -1006,7 +1004,7 @@ postgresql-server-10.23-1.module+el8.7.0+17280+3a452e1f.x86_64
 <section id="id16">
 <h2>パッケージのインストール実施(2回目)<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h2>
 <section id="id17">
-<h3>作業概要の作成<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
+<h3>作業概要の作成(2回目)<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line">先ほどと同様に、まずは作業計画を立てましょう。</div>
 </div>
@@ -1030,7 +1028,7 @@ postgresql-server-10.23-1.module+el8.7.0+17280+3a452e1f.x86_64
 </table>
 </section>
 <section id="id18">
-<h3>作業概要登録<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
+<h3>作業概要登録(2回目)<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line"><span class="menuselection">基本コンソール ▶ オペレーション一覧</span> から、作業実施日時や作業名を登録します。</div>
 </div>
@@ -1051,15 +1049,15 @@ postgresql-server-10.23-1.module+el8.7.0+17280+3a452e1f.x86_64
 </thead>
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">RHEL8をDBパッケージへ変更</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/05/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/05/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="id19">
-<h3>パラメータ設定<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h3>
+<h3>パラメータ設定(2回目)<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h3>
 <div class="line-block">
-<div class="line">本シナリオでは、db01 というホストに対して、 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">postgresql</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd></kbd> というパッケージをインストールし DB サーバーを構築しました。</div>
+<div class="line">本シナリオでは、db01 というホストに対して、 <kbd class="kbd docutils literal notranslate">postgresql</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd> というパッケージをインストールし DB サーバーを構築しました。</div>
 <div class="line">しかし、その後、postgresql-server ではなく mariadb-server に変更する必要が出てきました。</div>
 </div>
 <div class="line-block">
@@ -1094,22 +1092,22 @@ postgresql-server-10.23-1.module+el8.7.0+17280+3a452e1f.x86_64
 </thead>
 <tbody>
 <tr class="row-odd"><td><p>db01</p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2023/05/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8をDBパッケージへ変更</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2023/05/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8をDBパッケージへ変更</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">postgresql</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">postgresql</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">absent</kbd></p></td>
 </tr>
 <tr class="row-even"><td><p>db01</p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2023/05/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8をDBパッケージへ変更</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2023/05/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8をDBパッケージへ変更</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">mariadb</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">mariadb</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">present</kbd></p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="id20">
-<h3>作業実行<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
+<h3>作業実行(2回目)<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><p>事前確認</p>
 <div class="line-block">
@@ -1225,8 +1223,8 @@ postgresql-server-10.23-1.module+el8.7.0+17280+3a452e1f.x86_64
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2023 NEC Corporation</small>
-    <small><a href="/terms/ja.html">サイト規約</a></small>
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.4/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=57fb2187" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,9 +72,10 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
-              <option value="../../../../ja/2.5/reference/helm/values.html" selected>current</option>
-              <option value="../../../../ja/2.5/reference/helm/values.html" selected>2.5(current)</option>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/reference/helm/values.html">current</option>
+              <option value="../../../../ja/2.6/reference/helm/values.html">2.6(current)</option>
+              <option value="../../../../ja/2.5/reference/helm/values.html" selected>2.5</option>
               <option value="../../../../ja/2.4/reference/helm/values.html">2.4</option>
               <option value="../../../../ja/2.3/reference/helm/values.html">2.3</option>
               <option value="../../../../ja/2.2/reference/helm/values.html">2.2</option>
@@ -91,7 +92,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               <option value="../../../../ja/2.5/reference/helm/values.html" selected>日本語</option>
               <option value="../../../../en/2.5/reference/helm/values.html">English</option>
             </select>
@@ -186,6 +187,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
 </ul>
 
     <!-- <ul>
@@ -292,7 +294,7 @@
 <section id="id1">
 <h3>共通設定 (認証機能)<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id10">
-<caption><span class="caption-number">表 211 </span><span class="caption-text">共通設定 (Exastro 共通基盤) のオプションパラメータ</span><a class="headerlink" href="#id10" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 232 </span><span class="caption-text">共通設定 (Exastro 共通基盤) のオプションパラメータ</span><a class="headerlink" href="#id10" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -455,7 +457,7 @@
 <section id="keycloak">
 <h3>共通設定 (Keycloak)<a class="headerlink" href="#keycloak" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id11">
-<caption><span class="caption-number">表 212 </span><span class="caption-text">共通設定 (Keycloak) のオプションパラメータ</span><a class="headerlink" href="#id11" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 233 </span><span class="caption-text">共通設定 (Keycloak) のオプションパラメータ</span><a class="headerlink" href="#id11" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -563,7 +565,7 @@
 <p>2.3にてItaDefinition→pfItaDefinitionへ変更</p>
 </div>
 <table class="filter-table docutils align-left" id="id12">
-<caption><span class="caption-number">表 213 </span><span class="caption-text">共通設定 (Exastro IT Automation) のオプションパラメータ</span><a class="headerlink" href="#id12" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 234 </span><span class="caption-text">共通設定 (Exastro IT Automation) のオプションパラメータ</span><a class="headerlink" href="#id12" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -639,7 +641,7 @@
 <section id="id2">
 <h3>共通設定 (認証機能用データベース)<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id13">
-<caption><span class="caption-number">表 214 </span><span class="caption-text">共通設定 (Exastro 共通基盤用データベース) のオプションパラメータ</span><a class="headerlink" href="#id13" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 235 </span><span class="caption-text">共通設定 (Exastro 共通基盤用データベース) のオプションパラメータ</span><a class="headerlink" href="#id13" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -727,7 +729,7 @@
 <p>2.3にてMariaDBへ統合したため使用不可</p>
 </div>
 <table class="filter-table docutils align-left" id="id14">
-<caption><span class="caption-number">表 215 </span><span class="caption-text">共通設定 (Exastro 共用データベース) のオプションパラメータ</span><a class="headerlink" href="#id14" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 236 </span><span class="caption-text">共通設定 (Exastro 共用データベース) のオプションパラメータ</span><a class="headerlink" href="#id14" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -817,7 +819,7 @@
 </div>
 </div>
 <table class="filter-table docutils align-left" id="id15">
-<caption><span class="caption-number">表 216 </span><span class="caption-text">共通設定 (Proxy設定) のオプションパラメータ</span><a class="headerlink" href="#id15" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 237 </span><span class="caption-text">共通設定 (Proxy設定) のオプションパラメータ</span><a class="headerlink" href="#id15" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -906,7 +908,7 @@
 <section id="exastro-platform-api">
 <h3>Exastro Platform API 機能<a class="headerlink" href="#exastro-platform-api" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id16">
-<caption><span class="caption-number">表 217 </span><span class="caption-text">Exastro Platform API 機能のオプションパラメータ</span><a class="headerlink" href="#id16" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 238 </span><span class="caption-text">Exastro Platform API 機能のオプションパラメータ</span><a class="headerlink" href="#id16" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -937,7 +939,7 @@
 <section id="id3">
 <h3>Exastro Platform 認証機能<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id17">
-<caption><span class="caption-number">表 218 </span><span class="caption-text">Exastro Platform 認証機能のオプションパラメータ</span><a class="headerlink" href="#id17" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 239 </span><span class="caption-text">Exastro Platform 認証機能のオプションパラメータ</span><a class="headerlink" href="#id17" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1160,7 +1162,7 @@
 <section id="exastro-platform-web">
 <h3>Exastro Platform Web 機能<a class="headerlink" href="#exastro-platform-web" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id18">
-<caption><span class="caption-number">表 219 </span><span class="caption-text">Exastro Platform Web 機能のオプションパラメータ</span><a class="headerlink" href="#id18" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 240 </span><span class="caption-text">Exastro Platform Web 機能のオプションパラメータ</span><a class="headerlink" href="#id18" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1191,7 +1193,7 @@
 <section id="exastro-platform-job">
 <h3>Exastro Platform JOB 機能<a class="headerlink" href="#exastro-platform-job" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id19">
-<caption><span class="caption-number">表 220 </span><span class="caption-text">Exastro Platform JOB機能のオプションパラメータ</span><a class="headerlink" href="#id19" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 241 </span><span class="caption-text">Exastro Platform JOB機能のオプションパラメータ</span><a class="headerlink" href="#id19" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1427,7 +1429,7 @@
 <section id="id4">
 <h3>Exastro Platform セットアップ機能<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id20">
-<caption><span class="caption-number">表 221 </span><span class="caption-text">Exastro Platform セットアップ機能のオプションパラメータ</span><a class="headerlink" href="#id20" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 242 </span><span class="caption-text">Exastro Platform セットアップ機能のオプションパラメータ</span><a class="headerlink" href="#id20" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1458,7 +1460,7 @@
 <section id="mariadb">
 <h3>MariaDB<a class="headerlink" href="#mariadb" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id21">
-<caption><span class="caption-number">表 222 </span><span class="caption-text">MariaDB コンテナのオプションパラメータ</span><a class="headerlink" href="#id21" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 243 </span><span class="caption-text">MariaDB コンテナのオプションパラメータ</span><a class="headerlink" href="#id21" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1570,7 +1572,7 @@
 <section id="id5">
 <h3>Keycloak<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id22">
-<caption><span class="caption-number">表 223 </span><span class="caption-text">Keycloak コンテナのオプションパラメータ</span><a class="headerlink" href="#id22" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 244 </span><span class="caption-text">Keycloak コンテナのオプションパラメータ</span><a class="headerlink" href="#id22" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1658,7 +1660,7 @@
 <section id="mongodb">
 <h3>MongoDB<a class="headerlink" href="#mongodb" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id23">
-<caption><span class="caption-number">表 224 </span><span class="caption-text">MongoDB コンテナのオプションパラメータ</span><a class="headerlink" href="#id23" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 245 </span><span class="caption-text">MongoDB コンテナのオプションパラメータ</span><a class="headerlink" href="#id23" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1770,7 +1772,7 @@
 <section id="gitlab">
 <h3>GitLab<a class="headerlink" href="#gitlab" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id24">
-<caption><span class="caption-number">表 225 </span><span class="caption-text">GitLab コンテナのオプションパラメータ</span><a class="headerlink" href="#id24" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 246 </span><span class="caption-text">GitLab コンテナのオプションパラメータ</span><a class="headerlink" href="#id24" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -1967,7 +1969,7 @@
 <section id="id6">
 <h3>共通設定 (Exastro IT Automation)<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id25">
-<caption><span class="caption-number">表 226 </span><span class="caption-text">共通設定 (Exastro IT Automation) のオプションパラメータ</span><a class="headerlink" href="#id25" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 247 </span><span class="caption-text">共通設定 (Exastro IT Automation) のオプションパラメータ</span><a class="headerlink" href="#id25" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -2104,7 +2106,7 @@
 <section id="id7">
 <h3>共通設定 (Exastro IT Automation 用データベース)<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id26">
-<caption><span class="caption-number">表 227 </span><span class="caption-text">共通設定 (Exastro IT Automation 用データベース) のオプションパラメータ</span><a class="headerlink" href="#id26" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 248 </span><span class="caption-text">共通設定 (Exastro IT Automation 用データベース) のオプションパラメータ</span><a class="headerlink" href="#id26" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -2188,7 +2190,7 @@
 <section id="id8">
 <h3>共通設定 (GitLab)<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id27">
-<caption><span class="caption-number">表 228 </span><span class="caption-text">共通設定 (GitLab) のオプションパラメータ</span><a class="headerlink" href="#id27" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 249 </span><span class="caption-text">共通設定 (GitLab) のオプションパラメータ</span><a class="headerlink" href="#id27" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -2244,7 +2246,7 @@
 <section id="ita-api-admin">
 <h3>ita-api-admin<a class="headerlink" href="#ita-api-admin" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id28">
-<caption><span class="caption-number">表 229 </span><span class="caption-text">ita-api-admin における Values 一覧</span><a class="headerlink" href="#id28" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 250 </span><span class="caption-text">ita-api-admin における Values 一覧</span><a class="headerlink" href="#id28" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -2290,7 +2292,7 @@
 <section id="ita-api-organization">
 <h3>ita-api-organization<a class="headerlink" href="#ita-api-organization" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id29">
-<caption><span class="caption-number">表 230 </span><span class="caption-text">ita-api-organization における Values 一覧</span><a class="headerlink" href="#id29" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 251 </span><span class="caption-text">ita-api-organization における Values 一覧</span><a class="headerlink" href="#id29" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -2336,7 +2338,7 @@
 <section id="ita-by-ansible-execute">
 <h3>ita-by-ansible-execute<a class="headerlink" href="#ita-by-ansible-execute" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id30">
-<caption><span class="caption-number">表 231 </span><span class="caption-text">ita-by-ansible-execute における Values 一覧</span><a class="headerlink" href="#id30" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 252 </span><span class="caption-text">ita-by-ansible-execute における Values 一覧</span><a class="headerlink" href="#id30" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -2421,7 +2423,7 @@
 <section id="ita-by-ansible-legacy-role-vars-listup">
 <h3>ita-by-ansible-legacy-role-vars-listup<a class="headerlink" href="#ita-by-ansible-legacy-role-vars-listup" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id31">
-<caption><span class="caption-number">表 232 </span><span class="caption-text">ita-by-ansible-legacy-role-vars-listup における Values 一覧</span><a class="headerlink" href="#id31" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 253 </span><span class="caption-text">ita-by-ansible-legacy-role-vars-listup における Values 一覧</span><a class="headerlink" href="#id31" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -2482,7 +2484,7 @@
 <section id="ita-by-ansible-legacy-vars-listup">
 <h3>ita-by-ansible-legacy-vars-listup<a class="headerlink" href="#ita-by-ansible-legacy-vars-listup" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id32">
-<caption><span class="caption-number">表 233 </span><span class="caption-text">ita-by-ansible-legacy-vars-listup における Values 一覧</span><a class="headerlink" href="#id32" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 254 </span><span class="caption-text">ita-by-ansible-legacy-vars-listup における Values 一覧</span><a class="headerlink" href="#id32" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -2543,7 +2545,7 @@
 <section id="ita-by-ansible-pioneer-vars-listup">
 <h3>ita-by-ansible-pioneer-vars-listup<a class="headerlink" href="#ita-by-ansible-pioneer-vars-listup" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id33">
-<caption><span class="caption-number">表 234 </span><span class="caption-text">ita-by-ansible-pioneer-vars-listup における Values 一覧</span><a class="headerlink" href="#id33" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 255 </span><span class="caption-text">ita-by-ansible-pioneer-vars-listup における Values 一覧</span><a class="headerlink" href="#id33" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -2604,7 +2606,7 @@
 <section id="ita-by-ansible-towermaster-sync">
 <h3>ita-by-ansible-towermaster-sync<a class="headerlink" href="#ita-by-ansible-towermaster-sync" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id34">
-<caption><span class="caption-number">表 235 </span><span class="caption-text">ita-by-ansible-towermaster-sync における Values 一覧</span><a class="headerlink" href="#id34" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 256 </span><span class="caption-text">ita-by-ansible-towermaster-sync における Values 一覧</span><a class="headerlink" href="#id34" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -2665,7 +2667,7 @@
 <section id="ita-by-cicd-for-iac">
 <h3>ita-by-cicd-for-iac<a class="headerlink" href="#ita-by-cicd-for-iac" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id35">
-<caption><span class="caption-number">表 236 </span><span class="caption-text">ita-by-cicd-for-iac における Values 一覧</span><a class="headerlink" href="#id35" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 257 </span><span class="caption-text">ita-by-cicd-for-iac における Values 一覧</span><a class="headerlink" href="#id35" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -2726,7 +2728,7 @@
 <section id="ita-by-collector">
 <h3>ita-by-collector<a class="headerlink" href="#ita-by-collector" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id36">
-<caption><span class="caption-number">表 237 </span><span class="caption-text">ita-by-collector における Values 一覧</span><a class="headerlink" href="#id36" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 258 </span><span class="caption-text">ita-by-collector における Values 一覧</span><a class="headerlink" href="#id36" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -2787,7 +2789,7 @@
 <section id="ita-by-conductor-regularly">
 <h3>ita-by-conductor-regularly<a class="headerlink" href="#ita-by-conductor-regularly" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id37">
-<caption><span class="caption-number">表 238 </span><span class="caption-text">ita-by-conductor-regularly における Values 一覧</span><a class="headerlink" href="#id37" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 259 </span><span class="caption-text">ita-by-conductor-regularly における Values 一覧</span><a class="headerlink" href="#id37" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -2848,7 +2850,7 @@
 <section id="ita-by-conductor-synchronize">
 <h3>ita-by-conductor-synchronize<a class="headerlink" href="#ita-by-conductor-synchronize" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id38">
-<caption><span class="caption-number">表 239 </span><span class="caption-text">ita-by-conductor-synchronize における Values 一覧</span><a class="headerlink" href="#id38" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 260 </span><span class="caption-text">ita-by-conductor-synchronize における Values 一覧</span><a class="headerlink" href="#id38" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -2909,7 +2911,7 @@
 <section id="ita-by-excel-export-import">
 <h3>ita-by-excel-export-import<a class="headerlink" href="#ita-by-excel-export-import" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id39">
-<caption><span class="caption-number">表 240 </span><span class="caption-text">ita-by-excel-export-import における Values 一覧</span><a class="headerlink" href="#id39" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 261 </span><span class="caption-text">ita-by-excel-export-import における Values 一覧</span><a class="headerlink" href="#id39" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -2970,7 +2972,7 @@
 <section id="ita-by-execinstance-dataautoclean">
 <h3>ita-by-execinstance-dataautoclean<a class="headerlink" href="#ita-by-execinstance-dataautoclean" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id40">
-<caption><span class="caption-number">表 241 </span><span class="caption-text">ita-by-execinstance-dataautoclean における Values 一覧</span><a class="headerlink" href="#id40" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 262 </span><span class="caption-text">ita-by-execinstance-dataautoclean における Values 一覧</span><a class="headerlink" href="#id40" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -3031,7 +3033,7 @@
 <section id="ita-by-file-autoclean">
 <h3>ita-by-file-autoclean<a class="headerlink" href="#ita-by-file-autoclean" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id41">
-<caption><span class="caption-number">表 242 </span><span class="caption-text">ita-by-file-autoclean における Values 一覧</span><a class="headerlink" href="#id41" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 263 </span><span class="caption-text">ita-by-file-autoclean における Values 一覧</span><a class="headerlink" href="#id41" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -3092,7 +3094,7 @@
 <section id="ita-by-hostgroup-split">
 <h3>ita-by-hostgroup-split<a class="headerlink" href="#ita-by-hostgroup-split" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id42">
-<caption><span class="caption-number">表 243 </span><span class="caption-text">ita-by-hostgroup-split における Values 一覧</span><a class="headerlink" href="#id42" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 264 </span><span class="caption-text">ita-by-hostgroup-split における Values 一覧</span><a class="headerlink" href="#id42" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -3153,7 +3155,7 @@
 <section id="ita-by-menu-create">
 <h3>ita-by-menu-create<a class="headerlink" href="#ita-by-menu-create" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id43">
-<caption><span class="caption-number">表 244 </span><span class="caption-text">ita-by-menu-create における Values 一覧</span><a class="headerlink" href="#id43" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 265 </span><span class="caption-text">ita-by-menu-create における Values 一覧</span><a class="headerlink" href="#id43" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -3214,7 +3216,7 @@
 <section id="ita-by-menu-export-import">
 <h3>ita-by-menu-export-import<a class="headerlink" href="#ita-by-menu-export-import" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id44">
-<caption><span class="caption-number">表 245 </span><span class="caption-text">ita-by-menu-export-import における Values 一覧</span><a class="headerlink" href="#id44" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 266 </span><span class="caption-text">ita-by-menu-export-import における Values 一覧</span><a class="headerlink" href="#id44" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -3275,7 +3277,7 @@
 <section id="ita-by-terraform-cli-execute">
 <h3>ita-by-terraform-cli-execute<a class="headerlink" href="#ita-by-terraform-cli-execute" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id45">
-<caption><span class="caption-number">表 246 </span><span class="caption-text">ita-by-terraform-cli-execute における Values 一覧</span><a class="headerlink" href="#id45" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 267 </span><span class="caption-text">ita-by-terraform-cli-execute における Values 一覧</span><a class="headerlink" href="#id45" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -3336,7 +3338,7 @@
 <section id="ita-by-terraform-cli-vars-listup">
 <h3>ita-by-terraform-cli-vars-listup<a class="headerlink" href="#ita-by-terraform-cli-vars-listup" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id46">
-<caption><span class="caption-number">表 247 </span><span class="caption-text">ita-by-terraform-cli-vars-listup における Values 一覧</span><a class="headerlink" href="#id46" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 268 </span><span class="caption-text">ita-by-terraform-cli-vars-listup における Values 一覧</span><a class="headerlink" href="#id46" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -3397,7 +3399,7 @@
 <section id="ita-by-terraform-cloud-ep-execute">
 <h3>ita-by-terraform-cloud-ep-execute<a class="headerlink" href="#ita-by-terraform-cloud-ep-execute" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id47">
-<caption><span class="caption-number">表 248 </span><span class="caption-text">ita-by-terraform-cloud-ep-execute における Values 一覧</span><a class="headerlink" href="#id47" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 269 </span><span class="caption-text">ita-by-terraform-cloud-ep-execute における Values 一覧</span><a class="headerlink" href="#id47" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -3458,7 +3460,7 @@
 <section id="ita-by-terraform-cloud-ep-vars-listup">
 <h3>ita-by-terraform-cloud-ep-vars-listup<a class="headerlink" href="#ita-by-terraform-cloud-ep-vars-listup" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id48">
-<caption><span class="caption-number">表 249 </span><span class="caption-text">ita-by-terraform-cloud-ep-vars-listup における Values 一覧</span><a class="headerlink" href="#id48" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 270 </span><span class="caption-text">ita-by-terraform-cloud-ep-vars-listup における Values 一覧</span><a class="headerlink" href="#id48" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -3523,7 +3525,7 @@
 <p>2.3にて削除したため利用不可</p>
 </div>
 <table class="filter-table docutils align-left" id="id49">
-<caption><span class="caption-number">表 250 </span><span class="caption-text">ita-database-setup-job における Values 一覧</span><a class="headerlink" href="#id49" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 271 </span><span class="caption-text">ita-database-setup-job における Values 一覧</span><a class="headerlink" href="#id49" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -3565,7 +3567,7 @@
 <section id="ita-web-server">
 <h3>ita-web-server<a class="headerlink" href="#ita-web-server" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id50">
-<caption><span class="caption-number">表 251 </span><span class="caption-text">ita-web-server における Values 一覧</span><a class="headerlink" href="#id50" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 272 </span><span class="caption-text">ita-web-server における Values 一覧</span><a class="headerlink" href="#id50" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -3611,7 +3613,7 @@
 <section id="ita-migration">
 <h3>ita-migration<a class="headerlink" href="#ita-migration" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id51">
-<caption><span class="caption-number">表 252 </span><span class="caption-text">ita-migration における Values 一覧</span><a class="headerlink" href="#id51" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 273 </span><span class="caption-text">ita-migration における Values 一覧</span><a class="headerlink" href="#id51" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -3665,7 +3667,7 @@
 <section id="id9">
 <h3>共通設定 (MongoDB)<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id52">
-<caption><span class="caption-number">表 253 </span><span class="caption-text">OASE設定 (Exastro OASE用データベース) のオプションパラメータ</span><a class="headerlink" href="#id52" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 274 </span><span class="caption-text">OASE設定 (Exastro OASE用データベース) のオプションパラメータ</span><a class="headerlink" href="#id52" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -3720,7 +3722,7 @@
 <section id="ita-by-oase-conclusion">
 <h3>ita-by-oase-conclusion<a class="headerlink" href="#ita-by-oase-conclusion" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id53">
-<caption><span class="caption-number">表 254 </span><span class="caption-text">ita-by-oase-conclusion における Values 一覧</span><a class="headerlink" href="#id53" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 275 </span><span class="caption-text">ita-by-oase-conclusion における Values 一覧</span><a class="headerlink" href="#id53" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -3781,7 +3783,7 @@
 <section id="ita-api-oase-receiver">
 <h3>ita-api-oase-receiver<a class="headerlink" href="#ita-api-oase-receiver" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id54">
-<caption><span class="caption-number">表 255 </span><span class="caption-text">ita-api-oase-receiver における Values 一覧</span><a class="headerlink" href="#id54" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 276 </span><span class="caption-text">ita-api-oase-receiver における Values 一覧</span><a class="headerlink" href="#id54" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -3845,7 +3847,7 @@
 <section id="oase-agent">
 <h3>共通設定 (OASE Agent)<a class="headerlink" href="#oase-agent" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id55">
-<caption><span class="caption-number">表 256 </span><span class="caption-text">共通設定 (Exastro OASE Agent) のオプションパラメータ</span><a class="headerlink" href="#id55" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 277 </span><span class="caption-text">共通設定 (Exastro OASE Agent) のオプションパラメータ</span><a class="headerlink" href="#id55" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -3891,7 +3893,7 @@
 <section id="ita-ag-oase">
 <h3>ita-ag-oase<a class="headerlink" href="#ita-ag-oase" title="Link to this heading">¶</a></h3>
 <table class="filter-table docutils align-left" id="id56">
-<caption><span class="caption-number">表 257 </span><span class="caption-text">ita-ag-oase における Values 一覧</span><a class="headerlink" href="#id56" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 278 </span><span class="caption-text">ita-ag-oase における Values 一覧</span><a class="headerlink" href="#id56" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 31.2%" />
 <col style="width: 31.2%" />
@@ -4121,8 +4123,8 @@
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2023 NEC Corporation</small>
-    <small><a href="/terms/ja.html">サイト規約</a></small>
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.5/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

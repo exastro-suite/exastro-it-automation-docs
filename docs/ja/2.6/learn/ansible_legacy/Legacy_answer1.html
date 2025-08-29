@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>ユーザー管理 (解答) &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="サーバー構築・運用 - Ansible-LegacyRole" href="../ansible_legacy_role/index.html" />
+    <link rel="prev" title="ユーザー管理 (演習問題)" href="Legacy_practice1.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/learn/ansible_legacy/Legacy_answer1.html" selected>current</option>
+              <option value="../../../../ja/2.6/learn/ansible_legacy/Legacy_answer1.html" selected>2.6(current)</option>
+              <option value="../../../../ja/2.5/learn/ansible_legacy/Legacy_answer1.html">2.5</option>
+              <option value="../../../../ja/2.4/learn/ansible_legacy/Legacy_answer1.html">2.4</option>
+              <option value="../../../../ja/2.3/learn/ansible_legacy/Legacy_answer1.html">2.3</option>
+              <option value="../../../../ja/2.2/learn/ansible_legacy/Legacy_answer1.html">2.2</option>
+              <option value="../../../../ja/2.1/learn/ansible_legacy/Legacy_answer1.html">2.1</option>
+              <option value="../../../../ja/2.0/learn/ansible_legacy/Legacy_answer1.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/learn/ansible_legacy/Legacy_answer1.html" selected>日本語</option>
+              <option value="../../../../en/2.6/learn/ansible_legacy/Legacy_answer1.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="Legacy_practice1.html" title="前のトピックへ">ユーザー管理 (演習問題)</a></li>
+        <li class="next"><a href="../ansible_legacy_role/index.html" title="次のトピックへ">サーバー構築・運用 - Ansible-LegacyRole</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Learn</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../quickstart/index.html">クイックスタート</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">サーバー構築・運用 - Ansible-Legacy</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#id1">前提</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id2">各シナリオの流れ</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id3">シナリオ</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="Legacy_scenario1.html">ホスト名管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Legacy_scenario2.html">パッケージ管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Legacy_scenario3.html">ジョブフロー</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Legacy_practice1.html">ユーザー管理 (演習問題)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">ユーザー管理 (解答)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id2">問題 (再掲)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id3">パラメータ設計</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id6">作業対象の登録</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id8">作業手順の登録</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id11">ユーザー追加作業の実施</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id16">(参考) 既存のジョブフローへの追加</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id19">まとめ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible_legacy_role/index.html">サーバー構築・運用 - Ansible-LegacyRole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">イベント連携 - OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collection/index.html">収集・比較機能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parameter/index.html">パラメータ集</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import/index.html">エクスポート/インポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hostgroup/index.html">ホストグループ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/index.html">マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">ユーザー管理 (解答)</a><ul>
+<li><a class="reference internal" href="#id2">問題 (再掲)</a></li>
+<li><a class="reference internal" href="#id3">パラメータ設計</a><ul>
+<li><a class="reference internal" href="#groups-legacy-parameter-sheet">グループのパラメータシート作成</a></li>
+<li><a class="reference internal" href="#id5">ユーザーのパラメータシート作成</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">作業対象の登録</a><ul>
+<li><a class="reference internal" href="#id7">作業機器登録</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">作業手順の登録</a><ul>
+<li><a class="reference internal" href="#movement">Movement 登録</a></li>
+<li><a class="reference internal" href="#ansible-playbook">Ansible Playbook 登録</a></li>
+<li><a class="reference internal" href="#movement-ansible-playbook">Movement と Ansible Playbook の紐付け</a></li>
+<li><a class="reference internal" href="#id9">代入値自動登録設定</a></li>
+<li><a class="reference internal" href="#id10">機器登録</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id11">ユーザー追加作業の実施</a><ul>
+<li><a class="reference internal" href="#id12">作業概要の作成</a></li>
+<li><a class="reference internal" href="#id13">作業概要登録</a></li>
+<li><a class="reference internal" href="#id14">パラメータ設定</a></li>
+<li><a class="reference internal" href="#id15">作業実行</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id16">(参考) 既存のジョブフローへの追加</a><ul>
+<li><a class="reference internal" href="#id17">ジョブフローの編集と実行 (失敗例)</a></li>
+<li><a class="reference internal" href="#id18">ジョブフローの編集と実行 (成功例)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id19">まとめ</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">Learn</a></li>
+    <li><a href="index.html">サーバー構築・運用 - Ansible-Legacy</a></li>
+    
+    <li>ユーザー管理 (解答)</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="id1">
+<h1>ユーザー管理 (解答)<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<section id="id2">
+<h2>問題 (再掲)<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">下記のようなユーザーを Exastro IT Automation を使って管理できるようにします。</div>
+<div class="line">また、その際に、ユーザー管理だけではなく、ホスト名設定、パッケージ管理も併せて実施できる必要があります。</div>
+</div>
+<table class="docutils align-default" id="id20">
+<caption><span class="caption-number">表 106 </span><span class="caption-text">ユーザー情報</span><a class="headerlink" href="#id20" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ユーザー名</p></th>
+<th class="head"><p>ユーザーID</p></th>
+<th class="head"><p>ログインパスワード</p></th>
+<th class="head"><p>グループ名</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wwwuser01</p></td>
+<td><p>10001</p></td>
+<td><p>password01</p></td>
+<td><p>www</p></td>
+</tr>
+<tr class="row-odd"><td><p>wwwuser02</p></td>
+<td><p>10002</p></td>
+<td><p>password02</p></td>
+<td><p>www</p></td>
+</tr>
+<tr class="row-even"><td><p>appuser01</p></td>
+<td><p>20001</p></td>
+<td><p>password01</p></td>
+<td><p>app</p></td>
+</tr>
+<tr class="row-odd"><td><p>appuser02</p></td>
+<td><p>20002</p></td>
+<td><p>password02</p></td>
+<td><p>app</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id3">
+<h2>パラメータ設計<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本演習ではユーザーの管理方法について扱いますが、ユーザーは何らかのグループに必ず所属する必要があります。</div>
+<div class="line">まずは、ユーザーをパラメータシート上で管理できるようにしておきます。</div>
+</div>
+<section id="groups-legacy-parameter-sheet">
+<span id="id4"></span><h3>グループのパラメータシート作成<a class="headerlink" href="#groups-legacy-parameter-sheet" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">グループ用のパラメータシートを作成します。</div>
+<div class="line">利用する Ansible Playbook は下記のPlaybookになります、下記のパラメータが管理できるようにパラメータシートを作成しましょう。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-number">リスト 462 </span><span class="caption-text">group.yml</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>---
+-<span class="w"> </span>name:<span class="w"> </span>create/update<span class="w"> </span>group
+<span class="w">  </span>group:
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
+<span class="w">    </span>gid:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
+<span class="w">  </span>with_together:
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_name }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_id }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_action }}&quot;</span>
+<span class="w">  </span>when:<span class="w"> </span>item.2<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;present&#39;</span>
+
+-<span class="w"> </span>name:<span class="w"> </span>create/update<span class="w"> </span>group
+<span class="w">  </span>group:
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
+<span class="w">    </span>gid:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
+<span class="w">  </span>with_together:
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_name }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_id }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_action }}&quot;</span>
+<span class="w">  </span>when:<span class="w"> </span>item.2<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;absent&#39;</span>
+</pre></div>
+</div>
+</div>
+<table class="docutils align-default" id="id22">
+<caption><span class="caption-number">表 107 </span><span class="caption-text">グループ設定のパラメータ</span><a class="headerlink" href="#id22" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>group_name</p></td>
+<td><p>グループ名</p></td>
+</tr>
+<tr class="row-odd"><td><p>group_id</p></td>
+<td><p>グループID</p></td>
+</tr>
+<tr class="row-even"><td><p>action</p></td>
+<td><div class="line-block">
+<div class="line">構築時の設定</div>
+<div class="line">present: 作成/更新</div>
+<div class="line">absent: 削除</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><span class="menuselection">パラメータシート作成 ▶ パラメータシート定義・作成</span> から、パラメータシートを登録します。</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line"><kbd class="kbd docutils literal notranslate">必須</kbd> と <kbd class="kbd docutils literal notranslate">一意制約</kbd> にチェックを入れることで、外部のパラメータシートから項目を参照できるようになります。</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">パラメータシート作成情報で <span class="menuselection">バンドル利用</span> を「利用する」にチェックを入れることで、1つの設定項目に対して複数のパラメータを設定することが可能になります。</div>
+</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/グループパラメータシート作成.png"><img alt="グループのパラメータシート" src="../../_images/%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%82%B7%E3%83%BC%E3%83%88%E4%BD%9C%E6%88%90.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="filter-table docutils align-default" id="id23">
+<caption><span class="caption-number">表 108 </span><span class="caption-text">グループパラメータシートの設定値</span><a class="headerlink" href="#id23" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>設定項目</p></th>
+<th class="head"><p>項目1設定値</p></th>
+<th class="head"><p>項目2設定値</p></th>
+<th class="head"><p>項目3設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>項目の名前</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">グループ名</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">グループID</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">状態</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>項目の名前(Rest API用)</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">group_name</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">group_id</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">state</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>入力方式</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">文字列(単一行)</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">整数</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">プルダウン選択</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>最小値</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>1000</p></td>
+<td><p>(項目なし)</p></td>
+</tr>
+<tr class="row-even"><td><p>最大値</p></td>
+<td><p>(項目なし)</p></td>
+<td></td>
+<td><p>(項目なし)</p></td>
+</tr>
+<tr class="row-odd"><td><p>最大バイト数</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">32</kbd></p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+</tr>
+<tr class="row-even"><td><p>正規表現</p></td>
+<td></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+</tr>
+<tr class="row-odd"><td><p>選択項目</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">入力用:状態:present</kbd>-<kbd class="kbd docutils literal notranslate">absent</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>参照項目</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>初期値</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>必須</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>一意制約</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>説明</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>備考</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="filter-table docutils align-default" id="id24">
+<caption><span class="caption-number">表 109 </span><span class="caption-text">パラメータシート作成情報の設定値</span><a class="headerlink" href="#id24" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>項番</p></td>
+<td><p>(自動入力)</p></td>
+</tr>
+<tr class="row-odd"><td><p>パラメータシート名</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">グループ</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>パラメータシート名(REST)</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">groups</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>作成対象</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">パラメータシート（ホスト/オペレーションあり）</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>表示順序</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>バンドル利用</p></td>
+<td><p>「利用する」にチェックを入れる(有効)</p></td>
+</tr>
+<tr class="row-even"><td><p>最終更新日時</p></td>
+<td><p>(自動入力)</p></td>
+</tr>
+<tr class="row-odd"><td><p>最終更新者</p></td>
+<td><p>(自動入力)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id5">
+<h3>ユーザーのパラメータシート作成<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">ユーザー用のパラメータシートを作成します。</div>
+<div class="line">利用する Ansible Playbook は下記のPlaybookになります、下記のパラメータが管理できるようにパラメータシートを作成しましょう。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id25">
+<div class="code-block-caption"><span class="caption-number">リスト 463 </span><span class="caption-text">user.yml</span><a class="headerlink" href="#id25" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>---
+-<span class="w"> </span>name:<span class="w"> </span>create<span class="w"> </span>user
+<span class="w">  </span>user:
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
+<span class="w">    </span>uid:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
+<span class="w">    </span>group:<span class="w"> </span><span class="s2">&quot;{{ item.2 }}&quot;</span>
+<span class="w">    </span>comment:<span class="w"> </span><span class="s2">&quot;{{ item.3 }}&quot;</span>
+<span class="w">    </span>home:<span class="w"> </span><span class="s2">&quot;{{ item.4 }}&quot;</span>
+<span class="w">    </span>shell:<span class="w"> </span><span class="s2">&quot;{{ item.5 }}&quot;</span>
+<span class="w">    </span>password:<span class="w"> </span><span class="s2">&quot;{{ item.6 | password_hash(&#39;sha512&#39;) }}&quot;</span>
+<span class="w">  </span>with_together:
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_name }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_id }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ comment }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ home_dir }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ login_shell }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ password }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_action }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ password_apply }}&quot;</span>
+<span class="w">  </span>when:<span class="w"> </span>item.7<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;present&#39;</span><span class="w"> </span>and<span class="w"> </span>password_apply
+
+-<span class="w"> </span>name:<span class="w"> </span>create<span class="w"> </span>user
+<span class="w">  </span>user:
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
+<span class="w">    </span>uid:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
+<span class="w">    </span>group:<span class="w"> </span><span class="s2">&quot;{{ item.2 }}&quot;</span>
+<span class="w">    </span>comment:<span class="w"> </span><span class="s2">&quot;{{ item.3 }}&quot;</span>
+<span class="w">    </span>home:<span class="w"> </span><span class="s2">&quot;{{ item.4 }}&quot;</span>
+<span class="w">    </span>shell:<span class="w"> </span><span class="s2">&quot;{{ item.5 }}&quot;</span>
+<span class="w">  </span>with_together:
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_name }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_id }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ comment }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ home_dir }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ login_shell }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_action }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ password_apply }}&quot;</span>
+<span class="w">  </span>when:<span class="w"> </span>item.6<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;present&#39;</span><span class="w"> </span>and<span class="w"> </span>not<span class="w"> </span>password_apply
+
+-<span class="w"> </span>name:<span class="w"> </span>delete<span class="w"> </span>user
+<span class="w">  </span>user:
+<span class="w">    </span>state:<span class="w"> </span>absent
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
+<span class="w">    </span>remove:<span class="w"> </span><span class="s1">&#39;yes&#39;</span>
+<span class="w">  </span>with_together:
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_name }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_action }}&quot;</span>
+<span class="w">  </span>when:<span class="w"> </span>item.1<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;absent&#39;</span>
+</pre></div>
+</div>
+</div>
+<table class="docutils align-default" id="id26">
+<caption><span class="caption-number">表 110 </span><span class="caption-text">ユーザー設定のパラメータ</span><a class="headerlink" href="#id26" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>user_name</p></td>
+<td><p>ユーザー名</p></td>
+</tr>
+<tr class="row-odd"><td><p>user_id</p></td>
+<td><p>ユーザーID</p></td>
+</tr>
+<tr class="row-even"><td><p>group_id</p></td>
+<td><p>グループID</p></td>
+</tr>
+<tr class="row-odd"><td><p>comment</p></td>
+<td><p>コメント</p></td>
+</tr>
+<tr class="row-even"><td><p>home_dir</p></td>
+<td><p>ホームディレクトリ</p></td>
+</tr>
+<tr class="row-odd"><td><p>login_shell</p></td>
+<td><p>ログインシェル名</p></td>
+</tr>
+<tr class="row-even"><td><p>password</p></td>
+<td><p>パスワード</p></td>
+</tr>
+<tr class="row-odd"><td><p>action</p></td>
+<td><div class="line-block">
+<div class="line">構築時の設定</div>
+<div class="line">present: 作成/更新</div>
+<div class="line">absent: 削除</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>password_apply</p></td>
+<td><div class="line-block">
+<div class="line">構築時のパスワード設定の有無</div>
+<div class="line">true: パスワードの設定を行う</div>
+<div class="line">false: パスワードの設定を行わない</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><span class="menuselection">パラメータシート作成 ▶ パラメータシート定義・作成</span> から、パラメータシートを登録します。</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line"><span class="menuselection">入力方式</span> を <kbd class="kbd docutils literal notranslate">プルダウン選択</kbd> に設定することで、<a class="reference internal" href="#groups-legacy-parameter-sheet"><span class="std std-ref">グループのパラメータシート作成</span></a> で登録したデータシートを参照できるようになります。</div>
+</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ユーザーパラメータシート作成_1.png"><img alt="ユーザーのパラメータシートの作成1" src="../../_images/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%82%B7%E3%83%BC%E3%83%88%E4%BD%9C%E6%88%90_1.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="filter-table docutils align-default" id="id27">
+<caption><span class="caption-number">表 111 </span><span class="caption-text">パラメータ項目の設定値(1/2)</span><a class="headerlink" href="#id27" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>設定項目</p></th>
+<th class="head"><p>項目1設定値</p></th>
+<th class="head"><p>項目2設定値</p></th>
+<th class="head"><p>項目3設定値</p></th>
+<th class="head"><p>項目4設定値</p></th>
+<th class="head"><p>項目5設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>項目の名前</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー名</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザーID</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">パスワード</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">パスワード設定</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">グループ</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>項目の名前(Rest API用)</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">user_name</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">user_id</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">password</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">password_apply</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">group</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>入力方式</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">文字列(単一行)</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">整数</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">パスワード</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">プルダウン選択</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">プルダウン選択</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>最大バイト数</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">32</kbd></p></td>
+<td><p>(項目なし)</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">32</kbd></p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+</tr>
+<tr class="row-even"><td><p>正規表現</p></td>
+<td></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+</tr>
+<tr class="row-odd"><td><p>最小値</p></td>
+<td><p>(項目なし)</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1000</kbd></p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+</tr>
+<tr class="row-even"><td><p>最大値</p></td>
+<td><p>(項目なし)</p></td>
+<td></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+</tr>
+<tr class="row-odd"><td><p>選択項目</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">パラメータシート作成:選択2:True</kbd>-<kbd class="kbd docutils literal notranslate">False</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">入力用:グループ:グループ名</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>参照項目</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>初期値</p></td>
+<td></td>
+<td></td>
+<td><p>(項目なし)</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">False</kbd></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>必須</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>一意制約</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>説明</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>備考</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ユーザーパラメータシート作成_2.png"><img alt="ユーザーのパラメータシート作成_2" src="../../_images/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%82%B7%E3%83%BC%E3%83%88%E4%BD%9C%E6%88%90_2.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="filter-table docutils align-default" id="id28">
+<caption><span class="caption-number">表 112 </span><span class="caption-text">パラメータ項目の設定値(2/2)</span><a class="headerlink" href="#id28" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>設定項目</p></th>
+<th class="head"><p>項目6設定値</p></th>
+<th class="head"><p>項目7設定値</p></th>
+<th class="head"><p>項目8設定値</p></th>
+<th class="head"><p>項目9設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>項目の名前</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ホームディレクトリ</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ログインシェル</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">コメント</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">状態</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>項目の名前(Rest API用)</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">home_dir</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">login_shell</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">comment</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">state</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>入力方式</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">文字列(単一行)</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">文字列(単一行)</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">文字列(単一行)</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">プルダウン選択</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>最大バイト数</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">128</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">32</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">128</kbd></p></td>
+<td><p>(項目なし)</p></td>
+</tr>
+<tr class="row-even"><td><p>正規表現</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>(項目なし)</p></td>
+</tr>
+<tr class="row-odd"><td><p>最小値</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+</tr>
+<tr class="row-even"><td><p>最大値</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+</tr>
+<tr class="row-odd"><td><p>選択項目</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">入力用:状態:present</kbd>-<kbd class="kbd docutils literal notranslate">absent</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>参照項目</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td><p>(項目なし)</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>初期値</p></td>
+<td></td>
+<td><p><kbd class="kbd docutils literal notranslate">/bin/bash</kbd></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>必須</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>一意制約</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>説明</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>備考</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="filter-table docutils align-default" id="id29">
+<caption><span class="caption-number">表 113 </span><span class="caption-text">パラメータシート作成情報の設定値</span><a class="headerlink" href="#id29" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>項番</p></td>
+<td><p>(自動入力)</p></td>
+</tr>
+<tr class="row-odd"><td><p>パラメータシート名</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>パラメータシート名(REST)</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">users</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>作成対象</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">パラメータシート（ホスト/オペレーションあり）</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>表示順序</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>バンドル利用</p></td>
+<td><p>「利用する」にチェックを入れる(有効)</p></td>
+</tr>
+<tr class="row-even"><td><p>最終更新日時</p></td>
+<td><p>(自動入力)</p></td>
+</tr>
+<tr class="row-odd"><td><p>最終更新者</p></td>
+<td><p>(自動入力)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id6">
+<h2>作業対象の登録<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">作業実施を行う対象機器の登録を行います。</div>
+</div>
+<section id="id7">
+<h3>作業機器登録<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">作業対象となるサーバーは <a class="reference internal" href="Legacy_scenario1.html"><span class="doc">前のシナリオ</span></a> で登録した web01 を利用するため、作業は不要です。</div>
+</div>
+</section>
+</section>
+<section id="id8">
+<h2>作業手順の登録<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">グループを作成・削除してから、ユーザーを作成・削除する順番で Ansible Playbook が実行されるように Movement を設定します。</div>
+<div class="line">これまでのシナリオでは、1つの Movement ごとに1つの Ansible Playbook を紐付けていましたが、今回は 1つの Movement に対して、グループ管理とユーザー管理が行えるように設定します。</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">グループ管理とユーザー管理それぞれに対して、Movement を1つずつ作成しても同じように動作させることができます。</div>
+</div>
+</div>
+<section id="movement">
+<h3>Movement 登録<a class="headerlink" href="#movement" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible-Legacy ▶ Movement一覧</span> から、ユーザー管理のための Movement を登録します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ユーザーMovement登録設定.png"><img alt="Movement登録" src="../../_images/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BCMovement%E7%99%BB%E9%8C%B2%E8%A8%AD%E5%AE%9A.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id30">
+<caption><span class="caption-number">表 114 </span><span class="caption-text">Movement 情報の設定値</span><a class="headerlink" href="#id30" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Movement名</p></th>
+<th class="head"><p>Ansible利用情報</p></th>
+<th class="head"></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p>ホスト指定形式</p></th>
+<th class="head"><p>ヘッダーセクション</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">IP</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">※ヘッダーセクションを参照</kbd></p></td>
+</tr>
+</tbody>
+</table>
+<div class="literal-block-wrapper docutils container" id="id31">
+<div class="code-block-caption"><span class="caption-number">リスト 464 </span><span class="caption-text">ヘッダーセクション</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>hosts:<span class="w"> </span>all
+<span class="w">  </span>remote_user:<span class="w"> </span><span class="s2">&quot;{{ __loginuser__ }}&quot;</span>
+<span class="w">  </span>gather_facts:<span class="w"> </span>no
+<span class="w">  </span>become:<span class="w"> </span>yes
+</pre></div>
+</div>
+</div>
+</section>
+<section id="ansible-playbook">
+<h3>Ansible Playbook 登録<a class="headerlink" href="#ansible-playbook" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">本シナリオでは、 以下のPlaybookを利用します。以下をコピーして、yml形式でgroup.ymlとuser.ymlを作成してください。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id32">
+<div class="code-block-caption"><span class="caption-number">リスト 465 </span><span class="caption-text">group.yml</span><a class="headerlink" href="#id32" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>---
+-<span class="w"> </span>name:<span class="w"> </span>create/update<span class="w"> </span>group
+<span class="w">  </span>group:
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
+<span class="w">    </span>gid:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
+<span class="w">  </span>with_together:
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_name }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_id }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_action }}&quot;</span>
+<span class="w">  </span>when:<span class="w"> </span>item.2<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;present&#39;</span>
+
+-<span class="w"> </span>name:<span class="w"> </span>create/update<span class="w"> </span>group
+<span class="w">  </span>group:
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
+<span class="w">    </span>gid:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
+<span class="w">  </span>with_together:
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_name }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_id }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_action }}&quot;</span>
+<span class="w">  </span>when:<span class="w"> </span>item.2<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;absent&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id33">
+<div class="code-block-caption"><span class="caption-number">リスト 466 </span><span class="caption-text">user.yml</span><a class="headerlink" href="#id33" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>---
+-<span class="w"> </span>name:<span class="w"> </span>create<span class="w"> </span>user
+<span class="w">  </span>user:
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
+<span class="w">    </span>uid:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
+<span class="w">    </span>group:<span class="w"> </span><span class="s2">&quot;{{ item.2 }}&quot;</span>
+<span class="w">    </span>comment:<span class="w"> </span><span class="s2">&quot;{{ item.3 }}&quot;</span>
+<span class="w">    </span>home:<span class="w"> </span><span class="s2">&quot;{{ item.4 }}&quot;</span>
+<span class="w">    </span>shell:<span class="w"> </span><span class="s2">&quot;{{ item.5 }}&quot;</span>
+<span class="w">    </span>password:<span class="w"> </span><span class="s2">&quot;{{ item.6 | password_hash(&#39;sha512&#39;) }}&quot;</span>
+<span class="w">  </span>with_together:
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_name }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_id }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ comment }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ home_dir }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ login_shell }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ password }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_action }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ password_apply }}&quot;</span>
+<span class="w">  </span>when:<span class="w"> </span>item.7<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;present&#39;</span><span class="w"> </span>and<span class="w"> </span>password_apply
+
+-<span class="w"> </span>name:<span class="w"> </span>create<span class="w"> </span>user
+<span class="w">  </span>user:
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
+<span class="w">    </span>uid:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
+<span class="w">    </span>group:<span class="w"> </span><span class="s2">&quot;{{ item.2 }}&quot;</span>
+<span class="w">    </span>comment:<span class="w"> </span><span class="s2">&quot;{{ item.3 }}&quot;</span>
+<span class="w">    </span>home:<span class="w"> </span><span class="s2">&quot;{{ item.4 }}&quot;</span>
+<span class="w">    </span>shell:<span class="w"> </span><span class="s2">&quot;{{ item.5 }}&quot;</span>
+<span class="w">  </span>with_together:
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_name }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_id }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ comment }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ home_dir }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ login_shell }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_action }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ password_apply }}&quot;</span>
+<span class="w">  </span>when:<span class="w"> </span>item.6<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;present&#39;</span><span class="w"> </span>and<span class="w"> </span>not<span class="w"> </span>password_apply
+
+-<span class="w"> </span>name:<span class="w"> </span>delete<span class="w"> </span>user
+<span class="w">  </span>user:
+<span class="w">    </span>state:<span class="w"> </span>absent
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
+<span class="w">    </span>remove:<span class="w"> </span><span class="s1">&#39;yes&#39;</span>
+<span class="w">  </span>with_together:
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_name }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_action }}&quot;</span>
+<span class="w">  </span>when:<span class="w"> </span>item.1<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;absent&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible-Legacy ▶ Playbook素材集</span> から、上記のPlaybookを登録します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/Ansible-Playbook登録.png"><img alt="Ansible-Playbook登録" src="../../_images/Ansible-Playbook%E7%99%BB%E9%8C%B2.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id34">
+<caption><span class="caption-number">表 115 </span><span class="caption-text">Ansible Playbook 情報の登録</span><a class="headerlink" href="#id34" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Playbook素材名</p></th>
+<th class="head"><p>Playbook素材</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">group</kbd></p></td>
+<td><p><code class="file docutils literal notranslate"><span class="pre">group.yml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">user</kbd></p></td>
+<td><p><code class="file docutils literal notranslate"><span class="pre">user.yml</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="movement-ansible-playbook">
+<h3>Movement と Ansible Playbook の紐付け<a class="headerlink" href="#movement-ansible-playbook" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible-Legacy ▶ Movement-Playbook紐付</span> から、Movement と Ansible Playbook の紐付けを行います。</div>
+<div class="line">本シナリオでは、 group.yml および user.ymlを利用します。</div>
+<div class="line">ユーザーを作成する際には、先にグループを指定する必要があるため下記の順序でインクルードする必要があります。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/MovementとPlaybook紐付け.png"><img alt="MovementとAnsible Playbook の紐づけ" src="../../_images/Movement%E3%81%A8Playbook%E7%B4%90%E4%BB%98%E3%81%91.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id35">
+<caption><span class="caption-number">表 116 </span><span class="caption-text">Movement-Playbook紐付け情報の登録</span><a class="headerlink" href="#id35" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Movement名</p></th>
+<th class="head"><p>Playbook素材</p></th>
+<th class="head"><p>インクルード順序</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">group.yml</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">user.yml</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id9">
+<h3>代入値自動登録設定<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible-Legacy ▶ 代入値自動登録設定</span> から、パラメータシートの項目と Ansible Playbook の変数の紐付けを行います。</div>
+<div class="line">大量のデータを一度に登録するような場合には、全件ダウンロード・ファイル一括登録を使って、ファイルからデータを投入する方法が適切です。</div>
+<div class="line"><span class="menuselection">Ansible-Legacy ▶ 代入値自動登録設定 ▶ 全件ダウンロード・ファイル一括登録</span> から、新規登録用ファイルをダウンロードします。ダウンロードしたファイルを編集し、ファイル一括登録にてファイルを登録すると代入値自動登録設定が簡単に行うことが出来ます。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/グループの代入値自動登録設定_一括登録.png"><img alt="グループの代入値自動登録設定" src="../../_images/%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AE%E4%BB%A3%E5%85%A5%E5%80%A4%E8%87%AA%E5%8B%95%E7%99%BB%E9%8C%B2%E8%A8%AD%E5%AE%9A_%E4%B8%80%E6%8B%AC%E7%99%BB%E9%8C%B2.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id36">
+<caption><span class="caption-number">表 117 </span><span class="caption-text">グループの代入値自動登録設定の設定値</span><a class="headerlink" href="#id36" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 36.4%" />
+<col style="width: 9.1%" />
+<col style="width: 9.1%" />
+<col style="width: 18.2%" />
+<col style="width: 18.2%" />
+<col style="width: 9.1%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータシート(From)</p></th>
+<th class="head"></th>
+<th class="head"><p>登録方式</p></th>
+<th class="head"><p>Movement名</p></th>
+<th class="head"><p>IaC変数(To)</p></th>
+<th class="head"></th>
+</tr>
+<tr class="row-even"><th class="head"><p>メニューグループ:メニュー:項目</p></th>
+<th class="head"><p>代入順序</p></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"><p>Movement名:変数名</p></th>
+<th class="head"><p>代入順序</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:グループ:グループ名</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:group_name</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:グループ:グループID</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:group_id</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:グループ:状態</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:group_action</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:グループ:グループ名</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:group_name</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:グループ:グループID</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:group_id</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:グループ:状態</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:group_action</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">...</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">...</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">...</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">...</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">...</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">...</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:グループ:グループ名</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">5</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:group_name</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">5</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:グループ:グループID</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">5</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:group_id</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">5</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:グループ:状態</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">5</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:group_action</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">5</kbd></p></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ユーザーの代入値自動登録設定_一括登録1.png"><img alt="ユーザーの代入値自動登録設定" src="../../_images/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E4%BB%A3%E5%85%A5%E5%80%A4%E8%87%AA%E5%8B%95%E7%99%BB%E9%8C%B2%E8%A8%AD%E5%AE%9A_%E4%B8%80%E6%8B%AC%E7%99%BB%E9%8C%B21.png" style="width: 1200px;" />
+</a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ユーザーの代入値自動登録設定_一括登録2.png"><img alt="ユーザーの代入値自動登録設定" src="../../_images/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E4%BB%A3%E5%85%A5%E5%80%A4%E8%87%AA%E5%8B%95%E7%99%BB%E9%8C%B2%E8%A8%AD%E5%AE%9A_%E4%B8%80%E6%8B%AC%E7%99%BB%E9%8C%B22.png" style="width: 1200px;" />
+</a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ユーザーの代入値自動登録設定_一括登録3.png"><img alt="ユーザーの代入値自動登録設定" src="../../_images/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E4%BB%A3%E5%85%A5%E5%80%A4%E8%87%AA%E5%8B%95%E7%99%BB%E9%8C%B2%E8%A8%AD%E5%AE%9A_%E4%B8%80%E6%8B%AC%E7%99%BB%E9%8C%B23.png" style="width: 1200px;" />
+</a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ユーザーの代入値自動登録設定_一括登録4.png"><img alt="ユーザーの代入値自動登録設定" src="../../_images/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E4%BB%A3%E5%85%A5%E5%80%A4%E8%87%AA%E5%8B%95%E7%99%BB%E9%8C%B2%E8%A8%AD%E5%AE%9A_%E4%B8%80%E6%8B%AC%E7%99%BB%E9%8C%B24.png" style="width: 1200px;" />
+</a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ユーザーの代入値自動登録設定_一括登録5.png"><img alt="ユーザーの代入値自動登録設定" src="../../_images/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E4%BB%A3%E5%85%A5%E5%80%A4%E8%87%AA%E5%8B%95%E7%99%BB%E9%8C%B2%E8%A8%AD%E5%AE%9A_%E4%B8%80%E6%8B%AC%E7%99%BB%E9%8C%B25.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id37">
+<caption><span class="caption-number">表 118 </span><span class="caption-text">ユーザーの代入値自動登録設定の設定値</span><a class="headerlink" href="#id37" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 36.4%" />
+<col style="width: 9.1%" />
+<col style="width: 9.1%" />
+<col style="width: 18.2%" />
+<col style="width: 18.2%" />
+<col style="width: 9.1%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータシート(From)</p></th>
+<th class="head"></th>
+<th class="head"><p>登録方式</p></th>
+<th class="head"><p>Movement名</p></th>
+<th class="head"><p>IaC変数(To)</p></th>
+<th class="head"></th>
+</tr>
+<tr class="row-even"><th class="head"><p>メニューグループ:メニュー:項目</p></th>
+<th class="head"><p>代入順序</p></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"><p>Movement名:変数名</p></th>
+<th class="head"><p>代入順序</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ユーザー名</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:user_name</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ユーザーID</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:user_id</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:パスワード</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:password</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:パスワード設定</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:password_apply</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:グループ</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:group</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ホームディレクトリ</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:home_dir</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ログインシェル</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:login_shell</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:コメント</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:comment</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:状態</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:user_action</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ユーザー名</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:user_name</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ユーザーID</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:user_id</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:パスワード</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:password</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:パスワード設定</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:password_apply</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:グループ</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:group</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ホームディレクトリ</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:home_dir</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ログインシェル</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:login_shell</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:コメント</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:comment</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:状態</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:user_action</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ユーザー名</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:user_name</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ユーザーID</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:user_id</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:パスワード</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:password</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:パスワード設定</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:password_apply</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:グループ</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:group</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ホームディレクトリ</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:home_dir</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ログインシェル</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:login_shell</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:コメント</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:comment</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:状態</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:user_action</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ユーザー名</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:user_name</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ユーザーID</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:user_id</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:パスワード</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:password</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:パスワード設定</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:password_apply</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:グループ</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:group</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ホームディレクトリ</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:home_dir</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ログインシェル</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:login_shell</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:コメント</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:comment</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:状態</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:user_action</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">...</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">...</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">...</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">...</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">...</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">...</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ユーザー名</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:user_name</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ユーザーID</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:user_id</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:パスワード</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:password</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:パスワード設定</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:password_apply</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:グループ</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:group</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ホームディレクトリ</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:home_dir</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:ログインシェル</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:login_shell</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:コメント</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:comment</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">代入値自動登録用:ユーザー:状態</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value型</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理:user_action</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10</kbd></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id10">
+<h3>機器登録<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">作業対象となるサーバーは <a class="reference internal" href="Legacy_scenario1.html"><span class="doc">前のシナリオ</span></a> で登録した web01 を利用するため、作業は不要です。</div>
+</div>
+</section>
+</section>
+<section id="id11">
+<h2>ユーザー追加作業の実施<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Movement を実行してユーザーとグループを追加します。</div>
+</div>
+<section id="id12">
+<h3>作業概要の作成<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">まずは作業計画を立てましょう。</div>
+</div>
+<table class="docutils align-default" id="id38">
+<caption><span class="caption-number">表 119 </span><span class="caption-text">作業の方針</span><a class="headerlink" href="#id38" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>作業実施日時</p></td>
+<td><p>2024/04/04 12:00:00</p></td>
+</tr>
+<tr class="row-even"><td><p>作業対象</p></td>
+<td><p>web01(RHEL8)</p></td>
+</tr>
+<tr class="row-odd"><td><p>作業内容</p></td>
+<td><p>Webサーバーへユーザー追加作業</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id13">
+<h3>作業概要登録<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line"><span class="menuselection">基本コンソール ▶ オペレーション一覧</span> から、作業実施日時や作業名を登録します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/オペレーション登録.png"><img alt="Conductor作業実行" src="../../_images/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E7%99%BB%E9%8C%B2.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id39">
+<caption><span class="caption-number">表 120 </span><span class="caption-text">オペレーション登録内容</span><a class="headerlink" href="#id39" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 60.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>オペレーション名</p></th>
+<th class="head"><p>実施予定日時</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Webサーバーへユーザー追加作業</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/04</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id14">
+<h3>パラメータ設定<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line"><span class="menuselection">入力用 ▶ グループ</span> から、グループに対するパラメータを登録します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/グループのパラメータ登録.png"><img alt="グループのパラメータ登録" src="../../_images/%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E7%99%BB%E9%8C%B2.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id40">
+<caption><span class="caption-number">表 121 </span><span class="caption-text">グループパラメータの設定値</span><a class="headerlink" href="#id40" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 11.1%" />
+<col style="width: 44.4%" />
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ホスト名</p></th>
+<th class="head"><p>オペレーション</p></th>
+<th class="head"><p>代入順序</p></th>
+<th class="head"><p>パラメータ</p></th>
+<th class="head"></th>
+<th class="head"></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p>オペレーション名</p></th>
+<th class="head"></th>
+<th class="head"><p>グループ名</p></th>
+<th class="head"><p>グループID</p></th>
+<th class="head"><p>状態</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>web01</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2023/04/04</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_Webサーバーへユーザー追加作業</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">www</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10001</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">present</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>web01</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2023/04/04</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_Webサーバーへユーザー追加作業</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">app</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10002</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">present</kbd></p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><span class="menuselection">入力用 ▶ ユーザー</span> から、ユーザーに対するパラメータを登録します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ユーザーのパラメータ登録_1.png"><img alt="ユーザのパラメータ登録" src="../../_images/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E7%99%BB%E9%8C%B2_1.png" style="width: 1200px;" />
+</a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ユーザーのパラメータ登録_2.png"><img alt="ユーザのパラメータ登録" src="../../_images/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E7%99%BB%E9%8C%B2_2.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id41">
+<caption><span class="caption-number">表 122 </span><span class="caption-text">ユーザーパラメータの設定値</span><a class="headerlink" href="#id41" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 5.9%" />
+<col style="width: 23.5%" />
+<col style="width: 5.9%" />
+<col style="width: 5.9%" />
+<col style="width: 5.9%" />
+<col style="width: 5.9%" />
+<col style="width: 5.9%" />
+<col style="width: 5.9%" />
+<col style="width: 11.8%" />
+<col style="width: 5.9%" />
+<col style="width: 11.8%" />
+<col style="width: 5.9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ホスト名</p></th>
+<th class="head"><p>オペレーション</p></th>
+<th class="head"><p>代入順序</p></th>
+<th class="head"><p>パラメータ</p></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p>オペレーション名</p></th>
+<th class="head"></th>
+<th class="head"><p>ユーザー名</p></th>
+<th class="head"><p>ユーザーID</p></th>
+<th class="head"><p>パスワード</p></th>
+<th class="head"><p>パスワード設定</p></th>
+<th class="head"><p>グループ</p></th>
+<th class="head"><p>ホームディレクトリ</p></th>
+<th class="head"><p>ログインシェル</p></th>
+<th class="head"><p>コメント</p></th>
+<th class="head"><p>状態</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>web01</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/04</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_Webサーバーへユーザー追加作業</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">wwwuser01</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10001</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">password01</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">True</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">www</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">/home/wwwuser01</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">/bin/bash</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Web</kbd> <kbd class="kbd docutils literal notranslate">server</kbd> <kbd class="kbd docutils literal notranslate">maintainer</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">present</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>web01</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/04</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_Webサーバーへユーザー追加作業</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">wwwuser02</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">10002</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">password02</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">True</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">www</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">/home/wwwuser02</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">/bin/bash</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Web</kbd> <kbd class="kbd docutils literal notranslate">server</kbd> <kbd class="kbd docutils literal notranslate">maintainer</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">present</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>web01</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/04</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_Webサーバーへユーザー追加作業</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">3</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">appuser01</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">20001</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">password01</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">True</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">app</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">/home/appuser01</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">/bin/bash</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Application</kbd> <kbd class="kbd docutils literal notranslate">server</kbd> <kbd class="kbd docutils literal notranslate">maintainer</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">present</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>web01</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/04</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_Webサーバーへユーザー追加作業</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">4</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">appuser02</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">20002</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">password02</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">True</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">app</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">/home/appuser02</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">/bin/bash</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Application</kbd> <kbd class="kbd docutils literal notranslate">server</kbd> <kbd class="kbd docutils literal notranslate">maintainer</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">present</kbd></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id15">
+<h3>作業実行<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>事前確認</p>
+<div class="line-block">
+<div class="line">現在のサーバーの状態を確認しましょう。</div>
+</div>
+<div class="line-block">
+<div class="line">グループ一覧を確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id42">
+<div class="code-block-caption"><span class="caption-number">リスト 467 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id42" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># グループ一覧の取得</span>
+cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;www|app&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id43">
+<div class="code-block-caption"><span class="caption-number">リスト 468 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id43" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 何も表示されない</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">ユーザー一覧を確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id44">
+<div class="code-block-caption"><span class="caption-number">リスト 469 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id44" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ユーザー一覧の取得</span>
+cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;www|app&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id45">
+<div class="code-block-caption"><span class="caption-number">リスト 470 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id45" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 何も表示されない</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>作業実行</p>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible-Legacy ▶ 作業実行</span> から、<kbd class="kbd docutils literal notranslate">ユーザー管理</kbd> Movement を選択し、<span class="guilabel"> 作業実行</span> を押下します。</div>
+<div class="line">次に、<span class="menuselection">作業実行設定</span> で、オペレーションに <kbd class="kbd docutils literal notranslate">Webサーバーへユーザー追加作業</kbd> を選択し、<span class="guilabel">作業実行</span> を押下します。</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="menuselection">作業状態確認</span> 画面が開き、実行が完了した後に、ステータスが「完了」になったことを確認します。</div>
+</div>
+</li>
+</ol>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/作業実行.png"><img alt="作業実行" src="../../_images/%E4%BD%9C%E6%A5%AD%E5%AE%9F%E8%A1%8C.png" style="width: 1200px;" />
+</a>
+</figure>
+<ol class="arabic">
+<li><p>事後確認</p>
+<div class="line-block">
+<div class="line">再度サーバーに下記のグループとユーザーが設定されていることを確認しましょう。</div>
+</div>
+<div class="line-block">
+<div class="line">グループ一覧を確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id46">
+<div class="code-block-caption"><span class="caption-number">リスト 471 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id46" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># グループ一覧の取得</span>
+cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;app|www&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id47">
+<div class="code-block-caption"><span class="caption-number">リスト 472 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id47" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>www:x:10001:
+app:x:10002:
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">ユーザー一覧を確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id48">
+<div class="code-block-caption"><span class="caption-number">リスト 473 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id48" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ユーザー一覧の取得</span>
+cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;app|www&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id49">
+<div class="code-block-caption"><span class="caption-number">リスト 474 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id49" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wwwuser01:x:10001:10001:Web<span class="w"> </span>server<span class="w"> </span>mainterner:/home/wwwuser01:/bin/bash
+wwwuser02:x:10002:10001:Web<span class="w"> </span>server<span class="w"> </span>mainterner:/home/wwwuser02:/bin/bash
+appuser01:x:20001:10002:Application<span class="w"> </span>server<span class="w"> </span>mainterner:/home/appuser01:/bin/bash
+appuser02:x:20002:10002:Application<span class="w"> </span>server<span class="w"> </span>mainterner:/home/appuser02:/bin/bash
+</pre></div>
+</div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<section id="id16">
+<h2>(参考) 既存のジョブフローへの追加<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本演習では、ジョブフローを利用せずに Movement から直接ユーザー設定作業を実施しましたが、当然ジョブフローの利用も可能です。</div>
+<div class="line">ジョブフローシナリオまでに行ったサーバー構築の一連の作業の中に本演習で作成した Movement を組み込むことで、ホスト名登録、パッケージ導入、ユーザー登録といった一連の作業フローを組み立てることができます。</div>
+<div class="line">この場合の作業の流れは、</div>
+</div>
+<ol class="arabic simple">
+<li><p>ジョブフローの作成</p></li>
+<li><p>オペレーション登録</p></li>
+<li><p>ホスト名のパラメータ登録 (パラメータ変更なし)</p></li>
+<li><p>パッケージのパラメータ登録 (パラメータ変更なし)</p></li>
+<li><p>グループのパラメータ登録</p></li>
+<li><p>ユーザーのパラメータ登録</p></li>
+<li><p>ジョブフロー実行</p></li>
+</ol>
+<div class="line-block">
+<div class="line">となります。</div>
+<div class="line">しかし、Exastro IT Automation では、オペレーションと機器の組み合わせごとにパラメータを登録する必要があるため、今回のように、グループとユーザーのみの設定にも関わらず、それ以外のホスト名やパッケージといったパラメータを設定をしなげればなりません。</div>
+</div>
+<div class="line-block">
+<div class="line">このような場合に個別オペレーションを使うことで、Movement ごとにオペレーションを設定することができます。</div>
+<div class="line">ただし、個別オペレーションを使った場合、実行時のオペレーションとは異なるオペレーションによりパラメータが管理されるため、運用上パラメータの見通しが悪くなることもあります。</div>
+</div>
+<section id="id17">
+<h3>ジョブフローの編集と実行 (失敗例)<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line"><span class="menuselection">Conductor ▶ Conductor一覧</span> から、<kbd class="kbd docutils literal notranslate">サーバー構築</kbd> の <span class="guilabel">詳細</span> を押下し、ジョブフローを編集します。</div>
+</div>
+<div class="line-block">
+<div class="line">1. 画面上部の <span class="guilabel"> 編集</span> を押下し、更新モードに移行します。</div>
+<div class="line">2. 右下のペインに、作成した <kbd class="kbd docutils literal notranslate">ユーザー管理</kbd> Movement があるので、これを画面中央にドラッグアンドドロップします。</div>
+<div class="line">3. 各 Mode 間を下記の様に再接続します。</div>
+</div>
+<table class="docutils align-default" id="id50">
+<caption><span class="caption-number">表 123 </span><span class="caption-text">オブジェクト間の接続</span><a class="headerlink" href="#id50" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>OUT</p></th>
+<th class="head"><p>IN</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Start</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ホスト名設定</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">ホスト名設定</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">パッケージ管理</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">パッケージ管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">End</kbd></p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">4. 画面上部にある、 <span class="guilabel"> 更新</span> を押下します。</div>
+<div class="line">5. <span class="menuselection">Conductor ▶ Conductor編集/作業実行</span> から、<span class="guilabel"> 選択</span> を押下します。</div>
+<div class="line">6. <kbd class="kbd docutils literal notranslate">サーバー構築</kbd> Conductor を選択し、<span class="guilabel">選択決定</span> を押下します。</div>
+<div class="line">7. オペレーションに <kbd class="kbd docutils literal notranslate">Webサーバーへユーザー追加作業</kbd> を選択し、<span class="guilabel">作業実行</span> を押下します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/コンダクター実行失敗例.gif"><img alt="実行失敗" src="../../_images/%E3%82%B3%E3%83%B3%E3%83%80%E3%82%AF%E3%82%BF%E3%83%BC%E5%AE%9F%E8%A1%8C%E5%A4%B1%E6%95%97%E4%BE%8B.gif" style="width: 1200px;" />
+</a>
+</figure>
+<div class="line-block">
+<div class="line"><span class="menuselection">Conductor作業確認</span> 画面が開き、ホスト名設定の Movement が ERROR となり想定外エラーになるはずです。</div>
+<div class="line">これは、<kbd class="kbd docutils literal notranslate">Webサーバーへユーザー追加作業</kbd> に紐づくホスト名のパラメータがないことにより起こる動作です。</div>
+</div>
+</section>
+<section id="id18">
+<h3>ジョブフローの編集と実行 (成功例)<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line"><span class="menuselection">Conductor ▶ Conductor一覧</span> から、<kbd class="kbd docutils literal notranslate">サーバー構築</kbd> の <span class="guilabel">詳細</span> を押下し、再度ジョブフローを編集します。</div>
+</div>
+<div class="line-block">
+<div class="line">1. 画面上部の <span class="guilabel"> 編集</span> を押下し、更新モードに移行します。</div>
+<div class="line">2. 右下のペインに、作成した <kbd class="kbd docutils literal notranslate">ユーザー管理</kbd> Movement があるので、これを画面中央にドラッグアンドドロップします。</div>
+<div class="line">3. 各 Mode に対して下記の様に個別オペレーションを設定します。</div>
+</div>
+<table class="docutils align-default" id="id51">
+<caption><span class="caption-number">表 124 </span><span class="caption-text">個別オペレーション設定</span><a class="headerlink" href="#id51" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Movement</p></th>
+<th class="head"><p>オペレーション名</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">ホスト名設定</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">RHEL8のホスト名変更作業</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">パッケージ管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">RHEL8のパッケージ管理</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">ユーザー管理</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Webサーバーへユーザー追加作業</kbd></p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">4. 画面上部にある、 <span class="guilabel"> 更新</span> を押下します。</div>
+<div class="line">5. <span class="menuselection">Conductor ▶ Conductor編集/作業実行</span> から、<span class="guilabel"> 選択</span> を押下します。</div>
+<div class="line">6. <kbd class="kbd docutils literal notranslate">サーバー構築</kbd> Conductor を選択し、<span class="guilabel">選択決定</span> を押下します。</div>
+<div class="line">7. オペレーションに <kbd class="kbd docutils literal notranslate">Webサーバーへユーザー追加作業</kbd> を選択し、<span class="guilabel">作業実行</span> を押下します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/コンダクター実行成功例.gif"><img alt="実行成功" src="../../_images/%E3%82%B3%E3%83%B3%E3%83%80%E3%82%AF%E3%82%BF%E3%83%BC%E5%AE%9F%E8%A1%8C%E6%88%90%E5%8A%9F%E4%BE%8B.gif" style="width: 1200px;" />
+</a>
+</figure>
+<div class="line-block">
+<div class="line"><span class="menuselection">Conductor作業確認</span> 画面が開き、実行が完了した後に、全ての Movement のステータスが「Done」になったことを確認します。</div>
+</div>
+</section>
+</section>
+<section id="id19">
+<h2>まとめ<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本シナリオでは、これまでのシナリオの確認のために、演習課題を実施しました。</div>
+<div class="line">また Conductor のパラメータ連携の1つの手段として、個別オペレーションについて紹介をしました。</div>
+<div class="line">より詳細な情報を知りたい場合は、<a class="reference internal" href="../../manuals/index.html"><span class="doc">マニュアル</span></a> を参照してください。</div>
+</div>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="Legacy_practice1.html" title="前のトピックへ"><span>前のトピックへ</span>ユーザー管理 (演習問題)</a></li>
+    <li class="next"><a href="../ansible_legacy_role/index.html" title="次のトピックへ"><span>次のトピックへ</span>サーバー構築・運用 - Ansible-LegacyRole</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

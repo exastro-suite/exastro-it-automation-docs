@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=57fb2187" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,9 +72,10 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
-              <option value="../../../../ja/2.5/learn/hostgroup/hostgroup.html" selected>current</option>
-              <option value="../../../../ja/2.5/learn/hostgroup/hostgroup.html" selected>2.5(current)</option>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/learn/hostgroup/hostgroup.html">current</option>
+              <option value="../../../../ja/2.6/learn/hostgroup/hostgroup.html">2.6(current)</option>
+              <option value="../../../../ja/2.5/learn/hostgroup/hostgroup.html" selected>2.5</option>
               <option value="../../../../ja/2.4/learn/hostgroup/hostgroup.html">2.4</option>
               <option value="../../../../ja/2.3/learn/hostgroup/hostgroup.html">2.3</option>
               <option value="../../../../ja/2.2/learn/hostgroup/hostgroup.html">2.2</option>
@@ -91,7 +92,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               <option value="../../../../ja/2.5/learn/hostgroup/hostgroup.html" selected>日本語</option>
               <option value="../../../../en/2.5/learn/hostgroup/hostgroup.html">English</option>
             </select>
@@ -152,6 +153,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
 </ul>
 
     <!-- <ul>
@@ -247,9 +249,6 @@
 <div class="line">本シナリオでは、簡単な例としてOSの設定を題材に Exastro IT Automation の基本操作を学習します。</div>
 <div class="line">詳しくは <a class="reference internal" href="../../manuals/host_group/host_group.html"><span class="doc">ホストグループ機能</span></a> を参照してください。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-0">ホストグループ<a class="headerlink" href="#term-0" title="Link to this term">¶</a></dt><dt id="term-1">ホストグループとは、ホスト群を論理的な単位（機能・役割）でまとめたグループのことを指します。<a class="headerlink" href="#term-1" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <section id="id2">
 <h2>パラメータ設計<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <div class="line-block">
@@ -269,9 +268,6 @@
 <div class="line">まずは、タイムゾーンの設定をするために必要な、<kbd class="kbd docutils literal notranslate">Timezone</kbd> (タイムゾーン名) とタイムゾーンに設定する <kbd class="kbd docutils literal notranslate">UTC</kbd> と <kbd class="kbd docutils literal notranslate">JST</kbd> のデータシートを作成します。</div>
 <div class="line">具体的には、データシートを作成し、その中にタイムゾーンとして登録するパラメータを投入します。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-2">データシート<a class="headerlink" href="#term-2" title="Link to this term">¶</a></dt><dt id="term-Exastro-IT-Automation">Exastro IT Automation が使用する固定値のパラメータを管理するデータ構造のことです。<a class="headerlink" href="#term-Exastro-IT-Automation" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <div class="line-block">
 <div class="line">データシートを作成します。</div>
 </div>
@@ -283,7 +279,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id32">
-<caption><span class="caption-number">表 184 </span><span class="caption-text">データシートの項目の設定値</span><a class="headerlink" href="#id32" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 205 </span><span class="caption-text">データシートの項目の設定値</span><a class="headerlink" href="#id32" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -351,7 +347,7 @@
 </tbody>
 </table>
 <table class="docutils align-default" id="id33">
-<caption><span class="caption-number">表 185 </span><span class="caption-text">データシート作成情報の設定値</span><a class="headerlink" href="#id33" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 206 </span><span class="caption-text">データシート作成情報の設定値</span><a class="headerlink" href="#id33" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 66.7%" />
@@ -397,7 +393,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id34">
-<caption><span class="caption-number">表 186 </span><span class="caption-text">状態の設定値</span><a class="headerlink" href="#id34" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 207 </span><span class="caption-text">状態の設定値</span><a class="headerlink" href="#id34" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 40.0%" />
 <col style="width: 20.0%" />
@@ -445,7 +441,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id35">
-<caption><span class="caption-number">表 187 </span><span class="caption-text">パラメータ項目設定</span><a class="headerlink" href="#id35" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 208 </span><span class="caption-text">パラメータ項目設定</span><a class="headerlink" href="#id35" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 50.0%" />
@@ -509,7 +505,7 @@
 </tbody>
 </table>
 <table class="docutils align-default" id="id36">
-<caption><span class="caption-number">表 188 </span><span class="caption-text">パラメータシート作成情報の設定値</span><a class="headerlink" href="#id36" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 209 </span><span class="caption-text">パラメータシート作成情報の設定値</span><a class="headerlink" href="#id36" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 66.7%" />
@@ -554,7 +550,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id37">
-<caption><span class="caption-number">表 189 </span><span class="caption-text">パラメータ項目設定</span><a class="headerlink" href="#id37" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 210 </span><span class="caption-text">パラメータ項目設定</span><a class="headerlink" href="#id37" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -598,7 +594,7 @@
 </tbody>
 </table>
 <table class="docutils align-default" id="id38">
-<caption><span class="caption-number">表 190 </span><span class="caption-text">パラメータシート作成情報の設定値</span><a class="headerlink" href="#id38" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 211 </span><span class="caption-text">パラメータシート作成情報の設定値</span><a class="headerlink" href="#id38" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 66.7%" />
@@ -653,7 +649,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id39">
-<caption><span class="caption-number">表 191 </span><span class="caption-text">Movement 情報の設定値</span><a class="headerlink" href="#id39" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 212 </span><span class="caption-text">Movement 情報の設定値</span><a class="headerlink" href="#id39" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 33.3%" />
@@ -685,7 +681,7 @@
 </tbody>
 </table>
 <div class="literal-block-wrapper docutils container" id="id40">
-<div class="code-block-caption"><span class="caption-number">リスト 337 </span><span class="caption-text">ヘッダーセクション</span><a class="headerlink" href="#id40" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 490 </span><span class="caption-text">ヘッダーセクション</span><a class="headerlink" href="#id40" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>hosts:<span class="w"> </span>all
 <span class="w">  </span>remote_user:<span class="w"> </span><span class="s2">&quot;{{ __loginuser__ }}&quot;</span>
 <span class="w">  </span>gather_facts:<span class="w"> </span>no
@@ -701,7 +697,7 @@
 <div class="line">以下をコピーして、それぞれのPlaybookをyml形式で作成してください。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id41">
-<div class="code-block-caption"><span class="caption-number">リスト 338 </span><span class="caption-text">set_timezone.yml</span><a class="headerlink" href="#id41" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 491 </span><span class="caption-text">set_timezone.yml</span><a class="headerlink" href="#id41" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>name:<span class="w"> </span>Set<span class="w"> </span>Timezone
 <span class="w">  </span>timezone:
 <span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ VAR_locale_timezone }}&quot;</span>
@@ -709,7 +705,7 @@
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id42">
-<div class="code-block-caption"><span class="caption-number">リスト 339 </span><span class="caption-text">add_nameserver.yml</span><a class="headerlink" href="#id42" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 492 </span><span class="caption-text">add_nameserver.yml</span><a class="headerlink" href="#id42" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>name:<span class="w"> </span>Add<span class="w"> </span>Nameserver
 <span class="w">  </span>lineinfile:
 <span class="w">    </span>dest:<span class="w"> </span>/etc/resolv.conf
@@ -718,7 +714,7 @@
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id43">
-<div class="code-block-caption"><span class="caption-number">リスト 340 </span><span class="caption-text">set_hostname.yml</span><a class="headerlink" href="#id43" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 493 </span><span class="caption-text">set_hostname.yml</span><a class="headerlink" href="#id43" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>name:<span class="w"> </span>Set<span class="w"> </span>a<span class="w"> </span>hostname
 <span class="w">  </span>ansible.builtin.hostname:
 <span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ VAR_hostname }}&quot;</span>
@@ -733,7 +729,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id44">
-<caption><span class="caption-number">表 192 </span><span class="caption-text">Ansible Playbook 情報の登録</span><a class="headerlink" href="#id44" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 213 </span><span class="caption-text">Ansible Playbook 情報の登録</span><a class="headerlink" href="#id44" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -766,7 +762,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id45">
-<caption><span class="caption-number">表 193 </span><span class="caption-text">Movement-Playbook紐付け情報の登録</span><a class="headerlink" href="#id45" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 214 </span><span class="caption-text">Movement-Playbook紐付け情報の登録</span><a class="headerlink" href="#id45" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 33.3%" />
@@ -804,7 +800,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id46">
-<caption><span class="caption-number">表 194 </span><span class="caption-text">代入値自動登録設定の設定値</span><a class="headerlink" href="#id46" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 215 </span><span class="caption-text">代入値自動登録設定の設定値</span><a class="headerlink" href="#id46" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 36.4%" />
 <col style="width: 9.1%" />
@@ -872,7 +868,7 @@
 <div class="line">3. 各 Node 間を下記の様に接続します。</div>
 </div>
 <table class="docutils align-default" id="id47">
-<caption><span class="caption-number">表 195 </span><span class="caption-text">Node 間の接続</span><a class="headerlink" href="#id47" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 216 </span><span class="caption-text">Node 間の接続</span><a class="headerlink" href="#id47" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -919,7 +915,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id48">
-<caption><span class="caption-number">表 196 </span><span class="caption-text">機器一覧の設定値</span><a class="headerlink" href="#id48" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 217 </span><span class="caption-text">機器一覧の設定値</span><a class="headerlink" href="#id48" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 15.4%" />
 <col style="width: 15.4%" />
@@ -954,28 +950,28 @@
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">SV</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">dbA</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">接続ユーザ名</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">(秘密鍵ファイル)</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">鍵認証(パスフレーズなし)</kbd></p></td>
 </tr>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">SV</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">dbB</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">接続ユーザ名</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">(秘密鍵ファイル)</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">鍵認証(パスフレーズなし)</kbd></p></td>
 </tr>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">SV</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">webA</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">接続ユーザ名</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">(秘密鍵ファイル)</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">鍵認証(パスフレーズなし)</kbd></p></td>
 </tr>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">SV</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">webB</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">接続ユーザ名</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">(秘密鍵ファイル)</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">鍵認証(パスフレーズなし)</kbd></p></td>
@@ -1000,7 +996,7 @@
 <div class="line">まずは、いつ、どこの機器に対して、何を、どうするかといった情報を簡単に整理しておきましょう。</div>
 </div>
 <table class="docutils align-default" id="id49">
-<caption><span class="caption-number">表 197 </span><span class="caption-text">作業の方針</span><a class="headerlink" href="#id49" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 218 </span><span class="caption-text">作業の方針</span><a class="headerlink" href="#id49" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -1024,9 +1020,6 @@
 <div class="line">オペレーション登録では、作業を実施する際の作業概要を定義します。オペレーションは各作業ごとに1つ作成します。オペレーションは使いまわさないようにしましょう。</div>
 <div class="line">先に決めた作業の方針を元にオペレーション情報を記入しましょう。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-3">オペレーション<a class="headerlink" href="#term-3" title="Link to this term">¶</a></dt><dt id="term-4">実施する作業のことで、オペレーションに対して作業対象とパラメータが紐づきます。<a class="headerlink" href="#term-4" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <div class="line-block">
 <div class="line"><span class="menuselection">基本コンソール ▶ オペレーション一覧</span> から、作業実施日時や作業名を登録します。</div>
 </div>
@@ -1035,7 +1028,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id50">
-<caption><span class="caption-number">表 198 </span><span class="caption-text">オペレーション登録内容</span><a class="headerlink" href="#id50" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 219 </span><span class="caption-text">オペレーション登録内容</span><a class="headerlink" href="#id50" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -1047,7 +1040,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">基本設定_全台用</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></p></td>
 </tr>
 </tbody>
 </table>
@@ -1073,7 +1066,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id51">
-<caption><span class="caption-number">表 199 </span><span class="caption-text">ホストグループ登録内容</span><a class="headerlink" href="#id51" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 220 </span><span class="caption-text">ホストグループ登録内容</span><a class="headerlink" href="#id51" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -1107,7 +1100,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id52">
-<caption><span class="caption-number">表 200 </span><span class="caption-text">ホストグループ親子関係紐付け</span><a class="headerlink" href="#id52" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 221 </span><span class="caption-text">ホストグループ親子関係紐付け</span><a class="headerlink" href="#id52" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -1138,7 +1131,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id53">
-<caption><span class="caption-number">表 201 </span><span class="caption-text">作業対象ホスト登録</span><a class="headerlink" href="#id53" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 222 </span><span class="caption-text">作業対象ホスト登録</span><a class="headerlink" href="#id53" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 33.3%" />
@@ -1180,7 +1173,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id54">
-<caption><span class="caption-number">表 202 </span><span class="caption-text">サーバ用パラメータパラメータの設定値</span><a class="headerlink" href="#id54" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 223 </span><span class="caption-text">サーバ用パラメータパラメータの設定値</span><a class="headerlink" href="#id54" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 12.5%" />
 <col style="width: 37.5%" />
@@ -1201,17 +1194,17 @@
 </thead>
 <tbody>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">[HG]All_SV</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">Asia/Tokyo</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">10.15.1.30</kbd></p></td>
 </tr>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">[HG]db_SV</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">Asia/Tokyo</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">10.15.1.30</kbd></p></td>
 </tr>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">[HG]web_SV</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">Asia/Tokyo</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">10.15.1.62</kbd></p></td>
 </tr>
@@ -1225,7 +1218,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id55">
-<caption><span class="caption-number">表 203 </span><span class="caption-text">ホスト名変更用パラメータの設定値</span><a class="headerlink" href="#id55" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 224 </span><span class="caption-text">ホスト名変更用パラメータの設定値</span><a class="headerlink" href="#id55" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 14.3%" />
 <col style="width: 57.1%" />
@@ -1243,15 +1236,15 @@
 </thead>
 <tbody>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">dbA</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">dbA</kbd></p></td>
 </tr>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">dbB</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">dbB</kbd></p></td>
 </tr>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">webA</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">webA</kbd></p></td>
 </tr>
 </tbody>
@@ -1271,7 +1264,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id56">
-<caption><span class="caption-number">表 204 </span><span class="caption-text">サーバ用パラメータの代入値自動登録用確認</span><a class="headerlink" href="#id56" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 225 </span><span class="caption-text">サーバ用パラメータの代入値自動登録用確認</span><a class="headerlink" href="#id56" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 10.0%" />
 <col style="width: 30.0%" />
@@ -1295,19 +1288,19 @@
 </thead>
 <tbody>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">dbA</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">Asia/Tokyo</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">10.15.1.30</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">ホストグループ分解機能</kbd></p></td>
 </tr>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">dbB</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">Asia/Tokyo</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">10.15.1.30</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">ホストグループ分解機能</kbd></p></td>
 </tr>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">webA</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">Asia/Tokyo</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">10.15.1.62</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">ホストグループ分解機能</kbd></p></td>
@@ -1321,14 +1314,14 @@
 <div class="line">作業対象サーバに SSH ログインし、現在のホスト名を確認します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id57">
-<div class="code-block-caption"><span class="caption-number">リスト 341 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id57" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 494 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id57" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ホスト名の取得</span>
 hostnamectl<span class="w"> </span>status<span class="w"> </span>--static
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id58">
-<div class="code-block-caption"><span class="caption-number">リスト 342 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id58" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 495 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id58" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 結果は環境ごとに異なります</span>
 localhost
 </pre></div>
@@ -1338,14 +1331,14 @@ localhost
 <div class="line">resolv.confファイルを確認します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id59">
-<div class="code-block-caption"><span class="caption-number">リスト 343 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id59" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 496 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id59" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># resolv.confファイルの確認</span>
 cat<span class="w"> </span>/etc/resolv.conf
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id60">
-<div class="code-block-caption"><span class="caption-number">リスト 344 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id60" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 497 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id60" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 登録する情報が無いことを確認</span>
 </pre></div>
 </div>
@@ -1375,14 +1368,14 @@ cat<span class="w"> </span>/etc/resolv.conf
 <div class="line">ホスト名を確認します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id61">
-<div class="code-block-caption"><span class="caption-number">リスト 345 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id61" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 498 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id61" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ホスト名の取得</span>
 hostnamectl<span class="w"> </span>status<span class="w"> </span>--static
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id62">
-<div class="code-block-caption"><span class="caption-number">リスト 346 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id62" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 499 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id62" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 作業対象サーバによって異なります。</span>
 dbA
 dbB
@@ -1394,14 +1387,14 @@ webA
 <div class="line">resolv.confファイルを確認します。パラメータで入力したデータが登録されていることを確認します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id63">
-<div class="code-block-caption"><span class="caption-number">リスト 347 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id63" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 500 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id63" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># resolv.confファイルの確認</span>
 cat<span class="w"> </span>/etc/resolv.conf
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id64">
-<div class="code-block-caption"><span class="caption-number">リスト 348 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id64" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 501 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id64" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 作業対象サーバによって異なります。</span>
 nameserver<span class="w"> </span><span class="m">10</span>.15.1.30
 nameserver<span class="w"> </span><span class="m">10</span>.15.1.30
@@ -1422,7 +1415,7 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 <div class="line">まずは、いつ、どこの機器に対して、何を、どうするかといった情報を簡単に整理しておきましょう。</div>
 </div>
 <table class="docutils align-default" id="id65">
-<caption><span class="caption-number">表 205 </span><span class="caption-text">作業の方針</span><a class="headerlink" href="#id65" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 226 </span><span class="caption-text">作業の方針</span><a class="headerlink" href="#id65" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -1446,9 +1439,6 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 <div class="line">オペレーション登録では、作業を実施する際の作業概要を定義します。オペレーションは各作業ごとに1つ作成します。オペレーションは使いまわさないようにしましょう。</div>
 <div class="line">先に決めた作業の方針を元にオペレーション情報を記入しましょう。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-5">オペレーション<a class="headerlink" href="#term-5" title="Link to this term">¶</a></dt><dt id="term-6">実施する作業のことで、オペレーションに対して作業対象とパラメータが紐づきます。<a class="headerlink" href="#term-6" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <div class="line-block">
 <div class="line"><span class="menuselection">基本コンソール ▶ オペレーション一覧</span> から、作業実施日時や作業名を登録します。</div>
 </div>
@@ -1457,7 +1447,7 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 </a>
 </figure>
 <table class="docutils align-default" id="id66">
-<caption><span class="caption-number">表 206 </span><span class="caption-text">追加オペレーション登録内容</span><a class="headerlink" href="#id66" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 227 </span><span class="caption-text">追加オペレーション登録内容</span><a class="headerlink" href="#id66" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -1469,7 +1459,7 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 </thead>
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">基本設定_追加用</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></p></td>
 </tr>
 </tbody>
 </table>
@@ -1508,7 +1498,7 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 </a>
 </figure>
 <table class="docutils align-default" id="id67">
-<caption><span class="caption-number">表 207 </span><span class="caption-text">作業対象ホスト追加登録</span><a class="headerlink" href="#id67" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 228 </span><span class="caption-text">作業対象ホスト追加登録</span><a class="headerlink" href="#id67" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 33.3%" />
@@ -1542,7 +1532,7 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 </a>
 </figure>
 <table class="docutils align-default" id="id68">
-<caption><span class="caption-number">表 208 </span><span class="caption-text">追加用サーバ用パラメータパラメータの設定値</span><a class="headerlink" href="#id68" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 229 </span><span class="caption-text">追加用サーバ用パラメータパラメータの設定値</span><a class="headerlink" href="#id68" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 12.5%" />
 <col style="width: 37.5%" />
@@ -1563,7 +1553,7 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 </thead>
 <tbody>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">[HG]web_SV</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_追加用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_追加用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">Asia/Tokyo</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">10.15.1.62</kbd></p></td>
 </tr>
@@ -1577,7 +1567,7 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 </a>
 </figure>
 <table class="docutils align-default" id="id69">
-<caption><span class="caption-number">表 209 </span><span class="caption-text">ホスト名変更用パラメータの設定値</span><a class="headerlink" href="#id69" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 230 </span><span class="caption-text">ホスト名変更用パラメータの設定値</span><a class="headerlink" href="#id69" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 14.3%" />
 <col style="width: 57.1%" />
@@ -1595,7 +1585,7 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 </thead>
 <tbody>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">webB</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_追加用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_追加用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">webB</kbd></p></td>
 </tr>
 </tbody>
@@ -1615,7 +1605,7 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 </a>
 </figure>
 <table class="docutils align-default" id="id70">
-<caption><span class="caption-number">表 210 </span><span class="caption-text">追加用サーバ用パラメータの代入値自動登録用確認</span><a class="headerlink" href="#id70" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 231 </span><span class="caption-text">追加用サーバ用パラメータの代入値自動登録用確認</span><a class="headerlink" href="#id70" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 9.1%" />
 <col style="width: 36.4%" />
@@ -1639,7 +1629,7 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 </thead>
 <tbody>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">webB</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_追加用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_追加用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">Asia/Tokyo</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">10.15.1.62</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">ホストグループ分解機能</kbd></p></td>
@@ -1653,14 +1643,14 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 <div class="line">作業対象サーバに SSH ログインし、現在のホスト名を確認します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id71">
-<div class="code-block-caption"><span class="caption-number">リスト 349 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id71" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 502 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id71" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ホスト名の取得</span>
 hostnamectl<span class="w"> </span>status<span class="w"> </span>--static
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id72">
-<div class="code-block-caption"><span class="caption-number">リスト 350 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id72" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 503 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id72" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 結果は環境ごとに異なります</span>
 localhost
 </pre></div>
@@ -1670,14 +1660,14 @@ localhost
 <div class="line">resolv.confファイルを確認します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id73">
-<div class="code-block-caption"><span class="caption-number">リスト 351 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id73" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 504 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id73" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># resolv.confファイルの確認</span>
 cat<span class="w"> </span>/etc/resolv.conf
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id74">
-<div class="code-block-caption"><span class="caption-number">リスト 352 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id74" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 505 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id74" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 登録する情報が無いことを確認</span>
 </pre></div>
 </div>
@@ -1705,14 +1695,14 @@ cat<span class="w"> </span>/etc/resolv.conf
 <div class="line">ホスト名を確認します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id75">
-<div class="code-block-caption"><span class="caption-number">リスト 353 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id75" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 506 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id75" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ホスト名の取得</span>
 hostnamectl<span class="w"> </span>status<span class="w"> </span>--static
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id76">
-<div class="code-block-caption"><span class="caption-number">リスト 354 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id76" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 507 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id76" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 作業対象サーバによって異なります。</span>
 webB
 </pre></div>
@@ -1722,14 +1712,14 @@ webB
 <div class="line">resolv.confファイルを確認します。パラメータで入力したデータが登録されていることを確認します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id77">
-<div class="code-block-caption"><span class="caption-number">リスト 355 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id77" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 508 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id77" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># resolv.confファイルの確認</span>
 cat<span class="w"> </span>/etc/resolv.conf
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id78">
-<div class="code-block-caption"><span class="caption-number">リスト 356 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id78" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 509 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id78" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># データが登録されていることを確認します。</span>
 nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 </pre></div>
@@ -1772,8 +1762,8 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2023 NEC Corporation</small>
-    <small><a href="/terms/ja.html">サイト規約</a></small>
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.5/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

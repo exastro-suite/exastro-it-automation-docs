@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>2. Excel一括エクスポート・インポート &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="CI/CD for IaC" href="../cicd_for_iac/index.html" />
+    <link rel="prev" title="1. メニューエクスポート・インポート" href="menu_export_import.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/export_import/excel_export_import.html" selected>current</option>
+              <option value="../../../../ja/2.6/manuals/export_import/excel_export_import.html" selected>2.6(current)</option>
+              <option value="../../../../ja/2.5/manuals/export_import/excel_export_import.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/export_import/excel_export_import.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/export_import/excel_export_import.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/export_import/excel_export_import.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/export_import/excel_export_import.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/export_import/excel_export_import.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/export_import/excel_export_import.html" selected>日本語</option>
+              <option value="../../../../en/2.6/manuals/export_import/excel_export_import.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="menu_export_import.html" title="前のトピックへ"><span class="section-number">1. </span>メニューエクスポート・インポート</a></li>
+        <li class="next"><a href="../cicd_for_iac/index.html" title="次のトピックへ">CI/CD for IaC</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../it_automation_base/index.html">基本操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../host_group/index.html">ホストグループ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible-driver/index.html">Ansible ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform_driver/index.html">Terraform ドライバ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">エクスポート・インポート</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="menu_export_import.html">1. メニューエクスポート・インポート</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2. Excel一括エクスポート・インポート</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">2.1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">2.2. Excel一括エクスポート・インポートの概要</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id3">Excel一括エクスポート・インポートの詳細</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#execl">2.3. Execl一括エクスポート・インポートのメニュー、画面構成</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id5">メニュー一覧</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">2.4. 機能・操作方法説明</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id7">Excel一括エクスポート</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id9">Excel一括インポート</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id11">Excel一括エクスポート・インポート管理</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../cicd_for_iac/index.html">CI/CD for IaC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintenance/index.html">メンテナンス</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">2. Excel一括エクスポート・インポート</a><ul>
+<li><a class="reference internal" href="#id1">2.1. はじめに</a></li>
+<li><a class="reference internal" href="#id2">2.2. Excel一括エクスポート・インポートの概要</a><ul>
+<li><a class="reference internal" href="#id3">Excel一括エクスポート・インポートの詳細</a><ul>
+<li><a class="reference internal" href="#id4">機能について</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#execl">2.3. Execl一括エクスポート・インポートのメニュー、画面構成</a><ul>
+<li><a class="reference internal" href="#id5">メニュー一覧</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">2.4. 機能・操作方法説明</a><ul>
+<li><a class="reference internal" href="#id7">Excel一括エクスポート</a></li>
+<li><a class="reference internal" href="#id9">Excel一括インポート</a></li>
+<li><a class="reference internal" href="#id11">Excel一括エクスポート・インポート管理</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">エクスポート・インポート</a></li>
+    
+    <li><span class="section-number">2. </span>Excel一括エクスポート・インポート</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="excel">
+<h1><span class="section-number">2. </span>Excel一括エクスポート・インポート<a class="headerlink" href="#excel" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2><span class="section-number">2.1. </span>はじめに<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書は、ITAのExcel一括エクスポート・インポートの機能および操作方法について説明します。</div>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">2.2. </span>Excel一括エクスポート・インポートの概要<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本章ではExcel一括エクスポート・インポートについて説明します。</div>
+</div>
+<section id="id3">
+<h3>Excel一括エクスポート・インポートの詳細<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<section id="id4">
+<h4>機能について<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Execl一括エクスポート・インポートは、各メニューにあるダウンロード可能なExcelファイルをzipファイルにまとめて一括でエクスポート・インポートを行うものです。ダウンロード可能なファイルについては『<a class="reference internal" href="../it_automation_base/common_operation.html#management-console-download-all-and-edit-file-uploads"><span class="std std-ref">管理コンソール</span></a>』を参照してください。</div>
+<div class="line">エクスポート可能なメニューは <span class="menuselection">ロール・メニュー紐付管理</span> メニューにて『紐付け』項目が『閲覧のみ』もしくは『メンテナンス可』かつ、編集用Excelファイルのあるメニューのみです。</div>
+<div class="line">インポート可能なメニューは <span class="menuselection">ロール・メニュー紐付管理</span> メニューにて『紐付け』項目が『メンテナンス可』かつ、編集用Excelファイルのあるメニューのみです。</div>
+</div>
+</section>
+</section>
+</section>
+<section id="execl">
+<h2><span class="section-number">2.3. </span>Execl一括エクスポート・インポートのメニュー、画面構成<a class="headerlink" href="#execl" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本章では、Excel一括エクスポート・インポートのメニュー、画面構成について説明します。</div>
+</div>
+<section id="id5">
+<h3>メニュー一覧<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Excel一括エクスポート・インポートのメニューを以下に示します。</div>
+</div>
+<table class="docutils align-left" id="id12">
+<caption><span class="caption-number">表 2.87 </span><span class="caption-text">ITAメニュー一覧</span><a class="headerlink" href="#id12" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>メニュー・画面</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Excel一括エクスポート</p></td>
+<td><p>各メニューにあるダウンロード可能なファイルをzipにまとめ、エクスポートします。</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Excel一括インポート</p></td>
+<td><p>ダウンロード可能なファイルをまとめたzipをインポートします。</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Excel一括エクスポート・インポート管理</p></td>
+<td><p><span class="menuselection">Excel一括エクスポート</span> メニューで実行したエクスポートと、 <span class="menuselection">Excel一括エクスポート</span> メニューで実行したインポートの状況を管理します。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id6">
+<h2><span class="section-number">2.4. </span>機能・操作方法説明<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<section id="id7">
+<h3>Excel一括エクスポート<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">各メニューにあるダウンロード可能なファイルをzipにまとめ、エクスポートします。</div>
+</div>
+<div class="line-block">
+<div class="line">(1) エクスポートする廃止情報を選択します。</div>
+<div class="line">廃止情報一覧を以下に示します。</div>
+</div>
+<table class="docutils align-left" id="id13">
+<caption><span class="caption-number">表 2.88 </span><span class="caption-text">廃止情報一覧</span><a class="headerlink" href="#id13" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>全レコード</p></td>
+<td><p>すべてのデータをエクスポートします。</p></td>
+</tr>
+<tr class="row-odd"><td><p>廃止を除く</p></td>
+<td><p>廃止状態のデータを除いたデータをエクスポートします。</p></td>
+</tr>
+<tr class="row-even"><td><p>廃止のみ</p></td>
+<td><p>廃止状態のデータのみエクスポートします。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">(2) エクスポートするメニューを選択します</div>
+<div class="line">表示されるメニューは <span class="menuselection">ロール・メニュー紐付管理</span> メニューの『紐付』項目が『メンテナンス可』もしくは『閲覧のみ』かつ、編集用Excelファイルのあるメニューのみです。</div>
+</div>
+<figure class="align-center" id="id14">
+<a class="reference internal image-reference" href="../../_images/excel_export_menu_list.png"><img alt="Excel一括エクスポート メニューリスト" src="../../_images/excel_export_menu_list.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 2.66 </span><span class="caption-text">Excel一括エクスポート画面</span><a class="headerlink" href="#id14" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">(3) メニューを選択後、《エクスポート》ボタンを押下します。</div>
+<div class="line">エクスポート処理の実行№が表示されるので、 <span class="menuselection">Excel一括エクスポート・インポート管理</span> メニューで処理のステータスを確認してください。</div>
+</div>
+<figure class="align-center" id="id15">
+<a class="reference internal image-reference" href="../../_images/excel_export_execute.gif"><img alt="Excel一括エクスポート エクスポート実行" src="../../_images/excel_export_execute.gif" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 2.67 </span><span class="caption-text">Excel一括エクスポート画面(2)</span><a class="headerlink" href="#id15" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">(4) エクスポートしたファイルの中身は以下の通りです。</div>
+</div>
+<div class="highlight-default notranslate" id="id8"><div class="highlight"><pre><span></span>ITA_FILES_YYYYMMDDhhmmss.zip …①
+├─ MENU_LIST.txt …②
+└─ 101_管理コンソール …③
+    └─ システム設定_20210708235959.xlsx …④
+</pre></div>
+</div>
+<table class="docutils align-left" id="id16">
+<caption><span class="caption-number">表 2.89 </span><span class="caption-text">エクスポート ファイル構成</span><a class="headerlink" href="#id16" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>名称</p></th>
+<th class="head"><p>拡張子</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>ファイル名</p></td>
+<td><p>ファイル</p></td>
+<td><p>ファイル名は『ITA_FILES_YYYYMMDDhhmmss.zip』です。</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>MENU_LIST.txt</p></td>
+<td><p>txt</p></td>
+<td><p>エクスポートしたメニューREST名とファイル名の一覧が出力されます。</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>メニューグループフォルダ</p></td>
+<td><p>フォルダ</p></td>
+<td><div class="line-block">
+<div class="line">メニューグループごとに生成されます。</div>
+<div class="line">フォルダ名は『メニューグループID_メニューグループ名』です。</div>
+<div class="line">フォルダ名が200文字を超える場合は前方から200文字のみ出力されます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>ダウンロードファイル</p></td>
+<td><p>xlsx</p></td>
+<td><div class="line-block">
+<div class="line">Excelとして出力されます。</div>
+<div class="line">所属するメニューグループフォルダの下に配置されます。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id9">
+<h3>Excel一括インポート<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line"><span class="menuselection">Excel一括エクスポート</span> メニューでエクスポートしたデータを編集し、インポートします。</div>
+</div>
+<ol class="arabic">
+<li><p>Zipファイルの編集</p>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">インポートするファイルリストを作成します。</div>
+<div class="line-block">
+<div class="line"><span class="menuselection">Excel一括エクスポート</span> メニューでエクスポートしたzip内にあるMENU_LIST.txtを編集することによって、インポートするファイルリストを編集することが出来ます。</div>
+</div>
+<div class="line">MENU_LIST.txtはエクスポートした時点のメニューREST名とファイル名が記載されています。</div>
+<div class="line">『#』から始まる行はコメントとして入力することが出来ます。</div>
+<div class="line">フォーマットは以下の通りです。</div>
+<div class="line">メニューREST名:ファイル名</div>
+</div>
+<div class="highlight-default notranslate" id="menu-list-txt"><div class="highlight"><pre><span></span><span class="c1">#管理コンソール</span>
+<span class="n">system_settings</span><span class="p">:</span><span class="n">システム設定_20230425162004</span><span class="o">.</span><span class="n">xlsx</span>
+<span class="c1">#基本コンソール</span>
+<span class="n">operation_list</span><span class="p">:</span><span class="n">オペレーション一覧_20230425162005</span><span class="o">.</span><span class="n">xlsx</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">※インポートするメニューは <span class="menuselection">Excel一括インポート</span> メニューでも選択可能です。</div>
+</div>
+</li>
+<li><p>インポートするファイルを編集します。</p></li>
+<li><div class="line-block">
+<div class="line-block">
+<div class="line">編集したファイルをzipにまとめます。</div>
+</div>
+<div class="line">インポートに必要なファイルは以下の通りです。</div>
+<div class="line">・MENU_LIST.txt</div>
+<div class="line">・インポートするファイル</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">インポートするファイルの中身は以下の通りです。</div>
+</div>
+<div class="highlight-default notranslate" id="id10"><div class="highlight"><pre><span></span>ITA_FILES_YYYYMMDDhhmmss.zip …①
+├─ MENU_LIST.txt …②
+└─ 101_管理コンソール …③
+    └─ システム設定_20210708235959.xlsx …④
+</pre></div>
+</div>
+<table class="docutils align-left" id="id17">
+<caption><span class="caption-number">表 2.90 </span><span class="caption-text">インポート ファイル構成</span><a class="headerlink" href="#id17" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>名称</p></th>
+<th class="head"><p>拡張子</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>ファイル名</p></td>
+<td><p>ファイル</p></td>
+<td><p>ファイル名は任意です。</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>MENU_LIST.txt</p></td>
+<td><p>txt</p></td>
+<td><p>インポートするメニューのREST名とファイル名を記載します。</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>メニューグループフォルダ</p></td>
+<td><p>フォルダ</p></td>
+<td><div class="line-block">
+<div class="line">メニューグループごとに作成します。</div>
+<div class="line">フォルダ名は『メニューグループID_メニューグループ名』です。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>編集用Excelファイル</p></td>
+<td><p>xlsx</p></td>
+<td><p>編集用Excelファイルをメニューグループフォルダ配下に置きます。</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</li>
+<li><p>インポート処理</p>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">《ファイル選択》ボタンを押下し、インポートするzipをアップロードします。</div>
+</div>
+<figure class="align-center" id="id18">
+<a class="reference internal image-reference" href="../../_images/excel_upload_execute.gif"><img alt="Excel一括インポート アップロード実行" src="../../_images/excel_upload_execute.gif" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 2.68 </span><span class="caption-text">Excel一括インポート画面(1)</span><a class="headerlink" href="#id18" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">インポートしたファイル内のメニューの一覧が表示されます。インポートするメニューを選択して《インポート》ボタンを押下します。</div>
+<div class="line">チェックボックスがチェックされているメニューがインポートされます。</div>
+<div class="line">インポートする必要がないメニューは、チェックを外してください。</div>
+<div class="line">インポート処理の実行№が表示されるので、 <span class="menuselection">Excel一括エクスポート・インポート管理</span> メニューで処理のステータスを確認してください。</div>
+</div>
+<figure class="align-center" id="id19">
+<a class="reference internal image-reference" href="../../_images/excel_import_menu_list.png"><img alt="Excel一括インポートメニューリスト" src="../../_images/excel_import_menu_list.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 2.69 </span><span class="caption-text">Excel一括インポート画面(2)</span><a class="headerlink" href="#id19" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">以下の条件に当てはまる場合、エラーとなりチェックボックスが非活性化されます。</div>
+<div class="line">１．MENU_LIST.txtに２つ以上同じメニューREST名を指定する</div>
+<div class="line">２．MENU_LIST.txtに２つ以上の別メニューに同じファイル名を指定する</div>
+<div class="line">３．MENU_LIST.txtのフォーマットに沿ってない記述がある</div>
+<div class="line">４．MENU_LIST.txtで存在しないメニューREST名を記載する</div>
+<div class="line">５．MENU_LIST.txtでインポートしたzip内に存在しないファイルを指定する</div>
+<div class="line">６．別のフォルダに同名のファイルが２つ以上ある</div>
+<div class="line">７．MENU_LIST.txtが含まれていない</div>
+<div class="line">８．メニューグループフォルダ名が「メニューグループID_メニューグループ名」の組み合わせになっていない。</div>
+<div class="line">９．対象メニューに対しログインユーザが『メンテナンス可』の権限を有していない</div>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="id11">
+<h3>Excel一括エクスポート・インポート管理<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line"><span class="menuselection">Excel一括エクスポート</span> メニューで実行したエクスポートと、 <span class="menuselection">Excel一括インポート</span> メニューで実行したインポートの状況を管理します。</div>
+</div>
+<figure class="align-center" id="id20">
+<a class="reference internal image-reference" href="../../_images/excel_export_import_list.png"><img alt="Excel一括エクスポート・インポート管理" src="../../_images/excel_export_import_list.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 2.70 </span><span class="caption-text">Excel一括エクスポート・インポート管理画面</span><a class="headerlink" href="#id20" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id21">
+<caption><span class="caption-number">表 2.91 </span><span class="caption-text">一覧画面項目一覧（メニューエクスポート・インポート管理）</span><a class="headerlink" href="#id21" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>実行No.</p></td>
+<td><p>一意のIDが自動採番されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>ステータス</p></td>
+<td><div class="line-block">
+<div class="line">〔未実行〕、〔実行中〕、〔完了〕の順に遷移します。</div>
+<div class="line">エラーが発生した場合は、〔完了(異常)〕になります。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>処理種別</p></td>
+<td><div class="line-block">
+<div class="line">エクスポート・・・Excel一括エクスポート</div>
+<div class="line">インポート・・・Excel一括インポート</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>廃止情報</p></td>
+<td><p>〔全レコード〕、〔廃止を除く〕または〔廃止のみ〕が表示されます。</p></td>
+</tr>
+<tr class="row-even"><td><p>実行ユーザ</p></td>
+<td><p>エクスポート処理またはインポート処理を実行したユーザが表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>ファイル名</p></td>
+<td><div class="line-block">
+<div class="line">エクスポートの場合、〔完了〕になるとエクスポートデータが表示されるので、ダウンロードして使用してください。</div>
+<div class="line">インポートの場合、インポートしたデータが表示されます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>言語</p></td>
+<td><div class="line-block">
+<div class="line">ログインユーザの取扱う言語が表示されます。</div>
+<div class="line">この言語でファイルがエクスポートされます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>結果</p></td>
+<td><div class="line-block">
+<div class="line">インポートした結果を記載したテキストファイルが表示されます。</div>
+<div class="line">ダウンロードして使用してください。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">結果ファイルのサンプルを以下に示します。</div>
+<div class="line">インポートしたファイル単位で結果が出力されます。</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>101_管理コンソール:10101_システム設定
+入力ファイル:システム設定_20230425155441.xlsx
+
+登録: 0件
+更新: 2件
+廃止: 1件
+復活: 1件
+エラー: 0件
+
+202_Ansible-Legacy:20201_Movement一覧
+入力ファイル:Movement一覧_20230425155442.xlsx
+
+登録: 0件
+更新: 0件
+廃止: 0件
+復活: 0件
+エラー: 1件
+movement_name: [&#39;必須項目です。:(12行目)&#39;]
+
+202_Ansible-Legacy:20202_Playbook素材集
+入力ファイル:Playbook素材集_20230425155443.xlsx
+このメニューの編集用Excelファイルではありません。
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="menu_export_import.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">1. </span>メニューエクスポート・インポート</a></li>
+    <li class="next"><a href="../cicd_for_iac/index.html" title="次のトピックへ"><span>次のトピックへ</span>CI/CD for IaC</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

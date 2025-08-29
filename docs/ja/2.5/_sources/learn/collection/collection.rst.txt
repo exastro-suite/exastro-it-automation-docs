@@ -4,11 +4,6 @@
 
 | 本シナリオでは、簡単な例として、ユーザー管理を題材に Exastro IT Automation の基本操作を学習します。
 
-.. glossary:: 収集機能
-   収集機能とは、ITAで実施した、作業実行結果（規定のフォーマットで出力されたソースファイル）を元に、パラメータシートへ値を自動で登録する機能。
-
-.. glossary:: 比較機能
-   比較機能とは、ITAのパラメータシート作成機能で作成したパラメータシートを比較し、差分を出力する機能です。
 
 作業前システム情報の収集
 ========================
@@ -79,12 +74,12 @@
      - 項目5設定値
      - 項目6設定値
    * - グループ
-     - 
-     - 
+     -
+     -
      - :kbd:`ansible_default_ipv4`
      - :kbd:`ansible_default_ipv4`
      - :kbd:`ansible_default_ipv4`
-     - 
+     -
    * - 項目の名前
      - :kbd:`ansible_architecture`
      - :kbd:`ansible_bios_version`
@@ -92,7 +87,7 @@
      - :kbd:`interface`
      - :kbd:`network`
      - :kbd:`ansible_distribution`
-   * - 項目の名前(Rest API用) 
+   * - 項目の名前(Rest API用)
      - :kbd:`ansible_architecture`
      - :kbd:`ansible_bios_version`
      - :kbd:`address`
@@ -114,47 +109,47 @@
      - :kbd:`64`
      - :kbd:`64`
    * - 正規表現
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
    * - 初期値
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
    * - 必須
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
    * - 一意制約
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
    * - 説明
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
    * - 備考
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
 
 .. figure:: /images/learn/quickstart/collection/パラメータシート作成2.gif
    :width: 1200px
@@ -172,12 +167,12 @@
      - 項目11設定値
      - 項目12設定値
    * - グループ
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
    * - 項目の名前
      - :kbd:`ansible_distribution_file_path`
      - :kbd:`ansible_distribution_file_variety`
@@ -185,7 +180,7 @@
      - :kbd:`ansible_distribution_release`
      - :kbd:`ansible_distribution_version`
      - :kbd:`ansible_machine`
-   * - 項目の名前(Rest API用) 
+   * - 項目の名前(Rest API用)
      - :kbd:`ansible_distribution_file_path`
      - :kbd:`ansible_distribution_file_variety`
      - :kbd:`ansible_distribution_major_version`
@@ -207,47 +202,47 @@
      - :kbd:`64`
      - :kbd:`64`
    * - 正規表現
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
    * - 初期値
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
    * - 必須
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
    * - 一意制約
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
    * - 説明
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
    * - 備考
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
 
 .. figure:: /images/learn/quickstart/collection/パラメータシート作成3.gif
    :width: 1200px
@@ -264,18 +259,18 @@
      - 項目16設定値
      - 項目17設定値
    * - グループ
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
    * - 項目の名前
      - :kbd:`ansible_memtotal_mb`
      - :kbd:`ansible_nodename`
      - :kbd:`ansible_os_family`
      - :kbd:`ansible_pkg_mgr`
      - :kbd:`ansible_processor_cores`
-   * - 項目の名前(Rest API用) 
+   * - 項目の名前(Rest API用)
      - :kbd:`ansible_memtotal_mb`
      - :kbd:`ansible_nodename`
      - :kbd:`ansible_os_family`
@@ -294,41 +289,41 @@
      - :kbd:`64`
      - :kbd:`64`
    * - 正規表現
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
    * - 初期値
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
    * - 必須
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
    * - 一意制約
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
    * - 説明
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
    * - 備考
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
 
 .. list-table:: パラメータシート作成情報の設定値
    :widths: 5 10
@@ -367,24 +362,24 @@
      - 項目1設定値
    * - 項目の名前
      - :kbd:`hostname`
-   * - 項目の名前(Rest API用) 
+   * - 項目の名前(Rest API用)
      - :kbd:`hostname`
    * - 入力方式
      - :kbd:`プルダウン選択`
    * - 選択項目
      - :kbd:`Ansible項目:機器一覧:ホスト名`
    * - 参照項目
-     - 
+     -
    * - 初期値
-     - 
+     -
    * - 必須
-     - 
+     -
    * - 一意制約
-     - 
+     -
    * - 説明
-     - 
+     -
    * - 備考
-     - 
+     -
 
 .. list-table:: パラメータシート作成(ホスト名紐付け用)のパラメータシート作成情報の設定値
    :widths: 5 10
@@ -417,9 +412,6 @@
 
 | :menuselection:`Ansible-Legacy --> Movement一覧` から、システム情報収集のための Movement を登録します。
 
-.. glossary:: Movement
-   Exastro IT Automation における、最小の作業単位のことを指します。
-   1回の Movement 実行は、1回の ansible-playbook コマンドの実行と同じです。
 
 .. figure:: /images/learn/quickstart/collection/Movement登録.png
    :width: 1200px
@@ -431,8 +423,8 @@
 
    * - Movement名
      - Ansible利用情報
-     - 
-   * - 
+     -
+   * -
      - ホスト指定形式
      - ヘッダーセクション
    * - :kbd:`システム情報収集`
@@ -579,7 +571,7 @@ Movement と Ansible Playbook の紐付け
 
   * - 収集項目(From)
     -
-    - 
+    -
     - パラメータシート(To)
   * - バース形式
     - PREFIX(ファイル名)
@@ -682,17 +674,17 @@ Movement と Ansible Playbook の紐付け
      - ログインパスワード
      - ssh鍵認証情報
      - Ansible利用情報
-   * - 
-     - 
-     - 
+   * -
+     -
+     -
      - ユーザ
      - ssh秘密鍵ファイル
      - Legacy/Role利用情報
-   * - 
-     - 
-     - 
-     - 
-     - 
+   * -
+     -
+     -
+     -
+     -
      - 認証方式
    * - :kbd:`SV`
      - :kbd:`server01`
@@ -728,8 +720,6 @@ Movement と Ansible Playbook の紐付け
 | オペレーション登録では、作業を実施する際の作業概要を定義します。
 | 先に決めた作業の方針を元にオペレーション情報を記入しましょう。
 
-.. glossary:: オペレーション
-   実施する作業のことで、オペレーションに対して作業対象とパラメータが紐づきます。
 
 | :menuselection:`基本コンソール --> オペレーション一覧` から、作業実施日時や作業名を登録します。
 
@@ -768,7 +758,7 @@ Movement と Ansible Playbook の紐付け
   * - ホスト名
     - オペレーション
     - パラメータ
-  * - 
+  * -
     - オペレーション名
     - hostname
   * - :kbd:`server01`
@@ -841,7 +831,7 @@ Movement と Ansible Playbook の紐付け
   * - ホスト名
     - オペレーション
     - パラメータ
-  * - 
+  * -
     - オペレーション名
     - hostname
   * - :kbd:`admin_user`
@@ -885,7 +875,7 @@ Movement と Ansible Playbook の紐付け
    :alt: 比較設定
 
 .. list-table:: 比較設定
-  :widths: 5 10 10 5 5 
+  :widths: 5 10 10 5 5
   :header-rows: 1
 
   * - 比較名称
@@ -897,7 +887,7 @@ Movement と Ansible Playbook の紐付け
     - :kbd:`システム情報`
     - :kbd:`システム情報`
     - :kbd:`False`
-    - 
+    -
 
 | 詳細設定フラグを設定すると、比較詳細設定を設定出来るようになります。
 | 特定のパラメータのみ確認したい場合は詳細設定フラグをTrueにすると、特定のパラメータのみ比較出来るようになります。
@@ -909,7 +899,7 @@ Movement と Ansible Playbook の紐付け
 | :menuselection:`比較 --> 比較実行` から、比較対象のパラメータを選択しましょう。
 
    | :menuselection:`比較実行 --> 比較設定選択` から、:kbd:`システム情報の差異` 比較設定 を選択し、次に :guilabel:` 対象ホスト` を選択し対象のホストを選択します。
-   | 次に、比較対象のパラメータシートを実施した日時をそれぞれ入力、選択します。実施した日時は :menuselection:`入力用 --> システム情報` から最終実行日時を確認してみてください。 
+   | 次に、比較対象のパラメータシートを実施した日時をそれぞれ入力、選択します。実施した日時は :menuselection:`入力用 --> システム情報` から最終実行日時を確認してみてください。
    | 最後に、:menuselection:`比較実行` を押下します。
 
    | そうすると画面右側に比較結果が表示されますので、そちらから先ほど変更したホスト名(ansible_nodename)の欄を確認してみましょう。すると、変更前に収集したパラメータと変更後に収集したパラメータの差異が出ているのが確認できると思います。

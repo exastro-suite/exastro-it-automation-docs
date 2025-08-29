@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>OASE Agent on Kubernetes - Online &#8212; Documentation  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../../_static/tabs.js?v=3030b3cb"></script>
+    <script src="../../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="OASE Agent on Docker Compose - Online" href="docker_compose.html" />
+    <link rel="prev" title="OASE Agent" href="index.html" /> 
+  </head>
+<body id="page" class="en">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="Go"><img src="../../../_static/img/search.png" alt="Go"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../en/2.6/installation/online/oase_agent/kubernetes.html">current</option>
+              <option value="../../../../../en/2.6/installation/online/oase_agent/kubernetes.html">2.6(current)</option>
+              <option value="../../../../../en/2.5/installation/online/oase_agent/kubernetes.html" selected>2.5</option>
+              <option value="../../../../../en/2.4/installation/online/oase_agent/kubernetes.html">2.4</option>
+              <option value="../../../../../en/2.3/installation/online/oase_agent/kubernetes.html">2.3</option>
+              <option value="../../../../../en/2.2/installation/online/oase_agent/kubernetes.html">2.2</option>
+              <option value="../../../../../en/2.1/installation/online/oase_agent/kubernetes.html">2.1</option>
+              <option value="../../../../../en/2.0/installation/online/oase_agent/kubernetes.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../ja/2.5/installation/online/oase_agent/kubernetes.html">日本語</option>
+              <option value="../../../../../en/2.5/installation/online/oase_agent/kubernetes.html" selected>English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="index.html" title="Previous topic">OASE Agent</a></li>
+        <li class="next"><a href="docker_compose.html" title="Next topic">OASE Agent on Docker Compose - Online</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration/index.html">Configuration and Construction guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Installation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Online</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../exastro/index.html">Exastro</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">OASE Agent</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">OASE Agent on Kubernetes - Online</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#features">Features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#preparation">Preparation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#install">Install</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#update">Update</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#uninstall">Uninstall</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="docker_compose.html">OASE Agent on Docker Compose - Online</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ansible_execution_agent/index.html">Ansible Execution Agent</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../offline/index.html">Offline</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../learn/index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">Glossary</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">OASE Agent on Kubernetes - Online</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#preparation">Preparation</a><ul>
+<li><a class="reference internal" href="#register-helm-repository">Register Helm repository</a></li>
+<li><a class="reference internal" href="#fetch-default-setting-values">Fetch default setting values</a></li>
+<li><a class="reference internal" href="#oase-agent-settings">OASE Agent settings</a><ul>
+<li><a class="reference internal" href="#parameter">Parameter</a></li>
+<li><a class="reference internal" href="#oase-agent-parameter-setting-example">OASE Agent parameter setting example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#persistent-volume-settings">Persistent volume settings</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#install">Install</a><ul>
+<li><a class="reference internal" href="#create-persistent-volumes">Create Persistent volumes</a></li>
+<li><a class="reference internal" href="#id1">Install</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#update">Update</a><ul>
+<li><a class="reference internal" href="#update-preparation">Update preparation</a></li>
+<li><a class="reference internal" href="#id2">Update</a><ul>
+<li><a class="reference internal" href="#stop-service">Stop service</a></li>
+<li><a class="reference internal" href="#start-update">Start Update</a></li>
+<li><a class="reference internal" href="#restart-service">Restart service</a></li>
+<li><a class="reference internal" href="#check-update-status">Check Update status</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#uninstall">Uninstall</a><ul>
+<li><a class="reference internal" href="#uninstall-preparation">Uninstall preparation</a></li>
+<li><a class="reference internal" href="#id3">Uninstall</a><ul>
+<li><a class="reference internal" href="#start-uninstall">Start Uninstall</a></li>
+<li><a class="reference internal" href="#delete-persistent-volumes">Delete persistent volumes</a><ul>
+<li><a class="reference internal" href="#for-agents">For Agents</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#deleting-persistent-data">Deleting Persistent data</a><ul>
+<li><a class="reference internal" href="#id4">For Agents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">HOME</a></li>
+    <li><a href="../../index.html">Installation</a></li>
+    <li><a href="../index.html">Online</a></li>
+    <li><a href="index.html">OASE Agent</a></li>
+    
+    <li>OASE Agent on Kubernetes - Online</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <script>
+$(window).on('load', function () {
+   setTimeout(function(){
+     for (var i = 0; i < $("table.filter-table").length; i++) {
+       $("[id^='ft-data-" + i + "-2-r']").removeAttr("checked");
+       $("[id^='select-all-" + i + "-2']").removeAttr("checked");
+       $("[id^='ft-data-" + i + "-2-r'][value^='可']").prop('checked', true);
+       $("[id^='ft-data-" + i + "-2-r'][value*='必須']").prop('checked', true);
+       tFilterGo(i);
+     }
+   },200);
+});
+</script><section id="oase-agent-on-kubernetes-online">
+<span id="oase-agent-kubernetes-install"></span><h1>OASE Agent on Kubernetes - Online<a class="headerlink" href="#oase-agent-on-kubernetes-online" title="Link to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">This document aims to explain how to install the Exastro OASE Agent, which is used to link with external services when using OASE, on Kubernetes.</div>
+</div>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">This document contains information on how to install Exastro OASE Agent with high availability and service level.</div>
+<div class="line">For a more simple installation for testing and temporary usage, we recommend the <a class="reference internal" href="docker_compose.html"><span class="doc">Docker Compose version of the OASE Agent</span></a>.</div>
+</div>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p>Exastro IT Automation</p>
+<div class="line-block">
+<div class="line">Both the Exastro OASE Agent and the Exastro IT Automation must be on the same version in order to operate the Exastro OASE Agent.</div>
+</div>
+</li>
+<li><p>Client requirements</p>
+<div class="line-block">
+<div class="line">The following describes confirmed compatible client application as well as their versions.</div>
+</div>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-number">Table 35 </span><span class="caption-text">Client requirements</span><a class="headerlink" href="#id5" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Application</p></th>
+<th class="head"><p>Version</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Helm</p></td>
+<td><p>v3.9.x</p></td>
+</tr>
+<tr class="row-odd"><td><p>kubectl</p></td>
+<td><p>1.23</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Deploy environment</p>
+<div class="line-block">
+<div class="line">The following describes confirmed compatible operation systems as well as their versions.</div>
+</div>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-number">Table 36 </span><span class="caption-text">Hardware requirements (minimum requirements)</span><a class="headerlink" href="#id6" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Resource type</p></th>
+<th class="head"><p>Required resource</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CPU</p></td>
+<td><p>2 Cores (3.0 GHz, x86_64)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Memory</p></td>
+<td><p>4GB</p></td>
+</tr>
+<tr class="row-even"><td><p>Storage (Container image size)</p></td>
+<td><p>10GB</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kubernetes (Container image size)</p></td>
+<td><p>1.23 or later</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Communication Protocols</p>
+<ul class="simple">
+<li><p>The user must be able to access the target fetch server from the OASE Agent.</p></li>
+<li><p>The user must be able to connect to Docker Hub in order to acquire the container image from the container environment.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<div class="line-block">
+<div class="line">If deploying to an environment constructed in <a class="reference internal" href="../exastro/kubernetes.html"><span class="doc">Helm chart (Kubernetes) version</span></a>, make sure that the environment has enough specs to meet additional minimum specs of the OASE Agent.</div>
+</div>
+</div>
+</li>
+</ul>
+</section>
+<section id="preparation">
+<h2>Preparation<a class="headerlink" href="#preparation" title="Link to this heading">¶</a></h2>
+<section id="register-helm-repository">
+<h3>Register Helm repository<a class="headerlink" href="#register-helm-repository" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">The Exastro OASE Agent exists on the same helm repository as the Exastro system.</div>
+</div>
+<ul class="simple">
+<li><p>Exastro OASE Agent</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Repository</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://exastro-suite.github.io/exastro-helm/">https://exastro-suite.github.io/exastro-helm/</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-number">Listing 131 </span><span class="caption-text">Cmmand</span><a class="headerlink" href="#id7" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Register Exastro system&#39;s Helm repository.</span>
+<span class="linenos">2</span>helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>exastro<span class="w"> </span>https://exastro-suite.github.io/exastro-helm/<span class="w"> </span>--namespace<span class="w"> </span>exastro
+<span class="linenos">3</span><span class="c1"># Update repository information</span>
+<span class="linenos">4</span>helm<span class="w"> </span>repo<span class="w"> </span>update
+</pre></div>
+</div>
+</div>
+</section>
+<section id="fetch-default-setting-values">
+<h3>Fetch default setting values<a class="headerlink" href="#fetch-default-setting-values" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">The following command outputs the values.yaml default values. This makes it easier to manage the input parameters.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-number">Listing 132 </span><span class="caption-text">Command</span><a class="headerlink" href="#id8" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>helm<span class="w"> </span>show<span class="w"> </span>values<span class="w"> </span>exastro/exastro-agent<span class="w"> </span>&gt;<span class="w"> </span>exastro-agent.yaml
+</pre></div>
+</div>
+</div>
+<details>
+  <summary>exastro-agent.yaml</summary><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="c1"># Default values for exastro-agent.</span>
+<span class="linenos">  2</span><span class="c1"># This is a YAML-formatted file.</span>
+<span class="linenos">  3</span><span class="c1"># Declare variables to be passed into your templates.</span>
+<span class="linenos">  4</span><span class="nt">global</span><span class="p">:</span>
+<span class="linenos">  5</span><span class="w">  </span><span class="nt">agentGlobalDefinition</span><span class="p">:</span>
+<span class="linenos">  6</span><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">agent-global</span>
+<span class="linenos">  7</span><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="linenos">  8</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
+<span class="linenos">  9</span><span class="w">      </span><span class="nt">registry</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;docker.io&quot;</span>
+<span class="linenos"> 10</span><span class="w">      </span><span class="nt">organization</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exastro</span>
+<span class="linenos"> 11</span><span class="w">      </span><span class="nt">package</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exastro-it-automation</span>
+<span class="linenos"> 12</span>
+<span class="linenos"> 13</span><span class="nt">ita-ag-oase</span><span class="p">:</span>
+<span class="linenos"> 14</span><span class="w">  </span><span class="nt">agents</span><span class="p">:</span>
+<span class="linenos"> 15</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span>
+<span class="linenos"> 16</span><span class="w">        </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos"> 17</span><span class="w">        </span><span class="c1"># Overrides the image tag whose default is the chart appVersion.</span>
+<span class="linenos"> 18</span><span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos"> 19</span><span class="w">        </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
+<span class="linenos"> 20</span><span class="w">      </span><span class="nt">extraEnv</span><span class="p">:</span>
+<span class="linenos"> 21</span><span class="w">        </span><span class="nt">TZ</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Asia/Tokyo</span>
+<span class="linenos"> 22</span><span class="w">        </span><span class="nt">DEFAULT_LANGUAGE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ja</span>
+<span class="linenos"> 23</span><span class="w">        </span><span class="nt">LANGUAGE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;en&quot;</span>
+<span class="linenos"> 24</span><span class="w">        </span><span class="nt">ITERATION</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;500&quot;</span>
+<span class="linenos"> 25</span><span class="w">        </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
+<span class="linenos"> 26</span><span class="w">        </span><span class="nt">LOG_LEVEL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">INFO</span>
+<span class="linenos"> 27</span><span class="w">        </span><span class="nt">AGENT_NAME</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;oase-agent&quot;</span>
+<span class="linenos"> 28</span><span class="w">        </span><span class="nt">EXASTRO_URL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://platform-auth:8000&quot;</span>
+<span class="linenos"> 29</span><span class="w">        </span><span class="nt">EXASTRO_ORGANIZATION_ID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;org001&quot;</span>
+<span class="linenos"> 30</span><span class="w">        </span><span class="nt">EXASTRO_WORKSPACE_ID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ws01&quot;</span>
+<span class="linenos"> 31</span><span class="w">        </span><span class="c1"># ROLES: &quot;_ws_admin&quot;</span>
+<span class="linenos"> 32</span><span class="w">        </span><span class="nt">EVENT_COLLECTION_SETTINGS_NAMES</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;id0001&quot;</span>
+<span class="linenos"> 33</span><span class="w">      </span><span class="nt">secret</span><span class="p">:</span>
+<span class="linenos"> 34</span><span class="w">        </span><span class="nt">EXASTRO_REFRESH_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro_refresh_token&quot;</span>
+<span class="linenos"> 35</span><span class="w">        </span><span class="c1"># EXASTRO_USERNAME: &quot;admin&quot;</span>
+<span class="linenos"> 36</span><span class="w">        </span><span class="c1"># EXASTRO_PASSWORD: &quot;sample-password&quot;</span>
+<span class="linenos"> 37</span><span class="w">      </span><span class="nt">resources</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="linenos"> 38</span><span class="w">        </span><span class="c1"># requests:</span>
+<span class="linenos"> 39</span><span class="w">        </span><span class="c1">#   memory: &quot;64Mi&quot;</span>
+<span class="linenos"> 40</span><span class="w">        </span><span class="c1">#   cpu: &quot;250m&quot;</span>
+<span class="linenos"> 41</span><span class="w">        </span><span class="c1"># limits:</span>
+<span class="linenos"> 42</span><span class="w">        </span><span class="c1">#   memory: &quot;64Mi&quot;</span>
+<span class="linenos"> 43</span><span class="w">        </span><span class="c1">#   cpu: &quot;250m&quot;</span>
+<span class="linenos"> 44</span>
+<span class="linenos"> 45</span><span class="w">  </span><span class="nt">imagePullSecrets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="linenos"> 46</span><span class="w">  </span><span class="nt">nameOverride</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos"> 47</span><span class="w">  </span><span class="nt">fullnameOverride</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos"> 48</span>
+<span class="linenos"> 49</span><span class="w">  </span><span class="nt">initContainerImage</span><span class="p">:</span>
+<span class="linenos"> 50</span><span class="w">    </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;registry.access.redhat.com/ubi8/ubi-init&quot;</span>
+<span class="linenos"> 51</span><span class="w">    </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
+<span class="linenos"> 52</span><span class="w">    </span><span class="c1"># Overrides the image tag whose default is the chart appVersion.</span>
+<span class="linenos"> 53</span><span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos"> 54</span>
+<span class="linenos"> 55</span><span class="w">  </span><span class="nt">serviceAccount</span><span class="p">:</span>
+<span class="linenos"> 56</span><span class="w">    </span><span class="c1"># Specifies whether a service account should be created</span>
+<span class="linenos"> 57</span><span class="w">    </span><span class="nt">create</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="linenos"> 58</span><span class="w">    </span><span class="c1"># Annotations to add to the service account</span>
+<span class="linenos"> 59</span><span class="w">    </span><span class="nt">annotations</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="linenos"> 60</span><span class="w">    </span><span class="c1"># The name of the service account to use.</span>
+<span class="linenos"> 61</span><span class="w">    </span><span class="c1"># If not set and create is true, a name is generated using the fullname template</span>
+<span class="linenos"> 62</span><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos"> 63</span>
+<span class="linenos"> 64</span><span class="w">  </span><span class="nt">persistence</span><span class="p">:</span>
+<span class="linenos"> 65</span><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="linenos"> 66</span><span class="w">    </span><span class="nt">reinstall</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="linenos"> 67</span><span class="w">    </span><span class="nt">accessMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteMany</span>
+<span class="linenos"> 68</span><span class="w">    </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10Gi</span>
+<span class="linenos"> 69</span><span class="w">    </span><span class="nt">volumeType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hostPath</span><span class="w"> </span><span class="c1"># e.g.) hostPath or AKS</span>
+<span class="linenos"> 70</span><span class="w">    </span><span class="nt">storageClass</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="c1"># e.g.) azurefile or - (None)</span>
+<span class="linenos"> 71</span><span class="w">    </span><span class="c1"># matchLabels:</span>
+<span class="linenos"> 72</span><span class="w">    </span><span class="c1">#   release: &quot;stable&quot;</span>
+<span class="linenos"> 73</span><span class="w">    </span><span class="c1"># matchExpressions:</span>
+<span class="linenos"> 74</span><span class="w">    </span><span class="c1">#   - {key: environment, operator: In, values: [dev]}</span>
+<span class="linenos"> 75</span><span class="w">    </span><span class="nt">mountPath</span><span class="p">:</span>
+<span class="linenos"> 76</span><span class="w">      </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/storage</span>
+<span class="linenos"> 77</span><span class="w">      </span><span class="nt">homeDir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/home/app_user</span>
+<span class="linenos"> 78</span><span class="w">      </span><span class="nt">pid</span><span class="p">:</span>
+<span class="linenos"> 79</span><span class="w">        </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/run_app_user/httpd/pid</span>
+<span class="linenos"> 80</span><span class="w">        </span><span class="nt">subPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">httpd-pid</span>
+<span class="linenos"> 81</span><span class="w">      </span><span class="nt">socket</span><span class="p">:</span>
+<span class="linenos"> 82</span><span class="w">        </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/run_app_user/httpd/socket</span>
+<span class="linenos"> 83</span><span class="w">        </span><span class="nt">subPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">httpd-socket</span>
+<span class="linenos"> 84</span><span class="w">      </span><span class="nt">tmp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp</span>
+<span class="linenos"> 85</span>
+<span class="linenos"> 86</span><span class="w">  </span><span class="nt">podAnnotations</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="linenos"> 87</span>
+<span class="linenos"> 88</span><span class="w">  </span><span class="nt">podSecurityContext</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="linenos"> 89</span><span class="w">    </span><span class="c1"># fsGroup: 2000</span>
+<span class="linenos"> 90</span>
+<span class="linenos"> 91</span><span class="w">  </span><span class="nt">securityContext</span><span class="p">:</span>
+<span class="linenos"> 92</span><span class="w">    </span><span class="nt">allowPrivilegeEscalation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="linenos"> 93</span><span class="w">    </span><span class="nt">readOnlyRootFilesystem</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="linenos"> 94</span><span class="w">    </span><span class="nt">runAsUser</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="linenos"> 95</span><span class="w">    </span><span class="nt">runAsGroup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="linenos"> 96</span><span class="w">    </span><span class="nt">runAsNonRoot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="linenos"> 97</span>
+<span class="linenos"> 98</span><span class="w">  </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="linenos"> 99</span>
+<span class="linenos">100</span><span class="w">  </span><span class="nt">ingress</span><span class="p">:</span>
+<span class="linenos">101</span><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="linenos">102</span><span class="w">    </span><span class="nt">className</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">103</span><span class="w">    </span><span class="nt">annotations</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="linenos">104</span><span class="w">      </span><span class="c1"># kubernetes.io/ingress.class: nginx</span>
+<span class="linenos">105</span><span class="w">      </span><span class="c1"># kubernetes.io/tls-acme: &quot;true&quot;</span>
+<span class="linenos">106</span><span class="w">    </span><span class="nt">hosts</span><span class="p">:</span>
+<span class="linenos">107</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chart-example.local</span>
+<span class="linenos">108</span><span class="w">        </span><span class="nt">paths</span><span class="p">:</span>
+<span class="linenos">109</span><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/</span>
+<span class="linenos">110</span><span class="w">            </span><span class="nt">pathType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ImplementationSpecific</span>
+<span class="linenos">111</span><span class="w">    </span><span class="nt">tls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="linenos">112</span><span class="w">  </span><span class="c1">#  - secretName: chart-example-tls</span>
+<span class="linenos">113</span><span class="w">    </span><span class="c1">#    hosts:</span>
+<span class="linenos">114</span><span class="w">    </span><span class="c1">#      - chart-example.local</span>
+<span class="linenos">115</span>
+<span class="linenos">116</span><span class="w">  </span><span class="nt">nodeSelector</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="linenos">117</span>
+<span class="linenos">118</span><span class="w">  </span><span class="nt">tolerations</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="linenos">119</span>
+<span class="linenos">120</span><span class="w">  </span><span class="nt">affinity</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+</pre></div>
+</div>
+</details><div class="line-block">
+<div class="line">The following steps will configure required parameters to <code class="file docutils literal notranslate"><span class="pre">exastro-agent.yaml</span></code>.</div>
+</div>
+</section>
+<section id="oase-agent-settings">
+<h3>OASE Agent settings<a class="headerlink" href="#oase-agent-settings" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">OASE Agentを立ち上げる際の代表的な設定方法について紹介します。</div>
+<div class="line">In the following example, the persistent volume is configured to hostPath.</div>
+</div>
+<ul class="simple">
+<li><p>Simple architecture</p></li>
+<li><p>Multiple agents (Same Pod)</p></li>
+<li><p>Multiple agents (Different Pod)</p></li>
+</ul>
+<section id="parameter">
+<h4>Parameter<a class="headerlink" href="#parameter" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">See the following in order to see the usable parameters.</div>
+</div>
+<table class="filter-table docutils align-left" id="id9">
+<caption><span class="caption-number">Table 37 </span><span class="caption-text">List of Values in ita-ag-oase</span><a class="headerlink" href="#id9" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameters</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Change</p></th>
+<th class="head"><p>Default Value / Available Options</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ita-ag-oase.agents.image.repository</p></td>
+<td><p>Container Image Repository Name</p></td>
+<td><p>Disabled</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>ita-ag-oase.agents.image.tag</p></td>
+<td><p>Container Image Tag</p></td>
+<td><p>Disabled</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>ita-ag-oase.agents.image.pullPolicy</p></td>
+<td><p>Image Pull Policy</p></td>
+<td><p>Enabled</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">IfNotPresent</strong> (Default): Pull only if the container image is not present</div>
+<div class="line"><strong class="program">Always</strong>: Always pull</div>
+<div class="line"><strong class="program">None</strong>: Do not pull</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ita-ag-oase.agents.extraEnv.TZ</p></td>
+<td><p>Default Language Used by the OASE Agent System</p></td>
+<td><p>Enabled</p></td>
+<td><p>Asia/Tokyo</p></td>
+</tr>
+<tr class="row-even"><td><p>ita-ag-oase.agents.extraEnv.DEFAULT_LANGUAGE</p></td>
+<td><p>Language Used by the OASE Agent System</p></td>
+<td><p>Enabled</p></td>
+<td><p>ja</p></td>
+</tr>
+<tr class="row-odd"><td><p>ita-ag-oase.agents.extraEnv.LANGUAGE</p></td>
+<td><p>OASE Agent Version</p></td>
+<td><p>Enabled</p></td>
+<td><p>en</p></td>
+</tr>
+<tr class="row-even"><td><p>ita-ag-oase.agents.extraEnv.ITERATION</p></td>
+<td><p>Number of retries before the OASE Agent initializes the settings (Maximum: 120, Minimum: 10)</p></td>
+<td><p>Enabled</p></td>
+<td><p>500</p></td>
+</tr>
+<tr class="row-odd"><td><p>ita-ag-oase.agents.extraEnv.EXECUTE_INTERVAL</p></td>
+<td><p>Interval (in seconds) for the OASE Agent (ita-ag-oase) to fetch events from the target (Minimum: 3 seconds)</p></td>
+<td><p>Enabled</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>ita-ag-oase.agents.extraEnv.LOG_LEVEL</p></td>
+<td><p>OASE Agent Log Level</p></td>
+<td><p>Enabled</p></td>
+<td><p>INFO</p></td>
+</tr>
+<tr class="row-odd"><td><p>ita-ag-oase.eagents.xtraEnv.AGENT_NAME</p></td>
+<td><p>Name of the OASE Agent to be started</p></td>
+<td><p>Enabled</p></td>
+<td><p>oase-agent</p></td>
+</tr>
+<tr class="row-even"><td><p>ita-ag-oase.agents.extraEnv.EXASTRO_URL</p></td>
+<td><p>Exastro IT Automation Service URL</p></td>
+<td><p>Enabled</p></td>
+<td><p><a class="reference external" href="http://platform-auth:8000">http://platform-auth:8000</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>ita-ag-oase.agents.extraEnv.EXASTRO_ORGANIZATION_ID</p></td>
+<td><p>Organization ID created in Exastro IT Automation</p></td>
+<td><p>Required</p></td>
+<td><p>org001</p></td>
+</tr>
+<tr class="row-even"><td><p>ita-ag-oase.agents.extraEnv.EXASTRO_WORKSPACE_ID</p></td>
+<td><p>Workspace ID created in Exastro IT Automation</p></td>
+<td><p>Required</p></td>
+<td><p>ws01</p></td>
+</tr>
+<tr class="row-odd"><td><p>ita-ag-oase.agents.extraEnv.EVENT_COLLECTION_SETTINGS_NAMES</p></td>
+<td><div class="line-block">
+<div class="line">Event Collection Setting Name created in OASE Management → Event Collection of Exastro IT Automation</div>
+<div class="line">Multiple entries can be specified, separated by commas</div>
+</div>
+</td>
+<td><p>Required</p></td>
+<td><p>id0001</p></td>
+</tr>
+<tr class="row-even"><td><p>ita-ag-oase.agents.secret.EXASTRO_REFRESH_TOKEN</p></td>
+<td><div class="line-block">
+<div class="line">Refresh token obtained from the Exastro system management screen</div>
+<div class="line">The user’s role must have maintenance permissions for the OASE → Events → Event History menu.</div>
+</div>
+</td>
+<td><p>Enabled</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p>ita-ag-oase.agents.secret.EXASTRO_USERNAME</p></td>
+<td><div class="line-block">
+<div class="line">Username created in Exastro IT Automation</div>
+<div class="line">The user’s role must have permission to maintain the OASE → Events → Event History menu.</div>
+<div class="line">When not using EXASTRO_REFRESH_TOKEN (not recommended)</div>
+</div>
+</td>
+<td><p>Enabled</p></td>
+<td><p>admin</p></td>
+</tr>
+<tr class="row-even"><td><p>ita-ag-oase.agents.secret.EXASTRO_PASSWORD</p></td>
+<td><div class="line-block">
+<div class="line">Password created in Exastro IT Automation</div>
+<div class="line">If not using EXASTRO_REFRESH_TOKEN (not recommended)</div>
+</div>
+</td>
+<td><p>Enabled</p></td>
+<td><p>sample-password</p></td>
+</tr>
+<tr class="row-odd"><td><p>ita-ag-oase.agents.resources.requests.memory</p></td>
+<td><p>Memory request</p></td>
+<td><p>Enabled</p></td>
+<td><p>“64Mi”</p></td>
+</tr>
+<tr class="row-even"><td><p>ita-ag-oase.agents.resources.requests.cpu</p></td>
+<td><p>CPU request</p></td>
+<td><p>Enabled</p></td>
+<td><p>“250m”</p></td>
+</tr>
+<tr class="row-odd"><td><p>ita-ag-oase.agents.resources.limits.memory</p></td>
+<td><p>Memory limit</p></td>
+<td><p>Enabled</p></td>
+<td><p>“64Mi”</p></td>
+</tr>
+<tr class="row-even"><td><p>ita-ag-oase.agents.resources.limits.cpu</p></td>
+<td><p>CPU limit</p></td>
+<td><p>Enabled</p></td>
+<td><p>“250m”</p></td>
+</tr>
+<tr class="row-odd"><td><p>ita-ag-oase.nameOverride</p></td>
+<td><div class="line-block">
+<div class="line">Exastro OASE Agent Definition Name</div>
+<div class="line">Required when deploying multiple agents within the same cluster</div>
+</div>
+</td>
+<td><p>Enabled</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>ita-ag-oase.persistence.enabled</p></td>
+<td><p>Deployment status of the OASE Agent container</p></td>
+<td><p>Enabled</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">true</strong> (Default): Deploy the OASE Agent container.</div>
+<div class="line"><strong class="program">false</strong> : Do not deploy the OASE Agent container.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ita-ag-oase.persistence.reinstall</p></td>
+<td><p>Whether to initialize the data volume during reinstallation</p></td>
+<td><p>Disabled</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">true</strong> : Initialize (delete) the data</div>
+<div class="line"><strong class="program">false</strong> (Default): Do not initialize (delete) the data</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>ita-ag-oase.persistence.accessMode</p></td>
+<td><p>Specify the access mode of the persistent volume.</p></td>
+<td><p>Disabled</p></td>
+<td><p>“ReadWriteMany”</p></td>
+</tr>
+<tr class="row-odd"><td><p>ita-ag-oase.persistence.size</p></td>
+<td><p>Disk capacity of the persistent volume</p></td>
+<td><p>Enabled (When data persistence is enabled)</p></td>
+<td><p>“10Gi”</p></td>
+</tr>
+<tr class="row-even"><td><p>ita-ag-oase.persistence.volumeType</p></td>
+<td><p>Volume type of the persistent volume</p></td>
+<td><p>Enabled (Currently disabled)</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">hostPath</strong> (Default): Store data on Kubernetes cluster nodes (deprecated)</div>
+<div class="line"><strong class="program">AKS</strong>: Use AKS storage class</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ita-ag-oase.persistence.storageClass</p></td>
+<td><p>Specify the storage class to use for the persistent volume</p></td>
+<td><p>Enabled (When data persistence is enabled)</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">-</strong> (Default): Do not specify a storage class.</div>
+<div class="line"><strong class="program">storage class name</strong>: Specify the storage class name provided by the cloud provider or similar.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>exastro-platform.mariadb.persistence.matchLabels.name</p></td>
+<td><p>Specify the name of the persistent volume to use</p></td>
+<td><p>Enabled(When data persistence is enabled)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="oase-agent-parameter-setting-example">
+<h4>OASE Agent parameter setting example<a class="headerlink" href="#oase-agent-parameter-setting-example" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">The following is a sample of Agent settings.</div>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-U2ltcGxlIGFyY2hpdGVjdHVyZQ==" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-U2ltcGxlIGFyY2hpdGVjdHVyZQ==" name="U2ltcGxlIGFyY2hpdGVjdHVyZQ==" role="tab" tabindex="0">Simple architecture</button><button aria-controls="panel-0-TXVsdGlwbGUgQWdlbnRzIChTYW1lIHBvZCk=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-TXVsdGlwbGUgQWdlbnRzIChTYW1lIHBvZCk=" name="TXVsdGlwbGUgQWdlbnRzIChTYW1lIHBvZCk=" role="tab" tabindex="-1">Multiple Agents (Same pod)</button><button aria-controls="panel-0-TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" name="TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" role="tab" tabindex="-1">Multiple Agents (Different Pod)</button></div><div aria-labelledby="tab-0-U2ltcGxlIGFyY2hpdGVjdHVyZQ==" class="sphinx-tabs-panel group-tab" id="panel-0-U2ltcGxlIGFyY2hpdGVjdHVyZQ==" name="U2ltcGxlIGFyY2hpdGVjdHVyZQ==" role="tabpanel" tabindex="0"><ul class="simple">
+<li><p>Features</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Simple architecture with 1 container for 1 pod.</div>
+</div>
+<ul class="simple">
+<li><p>Setting example</p></li>
+</ul>
+<ol class="arabic">
+<li><p>OASE Agent settings</p>
+<div class="line-block">
+<div class="line">Configure the OASE Agent.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-number">Listing 133 </span><span class="caption-text">exastro-agent.yaml</span><a class="headerlink" href="#id10" title="Link to this code">¶</a></div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="linenos">13</span>ita-ag-oase:
+<span class="linenos">14</span><span class="w"> </span> agents:
+<span class="linenos">15</span><span class="w"> </span>   - image:
+<span class="linenos">16</span><span class="w"> </span>       repository: &quot;&quot;
+<span class="linenos">17</span><span class="w"> </span>       # Overrides the image tag whose default is the chart appVersion.
+<span class="linenos">18</span><span class="w"> </span>       tag: &quot;alpha.4ccca4.20240124-110529&quot;
+<span class="linenos">19</span><span class="w"> </span>       pullPolicy: IfNotPresent
+<span class="linenos">20</span><span class="w"> </span>     extraEnv:
+<span class="linenos">21</span><span class="w"> </span>       TZ: Asia/Tokyo
+<span class="linenos">22</span><span class="w"> </span>       DEFAULT_LANGUAGE: ja
+<span class="linenos">23</span><span class="w"> </span>       LANGUAGE: &quot;en&quot;
+<span class="linenos">24</span><span class="w"> </span>       ITERATION: &quot;500&quot;
+<span class="linenos">25</span><span class="w"> </span>       EXECUTE_INTERVAL: &quot;10&quot;
+<span class="linenos">26</span><span class="w"> </span>       LOG_LEVEL: INFO
+<span class="linenos">27</span><span class="w"> </span>       AGENT_NAME: &quot;oase-agent&quot;
+<span class="linenos">28</span><span class="gd">-       EXASTRO_URL: &quot;http://platform-auth:8000&quot;</span>
+<span class="linenos">29</span><span class="gi">+       EXASTRO_URL: &quot;http://your-exastro-url&quot;                                   # Exastro IT Automation Service URL</span>
+<span class="linenos">30</span><span class="gd">-       EXASTRO_ORGANIZATION_ID: &quot;org001&quot;</span>
+<span class="linenos">31</span><span class="gi">+       EXASTRO_ORGANIZATION_ID: &quot;your-organization-id&quot;                          # Organization created in Exastro IT Automation</span>
+<span class="linenos">32</span><span class="gd">-       EXASTRO_WORKSPACE_ID: &quot;ws01&quot;</span>
+<span class="linenos">33</span><span class="gi">+       EXASTRO_WORKSPACE_ID: &quot;your-workspace-id&quot;                                # WorkspaceID created in Exastro IT Automation</span>
+<span class="linenos">34</span><span class="w"> </span>       # ROLES: &quot;_ws_admin&quot;
+<span class="linenos">35</span><span class="gd">-       EVENT_COLLECTION_SETTINGS_NAMES: &quot;id0001&quot;</span>
+<span class="linenos">36</span><span class="gi">+       EVENT_COLLECTION_SETTINGS_NAMES: &quot;your-event-collection-settigs-names&quot;   # The Event collection setting name created in Exastro IT Automation&#39;s OASE Management event collection.</span>
+<span class="linenos">37</span><span class="w"> </span>     secret:
+<span class="linenos">38</span><span class="gd">-       EXASTRO_REFRESH_TOKEN: &quot;exastro_refresh_token&quot;</span>
+<span class="linenos">39</span><span class="gi">+       EXASTRO_REFRESH_TOKEN: &quot;your_exastro_refresh_token&quot;                      # Refresh token fetched from the Exastro System management page.</span>
+<span class="linenos">40</span><span class="w"> </span>       # EXASTRO_USERNAME: &quot;admin&quot;
+<span class="linenos">41</span><span class="w"> </span>       # EXASTRO_PASSWORD: &quot;sample-password&quot;
+<span class="linenos">42</span><span class="gi">+       # EXASTRO_USERNAME: &quot;your-ita-user-name&quot;                # Username created in Exastro IT Automation.(Remember to uncomment if using this)</span>
+<span class="linenos">43</span><span class="gi">+       # EXASTRO_PASSWORD: &quot;your-ita-user-password&quot;            # Password created in Exastro IT Automation.(Remember to uncomment if using this)</span>
+</pre></div>
+</div>
+</div>
+</li>
+</ol>
+</div><div aria-labelledby="tab-0-TXVsdGlwbGUgQWdlbnRzIChTYW1lIHBvZCk=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-TXVsdGlwbGUgQWdlbnRzIChTYW1lIHBvZCk=" name="TXVsdGlwbGUgQWdlbnRzIChTYW1lIHBvZCk=" role="tabpanel" tabindex="0"><ul class="simple">
+<li><p>Features</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Architecture where multiple containers are built on 1 Pod.</div>
+<div class="line">While multiple constructions can be done by increasing the following image, make sure to increase the amount of resources to compensate.</div>
+</div>
+<ul class="simple">
+<li><p>Setting example</p></li>
+</ul>
+<ol class="arabic">
+<li><p>OASE Agent settings</p>
+<div class="line-block">
+<div class="line">Configure OASE Agent</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-number">Listing 134 </span><span class="caption-text">exastro-agent.yaml</span><a class="headerlink" href="#id11" title="Link to this code">¶</a></div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="linenos">13</span>ita-ag-oase:
+<span class="linenos">14</span><span class="w"> </span> agents:
+<span class="linenos">15</span><span class="w"> </span>   - image:
+<span class="linenos">16</span><span class="w"> </span>       repository: &quot;&quot;
+<span class="linenos">17</span><span class="w"> </span>       # Overrides the image tag whose default is the chart appVersion.
+<span class="linenos">18</span><span class="w"> </span>       tag: &quot;alpha.4ccca4.20240124-110529&quot;
+<span class="linenos">19</span><span class="w"> </span>       pullPolicy: IfNotPresent
+<span class="linenos">20</span><span class="w"> </span>     extraEnv:
+<span class="linenos">21</span><span class="w"> </span>       TZ: Asia/Tokyo
+<span class="linenos">22</span><span class="w"> </span>       DEFAULT_LANGUAGE: ja
+<span class="linenos">23</span><span class="w"> </span>       LANGUAGE: &quot;en&quot;
+<span class="linenos">24</span><span class="w"> </span>       ITERATION: &quot;500&quot;
+<span class="linenos">25</span><span class="w"> </span>       EXECUTE_INTERVAL: &quot;10&quot;
+<span class="linenos">26</span><span class="w"> </span>       LOG_LEVEL: INFO
+<span class="linenos">27</span><span class="w"> </span>       AGENT_NAME: &quot;oase-agent&quot;
+<span class="linenos">28</span><span class="gi">+       AGENT_NAME: &quot;oase-agent-1&quot;                                               # Name of the OASE Agent</span>
+<span class="linenos">29</span><span class="gd">-       EXASTRO_URL: &quot;http://platform-auth:8000&quot;</span>
+<span class="linenos">30</span><span class="gi">+       EXASTRO_URL: &quot;http://your-exastro-url&quot;                                   # Exastro IT Automation Service URL</span>
+<span class="linenos">31</span><span class="gd">-       EXASTRO_ORGANIZATION_ID: &quot;org001&quot;</span>
+<span class="linenos">32</span><span class="gi">+       EXASTRO_ORGANIZATION_ID: &quot;your-organization-id&quot;                          # Organization created in Exastro IT Automation</span>
+<span class="linenos">33</span><span class="gd">-       EXASTRO_WORKSPACE_ID: &quot;ws01&quot;</span>
+<span class="linenos">34</span><span class="gi">+       EXASTRO_WORKSPACE_ID: &quot;your-workspace-id&quot;                                # WorkspaceID created in Exastro IT Automation</span>
+<span class="linenos">35</span><span class="w"> </span>       # ROLES: &quot;_ws_admin&quot;
+<span class="linenos">36</span><span class="gd">-       EVENT_COLLECTION_SETTINGS_NAMES: &quot;id0001&quot;</span>
+<span class="linenos">37</span><span class="gi">+       EVENT_COLLECTION_SETTINGS_NAMES: &quot;your-event-collection-settigs-names&quot;   # The Event collection setting name created in Exastro IT Automation&#39;s OASE Management event collection.</span>
+<span class="linenos">38</span><span class="w"> </span>     secret:
+<span class="linenos">39</span><span class="gd">-       EXASTRO_REFRESH_TOKEN: &quot;exastro_refresh_token&quot;</span>
+<span class="linenos">40</span><span class="gi">+       EXASTRO_REFRESH_TOKEN: &quot;your_exastro_refresh_token&quot;                      # Refresh token fetched from the Exastro System management page.</span>
+<span class="linenos">41</span><span class="w"> </span>       # EXASTRO_USERNAME: &quot;admin&quot;
+<span class="linenos">42</span><span class="w"> </span>       # EXASTRO_PASSWORD: &quot;sample-password&quot;
+<span class="linenos">43</span><span class="gi">+       # EXASTRO_USERNAME: &quot;your-ita-user-name&quot;                # Username created in Exastro IT Automation.(Remember to uncomment if using this)</span>
+<span class="linenos">44</span><span class="gi">+       # EXASTRO_PASSWORD: &quot;your-ita-user-password&quot;            # Password created in Exastro IT Automation.(Remember to uncomment if using this)</span>
+<span class="linenos">45</span><span class="gi">+   - image:</span>
+<span class="linenos">46</span><span class="gi">+       repository: &quot;&quot;</span>
+<span class="linenos">47</span><span class="gi">+       # Overrides the image tag whose default is the chart appVersion.</span>
+<span class="linenos">48</span><span class="gi">+       tag: &quot;alpha.4ccca4.20240124-110529&quot;</span>
+<span class="linenos">49</span><span class="gi">+       pullPolicy: IfNotPresent</span>
+<span class="linenos">50</span><span class="gi">+     extraEnv:</span>
+<span class="linenos">51</span><span class="gi">+       TZ: Asia/Tokyo</span>
+<span class="linenos">52</span><span class="gi">+       DEFAULT_LANGUAGE: ja</span>
+<span class="linenos">53</span><span class="gi">+       LANGUAGE: &quot;en&quot;</span>
+<span class="linenos">54</span><span class="gi">+       ITERATION: &quot;500&quot;</span>
+<span class="linenos">55</span><span class="gi">+       EXECUTE_INTERVAL: &quot;10&quot;</span>
+<span class="linenos">56</span><span class="gi">+       LOG_LEVEL: INFO</span>
+<span class="linenos">57</span><span class="gi">+       AGENT_NAME: &quot;oase-agent-2&quot;                                               # Name of the OASE Agent</span>
+<span class="linenos">58</span><span class="gi">+       EXASTRO_URL: &quot;http://your-exastro-url&quot;                                   # Exastro IT Automation Service URL</span>
+<span class="linenos">59</span><span class="gi">+       EXASTRO_ORGANIZATION_ID: &quot;your-organization-id&quot;                          # Organization created in Exastro IT Automation</span>
+<span class="linenos">60</span><span class="gi">+       EXASTRO_WORKSPACE_ID: &quot;your-workspace-id-2&quot;                                # WorkspaceID created in Exastro IT Automation</span>
+<span class="linenos">61</span><span class="gi">+       # ROLES: &quot;_ws_admin&quot;</span>
+<span class="linenos">62</span><span class="gi">+       EVENT_COLLECTION_SETTINGS_NAMES: &quot;your-event-collection-settigs-names-2&quot;   # The Event collection setting name created in Exastro IT Automation&#39;s OASE Management event collection.</span>
+<span class="linenos">63</span><span class="gi">+     secret:</span>
+<span class="linenos">64</span><span class="gi">+       EXASTRO_REFRESH_TOKEN: &quot;your_exastro_refresh_token&quot;                      # Refresh token fetched from the Exastro System management page.</span>
+<span class="linenos">65</span><span class="gi">+       EXASTRO_USERNAME: &quot;your-ita-user-name&quot;                                   # Username created in Exastro IT Automation.(Remember to uncomment if using this)</span>
+<span class="linenos">66</span><span class="gi">+       EXASTRO_PASSWORD: &quot;your-ita-user-password&quot;                               # Password created in Exastro IT Automation.(Remember to uncomment if using this)</span>
+</pre></div>
+</div>
+</div>
+</li>
+</ol>
+</div><div aria-labelledby="tab-0-TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" name="TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" role="tabpanel" tabindex="0"><ul class="simple">
+<li><p>Features</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Architecture built on multiple Pods.</div>
+<div class="line">While there are merits to being able to stop single agents,</div>
+<div class="line">The user must prepare persistent volumes for each Pod.</div>
+</div>
+<ul class="simple">
+<li><p>Setting example</p></li>
+</ul>
+<ol class="arabic">
+<li><p>Prepare Setting value file</p>
+<div class="line-block">
+<div class="line">Copy exastro-agent.yaml and prepare exastro-agent-1.yaml</div>
+<div class="line">Copy exastro-agent.yaml and prepare exastro-agent-2.yaml</div>
+</div>
+</li>
+<li><p>First OASE Agent</p>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-number">Listing 135 </span><span class="caption-text">exastro-agent-1.yaml</span><a class="headerlink" href="#id12" title="Link to this code">¶</a></div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="linenos">13</span>ita-ag-oase:
+<span class="linenos">14</span><span class="w"> </span> agents:
+<span class="linenos">15</span><span class="w"> </span>   - image:
+<span class="linenos">16</span><span class="w"> </span>       repository: &quot;&quot;
+<span class="linenos">17</span><span class="w"> </span>       # Overrides the image tag whose default is the chart appVersion.
+<span class="linenos">18</span><span class="w"> </span>       tag: &quot;&quot;
+<span class="linenos">19</span><span class="w"> </span>       pullPolicy: IfNotPresent
+<span class="linenos">20</span><span class="w"> </span>     extraEnv:
+<span class="linenos">21</span><span class="w"> </span>       TZ: Asia/Tokyo
+<span class="linenos">22</span><span class="w"> </span>       DEFAULT_LANGUAGE: ja
+<span class="linenos">23</span><span class="w"> </span>       LANGUAGE: &quot;en&quot;
+<span class="linenos">24</span><span class="w"> </span>       ITERATION: &quot;500&quot;
+<span class="linenos">25</span><span class="w"> </span>       EXECUTE_INTERVAL: &quot;10&quot;
+<span class="linenos">26</span><span class="w"> </span>       LOG_LEVEL: INFO
+<span class="linenos">27</span><span class="w"> </span>       AGENT_NAME: &quot;oase-agent&quot;
+<span class="linenos">28</span><span class="gd">-       EXASTRO_URL: &quot;http://platform-auth:8000&quot;</span>
+<span class="linenos">29</span><span class="gi">+       EXASTRO_URL: &quot;http://your-exastro-url&quot;                                   # Exastro IT Automation Service URL</span>
+<span class="linenos">30</span><span class="gd">-       EXASTRO_ORGANIZATION_ID: &quot;org001&quot;</span>
+<span class="linenos">31</span><span class="gi">+       EXASTRO_ORGANIZATION_ID: &quot;your-organization-id&quot;                          # Organization created in Exastro IT Automation</span>
+<span class="linenos">32</span><span class="gd">-       EXASTRO_WORKSPACE_ID: &quot;ws01&quot;</span>
+<span class="linenos">33</span><span class="gi">+       EXASTRO_WORKSPACE_ID: &quot;your-workspace-id&quot;                                # WorkspaceID created in Exastro IT Automation</span>
+<span class="linenos">34</span><span class="w"> </span>       # ROLES: &quot;_ws_admin&quot;
+<span class="linenos">35</span><span class="gd">-       EVENT_COLLECTION_SETTINGS_NAMES: &quot;id0001&quot;</span>
+<span class="linenos">36</span><span class="gi">+       EVENT_COLLECTION_SETTINGS_NAMES: &quot;your-event-collection-settigs-names&quot;   # The Event collection setting name created in Exastro IT Automation&#39;s OASE Management event collection.</span>
+<span class="linenos">37</span><span class="w"> </span>     secret:
+<span class="linenos">38</span><span class="gd">-       EXASTRO_REFRESH_TOKEN: &quot;exastro_refresh_token&quot;</span>
+<span class="linenos">39</span><span class="gi">+       EXASTRO_REFRESH_TOKEN: &quot;your_exastro_refresh_token&quot;                      # Refresh token fetched from the Exastro System management page.</span>
+<span class="linenos">40</span><span class="w"> </span>       # EXASTRO_USERNAME: &quot;admin&quot;
+<span class="linenos">41</span><span class="w"> </span>       # EXASTRO_PASSWORD: &quot;sample-password&quot;
+<span class="linenos">42</span><span class="gi">+       # EXASTRO_USERNAME: &quot;your-ita-user-name&quot;                # Username created in Exastro IT Automation.(Remember to uncomment if using this)</span>
+<span class="linenos">43</span><span class="gi">+       # EXASTRO_PASSWORD: &quot;your-ita-user-password&quot;            # Password created in Exastro IT Automation.(Remember to uncomment if using this)</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Configure First OASE Agent definition name</p>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-number">Listing 136 </span><span class="caption-text">exastro-agent-1.yaml</span><a class="headerlink" href="#id13" title="Link to this code">¶</a></div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="linenos">45</span><span class="w"> </span> imagePullSecrets: []
+<span class="linenos">46</span><span class="gd">- nameOverride: &quot;&quot;</span>
+<span class="linenos">47</span><span class="gi">+ nameOverride: &quot;ita-ag-oase-1&quot;    # Exastro OASE Agent definition name</span>
+<span class="linenos">48</span><span class="w"> </span> fullnameOverride: &quot;&quot;
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Configure first OASE Agent’s matchLabels</p>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-number">Listing 137 </span><span class="caption-text">exastro-agent-1.yaml</span><a class="headerlink" href="#id14" title="Link to this code">¶</a></div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="linenos">64</span><span class="w"> </span> persistence:
+<span class="linenos">65</span><span class="w"> </span>   enabled: true
+<span class="linenos">66</span><span class="w"> </span>   reinstall: false
+<span class="linenos">67</span><span class="w"> </span>   accessMode: ReadWriteMany
+<span class="linenos">68</span><span class="w"> </span>   size: 10Gi
+<span class="linenos">69</span><span class="w"> </span>   volumeType: hostPath # e.g.) hostPath or AKS
+<span class="linenos">70</span><span class="w"> </span>   storageClass: &quot;-&quot; # e.g.) azurefile or - (None)
+<span class="linenos">71</span><span class="gd">-   # matchLabels:</span>
+<span class="linenos">72</span><span class="gd">-   #   release: &quot;stable&quot;</span>
+<span class="linenos">73</span><span class="gi">+   matchLabels:</span>
+<span class="linenos">74</span><span class="gi">+     release: &quot;pv-ita-ag-oase-1&quot;    # Specify the name of the presistent volume that will be used</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Configure Second OASE Agent definition name</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-number">Listing 138 </span><span class="caption-text">exastro-agent-2.yaml</span><a class="headerlink" href="#id15" title="Link to this code">¶</a></div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="linenos">13</span>ita-ag-oase:
+<span class="linenos">14</span><span class="w"> </span> agents:
+<span class="linenos">15</span><span class="w"> </span>   - image:
+<span class="linenos">16</span><span class="w"> </span>       repository: &quot;&quot;
+<span class="linenos">17</span><span class="w"> </span>       # Overrides the image tag whose default is the chart appVersion.
+<span class="linenos">18</span><span class="w"> </span>       tag: &quot;&quot;
+<span class="linenos">19</span><span class="w"> </span>       pullPolicy: IfNotPresent
+<span class="linenos">20</span><span class="w"> </span>     extraEnv:
+<span class="linenos">21</span><span class="w"> </span>       TZ: Asia/Tokyo
+<span class="linenos">22</span><span class="w"> </span>       DEFAULT_LANGUAGE: ja
+<span class="linenos">23</span><span class="w"> </span>       LANGUAGE: &quot;en&quot;
+<span class="linenos">24</span><span class="w"> </span>       ITERATION: &quot;500&quot;
+<span class="linenos">25</span><span class="w"> </span>       EXECUTE_INTERVAL: &quot;10&quot;
+<span class="linenos">26</span><span class="w"> </span>       LOG_LEVEL: INFO
+<span class="linenos">27</span><span class="w"> </span>       AGENT_NAME: &quot;oase-agent&quot;
+<span class="linenos">28</span><span class="gd">-       EXASTRO_URL: &quot;http://platform-auth:8000&quot;</span>
+<span class="linenos">29</span><span class="gi">+       EXASTRO_URL: &quot;http://your-exastro-url&quot;                                   # Exastro IT Automation Service URL</span>
+<span class="linenos">30</span><span class="gd">-       EXASTRO_ORGANIZATION_ID: &quot;org001&quot;</span>
+<span class="linenos">31</span><span class="gi">+       EXASTRO_ORGANIZATION_ID: &quot;your-organization-id&quot;                          # Organization created in Exastro IT Automation</span>
+<span class="linenos">32</span><span class="gd">-       EXASTRO_WORKSPACE_ID: &quot;ws01&quot;</span>
+<span class="linenos">33</span><span class="gi">+       EXASTRO_WORKSPACE_ID: &quot;your-workspace-id-2&quot;                                # WorkspaceID created in Exastro IT Automation</span>
+<span class="linenos">34</span><span class="w"> </span>       # ROLES: &quot;_ws_admin&quot;
+<span class="linenos">35</span><span class="gd">-       EVENT_COLLECTION_SETTINGS_NAMES: &quot;id0001&quot;</span>
+<span class="linenos">36</span><span class="gi">+       EVENT_COLLECTION_SETTINGS_NAMES: &quot;your-event-collection-settigs-names&quot;   # The Event collection setting name created in Exastro IT Automation&#39;s OASE Management event collection.</span>
+<span class="linenos">37</span><span class="w"> </span>     secret:
+<span class="linenos">38</span><span class="gd">-       EXASTRO_REFRESH_TOKEN: &quot;exastro_refresh_token&quot;</span>
+<span class="linenos">39</span><span class="gi">+       EXASTRO_REFRESH_TOKEN: &quot;your_exastro_refresh_token&quot;                      # Refresh token fetched from the Exastro System management page.</span>
+<span class="linenos">40</span><span class="w"> </span>       # EXASTRO_USERNAME: &quot;admin&quot;
+<span class="linenos">41</span><span class="w"> </span>       # EXASTRO_PASSWORD: &quot;sample-password&quot;
+<span class="linenos">42</span><span class="gi">+       # EXASTRO_USERNAME: &quot;your-ita-user-name&quot;                # Username created in Exastro IT Automation.(Remember to uncomment if using this)</span>
+<span class="linenos">43</span><span class="gi">+       # EXASTRO_PASSWORD: &quot;your-ita-user-password&quot;            # Password created in Exastro IT Automation.(Remember to uncomment if using this)</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Configure Second OASE Agent definition name</p>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-number">Listing 139 </span><span class="caption-text">exastro-agent-2.yaml</span><a class="headerlink" href="#id16" title="Link to this code">¶</a></div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="linenos">45</span><span class="w"> </span> imagePullSecrets: []
+<span class="linenos">46</span><span class="gd">- nameOverride: &quot;&quot;</span>
+<span class="linenos">47</span><span class="gi">+ nameOverride: &quot;ita-ag-oase-2&quot;    # Exastro OASE Agent definition name</span>
+<span class="linenos">48</span><span class="w"> </span> fullnameOverride: &quot;&quot;
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Configure Second OASE Agent’s matchLabels</p>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-number">Listing 140 </span><span class="caption-text">exastro-agent-2.yaml</span><a class="headerlink" href="#id17" title="Link to this code">¶</a></div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="linenos">64</span><span class="w"> </span> persistence:
+<span class="linenos">65</span><span class="w"> </span>   enabled: true
+<span class="linenos">66</span><span class="w"> </span>   reinstall: false
+<span class="linenos">67</span><span class="w"> </span>   accessMode: ReadWriteMany
+<span class="linenos">68</span><span class="w"> </span>   size: 10Gi
+<span class="linenos">69</span><span class="w"> </span>   volumeType: hostPath # e.g.) hostPath or AKS
+<span class="linenos">70</span><span class="w"> </span>   storageClass: &quot;-&quot; # e.g.) azurefile or - (None)
+<span class="linenos">71</span><span class="gd">-   # matchLabels:</span>
+<span class="linenos">72</span><span class="gd">-   #   release: &quot;stable&quot;</span>
+<span class="linenos">73</span><span class="gi">+   matchLabels:</span>
+<span class="linenos">74</span><span class="gi">+     release: &quot;pv-ita-ag-oase-2&quot;    # Specify the name of the presistent volume that will be used</span>
+</pre></div>
+</div>
+</div>
+</li>
+</ol>
+</div></div>
+</section>
+</section>
+<section id="persistent-volume-settings">
+<span id="agent-persistent-volume"></span><h3>Persistent volume settings<a class="headerlink" href="#persistent-volume-settings" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">In order to persist data in a database(if the container is within a cluster), or files, the user will need to configure a persistent volume.</div>
+<div class="line">For more information regarding persistent volumes, see <a class="reference external" href="https://kubernetes.io/ja/docs/concepts/storage/persistent-volumes/#%E6%B0%B8%E7%B6%9A%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0">Persistent volumes - Kubernetes</a> を参照してください。</div>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-S3ViZXJuZXRlcyBOb2RlIGRpcmVjdG9yeQ==" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-S3ViZXJuZXRlcyBOb2RlIGRpcmVjdG9yeQ==" name="S3ViZXJuZXRlcyBOb2RlIGRpcmVjdG9yeQ==" role="tab" tabindex="0">Kubernetes Node directory</button></div><div aria-labelledby="tab-1-S3ViZXJuZXRlcyBOb2RlIGRpcmVjdG9yeQ==" class="sphinx-tabs-panel group-tab" id="panel-1-S3ViZXJuZXRlcyBOb2RlIGRpcmVjdG9yeQ==" name="S3ViZXJuZXRlcyBOb2RlIGRpcmVjdG9yeQ==" role="tabpanel" tabindex="0"><ul class="simple">
+<li><p>Features</p></li>
+</ul>
+<div class="line-block">
+<div class="line">This method uses storage on the Kubernetes node. There is no need to provide seperate storage, but we recommend that this method is only used for testing and developing.</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<div class="line-block">
+<div class="line">While persisting data is possible, data might be deleted if compute nodes are changed. We strongly recommend against using this method to persist data in production.</div>
+<div class="line">Note that if AKS clusters created with Azure are stopped, the AKS cluster’s node will be released. This means that all saved information will be deleted.</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Example</p></li>
+</ul>
+<div class="line-block">
+<div class="line">The example below uses hostPath.</div>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-U2ltcGxlIGFyY2hpdGVjdHVyZSBhbmQgTXVsdGlwbGUgQWdlbnRzIChTYW1lIFBvZCk=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-U2ltcGxlIGFyY2hpdGVjdHVyZSBhbmQgTXVsdGlwbGUgQWdlbnRzIChTYW1lIFBvZCk=" name="U2ltcGxlIGFyY2hpdGVjdHVyZSBhbmQgTXVsdGlwbGUgQWdlbnRzIChTYW1lIFBvZCk=" role="tab" tabindex="0">Simple architecture and Multiple Agents (Same Pod)</button><button aria-controls="panel-2-TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" name="TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" role="tab" tabindex="-1">Multiple Agents (Different Pod)</button></div><div aria-labelledby="tab-2-U2ltcGxlIGFyY2hpdGVjdHVyZSBhbmQgTXVsdGlwbGUgQWdlbnRzIChTYW1lIFBvZCk=" class="sphinx-tabs-panel group-tab" id="panel-2-U2ltcGxlIGFyY2hpdGVjdHVyZSBhbmQgTXVsdGlwbGUgQWdlbnRzIChTYW1lIFBvZCk=" name="U2ltcGxlIGFyY2hpdGVjdHVyZSBhbmQgTXVsdGlwbGUgQWdlbnRzIChTYW1lIFBvZCk=" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-number">Listing 141 </span><span class="caption-text">pv-ita-ag-oase.yaml</span><a class="headerlink" href="#id18" title="Link to this code">¶</a></div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span># pv-ita-ag-oase.yaml
+<span class="linenos"> 2</span>apiVersion: v1
+<span class="linenos"> 3</span>kind: PersistentVolume
+<span class="linenos"> 4</span>metadata:
+<span class="linenos"> 5</span><span class="w"> </span> name: pv-ita-ag-oase
+<span class="linenos"> 6</span>spec:
+<span class="linenos"> 7</span><span class="w"> </span> claimRef:
+<span class="linenos"> 8</span><span class="w"> </span>   name: pvc-ita-ag-oase
+<span class="linenos"> 9</span><span class="w"> </span>   namespace: exastro
+<span class="linenos">10</span><span class="w"> </span> capacity:
+<span class="linenos">11</span><span class="w"> </span>   storage: 10Gi
+<span class="linenos">12</span><span class="w"> </span> accessModes:
+<span class="linenos">13</span><span class="w"> </span>   - ReadWriteMany
+<span class="linenos">14</span><span class="w"> </span> persistentVolumeReclaimPolicy: Retain
+<span class="linenos">15</span><span class="w"> </span> hostPath:
+<span class="linenos">16</span><span class="w"> </span>   path: /var/data/exastro-suite/exastro-agent/ita-ag-oase
+<span class="linenos">17</span><span class="w"> </span>   type: DirectoryOrCreate
+</pre></div>
+</div>
+</div>
+</div><div aria-labelledby="tab-2-TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" name="TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-number">Listing 142 </span><span class="caption-text">pv-ita-ag-oase-1.yaml</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span># pv-ita-ag-oase-1.yaml
+<span class="linenos"> 2</span>apiVersion: v1
+<span class="linenos"> 3</span>kind: PersistentVolume
+<span class="linenos"> 4</span>metadata:
+<span class="linenos"> 5</span><span class="w"> </span> name: pv-ita-ag-oase-1
+<span class="linenos"> 6</span>spec:
+<span class="linenos"> 7</span><span class="w"> </span> claimRef:
+<span class="linenos"> 8</span><span class="w"> </span>   name: pvc-ita-ag-oase-1
+<span class="linenos"> 9</span><span class="w"> </span>   namespace: exastro
+<span class="linenos">10</span><span class="w"> </span> capacity:
+<span class="linenos">11</span><span class="w"> </span>   storage: 10Gi
+<span class="linenos">12</span><span class="w"> </span> accessModes:
+<span class="linenos">13</span><span class="w"> </span>   - ReadWriteMany
+<span class="linenos">14</span><span class="w"> </span> persistentVolumeReclaimPolicy: Retain
+<span class="linenos">15</span><span class="w"> </span> hostPath:
+<span class="linenos">16</span><span class="w"> </span>   path: /var/data/exastro-suite/exastro-agent/ita-ag-oase-1
+<span class="linenos">17</span><span class="w"> </span>   type: DirectoryOrCreate
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-number">Listing 143 </span><span class="caption-text">pv-ita-ag-oase-2.yaml</span><a class="headerlink" href="#id20" title="Link to this code">¶</a></div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span># pv-ita-ag-oase-2.yaml
+<span class="linenos"> 2</span>apiVersion: v1
+<span class="linenos"> 3</span>kind: PersistentVolume
+<span class="linenos"> 4</span>metadata:
+<span class="linenos"> 5</span><span class="w"> </span> name: pv-ita-ag-oase-2
+<span class="linenos"> 6</span>spec:
+<span class="linenos"> 7</span><span class="w"> </span> claimRef:
+<span class="linenos"> 8</span><span class="w"> </span>   name: pvc-ita-ag-oase-2
+<span class="linenos"> 9</span><span class="w"> </span>   namespace: exastro
+<span class="linenos">10</span><span class="w"> </span> capacity:
+<span class="linenos">11</span><span class="w"> </span>   storage: 10Gi
+<span class="linenos">12</span><span class="w"> </span> accessModes:
+<span class="linenos">13</span><span class="w"> </span>   - ReadWriteMany
+<span class="linenos">14</span><span class="w"> </span> persistentVolumeReclaimPolicy: Retain
+<span class="linenos">15</span><span class="w"> </span> hostPath:
+<span class="linenos">16</span><span class="w"> </span>   path: /var/data/exastro-suite/exastro-agent/ita-ag-oase-2
+<span class="linenos">17</span><span class="w"> </span>   type: DirectoryOrCreate
+</pre></div>
+</div>
+</div>
+</div></div>
+</div></div>
+</section>
+</section>
+<section id="install">
+<span id="install2"></span><h2>Install<a class="headerlink" href="#install" title="Link to this heading">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="line-block">
+<div class="line">If the installation fails, follow <a class="reference internal" href="../exastro/kubernetes.html#ita-uninstall"><span class="std std-ref">Uninstall</span></a> and try reinstalling.</div>
+</div>
+</div>
+<section id="create-persistent-volumes">
+<h3>Create Persistent volumes<a class="headerlink" href="#create-persistent-volumes" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Apply the manifest file created in <a class="reference internal" href="#agent-persistent-volume"><span class="std std-ref">Persistent volume settings</span></a> and create persistent volume.</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># pv-ita-ag-oase.yaml</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>pv-ita-ag-oase.yaml
+
+<span class="c1"># Run the following for Multiple Agents (Different Pod)</span>
+<span class="c1"># pv-ita-ag-oase-1.yaml</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>pv-ita-ag-oase-1.yaml
+
+<span class="c1"># pv-ita-ag-oase-2.yaml</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>pv-ita-ag-oase-2.yaml
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Confirm</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>pv
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME<span class="w">              </span>CAPACITY<span class="w">   </span>ACCESS<span class="w"> </span>MODES<span class="w">   </span>RECLAIM<span class="w"> </span>POLICY<span class="w">    </span>STATUS<span class="w">      </span>CLAIM<span class="w">     </span>STORAGECLASS<span class="w">   </span>REASON<span class="w">   </span>AGE
+pv-ita-ag-oase<span class="w">     </span>10Gi<span class="w">       </span>RWX<span class="w">            </span>Retain<span class="w">           </span>Available<span class="w">                                     </span>6s
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME<span class="w">              </span>CAPACITY<span class="w">   </span>ACCESS<span class="w"> </span>MODES<span class="w">   </span>RECLAIM<span class="w"> </span>POLICY<span class="w">    </span>STATUS<span class="w">      </span>CLAIM<span class="w">     </span>STORAGECLASS<span class="w">   </span>REASON<span class="w">   </span>AGE
+pv-ita-ag-oase-1<span class="w">   </span>10Gi<span class="w">       </span>RWX<span class="w">            </span>Retain<span class="w">           </span>Available<span class="w">                                     </span>5s
+pv-ita-ag-oase-2<span class="w">   </span>10Gi<span class="w">       </span>RWX<span class="w">            </span>Retain<span class="w">           </span>Available<span class="w">                                     </span>6s
+</pre></div>
+</div>
+</section>
+<section id="id1">
+<h3>Install<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">See the  <cite>exastro-helm site &lt;https://github.com/exastro-suite/exastro-helm&gt;</cite> for more information regarding the Helm and Application versions.</div>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-U2ltcGxlIGFyY2hpdGVjdHVyZSAmIE11bHRpcGxlIEFnZW50IChTYW1lIFBvZCk=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-U2ltcGxlIGFyY2hpdGVjdHVyZSAmIE11bHRpcGxlIEFnZW50IChTYW1lIFBvZCk=" name="U2ltcGxlIGFyY2hpdGVjdHVyZSAmIE11bHRpcGxlIEFnZW50IChTYW1lIFBvZCk=" role="tab" tabindex="0">Simple architecture &amp; Multiple Agent (Same Pod)</button><button aria-controls="panel-3-TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" name="TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" role="tab" tabindex="-1">Multiple Agents (Different Pod)</button></div><div aria-labelledby="tab-3-U2ltcGxlIGFyY2hpdGVjdHVyZSAmIE11bHRpcGxlIEFnZW50IChTYW1lIFBvZCk=" class="sphinx-tabs-panel group-tab" id="panel-3-U2ltcGxlIGFyY2hpdGVjdHVyZSAmIE11bHRpcGxlIEFnZW50IChTYW1lIFBvZCk=" name="U2ltcGxlIGFyY2hpdGVjdHVyZSAmIE11bHRpcGxlIEFnZW50IChTYW1lIFBvZCk=" role="tabpanel" tabindex="0"><ol class="arabic">
+<li><p>Use Helm command to install on Kubernetes environment.</p>
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-number">Listing 144 </span><span class="caption-text">Command</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm<span class="w"> </span>install<span class="w"> </span>exastro-agent<span class="w"> </span>exastro/exastro-agent<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--create-namespace<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--values<span class="w"> </span>exastro-agent.yaml
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id22">
+<div class="code-block-caption"><span class="caption-number">Listing 145 </span><span class="caption-text">Output results</span><a class="headerlink" href="#id22" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME:<span class="w"> </span>exastro-agent
+LAST<span class="w"> </span>DEPLOYED:<span class="w"> </span>Wed<span class="w"> </span>Feb<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">14</span>:36:27<span class="w"> </span><span class="m">2024</span>
+NAMESPACE:<span class="w"> </span>exastro
+STATUS:<span class="w"> </span>deployed
+REVISION:<span class="w"> </span><span class="m">1</span>
+TEST<span class="w"> </span>SUITE:<span class="w"> </span>None
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Confirm Installation status</p>
+<div class="literal-block-wrapper docutils container" id="id23">
+<div class="code-block-caption"><span class="caption-number">Listing 146 </span><span class="caption-text">Command</span><a class="headerlink" href="#id23" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fetch Pod  list</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>po<span class="w"> </span>--namespace<span class="w"> </span>exastro
+
+<span class="p">|</span><span class="w"> </span>If<span class="w"> </span>running<span class="w"> </span>normally,<span class="w"> </span>the<span class="w"> </span>status<span class="w"> </span>will<span class="w"> </span>say<span class="w"> </span><span class="s2">&quot;Running&quot;</span>.
+<span class="p">|</span><span class="w"> </span>※The<span class="w"> </span>user<span class="w"> </span>might<span class="w"> </span>have<span class="w"> </span>to<span class="w"> </span><span class="nb">wait</span><span class="w"> </span>a<span class="w"> </span>couple<span class="w"> </span>of<span class="w"> </span>minutes<span class="w"> </span>before<span class="w"> </span>the<span class="w"> </span>status<span class="w"> </span>changes<span class="w"> </span>to<span class="w"> </span><span class="s2">&quot;Running&quot;</span>.
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id24">
+<div class="code-block-caption"><span class="caption-number">Listing 147 </span><span class="caption-text">Output results</span><a class="headerlink" href="#id24" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>NAME<span class="w">                             </span>READY<span class="w">   </span>STATUS<span class="w">    </span>RESTARTS<span class="w">   </span>AGE
+<span class="w"> </span>ita-ag-oase-66cb7669c6-m2q8c<span class="w">     </span><span class="m">1</span>/1<span class="w">     </span>Running<span class="w">   </span><span class="m">0</span><span class="w">          </span>16m
+</pre></div>
+</div>
+</div>
+</li>
+</ol>
+</div><div aria-labelledby="tab-3-TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" name="TXVsdGlwbGUgQWdlbnRzIChEaWZmZXJlbnQgUG9kKQ==" role="tabpanel" tabindex="0"><ol class="arabic">
+<li><p>Use Helm command to install on Kubernetes environment.</p>
+<div class="literal-block-wrapper docutils container" id="id25">
+<div class="code-block-caption"><span class="caption-number">Listing 148 </span><span class="caption-text">Command</span><a class="headerlink" href="#id25" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm<span class="w"> </span>install<span class="w"> </span>exastro-agent-1<span class="w"> </span>exastro/exastro-agent<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--create-namespace<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--values<span class="w"> </span>exastro-agent-1.yaml
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id26">
+<div class="code-block-caption"><span class="caption-number">Listing 149 </span><span class="caption-text">Output results</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME:<span class="w"> </span>exastro-agent-1
+LAST<span class="w"> </span>DEPLOYED:<span class="w"> </span>Wed<span class="w"> </span>Feb<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">14</span>:36:27<span class="w"> </span><span class="m">2024</span>
+NAMESPACE:<span class="w"> </span>exastro
+STATUS:<span class="w"> </span>deployed
+REVISION:<span class="w"> </span><span class="m">1</span>
+TEST<span class="w"> </span>SUITE:<span class="w"> </span>None
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id27">
+<div class="code-block-caption"><span class="caption-number">Listing 150 </span><span class="caption-text">Command</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm<span class="w"> </span>install<span class="w"> </span>exastro-agent-2<span class="w"> </span>exastro/exastro-agent<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--create-namespace<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--values<span class="w"> </span>exastro-agent-2.yaml
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id28">
+<div class="code-block-caption"><span class="caption-number">Listing 151 </span><span class="caption-text">Output results</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME:<span class="w"> </span>exastro-agent-2
+LAST<span class="w"> </span>DEPLOYED:<span class="w"> </span>Wed<span class="w"> </span>Feb<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">14</span>:36:27<span class="w"> </span><span class="m">2024</span>
+NAMESPACE:<span class="w"> </span>exastro
+STATUS:<span class="w"> </span>deployed
+REVISION:<span class="w"> </span><span class="m">1</span>
+TEST<span class="w"> </span>SUITE:<span class="w"> </span>None
+</pre></div>
+</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">Check install status</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id29">
+<div class="code-block-caption"><span class="caption-number">Listing 152 </span><span class="caption-text">Command</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pod の一覧を取得</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>po<span class="w"> </span>--namespace<span class="w"> </span>exastro
+
+<span class="p">|</span><span class="w"> </span>If<span class="w"> </span>running<span class="w"> </span>normally,<span class="w"> </span>the<span class="w"> </span>status<span class="w"> </span>will<span class="w"> </span>say<span class="w"> </span><span class="s2">&quot;Running&quot;</span>.
+<span class="p">|</span><span class="w"> </span>※The<span class="w"> </span>user<span class="w"> </span>might<span class="w"> </span>have<span class="w"> </span>to<span class="w"> </span><span class="nb">wait</span><span class="w"> </span>a<span class="w"> </span>couple<span class="w"> </span>of<span class="w"> </span>minutes<span class="w"> </span>before<span class="w"> </span>the<span class="w"> </span>status<span class="w"> </span>changes<span class="w"> </span>to<span class="w"> </span><span class="s2">&quot;Running&quot;</span>.
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id30">
+<div class="code-block-caption"><span class="caption-number">Listing 153 </span><span class="caption-text">Output results</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>NAME<span class="w">                             </span>READY<span class="w">   </span>STATUS<span class="w">    </span>RESTARTS<span class="w">   </span>AGE
+<span class="w"> </span>ita-ag-oase-1-66cb7669c6-m2q8c<span class="w">   </span><span class="m">1</span>/1<span class="w">     </span>Running<span class="w">   </span><span class="m">0</span><span class="w">          </span>16m
+<span class="w"> </span>ita-ag-oase-2-787fb97f75-9s7xj<span class="w">   </span><span class="m">1</span>/1<span class="w">     </span>Running<span class="w">   </span><span class="m">0</span><span class="w">          </span>13m
+</pre></div>
+</div>
+</div>
+</li>
+</ol>
+</div></div>
+</section>
+</section>
+<section id="update">
+<h2>Update<a class="headerlink" href="#update" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">This section describes how to update the OASE Agent.</div>
+</div>
+<section id="update-preparation">
+<h3>Update preparation<a class="headerlink" href="#update-preparation" title="Link to this heading">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<div class="line-block">
+<div class="line">We recommend that back up the data before updating.</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Check the version before updating.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id31">
+<div class="code-block-caption"><span class="caption-number">Listing 154 </span><span class="caption-text">Command</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Check Repository information</span>
+<span class="linenos">2</span>helm<span class="w"> </span>search<span class="w"> </span>repo<span class="w"> </span>exastro
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id32">
+<div class="code-block-caption"><span class="caption-number">Listing 155 </span><span class="caption-text">Run results</span><a class="headerlink" href="#id32" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>helm<span class="w"> </span>search<span class="w"> </span>repo<span class="w"> </span>exastro
+<span class="linenos">2</span>NAME<span class="w">                            </span>CHART<span class="w"> </span>VERSION<span class="w">   </span>APP<span class="w"> </span>VERSION<span class="w">     </span>DESCRIPTION
+<span class="linenos">3</span>exastro/exastro<span class="w">                         </span><span class="m">1</span>.3.24<span class="w">          </span><span class="m">2</span>.3.0<span class="w">           </span>A<span class="w"> </span>Helm<span class="w"> </span>chart<span class="w"> </span><span class="k">for</span><span class="w"> </span>Exastro.<span class="w"> </span>Exastro<span class="w"> </span>is<span class="w"> </span>an<span class="w"> </span>Open<span class="w"> </span>So...
+<span class="hll"><span class="linenos">4</span>exastro/exastro-agent<span class="w">                   </span><span class="m">1</span>.0.3<span class="w">           </span><span class="m">2</span>.3.0<span class="w">           </span>A<span class="w"> </span>Helm<span class="w"> </span>chart<span class="w"> </span><span class="k">for</span><span class="w"> </span>Exastro<span class="w"> </span>IT<span class="w"> </span>Automation.<span class="w"> </span>Exastro...
+</span><span class="linenos">5</span>exastro/exastro-it-automation<span class="w">           </span><span class="m">1</span>.4.22<span class="w">          </span><span class="m">2</span>.3.0<span class="w">           </span>A<span class="w"> </span>Helm<span class="w"> </span>chart<span class="w"> </span><span class="k">for</span><span class="w"> </span>Exastro<span class="w"> </span>IT<span class="w"> </span>Automation.<span class="w"> </span>Exastro...
+<span class="linenos">6</span>exastro/exastro-platform<span class="w">                </span><span class="m">1</span>.7.14<span class="w">          </span><span class="m">1</span>.7.0<span class="w">           </span>A<span class="w"> </span>Helm<span class="w"> </span>chart<span class="w"> </span><span class="k">for</span><span class="w"> </span>Exastro<span class="w"> </span>Platform.<span class="w"> </span>Exastro<span class="w"> </span>Plat...
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Update the Helm repository.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id33">
+<div class="code-block-caption"><span class="caption-number">Listing 156 </span><span class="caption-text">Command</span><a class="headerlink" href="#id33" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Update Repository information</span>
+<span class="linenos">2</span>helm<span class="w"> </span>repo<span class="w"> </span>update
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Check that it has been updated to the latest version.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id34">
+<div class="code-block-caption"><span class="caption-number">Listing 157 </span><span class="caption-text">Command</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Check Repository information</span>
+<span class="linenos">2</span>helm<span class="w"> </span>search<span class="w"> </span>repo<span class="w"> </span>exastro
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id35">
+<div class="code-block-caption"><span class="caption-number">Listing 158 </span><span class="caption-text">Run results</span><a class="headerlink" href="#id35" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>helm<span class="w"> </span>search<span class="w"> </span>repo<span class="w"> </span>exastro
+<span class="linenos">2</span>NAME<span class="w">                            </span>CHART<span class="w"> </span>VERSION<span class="w">   </span>APP<span class="w"> </span>VERSION<span class="w">     </span>DESCRIPTION
+<span class="linenos">3</span>exastro/exastro<span class="w">                    </span><span class="m">1</span>.4.3<span class="w">           </span><span class="m">2</span>.4.0<span class="w">           </span>A<span class="w"> </span>Helm<span class="w"> </span>chart<span class="w"> </span><span class="k">for</span><span class="w"> </span>Exastro.<span class="w"> </span>Exastro<span class="w"> </span>is<span class="w"> </span>an<span class="w"> </span>Open<span class="w"> </span>So...
+<span class="hll"><span class="linenos">4</span>exastro/exastro-agent<span class="w">              </span><span class="m">2</span>.4.0<span class="w">           </span><span class="m">2</span>.4.0<span class="w">           </span>A<span class="w"> </span>Helm<span class="w"> </span>chart<span class="w"> </span><span class="k">for</span><span class="w"> </span>Exastro<span class="w"> </span>IT<span class="w"> </span>Automation.<span class="w"> </span>Exastro...
+</span><span class="linenos">5</span>exastro/exastro-it-automation<span class="w">      </span><span class="m">2</span>.4.1<span class="w">           </span><span class="m">2</span>.4.0<span class="w">           </span>A<span class="w"> </span>Helm<span class="w"> </span>chart<span class="w"> </span><span class="k">for</span><span class="w"> </span>Exastro<span class="w"> </span>IT<span class="w"> </span>Automation.<span class="w"> </span>Exastro...
+<span class="linenos">6</span>exastro/exastro-platform<span class="w">           </span><span class="m">1</span>.8.1<span class="w">           </span><span class="m">1</span>.8.0<span class="w">           </span>A<span class="w"> </span>Helm<span class="w"> </span>chart<span class="w"> </span><span class="k">for</span><span class="w"> </span>Exastro<span class="w"> </span>Platform.<span class="w"> </span>Exastro<span class="w"> </span>Plat...
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h3>Update<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<section id="stop-service">
+<h4>Stop service<a class="headerlink" href="#stop-service" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><p>Checking the number of running Pods</p>
+<div class="line-block">
+<div class="line">Check the number of running Pods before starting the operation and record their status.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id36">
+<div class="code-block-caption"><span class="caption-number">Listing 159 </span><span class="caption-text">Command</span><a class="headerlink" href="#id36" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">RS_AG</span><span class="o">=</span><span class="sb">`</span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>ita-ag-oase<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{@.spec.replicas}{&quot;\n&quot;}&#39;</span><span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="sb">`</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Stopping background processes</p>
+<div class="line-block">
+<div class="line">Set the number of running Pods to zero to stop database updates.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id37">
+<div class="code-block-caption"><span class="caption-number">Listing 160 </span><span class="caption-text">Command</span><a class="headerlink" href="#id37" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deployment<span class="w"> </span>ita-ag-oase<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">0</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Check the number of running Pods</p>
+<div class="line-block">
+<div class="line">Verify that the number of target Pods stopped above has reached zero.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id38">
+<div class="code-block-caption"><span class="caption-number">Listing 161 </span><span class="caption-text">Command</span><a class="headerlink" href="#id38" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>deployment<span class="w"> </span>--namespace<span class="w"> </span>exastro
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id39">
+<div class="code-block-caption"><span class="caption-number">Listing 162 </span><span class="caption-text">Execution result</span><a class="headerlink" href="#id39" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME<span class="w">                                     </span>READY<span class="w">   </span>UP-TO-DATE<span class="w">   </span>AVAILABLE<span class="w">   </span>AGE
+ita-ag-oase<span class="w">                              </span><span class="m">0</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>29m
+</pre></div>
+</div>
+</div>
+</li>
+</ol>
+</section>
+<section id="start-update">
+<h4>Start Update<a class="headerlink" href="#start-update" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Start the update.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id40">
+<div class="code-block-caption"><span class="caption-number">Listing 163 </span><span class="caption-text">Command</span><a class="headerlink" href="#id40" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm<span class="w"> </span>upgrade<span class="w"> </span>exastro-agent<span class="w"> </span>exastro/exastro-agent<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--namespace<span class="w"> </span>exastro<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--values<span class="w"> </span>exastro-agent.yaml
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id41">
+<div class="code-block-caption"><span class="caption-number">Listing 164 </span><span class="caption-text">Output results</span><a class="headerlink" href="#id41" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Release<span class="w"> </span><span class="s2">&quot;exastro-agent&quot;</span><span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>upgraded.<span class="w"> </span>Happy<span class="w"> </span>Helming!
+NAME:<span class="w"> </span>exastro-agent
+LAST<span class="w"> </span>DEPLOYED:<span class="w"> </span>Mon<span class="w"> </span>Apr<span class="w"> </span><span class="m">22</span><span class="w"> </span><span class="m">14</span>:42:59<span class="w"> </span><span class="m">2024</span>
+NAMESPACE:<span class="w"> </span>exastro
+STATUS:<span class="w"> </span>deployed
+REVISION:<span class="w"> </span><span class="m">2</span>
+TEST<span class="w"> </span>SUITE:<span class="w"> </span>None
+</pre></div>
+</div>
+</div>
+</section>
+<section id="restart-service">
+<h4>Restart service<a class="headerlink" href="#restart-service" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><p>Service Resumption</p>
+<div class="line-block">
+<div class="line">Restore the number of running Pods for each Deployment to the values recorded at the time of service shutdown.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id42">
+<div class="code-block-caption"><span class="caption-number">Listing 165 </span><span class="caption-text">Command</span><a class="headerlink" href="#id42" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deployment<span class="w"> </span>ita-ag-oase<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="si">${</span><span class="nv">RS_AG</span><span class="si">}</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Check the number of running Pods</p>
+<div class="line-block">
+<div class="line">Verify that the number of target Pods started above has been restored and all are in the READY state.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id43">
+<div class="code-block-caption"><span class="caption-number">Listing 166 </span><span class="caption-text">Command</span><a class="headerlink" href="#id43" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>deployment<span class="w"> </span>--namespace<span class="w"> </span>exastro
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id44">
+<div class="code-block-caption"><span class="caption-number">Listing 167 </span><span class="caption-text">Execution result</span><a class="headerlink" href="#id44" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME<span class="w">                                     </span>READY<span class="w">   </span>UP-TO-DATE<span class="w">   </span>AVAILABLE<span class="w">   </span>AGE
+ita-ag-oase<span class="w">                              </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>29m
+</pre></div>
+</div>
+</div>
+</li>
+</ol>
+</section>
+<section id="check-update-status">
+<h4>Check Update status<a class="headerlink" href="#check-update-status" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Input the following commands from the command line and check that the agent has been updated.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id45">
+<div class="code-block-caption"><span class="caption-number">Listing 168 </span><span class="caption-text">Command</span><a class="headerlink" href="#id45" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fetc Pod list</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>po<span class="w"> </span>--namespace<span class="w"> </span>exastro
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">If running normally, the status will say “Running”.</div>
+<div class="line">※The user might have to wait a couple of minutes before the status changes to “Running”.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id46">
+<div class="code-block-caption"><span class="caption-number">Listing 169 </span><span class="caption-text">Output results</span><a class="headerlink" href="#id46" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME<span class="w">                                                      </span>READY<span class="w">   </span>STATUS<span class="w">      </span>RESTARTS<span class="w">   </span>AGE
+ita-ag-oase-7ff9488b55-rrn58<span class="w">                              </span><span class="m">1</span>/1<span class="w">     </span>Running<span class="w">     </span><span class="m">0</span><span class="w">             </span>81s
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="uninstall">
+<h2>Uninstall<a class="headerlink" href="#uninstall" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">This section explains how to uninstall the OASE Agent.</div>
+</div>
+<section id="uninstall-preparation">
+<h3>Uninstall preparation<a class="headerlink" href="#uninstall-preparation" title="Link to this heading">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<div class="line-block">
+<div class="line">We recommend that back up the data before uninstalling.</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h3>Uninstall<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<section id="start-uninstall">
+<h4>Start Uninstall<a class="headerlink" href="#start-uninstall" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Start the uninstall process.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id47">
+<div class="code-block-caption"><span class="caption-number">Listing 170 </span><span class="caption-text">Command</span><a class="headerlink" href="#id47" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm<span class="w"> </span>uninstall<span class="w"> </span>exastro-agent<span class="w"> </span>--namespace<span class="w"> </span>exastro
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id48">
+<div class="code-block-caption"><span class="caption-number">Listing 171 </span><span class="caption-text">Output results</span><a class="headerlink" href="#id48" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>release<span class="w"> </span><span class="s2">&quot;exastro-agent&quot;</span><span class="w"> </span>uninstalled
+</pre></div>
+</div>
+</div>
+</section>
+<section id="delete-persistent-volumes">
+<h4>Delete persistent volumes<a class="headerlink" href="#delete-persistent-volumes" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">This section describes how to delete data if a persistent volume(PV) has been created on Kubernetes using hostPath.</div>
+<div class="line">If using external databases (managed databases included), make sure to delete environmental data as well.</div>
+</div>
+<section id="for-agents">
+<h5>For Agents<a class="headerlink" href="#for-agents" title="Link to this heading">¶</a></h5>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<div class="line-block">
+<div class="line">If there are multiple persistent volumes for Agents, make sure to delete them all.</div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id49">
+<div class="code-block-caption"><span class="caption-number">Listing 172 </span><span class="caption-text">Command</span><a class="headerlink" href="#id49" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>delete<span class="w"> </span>pv<span class="w"> </span>pv-ita-ag-oase
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id50">
+<div class="code-block-caption"><span class="caption-number">Listing 173 </span><span class="caption-text">Execution results</span><a class="headerlink" href="#id50" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>persistentvolume<span class="w"> </span><span class="s2">&quot;pv-ita-ag-oase&quot;</span><span class="w"> </span>deleted
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="deleting-persistent-data">
+<h4>Deleting Persistent data<a class="headerlink" href="#deleting-persistent-data" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Log in to the Kubernetes Control node and delete the data.</div>
+</div>
+<section id="id4">
+<h5>For Agents<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">The following command is an example where the hostPath is specified to <code class="file docutils literal notranslate"><span class="pre">/var/data/exastro-suite/exastro-agent/ita-ag-oase</span></code> when the Persistent Volume was created.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id51">
+<div class="code-block-caption"><span class="caption-number">Listing 174 </span><span class="caption-text">Command</span><a class="headerlink" href="#id51" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Log in to control node that has persistent data</span>
+ssh<span class="w"> </span>user@contol.node.example
+
+<span class="c1"># Delete persistent data</span>
+sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/data/exastro-suite/exastro-agent/ita-ag-oase
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="index.html" title="Previous topic"><span>Previous topic</span>OASE Agent</a></li>
+    <li class="next"><a href="docker_compose.html" title="Next topic"><span>Next topic</span>OASE Agent on Docker Compose - Online</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/en/2.5/terms/en.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>1. 記述ルール &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="2. 書式" href="syntax.html" />
+    <link rel="prev" title="ドキュメント" href="index.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/contribute/documentation/rule.html" selected>current</option>
+              <option value="../../../../ja/2.6/contribute/documentation/rule.html" selected>2.6(current)</option>
+              <option value="../../../../ja/2.5/contribute/documentation/rule.html">2.5</option>
+              <option value="../../../../ja/2.4/contribute/documentation/rule.html">2.4</option>
+              <option value="../../../../ja/2.3/contribute/documentation/rule.html">2.3</option>
+              <option value="../../../../ja/2.2/contribute/documentation/rule.html">2.2</option>
+              <option value="../../../../ja/2.1/contribute/documentation/rule.html">2.1</option>
+              <option value="../../../../ja/2.0/contribute/documentation/rule.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/contribute/documentation/rule.html" selected>日本語</option>
+              <option value="../../../../en/2.6/contribute/documentation/rule.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="index.html" title="前のトピックへ">ドキュメント</a></li>
+        <li class="next"><a href="syntax.html" title="次のトピックへ"><span class="section-number">2. </span>書式</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/index.html">マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">貢献</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">ドキュメント</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. 記述ルール</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1.1. ドキュメントの構成</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">1.2. 文章の書き方</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id4">1.2.1. 目的</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id5">1.2.2. 前提条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id6">1.2.3. 概要</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id7">1.2.4. 詳細</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id8">1.2.5. 具体例</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">1.3. 文体，語句</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">1.4. 表記のゆれ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">1.5. ターミノロジー</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">1.6. 文法エラー</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="syntax.html">2. 書式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="icons.html">3. アイコン</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">1. 記述ルール</a><ul>
+<li><a class="reference internal" href="#id2">1.1. ドキュメントの構成</a></li>
+<li><a class="reference internal" href="#id3">1.2. 文章の書き方</a><ul>
+<li><a class="reference internal" href="#id4">1.2.1. 目的</a></li>
+<li><a class="reference internal" href="#id5">1.2.2. 前提条件</a></li>
+<li><a class="reference internal" href="#id6">1.2.3. 概要</a></li>
+<li><a class="reference internal" href="#id7">1.2.4. 詳細</a></li>
+<li><a class="reference internal" href="#id8">1.2.5. 具体例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">1.3. 文体，語句</a></li>
+<li><a class="reference internal" href="#id10">1.4. 表記のゆれ</a></li>
+<li><a class="reference internal" href="#id11">1.5. ターミノロジー</a></li>
+<li><a class="reference internal" href="#id12">1.6. 文法エラー</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">貢献</a></li>
+    <li><a href="index.html">ドキュメント</a></li>
+    
+    <li><span class="section-number">1. </span>記述ルール</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="id1">
+<h1><span class="section-number">1. </span>記述ルール<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<section id="id2">
+<h2><span class="section-number">1.1. </span>ドキュメントの構成<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>exastro-it-automation-docs
+|-- LICENSE
+|-- README.md
+|-- apple-touch-icon.png
+|-- asset                    # 素材ファイルを格納
+|   |-- css                  # CSSファイル
+|   |-- img                  # 画像素材
+|   `-- json                 # コンテンツデータ
+|       `-- faq.json         # FAQデータ
+|-- documentation
+|   |-- Makefile
+|   |-- _static
+|   |   |-- custom.css
+|   |   `-- favicon.ico
+|   |-- conf.py
+|   |-- exastro_documents
+|   |   |-- layout.html
+|   |   |-- static
+|   |   |   |-- exastro_documents.css
+|   |   |   |-- exastro_documents.js
+|   |   |   |-- fonts
+|   |   |   |-- img
+|   |   |   `-- option.css_t
+|   |   `-- theme.conf
+|   |-- html
+|   |   |-- _images
+|   |   |-- _sources
+|   |   |-- _static
+|   |   |-- genindex.html
+|   |   |-- index.html
+|   |   |-- objects.inv
+|   |   |-- search.html
+|   |   |-- searchindex.js
+|   |   `-- 2.0
+|   |       |-- index.html
+|   |       |-- ja
+|   |       `-- ja_manual_design
+|   |-- images
+|   |   |-- ja_manual_design
+|   |   |   |-- before_after_2_0.png
+|   |   |   |-- chart.png
+|   |   |   |-- image2.png
+|   |   |   |-- indexrst_syntax1_v2_0.png
+|   |   |   |-- role_of_index_rst_v2_0.png
+|   |   |   |-- sample_img_v2_0.png
+|   |   |   |-- title_in_index_rst_v_2_0.png
+|   |   |   |-- toctree2_v2_0.png
+|   |   |   |-- toctree_lvl1.png
+|   |   |   `-- toctree_lvl2.png
+|   |   `-- platform
+|   |       `-- administrator-console.png
+|   |-- index.rst
+|   |-- requirements.txt
+|   `-- 2.0
+|       |-- index.rst
+|       `-- ja
+|           |-- ansible-driver
+|           |-- appendix
+|           |-- create_param
+|           |-- index.rst
+|           |-- installation
+|           |-- installation_appendix
+|           |-- it_automation_base
+|           |-- manual_design
+|           |-- platform
+|           `-- rest_api
+|-- documents.html
+|-- documents_ja.html
+|-- downloads.html
+|-- downloads_ja.html
+|-- faq.html
+|-- faq_ja.html
+|-- favicon.ico
+|-- index.html
+|-- index_ja.html
+|-- learn.html
+|-- learn_ja.html
+|-- overview.html
+|-- overview_ja.html
+`-- webinar_ja.html
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2><span class="section-number">1.2. </span>文章の書き方<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<section id="id4">
+<h3><span class="section-number">1.2.1. </span>目的<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">ユーザーにとって価値の高い文章を書く方法について記載します。</div>
+</div>
+</section>
+<section id="id5">
+<h3><span class="section-number">1.2.2. </span>前提条件<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">本項は、</div>
+</div>
+<ul class="simple">
+<li><p>ドキュメントを作成する際にどのように表現をすれば良いのかがわからない執筆者</p></li>
+<li><p>ドキュメントのレベルを更に引き上げるため校正者</p></li>
+</ul>
+<div class="line-block">
+<div class="line">向けの文章となります。</div>
+</div>
+</section>
+<section id="id6">
+<h3><span class="section-number">1.2.3. </span>概要<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">ユーザーにとって価値の高い文章とは、最小のコストでユーザーの目的に到達するための手段が明確かつ簡潔に記述された文章です。ユーザーにとって価値の高い文章を書くためには、文章の目的・目標(ゴール)の共有をし、ゴールまでの手段(プロセス)を明確にする必要があります。また、プロセスが発散するのを防ぐために前提(スタート)を設定することも必要です。</div>
+</div>
+</section>
+<section id="id7">
+<h3><span class="section-number">1.2.4. </span>詳細<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">ユースケースに従うことでわかりやすい文章を書くことができます。</div>
+<div class="line">何を目的としてどういったプロセスを実施すれば目的に達成できるのかといった書き方を意識すれば自ずと上記の内容が含まれているはずです。</div>
+<div class="line">作りたいもの(目的)があり、調理のそのために必要な材料(前提条件)を準備し、食材を切り、火を通し、味付けをする(概要・詳細)という一連の流れをまとめている、料理のレシピは良いお手本となります。</div>
+<div class="line">料理をする上で包丁の刃渡りや鍋の容量はそれほど大きな問題ではなく、本当にユーザーが関心を持っていることは、目的の料理を完成させる方法です。</div>
+</div>
+<div class="line-block">
+<div class="line">ユーザーにとって価値の高い文章の構成の具体的な構成は、下記のようになっているべきです。</div>
+</div>
+<ol class="arabic simple">
+<li><p>目的</p></li>
+<li><p>前提条件</p></li>
+<li><p>概要</p></li>
+<li><p>詳細</p></li>
+<li><p>具体例</p></li>
+<li><p>付録</p></li>
+</ol>
+<div class="line-block">
+<div class="line">「1. 目的」は、読み手(ユーザー)との視点を合わせるために記述するべき内容です。</div>
+<div class="line">なぜその操作が必要なのかという理由や、何のための作業なのかといった目的を明確にすることで、ユーザーが同じ視点で文章を読み始めることができるため、よりスムーズに理解ができます。また、探している内容がその文章に含まれているかどうかを判断する材料にもなります。</div>
+</div>
+<div class="line-block">
+<div class="line">「2. 前提条件」は、手段を実践するうえで、手段の発散を防ぐために適度に状況を限定するための条件です。</div>
+<div class="line">あまり条件をつけすぎると状況が限定されすぎてしまうので、それほど厳格にするべきではありません。</div>
+</div>
+<div class="line-block">
+<div class="line">「3. 概要」は、機能を説明する際にそれがどういった目的でどのように利用するものなのかを1文程度で記載した内容です。</div>
+<div class="line">ここでは後述の詳細の全体像を理解することを目的としているため、なるべく端的かつ正確に一般論を表現する必要があります。</div>
+</div>
+<div class="line-block">
+<div class="line">「4. 詳細」では、利用者が具体的に行う手段について手順レベルでの内容を説明します。</div>
+<div class="line">機能の仕様についても併せて記述してもいいですがあまりに細かすぎる情報は却って理解の妨げになるので、「6. 付録」に記載をしてください。また、同様の理由で、本来の利用シーンから逸脱する内容(例外や間違った操作)については、 <a class="reference internal" href="syntax.html#manual-syntax-note"><span class="std std-ref">メモ</span></a> を活用し文章から除去することで、正常系の操作のみを文章に記載します。</div>
+</div>
+<div class="line-block">
+<div class="line">「5. 具体例」では、機能の使い方を説明する際により理解を簡単にするために、具体的な方法について記載します。</div>
+</div>
+<div class="line-block">
+<div class="line">「6. 付録」では、主に機能の仕様といった最も詳細なレベルの情報を記載します。</div>
+</div>
+</section>
+<section id="id8">
+<h3><span class="section-number">1.2.5. </span>具体例<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">本項の構成を参照してください。</div>
+</div>
+</section>
+</section>
+<section id="id9">
+<h2><span class="section-number">1.3. </span>文体，語句<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h2>
+<dl>
+<dt>文体:</dt><dd><div class="line-block">
+<div class="line">ですます体 (体言止めなし)</div>
+</div>
+</dd>
+<dt>長音記号有無:</dt><dd><div class="line-block">
+<div class="line">長音は,原則として長音符号「ー」を用いて書く。</div>
+<div class="line">※ JIS（日本工業規格）の「Z8301」準拠</div>
+</div>
+</dd>
+</dl>
+</section>
+<section id="id10">
+<h2><span class="section-number">1.4. </span>表記のゆれ<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">同じ意味をもつ２つ以上の表現は避け、１つに統一します。</div>
+<div class="line-block">
+<div class="line">e.g.</div>
+<div class="line">　ビルド、生成  --&gt; 「ビルド」に統一します。</div>
+<div class="line">　できます、出来ます  --&gt; 「できます」に統一します。</div>
+</div>
+</div>
+</section>
+<section id="id11">
+<h2><span class="section-number">1.5. </span>ターミノロジー<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">ターミノロジー（専門用語）を用いる場合は、必ずその意味を最初に説明してから使用します。</div>
+</div>
+</section>
+<section id="id12">
+<h2><span class="section-number">1.6. </span>文法エラー<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">エディタに付属される構文チェッカーやビルド時に出力結果に Warning や Error が含まれてはいけません。</div>
+<div class="line">適切な方法で問題を解消し、文法エラーがない状況でコミットをしてください。</div>
+</div>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span>ドキュメント</a></li>
+    <li class="next"><a href="syntax.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">2. </span>書式</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=57fb2187" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,9 +72,10 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
-              <option value="../../../../ja/2.5/learn/ansible_legacy/Legacy_scenario1.html">current</option>
-              <option value="../../../../ja/2.5/learn/ansible_legacy/Legacy_scenario1.html">2.5(current)</option>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/learn/ansible_legacy/Legacy_scenario1.html">current</option>
+              <option value="../../../../ja/2.6/learn/ansible_legacy/Legacy_scenario1.html">2.6(current)</option>
+              <option value="../../../../ja/2.5/learn/ansible_legacy/Legacy_scenario1.html">2.5</option>
               <option value="../../../../ja/2.4/learn/ansible_legacy/Legacy_scenario1.html" selected>2.4</option>
               <option value="../../../../ja/2.3/learn/ansible_legacy/Legacy_scenario1.html">2.3</option>
               <option value="../../../../ja/2.2/learn/ansible_legacy/Legacy_scenario1.html">2.2</option>
@@ -91,7 +92,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               <option value="../../../../ja/2.4/learn/ansible_legacy/Legacy_scenario1.html" selected>日本語</option>
               <option value="../../../../en/2.4/learn/ansible_legacy/Legacy_scenario1.html">English</option>
             </select>
@@ -166,7 +167,7 @@
   <ul>
 <li><a class="reference internal" href="#">ホスト名管理</a><ul>
 <li><a class="reference internal" href="#id2">パラメータ設計</a><ul>
-<li><a class="reference internal" href="#quickstart-server-information-parmeter">パラメータシートの作成</a></li>
+<li><a class="reference internal" href="#quickstart-server-information-parmeter-ansible-legacy">パラメータシートの作成</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#id4">作業手順の登録</a><ul>
@@ -181,18 +182,18 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#id9">ホスト名変更作業実施(1回目)</a><ul>
-<li><a class="reference internal" href="#id10">作業概要の作成</a></li>
-<li><a class="reference internal" href="#id11">作業概要登録</a></li>
-<li><a class="reference internal" href="#id12">パラメータ設定</a></li>
-<li><a class="reference internal" href="#id13">作業実行</a></li>
+<li><a class="reference internal" href="#id10">作業概要の作成(1回目)</a></li>
+<li><a class="reference internal" href="#id11">作業概要登録(1回目)</a></li>
+<li><a class="reference internal" href="#id12">パラメータ設定(1回目)</a></li>
+<li><a class="reference internal" href="#id13">作業実行(1回目)</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#id14">ホスト名変更作業実施(2回目)</a><ul>
-<li><a class="reference internal" href="#id15">作業概要の作成</a></li>
-<li><a class="reference internal" href="#id16">作業概要登録</a></li>
-<li><a class="reference internal" href="#id17">パラメータ設定</a></li>
+<li><a class="reference internal" href="#id15">作業概要の作成(2回目)</a></li>
+<li><a class="reference internal" href="#id16">作業概要登録(2回目)</a></li>
+<li><a class="reference internal" href="#id17">パラメータ設定(2回目)</a></li>
 <li><a class="reference internal" href="#id18">機器情報の更新</a></li>
-<li><a class="reference internal" href="#id19">作業実行</a></li>
+<li><a class="reference internal" href="#id19">作業実行(2回目)</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#id20">まとめ</a></li>
@@ -233,14 +234,11 @@
 <div class="line-block">
 <div class="line">システムにある全ての情報をパラメータとして管理する必要はありません。今後管理が必要になったタイミングで適宜追加や見直しをしましょう。</div>
 </div>
-<section id="quickstart-server-information-parmeter">
-<span id="id3"></span><h3>パラメータシートの作成<a class="headerlink" href="#quickstart-server-information-parmeter" title="Link to this heading">¶</a></h3>
+<section id="quickstart-server-information-parmeter-ansible-legacy">
+<span id="id3"></span><h3>パラメータシートの作成<a class="headerlink" href="#quickstart-server-information-parmeter-ansible-legacy" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line"><span class="menuselection">パラメータシート作成</span> では、作業時に利用する設定値(パラメータ)を登録するためのパラメータシートを管理します。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-0">パラメータシート<a class="headerlink" href="#term-0" title="Link to this term">¶</a></dt><dt id="term-1">システムのパラメータ情報を管理するデータ構造のことです。<a class="headerlink" href="#term-1" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <div class="line-block">
 <div class="line">ホスト名を管理するためのパラメータシートを作成します。</div>
 <div class="line"><span class="menuselection">パラメータシート作成 ▶ パラメータシート定義・作成</span> から、ホスト名を管理するために、「サーバー基本情報」というパラメータシートを作成します。</div>
@@ -339,9 +337,6 @@
 <div class="line">作業手順を登録するために、Exastro IT Automation で扱う作業単位である Movement (ジョブ)を定義します。</div>
 <div class="line">定義した Movement に対して、Ansible Playbook を紐付け、更に Ansible Playbook 内の変数と <a class="reference internal" href="../quickstart/index.html#quickstart-server-information-parmeter"><span class="std std-ref">パラメータシート作成</span></a> で登録したパラメータシートの項目の紐付けを行います。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-Movement">Movement<a class="headerlink" href="#term-Movement" title="Link to this term">¶</a></dt><dt id="term-Exastro-IT-Automation">Exastro IT Automation における、最小の作業単位のことを指します。<a class="headerlink" href="#term-Exastro-IT-Automation" title="Link to this term">¶</a></dt><dt id="term-1-Movement-1-ansible-playbook">1回の Movement 実行は、1回の ansible-playbook コマンドの実行と同じです。<a class="headerlink" href="#term-1-Movement-1-ansible-playbook" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <section id="id5">
 <h3>作業項目の設定<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
 <div class="line-block">
@@ -559,7 +554,7 @@
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">SV</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">server01</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">接続ユーザ名</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">(秘密鍵ファイル)</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">鍵認証(パスフレーズなし)</kbd></p></td>
@@ -578,7 +573,7 @@
 <section id="id9">
 <h2>ホスト名変更作業実施(1回目)<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h2>
 <section id="id10">
-<h3>作業概要の作成<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<h3>作業概要の作成(1回目)<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line">具体的なパラメータの設定や作業手順を考える前に、作業計画を立てるところから初めます。</div>
 <div class="line">まずは、いつ、どこの機器に対して、何を、どうするかといった情報を簡単に整理しておきましょう。</div>
@@ -603,14 +598,11 @@
 </table>
 </section>
 <section id="id11">
-<h3>作業概要登録<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+<h3>作業概要登録(1回目)<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line">オペレーション登録では、作業を実施する際の作業概要を定義します。オペレーションは各作業ごとに1つ作成します。オペレーションは使いまわさないようにしましょう。</div>
 <div class="line">先に決めた作業の方針を元にオペレーション情報を記入しましょう。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-2">オペレーション<a class="headerlink" href="#term-2" title="Link to this term">¶</a></dt><dt id="term-3">実施する作業のことで、オペレーションに対して作業対象とパラメータが紐づきます。<a class="headerlink" href="#term-3" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <div class="line-block">
 <div class="line"><span class="menuselection">基本コンソール ▶ オペレーション一覧</span> から、作業実施日時や作業名を登録します。</div>
 </div>
@@ -631,7 +623,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">RHEL8のホスト名変更作業</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></p></td>
 </tr>
 </tbody>
 </table>
@@ -644,7 +636,7 @@
 </div>
 </section>
 <section id="id12">
-<h3>パラメータ設定<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<h3>パラメータ設定(1回目)<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line">パラメータシートには、設定したいパラメータを機器ごとに登録します。</div>
 <div class="line">オペレーションには、作業概要登録で作成した <kbd class="kbd docutils literal notranslate">RHEL8のホスト名変更作業</kbd> を選択します。オペレーションを選択することでオペレーションに対して、作業対象サーバとパラメータが紐付けされます。</div>
@@ -676,14 +668,14 @@
 </thead>
 <tbody>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">server01</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8のホスト名変更作業</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8のホスト名変更作業</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">server01</kbd></p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="id13">
-<h3>作業実行<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<h3>作業実行(1回目)<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><p>事前確認</p>
 <div class="line-block">
@@ -720,7 +712,7 @@ localhost
 <a class="reference internal image-reference" href="../../_images/作業実行.gif"><img alt="作業実行" src="../../_images/%E4%BD%9C%E6%A5%AD%E5%AE%9F%E8%A1%8C.gif" style="width: 1200px;" />
 </a>
 </figure>
-<ol class="arabic" start="3">
+<ol class="arabic">
 <li><p>事後確認</p>
 <div class="line-block">
 <div class="line">再度作業対象サーバに SSH ログインし、ホスト名が変更されていることを確認します。</div>
@@ -745,7 +737,7 @@ hostnamectl<span class="w"> </span>status<span class="w"> </span>--static
 <section id="id14">
 <h2>ホスト名変更作業実施(2回目)<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h2>
 <section id="id15">
-<h3>作業概要の作成<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
+<h3>作業概要の作成(2回目)<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line">具体的なパラメータの設定や作業手順を考える前に、作業計画を立てるところから初めます。</div>
 <div class="line">まずは、いつ、どこの機器に対して、何を、どうするかといった情報を簡単に整理しておきましょう。</div>
@@ -770,14 +762,11 @@ hostnamectl<span class="w"> </span>status<span class="w"> </span>--static
 </table>
 </section>
 <section id="id16">
-<h3>作業概要登録<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h3>
+<h3>作業概要登録(2回目)<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line">オペレーション登録では、作業を実施する際の作業概要を定義します。オペレーションは各作業ごとに1つ作成します。オペレーションは使いまわさないようにしましょう。</div>
 <div class="line">先に決めた作業の方針を元にオペレーション情報を記入しましょう。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-4">オペレーション<a class="headerlink" href="#term-4" title="Link to this term">¶</a></dt><dt id="term-5">実施する作業のことで、オペレーションに対して作業対象とパラメータが紐づきます。<a class="headerlink" href="#term-5" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <div class="line-block">
 <div class="line"><span class="menuselection">基本コンソール ▶ オペレーション一覧</span> から、作業実施日時や作業名を登録します。</div>
 </div>
@@ -798,7 +787,7 @@ hostnamectl<span class="w"> </span>status<span class="w"> </span>--static
 </thead>
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">RHEL8のホスト名更新作業</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/05/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/05/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></p></td>
 </tr>
 </tbody>
 </table>
@@ -811,7 +800,7 @@ hostnamectl<span class="w"> </span>status<span class="w"> </span>--static
 </div>
 </section>
 <section id="id17">
-<h3>パラメータ設定<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
+<h3>パラメータ設定(2回目)<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line">本シナリオでは、<kbd class="kbd docutils literal notranslate">server01</kbd> というホスト名をパラメータ値として設定しました。</div>
 <div class="line">しかし、<span class="menuselection">機器一覧</span> でもホスト名を管理しており、ホスト名の管理が多重管理状態となっています。</div>
@@ -845,8 +834,8 @@ hostnamectl<span class="w"> </span>status<span class="w"> </span>--static
 </thead>
 <tbody>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">server01</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/05/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8のホスト名更新作業</kbd></kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">&quot;{{</kbd> <kbd class="kbd docutils literal notranslate">__inventory_hostname__</kbd> <kbd class="kbd docutils literal notranslate">}}&quot;</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/05/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8のホスト名更新作業</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">&quot;{{</kbd> <kbd class="kbd docutils literal notranslate">__inventory_hostname__</kbd> <kbd class="kbd docutils literal notranslate">}}&quot;</kbd></p></td>
 </tr>
 </tbody>
 </table>
@@ -899,7 +888,7 @@ hostnamectl<span class="w"> </span>status<span class="w"> </span>--static
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">SV</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">db01</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">接続ユーザ名</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">(秘密鍵ファイル)</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">鍵認証(パスフレーズなし)</kbd></p></td>
@@ -908,7 +897,7 @@ hostnamectl<span class="w"> </span>status<span class="w"> </span>--static
 </table>
 </section>
 <section id="id19">
-<h3>作業実行<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h3>
+<h3>作業実行(2回目)<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><p>作業実行</p>
 <div class="line-block">
@@ -925,7 +914,7 @@ hostnamectl<span class="w"> </span>status<span class="w"> </span>--static
 <a class="reference internal image-reference" href="../../_images/更新作業実行.gif"><img alt="作業実行" src="../../_images/%E6%9B%B4%E6%96%B0%E4%BD%9C%E6%A5%AD%E5%AE%9F%E8%A1%8C.gif" style="width: 1200px;" />
 </a>
 </figure>
-<ol class="arabic" start="2">
+<ol class="arabic">
 <li><p>事後確認</p>
 <div class="line-block">
 <div class="line">再度サーバに SSH ログインし、ホスト名が変更されていることを確認します。</div>
@@ -982,8 +971,8 @@ hostnamectl<span class="w"> </span>status<span class="w"> </span>--static
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2023 NEC Corporation</small>
-    <small><a href="/terms/ja.html">サイト規約</a></small>
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.4/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

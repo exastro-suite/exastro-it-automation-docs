@@ -28,8 +28,6 @@
 | オペレーション登録では、作業を実施する際の作業概要を定義します。
 | 先に決めた作業の方針を元にオペレーション情報を記入しましょう。
 
-.. glossary:: オペレーション
-   実施する作業のことで、オペレーションに対して作業対象とパラメータが紐づきます。
 
 | :menuselection:`基本コンソール --> オペレーション一覧` から、作業実施日時や作業名を登録します。
 
@@ -65,8 +63,6 @@
 
 | :menuselection:`パラメータシート作成` では、作業時に利用する設定値(パラメータ)を登録するためのパラメータシートを管理します。
 
-.. glossary:: パラメータシート
-   システムのパラメータ情報を管理するデータ構造のことです。
 
 | ホスト名を管理するためのパラメータシートを作成します。
 | :menuselection:`パラメータシート作成 --> パラメータシート定義・作成` から、ホスト名を管理するために、「サーバー基本情報」というパラメータシートを作成します。
@@ -177,9 +173,6 @@
 | 作業手順を登録するために、Exastro IT Automation で扱う作業単位である Movement (ジョブ)を定義します。
 | 定義した Movement に対して、Ansible Role パッケージを紐付け、更に Ansible Role パッケージ内の変数と :ref:`quickstart_server_information_parmeter` で登録したパラメータシートの項目の紐付けを行います。
 
-.. glossary:: Movement
-   Exastro IT Automation における、最小の作業単位のことを指します。
-   1回の Movement 実行は、1回の ansible-playbook コマンドの実行と同じです。
 
 作業項目の設定
 --------------
@@ -189,7 +182,7 @@
 
 | :menuselection:`Ansible-LegacyRole --> Movement一覧` から、ホスト名設定のための Movement を登録します。
 
-.. figure:: /images/learn/quickstart/scenario1/Movement登録.png
+.. figure:: /images/learn/quickstart/scenario1/Movement登録設定.png
    :width: 1200px
    :alt: Movement登録
 

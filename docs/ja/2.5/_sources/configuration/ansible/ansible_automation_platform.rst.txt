@@ -9,7 +9,7 @@ Ansible Automation Platform
 | 本書ではそのうち Ansible Automation Platform を実行エンジンとしたシステム構成と環境構築について説明します。
 |
 | Ansible Core による構成を行う場合は、:doc:`./ansible_core` を参照してください。
-| 
+|
 | ITA Ansible driver を利用するにあたっては、Exastro IT Automation がインストール済みであることが前提です。
 | Exastro IT Automation のインストール方法に関しては、 :doc:`../../installation/online/exastro/kubernetes` を参照してください。
 
@@ -29,7 +29,7 @@ Ansible Automation Platform
 
 | Ansible Automation Controller は、Ansible 実行における拡張された機能の利用や、可用性を高めた構成で運用することが可能です。
 
-.. warning:: 
+.. warning::
    | ITA システムおよび Ansible Core とは個別の専用サーバを用意する必要があります。
    | また実行する Playbook を Ansible Vault で暗号化するため、Ansible Core (Ansible driver (Agent)) が必要となります。
 
@@ -74,13 +74,13 @@ Ansible Automation Platform
          :widths: 10 20 20 40 100
          :header-rows: 1
          :align: left
-      
+
          * - | 通信番号
-             | ※1 
+             | ※1
            - FROM
            - TO
            - | プロトコル
-             | [ポート番号　※2] 
+             | [ポート番号　※2]
            - 主な用途
          * - ①
            - ITAシステム
@@ -111,7 +111,7 @@ Ansible Automation Platform
            - | http(s)
              | [80(443)/tcp]
            - ファイル連携
-      
+
       | ※1 Ansible Automation Platform (ハイブリッドパターン)の構成イメージの番号と紐づく通信番号を記載。
       | ※2 ポート番号は標準的なポート番号を記載。
       | ※3 代表的な例を記載。Ansibleモジュールにより利用プロトコルが異なる。
@@ -130,13 +130,13 @@ Ansible Automation Platform
          :widths: 10 20 20 40 100
          :header-rows: 1
          :align: left
-      
+
          * - | 通信番号
-             | ※1 
+             | ※1
            - FROM
            - TO
            - | プロトコル
-             | [ポート番号　※2] 
+             | [ポート番号　※2]
            - 主な用途
          * - ①
            - ITAシステム
@@ -167,11 +167,11 @@ Ansible Automation Platform
            - | http(s)
              | [80(443)/tcp]
            - ファイル連携
-      
+
       | ※1 Ansible Automation Controller (実行ノード分離パターン)の構成イメージに上記番号と紐づく通信番号を記載。
       | ※2 ポート番号は標準的なポート番号を記載。
       | ※3 代表的な例を記載。Ansibleモジュールにより利用プロトコルが異なる。
-   
+
 
 
 システム要件
@@ -211,11 +211,11 @@ Playbook連携
      - 〇
    * - ITA作業用ディレクトリの公開
      - 〇
-   * - Ansible Automation Platformへのファイル転送ユーザーの準備 
+   * - Ansible Automation Platformへのファイル転送ユーザーの準備
      - 〇
    * - Ansible Automation Platformと連携するGitへのユーザーの準備
      - 〇
-   * - Proxy設定 
+   * - Proxy設定
      - △
 
 
@@ -267,7 +267,7 @@ Ansible Automation Platform へのファイル転送ユーザーの準備
 
 | Linux ユーザーは、Ansible Automation Platform インストール時に生成される awx ユーザーにパスワードを設定し使用することを強く推奨します。
 
-.. warning:: 
+.. warning::
  | awx ユーザー以外のユーザーを用意し使用し、SCM 管理パス(/var/lib/awx/projects)のパーミッションの変更を行う運用は Red Hat のサポート対象外となりますのでご注意ください。
 
 | 準備した Linux ユーザーは、ITA システムに登録する必要があります。 :ref:`ansible_common_ansible_automation_controller_hosts` を参照し、登録を行ってください。
@@ -338,7 +338,7 @@ Organization 追加時の作業
    |
    | 必須項目及び設定値については下記の表を参照してください。
 
-.. list-table:: 
+.. list-table::
    :widths: 35 80 80
    :header-rows: 1
    :align: left
@@ -348,7 +348,7 @@ Organization 追加時の作業
      - 備考
    * - 名前
      - 任意の名称
-     - 
+     -
    * - インスタンスグループ
      - ※未選択のままにする
      - 「:ref:`platform_connection_instance` 」で設定
@@ -368,7 +368,7 @@ Organization 追加時の作業
    |
    | 必須項目及び設定値については下記の表を参照してください。
 
-.. list-table:: 
+.. list-table::
    :widths: 35 80 80
    :header-rows: 1
    :align: left
@@ -381,13 +381,13 @@ Organization 追加時の作業
      - 「 :ref:`platform_output_token` 」で使用する
    * - 組織
      - 「 :ref:`platform_make_organization` 」で作成した組織を選択する
-     - 
+     -
    * - 認証付与タイプ
      - リソース所有者のパスワードベースを選択
-     - 
+     -
    * - クライアントタイプ
      - 秘密
-     - 
+     -
 
 .. _platform_architecture_user:
 
@@ -404,7 +404,7 @@ Organization 追加時の作業
    | 必須項目及び設定値については下記の表を参照してください。
 
 
-.. list-table:: 
+.. list-table::
    :widths: 35 80 80
    :header-rows: 1
    :align: left
@@ -414,19 +414,19 @@ Organization 追加時の作業
      - 備考
    * - ユーザー名
      - 任意のユーザー名
-     - 
+     -
    * - パスワード
      - 任意のパスワード
-     - 
+     -
    * - パスワードの確認
      - 任意のパスワード
-     - 
+     -
    * - ユーザータイプ
      - 標準ユーザーを選択
-     - 
+     -
    * - 組織
      - 「 :ref:`platform_make_organization` 」で作成した組織を選択する
-     - 
+     -
 
 .. _platform_organization_roles:
 
@@ -443,7 +443,7 @@ Organization 追加時の作業
 
    #. | リソースタイプの追加 では 「組織」 を選択し、:guilabel:`Next` ボタンをクリックしてください。
    #. | リストの項目の選択 では 「 :ref:`platform_make_organization` 」 で作成した組織 を選択し、:guilabel:`Next` ボタンをクリックしてください。
-      | ※「 :ref:`platform_make_organization` 」で作成した組織以外のロールは付与しないでください。 
+      | ※「 :ref:`platform_make_organization` 」で作成した組織以外のロールは付与しないでください。
    #. | 適用するロールの選択 では 「管理者」と「メンバー」の２つのロールを選択し、:guilabel:`保存` ボタンをクリックしてください
 
 
@@ -461,7 +461,7 @@ Organization 追加時の作業
    |
    | 必須項目及び設定値については下記の表を参照してください。
 
-.. list-table:: 
+.. list-table::
    :widths: 35 50 30
    :header-rows: 1
    :align: left
@@ -471,10 +471,10 @@ Organization 追加時の作業
      - 備考
    * - アプリケーション
      - 「 :ref:`make_application` 」で作成したアプリケーションを選択
-     - 
+     -
    * - 範囲
      - 書き込みを選択
-     - 
+     -
 
 ワークスペース追加時の作業
 ==========================
@@ -500,7 +500,7 @@ Organization 追加時の作業
    |
    | 必須項目及び設定値については下記の表を参照してください。
 
-.. list-table:: 
+.. list-table::
    :widths: 35 30 50
    :header-rows: 1
    :align: left

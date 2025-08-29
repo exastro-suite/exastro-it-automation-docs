@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>1. OASE共通 &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="2. OASE管理" href="oase_management.html" />
+    <link rel="prev" title="OASE" href="index.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/oase/oase_common.html" selected>current</option>
+              <option value="../../../../ja/2.6/manuals/oase/oase_common.html" selected>2.6(current)</option>
+              <option value="../../../../ja/2.5/manuals/oase/oase_common.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/oase/oase_common.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/oase/oase_common.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/oase/oase_common.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/oase/oase_common.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/oase/oase_common.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/oase/oase_common.html" selected>日本語</option>
+              <option value="../../../../en/2.6/manuals/oase/oase_common.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="index.html" title="前のトピックへ">OASE</a></li>
+        <li class="next"><a href="oase_management.html" title="次のトピックへ"><span class="section-number">2. </span>OASE管理</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../it_automation_base/index.html">基本操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../host_group/index.html">ホストグループ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible-driver/index.html">Ansible ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform_driver/index.html">Terraform ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import/index.html">エクスポート・インポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cicd_for_iac/index.html">CI/CD for IaC</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">OASE</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. OASE共通</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">1.1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#oase-common">1.2. 機能の概要</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#oase-definition-of-terms">1.3. 用語の定義</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="oase_management.html">2. OASE管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oase.html">3. OASE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintenance/index.html">メンテナンス</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">1. OASE共通</a><ul>
+<li><a class="reference internal" href="#id1">1.1. はじめに</a></li>
+<li><a class="reference internal" href="#oase-common">1.2. 機能の概要</a></li>
+<li><a class="reference internal" href="#oase-definition-of-terms">1.3. 用語の定義</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">OASE</a></li>
+    
+    <li><span class="section-number">1. </span>OASE共通</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="oase">
+<h1><span class="section-number">1. </span>OASE共通<a class="headerlink" href="#oase" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2><span class="section-number">1.1. </span>はじめに<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書では、OASE（Operation Autonomy Support Engine）の概要について説明します。</div>
+</div>
+</section>
+<section id="oase-common">
+<span id="id2"></span><h2><span class="section-number">1.2. </span>機能の概要<a class="headerlink" href="#oase-common" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">OASEとは、外部から取得したイベント情報を分析し、そのイベントへの対処の自動化を支援する機能です。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/oase_overview_v2-4.png"><img alt="OASE機能概要" src="../../_images/oase_overview_v2-4.png" style="width: 800px;" />
+</a>
+</figure>
+<div class="line-block">
+<div class="line">OASEの機能フローは以下の通りです。</div>
+<div class="line">用語の解説は次項に記載してあります。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><strong>イベント収集</strong></div>
+<div class="line">外部サービスからイベントを収集します。</div>
+<div class="line">イベントはExastro OASE Agentによって収集され、APIを通してITA本体に送信されます。</div>
+<div class="line">Exastro OASE Agentの詳細は <a class="reference internal" href="oase_management.html#agent-about"><span class="std std-ref">エージェント概要</span></a> を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>ラベル付与</strong></div>
+<div class="line">ITAで受信したイベントに対して、設定されたラベルを付けます。</div>
+<div class="line">様々な異なるアプリケーションからのイベントの情報を、OASE内で均質化して扱うことが目的です。</div>
+<div class="line">ラベル付与に関する設定の詳細は <a class="reference internal" href="oase.html#label-creation"><span class="std std-ref">ラベル作成</span></a> および <a class="reference internal" href="oase.html#labeling"><span class="std std-ref">ラベル付与</span></a> を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>評価</strong></div>
+<div class="line">付与されたラベルを用いて、イベントを抽出（フィルター）し、設定されたルールにマッチするかどうかの判定を行います。</div>
+<div class="line">ルール判定に関する設定の詳細は <a class="reference internal" href="oase.html#filter"><span class="std std-ref">フィルター詳細</span></a> および <a class="reference internal" href="oase.html#rule"><span class="std std-ref">ルール詳細</span></a> を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>アクション実行・通知</strong></div>
+<div class="line">ルールにマッチした際に、設定したアクション（ConductorとOperationの設定）を実行することができます。</div>
+<div class="line">また、アクションが実行される前後の通知もルールメニューにて設定することができます。</div>
+<div class="line">アクション設定の詳細は <a class="reference internal" href="oase.html#action"><span class="std std-ref">アクション詳細</span></a> を参照してください。</div>
+</div>
+</li>
+</ol>
+</section>
+<section id="oase-definition-of-terms">
+<span id="id3"></span><h2><span class="section-number">1.3. </span>用語の定義<a class="headerlink" href="#oase-definition-of-terms" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書では以下として記載します。</div>
+</div>
+<table class="docutils align-left" id="id4">
+<caption><span class="caption-number">表 1.167 </span><span class="caption-text">用語説明</span><a class="headerlink" href="#id4" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 83.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>用語名</p></th>
+<th class="head"><p>内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>イベント</p></td>
+<td><p>設定された対象（監視ソフト）から取得してきた、システムの状態変化（の発生情報）のことです。※</p></td>
+</tr>
+<tr class="row-odd"><td><p>TTL（Time To Live）</p></td>
+<td><div class="line-block">
+<div class="line">エージェントが取得したイベントが、ルールの評価対象として扱われる期間（秒）のことで、次の2つの目的で利用されます。</div>
+<div class="line">▼最もユーザーの意図に近い判断を選択</div>
+<div class="line">あるイベントが発生し、そのイベントが複数のルールの条件として定義されている場合、Exastro OASEは優先度の高いルールが適用されるように動作しようとします。</div>
+<div class="line">一方で、完全な条件が揃うまでOASEはイベントの発生を待ち、最終的な判断はイベントの発生日時からTTLで指定した期間を経過したタイミングまでに行われます。</div>
+<div class="line">▼古すぎるイベントによる意図しないアクション実行の防止</div>
+<div class="line">発生からTTLの2倍以上の期間が経過したイベントは、ユーザーが意図しないイベントである可能性があるため、即座に「時間切れ」ステータスになり、ルールの評価対象から除外します。</div>
+<div class="line">最小値は10（秒）、最大値は2137483647（秒）、デフォルトの値は3600（秒）です。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>ラベル</p></td>
+<td><div class="line-block">
+<div class="line">ラベル作成・ラベル付与の設定を基に、OASE内部で利用しやすい形（key&amp;value形式）で付与された、イベントのプロパティのことです。</div>
+<div class="line">ラベルによって、異なるアプリケーションからのイベントを均質化した情報として扱うことが可能です。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>フィルター</p></td>
+<td><p>ラベルの条件から一意のイベントを抽出すること、もしくはその対象です。ルール判定機能へイベントを渡すために使用します。</p></td>
+</tr>
+<tr class="row-even"><td><p>ルール</p></td>
+<td><p>任意のアクションを実行したり、結論イベントを生成したりするための条件で、フィルターを組み合わせることによって作成します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>アクション</p></td>
+<td><p>定義されたルールにマッチした場合に実行される対象です。</p></td>
+</tr>
+<tr class="row-even"><td><p>評価</p></td>
+<td><p>任意に設定したルールに従って、マッチした場合はアクションや結論イベントの生成を行うなど、発生したイベントへ対処を行うことを指します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>結論イベント</p></td>
+<td><p>ルールにマッチした際に、発生するイベントのことです。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">※イベント種別については、以下の通りです。</div>
+</div>
+<table class="docutils align-left" id="id5">
+<caption><span class="caption-number">表 1.168 </span><span class="caption-text">イベント種別</span><a class="headerlink" href="#id5" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 83.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>種類</p></th>
+<th class="head"><p>内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>新規</p></td>
+<td><div class="line-block">
+<div class="line">収集して未だ評価機能に検知されていない状態のことです。</div>
+<div class="line">判定時間が過ぎると、既知（判定済み）、未知、時間切れのいずれかに変化します。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>既知</p></td>
+<td><p>評価機能に検知された状態もしくは対象のことです。</p></td>
+</tr>
+<tr class="row-even"><td><p>既知（判定済み）</p></td>
+<td><p>ルールにマッチした状態もしくは対象のことです。</p></td>
+</tr>
+<tr class="row-odd"><td><p>時間切れ</p></td>
+<td><div class="line-block">
+<div class="line">下記のいずれかの理由により、ルールの評価対象から外した対象のことです。</div>
+<div class="line">・TTLの2倍以上の期間が経過して、評価対象とするには古すぎる</div>
+<div class="line">・TTLを経過した直後の評価タイミング（ルールにマッチさせる最終タイミング）までに、マッチさせることが出来なかった</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>未知</p></td>
+<td><div class="line-block">
+<div class="line">フィルターに抽出されなかった（評価機能に検知されなかった）状態もしくは対象のことです。</div>
+<div class="line">未知の事象であることから、今後の評価対象として検討する必要が考えられます。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span>OASE</a></li>
+    <li class="next"><a href="oase_management.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">2. </span>OASE管理</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

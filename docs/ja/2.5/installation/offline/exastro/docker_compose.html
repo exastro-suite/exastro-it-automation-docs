@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=57fb2187" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=99e5f627" />
     <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../../_static/documentation_options.js?v=c033477b"></script>
@@ -41,7 +41,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
     <link rel="next" title="Learn" href="../../../learn/index.html" />
-    <link rel="prev" title="Exastro" href="index.html" /> 
+    <link rel="prev" title="Exastro on Kubernetes - Offline" href="kubernetes.html" /> 
   </head>
 <body id="page" class="ja">
 
@@ -73,9 +73,10 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
-              <option value="../../../../../ja/2.5/installation/offline/exastro/docker_compose.html" selected>current</option>
-              <option value="../../../../../ja/2.5/installation/offline/exastro/docker_compose.html" selected>2.5(current)</option>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../ja/2.6/installation/offline/exastro/docker_compose.html">current</option>
+              <option value="../../../../../ja/2.6/installation/offline/exastro/docker_compose.html">2.6(current)</option>
+              <option value="../../../../../ja/2.5/installation/offline/exastro/docker_compose.html" selected>2.5</option>
               <option value="../../../../../ja/2.4/installation/offline/exastro/docker_compose.html">2.4</option>
               <option value="../../../../../ja/2.3/installation/offline/exastro/docker_compose.html">2.3</option>
               <option value="../../../../../ja/2.2/installation/offline/exastro/docker_compose.html">2.2</option>
@@ -92,7 +93,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               <option value="../../../../../ja/2.5/installation/offline/exastro/docker_compose.html" selected>日本語</option>
               <option value="../../../../../en/2.5/installation/offline/exastro/docker_compose.html">English</option>
             </select>
@@ -102,7 +103,7 @@
     </div>
     <div id="toolbarNavigation">
       <ul>
-        <li class="prev"><a href="index.html" title="前のトピックへ">Exastro</a></li>
+        <li class="prev"><a href="kubernetes.html" title="前のトピックへ">Exastro on Kubernetes - Offline</a></li>
         <li class="next"><a href="../../../learn/index.html" title="次のトピックへ">Learn</a></li>
       </ul>
     </div>
@@ -120,6 +121,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../online/index.html">オンライン</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">オフライン</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Exastro</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="kubernetes.html">Exastro on Kubernetes - Offline</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Exastro on Docker Compose - Offline</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#id1">目的</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#id2">特徴</a></li>
@@ -128,9 +130,9 @@
 <li class="toctree-l5"><a class="reference internal" href="#id5">全体の流れ</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#id8">オンライン環境(インターネットに接続できる環境)での作業</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#id11">オフライン環境(インターネットに接続できない環境)での作業</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#id16">ログイン</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#id17">オーガナイゼーションの作成</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#id18">ワークスペースの作成</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id17">ログイン</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id18">オーガナイゼーションの作成</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id19">ワークスペースの作成</a></li>
 </ul>
 </li>
 </ul>
@@ -144,6 +146,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../templates/index.html">テンプレート</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">リファレンス</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">貢献</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kb/index.html">ナレッジベース</a></li>
 </ul>
 
     <!-- <ul>
@@ -180,11 +183,12 @@
 <li><a class="reference internal" href="#id13">⑥コンテナイメージのアップロード</a></li>
 <li><a class="reference internal" href="#id14">⑦docker-composeリソースのインストール</a></li>
 <li><a class="reference internal" href="#id15">⑧Exastroリソースのインストール</a></li>
+<li><a class="reference internal" href="#id16">⑩カスタムイメージのビルド(必要な場合)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id16">ログイン</a></li>
-<li><a class="reference internal" href="#id17">オーガナイゼーションの作成</a></li>
-<li><a class="reference internal" href="#id18">ワークスペースの作成</a></li>
+<li><a class="reference internal" href="#id17">ログイン</a></li>
+<li><a class="reference internal" href="#id18">オーガナイゼーションの作成</a></li>
+<li><a class="reference internal" href="#id19">ワークスペースの作成</a></li>
 </ul>
 </li>
 </ul>
@@ -248,8 +252,8 @@ $(window).on('load', function () {
 <div class="line-block">
 <div class="line">動作確認が取れているコンテナ環境の最小要求リソースとバージョンは下記のとおりです。</div>
 </div>
-<table class="docutils align-default" id="id19">
-<caption><span class="caption-number">表 45 </span><span class="caption-text">ハードウェア要件(最小構成)</span><a class="headerlink" href="#id19" title="Link to this table">¶</a></caption>
+<table class="docutils align-default" id="id20">
+<caption><span class="caption-number">表 66 </span><span class="caption-text">ハードウェア要件(最小構成)</span><a class="headerlink" href="#id20" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -271,8 +275,8 @@ $(window).on('load', function () {
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default" id="id20">
-<caption><span class="caption-number">表 46 </span><span class="caption-text">ハードウェア要件(推奨構成)</span><a class="headerlink" href="#id20" title="Link to this table">¶</a></caption>
+<table class="docutils align-default" id="id21">
+<caption><span class="caption-number">表 67 </span><span class="caption-text">ハードウェア要件(推奨構成)</span><a class="headerlink" href="#id21" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -304,8 +308,8 @@ $(window).on('load', function () {
 </div>
 </li>
 <li><p>通信要件</p>
-<table class="docutils align-default" id="id21">
-<caption><span class="caption-number">表 47 </span><span class="caption-text">通信要件</span><a class="headerlink" href="#id21" title="Link to this table">¶</a></caption>
+<table class="docutils align-default" id="id22">
+<caption><span class="caption-number">表 68 </span><span class="caption-text">通信要件</span><a class="headerlink" href="#id22" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 33.3%" />
@@ -357,8 +361,8 @@ $(window).on('load', function () {
 </li>
 <li><p>動作確認済みの、オペレーティングシステムとコンテナプラットフォーム</p>
 <p>以下は、動作確認済のバージョンとなります。</p>
-<table class="docutils align-default" id="id22">
-<caption><span class="caption-number">表 48 </span><span class="caption-text">動作確認実績</span><a class="headerlink" href="#id22" title="Link to this table">¶</a></caption>
+<table class="docutils align-default" id="id23">
+<caption><span class="caption-number">表 69 </span><span class="caption-text">動作確認実績</span><a class="headerlink" href="#id23" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 29.4%" />
 <col style="width: 23.5%" />
@@ -410,8 +414,8 @@ $(window).on('load', function () {
 <div class="line-block">
 <div class="line">サービス公開用の URL を準備しておく必要があります。</div>
 </div>
-<table class="docutils align-default" id="id23">
-<caption><span class="caption-number">表 49 </span><span class="caption-text">例1) IPアドレスによるサービス公開</span><a class="headerlink" href="#id23" title="Link to this table">¶</a></caption>
+<table class="docutils align-default" id="id24">
+<caption><span class="caption-number">表 70 </span><span class="caption-text">例1) IPアドレスによるサービス公開</span><a class="headerlink" href="#id24" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 42.9%" />
 <col style="width: 57.1%" />
@@ -433,8 +437,8 @@ $(window).on('load', function () {
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default" id="id24">
-<caption><span class="caption-number">表 50 </span><span class="caption-text">例2) ドメインによるサービス公開</span><a class="headerlink" href="#id24" title="Link to this table">¶</a></caption>
+<table class="docutils align-default" id="id25">
+<caption><span class="caption-number">表 71 </span><span class="caption-text">例2) ドメインによるサービス公開</span><a class="headerlink" href="#id25" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 42.9%" />
 <col style="width: 57.1%" />
@@ -456,8 +460,8 @@ $(window).on('load', function () {
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default" id="id25">
-<caption><span class="caption-number">表 51 </span><span class="caption-text">例3) LoadBalancer を経由したサービス公開</span><a class="headerlink" href="#id25" title="Link to this table">¶</a></caption>
+<table class="docutils align-default" id="id26">
+<caption><span class="caption-number">表 72 </span><span class="caption-text">例3) LoadBalancer を経由したサービス公開</span><a class="headerlink" href="#id26" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 42.9%" />
 <col style="width: 57.1%" />
@@ -513,6 +517,7 @@ $(window).on('load', function () {
 <div class="line">⑦docker-composeリソースのインストール</div>
 <div class="line">⑧Exastroリソースのインストール</div>
 <div class="line">⑨Exastro ITA起動</div>
+<div class="line">⑩カスタムイメージのビルド(必要な場合)</div>
 </div>
 </section>
 </section>
@@ -530,14 +535,14 @@ $(window).on('load', function () {
 <div class="line">save.shの「[&quot;x.x.x&quot;]=&quot;x.x.x&quot;」にはExastro IT Automation App VersionとExastro Platform App Versionをそれぞれ記載します。</div>
 <div class="line"><a class="reference external" href="https://github.com/exastro-suite/exastro-helm?tab=readme-ov-file#component-version">Component version</a> を参照し、最新のバージョンに書き換えてください。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id26">
-<div class="code-block-caption"><span class="caption-number">リスト 188 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id27">
+<div class="code-block-caption"><span class="caption-number">リスト 323 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>save.sh
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id27">
-<div class="code-block-caption"><span class="caption-number">リスト 189 </span><span class="caption-text">下記のコードをコピー＆ペーストし、バージョンを書き換えます</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id28">
+<div class="code-block-caption"><span class="caption-number">リスト 324 </span><span class="caption-text">下記のコードをコピー＆ペーストし、バージョンを書き換えます</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="nv">ITA_VERSION</span><span class="o">=</span><span class="nv">$1</span>
@@ -564,14 +569,14 @@ readarray<span class="w"> </span>-t<span class="w"> </span>image_list<span class
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id28">
-<div class="code-block-caption"><span class="caption-number">リスト 190 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id29">
+<div class="code-block-caption"><span class="caption-number">リスト 325 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>image.list
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id29">
-<div class="code-block-caption"><span class="caption-number">リスト 191 </span><span class="caption-text">下記のコードをコピー＆ペーストする</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id30">
+<div class="code-block-caption"><span class="caption-number">リスト 326 </span><span class="caption-text">下記のコードをコピー＆ペーストする</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker.io/mariadb:10.9.8
 docker.io/mariadb:10.11.4
 docker.io/gitlab/gitlab-ce:15.11.13-ce.0
@@ -586,6 +591,7 @@ docker.io/exastro/exastro-platform-migration:#__PF_VERSION__#
 docker.io/exastro/exastro-it-automation-api-organization:#__ITA_VERSION__#
 docker.io/exastro/exastro-it-automation-api-admin:#__ITA_VERSION__#
 docker.io/exastro/exastro-it-automation-api-oase-receiver:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-api-ansible-execution-receiver:#__ITA_VERSION__#
 docker.io/exastro/exastro-it-automation-web-server:#__ITA_VERSION__#
 docker.io/exastro/exastro-it-automation-by-ansible-agent:#__ITA_VERSION__#
 docker.io/exastro/exastro-it-automation-by-ansible-execute:#__ITA_VERSION__#
@@ -617,8 +623,8 @@ docker.io/exastro/exastro-it-automation-by-ansible-agent:#__ITA_VERSION__#
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-ZG9ja2Vy" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-ZG9ja2Vy" name="ZG9ja2Vy" role="tab" tabindex="0">docker</button><button aria-controls="panel-0-cG9kbWFu" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-cG9kbWFu" name="cG9kbWFu" role="tab" tabindex="-1">podman</button></div><div aria-labelledby="tab-0-ZG9ja2Vy" class="sphinx-tabs-panel group-tab" id="panel-0-ZG9ja2Vy" name="ZG9ja2Vy" role="tabpanel" tabindex="0"><p>ユーザがグループに追加されていない場合、パーミッションエラーとなることがあります。
 事前に追加作業をしている場合は、ここでの実施は不要です。</p>
-<div class="literal-block-wrapper docutils container" id="id30">
-<div class="code-block-caption"><span class="caption-number">リスト 192 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id31">
+<div class="code-block-caption"><span class="caption-number">リスト 327 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>/etc/group<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>docker
 <span class="c1">#ユーザーがグループに追加されていない場合は以下を実行します</span>
 sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
@@ -630,8 +636,8 @@ sudo<span class="w"> </span>reboot
 </div>
 <p>オンライン環境に接続後、シェルスクリプトを実行しコンテナイメージをダウンロードします。
 引数にはITAのバージョンを指定します。      完了するまでに数十分程度の時間がかかります。(通信環境やサーバースペックによって状況は異なります。)</p>
-<div class="literal-block-wrapper docutils container" id="id31">
-<div class="code-block-caption"><span class="caption-number">リスト 193 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id32">
+<div class="code-block-caption"><span class="caption-number">リスト 328 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id32" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>docker
 sudo<span class="w"> </span>chmod<span class="w"> </span>a+x<span class="w"> </span>save.sh
 sh<span class="w"> </span>./save.sh<span class="w"> </span>x.x.x
@@ -640,8 +646,8 @@ sh<span class="w"> </span>./save.sh<span class="w"> </span>x.x.x
 </div>
 </div><div aria-labelledby="tab-0-cG9kbWFu" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-cG9kbWFu" name="cG9kbWFu" role="tabpanel" tabindex="0"><p>シェルスクリプトを実行しコンテナイメージをダウンロードします。   引数にはITAのバージョンを指定します。
 完了するまでに数十分程度の時間がかかります。(通信環境やサーバースペックによって状況は異なります。)</p>
-<div class="literal-block-wrapper docutils container" id="id32">
-<div class="code-block-caption"><span class="caption-number">リスト 194 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id32" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id33">
+<div class="code-block-caption"><span class="caption-number">リスト 329 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id33" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>chmod<span class="w"> </span>a+x<span class="w"> </span>save.sh
 sh<span class="w"> </span>./save.sh<span class="w"> </span>x.x.x
 </pre></div>
@@ -658,8 +664,8 @@ sh<span class="w"> </span>./save.sh<span class="w"> </span>x.x.x
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-ZG9ja2Vy" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-ZG9ja2Vy" name="ZG9ja2Vy" role="tab" tabindex="0">docker</button><button aria-controls="panel-1-cG9kbWFu" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-cG9kbWFu" name="cG9kbWFu" role="tab" tabindex="-1">podman</button></div><div aria-labelledby="tab-1-ZG9ja2Vy" class="sphinx-tabs-panel group-tab" id="panel-1-ZG9ja2Vy" name="ZG9ja2Vy" role="tabpanel" tabindex="0"><div class="line-block">
 <div class="line">ダウンロード先ディレクトリを/tmp/docker-repo、インストール先ディレクトリを/tmp/docker-installrootとした例です。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id33">
-<div class="code-block-caption"><span class="caption-number">リスト 195 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id33" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id34">
+<div class="code-block-caption"><span class="caption-number">リスト 330 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#リポジトリを追加します</span>
 sudo<span class="w"> </span>dnf<span class="w"> </span>config-manager<span class="w"> </span>--add-repo<span class="o">=</span>https://download.docker.com/linux/centos/docker-ce.repo
 <span class="c1">#現在のOSのバージョンを確認します</span>
@@ -672,8 +678,8 @@ sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> <
 <div class="line-block">
 <div class="line">createrepoをインストールします。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id34">
-<div class="code-block-caption"><span class="caption-number">リスト 196 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id35">
+<div class="code-block-caption"><span class="caption-number">リスト 331 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id35" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>createrepo
 </pre></div>
 </div>
@@ -683,8 +689,8 @@ sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> <
 <div class="line">オフライン環境ではインターネット上のリポジトリサーバーを参照できないため、dnfによるパッケージのインストールができません。</div>
 <div class="line">ローカルリポジトリにパッケージを追加することで、dnfによるパッケージインストールが可能となります。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id35">
-<div class="code-block-caption"><span class="caption-number">リスト 197 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id35" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id36">
+<div class="code-block-caption"><span class="caption-number">リスト 332 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id36" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>createrepo<span class="w"> </span>/tmp/docker-repo
 </pre></div>
 </div>
@@ -692,8 +698,8 @@ sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> <
 </div><div aria-labelledby="tab-1-cG9kbWFu" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-cG9kbWFu" name="cG9kbWFu" role="tabpanel" tabindex="0"><div class="line-block">
 <div class="line">ダウンロード先ディレクトリを/tmp/podman-repo、インストール先ディレクトリを/tmp/podman-installrootとしています。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id36">
-<div class="code-block-caption"><span class="caption-number">リスト 198 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id36" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id37">
+<div class="code-block-caption"><span class="caption-number">リスト 333 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id37" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#現在のOSのバージョンを確認します</span>
 cat<span class="w"> </span>/etc/os-release
 <span class="c1">#--releasever=x.xは上記で得られたバージョンを指定します</span>
@@ -704,8 +710,8 @@ sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> <
 <div class="line-block">
 <div class="line">createrepoをインストールします。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id37">
-<div class="code-block-caption"><span class="caption-number">リスト 199 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id37" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id38">
+<div class="code-block-caption"><span class="caption-number">リスト 334 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id38" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>createrepo
 </pre></div>
 </div>
@@ -715,8 +721,8 @@ sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> <
 <div class="line">オフライン環境ではインターネット上のリポジトリサーバーを参照できないため、dnfによるパッケージのインストールができません。</div>
 <div class="line">ローカルリポジトリにパッケージを追加することで、dnfによるパッケージインストールが可能となります。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id38">
-<div class="code-block-caption"><span class="caption-number">リスト 200 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id38" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id39">
+<div class="code-block-caption"><span class="caption-number">リスト 335 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id39" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>createrepo<span class="w"> </span>/tmp/podman-repo
 </pre></div>
 </div>
@@ -730,8 +736,8 @@ sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> <
 <div class="line">バージョンはリンク先を参照し、必要に応じて書き換えます。</div>
 <div class="line">以下はバージョンを2.28.0とした例です。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id39">
-<div class="code-block-caption"><span class="caption-number">リスト 201 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id39" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id40">
+<div class="code-block-caption"><span class="caption-number">リスト 336 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id40" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-LO<span class="w"> </span>https://github.com/docker/compose/releases/download/v2.28.0/docker-compose-linux-x86_64
 </pre></div>
 </div>
@@ -745,8 +751,8 @@ sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> <
 </div>
 <div class="line">以下は/tmpディレクトリにダウンロードした例です。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id40">
-<div class="code-block-caption"><span class="caption-number">リスト 202 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id40" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id41">
+<div class="code-block-caption"><span class="caption-number">リスト 337 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id41" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/tmp
 curl<span class="w"> </span>-OL<span class="w"> </span>https://github.com/exastro-suite/exastro-docker-compose/archive/main.tar.gz
 </pre></div>
@@ -779,8 +785,8 @@ curl<span class="w"> </span>-OL<span class="w"> </span>https://github.com/exastr
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-ZG9ja2Vy" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-ZG9ja2Vy" name="ZG9ja2Vy" role="tab" tabindex="0">docker</button><button aria-controls="panel-2-cG9kbWFu" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-cG9kbWFu" name="cG9kbWFu" role="tab" tabindex="-1">podman</button></div><div aria-labelledby="tab-2-ZG9ja2Vy" class="sphinx-tabs-panel group-tab" id="panel-2-ZG9ja2Vy" name="ZG9ja2Vy" role="tabpanel" tabindex="0"><div class="line-block">
 <div class="line">ローカルリポジトリの設定ファイルを作成します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id41">
-<div class="code-block-caption"><span class="caption-number">リスト 203 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id41" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id42">
+<div class="code-block-caption"><span class="caption-number">リスト 338 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id42" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>touch<span class="w"> </span>/etc/yum.repos.d/docker-repo.repo
 </pre></div>
 </div>
@@ -788,8 +794,8 @@ curl<span class="w"> </span>-OL<span class="w"> </span>https://github.com/exastr
 <div class="line-block">
 <div class="line">作成した設定ファイルに下記の情報を記載します。(※file: の後ろのスラッシュは3つ)</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id42">
-<div class="code-block-caption"><span class="caption-number">リスト 204 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id42" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id43">
+<div class="code-block-caption"><span class="caption-number">リスト 339 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id43" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>vi<span class="w"> </span>/etc/yum.repos.d/docker-repo.repo
 
 <span class="o">[</span>docker-repo<span class="o">]</span>
@@ -804,8 +810,8 @@ curl<span class="w"> </span>-OL<span class="w"> </span>https://github.com/exastr
 <div class="line-block">
 <div class="line">パッケージをインストールします。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id43">
-<div class="code-block-caption"><span class="caption-number">リスト 205 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id43" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id44">
+<div class="code-block-caption"><span class="caption-number">リスト 340 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id44" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>--disablerepo<span class="o">=</span><span class="se">\*</span><span class="w"> </span>--enablerepo<span class="o">=</span>docker-repo<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span>git<span class="w"> </span>container-selinux
 </pre></div>
 </div>
@@ -813,16 +819,16 @@ curl<span class="w"> </span>-OL<span class="w"> </span>https://github.com/exastr
 <div class="line-block">
 <div class="line">エラーメッセージが表示された場合は、表示されているmoduleを検索し全てインストールします。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id44">
-<div class="code-block-caption"><span class="caption-number">リスト 206 </span><span class="caption-text">メッセージ例</span><a class="headerlink" href="#id44" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id45">
+<div class="code-block-caption"><span class="caption-number">リスト 341 </span><span class="caption-text">メッセージ例</span><a class="headerlink" href="#id45" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>No<span class="w"> </span>available<span class="w"> </span>modular<span class="w"> </span>metadata<span class="w"> </span><span class="k">for</span><span class="w"> </span>modular<span class="w"> </span>package<span class="w"> </span><span class="s1">&#39;perl-Mozilla-CA-20160104-7.module_el8.5.0+2812+ed912d05.noarch&#39;</span>,<span class="w"> </span>it<span class="w"> </span>cannot<span class="w"> </span>be<span class="w"> </span>installed<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>system
 No<span class="w"> </span>available<span class="w"> </span>modular<span class="w"> </span>metadata<span class="w"> </span><span class="k">for</span><span class="w"> </span>modular<span class="w"> </span>package<span class="w"> </span><span class="s1">&#39;perl-Net-SSLeay-1.88-2.module_el8.6.0+2811+fe6c84b0.x86_64&#39;</span>,<span class="w"> </span>it<span class="w"> </span>cannot<span class="w"> </span>be<span class="w"> </span>installed<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>system
 Error:<span class="w"> </span>No<span class="w"> </span>available<span class="w"> </span>modular<span class="w"> </span>metadata<span class="w"> </span><span class="k">for</span><span class="w"> </span>modular<span class="w"> </span>package
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id45">
-<div class="code-block-caption"><span class="caption-number">リスト 207 </span><span class="caption-text">表示されたmoduleを確認し、一度に全てインストールします</span><a class="headerlink" href="#id45" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id46">
+<div class="code-block-caption"><span class="caption-number">リスト 342 </span><span class="caption-text">表示されたmoduleを確認し、一度に全てインストールします</span><a class="headerlink" href="#id46" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#対象がperl-Mozilla-CA 及び perl-Net-SSLeayだった場合</span>
 <span class="nb">cd</span><span class="w"> </span>/tmp/docker-repo
 ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;perl-Mozilla-CA|perl-Net-SSLeay&quot;</span>
@@ -833,8 +839,8 @@ sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span
 <div class="line-block">
 <div class="line">パッケージのインストールを再度実行します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id46">
-<div class="code-block-caption"><span class="caption-number">リスト 208 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id46" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id47">
+<div class="code-block-caption"><span class="caption-number">リスト 343 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id47" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>--disablerepo<span class="o">=</span><span class="se">\*</span><span class="w"> </span>--enablerepo<span class="o">=</span>docker-repo<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span>git<span class="w"> </span>container-selinux
 </pre></div>
 </div>
@@ -842,8 +848,8 @@ sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span
 <div class="line-block">
 <div class="line">ユーザをdockerグループに追加します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id47">
-<div class="code-block-caption"><span class="caption-number">リスト 209 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id47" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id48">
+<div class="code-block-caption"><span class="caption-number">リスト 344 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id48" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>docker
 cat<span class="w"> </span>/etc/group<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>docker
 sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
@@ -857,8 +863,8 @@ sudo<span class="w">  </span>reboot
 </div><div aria-labelledby="tab-2-cG9kbWFu" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-cG9kbWFu" name="cG9kbWFu" role="tabpanel" tabindex="0"><div class="line-block">
 <div class="line">ローカルリポジトリの設定ファイルを作成します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id48">
-<div class="code-block-caption"><span class="caption-number">リスト 210 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id48" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id49">
+<div class="code-block-caption"><span class="caption-number">リスト 345 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id49" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>touch<span class="w"> </span>/etc/yum.repos.d/podman-repo.repo
 </pre></div>
 </div>
@@ -866,8 +872,8 @@ sudo<span class="w">  </span>reboot
 <div class="line-block">
 <div class="line">作成した設定ファイルに下記の情報を記載します。(※file: の後ろのスラッシュは3つ)</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id49">
-<div class="code-block-caption"><span class="caption-number">リスト 211 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id49" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id50">
+<div class="code-block-caption"><span class="caption-number">リスト 346 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id50" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>vi<span class="w"> </span>/etc/yum.repos.d/podman-repo.repo
 
 <span class="o">[</span>podman-repo<span class="o">]</span>
@@ -882,8 +888,8 @@ sudo<span class="w">  </span>reboot
 <div class="line-block">
 <div class="line">パッケージをインストールします。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id50">
-<div class="code-block-caption"><span class="caption-number">リスト 212 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id50" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id51">
+<div class="code-block-caption"><span class="caption-number">リスト 347 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id51" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>--disablerepo<span class="o">=</span><span class="se">\*</span><span class="w"> </span>--enablerepo<span class="o">=</span>podman-repo<span class="w"> </span>install<span class="w"> </span>container-selinux<span class="w"> </span>git<span class="w"> </span>podman<span class="w"> </span>podman-docker
 </pre></div>
 </div>
@@ -897,14 +903,14 @@ sudo<span class="w">  </span>reboot
 <div class="line">これら2つはオンライン環境から持ち込んだコンテナイメージと同じディレクトリに作成する必要があります。なお、image.listはオンライン環境で作成したものと記載内容は同じです。</div>
 <div class="line">また、load.shの「[&quot;x.x.x&quot;]=&quot;x.x.x&quot;」にはsave.shに記載したバージョンと同じ値を記載します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id51">
-<div class="code-block-caption"><span class="caption-number">リスト 213 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id51" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id52">
+<div class="code-block-caption"><span class="caption-number">リスト 348 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id52" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>load.sh
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id52">
-<div class="code-block-caption"><span class="caption-number">リスト 214 </span><span class="caption-text">下記のコードをコピー＆ペーストし、バージョンを書き換えます</span><a class="headerlink" href="#id52" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id53">
+<div class="code-block-caption"><span class="caption-number">リスト 349 </span><span class="caption-text">下記のコードをコピー＆ペーストし、バージョンを書き換えます</span><a class="headerlink" href="#id53" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">ITA_VERSION</span><span class="o">=</span><span class="nv">$1</span>
 <span class="nb">declare</span><span class="w"> </span>-A<span class="w"> </span><span class="nv">PF_VERSION</span><span class="o">=(</span>
 <span class="w">  </span><span class="o">[</span><span class="s2">&quot;x.x.x&quot;</span><span class="o">]=</span><span class="s2">&quot;x.x.x&quot;</span>
@@ -922,14 +928,14 @@ readarray<span class="w"> </span>-t<span class="w"> </span>image_list<span class
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id53">
-<div class="code-block-caption"><span class="caption-number">リスト 215 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id53" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id54">
+<div class="code-block-caption"><span class="caption-number">リスト 350 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id54" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>image.list
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id54">
-<div class="code-block-caption"><span class="caption-number">リスト 216 </span><span class="caption-text">下記のコードをコピー＆ペーストする</span><a class="headerlink" href="#id54" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id55">
+<div class="code-block-caption"><span class="caption-number">リスト 351 </span><span class="caption-text">下記のコードをコピー＆ペーストする</span><a class="headerlink" href="#id55" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker.io/mariadb:10.9.8
 docker.io/mariadb:10.11.4
 docker.io/gitlab/gitlab-ce:15.11.13-ce.0
@@ -944,6 +950,7 @@ docker.io/exastro/exastro-platform-migration:#__PF_VERSION__#
 docker.io/exastro/exastro-it-automation-api-organization:#__ITA_VERSION__#
 docker.io/exastro/exastro-it-automation-api-admin:#__ITA_VERSION__#
 docker.io/exastro/exastro-it-automation-api-oase-receiver:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-api-ansible-execution-receiver:#__ITA_VERSION__#
 docker.io/exastro/exastro-it-automation-web-server:#__ITA_VERSION__#
 docker.io/exastro/exastro-it-automation-by-ansible-agent:#__ITA_VERSION__#
 docker.io/exastro/exastro-it-automation-by-ansible-execute:#__ITA_VERSION__#
@@ -976,8 +983,8 @@ docker.io/exastro/exastro-it-automation-by-ansible-agent:#__ITA_VERSION__#
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-ZG9ja2Vy" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-ZG9ja2Vy" name="ZG9ja2Vy" role="tab" tabindex="0">docker</button><button aria-controls="panel-3-cG9kbWFu" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-cG9kbWFu" name="cG9kbWFu" role="tab" tabindex="-1">podman</button></div><div aria-labelledby="tab-3-ZG9ja2Vy" class="sphinx-tabs-panel group-tab" id="panel-3-ZG9ja2Vy" name="ZG9ja2Vy" role="tabpanel" tabindex="0"><div class="line-block">
 <div class="line">コンテナイメージを実行します。 引数にはsave.sh実行時に指定したITAのバージョンを指定します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id55">
-<div class="code-block-caption"><span class="caption-number">リスト 217 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id55" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id56">
+<div class="code-block-caption"><span class="caption-number">リスト 352 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id56" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>chmod<span class="w"> </span>a+x<span class="w"> </span>load.sh
 sh<span class="w"> </span>./load.sh<span class="w"> </span>x.x.x
 </pre></div>
@@ -986,8 +993,8 @@ sh<span class="w"> </span>./load.sh<span class="w"> </span>x.x.x
 </div><div aria-labelledby="tab-3-cG9kbWFu" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-cG9kbWFu" name="cG9kbWFu" role="tabpanel" tabindex="0"><div class="line-block">
 <div class="line">コンテナイメージを実行します。 引数にはsave.sh実行時に指定したITAのバージョンを指定します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id56">
-<div class="code-block-caption"><span class="caption-number">リスト 218 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id56" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id57">
+<div class="code-block-caption"><span class="caption-number">リスト 353 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id57" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>podman
 sudo<span class="w"> </span>chmod<span class="w"> </span>a+x<span class="w"> </span>load.sh
 sh<span class="w"> </span>./load.sh<span class="w"> </span>x.x.x
@@ -1001,8 +1008,8 @@ sh<span class="w"> </span>./load.sh<span class="w"> </span>x.x.x
 <div class="line-block">
 <div class="line">/usr/local/binに配置したdocker-compose-linux-x86_64に、必要なパーミッションを付与します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id57">
-<div class="code-block-caption"><span class="caption-number">リスト 219 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id57" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id58">
+<div class="code-block-caption"><span class="caption-number">リスト 354 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id58" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/usr/local/bin
 sudo<span class="w"> </span>mv<span class="w"> </span>docker-compose-linux-x86_64<span class="w"> </span>docker-compose
 sudo<span class="w"> </span>chmod<span class="w"> </span>a+x<span class="w"> </span>/usr/local/bin/docker-compose
@@ -1016,8 +1023,8 @@ sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>
 <div class="line-block">
 <div class="line">docker-compose版Exastroのリソースを一般ユーザーのホームディレクトリ直下に展開し、ディレクトリ名をexastro-docker-composeに変更します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id58">
-<div class="code-block-caption"><span class="caption-number">リスト 220 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id58" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id59">
+<div class="code-block-caption"><span class="caption-number">リスト 355 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id59" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>-zxvf<span class="w"> </span>main.tar.gz
 sudo<span class="w"> </span>mv<span class="w"> </span>exastro-docker-compose-main<span class="w"> </span>exastro-docker-compose
 </pre></div>
@@ -1027,14 +1034,14 @@ sudo<span class="w"> </span>mv<span class="w"> </span>exastro-docker-compose-mai
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-ZG9ja2Vy" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-ZG9ja2Vy" name="ZG9ja2Vy" role="tab" tabindex="0">docker</button><button aria-controls="panel-4-cG9kbWFu" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-cG9kbWFu" name="cG9kbWFu" role="tab" tabindex="-1">podman</button></div><div aria-labelledby="tab-4-ZG9ja2Vy" class="sphinx-tabs-panel group-tab" id="panel-4-ZG9ja2Vy" name="ZG9ja2Vy" role="tabpanel" tabindex="0"><div class="line-block">
 <div class="line">SELinuxの動作モードをSELINUX=permissiveに書き替えます。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id59">
-<div class="code-block-caption"><span class="caption-number">リスト 221 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id59" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id60">
+<div class="code-block-caption"><span class="caption-number">リスト 356 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id60" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>sudo<span class="w"> </span>vi<span class="w"> </span>/etc/selinux/config
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id60">
-<div class="code-block-caption"><span class="caption-number">リスト 222 </span><span class="caption-text">/etc/selinux/config記載例</span><a class="headerlink" href="#id60" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id61">
+<div class="code-block-caption"><span class="caption-number">リスト 357 </span><span class="caption-text">/etc/selinux/config記載例</span><a class="headerlink" href="#id61" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># This file controls the state of SELinux on the system.</span>
 <span class="c1"># SELINUX= can take one of these three values:</span>
 <span class="c1">#     enforcing - SELinux security policy is enforced.</span>
@@ -1064,8 +1071,8 @@ sudo<span class="w"> </span>mv<span class="w"> </span>exastro-docker-compose-mai
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id61">
-<div class="code-block-caption"><span class="caption-number">リスト 223 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id61" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id62">
+<div class="code-block-caption"><span class="caption-number">リスト 358 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id62" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>reboot
 <span class="c1">#再度オフライン環境に接続します。</span>
 </pre></div>
@@ -1074,8 +1081,8 @@ sudo<span class="w"> </span>mv<span class="w"> </span>exastro-docker-compose-mai
 <div class="line-block">
 <div class="line">ここで使用するsetup.shはExastro on Docker Compose - Onlineで使用しているものと共通です。リポジトリの設定をコメントアウトするため、下記を実施します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id62">
-<div class="code-block-caption"><span class="caption-number">リスト 224 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id62" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id63">
+<div class="code-block-caption"><span class="caption-number">リスト 359 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id63" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/sudo dnf config-manager/#sudo dnf config-manager/&#39;</span><span class="w"> </span>setup.sh
 </pre></div>
 </div>
@@ -1083,8 +1090,8 @@ sudo<span class="w"> </span>mv<span class="w"> </span>exastro-docker-compose-mai
 <div class="line-block">
 <div class="line">Exastro ServiceのパッケージとExastro source fileのインストールを行います。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id63">
-<div class="code-block-caption"><span class="caption-number">リスト 225 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id63" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id64">
+<div class="code-block-caption"><span class="caption-number">リスト 360 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id64" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/exastro-docker-compose<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sh<span class="w"> </span>./setup.sh<span class="w"> </span>install
 </pre></div>
 </div>
@@ -1095,47 +1102,47 @@ sudo<span class="w"> </span>mv<span class="w"> </span>exastro-docker-compose-mai
 <div class="line">そのまま Exastro システムのコンテナ群を起動する場合は、<strong class="command">y</strong> もしくは <strong class="command">yes</strong> と入力します。</div>
 <div class="line">Exastro システムのデプロイには数分～数十分程度の時間が掛かります。(通信環境やサーバースペックによって状況は異なります。)</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id64">
-<div class="code-block-caption"><span class="caption-number">リスト 226 </span><span class="caption-text">OASE コンテナデプロイ要否の確認</span><a class="headerlink" href="#id64" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id65">
+<div class="code-block-caption"><span class="caption-number">リスト 361 </span><span class="caption-text">OASE コンテナデプロイ要否の確認</span><a class="headerlink" href="#id65" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Deploy<span class="w"> </span>OASE<span class="w"> </span>container<span class="w"> </span>?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>y<span class="o">]</span>:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id65">
-<div class="code-block-caption"><span class="caption-number">リスト 227 </span><span class="caption-text">Gitlab コンテナデプロイ要否の確認</span><a class="headerlink" href="#id65" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id66">
+<div class="code-block-caption"><span class="caption-number">リスト 362 </span><span class="caption-text">Gitlab コンテナデプロイ要否の確認</span><a class="headerlink" href="#id66" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Deploy<span class="w"> </span>Gitlab<span class="w"> </span>containser?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>n<span class="o">]</span>:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id66">
-<div class="code-block-caption"><span class="caption-number">リスト 228 </span><span class="caption-text">パスワードとトークンの自動作成の確認</span><a class="headerlink" href="#id66" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id67">
+<div class="code-block-caption"><span class="caption-number">リスト 363 </span><span class="caption-text">パスワードとトークンの自動作成の確認</span><a class="headerlink" href="#id67" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Generate<span class="w"> </span>all<span class="w"> </span>password<span class="w"> </span>and<span class="w"> </span>token<span class="w"> </span>automatically?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>y<span class="o">]</span>:
 </pre></div>
 </div>
 </div>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-5-aHR0cHPmmpflj7fljJbpgJrkv6E=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-aHR0cHPmmpflj7fljJbpgJrkv6E=" name="aHR0cHPmmpflj7fljJbpgJrkv6E=" role="tab" tabindex="0">https暗号化通信</button><button aria-controls="panel-5-aHR0cOmAmuS/oQ==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-aHR0cOmAmuS/oQ==" name="aHR0cOmAmuS/oQ==" role="tab" tabindex="-1">http通信</button></div><div aria-labelledby="tab-5-aHR0cHPmmpflj7fljJbpgJrkv6E=" class="sphinx-tabs-panel group-tab" id="panel-5-aHR0cHPmmpflj7fljJbpgJrkv6E=" name="aHR0cHPmmpflj7fljJbpgJrkv6E=" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id67">
-<div class="code-block-caption"><span class="caption-number">リスト 229 </span><span class="caption-text">Exastro サービスのURL</span><a class="headerlink" href="#id67" title="Link to this code">¶</a></div>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-5-aHR0cHPmmpflj7fljJbpgJrkv6E=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-aHR0cHPmmpflj7fljJbpgJrkv6E=" name="aHR0cHPmmpflj7fljJbpgJrkv6E=" role="tab" tabindex="0">https暗号化通信</button><button aria-controls="panel-5-aHR0cOmAmuS/oQ==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-aHR0cOmAmuS/oQ==" name="aHR0cOmAmuS/oQ==" role="tab" tabindex="-1">http通信</button></div><div aria-labelledby="tab-5-aHR0cHPmmpflj7fljJbpgJrkv6E=" class="sphinx-tabs-panel group-tab" id="panel-5-aHR0cHPmmpflj7fljJbpgJrkv6E=" name="aHR0cHPmmpflj7fljJbpgJrkv6E=" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id68">
+<div class="code-block-caption"><span class="caption-number">リスト 364 </span><span class="caption-text">Exastro サービスのURL</span><a class="headerlink" href="#id68" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#ポート番号は、OSがRed Hat Enterprise Linuxの場合は30080、それ以外は80を指定してください。</span>
 Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> </span>service<span class="w"> </span>URL:<span class="w"> </span>https://ita.example.com:30080
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id68">
-<div class="code-block-caption"><span class="caption-number">リスト 230 </span><span class="caption-text">Exastro 管理用サービスのURL</span><a class="headerlink" href="#id68" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id69">
+<div class="code-block-caption"><span class="caption-number">リスト 365 </span><span class="caption-text">Exastro 管理用サービスのURL</span><a class="headerlink" href="#id69" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#ポート番号は、OSがRed Hat Enterprise Linuxの場合は30081、それ以外は81を指定してください。</span>
 Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> </span>management<span class="w"> </span>URL:<span class="w"> </span>https://ita.example.com:30081
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id69">
-<div class="code-block-caption"><span class="caption-number">リスト 231 </span><span class="caption-text">自己署名のSSL/TLS証明書生成の有無 (上記の「Exastro サービスのURL/Exastro 管理用サービスのURL」がhttpsの場合)</span><a class="headerlink" href="#id69" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id70">
+<div class="code-block-caption"><span class="caption-number">リスト 366 </span><span class="caption-text">自己署名のSSL/TLS証明書生成の有無 (上記の「Exastro サービスのURL/Exastro 管理用サービスのURL」がhttpsの場合)</span><a class="headerlink" href="#id70" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Generate<span class="w"> </span>self-signed<span class="w"> </span>SSL<span class="w"> </span>certificate?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>y<span class="o">]</span>:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id70">
-<div class="code-block-caption"><span class="caption-number">リスト 232 </span><span class="caption-text">サーバ証明書/秘密鍵ファイルパス (上記の「自己署名のSSL/TLS証明書生成の有無」でnの場合)</span><a class="headerlink" href="#id70" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id71">
+<div class="code-block-caption"><span class="caption-number">リスト 367 </span><span class="caption-text">サーバ証明書/秘密鍵ファイルパス (上記の「自己署名のSSL/TLS証明書生成の有無」でnの場合)</span><a class="headerlink" href="#id71" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#certificate file pathは サーバー証明書のファイルパスを、private-key file pathは 秘密鍵ファイルのファイルパスを指定してください。</span>
 Input<span class="w"> </span>path<span class="w"> </span>to<span class="w"> </span>your<span class="w"> </span>SSL<span class="w"> </span>certificate<span class="w"> </span>file.
 certificate<span class="w"> </span>file<span class="w"> </span>path:
@@ -1143,30 +1150,30 @@ private-key<span class="w"> </span>file<span class="w"> </span>path:
 </pre></div>
 </div>
 </div>
-</div><div aria-labelledby="tab-5-aHR0cOmAmuS/oQ==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-5-aHR0cOmAmuS/oQ==" name="aHR0cOmAmuS/oQ==" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id71">
-<div class="code-block-caption"><span class="caption-number">リスト 233 </span><span class="caption-text">Exastro サービスのURL</span><a class="headerlink" href="#id71" title="Link to this code">¶</a></div>
+</div><div aria-labelledby="tab-5-aHR0cOmAmuS/oQ==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-5-aHR0cOmAmuS/oQ==" name="aHR0cOmAmuS/oQ==" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id72">
+<div class="code-block-caption"><span class="caption-number">リスト 368 </span><span class="caption-text">Exastro サービスのURL</span><a class="headerlink" href="#id72" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#ポート番号は、OSがRed Hat Enterprise Linuxの場合は30080、それ以外は80を指定してください。</span>
 Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> </span>service<span class="w"> </span>URL:<span class="w"> </span>http://ita.example.com:30080
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id72">
-<div class="code-block-caption"><span class="caption-number">リスト 234 </span><span class="caption-text">Exastro 管理用サービスのURL</span><a class="headerlink" href="#id72" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id73">
+<div class="code-block-caption"><span class="caption-number">リスト 369 </span><span class="caption-text">Exastro 管理用サービスのURL</span><a class="headerlink" href="#id73" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#ポート番号は、OSがRed Hat Enterprise Linuxの場合は30081、それ以外は81を指定してください。</span>
 Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> </span>management<span class="w"> </span>URL:<span class="w"> </span>http://ita.example.com:30081
 </pre></div>
 </div>
 </div>
 </div></div>
-<div class="literal-block-wrapper docutils container" id="id73">
-<div class="code-block-caption"><span class="caption-number">リスト 235 </span><span class="caption-text">Gitlab コンテナのURL(Gitlab コンテナをデプロイする場合は入力が必要です。)</span><a class="headerlink" href="#id73" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id74">
+<div class="code-block-caption"><span class="caption-number">リスト 370 </span><span class="caption-text">Gitlab コンテナのURL(Gitlab コンテナをデプロイする場合は入力が必要です。)</span><a class="headerlink" href="#id74" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#ポート番号は40080を指定してください。</span>
 Input<span class="w"> </span>the<span class="w"> </span>external<span class="w"> </span>URL<span class="w"> </span>of<span class="w"> </span>Gitlab<span class="w"> </span>container<span class="w">  </span><span class="o">[</span>default:<span class="w"> </span><span class="o">(</span>nothing<span class="o">)]</span>:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id74">
-<div class="code-block-caption"><span class="caption-number">リスト 236 </span><span class="caption-text">設定ファイルの生成の確認</span><a class="headerlink" href="#id74" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id75">
+<div class="code-block-caption"><span class="caption-number">リスト 371 </span><span class="caption-text">設定ファイルの生成の確認</span><a class="headerlink" href="#id75" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>System<span class="w"> </span>parametes<span class="w"> </span>are<span class="w"> </span>bellow.
 
 System<span class="w"> </span>administrator<span class="w"> </span>password:<span class="w">    </span>********
@@ -1186,27 +1193,27 @@ Generate<span class="w"> </span>.env<span class="w"> </span>file<span class="w">
 <div class="line-block">
 <div class="line">サーバーを再起動します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id75">
-<div class="code-block-caption"><span class="caption-number">リスト 237 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id75" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id76">
+<div class="code-block-caption"><span class="caption-number">リスト 372 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id76" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>reboot
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id76">
-<div class="code-block-caption"><span class="caption-number">リスト 238 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id76" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id77">
+<div class="code-block-caption"><span class="caption-number">リスト 373 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id77" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/exastro-docker-compose<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sh<span class="w"> </span>./setup.sh<span class="w"> </span>install
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id77">
-<div class="code-block-caption"><span class="caption-number">リスト 239 </span><span class="caption-text">.env再作成の確認</span><a class="headerlink" href="#id77" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id78">
+<div class="code-block-caption"><span class="caption-number">リスト 374 </span><span class="caption-text">.env再作成の確認</span><a class="headerlink" href="#id78" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#何も入力せずにEnterを押下します。</span>
 Regenerate<span class="w"> </span>.env<span class="w"> </span>file?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>n<span class="o">]</span>:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id78">
-<div class="code-block-caption"><span class="caption-number">リスト 240 </span><span class="caption-text">Exastroコンテナのデプロイ確認</span><a class="headerlink" href="#id78" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id79">
+<div class="code-block-caption"><span class="caption-number">リスト 375 </span><span class="caption-text">Exastroコンテナのデプロイ確認</span><a class="headerlink" href="#id79" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#yを入力します。</span>
 Deploy<span class="w"> </span>Exastro<span class="w"> </span>containers<span class="w"> </span>now?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>n<span class="o">]</span>:
 </pre></div>
@@ -1215,8 +1222,8 @@ Deploy<span class="w"> </span>Exastro<span class="w"> </span>containers<span cla
 <div class="line-block">
 <div class="line">コンテナのSTATUSがUPになっていることを確認します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id79">
-<div class="code-block-caption"><span class="caption-number">リスト 241 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id79" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id80">
+<div class="code-block-caption"><span class="caption-number">リスト 376 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id80" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>ps
 </pre></div>
 </div>
@@ -1224,14 +1231,14 @@ Deploy<span class="w"> </span>Exastro<span class="w"> </span>containers<span cla
 </div><div aria-labelledby="tab-4-cG9kbWFu" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-4-cG9kbWFu" name="cG9kbWFu" role="tabpanel" tabindex="0"><div class="line-block">
 <div class="line">SELinuxの動作モードをSELINUX=permissiveに書き替えます。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id80">
-<div class="code-block-caption"><span class="caption-number">リスト 242 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id80" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id81">
+<div class="code-block-caption"><span class="caption-number">リスト 377 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id81" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>sudo<span class="w"> </span>vi<span class="w"> </span>/etc/selinux/config
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id81">
-<div class="code-block-caption"><span class="caption-number">リスト 243 </span><span class="caption-text">/etc/selinux/config記載例</span><a class="headerlink" href="#id81" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id82">
+<div class="code-block-caption"><span class="caption-number">リスト 378 </span><span class="caption-text">/etc/selinux/config記載例</span><a class="headerlink" href="#id82" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># This file controls the state of SELinux on the system.</span>
 <span class="c1"># SELINUX= can take one of these three values:</span>
 <span class="c1">#     enforcing - SELinux security policy is enforced.</span>
@@ -1261,8 +1268,8 @@ Deploy<span class="w"> </span>Exastro<span class="w"> </span>containers<span cla
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id82">
-<div class="code-block-caption"><span class="caption-number">リスト 244 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id82" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id83">
+<div class="code-block-caption"><span class="caption-number">リスト 379 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id83" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>reboot
 <span class="c1">#再度オフライン環境に接続します。</span>
 </pre></div>
@@ -1271,8 +1278,8 @@ Deploy<span class="w"> </span>Exastro<span class="w"> </span>containers<span cla
 <div class="line-block">
 <div class="line">Exastro ServiceのパッケージとExastro source fileのインストールを行います。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id83">
-<div class="code-block-caption"><span class="caption-number">リスト 245 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id83" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id84">
+<div class="code-block-caption"><span class="caption-number">リスト 380 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id84" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/exastro-docker-compose<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sh<span class="w"> </span>./setup.sh<span class="w"> </span>install
 </pre></div>
 </div>
@@ -1283,47 +1290,47 @@ Deploy<span class="w"> </span>Exastro<span class="w"> </span>containers<span cla
 <div class="line">そのまま Exastro システムのコンテナ群を起動する場合は、<strong class="command">y</strong> もしくは <strong class="command">yes</strong> と入力します。</div>
 <div class="line">Exastro システムのデプロイには数分～数十分程度の時間が掛かります。(通信環境やサーバースペックによって状況は異なります。)</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id84">
-<div class="code-block-caption"><span class="caption-number">リスト 246 </span><span class="caption-text">OASE コンテナデプロイ要否の確認</span><a class="headerlink" href="#id84" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id85">
+<div class="code-block-caption"><span class="caption-number">リスト 381 </span><span class="caption-text">OASE コンテナデプロイ要否の確認</span><a class="headerlink" href="#id85" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Deploy<span class="w"> </span>OASE<span class="w"> </span>container<span class="w"> </span>URL?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>y<span class="o">]</span>:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id85">
-<div class="code-block-caption"><span class="caption-number">リスト 247 </span><span class="caption-text">Gitlab コンテナデプロイ要否の確認</span><a class="headerlink" href="#id85" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id86">
+<div class="code-block-caption"><span class="caption-number">リスト 382 </span><span class="caption-text">Gitlab コンテナデプロイ要否の確認</span><a class="headerlink" href="#id86" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Deploy<span class="w"> </span>Gitlab<span class="w"> </span>containser?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>n<span class="o">]</span>:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id86">
-<div class="code-block-caption"><span class="caption-number">リスト 248 </span><span class="caption-text">パスワードとトークンの自動作成の確認</span><a class="headerlink" href="#id86" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id87">
+<div class="code-block-caption"><span class="caption-number">リスト 383 </span><span class="caption-text">パスワードとトークンの自動作成の確認</span><a class="headerlink" href="#id87" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Generate<span class="w"> </span>all<span class="w"> </span>password<span class="w"> </span>and<span class="w"> </span>token<span class="w"> </span>automatically?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>y<span class="o">]</span>:
 </pre></div>
 </div>
 </div>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-6-aHR0cHPmmpflj7fljJbpgJrkv6E=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-6-aHR0cHPmmpflj7fljJbpgJrkv6E=" name="aHR0cHPmmpflj7fljJbpgJrkv6E=" role="tab" tabindex="0">https暗号化通信</button><button aria-controls="panel-6-aHR0cOmAmuS/oQ==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-aHR0cOmAmuS/oQ==" name="aHR0cOmAmuS/oQ==" role="tab" tabindex="-1">http通信</button></div><div aria-labelledby="tab-6-aHR0cHPmmpflj7fljJbpgJrkv6E=" class="sphinx-tabs-panel group-tab" id="panel-6-aHR0cHPmmpflj7fljJbpgJrkv6E=" name="aHR0cHPmmpflj7fljJbpgJrkv6E=" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id87">
-<div class="code-block-caption"><span class="caption-number">リスト 249 </span><span class="caption-text">Exastro サービスのURL</span><a class="headerlink" href="#id87" title="Link to this code">¶</a></div>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-6-aHR0cHPmmpflj7fljJbpgJrkv6E=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-6-aHR0cHPmmpflj7fljJbpgJrkv6E=" name="aHR0cHPmmpflj7fljJbpgJrkv6E=" role="tab" tabindex="0">https暗号化通信</button><button aria-controls="panel-6-aHR0cOmAmuS/oQ==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-aHR0cOmAmuS/oQ==" name="aHR0cOmAmuS/oQ==" role="tab" tabindex="-1">http通信</button></div><div aria-labelledby="tab-6-aHR0cHPmmpflj7fljJbpgJrkv6E=" class="sphinx-tabs-panel group-tab" id="panel-6-aHR0cHPmmpflj7fljJbpgJrkv6E=" name="aHR0cHPmmpflj7fljJbpgJrkv6E=" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id88">
+<div class="code-block-caption"><span class="caption-number">リスト 384 </span><span class="caption-text">Exastro サービスのURL</span><a class="headerlink" href="#id88" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#ポート番号は、OSがRed Hat Enterprise Linuxの場合は30080、それ以外は80を指定してください。</span>
 Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> </span>service<span class="w"> </span>URL:<span class="w"> </span>https://ita.example.com:30080
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id88">
-<div class="code-block-caption"><span class="caption-number">リスト 250 </span><span class="caption-text">Exastro 管理用サービスのURL</span><a class="headerlink" href="#id88" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id89">
+<div class="code-block-caption"><span class="caption-number">リスト 385 </span><span class="caption-text">Exastro 管理用サービスのURL</span><a class="headerlink" href="#id89" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#ポート番号は、OSがRed Hat Enterprise Linuxの場合は30081、それ以外は81を指定してください。</span>
 Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> </span>management<span class="w"> </span>URL:<span class="w"> </span>https://ita.example.com:30081
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id89">
-<div class="code-block-caption"><span class="caption-number">リスト 251 </span><span class="caption-text">自己署名のSSL/TLS証明書生成の有無 (上記の「Exastro サービスのURL/Exastro 管理用サービスのURL」がhttpsの場合)</span><a class="headerlink" href="#id89" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id90">
+<div class="code-block-caption"><span class="caption-number">リスト 386 </span><span class="caption-text">自己署名のSSL/TLS証明書生成の有無 (上記の「Exastro サービスのURL/Exastro 管理用サービスのURL」がhttpsの場合)</span><a class="headerlink" href="#id90" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Generate<span class="w"> </span>self-signed<span class="w"> </span>SSL<span class="w"> </span>certificate?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>y<span class="o">]</span>:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id90">
-<div class="code-block-caption"><span class="caption-number">リスト 252 </span><span class="caption-text">サーバ証明書/秘密鍵ファイルパス (上記の「自己署名のSSL/TLS証明書生成の有無」でnの場合)</span><a class="headerlink" href="#id90" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id91">
+<div class="code-block-caption"><span class="caption-number">リスト 387 </span><span class="caption-text">サーバ証明書/秘密鍵ファイルパス (上記の「自己署名のSSL/TLS証明書生成の有無」でnの場合)</span><a class="headerlink" href="#id91" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#certificate file pathは サーバー証明書のファイルパスを、private-key file pathは 秘密鍵ファイルのファイルパスを指定してください。</span>
 Input<span class="w"> </span>path<span class="w"> </span>to<span class="w"> </span>your<span class="w"> </span>SSL<span class="w"> </span>certificate<span class="w"> </span>file.
 certificate<span class="w"> </span>file<span class="w"> </span>path:
@@ -1331,30 +1338,30 @@ private-key<span class="w"> </span>file<span class="w"> </span>path:
 </pre></div>
 </div>
 </div>
-</div><div aria-labelledby="tab-6-aHR0cOmAmuS/oQ==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-6-aHR0cOmAmuS/oQ==" name="aHR0cOmAmuS/oQ==" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id91">
-<div class="code-block-caption"><span class="caption-number">リスト 253 </span><span class="caption-text">Exastro サービスのURL</span><a class="headerlink" href="#id91" title="Link to this code">¶</a></div>
+</div><div aria-labelledby="tab-6-aHR0cOmAmuS/oQ==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-6-aHR0cOmAmuS/oQ==" name="aHR0cOmAmuS/oQ==" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id92">
+<div class="code-block-caption"><span class="caption-number">リスト 388 </span><span class="caption-text">Exastro サービスのURL</span><a class="headerlink" href="#id92" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#ポート番号は、OSがRed Hat Enterprise Linuxの場合は30080、それ以外は80を指定してください。</span>
 Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> </span>service<span class="w"> </span>URL:<span class="w"> </span>http://ita.example.com:30080
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id92">
-<div class="code-block-caption"><span class="caption-number">リスト 254 </span><span class="caption-text">Exastro 管理用サービスのURL</span><a class="headerlink" href="#id92" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id93">
+<div class="code-block-caption"><span class="caption-number">リスト 389 </span><span class="caption-text">Exastro 管理用サービスのURL</span><a class="headerlink" href="#id93" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#ポート番号は、OSがRed Hat Enterprise Linuxの場合は30081、それ以外は81を指定してください。</span>
 Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> </span>management<span class="w"> </span>URL:<span class="w"> </span>http://ita.example.com:30081
 </pre></div>
 </div>
 </div>
 </div></div>
-<div class="literal-block-wrapper docutils container" id="id93">
-<div class="code-block-caption"><span class="caption-number">リスト 255 </span><span class="caption-text">GitLab コンテナデプロイ要否の確認(Gitlab コンテナをデプロイする場合は入力が必要です。)</span><a class="headerlink" href="#id93" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id94">
+<div class="code-block-caption"><span class="caption-number">リスト 390 </span><span class="caption-text">GitLab コンテナデプロイ要否の確認(Gitlab コンテナをデプロイする場合は入力が必要です。)</span><a class="headerlink" href="#id94" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#ポート番号は40080を指定してください。</span>
 Input<span class="w"> </span>the<span class="w"> </span>external<span class="w"> </span>URL<span class="w"> </span>of<span class="w"> </span>Gitlab<span class="w"> </span>container<span class="w">  </span><span class="o">[</span>default:<span class="w"> </span><span class="o">(</span>nothing<span class="o">)]</span>:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id94">
-<div class="code-block-caption"><span class="caption-number">リスト 256 </span><span class="caption-text">設定ファイルの生成の確認</span><a class="headerlink" href="#id94" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id95">
+<div class="code-block-caption"><span class="caption-number">リスト 391 </span><span class="caption-text">設定ファイルの生成の確認</span><a class="headerlink" href="#id95" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>System<span class="w"> </span>parametes<span class="w"> </span>are<span class="w"> </span>bellow.
 
 System<span class="w"> </span>administrator<span class="w"> </span>password:<span class="w">    </span>********
@@ -1374,27 +1381,27 @@ Generate<span class="w"> </span>.env<span class="w"> </span>file<span class="w">
 <div class="line-block">
 <div class="line">サーバーを再起動します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id95">
-<div class="code-block-caption"><span class="caption-number">リスト 257 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id95" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id96">
+<div class="code-block-caption"><span class="caption-number">リスト 392 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id96" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>reboot
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id96">
-<div class="code-block-caption"><span class="caption-number">リスト 258 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id96" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id97">
+<div class="code-block-caption"><span class="caption-number">リスト 393 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id97" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/exastro-docker-compose<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sh<span class="w"> </span>./setup.sh<span class="w"> </span>install
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id97">
-<div class="code-block-caption"><span class="caption-number">リスト 259 </span><span class="caption-text">.env再作成の確認</span><a class="headerlink" href="#id97" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id98">
+<div class="code-block-caption"><span class="caption-number">リスト 394 </span><span class="caption-text">.env再作成の確認</span><a class="headerlink" href="#id98" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#何も入力せずにEnterを押下します。</span>
 Regenerate<span class="w"> </span>.env<span class="w"> </span>file?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>n<span class="o">]</span>:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id98">
-<div class="code-block-caption"><span class="caption-number">リスト 260 </span><span class="caption-text">Exastroコンテナのデプロイ確認</span><a class="headerlink" href="#id98" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id99">
+<div class="code-block-caption"><span class="caption-number">リスト 395 </span><span class="caption-text">Exastroコンテナのデプロイ確認</span><a class="headerlink" href="#id99" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#yを入力します。</span>
 Deploy<span class="w"> </span>Exastro<span class="w"> </span>containers<span class="w"> </span>now?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>n<span class="o">]</span>:
 </pre></div>
@@ -1403,29 +1410,201 @@ Deploy<span class="w"> </span>Exastro<span class="w"> </span>containers<span cla
 <div class="line-block">
 <div class="line">コンテナのSTATUSがUPになっていることを確認します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id99">
-<div class="code-block-caption"><span class="caption-number">リスト 261 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id99" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id100">
+<div class="code-block-caption"><span class="caption-number">リスト 396 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id100" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>podman<span class="w"> </span>ps
 </pre></div>
 </div>
 </div>
 </div></div>
 </section>
-</section>
 <section id="id16">
-<h2>ログイン<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h2>
+<h3>⑩カスタムイメージのビルド(必要な場合)<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Ansible-Coreでの作業時に、独自に作成した共通モジュールを事前にインストールしたもの等カスタム化を施したAnsible実行イメージを使用する場合は、</div>
+<div class="line">カスタム化を施したイメージをオフライン環境にてビルドするか、予めオンライン環境から転送しておき、</div>
+<div class="line">設定ファイル(.env)で指定した「レポジトリ名称:タグ」と一致させておく必要があります。</div>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-7-ZG9ja2Vy" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-7-ZG9ja2Vy" name="ZG9ja2Vy" role="tab" tabindex="0">docker</button><button aria-controls="panel-7-cG9kbWFu" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-7-cG9kbWFu" name="cG9kbWFu" role="tab" tabindex="-1">podman</button></div><div aria-labelledby="tab-7-ZG9ja2Vy" class="sphinx-tabs-panel group-tab" id="panel-7-ZG9ja2Vy" name="ZG9ja2Vy" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">該当するカスタム化を施したイメージが存在していることを確認します。</div>
+<div class="line"><br /></div>
+<div class="line">・ 現在の設定値を確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id101">
+<div class="code-block-caption"><span class="caption-number">リスト 397 </span><span class="caption-text">設定値確認用コマンド(オフライン環境)</span><a class="headerlink" href="#id101" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>~/exastro-docker-compose/.env<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;ANSIBLE_AGENT_IMAGE|ANSIBLE_AGENT_IMAGE_TAG&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">　 ANSIBLE_AGENT_IMAGE：「レポジトリ名称」の指定</div>
+<div class="line">　 ANSIBLE_AGENT_IMAGE_TAG：「タグ」の指定  となります。</div>
+<div class="line">　 (コメントアウトされている場合は既定値が使用されます)</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id102">
+<div class="code-block-caption"><span class="caption-number">リスト 398 </span><span class="caption-text">設定値確認結果出力例(オフライン環境)</span><a class="headerlink" href="#id102" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">ANSIBLE_AGENT_IMAGE</span><span class="o">=</span>my-exastro-ansible-agent-custom
+<span class="nv">ANSIBLE_AGENT_IMAGE_TAG</span><span class="o">=</span><span class="m">2</span>.5.3
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">・ 上記で指定されたイメージが存在していることを確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id103">
+<div class="code-block-caption"><span class="caption-number">リスト 399 </span><span class="caption-text">イメージ確認用コマンド(オフライン環境)</span><a class="headerlink" href="#id103" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>images<span class="w"> </span>&lt;ANSIBLE_AGENT_IMAGEの値&gt;:&lt;ANSIBLE_AGENT_IMAGE_TAGの値&gt;
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id104">
+<div class="code-block-caption"><span class="caption-number">リスト 400 </span><span class="caption-text">イメージ確認結果出力例(オフライン環境)</span><a class="headerlink" href="#id104" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>REPOSITORY<span class="w">                        </span>TAG<span class="w">       </span>IMAGE<span class="w"> </span>ID<span class="w">       </span>CREATED<span class="w">       </span>SIZE
+my-exastro-ansible-agent-custom<span class="w">   </span><span class="m">2</span>.5.3<span class="w">     </span>c73215585c2f<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">   </span>962MB
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">表示されない場合は、該当するカスタム化を施したイメージをビルドする必要があります。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id105">
+<div class="code-block-caption"><span class="caption-number">リスト 401 </span><span class="caption-text">ビルド用コマンド例(オフライン環境)</span><a class="headerlink" href="#id105" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="o">{</span>カスタム用のdocker-compose.yamlが存在するディレクトリ<span class="o">}</span>
+docker<span class="w"> </span>compose<span class="w"> </span>build
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">別途、オンライン環境から転送することも可能です。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id106">
+<div class="code-block-caption"><span class="caption-number">リスト 402 </span><span class="caption-text">イメージエクスポート用コマンド例(オンライン環境)</span><a class="headerlink" href="#id106" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>save<span class="w"> </span>&lt;ANSIBLE_AGENT_IMAGEの値&gt;:&lt;ANSIBLE_AGENT_IMAGE_TAGの値&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>-c<span class="w"> </span>&gt;<span class="w"> </span><span class="m">2</span>.5.3/my-exastro-ansible-agent-custom.tar.gz
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id107">
+<div class="code-block-caption"><span class="caption-number">リスト 403 </span><span class="caption-text">イメージインポート用コマンド例(オフライン環境)</span><a class="headerlink" href="#id107" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>load<span class="w">  </span>&lt;<span class="w"> </span><span class="m">2</span>.5.3/my-exastro-ansible-agent-custom.tar.gz
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">該当するカスタム化を施したイメージが表示されることを確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id108">
+<div class="code-block-caption"><span class="caption-number">リスト 404 </span><span class="caption-text">イメージ確認用コマンド(オフライン環境)</span><a class="headerlink" href="#id108" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>images<span class="w"> </span>&lt;ANSIBLE_AGENT_IMAGEの値&gt;:&lt;ANSIBLE_AGENT_IMAGE_TAGの値&gt;
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id109">
+<div class="code-block-caption"><span class="caption-number">リスト 405 </span><span class="caption-text">イメージ確認結果出力例(オフライン環境)</span><a class="headerlink" href="#id109" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>REPOSITORY<span class="w">                        </span>TAG<span class="w">       </span>IMAGE<span class="w"> </span>ID<span class="w">       </span>CREATED<span class="w">       </span>SIZE
+my-exastro-ansible-agent-custom<span class="w">   </span><span class="m">2</span>.5.3<span class="w">     </span>c73215585c2f<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">   </span>962MB
+</pre></div>
+</div>
+</div>
+</div><div aria-labelledby="tab-7-cG9kbWFu" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-7-cG9kbWFu" name="cG9kbWFu" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">該当するカスタム化を施したイメージが存在していることを確認します。</div>
+<div class="line"><br /></div>
+<div class="line">・ 現在の設定値を確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id110">
+<div class="code-block-caption"><span class="caption-number">リスト 406 </span><span class="caption-text">設定値確認用コマンド(オフライン環境)</span><a class="headerlink" href="#id110" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>~/exastro-docker-compose/.env<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;ANSIBLE_AGENT_IMAGE|ANSIBLE_AGENT_IMAGE_TAG&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">　 ANSIBLE_AGENT_IMAGE：「レポジトリ名称」の指定</div>
+<div class="line">　 ANSIBLE_AGENT_IMAGE_TAG：「タグ」の指定  となります。</div>
+<div class="line">　 (コメントアウトされている場合は既定値が使用されます)</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id111">
+<div class="code-block-caption"><span class="caption-number">リスト 407 </span><span class="caption-text">設定値確認結果出力例(オフライン環境)</span><a class="headerlink" href="#id111" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">ANSIBLE_AGENT_IMAGE</span><span class="o">=</span>my-exastro-ansible-agent-custom
+<span class="nv">ANSIBLE_AGENT_IMAGE_TAG</span><span class="o">=</span><span class="m">2</span>.5.3
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">・ 上記で指定されたイメージが存在していることを確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id112">
+<div class="code-block-caption"><span class="caption-number">リスト 408 </span><span class="caption-text">イメージ確認用コマンド(オフライン環境)</span><a class="headerlink" href="#id112" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>podman<span class="w"> </span>images<span class="w"> </span>&lt;ANSIBLE_AGENT_IMAGEの値&gt;:&lt;ANSIBLE_AGENT_IMAGE_TAGの値&gt;
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id113">
+<div class="code-block-caption"><span class="caption-number">リスト 409 </span><span class="caption-text">イメージ確認結果出力例(オフライン環境)</span><a class="headerlink" href="#id113" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>REPOSITORY<span class="w">                        </span>TAG<span class="w">       </span>IMAGE<span class="w"> </span>ID<span class="w">       </span>CREATED<span class="w">       </span>SIZE
+my-exastro-ansible-agent-custom<span class="w">   </span><span class="m">2</span>.5.3<span class="w">     </span>c73215585c2f<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">   </span>962MB
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">表示されない場合は、該当するカスタム化を施したイメージをビルドする必要があります。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id114">
+<div class="code-block-caption"><span class="caption-number">リスト 410 </span><span class="caption-text">ビルド用コマンド例(オフライン環境)</span><a class="headerlink" href="#id114" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="o">{</span>カスタム用のdocker-compose.yamlが存在するディレクトリ<span class="o">}</span>
+podman<span class="w"> </span>compose<span class="w"> </span>build
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">別途、オンライン環境から転送することも可能です。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id115">
+<div class="code-block-caption"><span class="caption-number">リスト 411 </span><span class="caption-text">イメージエクスポート用コマンド例(オンライン環境)</span><a class="headerlink" href="#id115" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>podman<span class="w"> </span>save<span class="w"> </span>&lt;ANSIBLE_AGENT_IMAGEの値&gt;:&lt;ANSIBLE_AGENT_IMAGE_TAGの値&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>-c<span class="w"> </span>&gt;<span class="w"> </span><span class="m">2</span>.5.3/my-exastro-ansible-agent-custom.tar.gz
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id116">
+<div class="code-block-caption"><span class="caption-number">リスト 412 </span><span class="caption-text">イメージインポート用コマンド例(オフライン環境)</span><a class="headerlink" href="#id116" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>podman<span class="w"> </span>load<span class="w">  </span>&lt;<span class="w"> </span><span class="m">2</span>.5.3/my-exastro-ansible-agent-custom.tar.gz
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">該当するカスタム化を施したイメージが表示されることを確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id117">
+<div class="code-block-caption"><span class="caption-number">リスト 413 </span><span class="caption-text">イメージ確認用コマンド(オフライン環境)</span><a class="headerlink" href="#id117" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>podman<span class="w"> </span>images<span class="w"> </span>&lt;ANSIBLE_AGENT_IMAGEの値&gt;:&lt;ANSIBLE_AGENT_IMAGE_TAGの値&gt;
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id118">
+<div class="code-block-caption"><span class="caption-number">リスト 414 </span><span class="caption-text">イメージ確認結果出力例(オフライン環境)</span><a class="headerlink" href="#id118" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>REPOSITORY<span class="w">                        </span>TAG<span class="w">       </span>IMAGE<span class="w"> </span>ID<span class="w">       </span>CREATED<span class="w">       </span>SIZE
+my-exastro-ansible-agent-custom<span class="w">   </span><span class="m">2</span>.5.3<span class="w">     </span>c73215585c2f<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">   </span>962MB
+</pre></div>
+</div>
+</div>
+</div></div>
+</section>
+</section>
+<section id="id17">
+<h2>ログイン<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h2>
 <div class="line-block">
 <div class="line">ログインに使用するユーザ名とパスワードの確認方法です。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id100">
-<div class="code-block-caption"><span class="caption-number">リスト 262 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id100" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id119">
+<div class="code-block-caption"><span class="caption-number">リスト 415 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id119" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">cd</span><span class="w"> </span>~/exastro-docker-compose
 <span class="linenos">2</span>cat<span class="w"> </span>.env
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id101">
-<div class="code-block-caption"><span class="caption-number">リスト 263 </span><span class="caption-text">ログイン情報</span><a class="headerlink" href="#id101" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id120">
+<div class="code-block-caption"><span class="caption-number">リスト 416 </span><span class="caption-text">ログイン情報</span><a class="headerlink" href="#id120" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">### Initial account information for creating system administrators</span>
 <span class="linenos">2</span><span class="c1">#### Specify the username and password</span>
 <span class="linenos">3</span><span class="c1"># SYSTEM_ADMIN=&lt;ユーザー名&gt;</span>
@@ -1434,15 +1613,15 @@ Deploy<span class="w"> </span>Exastro<span class="w"> </span>containers<span cla
 </div>
 </div>
 </section>
-<section id="id17">
-<h2>オーガナイゼーションの作成<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h2>
+<section id="id18">
+<h2>オーガナイゼーションの作成<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h2>
 <div class="line-block">
 <div class="line">再起動後に再度ログインをしたら、オーガナイゼーションの作成を行います。</div>
 <div class="line">オーガナイゼーションの詳細については、 <a class="reference internal" href="../../../manuals/platform_management/organization.html"><span class="doc">Organization (オーガナイゼーション)</span></a> を参照してください。</div>
 </div>
 </section>
-<section id="id18">
-<h2>ワークスペースの作成<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h2>
+<section id="id19">
+<h2>ワークスペースの作成<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h2>
 <div class="line-block">
 <div class="line">作成したオーガナイゼーションにログインをしたら、ワークスペースを作成する必要があります。</div>
 <div class="line">ワークスペースの作成については、<a class="reference internal" href="../../../manuals/organization_management/workspace.html"><span class="doc">Workspace (ワークスペース)</span></a> を参照してください。</div>
@@ -1456,7 +1635,7 @@ Deploy<span class="w"> </span>Exastro<span class="w"> </span>containers<span cla
 
 <div id="articleNavigation">
   <ul>
-    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span>Exastro</a></li>
+    <li class="prev"><a href="kubernetes.html" title="前のトピックへ"><span>前のトピックへ</span>Exastro on Kubernetes - Offline</a></li>
     <li class="next"><a href="../../../learn/index.html" title="次のトピックへ"><span>次のトピックへ</span>Learn</a></li>
   </ul>
 </div>
@@ -1472,8 +1651,8 @@ Deploy<span class="w"> </span>Exastro<span class="w"> </span>containers<span cla
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2023 NEC Corporation</small>
-    <small><a href="/terms/ja.html">サイト規約</a></small>
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.5/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

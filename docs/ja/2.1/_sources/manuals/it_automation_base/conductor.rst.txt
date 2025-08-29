@@ -78,7 +78,7 @@ ITA Conductor利用手順
 #. | Conductor実行結果を確認する
 #. | Conductor実行履歴を確認する
 
-- | 「機器情報」の登録方法については、「Ansible共通 :ref:`general_operations_device_list` 」を参照して下さい。
+- | 「機器情報」の登録方法については、「Ansible共通 :ref:`ansible_common_device_list` 」を参照して下さい。
 - | 「オペレーション」の登録方法については、「基本コンソール - :ref:`basic_console_operation` 」を参照して下さい。
 - | Movementの登録方法については、各Driverの利用手順マニュアルを参照して下さい。 
 - | Conductor実行時の各 Movementで共有するディレクトリパスが利用可能です。
@@ -1113,7 +1113,7 @@ Conductor作業実行について
 .. tip:: | **オペレーションの指定について**
    | グリッド内の「Movement」Nodeを選択し、 :guilabel:`オペレーション選択` をクリックすると、オペレーションのリストが表示されます。
    | 作業実行設定画面のラジオボタンで指定したオペレーションのオペレーションIDとは別のオペレーションを指定することが出来ます。
-   | これにより、そのMovementの属するオーケストレータの「 :ref:`general_operations_substitution_value_list` 」メニューで、ほかのオペレーションIDのものとして登録した「具体値」を代入して実行することが出来ます。
+   | これにより、そのMovementの属するオーケストレータの「 :ref:`ansible_legacy_substitution_value_list` 」メニューで、ほかのオペレーションIDのものとして登録した「具体値」を代入して実行することが出来ます。
    | Conductor編集画面で個別指定したオペレーションIDはConductor :guilabel:`登録` / :guilabel:`更新` により設定が保存されます。
    | また、Conductor実行画面でも実行前に個別指定ができ、既に :ref:`conductor_editandexcute` で個別指定登録をして保存されているオペレーションIDについても更に変更を行いConductor実行することが出来ます。
    | ただし、Conductor実行画面で個別指定したオペレーションIDは実行時のみの反映となり、設定は保存されません。

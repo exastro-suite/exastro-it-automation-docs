@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=57fb2187" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,9 +72,10 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
-              <option value="../../../../ja/2.5/learn/ansible_legacy/Legacy_scenario2.html" selected>current</option>
-              <option value="../../../../ja/2.5/learn/ansible_legacy/Legacy_scenario2.html" selected>2.5(current)</option>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/learn/ansible_legacy/Legacy_scenario2.html">current</option>
+              <option value="../../../../ja/2.6/learn/ansible_legacy/Legacy_scenario2.html">2.6(current)</option>
+              <option value="../../../../ja/2.5/learn/ansible_legacy/Legacy_scenario2.html" selected>2.5</option>
               <option value="../../../../ja/2.4/learn/ansible_legacy/Legacy_scenario2.html">2.4</option>
               <option value="../../../../ja/2.3/learn/ansible_legacy/Legacy_scenario2.html">2.3</option>
               <option value="../../../../ja/2.2/learn/ansible_legacy/Legacy_scenario2.html">2.2</option>
@@ -91,7 +92,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               <option value="../../../../ja/2.5/learn/ansible_legacy/Legacy_scenario2.html" selected>日本語</option>
               <option value="../../../../en/2.5/learn/ansible_legacy/Legacy_scenario2.html">English</option>
             </select>
@@ -151,6 +152,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
 </ul>
 
     <!-- <ul>
@@ -186,17 +188,17 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#id11">パッケージのインストール実施(1回目)</a><ul>
-<li><a class="reference internal" href="#id12">作業概要の作成</a></li>
-<li><a class="reference internal" href="#id13">作業概要登録</a></li>
-<li><a class="reference internal" href="#id14">パラメータ設定</a></li>
-<li><a class="reference internal" href="#id15">作業実行</a></li>
+<li><a class="reference internal" href="#id12">作業概要の作成(1回目)</a></li>
+<li><a class="reference internal" href="#id13">作業概要登録(1回目)</a></li>
+<li><a class="reference internal" href="#id14">パラメータ設定(1回目)</a></li>
+<li><a class="reference internal" href="#id15">作業実行(1回目)</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#id16">パッケージのインストール実施(2回目)</a><ul>
-<li><a class="reference internal" href="#id17">作業概要の作成</a></li>
-<li><a class="reference internal" href="#id18">作業概要登録</a></li>
-<li><a class="reference internal" href="#id19">パラメータ設定</a></li>
-<li><a class="reference internal" href="#id20">作業実行</a></li>
+<li><a class="reference internal" href="#id17">作業概要の作成(2回目)</a></li>
+<li><a class="reference internal" href="#id18">作業概要登録(2回目)</a></li>
+<li><a class="reference internal" href="#id19">パラメータ設定(2回目)</a></li>
+<li><a class="reference internal" href="#id20">作業実行(2回目)</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#id21">まとめ</a></li>
@@ -257,9 +259,6 @@
 <div class="line">まずは、「あるべきインストール状態」である <kbd class="kbd docutils literal notranslate">present</kbd> (インストールされている状態) と <kbd class="kbd docutils literal notranslate">absent</kbd> (インストールされていない状態) の選択肢を作成します。</div>
 <div class="line">具体的には、データシートを作成し、その中に選択肢として表示するパラメータを投入します。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-0">データシート<a class="headerlink" href="#term-0" title="Link to this term">¶</a></dt><dt id="term-Exastro-IT-Automation">Exastro IT Automation が使用する固定値のパラメータを管理するデータ構造のことです。<a class="headerlink" href="#term-Exastro-IT-Automation" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <section id="quickstart-legacy-create-datasheet">
 <span id="id4"></span><h4>データシートの作成<a class="headerlink" href="#quickstart-legacy-create-datasheet" title="Link to this heading">¶</a></h4>
 <div class="line-block">
@@ -273,7 +272,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id22">
-<caption><span class="caption-number">表 80 </span><span class="caption-text">データシートの項目の設定値</span><a class="headerlink" href="#id22" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 101 </span><span class="caption-text">データシートの項目の設定値</span><a class="headerlink" href="#id22" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -285,10 +284,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>項目の名前</p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">present</kbd>-<kbd class="kbd docutils literal notranslate">absent</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">present</kbd>-<kbd class="kbd docutils literal notranslate">absent</kbd></p></td>
 </tr>
 <tr class="row-odd"><td><p>項目の名前(Rest API用)</p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">present</kbd>-<kbd class="kbd docutils literal notranslate">absent</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">present</kbd>-<kbd class="kbd docutils literal notranslate">absent</kbd></p></td>
 </tr>
 <tr class="row-even"><td><p>入力方式</p></td>
 <td><p><kbd class="kbd docutils literal notranslate">文字列(単一行)</kbd></p></td>
@@ -317,7 +316,7 @@
 </tbody>
 </table>
 <table class="docutils align-default" id="id23">
-<caption><span class="caption-number">表 81 </span><span class="caption-text">パラメータシート作成情報の設定値</span><a class="headerlink" href="#id23" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 102 </span><span class="caption-text">パラメータシート作成情報の設定値</span><a class="headerlink" href="#id23" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 66.7%" />
@@ -363,7 +362,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id24">
-<caption><span class="caption-number">表 82 </span><span class="caption-text">状態の設定値</span><a class="headerlink" href="#id24" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 103 </span><span class="caption-text">状態の設定値</span><a class="headerlink" href="#id24" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -409,7 +408,7 @@
 </a>
 </figure>
 <table class="filter-table docutils align-default" id="id25">
-<caption><span class="caption-number">表 83 </span><span class="caption-text">パラメータ項目設定</span><a class="headerlink" href="#id25" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 104 </span><span class="caption-text">パラメータ項目設定</span><a class="headerlink" href="#id25" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 33.3%" />
@@ -444,7 +443,7 @@
 </tr>
 <tr class="row-odd"><td><p>選択項目</p></td>
 <td><p>(項目なし)</p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">入力用:状態:present</kbd>-<kbd class="kbd docutils literal notranslate">absent</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">入力用:状態:present</kbd>-<kbd class="kbd docutils literal notranslate">absent</kbd></p></td>
 </tr>
 <tr class="row-even"><td><p>参照項目</p></td>
 <td><p>(項目なし)</p></td>
@@ -473,7 +472,7 @@
 </tbody>
 </table>
 <table class="filter-table docutils align-default" id="id26">
-<caption><span class="caption-number">表 84 </span><span class="caption-text">パラメータシート作成情報の設定値</span><a class="headerlink" href="#id26" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 105 </span><span class="caption-text">パラメータシート作成情報の設定値</span><a class="headerlink" href="#id26" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 66.7%" />
@@ -528,7 +527,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id27">
-<caption><span class="caption-number">表 85 </span><span class="caption-text">Movement 情報の設定値</span><a class="headerlink" href="#id27" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 106 </span><span class="caption-text">Movement 情報の設定値</span><a class="headerlink" href="#id27" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 33.3%" />
@@ -552,7 +551,7 @@
 </tbody>
 </table>
 <div class="literal-block-wrapper docutils container" id="id28">
-<div class="code-block-caption"><span class="caption-number">リスト 280 </span><span class="caption-text">ヘッダーセクション</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 433 </span><span class="caption-text">ヘッダーセクション</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>hosts:<span class="w"> </span>all
 <span class="w">  </span>remote_user:<span class="w"> </span><span class="s2">&quot;{{ __loginuser__ }}&quot;</span>
 <span class="w">  </span>gather_facts:<span class="w"> </span>no
@@ -567,7 +566,7 @@
 <div class="line">本シナリオでは、 以下のPlaybookを利用します。以下をコピーして、yml形式でpackage.ymlを作成してください。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id29">
-<div class="code-block-caption"><span class="caption-number">リスト 281 </span><span class="caption-text">package.yml</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 434 </span><span class="caption-text">package.yml</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>---
 -<span class="w"> </span>name:<span class="w"> </span>install<span class="w"> </span>package
 <span class="w">  </span>yum:
@@ -597,7 +596,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id30">
-<caption><span class="caption-number">表 86 </span><span class="caption-text">Ansible Playbook 情報の登録</span><a class="headerlink" href="#id30" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 107 </span><span class="caption-text">Ansible Playbook 情報の登録</span><a class="headerlink" href="#id30" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -625,7 +624,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id31">
-<caption><span class="caption-number">表 87 </span><span class="caption-text">Movement-Playbook紐付け情報の登録</span><a class="headerlink" href="#id31" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 108 </span><span class="caption-text">Movement-Playbook紐付け情報の登録</span><a class="headerlink" href="#id31" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 33.3%" />
@@ -658,7 +657,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id32">
-<caption><span class="caption-number">表 88 </span><span class="caption-text">代入値自動登録設定の設定値</span><a class="headerlink" href="#id32" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 109 </span><span class="caption-text">代入値自動登録設定の設定値</span><a class="headerlink" href="#id32" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 36.4%" />
 <col style="width: 9.1%" />
@@ -852,12 +851,12 @@
 <section id="id11">
 <h2>パッケージのインストール実施(1回目)<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h2>
 <section id="id12">
-<h3>作業概要の作成<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<h3>作業概要の作成(1回目)<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="Legacy_scenario1.html"><span class="doc">前のシナリオ</span></a> と同様に、まずは作業計画を立てましょう。</div>
 </div>
 <table class="docutils align-default" id="id33">
-<caption><span class="caption-number">表 89 </span><span class="caption-text">作業の方針</span><a class="headerlink" href="#id33" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 110 </span><span class="caption-text">作業の方針</span><a class="headerlink" href="#id33" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 66.7%" />
@@ -876,7 +875,7 @@
 </table>
 </section>
 <section id="id13">
-<h3>作業概要登録<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<h3>作業概要登録(1回目)<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line"><span class="menuselection">基本コンソール ▶ オペレーション一覧</span> から、作業実施日時や作業名を登録します。</div>
 </div>
@@ -885,7 +884,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id34">
-<caption><span class="caption-number">表 90 </span><span class="caption-text">オペレーション登録内容</span><a class="headerlink" href="#id34" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 111 </span><span class="caption-text">オペレーション登録内容</span><a class="headerlink" href="#id34" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 60.0%" />
 <col style="width: 40.0%" />
@@ -897,16 +896,16 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">RHEL8のパッケージ管理</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="id14">
-<h3>パラメータ設定<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<h3>パラメータ設定(1回目)<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line">パラメータシートには、設定したい値を機器ごとに登録します。</div>
-<div class="line">本シナリオでは、db01 というホストに対して、 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">postgresql</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd></kbd> というパッケージをインストールし DB サーバーを構築します。</div>
+<div class="line">本シナリオでは、db01 というホストに対して、 <kbd class="kbd docutils literal notranslate">postgresql</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd> というパッケージをインストールし DB サーバーを構築します。</div>
 </div>
 <div class="line-block">
 <div class="line"><span class="menuselection">入力用 ▶ 導入パッケージ</span> から、ホストに対するパラメータを登録します。</div>
@@ -916,7 +915,7 @@
 </a>
 </figure>
 <table class="docutils align-default" id="id35">
-<caption><span class="caption-number">表 91 </span><span class="caption-text">導入パッケージパラメータの設定値</span><a class="headerlink" href="#id35" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 112 </span><span class="caption-text">導入パッケージパラメータの設定値</span><a class="headerlink" href="#id35" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 11.1%" />
 <col style="width: 44.4%" />
@@ -940,16 +939,16 @@
 </thead>
 <tbody>
 <tr class="row-odd"><td><p>db01</p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8のパッケージ管理</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8のパッケージ管理</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">postgresql</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">postgresql</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">present</kbd></p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="id15">
-<h3>作業実行<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
+<h3>作業実行(1回目)<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><p>事前確認</p>
 <div class="line-block">
@@ -957,13 +956,13 @@
 <div class="line">サーバに SSH ログインし、 postgresql-server のインストール状況を確認します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id36">
-<div class="code-block-caption"><span class="caption-number">リスト 282 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id36" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 435 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id36" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rpm<span class="w"> </span>-q<span class="w"> </span>postgresql-server
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id37">
-<div class="code-block-caption"><span class="caption-number">リスト 283 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id37" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 436 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id37" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>package<span class="w"> </span>postgresql-server<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>installed
 </pre></div>
 </div>
@@ -987,13 +986,13 @@
 <div class="line">再度サーバに SSH ログインし、postgresql-server のインストール状況を確認し postgresql-server がインストールされていることを確認します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id38">
-<div class="code-block-caption"><span class="caption-number">リスト 284 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id38" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 437 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id38" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rpm<span class="w"> </span>-q<span class="w"> </span>postgresql-server
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id39">
-<div class="code-block-caption"><span class="caption-number">リスト 285 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id39" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 438 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id39" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 環境ごとにバージョンは異なります</span>
 postgresql-server-10.23-1.module+el8.7.0+17280+3a452e1f.x86_64
 </pre></div>
@@ -1006,12 +1005,12 @@ postgresql-server-10.23-1.module+el8.7.0+17280+3a452e1f.x86_64
 <section id="id16">
 <h2>パッケージのインストール実施(2回目)<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h2>
 <section id="id17">
-<h3>作業概要の作成<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
+<h3>作業概要の作成(2回目)<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line">先ほどと同様に、まずは作業計画を立てましょう。</div>
 </div>
 <table class="docutils align-default" id="id40">
-<caption><span class="caption-number">表 92 </span><span class="caption-text">作業の方針</span><a class="headerlink" href="#id40" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 113 </span><span class="caption-text">作業の方針</span><a class="headerlink" href="#id40" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 66.7%" />
@@ -1030,7 +1029,7 @@ postgresql-server-10.23-1.module+el8.7.0+17280+3a452e1f.x86_64
 </table>
 </section>
 <section id="id18">
-<h3>作業概要登録<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
+<h3>作業概要登録(2回目)<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line"><span class="menuselection">基本コンソール ▶ オペレーション一覧</span> から、作業実施日時や作業名を登録します。</div>
 </div>
@@ -1039,7 +1038,7 @@ postgresql-server-10.23-1.module+el8.7.0+17280+3a452e1f.x86_64
 </a>
 </figure>
 <table class="docutils align-default" id="id41">
-<caption><span class="caption-number">表 93 </span><span class="caption-text">オペレーション登録内容</span><a class="headerlink" href="#id41" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 114 </span><span class="caption-text">オペレーション登録内容</span><a class="headerlink" href="#id41" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 60.0%" />
 <col style="width: 40.0%" />
@@ -1051,15 +1050,15 @@ postgresql-server-10.23-1.module+el8.7.0+17280+3a452e1f.x86_64
 </thead>
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">RHEL8をDBパッケージへ変更</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/05/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/05/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="id19">
-<h3>パラメータ設定<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h3>
+<h3>パラメータ設定(2回目)<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h3>
 <div class="line-block">
-<div class="line">本シナリオでは、db01 というホストに対して、 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">postgresql</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd></kbd> というパッケージをインストールし DB サーバーを構築しました。</div>
+<div class="line">本シナリオでは、db01 というホストに対して、 <kbd class="kbd docutils literal notranslate">postgresql</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd> というパッケージをインストールし DB サーバーを構築しました。</div>
 <div class="line">しかし、その後、postgresql-server ではなく mariadb-server に変更する必要が出てきました。</div>
 </div>
 <div class="line-block">
@@ -1070,7 +1069,7 @@ postgresql-server-10.23-1.module+el8.7.0+17280+3a452e1f.x86_64
 </a>
 </figure>
 <table class="docutils align-default" id="id42">
-<caption><span class="caption-number">表 94 </span><span class="caption-text">導入パッケージパラメータの設定値</span><a class="headerlink" href="#id42" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 115 </span><span class="caption-text">導入パッケージパラメータの設定値</span><a class="headerlink" href="#id42" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 11.1%" />
 <col style="width: 44.4%" />
@@ -1094,22 +1093,22 @@ postgresql-server-10.23-1.module+el8.7.0+17280+3a452e1f.x86_64
 </thead>
 <tbody>
 <tr class="row-odd"><td><p>db01</p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2023/05/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8をDBパッケージへ変更</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2023/05/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8をDBパッケージへ変更</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">postgresql</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">postgresql</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">absent</kbd></p></td>
 </tr>
 <tr class="row-even"><td><p>db01</p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2023/05/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8をDBパッケージへ変更</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2023/05/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8をDBパッケージへ変更</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">2</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">mariadb</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">mariadb</kbd>-<kbd class="kbd docutils literal notranslate">server</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">present</kbd></p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="id20">
-<h3>作業実行<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
+<h3>作業実行(2回目)<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><p>事前確認</p>
 <div class="line-block">
@@ -1117,26 +1116,26 @@ postgresql-server-10.23-1.module+el8.7.0+17280+3a452e1f.x86_64
 <div class="line">サーバに SSH ログインし、パッケージのインストール状態を確認します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id43">
-<div class="code-block-caption"><span class="caption-number">リスト 286 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id43" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 439 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id43" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rpm<span class="w"> </span>-q<span class="w"> </span>postgresql-server
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id44">
-<div class="code-block-caption"><span class="caption-number">リスト 287 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id44" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 440 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id44" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 環境ごとにバージョンは異なります</span>
 postgresql-server-10.23-1.module+el8.7.0+17280+3a452e1f.x86_64
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id45">
-<div class="code-block-caption"><span class="caption-number">リスト 288 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id45" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 441 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id45" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rpm<span class="w"> </span>-q<span class="w"> </span>mariadb-server
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id46">
-<div class="code-block-caption"><span class="caption-number">リスト 289 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id46" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 442 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id46" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>package<span class="w"> </span>mariadb-server<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>installed
 </pre></div>
 </div>
@@ -1160,25 +1159,25 @@ postgresql-server-10.23-1.module+el8.7.0+17280+3a452e1f.x86_64
 <div class="line">再度サーバに SSH ログインし、postgresql-server がアンインストールされ、mariadb-server がインストールされていることを確認します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id47">
-<div class="code-block-caption"><span class="caption-number">リスト 290 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id47" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 443 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id47" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rpm<span class="w"> </span>-q<span class="w"> </span>postgresql-server
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id48">
-<div class="code-block-caption"><span class="caption-number">リスト 291 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id48" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 444 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id48" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>package<span class="w"> </span>postgresql-server<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>installed
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id49">
-<div class="code-block-caption"><span class="caption-number">リスト 292 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id49" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 445 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id49" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rpm<span class="w"> </span>-q<span class="w"> </span>mariadb-server
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id50">
-<div class="code-block-caption"><span class="caption-number">リスト 293 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id50" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 446 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id50" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mariadb-server-10.3.35-1.module+el8.6.0+15949+4ba4ec26.x86_64
 </pre></div>
 </div>
@@ -1225,8 +1224,8 @@ postgresql-server-10.23-1.module+el8.7.0+17280+3a452e1f.x86_64
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2023 NEC Corporation</small>
-    <small><a href="/terms/ja.html">サイト規約</a></small>
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.5/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

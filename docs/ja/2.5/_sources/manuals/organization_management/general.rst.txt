@@ -5,7 +5,7 @@
 はじめに
 ------------
 
-| 本書は、オーガナイゼーション管理の画面操作する際のログイン方法について記載したものです。
+| 本書は、オーガナイゼーション管理の画面を操作する際のログイン方法について記載したものです。
 
 .. _organization_manager_login:
 
@@ -45,7 +45,7 @@
       :align: left
       :class: with-border-thin
 
-#. | アカウント情報の更新し、 :guilabel:`更新` ボタンを押下します。
+#. | アカウント情報の更新を行い、 :guilabel:`更新` ボタンを押下します。
 
    .. figure:: /images/ja/diagram/login3.png
       :alt: 初回ログイン

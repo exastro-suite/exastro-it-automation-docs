@@ -62,35 +62,35 @@
      - 条件
      - アクション
      - 結論イベント
-     - 
-     - 
-     - 
-   * - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+   * -
+     -
+     -
+     -
      - フィルターA
      - アクションID
      - 元イベントのラベル継承
-     - 
+     -
      - 結論ラベル設定
-     - TTL 
-   * - 
-     - 
-     - 
+     - TTL
+   * -
      -
      -
-     - 
+     -
+     -
+     -
      - アクション
      - イベント
-     - 
-     - 
+     -
+     -
    * - :kbd:`True`
      - :kbd:`kill_event`
      - :kbd:`kill_event`
      - :kbd:`1`
      - :kbd:`sorry_switch`
-     - 
+     -
      - :kbd:`True`
      - :kbd:`False`
      - :kbd:`["event_status", "==", "termination"]`
