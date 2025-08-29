@@ -25,7 +25,7 @@
    * - global.itaDatabaseDefinition.config.DB_HOST
      - | Exastro IT Automation 用データベース利用するDB
        | デフォルト状態では、同一の Kubernetes クラスタ内にデプロイされるコンテナを指定しています。
-       | クラスタ外部の DB を利用する場合には設定が必要となります。 
+       | クラスタ外部の DB を利用する場合には設定が必要となります。
      - 可 (外部データベース利用時)
      - "mariadb"
    * - global.itaDatabaseDefinition.config.DB_PORT

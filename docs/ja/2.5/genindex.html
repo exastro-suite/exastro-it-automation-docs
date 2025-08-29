@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="_static/exastro_documents.css?v=57fb2187" />
+    <link rel="stylesheet" type="text/css" href="_static/exastro_documents.css?v=99e5f627" />
     <link rel="stylesheet" type="text/css" href="_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="_static/documentation_options.js?v=c033477b"></script>
@@ -70,9 +70,10 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
-              <option value="../../ja/2.5/genindex.html" selected>current</option>
-              <option value="../../ja/2.5/genindex.html" selected>2.5(current)</option>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../ja/2.6/genindex.html">current</option>
+              <option value="../../ja/2.6/genindex.html">2.6(current)</option>
+              <option value="../../ja/2.5/genindex.html" selected>2.5</option>
               <option value="../../ja/2.4/genindex.html">2.4</option>
               <option value="../../ja/2.3/genindex.html">2.3</option>
               <option value="../../ja/2.2/genindex.html">2.2</option>
@@ -89,7 +90,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               <option value="../../ja/2.5/genindex.html" selected>日本語</option>
               <option value="../../en/2.5/genindex.html">English</option>
             </select>
@@ -117,6 +118,7 @@
 <li class="toctree-l1"><a class="reference internal" href="templates/index.html">テンプレート</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/index.html">リファレンス</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribute/index.html">貢献</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kb/index.html">ナレッジベース</a></li>
 </ul>
 
     <!-- <ul>
@@ -147,196 +149,8 @@
 <h1 id="index">索引</h1>
 
 <div class="genindex-jumpbox">
- <a href="#記号"><strong>記号</strong></a>
- | <a href="#E"><strong>E</strong></a>
- | <a href="#M"><strong>M</strong></a>
- | <a href="#W"><strong>W</strong></a>
- | <a href="#イ"><strong>イ</strong></a>
- | <a href="#オ"><strong>オ</strong></a>
- | <a href="#シ"><strong>シ</strong></a>
- | <a href="#テ"><strong>テ</strong></a>
- | <a href="#ハ"><strong>ハ</strong></a>
- | <a href="#ホ"><strong>ホ</strong></a>
- | <a href="#ラ"><strong>ラ</strong></a>
- | <a href="#ワ"><strong>ワ</strong></a>
- | <a href="#作"><strong>作</strong></a>
- | <a href="#収"><strong>収</strong></a>
- | <a href="#実"><strong>実</strong></a>
- | <a href="#比"><strong>比</strong></a>
  
 </div>
-<h2 id="記号">記号</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/ansible_legacy/Legacy_scenario1.html#term-1-Movement-1-ansible-playbook"><strong>1回の Movement 実行は、1回の ansible-playbook コマンドの実行と同じです。</strong></a>, <a href="learn/ansible_legacy_role/scenario1.html#term-1-Movement-1-ansible-playbook"><strong>[1]</strong></a>, <a href="learn/collection/collection.html#term-1-Movement-1-ansible-playbook"><strong>[2]</strong></a>, <a href="learn/parameter/parameter.html#term-1-Movement-1-ansible-playbook"><strong>[3]</strong></a>, <a href="learn/quickstart/index.html#term-1-Movement-1-ansible-playbook"><strong>[4]</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="E">E</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/ansible_legacy/index.html#term-Exastro-IT-Automation-Ansible"><strong>Exastro IT Automation が Ansible を利用して、行う操作対象のサーバのことです。</strong></a>, <a href="learn/ansible_legacy_role/index.html#term-Exastro-IT-Automation-Ansible"><strong>[1]</strong></a>, <a href="learn/collection/index.html#term-Exastro-IT-Automation-Ansible"><strong>[2]</strong></a>, <a href="learn/hostgroup/index.html#term-Exastro-IT-Automation-Ansible"><strong>[3]</strong></a>, <a href="learn/parameter/index.html#term-Exastro-IT-Automation-Ansible"><strong>[4]</strong></a>, <a href="learn/quickstart/index.html#term-Exastro-IT-Automation-Ansible"><strong>[5]</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/ansible_legacy/Legacy_scenario2.html#term-Exastro-IT-Automation"><strong>Exastro IT Automation が使用する固定値のパラメータを管理するデータ構造のことです。</strong></a>, <a href="learn/ansible_legacy_role/scenario2.html#term-Exastro-IT-Automation"><strong>[1]</strong></a>, <a href="learn/hostgroup/hostgroup.html#term-Exastro-IT-Automation"><strong>[2]</strong></a>
-</li>
-      <li><a href="learn/ansible_legacy/Legacy_scenario1.html#term-Exastro-IT-Automation"><strong>Exastro IT Automation における、最小の作業単位のことを指します。</strong></a>, <a href="learn/ansible_legacy_role/scenario1.html#term-Exastro-IT-Automation"><strong>[1]</strong></a>, <a href="learn/collection/collection.html#term-Exastro-IT-Automation"><strong>[2]</strong></a>, <a href="learn/parameter/parameter.html#term-Exastro-IT-Automation"><strong>[3]</strong></a>, <a href="learn/quickstart/index.html#term-Exastro-IT-Automation"><strong>[4]</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="M">M</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/terraform/terraform.html#term-Module"><strong>Moduleの記述</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/terraform/terraform.html#term-ModuleHCL-HashiCorp-ConfigurationLanguage-HashiCorp"><strong>Moduleファイルは、HCL（HashiCorp ConfigurationLanguage）というHashiCorp社独自の言語により記述します。</strong></a>
-</li>
-      <li><a href="learn/ansible_legacy/Legacy_scenario1.html#term-Movement"><strong>Movement</strong></a>, <a href="learn/ansible_legacy_role/scenario1.html#term-Movement"><strong>[1]</strong></a>, <a href="learn/collection/collection.html#term-Movement"><strong>[2]</strong></a>, <a href="learn/parameter/parameter.html#term-Movement"><strong>[3]</strong></a>, <a href="learn/quickstart/index.html#term-Movement"><strong>[4]</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="W">W</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/terraform/terraform.html#term-Workspace"><strong>Workspace</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/terraform/terraform.html#term-WorkspaceTerraform"><strong>WorkspaceはTerraformコマンドを実行するためのディレクトリとして利用します。</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="イ">イ</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/oase/OASE_scenario_scale-out.html#term-2"><strong>イベントは、付与された「キー」と「値」によって認識されます。</strong></a>, <a href="learn/oase/OASE_scenario_sorry-switch.html#term-2"><strong>[1]</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="オ">オ</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/ansible_legacy/Legacy_scenario1.html#term-2"><strong>オペレーション</strong></a>, <a href="learn/ansible_legacy/Legacy_scenario1.html#term-4"><strong>[1]</strong></a>, <a href="learn/ansible_legacy_role/scenario1.html#term-2"><strong>[2]</strong></a>, <a href="learn/ansible_legacy_role/scenario1.html#term-4"><strong>[3]</strong></a>, <a href="learn/collection/collection.html#term-3"><strong>[4]</strong></a>, <a href="learn/export_import/export_import.html#term-0"><strong>[5]</strong></a>, <a href="learn/hostgroup/hostgroup.html#term-3"><strong>[6]</strong></a>, <a href="learn/hostgroup/hostgroup.html#term-5"><strong>[7]</strong></a>, <a href="learn/parameter/parameter.html#term-2"><strong>[8]</strong></a>, <a href="learn/parameter/parameter.html#term-4"><strong>[9]</strong></a>, <a href="learn/quickstart/index.html#term-5"><strong>[10]</strong></a>, <a href="learn/quickstart/index.html#term-7"><strong>[11]</strong></a>, <a href="learn/terraform/terraform.html#term-0"><strong>[12]</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="シ">シ</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/ansible_legacy/Legacy_scenario1.html#term-1"><strong>システムのパラメータ情報を管理するデータ構造のことです。</strong></a>, <a href="learn/ansible_legacy_role/scenario1.html#term-1"><strong>[1]</strong></a>, <a href="learn/parameter/parameter.html#term-1"><strong>[2]</strong></a>, <a href="learn/quickstart/index.html#term-4"><strong>[3]</strong></a>, <a href="learn/terraform/terraform.html#term-3"><strong>[4]</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/ansible_legacy/index.html#term-2"><strong>システムの構成情報や自動化タスクのための設計情報を中央管理するための作業領域のことです。</strong></a>, <a href="learn/ansible_legacy_role/index.html#term-2"><strong>[1]</strong></a>, <a href="learn/collection/index.html#term-2"><strong>[2]</strong></a>, <a href="learn/export_import/index.html#term-1"><strong>[3]</strong></a>, <a href="learn/hostgroup/index.html#term-2"><strong>[4]</strong></a>, <a href="learn/oase/index.html#term-1"><strong>[5]</strong></a>, <a href="learn/parameter/index.html#term-2"><strong>[6]</strong></a>, <a href="learn/quickstart/index.html#term-2"><strong>[7]</strong></a>, <a href="learn/terraform/index.html#term-1"><strong>[8]</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="テ">テ</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/ansible_legacy/Legacy_scenario2.html#term-0"><strong>データシート</strong></a>, <a href="learn/ansible_legacy_role/scenario2.html#term-0"><strong>[1]</strong></a>, <a href="learn/hostgroup/hostgroup.html#term-2"><strong>[2]</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="ハ">ハ</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/ansible_legacy/Legacy_scenario1.html#term-0"><strong>パラメータシート</strong></a>, <a href="learn/ansible_legacy_role/scenario1.html#term-0"><strong>[1]</strong></a>, <a href="learn/parameter/parameter.html#term-0"><strong>[2]</strong></a>, <a href="learn/quickstart/index.html#term-3"><strong>[3]</strong></a>, <a href="learn/terraform/terraform.html#term-2"><strong>[4]</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/parameter/parameter.html#term-6"><strong>パラメータ集</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="ホ">ホ</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/hostgroup/hostgroup.html#term-0"><strong>ホストグループ</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/hostgroup/hostgroup.html#term-1"><strong>ホストグループとは、ホスト群を論理的な単位（機能・役割）でまとめたグループのことを指します。</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="ラ">ラ</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/oase/OASE_scenario_scale-out.html#term-0"><strong>ラベル</strong></a>, <a href="learn/oase/OASE_scenario_sorry-switch.html#term-0"><strong>[1]</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/oase/OASE_scenario_scale-out.html#term-1"><strong>ラベルは「キー」と「値」から成り、付与されたイベントの属性を表します。</strong></a>, <a href="learn/oase/OASE_scenario_sorry-switch.html#term-1"><strong>[1]</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="ワ">ワ</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/ansible_legacy/index.html#term-1"><strong>ワークスペース</strong></a>, <a href="learn/ansible_legacy_role/index.html#term-1"><strong>[1]</strong></a>, <a href="learn/collection/index.html#term-1"><strong>[2]</strong></a>, <a href="learn/export_import/index.html#term-0"><strong>[3]</strong></a>, <a href="learn/hostgroup/index.html#term-1"><strong>[4]</strong></a>, <a href="learn/oase/index.html#term-0"><strong>[5]</strong></a>, <a href="learn/parameter/index.html#term-1"><strong>[6]</strong></a>, <a href="learn/quickstart/index.html#term-1"><strong>[7]</strong></a>, <a href="learn/terraform/index.html#term-0"><strong>[8]</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="作">作</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/parameter/parameter.html#term-7"><strong>作成済みの複数のパラメータシートを検索条件に基づいて取得、またはパラメータシートへのデータの登録が行えます。</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/ansible_legacy/index.html#term-0"><strong>作業対象サーバ</strong></a>, <a href="learn/ansible_legacy_role/index.html#term-0"><strong>[1]</strong></a>, <a href="learn/collection/index.html#term-0"><strong>[2]</strong></a>, <a href="learn/hostgroup/index.html#term-0"><strong>[3]</strong></a>, <a href="learn/parameter/index.html#term-0"><strong>[4]</strong></a>, <a href="learn/quickstart/index.html#term-0"><strong>[5]</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="収">収</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/collection/collection.html#term-0"><strong>収集機能</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/collection/collection.html#term-ITA"><strong>収集機能とは、ITAで実施した、作業実行結果（規定のフォーマットで出力されたソースファイル）を元に、パラメータシートへ値を自動で登録する機能。</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="実">実</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/ansible_legacy/Legacy_scenario1.html#term-3"><strong>実施する作業のことで、オペレーションに対して作業対象とパラメータが紐づきます。</strong></a>, <a href="learn/ansible_legacy/Legacy_scenario1.html#term-5"><strong>[1]</strong></a>, <a href="learn/ansible_legacy_role/scenario1.html#term-3"><strong>[2]</strong></a>, <a href="learn/ansible_legacy_role/scenario1.html#term-5"><strong>[3]</strong></a>, <a href="learn/collection/collection.html#term-4"><strong>[4]</strong></a>, <a href="learn/export_import/export_import.html#term-1"><strong>[5]</strong></a>, <a href="learn/hostgroup/hostgroup.html#term-4"><strong>[6]</strong></a>, <a href="learn/hostgroup/hostgroup.html#term-6"><strong>[7]</strong></a>, <a href="learn/parameter/parameter.html#term-3"><strong>[8]</strong></a>, <a href="learn/parameter/parameter.html#term-5"><strong>[9]</strong></a>, <a href="learn/quickstart/index.html#term-6"><strong>[10]</strong></a>, <a href="learn/quickstart/index.html#term-8"><strong>[11]</strong></a>, <a href="learn/terraform/terraform.html#term-1"><strong>[12]</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="比">比</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/collection/collection.html#term-1"><strong>比較機能</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="learn/collection/collection.html#term-2"><strong>比較機能とは、ITAのパラメータシート作成機能で作成したパラメータシートを比較し、差分を出力する機能です。</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
 
 
 </div>
@@ -353,8 +167,8 @@
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2023 NEC Corporation</small>
-    <small><a href="/terms/ja.html">サイト規約</a></small>
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.5/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

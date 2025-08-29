@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Exastro on Docker Compose - Offline &#8212; Documentation  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../../_static/tabs.js?v=3030b3cb"></script>
+    <script src="../../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Learn" href="../../../learn/index.html" />
+    <link rel="prev" title="Exastro" href="index.html" /> 
+  </head>
+<body id="page" class="en">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="Go"><img src="../../../_static/img/search.png" alt="Go"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../en/2.6/installation/offline/exastro/docker_compose.html">current</option>
+              <option value="../../../../../en/2.6/installation/offline/exastro/docker_compose.html">2.6(current)</option>
+              <option value="../../../../../en/2.5/installation/offline/exastro/docker_compose.html" selected>2.5</option>
+              <option value="../../../../../en/2.4/installation/offline/exastro/docker_compose.html">2.4</option>
+              <option value="../../../../../en/2.3/installation/offline/exastro/docker_compose.html">2.3</option>
+              <option value="../../../../../en/2.2/installation/offline/exastro/docker_compose.html">2.2</option>
+              <option value="../../../../../en/2.1/installation/offline/exastro/docker_compose.html">2.1</option>
+              <option value="../../../../../en/2.0/installation/offline/exastro/docker_compose.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../ja/2.5/installation/offline/exastro/docker_compose.html">日本語</option>
+              <option value="../../../../../en/2.5/installation/offline/exastro/docker_compose.html" selected>English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="index.html" title="Previous topic">Exastro</a></li>
+        <li class="next"><a href="../../../learn/index.html" title="Next topic">Learn</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration/index.html">Configuration and Construction guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Installation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../online/index.html">Online</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Offline</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Exastro</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Exastro on Docker Compose - Offline</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#features">Features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#pre-requisites">Pre-requisites</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#preparation">Preparation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#general-flow">General flow</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#guide-for-online-environment-environment-that-can-connect-to-the-internet">Guide for Online environment(Environment that can connect to the internet)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#offline-environment-environment-unable-to-connect-to-the-internet">Offline environment(Environment unable to connect to the internet)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#login">Login</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#create-organization">Create Organization</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#create-workspace">Create Workspace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../learn/index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">Glossary</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">Exastro on Docker Compose - Offline</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#pre-requisites">Pre-requisites</a></li>
+<li><a class="reference internal" href="#preparation">Preparation</a></li>
+<li><a class="reference internal" href="#general-flow">General flow</a><ul>
+<li><a class="reference internal" href="#online-environment">Online environment</a></li>
+<li><a class="reference internal" href="#offline-environment">Offline environment</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#guide-for-online-environment-environment-that-can-connect-to-the-internet">Guide for Online environment(Environment that can connect to the internet)</a><ul>
+<li><a class="reference internal" href="#upload-container-image">①Upload container image</a></li>
+<li><a class="reference internal" href="#download-rpm-packages">②Download RPM packages</a></li>
+<li><a class="reference internal" href="#download-docker-compose-resources">③Download docker-compose resources</a></li>
+<li><a class="reference internal" href="#download-exastro-resources">④Download Exastro resources</a></li>
+<li><a class="reference internal" href="#transfer-files">Transfer files</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#offline-environment-environment-unable-to-connect-to-the-internet">Offline environment(Environment unable to connect to the internet)</a><ul>
+<li><a class="reference internal" href="#install-rpm-packages">⑤Install RPM packages</a></li>
+<li><a class="reference internal" href="#id1">⑥Upload Container image</a></li>
+<li><a class="reference internal" href="#install-docker-compose-resources">⑦Install docker-compose resources</a></li>
+<li><a class="reference internal" href="#install-exastro-resources">⑧Install Exastro resources</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#login">Login</a></li>
+<li><a class="reference internal" href="#create-organization">Create Organization</a></li>
+<li><a class="reference internal" href="#create-workspace">Create Workspace</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">HOME</a></li>
+    <li><a href="../../index.html">Installation</a></li>
+    <li><a href="../index.html">Offline</a></li>
+    <li><a href="index.html">Exastro</a></li>
+    
+    <li>Exastro on Docker Compose - Offline</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <script>
+$(window).on('load', function () {
+   setTimeout(function(){
+     for (var i = 0; i < $("table.filter-table").length; i++) {
+       $("[id^='ft-data-" + i + "-2-r']").removeAttr("checked");
+       $("[id^='select-all-" + i + "-2']").removeAttr("checked");
+       $("[id^='ft-data-" + i + "-2-r'][value^='可']").prop('checked', true);
+       $("[id^='ft-data-" + i + "-2-r'][value*='必須']").prop('checked', true);
+       tFilterGo(i);
+     }
+   },200);
+});
+</script><section id="exastro-on-docker-compose-offline">
+<h1>Exastro on Docker Compose - Offline<a class="headerlink" href="#exastro-on-docker-compose-offline" title="Link to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">This document aims to explain how to install Exastro Platform or Exastro IT Automation on Docker or Podman.</div>
+</div>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">This is the easiest and simplest way of installing Exastro IT Automation</div>
+<div class="line">For higher availability and service level, we recommend <a class="reference internal" href="kubernetes.html"><span class="doc">Kubernetes version</span></a></div>
+</div>
+</section>
+<section id="pre-requisites">
+<h2>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">The server that is collecting files must be able to run <strong class="command">docker</strong>. (When using Podman, the podman-docker must be installed.)</div>
+<div class="line">The construction status (OS version and installed pakcages) for both the file collecting environment and the installing environment must be the same.</div>
+</div>
+<ul>
+<li><p>Deploy environment</p>
+<div class="line-block">
+<div class="line">The hardware requirements for the Container environment are as follows.</div>
+</div>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-number">Table 46 </span><span class="caption-text">Hardware requirements(Minimum)</span><a class="headerlink" href="#id2" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Resource type</p></th>
+<th class="head"><p>Required resource</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CPU</p></td>
+<td><p>2 Cores (3.0 GHz, x86_64)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Memory</p></td>
+<td><p>4GB</p></td>
+</tr>
+<tr class="row-even"><td><p>Storage (Container image size)</p></td>
+<td><p>40GB</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-number">Table 47 </span><span class="caption-text">Hardware requirements(Recommended)</span><a class="headerlink" href="#id3" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Resource type</p></th>
+<th class="head"><p>Required resource</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CPU</p></td>
+<td><p>4 Cores (3.0 GHz, x86_64)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Memory</p></td>
+<td><p>16GB</p></td>
+</tr>
+<tr class="row-even"><td><p>Storage (Container image size)</p></td>
+<td><p>120GB</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<div class="line-block">
+<div class="line">The required resources for the minimum configuration are for Exastro IT Automation’s core functions. Additional resources will be required if you are planning to deploy external systems, such as GitLab and Ansible Automation Platform.</div>
+<div class="line">Users will have to prepare an additional storage area if they wish to persist databases or files.</div>
+<div class="line">The storage space is only an estimate and varies based on the user’s needs. Make sure to take that into account when securing storage space.</div>
+</div>
+</div>
+</li>
+<li><p>Communication Protocols</p>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-number">Table 48 </span><span class="caption-text">Communication Protocols</span><a class="headerlink" href="#id4" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 33.3%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 8.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Use</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Source</p></th>
+<th class="head"><p>Destination</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>For Exastro service</p></td>
+<td><p>For connecting to Exastro service</p></td>
+<td><p>Client</p></td>
+<td><p>Exastro system</p></td>
+<td><p>30080/tcp</p></td>
+</tr>
+<tr class="row-odd"><td><p>Exastro system (management)</p></td>
+<td><p>For Exastro system management function</p></td>
+<td><p>Client</p></td>
+<td><p>Exastro system</p></td>
+<td><p>30081/tcp</p></td>
+</tr>
+<tr class="row-even"><td><p>GitLab service(options)</p></td>
+<td><p>For connecting to GitLab when linked with AAP</p></td>
+<td><p>Ansible Automation Platform</p></td>
+<td><p>Exastro system</p></td>
+<td><p>40080/tcp</p></td>
+</tr>
+<tr class="row-odd"><td><p>For GitLab service (option)</p></td>
+<td><p>For monitoring GitLab service</p></td>
+<td><p>Exastro system</p></td>
+<td><p>Exastro system</p></td>
+<td><p>40080/tcp</p></td>
+</tr>
+<tr class="row-even"><td><p>File acquisition</p></td>
+<td><p>GitHub, Container images, Packages, etc.</p></td>
+<td><p>Exastro system</p></td>
+<td><p>Internet</p></td>
+<td><p>443/tcp</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Confirmed compatible Operation systems and container platforms</p>
+<p>The following describes confirmed compatible operation systems as well as their versions.</p>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-number">Table 49 </span><span class="caption-text">Tested environments</span><a class="headerlink" href="#id5" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 29.4%" />
+<col style="width: 23.5%" />
+<col style="width: 23.5%" />
+<col style="width: 23.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>OS version</p></th>
+<th class="head"><p>podman version</p></th>
+<th class="head"><p>Docker Compose version</p></th>
+<th class="head"><p>Docker version</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Red Hat Enterprise Linux release 9.4 (Plow)</p></td>
+<td><p>podman version 4.9.4-rhel</p></td>
+<td><p>Docker Compose version v2.20.3</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>Red Hat Enterprise Linux release 8.9 (Ootpa)</p></td>
+<td><p>podman version 4.9.4-rhel</p></td>
+<td><p>Docker Compose version v2.20.3</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>AlmaLinux release 8.9 (Midnight Oncilla)</p></td>
+<td><p>ー</p></td>
+<td><p>ー</p></td>
+<td><p>Docker version 26.1.3, build b72abbb</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Applications</p>
+<div class="line-block">
+<div class="line">The user must be able to run <strong class="command">curl</strong> and <strong class="command">sudo</strong> commands.</div>
+</div>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<div class="line-block">
+<div class="line">The Exastro process must be able to be run with normal user permissions (it is not possible to install with root user).</div>
+<div class="line">Any normal users must be sudoer and have complete permissions.</div>
+</div>
+</div>
+</section>
+<section id="preparation">
+<span id="docker-prep-offline"></span><h2>Preparation<a class="headerlink" href="#preparation" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">The user must prepare an URL for releasing the service.</div>
+</div>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-number">Table 50 </span><span class="caption-text">Example 1) Releasing service with IP Address</span><a class="headerlink" href="#id6" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 42.9%" />
+<col style="width: 57.1%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Service</p></th>
+<th class="head"><p>URL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Exastro service</p></td>
+<td><p><a class="reference external" href="http://172.16.0.1:30080">http://172.16.0.1:30080</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Exastro management service</p></td>
+<td><p><a class="reference external" href="http://172.16.0.1:30081">http://172.16.0.1:30081</a></p></td>
+</tr>
+<tr class="row-even"><td><p>GitLab service</p></td>
+<td><p><a class="reference external" href="http://172.16.0.1:40080">http://172.16.0.1:40080</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-number">Table 51 </span><span class="caption-text">Example 2) Releasing service with Domain</span><a class="headerlink" href="#id7" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 42.9%" />
+<col style="width: 57.1%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Service</p></th>
+<th class="head"><p>URL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Exastro service</p></td>
+<td><p><a class="reference external" href="http://ita.example.com:30080">http://ita.example.com:30080</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Exastro management service</p></td>
+<td><p><a class="reference external" href="http://ita.example.com:30081">http://ita.example.com:30081</a></p></td>
+</tr>
+<tr class="row-even"><td><p>GitLab service</p></td>
+<td><p><a class="reference external" href="http://ita.example.com:40080">http://ita.example.com:40080</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-number">Table 52 </span><span class="caption-text">Example 3) Releasing service through LoadBalancer</span><a class="headerlink" href="#id8" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 42.9%" />
+<col style="width: 57.1%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Service</p></th>
+<th class="head"><p>URL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Exastro service</p></td>
+<td><p><a class="reference external" href="https://ita.example.com">https://ita.example.com</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Exastro management service</p></td>
+<td><p><a class="reference external" href="https://ita-mng.example.com">https://ita-mng.example.com</a></p></td>
+</tr>
+<tr class="row-even"><td><p>GitLab service</p></td>
+<td><p><a class="reference external" href="https://gitlab.example.com">https://gitlab.example.com</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">If the user is using HTTPS, they must use either LoadBalancer or Reverse proxy.</div>
+<div class="line">If the user plans to use LoadBalancer or Reverse proxy, they will have to prepare that themselves.</div>
+</div>
+</div>
+</section>
+<section id="general-flow">
+<h2>General flow<a class="headerlink" href="#general-flow" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">After preparing the online environment, the user can now install on to the offline system.</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/flowimage.png"><img alt="Flow image" src="../../../_images/flowimage.png" style="width: 800px;" />
+</a>
+</figure>
+<section id="online-environment">
+<h3>Online environment<a class="headerlink" href="#online-environment" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">①Download Container image</div>
+<div class="line">②Download RPM packages</div>
+<div class="line">③Download docker-compose resources</div>
+<div class="line">④Download Exastro resources</div>
+</div>
+</section>
+<section id="offline-environment">
+<h3>Offline environment<a class="headerlink" href="#offline-environment" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">⑤Install RPM packages</div>
+<div class="line">⑥Upload Container image</div>
+<div class="line">⑦Install docker-compose resources</div>
+<div class="line">⑧Install Exastro resources</div>
+<div class="line">⑨Boot Exastro ITA</div>
+</div>
+</section>
+</section>
+<section id="guide-for-online-environment-environment-that-can-connect-to-the-internet">
+<h2>Guide for Online environment(Environment that can connect to the internet)<a class="headerlink" href="#guide-for-online-environment-environment-that-can-connect-to-the-internet" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">First, fetch the files.</div>
+<div class="line">In the following example, the user is “test_user” and the home directory is /home/test_user.</div>
+</div>
+<section id="upload-container-image">
+<h3>①Upload container image<a class="headerlink" href="#upload-container-image" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Create the container image list and the shell script that will download the container image in a partition that has over 25GB space.</div>
+<div class="line">These two must be created in the same directory.</div>
+<div class="line">The save.sh’s [“x.x.x”]=”x.x.x” contains both the Exastro IT Automation App Version and the Exastro Platform App Version.</div>
+<div class="line">Refer to the <a class="reference external" href="https://github.com/exastro-suite/exastro-helm?tab=readme-ov-file#component-version">Component version</a> and replace them with the newest versions.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-number">Listing 188 </span><span class="caption-text">Command</span><a class="headerlink" href="#id9" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>save.sh
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-number">Listing 189 </span><span class="caption-text">Copy and paste the code below and rewrite the version</span><a class="headerlink" href="#id10" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="nv">ITA_VERSION</span><span class="o">=</span><span class="nv">$1</span>
+<span class="nb">declare</span><span class="w"> </span>-A<span class="w"> </span><span class="nv">PF_VERSION</span><span class="o">=(</span>
+<span class="w">  </span><span class="o">[</span><span class="s2">&quot;x.x.x&quot;</span><span class="o">]=</span><span class="s2">&quot;x.x.x&quot;</span>
+<span class="o">)</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span>mkdir<span class="w"> </span><span class="nv">$ITA_VERSION</span>
+<span class="k">fi</span>
+
+readarray<span class="w"> </span>-t<span class="w"> </span>image_list<span class="w"> </span>&lt;<span class="w"> </span><span class="s2">&quot;./image.list&quot;</span>
+<span class="k">for</span><span class="w"> </span>image<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">image_list</span><span class="p">[@]</span><span class="si">}</span>
+<span class="k">do</span>
+<span class="w">  </span><span class="nv">image_fullname</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">image</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;s/#__ITA_VERSION__#/</span><span class="si">${</span><span class="nv">ITA_VERSION</span><span class="si">}</span><span class="s2">/&quot;</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;s/#__PF_VERSION__#/</span><span class="si">${</span><span class="nv">PF_VERSION</span><span class="p">[</span><span class="nv">$ITA_VERSION</span><span class="p">]</span><span class="si">}</span><span class="s2">/&quot;</span><span class="k">)</span>
+<span class="w">  </span><span class="nv">image_name</span><span class="o">=</span><span class="k">$(</span>basename<span class="w"> </span><span class="si">${</span><span class="nv">image_fullname</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;s/:/-/&quot;</span><span class="k">)</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-e<span class="w"> </span><span class="si">${</span><span class="nv">ITA_VERSION</span><span class="si">}</span>/<span class="si">${</span><span class="nv">image_name</span><span class="si">}</span>.tar.gz<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$image_fullname</span><span class="w"> </span><span class="nv">$image_name</span>
+<span class="w">    </span>docker<span class="w"> </span>pull<span class="w"> </span><span class="si">${</span><span class="nv">image_fullname</span><span class="si">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">      </span>docker<span class="w"> </span>save<span class="w"> </span><span class="si">${</span><span class="nv">image_fullname</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>-c<span class="w"> </span>&gt;<span class="w"> </span><span class="si">${</span><span class="nv">ITA_VERSION</span><span class="si">}</span>/<span class="si">${</span><span class="nv">image_name</span><span class="si">}</span>.tar.gz
+<span class="w">    </span><span class="k">fi</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-number">Listing 190 </span><span class="caption-text">Command</span><a class="headerlink" href="#id11" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>image.list
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-number">Listing 191 </span><span class="caption-text">Copy and paste the following code</span><a class="headerlink" href="#id12" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker.io/mariadb:10.9.8
+docker.io/mariadb:10.11.4
+docker.io/gitlab/gitlab-ce:15.11.13-ce.0
+docker.io/mongo:6.0.7
+docker.io/exastro/keycloak:#__PF_VERSION__#
+docker.io/exastro/exastro-platform-auth:#__PF_VERSION__#
+docker.io/exastro/exastro-platform-web:#__PF_VERSION__#
+docker.io/exastro/exastro-platform-api:#__PF_VERSION__#
+docker.io/exastro/exastro-platform-job:#__PF_VERSION__#
+docker.io/exastro/exastro-platform-migration:#__PF_VERSION__#
+docker.io/exastro/exastro-platform-migration:#__PF_VERSION__#
+docker.io/exastro/exastro-it-automation-api-organization:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-api-admin:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-api-oase-receiver:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-web-server:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-ansible-agent:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-ansible-execute:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-ansible-execute-onpremises:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-ansible-legacy-role-vars-listup:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-ansible-legacy-vars-listup:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-ansible-pioneer-vars-listup:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-ansible-towermaster-sync:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-collector:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-conductor-synchronize:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-conductor-regularly:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-menu-create:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-menu-export-import:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-excel-export-import:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-terraform-cloud-ep-execute:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-terraform-cloud-ep-vars-listup:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-terraform-cli-execute:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-terraform-cli-vars-listup:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-hostgroup-split:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-cicd-for-iac:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-oase-conclusion:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-execinstance-dataautoclean:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-file-autoclean:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-migration:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-ansible-agent:#__ITA_VERSION__#
+</pre></div>
+</div>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-ZG9ja2Vy" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-ZG9ja2Vy" name="ZG9ja2Vy" role="tab" tabindex="0">docker</button><button aria-controls="panel-0-cG9kbWFu" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-cG9kbWFu" name="cG9kbWFu" role="tab" tabindex="-1">podman</button></div><div aria-labelledby="tab-0-ZG9ja2Vy" class="sphinx-tabs-panel group-tab" id="panel-0-ZG9ja2Vy" name="ZG9ja2Vy" role="tabpanel" tabindex="0"><p>If the user is not added to a group, and permission error might occur.
+The following is not required if done in advanced.</p>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-number">Listing 192 </span><span class="caption-text">Command</span><a class="headerlink" href="#id13" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>/etc/group<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>docker
+<span class="c1">#If the user is not added to any groups, run the following.</span>
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
+cat<span class="w"> </span>/etc/group<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>docker
+<span class="c1">#Check that the user has been added to the group and reboot the server.</span>
+sudo<span class="w"> </span>reboot
+</pre></div>
+</div>
+</div>
+<p>After connecting to an online environment, run the following shell script and download the container image.
+The parameter specifies the version of ITA. This command can take several minutes before finishing(Depends on the server specs and the connection speeds).</p>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-number">Listing 193 </span><span class="caption-text">Command</span><a class="headerlink" href="#id14" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>docker
+sudo<span class="w"> </span>chmod<span class="w"> </span>a+x<span class="w"> </span>save.sh
+sh<span class="w"> </span>./save.sh<span class="w"> </span>x.x.x
+</pre></div>
+</div>
+</div>
+</div><div aria-labelledby="tab-0-cG9kbWFu" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-cG9kbWFu" name="cG9kbWFu" role="tabpanel" tabindex="0"><p>Run the following shell script and download the container image.The parameter specifies the version of ITA
+The parameter specifies the version of ITA. This command can take several minutes before finishing(Depends on the server specs and the connection speeds).</p>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-number">Listing 194 </span><span class="caption-text">Command</span><a class="headerlink" href="#id15" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>chmod<span class="w"> </span>a+x<span class="w"> </span>save.sh
+sh<span class="w"> </span>./save.sh<span class="w"> </span>x.x.x
+</pre></div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="download-rpm-packages">
+<h3>②Download RPM packages<a class="headerlink" href="#download-rpm-packages" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Download the RPM packages.</div>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-ZG9ja2Vy" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-ZG9ja2Vy" name="ZG9ja2Vy" role="tab" tabindex="0">docker</button><button aria-controls="panel-1-cG9kbWFu" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-cG9kbWFu" name="cG9kbWFu" role="tab" tabindex="-1">podman</button></div><div aria-labelledby="tab-1-ZG9ja2Vy" class="sphinx-tabs-panel group-tab" id="panel-1-ZG9ja2Vy" name="ZG9ja2Vy" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">In the example below, the download destination directory is set to /tmp/docker-repo, and the installation destination directory is set to /tmp/docker-installroot.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-number">Listing 195 </span><span class="caption-text">Command</span><a class="headerlink" href="#id16" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Add repository</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>config-manager<span class="w"> </span>--add-repo<span class="o">=</span>https://download.docker.com/linux/centos/docker-ce.repo
+<span class="c1">#Confirm current OS version</span>
+cat<span class="w"> </span>/etc/os-release
+<span class="c1">#Specify version fetched above for  --releasever=x.x.</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>--downloadonly<span class="w"> </span>--downloaddir<span class="o">=</span>/tmp/docker-repo<span class="w"> </span>--installroot<span class="o">=</span>/tmp/docker-installroot<span class="w"> </span>--releasever<span class="o">=</span>x.x<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span>git<span class="w"> </span>container-selinux
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Install createrepo.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-number">Listing 196 </span><span class="caption-text">Command</span><a class="headerlink" href="#id17" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>createrepo
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Create local repository.</div>
+<div class="line">Since its not possible to access an online repository server from an offline environment, it is not possible to install packages with dnf.</div>
+<div class="line">It is only possible to install them with dnf if we add the packages to a local repository.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-number">Listing 197 </span><span class="caption-text">Command</span><a class="headerlink" href="#id18" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>createrepo<span class="w"> </span>/tmp/docker-repo
+</pre></div>
+</div>
+</div>
+</div><div aria-labelledby="tab-1-cG9kbWFu" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-cG9kbWFu" name="cG9kbWFu" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">In this example, the download destination directory is /tmp/podman-repo, and the install destination directory is /tmp/podman-installroot.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-number">Listing 198 </span><span class="caption-text">Command</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Confirm current OS version</span>
+cat<span class="w"> </span>/etc/os-release
+<span class="c1">#Specify version fetched above for  --releasever=x.x.</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>--downloadonly<span class="w"> </span>--downloaddir<span class="o">=</span>/tmp/podman-repo<span class="w"> </span>--installroot<span class="o">=</span>/tmp/podman-installroot<span class="w"> </span>--releasever<span class="o">=</span>x.x<span class="w"> </span>container-selinux<span class="w"> </span>git<span class="w"> </span>podman<span class="w"> </span>podman-docker
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Install createrepo.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-number">Listing 199 </span><span class="caption-text">Command</span><a class="headerlink" href="#id20" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>createrepo
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Create local repository.</div>
+<div class="line">Since its not possible to access an online repository server from an offline environment, it is not possible to install packages with dnf.</div>
+<div class="line">It is only possible to install them with dnf if we add the packages to a local repository.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-number">Listing 200 </span><span class="caption-text">Command</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>createrepo<span class="w"> </span>/tmp/podman-repo
+</pre></div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="download-docker-compose-resources">
+<h3>③Download docker-compose resources<a class="headerlink" href="#download-docker-compose-resources" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Download <a class="reference external" href="https://github.com/docker/compose/releases">docker-compose-linux-x86_64</a>.</div>
+<div class="line">Change the URL to fit the user’s desired version.</div>
+<div class="line">The version used in the example below is version 2.28.0.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id22">
+<div class="code-block-caption"><span class="caption-number">Listing 201 </span><span class="caption-text">Command</span><a class="headerlink" href="#id22" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-LO<span class="w"> </span>https://github.com/docker/compose/releases/download/v2.28.0/docker-compose-linux-x86_64
+</pre></div>
+</div>
+</div>
+</section>
+<section id="download-exastro-resources">
+<h3>④Download Exastro resources<a class="headerlink" href="#download-exastro-resources" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Download the docker-compose version’s Exastro resources.</div>
+</div>
+<div class="line">The following example downloads to the /tmp directory.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id23">
+<div class="code-block-caption"><span class="caption-number">Listing 202 </span><span class="caption-text">Command</span><a class="headerlink" href="#id23" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/tmp
+curl<span class="w"> </span>-OL<span class="w"> </span>https://github.com/exastro-suite/exastro-docker-compose/archive/main.tar.gz
+</pre></div>
+</div>
+</div>
+</section>
+<section id="transfer-files">
+<h3>Transfer files<a class="headerlink" href="#transfer-files" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Transfer the files fetched in the online environment and to the offline environment with storage mediums such as FPT, SCP and SFTP.</div>
+<div class="line">Feel free to zip the files if they are too big.</div>
+<div class="line">The transfer files and their destinations are as following.</div>
+</div>
+<ul class="simple">
+<li><p>Container image:Free directoy</p></li>
+<li><p>RPM Package: below /tmp</p></li>
+<li><p>Exastro resource:Under normal user’s home directory</p></li>
+<li><p>docker-compose-linux-x86_64:/usr/local/bin</p></li>
+</ul>
+</section>
+</section>
+<section id="offline-environment-environment-unable-to-connect-to-the-internet">
+<h2>Offline environment(Environment unable to connect to the internet)<a class="headerlink" href="#offline-environment-environment-unable-to-connect-to-the-internet" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">After the steps for the online environment is finished, follow the steps below to install to the offline environment.</div>
+</div>
+<section id="install-rpm-packages">
+<h3>⑤Install RPM packages<a class="headerlink" href="#install-rpm-packages" title="Link to this heading">¶</a></h3>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-ZG9ja2Vy" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-ZG9ja2Vy" name="ZG9ja2Vy" role="tab" tabindex="0">docker</button><button aria-controls="panel-2-cG9kbWFu" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-cG9kbWFu" name="cG9kbWFu" role="tab" tabindex="-1">podman</button></div><div aria-labelledby="tab-2-ZG9ja2Vy" class="sphinx-tabs-panel group-tab" id="panel-2-ZG9ja2Vy" name="ZG9ja2Vy" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">Create Local repository Configuration file.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id24">
+<div class="code-block-caption"><span class="caption-number">Listing 203 </span><span class="caption-text">Command</span><a class="headerlink" href="#id24" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>touch<span class="w"> </span>/etc/yum.repos.d/docker-repo.repo
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Write the following information to the created configuration file (※add three slashes after file:)</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id25">
+<div class="code-block-caption"><span class="caption-number">Listing 204 </span><span class="caption-text">Command</span><a class="headerlink" href="#id25" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>vi<span class="w"> </span>/etc/yum.repos.d/docker-repo.repo
+
+<span class="o">[</span>docker-repo<span class="o">]</span>
+<span class="nv">name</span><span class="o">=</span>AlmaLinux-<span class="nv">$releaserver</span><span class="w"> </span>-<span class="w"> </span>docker
+<span class="nv">baseurl</span><span class="o">=</span>file:///tmp/docker-repo
+<span class="nv">enabled</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">gpgcheck</span><span class="o">=</span><span class="m">0</span>
+<span class="nv">gpgkey</span><span class="o">=</span>file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Install package</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id26">
+<div class="code-block-caption"><span class="caption-number">Listing 205 </span><span class="caption-text">Command</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>--disablerepo<span class="o">=</span><span class="se">\*</span><span class="w"> </span>--enablerepo<span class="o">=</span>docker-repo<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span>git<span class="w"> </span>container-selinux
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">If an error mesage displays, search for the displayed modules and install all of them.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id27">
+<div class="code-block-caption"><span class="caption-number">Listing 206 </span><span class="caption-text">Message example</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>No<span class="w"> </span>available<span class="w"> </span>modular<span class="w"> </span>metadata<span class="w"> </span><span class="k">for</span><span class="w"> </span>modular<span class="w"> </span>package<span class="w"> </span><span class="s1">&#39;perl-Mozilla-CA-20160104-7.module_el8.5.0+2812+ed912d05.noarch&#39;</span>,<span class="w"> </span>it<span class="w"> </span>cannot<span class="w"> </span>be<span class="w"> </span>installed<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>system
+No<span class="w"> </span>available<span class="w"> </span>modular<span class="w"> </span>metadata<span class="w"> </span><span class="k">for</span><span class="w"> </span>modular<span class="w"> </span>package<span class="w"> </span><span class="s1">&#39;perl-Net-SSLeay-1.88-2.module_el8.6.0+2811+fe6c84b0.x86_64&#39;</span>,<span class="w"> </span>it<span class="w"> </span>cannot<span class="w"> </span>be<span class="w"> </span>installed<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>system
+Error:<span class="w"> </span>No<span class="w"> </span>available<span class="w"> </span>modular<span class="w"> </span>metadata<span class="w"> </span><span class="k">for</span><span class="w"> </span>modular<span class="w"> </span>package
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id28">
+<div class="code-block-caption"><span class="caption-number">Listing 207 </span><span class="caption-text">Check all the dispalyed modules and install all of them.</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#If the target is perl-Mozilla-CA or perl-Net-SSLeay</span>
+<span class="nb">cd</span><span class="w"> </span>/tmp/docker-repo
+ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;perl-Mozilla-CA|perl-Net-SSLeay&quot;</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>--disablerepo<span class="o">=</span><span class="se">\*</span><span class="w"> </span>--enablerepo<span class="o">=</span>docker-repo<span class="w"> </span>perl-Mozilla-CA-20160104-7.module_el8.5.0+2812+ed912d05.noarch.rmp<span class="w"> </span>perl-Net-SSLeay-1.88-2.module_el8.6.0+2811+fe6c84b0.x86_64.rpm
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Reinstall the packages</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id29">
+<div class="code-block-caption"><span class="caption-number">Listing 208 </span><span class="caption-text">Command</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>--disablerepo<span class="o">=</span><span class="se">\*</span><span class="w"> </span>--enablerepo<span class="o">=</span>docker-repo<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span>git<span class="w"> </span>container-selinux
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Add the user to the docker group.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id30">
+<div class="code-block-caption"><span class="caption-number">Listing 209 </span><span class="caption-text">Command</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>docker
+cat<span class="w"> </span>/etc/group<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>docker
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
+<span class="c1">#Confirm that the user name displays</span>
+cat<span class="w"> </span>/etc/group<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>docker
+sudo<span class="w">  </span>reboot
+<span class="c1">#Reconnect to the offline environment.</span>
+</pre></div>
+</div>
+</div>
+</div><div aria-labelledby="tab-2-cG9kbWFu" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-cG9kbWFu" name="cG9kbWFu" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">Create the local repository’s configuration file.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id31">
+<div class="code-block-caption"><span class="caption-number">Listing 210 </span><span class="caption-text">Command</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>touch<span class="w"> </span>/etc/yum.repos.d/podman-repo.repo
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Write the following information to the created configuration file (※add three slashes after file:)</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id32">
+<div class="code-block-caption"><span class="caption-number">Listing 211 </span><span class="caption-text">Command</span><a class="headerlink" href="#id32" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>vi<span class="w"> </span>/etc/yum.repos.d/podman-repo.repo
+
+<span class="o">[</span>podman-repo<span class="o">]</span>
+<span class="nv">name</span><span class="o">=</span>RedHat-<span class="nv">$releaserver</span><span class="w"> </span>-<span class="w"> </span>podman
+<span class="nv">baseurl</span><span class="o">=</span>file:///tmp/podman-repo
+<span class="nv">enabled</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">gpgcheck</span><span class="o">=</span><span class="m">0</span>
+<span class="nv">gpgkey</span><span class="o">=</span>file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Install package</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id33">
+<div class="code-block-caption"><span class="caption-number">Listing 212 </span><span class="caption-text">Command</span><a class="headerlink" href="#id33" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>--disablerepo<span class="o">=</span><span class="se">\*</span><span class="w"> </span>--enablerepo<span class="o">=</span>podman-repo<span class="w"> </span>install<span class="w"> </span>container-selinux<span class="w"> </span>git<span class="w"> </span>podman<span class="w"> </span>podman-docker
+</pre></div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="id1">
+<h3>⑥Upload Container image<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Create the container image list and the shell script that will download the container image in a partition that has over 25GB space.</div>
+<div class="line">These two must be created in the same directory. The image.list contains the same as the one created in the online environment.</div>
+<div class="line">The load.sh’s [“x.x.x”]=”x.x.x” must be the same version written in save.sh.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id34">
+<div class="code-block-caption"><span class="caption-number">Listing 213 </span><span class="caption-text">Command</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>load.sh
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id35">
+<div class="code-block-caption"><span class="caption-number">Listing 214 </span><span class="caption-text">Copy and paste the code below and rewrite the version</span><a class="headerlink" href="#id35" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">ITA_VERSION</span><span class="o">=</span><span class="nv">$1</span>
+<span class="nb">declare</span><span class="w"> </span>-A<span class="w"> </span><span class="nv">PF_VERSION</span><span class="o">=(</span>
+<span class="w">  </span><span class="o">[</span><span class="s2">&quot;x.x.x&quot;</span><span class="o">]=</span><span class="s2">&quot;x.x.x&quot;</span>
+<span class="o">)</span>
+
+readarray<span class="w"> </span>-t<span class="w"> </span>image_list<span class="w"> </span>&lt;<span class="w"> </span><span class="s2">&quot;./image.list&quot;</span>
+<span class="k">for</span><span class="w"> </span>image<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">image_list</span><span class="p">[@]</span><span class="si">}</span>
+<span class="k">do</span>
+<span class="w">  </span><span class="nv">image_fullname</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">image</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;s/#__ITA_VERSION__#/</span><span class="si">${</span><span class="nv">ITA_VERSION</span><span class="si">}</span><span class="s2">/&quot;</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;s/#__PF_VERSION__#/</span><span class="si">${</span><span class="nv">PF_VERSION</span><span class="p">[</span><span class="nv">$ITA_VERSION</span><span class="p">]</span><span class="si">}</span><span class="s2">/&quot;</span><span class="k">)</span>
+<span class="w">  </span><span class="nv">image_name</span><span class="o">=</span><span class="k">$(</span>basename<span class="w"> </span><span class="si">${</span><span class="nv">image_fullname</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;s/:/-/&quot;</span><span class="k">)</span>
+<span class="w">  </span>docker<span class="w"> </span>load<span class="w"> </span>&lt;<span class="w"> </span><span class="si">${</span><span class="nv">ITA_VERSION</span><span class="si">}</span>/<span class="si">${</span><span class="nv">image_name</span><span class="si">}</span>.tar.gz
+<span class="k">done</span>
+
+<span class="nb">wait</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id36">
+<div class="code-block-caption"><span class="caption-number">Listing 215 </span><span class="caption-text">Command</span><a class="headerlink" href="#id36" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>image.list
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id37">
+<div class="code-block-caption"><span class="caption-number">Listing 216 </span><span class="caption-text">Copy and paste the following code</span><a class="headerlink" href="#id37" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker.io/mariadb:10.9.8
+docker.io/mariadb:10.11.4
+docker.io/gitlab/gitlab-ce:15.11.13-ce.0
+docker.io/mongo:6.0.7
+docker.io/exastro/keycloak:#__PF_VERSION__#
+docker.io/exastro/exastro-platform-auth:#__PF_VERSION__#
+docker.io/exastro/exastro-platform-web:#__PF_VERSION__#
+docker.io/exastro/exastro-platform-api:#__PF_VERSION__#
+docker.io/exastro/exastro-platform-job:#__PF_VERSION__#
+docker.io/exastro/exastro-platform-migration:#__PF_VERSION__#
+docker.io/exastro/exastro-platform-migration:#__PF_VERSION__#
+docker.io/exastro/exastro-it-automation-api-organization:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-api-admin:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-api-oase-receiver:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-web-server:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-ansible-agent:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-ansible-execute:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-ansible-execute-onpremises:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-ansible-legacy-role-vars-listup:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-ansible-legacy-vars-listup:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-ansible-pioneer-vars-listup:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-ansible-towermaster-sync:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-collector:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-conductor-synchronize:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-conductor-regularly:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-menu-create:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-menu-export-import:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-excel-export-import:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-terraform-cloud-ep-execute:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-terraform-cloud-ep-vars-listup:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-terraform-cli-execute:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-terraform-cli-vars-listup:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-hostgroup-split:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-cicd-for-iac:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-oase-conclusion:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-execinstance-dataautoclean:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-file-autoclean:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-migration:#__ITA_VERSION__#
+docker.io/exastro/exastro-it-automation-by-ansible-agent:#__ITA_VERSION__#
+</pre></div>
+</div>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-ZG9ja2Vy" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-ZG9ja2Vy" name="ZG9ja2Vy" role="tab" tabindex="0">docker</button><button aria-controls="panel-3-cG9kbWFu" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-cG9kbWFu" name="cG9kbWFu" role="tab" tabindex="-1">podman</button></div><div aria-labelledby="tab-3-ZG9ja2Vy" class="sphinx-tabs-panel group-tab" id="panel-3-ZG9ja2Vy" name="ZG9ja2Vy" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">Execute Container image.        The parameter specifies the version of ITA.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id38">
+<div class="code-block-caption"><span class="caption-number">Listing 217 </span><span class="caption-text">Command</span><a class="headerlink" href="#id38" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>chmod<span class="w"> </span>a+x<span class="w"> </span>load.sh
+sh<span class="w"> </span>./load.sh<span class="w"> </span>x.x.x
+</pre></div>
+</div>
+</div>
+</div><div aria-labelledby="tab-3-cG9kbWFu" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-cG9kbWFu" name="cG9kbWFu" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">Execute Container image.        The parameter specifies the version of ITA.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id39">
+<div class="code-block-caption"><span class="caption-number">Listing 218 </span><span class="caption-text">Command</span><a class="headerlink" href="#id39" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>podman
+sudo<span class="w"> </span>chmod<span class="w"> </span>a+x<span class="w"> </span>load.sh
+sh<span class="w"> </span>./load.sh<span class="w"> </span>x.x.x
+</pre></div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="install-docker-compose-resources">
+<h3>⑦Install docker-compose resources<a class="headerlink" href="#install-docker-compose-resources" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Add required permissions to the docker-compose-linux-x86_64 in /usr/local/bin.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id40">
+<div class="code-block-caption"><span class="caption-number">Listing 219 </span><span class="caption-text">Command</span><a class="headerlink" href="#id40" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/usr/local/bin
+sudo<span class="w"> </span>mv<span class="w"> </span>docker-compose-linux-x86_64<span class="w"> </span>docker-compose
+sudo<span class="w"> </span>chmod<span class="w"> </span>a+x<span class="w"> </span>/usr/local/bin/docker-compose
+sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/usr/local/bin/docker-compose<span class="w"> </span>/usr/bin/docker-compose
+</pre></div>
+</div>
+</div>
+</section>
+<section id="install-exastro-resources">
+<h3>⑧Install Exastro resources<a class="headerlink" href="#install-exastro-resources" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Extract the docker-compose version’s Exastro resources under the home directory of a normal user. After that, change the directory name to exastro-docker-compose.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id41">
+<div class="code-block-caption"><span class="caption-number">Listing 220 </span><span class="caption-text">Command</span><a class="headerlink" href="#id41" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>-zxvf<span class="w"> </span>main.tar.gz
+sudo<span class="w"> </span>mv<span class="w"> </span>exastro-docker-compose-main<span class="w"> </span>exastro-docker-compose
+</pre></div>
+</div>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-ZG9ja2Vy" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-ZG9ja2Vy" name="ZG9ja2Vy" role="tab" tabindex="0">docker</button><button aria-controls="panel-4-cG9kbWFu" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-cG9kbWFu" name="cG9kbWFu" role="tab" tabindex="-1">podman</button></div><div aria-labelledby="tab-4-ZG9ja2Vy" class="sphinx-tabs-panel group-tab" id="panel-4-ZG9ja2Vy" name="ZG9ja2Vy" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">Change the SELinux mode to SELINUX=permissive.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id42">
+<div class="code-block-caption"><span class="caption-number">Listing 221 </span><span class="caption-text">Command</span><a class="headerlink" href="#id42" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>sudo<span class="w"> </span>vi<span class="w"> </span>/etc/selinux/config
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id43">
+<div class="code-block-caption"><span class="caption-number">Listing 222 </span><span class="caption-text">/etc/selinux/config example</span><a class="headerlink" href="#id43" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># This file controls the state of SELinux on the system.</span>
+<span class="c1"># SELINUX= can take one of these three values:</span>
+<span class="c1">#     enforcing - SELinux security policy is enforced.</span>
+<span class="c1">#     permissive - SELinux prints warnings instead of enforcing.</span>
+<span class="c1">#     disabled - No SELinux policy is loaded.</span>
+<span class="c1"># See also:</span>
+<span class="c1"># https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-selinux/#getting-started-with-selinux-selinux-states-and-modes</span>
+<span class="c1">#</span>
+<span class="c1"># NOTE: In earlier Fedora kernel buil, SELINUX=disabled would also</span>
+<span class="c1"># fully disable SELinux during boot. If you need a system with SELinux</span>
+<span class="c1"># fully disabled instead of SELinux running with no policy loaded, you</span>
+<span class="c1"># need to pass selinux=0 to the kernel command line. You can use grubby</span>
+<span class="c1"># to persistently set the bootloader to boot with selinux=0:</span>
+<span class="c1">#</span>
+<span class="c1">#    grubby --update-kernel ALL --args selinux=0</span>
+<span class="c1">#</span>
+<span class="c1"># To revert back to SELinux enabled:</span>
+<span class="c1">#</span>
+<span class="c1">#    grubby --update-kernel ALL --remove-args selinux</span>
+<span class="c1">#</span>
+<span class="nv">SELINUX</span><span class="o">=</span>permissive
+<span class="c1"># SELINUXTYPE= can take one of these three values:</span>
+<span class="c1">#     targeted - Targeted processes are protected,</span>
+<span class="c1">#     minimum - Modification of targeted policy. Only selected processes are protected.</span>
+<span class="c1">#     mls - Multi Level Security protection.</span>
+<span class="nv">SELINUXTYPE</span><span class="o">=</span>targeted
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id44">
+<div class="code-block-caption"><span class="caption-number">Listing 223 </span><span class="caption-text">Command</span><a class="headerlink" href="#id44" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>reboot
+<span class="c1">#Reconnect to the offline environment</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">This setup.sh is the same used in Exastro on Docker Compose - Online. Follow the steps below to comment out the repository settings.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id45">
+<div class="code-block-caption"><span class="caption-number">Listing 224 </span><span class="caption-text">Command</span><a class="headerlink" href="#id45" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/sudo dnf config-manager/#sudo dnf config-manager/&#39;</span><span class="w"> </span>setup.sh
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Install the Exastro Service packages and Exastro source file.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id46">
+<div class="code-block-caption"><span class="caption-number">Listing 225 </span><span class="caption-text">Command</span><a class="headerlink" href="#id46" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/exastro-docker-compose<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sh<span class="w"> </span>./setup.sh<span class="w"> </span>install
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">When the required packages are installed, the user should be met with an interactible installation process where they can input setting values.</div>
+<div class="line">In order to edit detailed settings, input <strong class="command">n</strong> or <strong class="command">no</strong>  and skip the next processes.</div>
+<div class="line">In order to boot the Exastro system container groups, input <strong class="command">y</strong> or <strong class="command">yes</strong>.</div>
+<div class="line">Deploying the Exastro system can take up to several minutes.(Depends on the server specs and the connection speeds)</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id47">
+<div class="code-block-caption"><span class="caption-number">Listing 226 </span><span class="caption-text">OASE container deployment confirmation</span><a class="headerlink" href="#id47" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Deploy<span class="w"> </span>OASE<span class="w"> </span>container<span class="w"> </span>?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>y<span class="o">]</span>:
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id48">
+<div class="code-block-caption"><span class="caption-number">Listing 227 </span><span class="caption-text">Gitlab deployment confirmation</span><a class="headerlink" href="#id48" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Deploy<span class="w"> </span>Gitlab<span class="w"> </span>containser?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>n<span class="o">]</span>:
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id49">
+<div class="code-block-caption"><span class="caption-number">Listing 228 </span><span class="caption-text">Password token automatic creation confirmation</span><a class="headerlink" href="#id49" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Generate<span class="w"> </span>all<span class="w"> </span>password<span class="w"> </span>and<span class="w"> </span>token<span class="w"> </span>automatically?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>y<span class="o">]</span>:
+</pre></div>
+</div>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-5-aHR0cHMgZW5jcnlwdGVkIGNvbm5lY3Rpb24=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-aHR0cHMgZW5jcnlwdGVkIGNvbm5lY3Rpb24=" name="aHR0cHMgZW5jcnlwdGVkIGNvbm5lY3Rpb24=" role="tab" tabindex="0">https encrypted connection</button><button aria-controls="panel-5-aHR0cCBjb25uZWN0aW9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-aHR0cCBjb25uZWN0aW9u" name="aHR0cCBjb25uZWN0aW9u" role="tab" tabindex="-1">http connection</button></div><div aria-labelledby="tab-5-aHR0cHMgZW5jcnlwdGVkIGNvbm5lY3Rpb24=" class="sphinx-tabs-panel group-tab" id="panel-5-aHR0cHMgZW5jcnlwdGVkIGNvbm5lY3Rpb24=" name="aHR0cHMgZW5jcnlwdGVkIGNvbm5lY3Rpb24=" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id50">
+<div class="code-block-caption"><span class="caption-number">Listing 229 </span><span class="caption-text">Exastro service URL</span><a class="headerlink" href="#id50" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Input 30800 for the port number if the OS is Red Hat Enterprise Linux. For everything else, input 80.</span>
+Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> </span>service<span class="w"> </span>URL:<span class="w"> </span>https://ita.example.com:30080
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id51">
+<div class="code-block-caption"><span class="caption-number">Listing 230 </span><span class="caption-text">Exastro management service URL</span><a class="headerlink" href="#id51" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Input 30801 for the port number if the OS is Red Hat Enterprise Linux. For everything else, input 81.</span>
+Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> </span>management<span class="w"> </span>URL:<span class="w"> </span>https://ita.example.com:30081
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id52">
+<div class="code-block-caption"><span class="caption-number">Listing 231 </span><span class="caption-text">Self-signed SSL/TSL certificate generation (If Exastro service URL/Exastro management service URL is set to https)</span><a class="headerlink" href="#id52" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Generate<span class="w"> </span>self-signed<span class="w"> </span>SSL<span class="w"> </span>certificate?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>y<span class="o">]</span>:
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id53">
+<div class="code-block-caption"><span class="caption-number">Listing 232 </span><span class="caption-text">Server certificate/Secret key file path (If Self-signed SSL/TSL certificate generation is set to “n”)</span><a class="headerlink" href="#id53" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Specify the server certificate file path for the certificate file path and the secret key file&#39;s file path for the private-key file path.</span>
+Input<span class="w"> </span>path<span class="w"> </span>to<span class="w"> </span>your<span class="w"> </span>SSL<span class="w"> </span>certificate<span class="w"> </span>file.
+certificate<span class="w"> </span>file<span class="w"> </span>path:
+private-key<span class="w"> </span>file<span class="w"> </span>path:
+</pre></div>
+</div>
+</div>
+</div><div aria-labelledby="tab-5-aHR0cCBjb25uZWN0aW9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-5-aHR0cCBjb25uZWN0aW9u" name="aHR0cCBjb25uZWN0aW9u" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id54">
+<div class="code-block-caption"><span class="caption-number">Listing 233 </span><span class="caption-text">Exastro service URL</span><a class="headerlink" href="#id54" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Input 30800 for the port number if the OS is Red Hat Enterprise Linux. For everything else, input 80.</span>
+Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> </span>service<span class="w"> </span>URL:<span class="w"> </span>http://ita.example.com:30080
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id55">
+<div class="code-block-caption"><span class="caption-number">Listing 234 </span><span class="caption-text">Exastro management service URL</span><a class="headerlink" href="#id55" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Input 30801 for the port number if the OS is Red Hat Enterprise Linux. For everything else, input 81.</span>
+Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> </span>management<span class="w"> </span>URL:<span class="w"> </span>http://ita.example.com:30081
+</pre></div>
+</div>
+</div>
+</div></div>
+<div class="literal-block-wrapper docutils container" id="id56">
+<div class="code-block-caption"><span class="caption-number">Listing 235 </span><span class="caption-text">Gitlab container URL(Required if deploying Gitlab container).</span><a class="headerlink" href="#id56" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Specify 40080 for the port number.</span>
+Input<span class="w"> </span>the<span class="w"> </span>external<span class="w"> </span>URL<span class="w"> </span>of<span class="w"> </span>Gitlab<span class="w"> </span>container<span class="w">  </span><span class="o">[</span>default:<span class="w"> </span><span class="o">(</span>nothing<span class="o">)]</span>:
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id57">
+<div class="code-block-caption"><span class="caption-number">Listing 236 </span><span class="caption-text">Configuration file generation confirmation</span><a class="headerlink" href="#id57" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>System<span class="w"> </span>parametes<span class="w"> </span>are<span class="w"> </span>bellow.
+
+System<span class="w"> </span>administrator<span class="w"> </span>password:<span class="w">    </span>********
+Database<span class="w"> </span>password:<span class="w">                </span>********
+OASE<span class="w"> </span>deployment<span class="w">                   </span><span class="nb">true</span>
+MongoDB<span class="w"> </span>password<span class="w">                  </span>********
+Service<span class="w"> </span>URL:<span class="w">                      </span>http://ita.example.com:30080
+Manegement<span class="w"> </span>URL:<span class="w">                   </span>http://ita.example.com:30081
+Docker<span class="w"> </span>GID:<span class="w">                       </span><span class="m">985</span>
+Docker<span class="w"> </span>Socket<span class="w"> </span>path:<span class="w">               </span>/var/run/docker.sock
+GitLab<span class="w"> </span>deployment:<span class="w">                </span><span class="nb">false</span>
+
+Generate<span class="w"> </span>.env<span class="w"> </span>file<span class="w"> </span>with<span class="w"> </span>these<span class="w"> </span>settings?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>n<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Reboot server</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id58">
+<div class="code-block-caption"><span class="caption-number">Listing 237 </span><span class="caption-text">Command</span><a class="headerlink" href="#id58" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>reboot
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id59">
+<div class="code-block-caption"><span class="caption-number">Listing 238 </span><span class="caption-text">Command</span><a class="headerlink" href="#id59" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/exastro-docker-compose<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sh<span class="w"> </span>./setup.sh<span class="w"> </span>install
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id60">
+<div class="code-block-caption"><span class="caption-number">Listing 239 </span><span class="caption-text">Reconfirm .env</span><a class="headerlink" href="#id60" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Press enter without inputting anything.</span>
+Regenerate<span class="w"> </span>.env<span class="w"> </span>file?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>n<span class="o">]</span>:
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id61">
+<div class="code-block-caption"><span class="caption-number">Listing 240 </span><span class="caption-text">Exastro container deploy confirmation</span><a class="headerlink" href="#id61" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Input y.</span>
+Deploy<span class="w"> </span>Exastro<span class="w"> </span>containers<span class="w"> </span>now?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>n<span class="o">]</span>:
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Check that the Container STATUS says UP.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id62">
+<div class="code-block-caption"><span class="caption-number">Listing 241 </span><span class="caption-text">Command</span><a class="headerlink" href="#id62" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>ps
+</pre></div>
+</div>
+</div>
+</div><div aria-labelledby="tab-4-cG9kbWFu" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-4-cG9kbWFu" name="cG9kbWFu" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">Change the SELinux mode to SELINUX=permissive.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id63">
+<div class="code-block-caption"><span class="caption-number">Listing 242 </span><span class="caption-text">Command</span><a class="headerlink" href="#id63" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>sudo<span class="w"> </span>vi<span class="w"> </span>/etc/selinux/config
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id64">
+<div class="code-block-caption"><span class="caption-number">Listing 243 </span><span class="caption-text">/etc/selinux/config example</span><a class="headerlink" href="#id64" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># This file controls the state of SELinux on the system.</span>
+<span class="c1"># SELINUX= can take one of these three values:</span>
+<span class="c1">#     enforcing - SELinux security policy is enforced.</span>
+<span class="c1">#     permissive - SELinux prints warnings instead of enforcing.</span>
+<span class="c1">#     disabled - No SELinux policy is loaded.</span>
+<span class="c1"># See also:</span>
+<span class="c1"># https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-selinux/#getting-started-with-selinux-selinux-states-and-modes</span>
+<span class="c1">#</span>
+<span class="c1"># NOTE: In earlier Fedora kernel builds, SELINUX=disabled would also</span>
+<span class="c1"># fully disable SELinux during boot. If you need a system with SELinux</span>
+<span class="c1"># fully disabled instead of SELinux running with no policy loaded, you</span>
+<span class="c1"># need to pass selinux=0 to the kernel command line. You can use grubby</span>
+<span class="c1"># to persistently set the bootloader to boot with selinux=0:</span>
+<span class="c1">#</span>
+<span class="c1">#    grubby --update-kernel ALL --args selinux=0</span>
+<span class="c1">#</span>
+<span class="c1"># To revert back to SELinux enabled:</span>
+<span class="c1">#</span>
+<span class="c1">#    grubby --update-kernel ALL --remove-args selinux</span>
+<span class="c1">#</span>
+<span class="nv">SELINUX</span><span class="o">=</span>permissive
+<span class="c1"># SELINUXTYPE= can take one of these three values:</span>
+<span class="c1">#     targeted - Targeted processes are protected,</span>
+<span class="c1">#     minimum - Modification of targeted policy. Only selected processes are protected.</span>
+<span class="c1">#     mls - Multi Level Security protection.</span>
+<span class="nv">SELINUXTYPE</span><span class="o">=</span>targeted
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id65">
+<div class="code-block-caption"><span class="caption-number">Listing 244 </span><span class="caption-text">Command</span><a class="headerlink" href="#id65" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>reboot
+<span class="c1">#Reconnect to the offline environment</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Install the Exastro Service packages and Exastro source file.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id66">
+<div class="code-block-caption"><span class="caption-number">Listing 245 </span><span class="caption-text">Command</span><a class="headerlink" href="#id66" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/exastro-docker-compose<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sh<span class="w"> </span>./setup.sh<span class="w"> </span>install
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">When the required packages are installed, the user should be met with an interactible installation process where they can input setting values.</div>
+<div class="line">In order to edit detailed settings, input <strong class="command">n</strong> or <strong class="command">no</strong>  and skip the next processes.</div>
+<div class="line">In order to boot the Exastro system container groups, input <strong class="command">y</strong> or <strong class="command">yes</strong>.</div>
+<div class="line">Deploying the Exastro system can take up to several minutes.(Depends on the server specs and the connection speeds)</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id67">
+<div class="code-block-caption"><span class="caption-number">Listing 246 </span><span class="caption-text">OASE deployment confirmation</span><a class="headerlink" href="#id67" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Deploy<span class="w"> </span>OASE<span class="w"> </span>container<span class="w"> </span>URL?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>y<span class="o">]</span>:
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id68">
+<div class="code-block-caption"><span class="caption-number">Listing 247 </span><span class="caption-text">Gitlab deployment confirmation</span><a class="headerlink" href="#id68" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Deploy<span class="w"> </span>Gitlab<span class="w"> </span>containser?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>n<span class="o">]</span>:
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id69">
+<div class="code-block-caption"><span class="caption-number">Listing 248 </span><span class="caption-text">Password token automatic creation confirmation</span><a class="headerlink" href="#id69" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Generate<span class="w"> </span>all<span class="w"> </span>password<span class="w"> </span>and<span class="w"> </span>token<span class="w"> </span>automatically?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>y<span class="o">]</span>:
+</pre></div>
+</div>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-6-aHR0cHMgZW5jcnlwdGVkIGNvbm5lY3Rpb24=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-6-aHR0cHMgZW5jcnlwdGVkIGNvbm5lY3Rpb24=" name="aHR0cHMgZW5jcnlwdGVkIGNvbm5lY3Rpb24=" role="tab" tabindex="0">https encrypted connection</button><button aria-controls="panel-6-aHR0cCBjb25uZWN0aW9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-aHR0cCBjb25uZWN0aW9u" name="aHR0cCBjb25uZWN0aW9u" role="tab" tabindex="-1">http connection</button></div><div aria-labelledby="tab-6-aHR0cHMgZW5jcnlwdGVkIGNvbm5lY3Rpb24=" class="sphinx-tabs-panel group-tab" id="panel-6-aHR0cHMgZW5jcnlwdGVkIGNvbm5lY3Rpb24=" name="aHR0cHMgZW5jcnlwdGVkIGNvbm5lY3Rpb24=" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id70">
+<div class="code-block-caption"><span class="caption-number">Listing 249 </span><span class="caption-text">Exastro service URL</span><a class="headerlink" href="#id70" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Input 30800 for the port number if the OS is Red Hat Enterprise Linux. For everything else, input 80.</span>
+Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> </span>service<span class="w"> </span>URL:<span class="w"> </span>https://ita.example.com:30080
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id71">
+<div class="code-block-caption"><span class="caption-number">Listing 250 </span><span class="caption-text">Exastro management service URL</span><a class="headerlink" href="#id71" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Input 30801 for the port number if the OS is Red Hat Enterprise Linux. For everything else, input 81.</span>
+Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> </span>management<span class="w"> </span>URL:<span class="w"> </span>https://ita.example.com:30081
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id72">
+<div class="code-block-caption"><span class="caption-number">Listing 251 </span><span class="caption-text">Self-signed SSL/TSL certificate generation (If Exastro service URL/Exastro management service URL is set to https)</span><a class="headerlink" href="#id72" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Generate<span class="w"> </span>self-signed<span class="w"> </span>SSL<span class="w"> </span>certificate?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>y<span class="o">]</span>:
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id73">
+<div class="code-block-caption"><span class="caption-number">Listing 252 </span><span class="caption-text">Server certificate/Secret key file path (If Self-signed SSL/TSL certificate generation is set to “n”)</span><a class="headerlink" href="#id73" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Specify the server certificate file path for the certificate file path and the secret key file&#39;s file path for the private-key file path.</span>
+Input<span class="w"> </span>path<span class="w"> </span>to<span class="w"> </span>your<span class="w"> </span>SSL<span class="w"> </span>certificate<span class="w"> </span>file.
+certificate<span class="w"> </span>file<span class="w"> </span>path:
+private-key<span class="w"> </span>file<span class="w"> </span>path:
+</pre></div>
+</div>
+</div>
+</div><div aria-labelledby="tab-6-aHR0cCBjb25uZWN0aW9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-6-aHR0cCBjb25uZWN0aW9u" name="aHR0cCBjb25uZWN0aW9u" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id74">
+<div class="code-block-caption"><span class="caption-number">Listing 253 </span><span class="caption-text">Exastro service URL</span><a class="headerlink" href="#id74" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Input 30800 for the port number if the OS is Red Hat Enterprise Linux. For everything else, input 80.</span>
+Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> </span>service<span class="w"> </span>URL:<span class="w"> </span>http://ita.example.com:30080
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id75">
+<div class="code-block-caption"><span class="caption-number">Listing 254 </span><span class="caption-text">Exastro management service URL</span><a class="headerlink" href="#id75" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Input 30801 for the port number if the OS is Red Hat Enterprise Linux. For everything else, input 81.</span>
+Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> </span>management<span class="w"> </span>URL:<span class="w"> </span>http://ita.example.com:30081
+</pre></div>
+</div>
+</div>
+</div></div>
+<div class="literal-block-wrapper docutils container" id="id76">
+<div class="code-block-caption"><span class="caption-number">Listing 255 </span><span class="caption-text">GitLab deployment confirmation(Required if deploying Gitlab container).</span><a class="headerlink" href="#id76" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Specify 40080 for the port number.</span>
+Input<span class="w"> </span>the<span class="w"> </span>external<span class="w"> </span>URL<span class="w"> </span>of<span class="w"> </span>Gitlab<span class="w"> </span>container<span class="w">  </span><span class="o">[</span>default:<span class="w"> </span><span class="o">(</span>nothing<span class="o">)]</span>:
+</pre></div>
+</div>
+</div>
+</div></div>
+<div class="literal-block-wrapper docutils container" id="id77">
+<div class="code-block-caption"><span class="caption-number">Listing 256 </span><span class="caption-text">Confirm generated settings file</span><a class="headerlink" href="#id77" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>System<span class="w"> </span>parametes<span class="w"> </span>are<span class="w"> </span>bellow.
+
+System<span class="w"> </span>administrator<span class="w"> </span>password:<span class="w">    </span>********
+Database<span class="w"> </span>password:<span class="w">                 </span>********
+OASE<span class="w"> </span>deployment<span class="w">                   </span><span class="nb">true</span>
+MongoDB<span class="w"> </span>password<span class="w">                  </span>********
+Service<span class="w"> </span>URL:<span class="w">                      </span>http://ita.example.com:30080
+Manegement<span class="w"> </span>URL:<span class="w">                   </span>http://ita.example.com:30081
+Docker<span class="w"> </span>GID:<span class="w">                       </span><span class="m">1000</span>
+Docker<span class="w"> </span>Socket<span class="w"> </span>path:<span class="w">               </span>/run/user/1000/podman/podman.sock
+GitLab<span class="w"> </span>deployment:<span class="w">                </span><span class="nb">false</span>
+
+<span class="w">      </span>Generate<span class="w"> </span>.env<span class="w"> </span>file<span class="w"> </span>with<span class="w"> </span>these<span class="w"> </span>settings?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>n<span class="o">]</span>
+
+
+<span class="w">   </span><span class="p">|</span><span class="w"> </span>Reboot<span class="w"> </span>server
+
+<span class="w">   </span>..<span class="w"> </span>code-block::<span class="w"> </span>shell
+<span class="w">      </span>:caption:<span class="w"> </span>Command
+
+<span class="w">      </span>sudo<span class="w"> </span>reboot
+
+
+<span class="w">   </span>..<span class="w"> </span>code-block::<span class="w"> </span>shell
+<span class="w">      </span>:caption:<span class="w"> </span>Command
+
+<span class="w">      </span><span class="nb">cd</span><span class="w"> </span>~/exastro-docker-compose<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sh<span class="w"> </span>./setup.sh<span class="w"> </span>install
+
+
+<span class="w">   </span>..<span class="w"> </span>code-block::<span class="w"> </span>shell
+<span class="w">      </span>:caption:<span class="w"> </span>Confirm<span class="w"> </span>that<span class="w"> </span>.env<span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>regenerated
+
+<span class="w">      </span><span class="c1">#Press enter without inputting anything.</span>
+<span class="w">      </span>Regenerate<span class="w"> </span>.env<span class="w"> </span>file?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>n<span class="o">]</span>:
+
+<span class="w">   </span>..<span class="w"> </span>code-block::<span class="w"> </span>shell
+<span class="w">      </span>:caption:<span class="w"> </span>Exastro<span class="w"> </span>container<span class="w"> </span>deploy<span class="w"> </span>confirmation
+
+<span class="w">      </span><span class="c1">#Input y</span>
+<span class="w">      </span>Deploy<span class="w"> </span>Exastro<span class="w"> </span>containers<span class="w"> </span>now?<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>n<span class="o">]</span>:
+
+
+<span class="w">   </span><span class="p">|</span><span class="w"> </span>Check<span class="w"> </span>that<span class="w"> </span>the<span class="w"> </span>Container<span class="w"> </span>STATUS<span class="w"> </span>says<span class="w"> </span>UP.
+</pre></div>
+</div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>..<span class="w"> </span>code-block::<span class="w"> </span>shell
+<span class="w">   </span>:caption:<span class="w"> </span>Command
+
+<span class="w">   </span>podman<span class="w"> </span>ps
+</pre></div>
+</div>
+</section>
+</section>
+<section id="login">
+<h2>Login<a class="headerlink" href="#login" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Confirm the username and password information of the user.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id78">
+<div class="code-block-caption"><span class="caption-number">Listing 257 </span><span class="caption-text">command</span><a class="headerlink" href="#id78" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">cd</span><span class="w"> </span>~/exastro-docker-compose
+<span class="linenos">2</span>cat<span class="w"> </span>.env
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id79">
+<div class="code-block-caption"><span class="caption-number">Listing 258 </span><span class="caption-text">Login information</span><a class="headerlink" href="#id79" title="Link to this code">¶</a></div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">### Initial account information for creating system administrators</span>
+<span class="linenos">2</span><span class="c1">#### Specify the username and password</span>
+<span class="linenos">3</span><span class="c1"># SYSTEM_ADMIN=&lt;Username&gt;</span>
+<span class="linenos">4</span><span class="nv">SYSTEM_ADMIN_PASSWORD</span><span class="o">=</span>&lt;Password&gt;
+</pre></div>
+</div>
+</div>
+</section>
+<section id="create-organization">
+<h2>Create Organization<a class="headerlink" href="#create-organization" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">After rebooting and logging in to the system, create an organization.</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">When linked to GitLab, the GitLab must be running in order to create Organizations.</div>
+</div>
+</div>
+</section>
+<section id="create-workspace">
+<h2>Create Workspace<a class="headerlink" href="#create-workspace" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">After creating an organization, log in to it and create a workspace.</div>
+</div>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="index.html" title="Previous topic"><span>Previous topic</span>Exastro</a></li>
+    <li class="next"><a href="../../../learn/index.html" title="Next topic"><span>Next topic</span>Learn</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/en/2.5/terms/en.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

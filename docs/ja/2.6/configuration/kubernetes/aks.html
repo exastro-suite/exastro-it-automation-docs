@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>3. Azure Kubernetes Service &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="Docker Compose" href="../docker_compose/index.html" />
+    <link rel="prev" title="2. Kubernetes クラスター" href="kubernetes.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/configuration/kubernetes/aks.html" selected>current</option>
+              <option value="../../../../ja/2.6/configuration/kubernetes/aks.html" selected>2.6(current)</option>
+              <option value="../../../../ja/2.5/configuration/kubernetes/aks.html">2.5</option>
+              <option value="../../../../ja/2.4/configuration/kubernetes/aks.html">2.4</option>
+              <option value="../../../../ja/2.3/configuration/kubernetes/aks.html">2.3</option>
+              <option value="../../../../ja/2.2/configuration/kubernetes/aks.html">2.2</option>
+              <option value="../../../../ja/2.1/configuration/kubernetes/aks.html">2.1</option>
+              <option value="../../../../ja/2.0/configuration/kubernetes/aks.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/configuration/kubernetes/aks.html" selected>日本語</option>
+              <option value="../../../../en/2.6/configuration/kubernetes/aks.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="kubernetes.html" title="前のトピックへ"><span class="section-number">2. </span>Kubernetes クラスター</a></li>
+        <li class="next"><a href="../docker_compose/index.html" title="次のトピックへ">Docker Compose</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">構成・構築ガイド</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Kubernetes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="overview.html">1. 概要</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kubernetes.html">2. Kubernetes クラスター</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3. Azure Kubernetes Service</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">3.1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">3.2. システム要件</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#azure-kubernetes-service-aks">3.2.1. Azure Kubernetes Service (AKS) クラスター</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id3">3.2.2. 通信要件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id4">3.2.3. 外部コンポーネント</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">3.3. Azure Kubernetes Service (AKS) クラスター構築</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id6">3.3.1. 前提条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#aks">3.3.2. AKS クラスターの作成例</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#aks-dns">3.3.3. ドメイン名の確認</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../docker_compose/index.html">Docker Compose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible/index.html">Ansible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OASE_agent/index.html">OASE Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform/index.html">Terraform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../client_requirements/index.html">クライアント動作要件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logging/index.html">ログ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../security/index.html">セキュリティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/index.html">マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">3. Azure Kubernetes Service</a><ul>
+<li><a class="reference internal" href="#id1">3.1. はじめに</a></li>
+<li><a class="reference internal" href="#id2">3.2. システム要件</a><ul>
+<li><a class="reference internal" href="#azure-kubernetes-service-aks">3.2.1. Azure Kubernetes Service (AKS) クラスター</a></li>
+<li><a class="reference internal" href="#id3">3.2.2. 通信要件</a></li>
+<li><a class="reference internal" href="#id4">3.2.3. 外部コンポーネント</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">3.3. Azure Kubernetes Service (AKS) クラスター構築</a><ul>
+<li><a class="reference internal" href="#id6">3.3.1. 前提条件</a></li>
+<li><a class="reference internal" href="#aks">3.3.2. AKS クラスターの作成例</a></li>
+<li><a class="reference internal" href="#aks-dns">3.3.3. ドメイン名の確認</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">構成・構築ガイド</a></li>
+    <li><a href="index.html">Kubernetes</a></li>
+    
+    <li><span class="section-number">3. </span>Azure Kubernetes Service</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="azure-kubernetes-service">
+<h1><span class="section-number">3. </span>Azure Kubernetes Service<a class="headerlink" href="#azure-kubernetes-service" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2><span class="section-number">3.1. </span>はじめに<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書では、Exastro IT Automation のデプロイ先となる、Azure Kubernetes Service (AKS) クラスターのシステム要件および構築手順について説明します。</div>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">3.2. </span>システム要件<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<section id="azure-kubernetes-service-aks">
+<h3><span class="section-number">3.2.1. </span>Azure Kubernetes Service (AKS) クラスター<a class="headerlink" href="#azure-kubernetes-service-aks" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-number">表 3.1 </span><span class="caption-text">ハードウェア要件(最小構成)</span><a class="headerlink" href="#id8" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>リソース種別</p></th>
+<th class="head"><p>要求リソース</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>仮想マシンサイズ</p></td>
+<td><p>Standard B4ms (4 vCPU / Memory 16 GiB)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Storage (Container image size)</p></td>
+<td><p>10GB</p></td>
+</tr>
+<tr class="row-even"><td><p>Kubernetes</p></td>
+<td><p>1.23 以上</p></td>
+</tr>
+<tr class="row-odd"><td><p>サーバー台数</p></td>
+<td><p>1台</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id9">
+<caption><span class="caption-number">表 3.2 </span><span class="caption-text">ハードウェア要件(推奨構成)</span><a class="headerlink" href="#id9" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>リソース種別</p></th>
+<th class="head"><p>要求リソース</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>仮想マシンサイズ</p></td>
+<td><p>Standard D4as v5 (4 vCPU / Memory 16 GiB)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Storage</p></td>
+<td><p>120GB</p></td>
+</tr>
+<tr class="row-even"><td><p>Kubernetes</p></td>
+<td><p>1.23 以上</p></td>
+</tr>
+<tr class="row-odd"><td><p>サーバー台数</p></td>
+<td><p>2台 以上</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">要求リソースは Exastro IT Automation のコア機能に対する値です。同一クラスタ上に Keycloak や MariaDB などの外部ツールをデプロイする場合は、その分のリソースが別途必要となります。</div>
+<div class="line">データベースおよびファイルの永続化のために、別途ReadWriteManyで接続可能なNFS等のストレージ領域を用意する必要があります。</div>
+<div class="line">Storage サイズには、Exastro IT Automation が使用する入出力データのファイルは含まれていないため、利用状況に応じて容量を見積もる必要があります。</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h3><span class="section-number">3.2.2. </span>通信要件<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<ul>
+<li><div class="line-block">
+<div class="line">クライアントからデプロイ先のコンテナ環境にアクセスできる必要があります。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">Platform 管理者用と一般ユーザー用の2つ通信ポートが使用となります。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">コンテナ環境からコンテナイメージの取得のために、Docker Hub に接続できる必要があります。</div>
+</div>
+</li>
+</ul>
+</section>
+<section id="id4">
+<h3><span class="section-number">3.2.3. </span>外部コンポーネント<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<ul>
+<li><div class="line-block">
+<div class="line">MariaDB、もしくは、MySQL サーバ</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">GitLab リポジトリ、および、アカウントの払い出しが可能なこと</div>
+</div>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">GitLab 環境を同一クラスタに構築する場合は、GitLab のシステム要件に対応する最小要件を追加で用意する必要があります。</div>
+<div class="line">Database 環境を同一クラスタに構築する場合は、使用する Database のシステム要件に対応する最小要件を定義する必要があります</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id5">
+<h2><span class="section-number">3.3. </span>Azure Kubernetes Service (AKS) クラスター構築<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+<section id="id6">
+<h3><span class="section-number">3.3.1. </span>前提条件<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Azure CLI が利用可能であること。</p></li>
+<li><p>下記の操作を行うために必要な権限を持っていること。</p></li>
+</ul>
+</section>
+<section id="aks">
+<h3><span class="section-number">3.3.2. </span>AKS クラスターの作成例<a class="headerlink" href="#aks" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">AKS 環境へデプロイした Exastro Suite に接続するための AKS クラスター作成におけるセットアップ例を紹介します。</div>
+<div class="line">必要な設定などは適宜確認の上、環境に合った設定値を投入して下さい。</div>
+</div>
+<ol class="arabic">
+<li><p>はじめに</p>
+<div class="line-block">
+<div class="line">サービス公開をするために Exastro Platform のサービスに、External IP の設定と DNS 登録をしてインターネットを経由した接続をする手順を説明します。</div>
+<div class="line">External IP を設定するにあたり、パブリック IP プレフィックスを作成する必要があるため、はじめにAKSを構築するまでの手順を合わせて記載します。</div>
+<div class="line">なお、パブリック IP プレフィックスの作成は GUI を使った方法もありますが、ここでは Azure CLI を使用した構築例を記載します。</div>
+</div>
+</li>
+<li><p>変数設定</p>
+<div class="line-block">
+<div class="line">クラスタ作成時のパラメータを定義します。</div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>変数</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RESOURCE_GROUP</p></td>
+<td><p>利用するリソースグループ名</p></td>
+</tr>
+<tr class="row-odd"><td><p>CLUSTER_NAME</p></td>
+<td><p>作成する AKS クラスター名</p></td>
+</tr>
+<tr class="row-even"><td><p>PUBLIC_IP_PREFIX_NAME</p></td>
+<td><p>パブリック IP プレフィックス名</p></td>
+</tr>
+<tr class="row-odd"><td><p>AUTHORIZED_IP_RANGES</p></td>
+<td><p>接続元IPアドレス設定</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">コマンド実行に必要な変数の設定を行います。</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">下記のパラメータは設定例となるため、環境に応じて適切な値を設定してください。</div>
+</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 利用するリソースグループ名</span>
+<span class="nv">RESOURCE_GROUP</span><span class="o">=</span>exastro-suite-group
+<span class="c1"># 作成する AKS クラスター名</span>
+<span class="nv">CLUSTER_NAME</span><span class="o">=</span>exastro-suite
+
+<span class="c1"># パブリック IP プレフィックス名</span>
+<span class="nv">PUBLIC_IP_PREFIX_NAME</span><span class="o">=</span><span class="si">${</span><span class="nv">CLUSTER_NAME</span><span class="si">}</span>-ipprefix
+<span class="c1"># 接続元IPアドレス設定</span>
+<span class="nv">AUTHORIZED_IP_RANGES</span><span class="o">=</span>xxx.xxx.xxx.xxx/31
+</pre></div>
+</div>
+</li>
+<li><p>パブリックIPプレフィックスの作成</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># パブリック IP アドレスの払い出し</span>
+az<span class="w"> </span>network<span class="w"> </span>public-ip<span class="w"> </span>prefix<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--resource-group<span class="w"> </span><span class="si">${</span><span class="nv">RESOURCE_GROUP</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span><span class="si">${</span><span class="nv">PUBLIC_IP_PREFIX_NAME</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--length<span class="w"> </span><span class="m">31</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--location<span class="w"> </span>japaneast
+
+<span class="c1"># パブリック IP プレフィックスの作成結果を変数に格納</span>
+<span class="nv">PUBLIC_IP_PREFIX_ID</span><span class="o">=</span><span class="k">$(</span>az<span class="w"> </span>network<span class="w"> </span>public-ip<span class="w"> </span>prefix<span class="w"> </span>show<span class="w"> </span>--resource-group<span class="w"> </span><span class="si">${</span><span class="nv">RESOURCE_GROUP</span><span class="si">}</span><span class="w"> </span>--name<span class="w"> </span><span class="si">${</span><span class="nv">PUBLIC_IP_PREFIX_NAME</span><span class="si">}</span><span class="w"> </span>--query<span class="w"> </span>id<span class="w"> </span>--output<span class="w"> </span>tsv<span class="k">)</span>
+<span class="nv">AUTHORIZED_IP_RANGES</span><span class="o">+=</span>,<span class="k">$(</span>az<span class="w"> </span>network<span class="w"> </span>public-ip<span class="w"> </span>prefix<span class="w"> </span>show<span class="w"> </span>--resource-group<span class="w"> </span><span class="si">${</span><span class="nv">RESOURCE_GROUP</span><span class="si">}</span><span class="w"> </span>--name<span class="w"> </span><span class="si">${</span><span class="nv">PUBLIC_IP_PREFIX_NAME</span><span class="si">}</span><span class="w"> </span>--query<span class="w"> </span>ipPrefix<span class="w"> </span>--output<span class="w"> </span>tsv<span class="k">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>AKS クラスター作成</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># AKS クラスタ作成</span>
+az<span class="w"> </span>aks<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--resource-group<span class="w"> </span><span class="si">${</span><span class="nv">RESOURCE_GROUP</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span><span class="si">${</span><span class="nv">CLUSTER_NAME</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--generate-ssh-keys<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--kubernetes-version<span class="w"> </span><span class="m">1</span>.23.8<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--node-count<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--node-vm-size<span class="w"> </span>Standard_D4a_v4<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--os-sku<span class="w"> </span>Ubuntu<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--enable-node-public-ip<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--node-public-ip-prefix-id<span class="w"> </span><span class="si">${</span><span class="nv">PUBLIC_IP_PREFIX_ID</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--enable-addons<span class="w"> </span>http_application_routing<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--api-server-authorized-ip-ranges<span class="w"> </span><span class="si">${</span><span class="nv">AUTHORIZED_IP_RANGES</span><span class="si">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="aks-dns">
+<span id="id7"></span><h3><span class="section-number">3.3.3. </span>ドメイン名の確認<a class="headerlink" href="#aks-dns" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">作成した AKS クラスターにインターネットから接続するためのドメイン名を確認します。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># AKS クラスターに設定されているドメイン名の取得</span>
+az<span class="w"> </span>aks<span class="w"> </span>show<span class="w"> </span>-g<span class="w"> </span><span class="si">${</span><span class="nv">RESOURCE_GROUP</span><span class="si">}</span><span class="w"> </span>-n<span class="w"> </span><span class="si">${</span><span class="nv">CLUSTER_NAME</span><span class="si">}</span><span class="w"> </span>--query<span class="w"> </span>addonProfiles.httpApplicationRouting.config.HTTPApplicationRoutingZoneName<span class="w"> </span>-o<span class="w"> </span>table
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Result</span>
+<span class="o">----------------------------------------</span>
+<span class="n">xxxxxxx</span><span class="o">.</span><span class="n">japaneast</span><span class="o">.</span><span class="n">aksapp</span><span class="o">.</span><span class="n">io</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">※この出力結果のドメインを後続のIngress利用時の設定として利用します。</div>
+</div>
+<div class="line-block">
+<div class="line">AKS クラスターの構築が完了したら <a class="reference internal" href="../../installation/online/exastro/kubernetes.html"><span class="doc">Exastro on Kubernetes - Online</span></a> に従って、Exastro IT Automation をインストールします。</div>
+</div>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="kubernetes.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">2. </span>Kubernetes クラスター</a></li>
+    <li class="next"><a href="../docker_compose/index.html" title="次のトピックへ"><span>次のトピックへ</span>Docker Compose</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

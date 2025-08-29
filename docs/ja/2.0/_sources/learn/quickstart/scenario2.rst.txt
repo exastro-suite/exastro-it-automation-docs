@@ -63,8 +63,6 @@
 | まずは、「あるべきインストール状態」である :kbd:`present` (インストールされている状態) と :kbd:`absent` (インストールされていない状態) の選択肢を作成します。
 | 具体的には、データシートを作成し、その中に選択肢として表示するパラメータを投入します。
 
-.. glossary:: データシート
-   Exastro IT Automation が使用する固定値のパラメータを管理するデータ構造のことです。
 
 .. _quickstart_create_datasheet:
 
@@ -214,7 +212,7 @@
 
 | メニュー作成情報で :menuselection:`縦メニュー利用` を「利用する」にチェックを入れることで、1つの設定項目に対して複数のパラメータを設定することが可能になります。
 
-.. figure:: /images/learn/quickstart/scenario2/メニュー作成情報設定.png
+.. figure:: /images/learn/quickstart/scenario2/パラメータシートの作成情報設定.png
    :width: 1200px
    :alt: メニュー作成情報設定
 
@@ -265,7 +263,7 @@ Movement 登録
 
 | :menuselection:`Ansible-LegacyRole --> Movement一覧` から、ホスト名設定のための Movement を登録します。
 
-.. figure:: /images/learn/quickstart/scenario2/Movement登録.png
+.. figure:: /images/learn/quickstart/scenario2/Movement一覧登録1.png
    :width: 1200px
    :alt: Movement登録
 

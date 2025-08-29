@@ -4,11 +4,6 @@
 
 | 本シナリオでは、簡単な例として、ユーザー管理を題材に Exastro IT Automation の基本操作を学習します。
 
-.. glossary:: 収集機能
-   収集機能とは、ITAで実施した、作業実行結果（規定のフォーマットで出力されたソースファイル）を元に、パラメータシートへ値を自動で登録する機能。
-
-.. glossary:: 比較機能
-   比較機能とは、ITAのパラメータシート作成機能で作成したパラメータシートを比較し、差分を出力する機能です。
 
 作業前システム情報の収集
 ========================
@@ -417,9 +412,6 @@
 
 | :menuselection:`Ansible-Legacy --> Movement一覧` から、システム情報収集のための Movement を登録します。
 
-.. glossary:: Movement
-   Exastro IT Automation における、最小の作業単位のことを指します。
-   1回の Movement 実行は、1回の ansible-playbook コマンドの実行と同じです。
 
 .. figure:: /images/learn/quickstart/collection/Movement登録.png
    :width: 1200px
@@ -728,8 +720,6 @@ Movement と Ansible Playbook の紐付け
 | オペレーション登録では、作業を実施する際の作業概要を定義します。
 | 先に決めた作業の方針を元にオペレーション情報を記入しましょう。
 
-.. glossary:: オペレーション
-   実施する作業のことで、オペレーションに対して作業対象とパラメータが紐づきます。
 
 | :menuselection:`基本コンソール --> オペレーション一覧` から、作業実施日時や作業名を登録します。
 

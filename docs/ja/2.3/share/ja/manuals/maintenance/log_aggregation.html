@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/exastro_documents.css?v=57fb2187" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/exastro_documents.css?v=99e5f627" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../../../_static/documentation_options.js?v=c033477b"></script>
@@ -70,9 +70,10 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
-              <option value="../../../../../../ja/2.5/share/ja/manuals/maintenance/log_aggregation.html">current</option>
-              <option value="../../../../../../ja/2.5/share/ja/manuals/maintenance/log_aggregation.html">2.5(current)</option>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../../ja/2.6/share/ja/manuals/maintenance/log_aggregation.html">current</option>
+              <option value="../../../../../../ja/2.6/share/ja/manuals/maintenance/log_aggregation.html">2.6(current)</option>
+              <option value="../../../../../../ja/2.5/share/ja/manuals/maintenance/log_aggregation.html">2.5</option>
               <option value="../../../../../../ja/2.4/share/ja/manuals/maintenance/log_aggregation.html">2.4</option>
               <option value="../../../../../../ja/2.3/share/ja/manuals/maintenance/log_aggregation.html" selected>2.3</option>
               <option value="../../../../../../ja/2.2/share/ja/manuals/maintenance/log_aggregation.html">2.2</option>
@@ -89,7 +90,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               <option value="../../../../../../ja/2.3/share/ja/manuals/maintenance/log_aggregation.html" selected>日本語</option>
               <option value="../../../../../../en/2.3/share/ja/manuals/maintenance/log_aggregation.html">English</option>
             </select>
@@ -191,7 +192,7 @@
 <section id="id3">
 <h2>ログの集約方法<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
 <div class="line-block">
-<div class="line">本説明において、ログの集約方法に <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Fluent</kbd> <kbd class="kbd docutils literal notranslate">Bit</kbd></kbd> を使用して、ログの集約を実施する例を説明します。</div>
+<div class="line">本説明において、ログの集約方法に <kbd class="kbd docutils literal notranslate">Fluent</kbd> <kbd class="kbd docutils literal notranslate">Bit</kbd> を使用して、ログの集約を実施する例を説明します。</div>
 </div>
 <section id="fluent-bit">
 <h3>Fluent Bitインストール<a class="headerlink" href="#fluent-bit" title="Link to this heading">¶</a></h3>
@@ -207,7 +208,7 @@
 </div>
 <ul>
 <li><div class="line-block">
-<div class="line">使用する <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">helm</kbd> <kbd class="kbd docutils literal notranslate">cli</kbd></kbd> は事前にインストールされていること</div>
+<div class="line">使用する <kbd class="kbd docutils literal notranslate">helm</kbd> <kbd class="kbd docutils literal notranslate">cli</kbd> は事前にインストールされていること</div>
 </div>
 </li>
 <li><div class="line-block">
@@ -215,7 +216,7 @@
 </div>
 </li>
 <li><div class="line-block">
-<div class="line">ログの集約先となるNFSサーバーのディレクトリは <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">/var/PersistentVolume/ha</kbd>-<kbd class="kbd docutils literal notranslate">conf</kbd>-<kbd class="kbd docutils literal notranslate">k8s/exastro</kbd>-<kbd class="kbd docutils literal notranslate">logs</kbd></kbd> とし、アクセス権がフルアクセスとなっていること</div>
+<div class="line">ログの集約先となるNFSサーバーのディレクトリは <kbd class="kbd docutils literal notranslate">/var/PersistentVolume/ha</kbd>-<kbd class="kbd docutils literal notranslate">conf</kbd>-<kbd class="kbd docutils literal notranslate">k8s/exastro</kbd>-<kbd class="kbd docutils literal notranslate">logs</kbd> とし、アクセス権がフルアクセスとなっていること</div>
 </div>
 </li>
 </ul>
@@ -280,7 +281,7 @@
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <div class="line-block">
-<div class="line">Fluent Bitのhelmリポジトリ登録は以下のコマンドで実施できます。 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">helm</kbd> <kbd class="kbd docutils literal notranslate">show</kbd> <kbd class="kbd docutils literal notranslate">values</kbd></kbd> を実行する前に１度だけ必要となります。</div>
+<div class="line">Fluent Bitのhelmリポジトリ登録は以下のコマンドで実施できます。 <kbd class="kbd docutils literal notranslate">helm</kbd> <kbd class="kbd docutils literal notranslate">show</kbd> <kbd class="kbd docutils literal notranslate">values</kbd> を実行する前に１度だけ必要となります。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id10">
 <div class="code-block-caption"><span class="caption-text">コマンド</span><a class="headerlink" href="#id10" title="Link to this code">¶</a></div>
@@ -293,12 +294,12 @@ helm<span class="w"> </span>repo<span class="w"> </span>update
 </div>
 </div>
 <div class="line-block">
-<div class="line">出力された <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">fluentbit</kbd>-<kbd class="kbd docutils literal notranslate">values.yaml</kbd></kbd> を以下のように修正します。</div>
+<div class="line">出力された <kbd class="kbd docutils literal notranslate">fluentbit</kbd>-<kbd class="kbd docutils literal notranslate">values.yaml</kbd> を以下のように修正します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id11">
 <div class="code-block-caption"><span class="caption-text">fluentbit-values.yaml</span><a class="headerlink" href="#id11" title="Link to this code">¶</a></div>
-<div class="highlight-udiff notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="gd">--- /home/runner/work/exastro-it-automation-docs/exastro-it-automation-docs/workspace/src/ja/2.3/share/ja/manuals/maintenance/literal_includes/fluentbit-values-org.yaml</span>
-<span class="linenos">  2</span><span class="gi">+++ /home/runner/work/exastro-it-automation-docs/exastro-it-automation-docs/workspace/src/ja/2.3/share/ja/manuals/maintenance/literal_includes/fluentbit-values.yaml</span>
+<div class="highlight-udiff notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="gd">--- /home/runner/work/exastro-it-automation-docs/exastro-it-automation-docs/workspace/src/share/ja/manuals/maintenance/literal_includes/fluentbit-values-org.yaml</span>
+<span class="linenos">  2</span><span class="gi">+++ /home/runner/work/exastro-it-automation-docs/exastro-it-automation-docs/workspace/src/share/ja/manuals/maintenance/literal_includes/fluentbit-values.yaml</span>
 <span class="linenos">  3</span><span class="gu">@@ -298,9 +298,12 @@</span>
 <span class="linenos">  4</span><span class="w"> </span>
 <span class="linenos">  5</span><span class="w"> </span>priorityClassName: &quot;&quot;
@@ -451,7 +452,7 @@ helm<span class="w"> </span>repo<span class="w"> </span>update
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <div class="line-block">
-<div class="line"><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">helm</kbd> <kbd class="kbd docutils literal notranslate">show</kbd> <kbd class="kbd docutils literal notranslate">values</kbd></kbd> で出力された内容をそのまま使用しているため、コメント化された内容もそのまま記載しています。</div>
+<div class="line"><kbd class="kbd docutils literal notranslate">helm</kbd> <kbd class="kbd docutils literal notranslate">show</kbd> <kbd class="kbd docutils literal notranslate">values</kbd> で出力された内容をそのまま使用しているため、コメント化された内容もそのまま記載しています。</div>
 </div>
 </div>
 <div class="admonition note">
@@ -502,7 +503,7 @@ helm<span class="w"> </span>repo<span class="w"> </span>update
 </div>
 </li>
 <li><div class="line-block">
-<div class="line">インストールされた <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Fluent</kbd> <kbd class="kbd docutils literal notranslate">Bit</kbd></kbd> の確認</div>
+<div class="line">インストールされた <kbd class="kbd docutils literal notranslate">Fluent</kbd> <kbd class="kbd docutils literal notranslate">Bit</kbd> の確認</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id14">
 <div class="code-block-caption"><span class="caption-text">コマンド</span><a class="headerlink" href="#id14" title="Link to this code">¶</a></div>
@@ -558,25 +559,25 @@ fluent-bit<span class="w">   </span><span class="m">3</span><span class="w">    
 </div>
 <div class="literal-block-wrapper docutils container" id="id19">
 <div class="code-block-caption"><span class="caption-text">集約したログファイルの内容</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;2024/03/01 16:40:09.098836 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;192.168.172.2 - - [01/Mar/2024:16:40:09 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;192.168.172.2 - - [01/Mar/2024:16:40:09 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;2024/03/01 16:40:10.666816 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;192.168.172.2 - - [01/Mar/2024:16:40:10 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;192.168.172.2 - - [01/Mar/2024:16:40:10 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;2024/03/01 16:40:12.326828 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;2024/03/01 16:40:12.807144 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;2024/03/01 16:40:12.836383 INFO (dumm) /app/controllers/internal_common_service_controller.py(153) ### func:internal_settings_system_config_list&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/settings/common HTTP/1.1\&quot; 200 223 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/settings/common HTTP/1.1\&quot; 200 223&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;2024/03/01 16:40:12.858139 INFO (dumm) /app/controllers/internal_plan_service_controller.py(62) ### func:limits_get&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/limits HTTP/1.1\&quot; 200 239 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/limits HTTP/1.1\&quot; 200 239&quot;</span><span class="p">}</span>
-<span class="p">{</span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span><span class="nt">&quot;logtag&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="nt">&quot;record_date&quot;</span><span class="p">:</span><span class="s2">&quot;20240301&quot;</span><span class="p">,</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;2024/03/01 16:40:15.921191 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting&quot;</span><span class="p">}</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;2024/03/01 16:40:09.098836 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:09 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:09 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;2024/03/01 16:40:10.666816 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:10 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:10 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;2024/03/01 16:40:12.326828 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;2024/03/01 16:40:12.807144 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;2024/03/01 16:40:12.836383 INFO (dumm) /app/controllers/internal_common_service_controller.py(153) ### func:internal_settings_system_config_list&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/settings/common HTTP/1.1\&quot; 200 223 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/settings/common HTTP/1.1\&quot; 200 223&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;2024/03/01 16:40:12.858139 INFO (dumm) /app/controllers/internal_plan_service_controller.py(62) ### func:limits_get&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/limits HTTP/1.1\&quot; 200 239 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/limits HTTP/1.1\&quot; 200 239&quot;}
+{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;2024/03/01 16:40:15.921191 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting&quot;}
 </pre></div>
 </div>
 </div>
@@ -613,8 +614,8 @@ fluent-bit<span class="w">   </span><span class="m">3</span><span class="w">    
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2023 NEC Corporation</small>
-    <small><a href="/terms/ja.html">サイト規約</a></small>
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.3/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

@@ -6,12 +6,12 @@ Exastro
 
    </div>
    <div id="multiColumnIndex">
-   
+
 .. toctree::
    :maxdepth: 2
 
-   .. kubernetes
-   
+   kubernetes
+
    docker_compose
 
 .. raw:: html

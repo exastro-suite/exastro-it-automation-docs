@@ -1978,14 +1978,14 @@ span.highlighted {
 
 #article .glossary {
  padding: 12px 12px 12px 48px;
- border: solid 1px #bbb;
+ /* border: solid 1px #bbb; */
  border-radius: 6px;
  width: fit-content;
  margin: 12px;
 }
 
 #article .glossary:before {
- content: "\e90b";
+ /* content: "\e90b";*/
  color: #888;
  font-size: 2rem;
  /* margin: 10px; */
@@ -1996,28 +1996,35 @@ span.highlighted {
  height: 0px;
 }
 
-#article .glossary dt:first-child {
+/* #article .glossary dt:first-child {
  font-size: 1.2rem;
  font-weight: bold;
  margin: 0;
-}
+}*/
 
-#article .glossary dt:first-child::before {
+/* #article .glossary dt:first-child::before {
  content: "❝";
  position: relative;
  right: 3px;
-}
+}*/
 
-#article .glossary dt:first-child::after {
+/* #article .glossary dt:first-child::after {
  content: "❞";
  right: 12px;
  position: relative;
-}
+}*/
 
-#article .glossary dt {
+/* #article .glossary dt {
  font-weight: normal;
  margin: 12px 12px 0px 12px;
  color: #888;
+}*/
+
+#article .glossary dt {
+ font-size: 1.2rem;
+ font-weight: bold;
+ margin: 0;
+ color: #223377;
 }
 
 #article .glossary dt:last-child {
@@ -2027,6 +2034,7 @@ span.highlighted {
 #article .glossary dd {
  padding-left: 2em;
  text-indent: 1em;
+ padding-bottom: 1em;
 }
 
 #article .toctree-wrapper ul {
@@ -2554,7 +2562,7 @@ span.highlighted {
 
 #swaggerBody .swagger-ui img {
  max-width: 200px;
- content: url(/_static/img/exastro.png);
+ content: url(../_static/img/exastro.png);
 }
 
 @media screen and (max-width: 1850px) {

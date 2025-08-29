@@ -1,0 +1,2379 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>6. Ansible実行環境のカスタマイズ &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="Terraform ドライバ" href="../terraform_driver/index.html" />
+    <link rel="prev" title="5. 収集機能" href="collect.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/ansible-driver/ansible_ee_custom.html" selected>current</option>
+              <option value="../../../../ja/2.6/manuals/ansible-driver/ansible_ee_custom.html" selected>2.6(current)</option>
+              <option value="../../../../ja/2.5/manuals/ansible-driver/ansible_ee_custom.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/ansible-driver/ansible_ee_custom.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/ansible-driver/ansible_ee_custom.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/ansible-driver/ansible_ee_custom.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/ansible-driver/ansible_ee_custom.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/ansible-driver/ansible_ee_custom.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/ansible-driver/ansible_ee_custom.html" selected>日本語</option>
+              <option value="../../../../en/2.6/manuals/ansible-driver/ansible_ee_custom.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="collect.html" title="前のトピックへ"><span class="section-number">5. </span>収集機能</a></li>
+        <li class="next"><a href="../terraform_driver/index.html" title="次のトピックへ">Terraform ドライバ</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../it_automation_base/index.html">基本操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../host_group/index.html">ホストグループ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Ansible ドライバ</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ansible_common.html">1. Ansible共通</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansible_legacy.html">2. Ansible-Legacy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansible_pioneer.html">3. Ansible-Pioneer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansible_legacyrole.html">4. Ansible-LegacyRole</a></li>
+<li class="toctree-l3"><a class="reference internal" href="collect.html">5. 収集機能</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">6. Ansible実行環境のカスタマイズ</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">6.1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">6.2. Ansible 実行環境カスタマイズの概要</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ansible-core">6.3. Ansible-Coreでのカスタマイズ例</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id3">6.3.1. Ansible作業時のビルドにカスタマイズ工程を追加する例</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id9">6.3.2. Ansible作業時にカスタマイズを施したイメージを使用する例</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#ansible-execution-agent">6.4. Ansible Execution Agentでのカスタマイズ例</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id12">6.4.1. コレクションを使用する例（無償版ベースイメージ）</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id13">6.4.2. コレクションを使用する例（有償版ベースイメージ）</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id17">6.4.3. 自作モジュールを使用する例</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#ansible-automation-platform">6.5. Ansible Automation Platformでのカスタマイズ例</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id21">6.5.1. コレクションを使用する例（無償版ベースイメージ）</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id26">6.5.2. コレクションを使用する例（有償版ベースイメージ）</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id34">6.5.3. 自作モジュールを使用する例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform_driver/index.html">Terraform ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import/index.html">エクスポート・インポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cicd_for_iac/index.html">CI/CD for IaC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintenance/index.html">メンテナンス</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">6. Ansible実行環境のカスタマイズ</a><ul>
+<li><a class="reference internal" href="#id1">6.1. はじめに</a></li>
+<li><a class="reference internal" href="#id2">6.2. Ansible 実行環境カスタマイズの概要</a></li>
+<li><a class="reference internal" href="#ansible-core">6.3. Ansible-Coreでのカスタマイズ例</a><ul>
+<li><a class="reference internal" href="#id3">6.3.1. Ansible作業時のビルドにカスタマイズ工程を追加する例</a><ul>
+<li><a class="reference internal" href="#id4">既存の環境変数を確認</a></li>
+<li><a class="reference internal" href="#id5">既存のイメージを削除</a></li>
+<li><a class="reference internal" href="#id6">ビルドファイルの編集</a><ul>
+<li><a class="reference internal" href="#id7">コレクションを使用する例</a></li>
+<li><a class="reference internal" href="#id8">自作モジュールを使用する例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">6.3.2. Ansible作業時にカスタマイズを施したイメージを使用する例</a><ul>
+<li><a class="reference internal" href="#id10">カスタマイズを施したイメージの出力</a></li>
+<li><a class="reference internal" href="#id11">カスタマイズを施したイメージの投入</a><ul>
+<li><a class="reference internal" href="#docker-compose">docker-compose版</a></li>
+<li><a class="reference internal" href="#kubenetes">Kubenetes版</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ansible-execution-agent">6.4. Ansible Execution Agentでのカスタマイズ例</a><ul>
+<li><a class="reference internal" href="#id12">6.4.1. コレクションを使用する例（無償版ベースイメージ）</a><ul>
+<li><a class="reference internal" href="#ita">ITAでの実行環境定義登録</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id13">6.4.2. コレクションを使用する例（有償版ベースイメージ）</a><ul>
+<li><a class="reference internal" href="#id14">Ansible Execution Agentでの事前準備</a></li>
+<li><a class="reference internal" href="#id15">ITAでの実行環境定義登録</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id17">6.4.3. 自作モジュールを使用する例</a><ul>
+<li><a class="reference internal" href="#id18">自作モジュールの配置</a></li>
+<li><a class="reference internal" href="#id19">ITAでの実行環境定義登録</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ansible-automation-platform">6.5. Ansible Automation Platformでのカスタマイズ例</a><ul>
+<li><a class="reference internal" href="#id21">6.5.1. コレクションを使用する例（無償版ベースイメージ）</a><ul>
+<li><a class="reference internal" href="#id22">ansible-builderのインストール</a></li>
+<li><a class="reference internal" href="#id23">必要ファイルの準備</a></li>
+<li><a class="reference internal" href="#id24">ansible-builderの実行</a></li>
+<li><a class="reference internal" href="#controlnodeawx">ControlNodeのawxユーザ用にカスタムイメージをコピー</a></li>
+<li><a class="reference internal" href="#executionnodeawx">ExecutionNodeのawxユーザ用にカスタムイメージをコピー</a></li>
+<li><a class="reference internal" href="#aap">AAPに実行環境を登録</a></li>
+<li><a class="reference internal" href="#id25">ITAに実行環境を登録</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id26">6.5.2. コレクションを使用する例（有償版ベースイメージ）</a><ul>
+<li><a class="reference internal" href="#id27">ansible-builderのインストール</a></li>
+<li><a class="reference internal" href="#id28">必要ファイルの準備</a></li>
+<li><a class="reference internal" href="#id29">ansible-builderの実行</a></li>
+<li><a class="reference internal" href="#id30">ControlNodeのawxユーザ用にカスタムイメージをコピー</a></li>
+<li><a class="reference internal" href="#id31">ExecutionNodeのawxユーザ用にカスタムイメージをコピー</a></li>
+<li><a class="reference internal" href="#id32">AAPに実行環境を登録</a></li>
+<li><a class="reference internal" href="#id33">ITAに実行環境を登録</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id34">6.5.3. 自作モジュールを使用する例</a><ul>
+<li><a class="reference internal" href="#id35">自作モジュールの配置</a></li>
+<li><a class="reference internal" href="#id36">ansible-builderのインストール</a></li>
+<li><a class="reference internal" href="#id37">必要ファイルの準備</a></li>
+<li><a class="reference internal" href="#id38">ansible-builderの実行</a></li>
+<li><a class="reference internal" href="#id39">ControlNodeのawxユーザ用にカスタムイメージをコピー</a></li>
+<li><a class="reference internal" href="#id40">ExecutionNodeのawxユーザ用にカスタムイメージをコピー</a></li>
+<li><a class="reference internal" href="#id41">AAPに実行環境を登録</a></li>
+<li><a class="reference internal" href="#id42">ITAに実行環境を登録</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">Ansible ドライバ</a></li>
+    
+    <li><span class="section-number">6. </span>Ansible実行環境のカスタマイズ</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="ansible">
+<h1><span class="section-number">6. </span>Ansible実行環境のカスタマイズ<a class="headerlink" href="#ansible" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2><span class="section-number">6.1. </span>はじめに<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書では、ITAで使用するAnsible実行環境のカスタマイズ方法を説明します。</div>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">6.2. </span>Ansible 実行環境カスタマイズの概要<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Ansible-Coreでは、Ansible作業時のビルドにカスタマイズ工程をはさむ（docker-compose版のみ）・Ansible作業時にカスタマイズを施したイメージを使用する等によりAnsible実行環境のカスタマイズを実施することが可能です。</div>
+<div class="line">また、Ansible Execution Agentや Ansible Automation Platformでは、ansible-builderを用いてAnsible実行環境のカスタマイズを実施することが可能です。</div>
+</div>
+<div class="line-block">
+<div class="line">本書では主に下記パターンについて説明します。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">Ansible-Coreでのカスタマイズ例</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">Ansible作業時のビルドにカスタマイズ工程を追加する例（docker-compose版のみ）</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">コレクションを使用する例</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">自作モジュールを使用する例</div>
+</div>
+</li>
+</ul>
+</li>
+<li><div class="line-block">
+<div class="line">Ansible作業時にカスタマイズを施したイメージを使用する例</div>
+</div>
+</li>
+</ul>
+</li>
+<li><div class="line-block">
+<div class="line">Ansible Execution AgentやAnsible Automation Platformでのカスタマイズ例</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">コレクションを使用する例（無償版ベースイメージ）</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">コレクションを使用する例（有償版ベースイメージ）</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">自作モジュールを使用する例</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="ansible-core">
+<h2><span class="section-number">6.3. </span>Ansible-Coreでのカスタマイズ例<a class="headerlink" href="#ansible-core" title="Link to this heading">¶</a></h2>
+<section id="id3">
+<h3><span class="section-number">6.3.1. </span>Ansible作業時のビルドにカスタマイズ工程を追加する例<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Ansible作業時のビルドにカスタマイズ工程を追加するという手順の関係上、本手順は「docker-compose版のみ」となります。</div>
+</div>
+<section id="id4">
+<h4>既存の環境変数を確認<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">既存の環境変数を確認します。</div>
+<div class="line">「 <code class="file docutils literal notranslate"><span class="pre">~/exastro-docker-compose/.env</span></code> 」の「 <code class="docutils literal notranslate"><span class="pre">ANSIBLE_AGENT_IMAGE</span></code> 」「 <code class="docutils literal notranslate"><span class="pre">ANSIBLE_AGENT_IMAGE_TAG</span></code> 」「 <code class="docutils literal notranslate"><span class="pre">ANSIBLE_AGENT_BASE_IMAGE</span></code> 」「 <code class="docutils literal notranslate"><span class="pre">ANSIBLE_AGENT_BASE_IMAGE_TAG</span></code> 」の値を確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id43">
+<div class="code-block-caption"><span class="caption-number">リスト 6.1 </span><span class="caption-text">コマンド（環境変数を確認）</span><a class="headerlink" href="#id43" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[user01@ita-sv ~]$ </span>cat<span class="w"> </span>~/exastro-docker-compose/.env<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ANSIBLE
+<span class="go">ANSIBLE_AGENT_IMAGE=exastro-ansible-agent-custom</span>
+<span class="go">ANSIBLE_AGENT_IMAGE_TAG=devel</span>
+<span class="gp"># </span><span class="nv">ANSIBLE_AGENT_BASE_IMAGE</span><span class="o">=</span>exastro/exastro-it-automation-by-ansible-agent
+<span class="gp"># </span><span class="nv">ANSIBLE_AGENT_BASE_IMAGE_TAG</span><span class="o">=</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">項目がコメントアウトされている場合は、既定値としてそれぞれ</div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ANSIBLE_AGENT_IMAGE=my-exastro-ansible-agent</span>
+<span class="go">ANSIBLE_AGENT_IMAGE_TAG=[[ ITAのバージョン ]]</span>
+<span class="go">ANSIBLE_AGENT_BASE_IMAGE=exastro/exastro-it-automation-by-ansible-agent</span>
+<span class="go">ANSIBLE_AGENT_BASE_IMAGE_TAG=[[ ITAのバージョン ]]</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">が使用されています。</div>
+</div>
+</section>
+<section id="id5">
+<h4>既存のイメージを削除<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Ansible-CoreでのAnsible作業を一度でも実施してしている場合は、既にイメージが作成されているため予め「 <strong class="command">docker rmi</strong> 」を実施しイメージを削除します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id44">
+<div class="code-block-caption"><span class="caption-number">リスト 6.2 </span><span class="caption-text">コマンド（既存のイメージを削除）</span><a class="headerlink" href="#id44" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[user01@ita-sv ~]$ </span>docker<span class="w"> </span>images<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="o">[[</span>ここにANSIBLE_AGENT_IMAGEを代入<span class="o">]]</span>
+<span class="go">[[ANSIBLE_AGENT_IMAGE]]                      [[ANSIBLE_AGENT_IMAGE_TAG]]    18493d96333g   12 hours ago   953MB</span>
+
+<span class="gp">[user01@ita-sv ~]$ </span>docker<span class="w"> </span>rmi<span class="w"> </span>-f<span class="w"> </span>18493d96333g
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id6">
+<h4>ビルドファイルの編集<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Ansible-Coreでは通常「 <code class="file docutils literal notranslate"><span class="pre">~/exastro-docker-compose/ita_by_ansible_execute/templates/</span></code> 」の「 <code class="file docutils literal notranslate"><span class="pre">./docker-compose.yml</span></code> 」及び「 <code class="file docutils literal notranslate"><span class="pre">./work/Dockerfile</span></code> 」を使用してAnsible実行環境をビルドしています。</div>
+<div class="line">そのため、実施したいカスタマイズ工程は上記の2ファイルに記載します。</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">ITA2.6.0よりデフォルトのベースイメージである「exastro/exastro-it-automation-by-ansible-agent」に搭載されているPythonが Python3.9から <strong>Python3.11</strong> へ変更されています。</div>
+<div class="line">また、pipに関しても pip3.9から <strong>pip3.11</strong> へ変更されています。</div>
+</div>
+</div>
+<section id="id7">
+<h5>コレクションを使用する例<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">「exastro/exastro-it-automation-by-ansible-agent」の2.6.0には標準で下記のようなコレクションが含まれています。</div>
+<div class="line">そのため下記以外のコレクションを追加する場合、及びコレクションに必要なライブラリをインストール場合の手順となります。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id45">
+<div class="code-block-caption"><span class="caption-number">リスト 6.3 </span><span class="caption-text"><strong class="command">ansible-galaxy collection list</strong> で確認されたコレクション</span><a class="headerlink" href="#id45" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/usr/local/lib/python3.11/site-packages/ansible_collections
+<span class="go">Collection                               Version</span>
+<span class="go">---------------------------------------- -------</span>
+<span class="go">amazon.aws                               9.5.0  , ansible.netcommon                        7.2.0  , ansible.posix                            1.6.2  , ansible.utils                            5.1.2  , ansible.windows                          2.8.0  , arista.eos                               10.1.1 , awx.awx                                  24.6.1 ,</span>
+<span class="go">azure.azcollection                       3.3.1  , check_point.mgmt                         6.4.0  , chocolatey.chocolatey                    1.5.3  , cisco.aci                                2.11.0 , cisco.asa                                6.1.0  , cisco.dnac                               6.31.3 , cisco.intersight                         2.1.0  ,</span>
+<span class="go">cisco.ios                                9.2.0  , cisco.iosxr                              10.3.1 , cisco.ise                                2.10.0 , cisco.meraki                             2.21.1 , cisco.mso                                2.10.0 , cisco.nxos                               9.4.0  , cisco.ucs                                1.16.0 ,</span>
+<span class="go">cloud.common                             4.1.0  , cloudscale_ch.cloud                      2.4.1  , community.aws                            9.3.0  , community.ciscosmb                       1.0.10 , community.crypto                         2.26.1 , community.digitalocean                   1.27.0 , community.dns                            3.2.4  ,</span>
+<span class="go">community.docker                         4.6.0  , community.general                        10.7.0 , community.grafana                        2.2.0  , community.hashi_vault                    6.2.0  , community.hrobot                         2.3.0  , community.library_inventory_filtering_v1 1.1.1  , community.libvirt                        1.3.1  ,</span>
+<span class="go">community.mongodb                        1.7.9  , community.mysql                          3.13.0 , community.network                        5.1.0  , community.okd                            4.0.1  , community.postgresql                     3.14.1 , community.proxysql                       1.6.0  , community.rabbitmq                       1.4.0  ,</span>
+<span class="go">community.routeros                       3.6.0  , community.sap_libs                       1.4.2  , community.sops                           2.0.5  , community.vmware                         5.6.0  , community.windows                        2.4.0  , community.zabbix                         3.3.0  , containers.podman                        1.16.3 ,</span>
+<span class="go">cyberark.conjur                          1.3.3  , cyberark.pas                             1.0.35 , dellemc.enterprise_sonic                 2.5.1  , dellemc.openmanage                       9.12.0 , dellemc.powerflex                        2.6.0  , dellemc.unity                            2.0.0  , f5networks.f5_modules                    1.35.0 ,</span>
+<span class="go">fortinet.fortimanager                    2.9.1  , fortinet.fortios                         2.4.0  , google.cloud                             1.5.3  , grafana.grafana                          5.7.0  , hetzner.hcloud                           4.3.0  , hitachivantara.vspone_block              3.4.1  , ibm.qradar                               4.0.0  ,</span>
+<span class="go">ibm.spectrum_virtualize                  2.0.0  , ibm.storage_virtualize                   2.7.3  , ieisystem.inmanage                       3.0.0  , infinidat.infinibox                      1.4.5  , infoblox.nios_modules                    1.8.0  , inspur.ispim                             2.2.3  , junipernetworks.junos                    9.1.0  ,</span>
+<span class="go">kaytus.ksmanage                          2.0.0  , kubernetes.core                          5.3.0  , kubevirt.core                            2.2.2  , lowlydba.sqlserver                       2.6.1  , microsoft.ad                             1.9.0  , microsoft.iis                            1.0.2  , netapp.cloudmanager                      21.24.0,</span>
+<span class="go">netapp.ontap                             22.14.0, netapp.storagegrid                       21.14.0, netapp_eseries.santricity                1.4.1  , netbox.netbox                            3.21.0 , ngine_io.cloudstack                      2.5.0  , openstack.cloud                          2.4.1  , ovirt.ovirt                              3.2.0  ,</span>
+<span class="go">purestorage.flasharray                   1.34.1 , purestorage.flashblade                   1.20.0 , sensu.sensu_go                           1.14.0 , splunk.es                                4.0.0  , telekom_mms.icinga_director              2.2.2  , theforeman.foreman                       4.2.0  , vmware.vmware                            1.11.0 ,</span>
+<span class="go">vmware.vmware_rest                       4.7.0  , vultr.cloud                              1.13.0 , vyos.vyos                                5.0.0  , wti.remote                               1.0.10</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">「 <code class="file docutils literal notranslate"><span class="pre">~/exastro-docker-compose/ita_by_ansible_execute/templates/work/Dockerfile</span></code> 」を下記のように編集します。</div>
+<div class="line">なお、<strong class="command">ansible-galaxy collection install</strong> の直後に実施している <strong class="command">pip3.11 install</strong> については、コレクションに必要なライブラリを指定してください。</div>
+<div class="line">（コレクションに必要なライブラリは、<a class="reference external" href="https://galaxy.ansible.com/ui/collections/">Ansible Galaxy - コレクション</a> の各コレクション用のドキュメントに記載があることが多いです。）</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id46">
+<div class="code-block-caption"><span class="caption-number">リスト 6.4 </span><span class="caption-text">~/exastro-docker-compose/ita_by_ansible_execute/templates/work/Dockerfile</span><a class="headerlink" href="#id46" title="Link to this code">¶</a></div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>ARG ANSIBLE_AGENT_BASE_IMAGE
+ARG ANSIBLE_AGENT_BASE_IMAGE_TAG
+
+FROM ${ANSIBLE_AGENT_BASE_IMAGE}:${ANSIBLE_AGENT_BASE_IMAGE_TAG}
+
+<span class="gi">+ RUN ansible-galaxy collection install [[ここにインストールしたいコレクション名を代入]] \</span>
+<span class="gi">+ &amp;&amp; pip3.11 install [[ここにコレクションに必要なライブラリを代入]]</span>
+
+## Add module command bellow, if you need to use extend ansible module.
+
+# Example:
+# RUN ansible-galaxy collection install amazon.aws \
+#  &amp;&amp;  pip3.11 install --upgrade boto3 botocore
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">また、透過型プロキシ等でSSL/TLSインスペクションを実施している場合は、<strong class="command">ansible-galaxy</strong> の実施時に証明書エラーが発生してしまうため、引数に「<strong class="command">--ignore-certs</strong>」を付与する必要があります。</div>
+<div class="line">※カスタムCA証明書をインストールすることで適切に証明書検証をすることも可能です。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id47">
+<div class="code-block-caption"><span class="caption-number">リスト 6.5 </span><span class="caption-text">~/exastro-docker-compose/ita_by_ansible_execute/templates/work/Dockerfile</span><a class="headerlink" href="#id47" title="Link to this code">¶</a></div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>ARG ANSIBLE_AGENT_BASE_IMAGE
+ARG ANSIBLE_AGENT_BASE_IMAGE_TAG
+
+FROM ${ANSIBLE_AGENT_BASE_IMAGE}:${ANSIBLE_AGENT_BASE_IMAGE_TAG}
+
+<span class="gi">+ RUN ansible-galaxy collection install --ignore-certs [[ここにインストールしたいコレクション名を代入]] \</span>
+<span class="gi">+ &amp;&amp; pip3.11 install [[ここにコレクションに必要なライブラリを代入]]</span>
+
+## Add module command bellow, if you need to use extend ansible module.
+
+# Example:
+# RUN ansible-galaxy collection install amazon.aws \
+#  &amp;&amp;  pip3.11 install --upgrade boto3 botocore
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Dockerfileの編集後、Ansible-CoreでのAnsible作業実行を実施します。</div>
+</div>
+<div class="line-block">
+<div class="line">なお、Ansible作業実行時に下記のようなエラーが発生した場合はビルドに失敗しています。</div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Service ita_ansible_agent  Building\nThe command \&#39;/bin/sh -c ansible-galaxy collection install [[インストールしたいコレクション名]]\&#39; returned a non-zero code: 1\n&#39;
+</pre></div>
+</div>
+</section>
+<section id="id8">
+<h5>自作モジュールを使用する例<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">使用したい自作モジュールを「 <code class="file docutils literal notranslate"><span class="pre">~/exastro-docker-compose/ita_by_ansible_execute/templates/work/my_module.py</span></code> 」に配置します。</div>
+<div class="line">また、Ansible-Coreの実行ユーザがアクセスできるように読み取り権限を付与します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id48">
+<div class="code-block-caption"><span class="caption-number">リスト 6.6 </span><span class="caption-text">コマンド例（読み取り権限の付与）</span><a class="headerlink" href="#id48" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[user01@ita-sv ~]$ </span>chmod<span class="w"> </span>a+r<span class="w"> </span>~/exastro-docker-compose/ita_by_ansible_execute/templates/work/my_module.py
+<span class="gp">[user01@ita-sv ~]$ </span>ls<span class="w"> </span>-al<span class="w"> </span>~/exastro-docker-compose/ita_by_ansible_execute/templates/work/my_module.py
+<span class="go">-rw-r--r--. 1 user01 user01 1024 Jan 1 00:00 ~/exastro-docker-compose/ita_by_ansible_execute/templates/work/my_module.py</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">「 <code class="file docutils literal notranslate"><span class="pre">~/exastro-docker-compose/ita_by_ansible_execute/templates/work/Dockerfile</span></code> 」を下記編集します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id49">
+<div class="code-block-caption"><span class="caption-number">リスト 6.7 </span><span class="caption-text">~/exastro-docker-compose/ita_by_ansible_execute/templates/work/Dockerfile</span><a class="headerlink" href="#id49" title="Link to this code">¶</a></div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>ARG ANSIBLE_AGENT_BASE_IMAGE
+ARG ANSIBLE_AGENT_BASE_IMAGE_TAG
+
+FROM ${ANSIBLE_AGENT_BASE_IMAGE}:${ANSIBLE_AGENT_BASE_IMAGE_TAG}
+
+<span class="gi">+ RUN mkdir -p /home/app_user/.ansible/plugins/modules</span>
+<span class="gi">+ COPY my_module.py /home/app_user/.ansible/plugins/modules/</span>
+
+## Add module command bellow, if you need to use extend ansible module.
+
+# Example:
+# RUN ansible-galaxy collection install amazon.aws \
+#  &amp;&amp;  pip3.11 install --upgrade boto3 botocore
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Dockerfileの編集後、Ansible-CoreでのAnsible作業実行を実施します。</div>
+</div>
+</section>
+</section>
+</section>
+<section id="id9">
+<h3><span class="section-number">6.3.2. </span>Ansible作業時にカスタマイズを施したイメージを使用する例<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<section id="id10">
+<h4>カスタマイズを施したイメージの出力<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">カスタマイズを施したイメージが存在するサーバでイメージを出力します。</div>
+</div>
+<div class="line-block">
+<div class="line">まず対象となるイメージを確認します。</div>
+<div class="line">例として、「exastro-ansible-agent-custom:devel」を対象となるイメージとします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id50">
+<div class="code-block-caption"><span class="caption-number">リスト 6.8 </span><span class="caption-text">コマンド例（対象となるイメージの確認）</span><a class="headerlink" href="#id50" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[user01@ita-sv ~]$ </span>docker<span class="w"> </span>images<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>exastro-ansible-agent-custom
+<span class="go">exastro-ansible-agent-custom                      devel    18493d96333g   12 hours ago   953MB</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">なお、Kubenetesではタグ名が「latest」又は「none」であるとローカルイメージを使用しないため、</div>
+<div class="line">Kubenetesで使用する場合はこの時点でタグ名を「latest」又は「none」以外としておくことを推奨します。</div>
+<div class="line">（参考：<a class="reference external" href="https://kubernetes.io/docs/concepts/containers/images/#imagepullpolicy-defaulting">https://kubernetes.io/docs/concepts/containers/images/#imagepullpolicy-defaulting</a>）</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id51">
+<div class="code-block-caption"><span class="caption-number">リスト 6.9 </span><span class="caption-text">コマンド例（タグ名の変更）</span><a class="headerlink" href="#id51" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[user01@ita-sv ~]$ </span>docker<span class="w"> </span>images<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>exastro-ansible-agent-custom
+<span class="go">exastro-ansible-agent-custom                     &lt;none&gt;    18493d96333g   12 hours ago   953MB</span>
+
+<span class="gp">[user01@ita-sv ~]$ </span>docker<span class="w"> </span>tag<span class="w"> </span>18493d96333g<span class="w"> </span>exastro-ansible-agent-custom:devel
+
+<span class="gp">[user01@ita-sv ~]$ </span>docker<span class="w"> </span>images<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>exastro-ansible-agent-custom
+<span class="go">exastro-ansible-agent-custom                      devel    18493d96333g   12 hours ago   953MB</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">下記コマンドを実行してイメージを出力します。</div>
+<div class="line">コマンドには「18493d96333g」等のイメージIDではなく、「exastro-ansible-agent-custom:devel」といったイメージ名とタグ名を使用してください。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id52">
+<div class="code-block-caption"><span class="caption-number">リスト 6.10 </span><span class="caption-text">コマンド例（イメージを出力）</span><a class="headerlink" href="#id52" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[user01@ita-sv ~]$ </span>docker<span class="w"> </span>save<span class="w"> </span>exastro-ansible-agent-custom:devel<span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>-c<span class="w"> </span>&gt;<span class="w"> </span>/tmp/custom-docker-image.tar.gz
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id11">
+<h4>カスタマイズを施したイメージの投入<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h4>
+<section id="docker-compose">
+<h5>docker-compose版<a class="headerlink" href="#docker-compose" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">予め、イメージを投入したいサーバへ <code class="file docutils literal notranslate"><span class="pre">/tmp/custom-docker-image.tar.gz</span></code> を転送しておきます。</div>
+</div>
+<div class="line-block">
+<div class="line">下記コマンドを実行してイメージを投入します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id53">
+<div class="code-block-caption"><span class="caption-number">リスト 6.11 </span><span class="caption-text">コマンド例（イメージを投入）</span><a class="headerlink" href="#id53" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[user01@ita-sv-02 ~]$ </span>docker<span class="w"> </span>load<span class="w"> </span>&lt;<span class="w"> </span>/tmp/custom-docker-image.tar.gz
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">その後、イメージが正常に投入されていることを確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id54">
+<div class="code-block-caption"><span class="caption-number">リスト 6.12 </span><span class="caption-text">コマンド例（イメージを確認）</span><a class="headerlink" href="#id54" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[user01@ita-sv-02 ~]$ </span>docker<span class="w"> </span>images<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>exastro-ansible-agent-custom
+<span class="go">exastro-ansible-agent-custom                      devel    18493d96333g   12 hours ago   953MB</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">イメージの確認後、Ansible-CoreでのAnsible作業時に対象のイメージを使用するように環境変数を設定します。</div>
+<div class="line">「 <code class="file docutils literal notranslate"><span class="pre">~/exastro-docker-compose/.env</span></code> 」の「 <code class="docutils literal notranslate"><span class="pre">ANSIBLE_AGENT_IMAGE</span></code> 」「 <code class="docutils literal notranslate"><span class="pre">ANSIBLE_AGENT_IMAGE_TAG</span></code> 」の値を編集します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id55">
+<div class="code-block-caption"><span class="caption-number">リスト 6.13 </span><span class="caption-text">/exastro-docker-compose/.env</span><a class="headerlink" href="#id55" title="Link to this code">¶</a></div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>...
+#### Local Repository for the Ansible Agent container
+<span class="gd">- # ANSIBLE_AGENT_IMAGE=my-exastro-ansible-agent</span>
+<span class="gi">+ ANSIBLE_AGENT_IMAGE=exastro-ansible-agent-custom</span>
+#### Tag for the Ansible Agent container local image
+<span class="gd">- # ANSIBLE_AGENT_IMAGE_TAG=</span>
+<span class="gi">+ ANSIBLE_AGENT_IMAGE_TAG=devel</span>
+...
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">環境変数の編集後、「<code class="file docutils literal notranslate"><span class="pre">~/exastro-docker-compose/setup.sh</span></code> 」を実行して編集を反映します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id56">
+<div class="code-block-caption"><span class="caption-number">リスト 6.14 </span><span class="caption-text">コマンド（編集を反映）</span><a class="headerlink" href="#id56" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[user01@ita-sv-02 ~]$ </span><span class="nb">cd</span><span class="w"> </span>~/exastro-docker-compose
+<span class="gp">[user01@ita-sv-02 ~]$ </span>sh<span class="w"> </span>setup.sh<span class="w"> </span>install
+
+<span class="go">...</span>
+<span class="go">Regenerate .env file? (y/n) [default: n]: n</span>
+<span class="go">...</span>
+<span class="go">Deploy Exastro containers now? (y/n) [default: n]: y</span>
+<span class="go">...</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="kubenetes">
+<h5>Kubenetes版<a class="headerlink" href="#kubenetes" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">予め、クラスタ内の全てのノードに対して <code class="file docutils literal notranslate"><span class="pre">/tmp/custom-docker-image.tar.gz</span></code> を転送します。</div>
+</div>
+<div class="line-block">
+<div class="line">下記コマンドをクラスタ内の全てのノードに対して実行し、イメージを投入します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id57">
+<div class="code-block-caption"><span class="caption-number">リスト 6.15 </span><span class="caption-text">コマンド例（イメージを投入）</span><a class="headerlink" href="#id57" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[user01@ita-node01 ~]$ </span>ctr<span class="w"> </span>images<span class="w"> </span>-n<span class="w"> </span>k8s.io<span class="w"> </span>import<span class="w"> </span>/tmp/custom-docker-image.tar.gz
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">イメージの投入後、Ansible-CoreでのAnsible作業時に対象のイメージを使用するように環境変数を設定します。</div>
+<div class="line">values.yaml の「 <code class="docutils literal notranslate"><span class="pre">exastro-it-automation.ita-by-ansible-execute.extraEnv.ANSIBLE_AGENT_IMAGE</span></code> 」及び「 <code class="docutils literal notranslate"><span class="pre">exastro-it-automation.ita-by-ansible-execute.extraEnv.ANSIBLE_AGENT_IMAGE_TAG</span></code> 」の値を編集します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id58">
+<div class="code-block-caption"><span class="caption-number">リスト 6.16 </span><span class="caption-text">values.yaml</span><a class="headerlink" href="#id58" title="Link to this code">¶</a></div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>exastro-it-automation:
+...
+<span class="w"> </span> ita-by-ansible-execute:
+<span class="w"> </span>   extraEnv:
+<span class="w"> </span>     ...
+<span class="gd">-     ANSIBLE_AGENT_IMAGE: &quot;docker.io/exastro/exastro-it-automation-by-ansible-agent&quot;</span>
+<span class="gi">+     ANSIBLE_AGENT_IMAGE: &quot;exastro-ansible-agent-custom&quot;</span>
+<span class="gd">-     ANSIBLE_AGENT_IMAGE_TAG: &quot;&quot;</span>
+<span class="gi">+     ANSIBLE_AGENT_IMAGE_TAG: &quot;devel&quot;</span>
+...
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">values.yaml の編集後、「 <strong class="command">helm upgrade</strong> 」及び「 <strong class="command">kubectl rollout</strong> 」を実行して編集を反映します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id59">
+<div class="code-block-caption"><span class="caption-number">リスト 6.17 </span><span class="caption-text">コマンド（編集を反映）</span><a class="headerlink" href="#id59" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>helm<span class="w"> </span>upgrade<span class="w"> </span>exastro<span class="w"> </span>exastro/exastro<span class="w"> </span>--install<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--create-namespace<span class="w"> </span>--values<span class="w"> </span>values.yaml
+
+<span class="gp">$ </span>kubectl<span class="w"> </span>rollout<span class="w"> </span>restart<span class="w"> </span>deploy/ita-by-ansible-execute<span class="w"> </span>-n<span class="w"> </span>exastro
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+<section id="ansible-execution-agent">
+<h2><span class="section-number">6.4. </span>Ansible Execution Agentでのカスタマイズ例<a class="headerlink" href="#ansible-execution-agent" title="Link to this heading">¶</a></h2>
+<section id="id12">
+<h3><span class="section-number">6.4.1. </span>コレクションを使用する例（無償版ベースイメージ）<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<ul>
+<li><div class="line-block">
+<div class="line">このケースでは下記条件でカスタマイズを施します。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">ベースイメージは「registry.access.redhat.com/ubi9/ubi-init:latest」を使用する</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">コレクションは「Azure.AzCollection」を使用する</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<section id="ita">
+<h4>ITAでの実行環境定義登録<a class="headerlink" href="#ita" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible共通 ▶ 実行環境定義テンプレート管理</span> に実行環境定義のテンプレートファイルを登録します。</div>
+</div>
+<table class="docutils align-left" id="id60">
+<caption><span class="caption-number">表 6.6 </span><span class="caption-text"><span class="menuselection">Ansible共通 ▶ 実行環境定義テンプレート管理</span> に設定するパラメータ一覧</span><a class="headerlink" href="#id60" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 32.6%" />
+<col style="width: 34.8%" />
+<col style="width: 32.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>テンプレート名</p></td>
+<td><p>azure_ee_template</p></td>
+<td><p>今回の説明では「azure_ee_template」を使用しますが、変更した場合は必要に応じて読み替えてください。</p></td>
+</tr>
+<tr class="row-odd"><td><p>テンプレートファイル</p></td>
+<td><p>下記内容を登録します。</p>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+
+<span class="nt">build_arg_defaults</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;--ignore-certs&#39;</span>
+
+<span class="nt">images</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">base_image</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">image</span> <span class="cp">}}</span>
+
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ansible_core</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">ansible_core</span> <span class="cp">}}</span>
+<span class="w">  </span><span class="nt">ansible_runner</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">ansible_runner</span> <span class="cp">}}</span>
+<span class="w">  </span><span class="nt">system</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">bindep_file</span> <span class="cp">}}</span>
+<span class="w">  </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">python_requirements_file</span> <span class="cp">}}</span>
+<span class="cp">{%</span> <span class="k">if</span> <span class="nv">galaxy_requirements_file</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+<span class="w">  </span><span class="nt">galaxy</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">galaxy_requirements_file</span> <span class="cp">}}</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="w">  </span><span class="nt">python_interpreter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python3.11&quot;</span>
+<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/python3.11&quot;</span>
+
+<span class="nt">additional_build_steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">append_base</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RUN /usr/bin/python3.11 -m pip install --upgrade pip</span>
+
+<span class="nt">options</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">package_manager_path</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">package_manager_path</span> <span class="cp">}}</span>
+<span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+</pre></div>
+</div>
+</td>
+<td><p>将来的に、必要となる <cite>ansible_core</cite> のバージョンは変更となる可能性があります。</p>
+<p>その結果、必要となる <cite>Python</cite> のバージョンが変更となり、<cite>python_interpreter</cite> の値も変更となる可能性があります。</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible共通 ▶ 実行環境管理</span> に実行環境定義のテンプレートファイルとテンプレートファイルに代入する設定値の紐付けを登録します。</div>
+</div>
+<table class="docutils align-left" id="id61">
+<caption><span class="caption-number">表 6.7 </span><span class="caption-text"><span class="menuselection">Ansible共通 ▶ 実行環境管理</span> に設定するパラメータ一覧</span><a class="headerlink" href="#id61" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 32.6%" />
+<col style="width: 34.8%" />
+<col style="width: 32.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>実行環境名</p></td>
+<td><p>azure_ee_ubi9</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>実行環境構築方法</p></td>
+<td><p>ITA</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>タグ名</p></td>
+<td><p>azure_ee_image_ubi9</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>実行環境定義名</p></td>
+<td><p>実行環境パラメータ定義/~[Exastro standard] default (galaxy collection is azure
+only)</p></td>
+<td><p>初期データとして用意されているものを使用します。</p></td>
+</tr>
+<tr class="row-even"><td><p>テンプレート名</p></td>
+<td><p>azure_ee_template</p></td>
+<td><p><span class="menuselection">Ansible共通 ▶ 実行環境定義テンプレート管理</span> のテンプレート名</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible[Legacy/Pioneer/Legacy-Role] ▶ Movement一覧</span> （実行しようとするAnsible作業のMovement）に実行環境設定を登録します。</div>
+<div class="line">実行環境設定に関連しないパラメータについては記載省略としています。</div>
+</div>
+<table class="docutils align-left" id="id62">
+<caption><span class="caption-number">表 6.8 </span><span class="caption-text"><span class="menuselection">Ansible[Legacy/Pioneer/Legacy-Role] ▶ Movement一覧</span> に設定するパラメータ一覧</span><a class="headerlink" href="#id62" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 10.9%" />
+<col style="width: 10.9%" />
+<col style="width: 10.9%" />
+<col style="width: 34.8%" />
+<col style="width: 32.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="3"><p>MovementID</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>Movement名</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>遅延タイマー</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="8"><p>Ansible
+利用情報</p></td>
+<td colspan="2"><p>ホスト指定形式</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>WinRM接続</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ヘッダーセクション</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>オプションパラメータ</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible.cfg</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Ansible Execution Agent 利用情報</p></td>
+<td><p>実行環境</p></td>
+<td><p>azure_ee_ubi9</p></td>
+<td><p><span class="menuselection">Ansible共通 ▶ 実行環境管理</span> の実行環境名</p></td>
+</tr>
+<tr class="row-odd"><td><p>ansible-builder</p>
+<p>パラメータ</p>
+</td>
+<td><p>ansible-builderで実行環境をbuildする際にansible-builderのパラメータが必要であれば入力します。</p>
+<p>詳細については、 <a class="reference external" href="https://ansible.readthedocs.io/projects/builder/en/latest/usage/">ansible-builder</a> のマニュアルをご参照ください。</p>
+</td>
+<td><p>通常は設定不要です。</p>
+<p>（ビルド時のデバッグ用途で <code class="docutils literal notranslate"><span class="pre">-v</span> <span class="pre">3</span></code> を指定する等で使用）</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Ansible Automation Controller 利用情報</p></td>
+<td><p>実行環境</p></td>
+<td><p>（記載省略・使用しません）</p></td>
+<td><p>ー</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id13">
+<h3><span class="section-number">6.4.2. </span>コレクションを使用する例（有償版ベースイメージ）<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<ul>
+<li><div class="line-block">
+<div class="line">このケースでは下記条件でカスタマイズを施します。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">ベースイメージは「registry.redhat.io/ansible-automation-platform-24/ee-minimal-rhel9:latest」を使用する</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">コレクションは「Azure.AzCollection」を使用する</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<section id="id14">
+<h4>Ansible Execution Agentでの事前準備<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ベースイメージをPullできるように予め「 <strong class="command">podman login</strong> 」を実施します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id63">
+<div class="code-block-caption"><span class="caption-number">リスト 6.18 </span><span class="caption-text">コマンド（registry.redhat.ioでの認証）</span><a class="headerlink" href="#id63" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[userA@aea ~]$ </span>podman<span class="w"> </span>login<span class="w"> </span>registry.redhat.io
+
+<span class="go"> Username: [[RedHatアカウントのユーザ名]]</span>
+<span class="go"> Password: [[RedHatアカウントのパスワード]]</span>
+<span class="go"> Login Succeeded!</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id15">
+<h4>ITAでの実行環境定義登録<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line"><span class="menuselection">入力用 ▶ 実行環境パラメータ定義</span> に実行環境定義のテンプレートファイルに代入する設定値を登録します。</div>
+</div>
+<table class="docutils align-left" id="id64">
+<caption><span class="caption-number">表 6.9 </span><span class="caption-text"><span class="menuselection">入力用 ▶ 実行環境パラメータ定義</span> に設定するパラメータ一覧</span><a class="headerlink" href="#id64" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 32.6%" />
+<col style="width: 34.8%" />
+<col style="width: 32.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>execution_environment_name</p></td>
+<td><p>azure_ee</p></td>
+<td><p>今回の説明では「azure_ee」を使用しますが、変更した場合は必要に応じて読み替えてください。</p></td>
+</tr>
+<tr class="row-odd"><td><p>image</p></td>
+<td><p>registry.redhat.io/ansible-automation-platform-24/ee-minimal-rhel9:latest</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>ansible_core</p></td>
+<td><p>ansible_core==2.16.0</p></td>
+<td><p>将来的に、必要となる <cite>ansible_core</cite> のバージョンは変更となる可能性があります。</p></td>
+</tr>
+<tr class="row-odd"><td><p>ansible_runner</p></td>
+<td><p>ansible_runner</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>bindep_file</p></td>
+<td><p>下記内容を登録します。</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>systemd-devel
+gcc
+python3.11-devel
+</pre></div>
+</div>
+</td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>python_requirements_file</p></td>
+<td><p>下記内容を登録します。</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>pywinrm
+setuptools
+pexpect
+boto3
+paramiko
+boto
+certifi
+</pre></div>
+</div>
+</td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>galaxy_requirements_file</p></td>
+<td><p>下記内容を登録します。</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">collections</span><span class="p">:</span>
+<span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.azcollection</span>
+</pre></div>
+</div>
+</td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>package_manager_path</p></td>
+<td><p>/usr/bin/microdnf</p></td>
+<td><p>ー</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible共通 ▶ 実行環境定義テンプレート管理</span> に実行環境定義のテンプレートファイルを登録します。</div>
+</div>
+<table class="docutils align-left" id="id65">
+<caption><span class="caption-number">表 6.10 </span><span class="caption-text"><span class="menuselection">Ansible共通 ▶ 実行環境定義テンプレート管理</span> に設定するパラメータ一覧</span><a class="headerlink" href="#id65" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 32.6%" />
+<col style="width: 34.8%" />
+<col style="width: 32.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>テンプレート名</p></td>
+<td><p>azure_ee_template</p></td>
+<td><p>今回の説明では「azure_ee_template」を使用しますが、変更した場合は必要に応じて読み替えてください。</p></td>
+</tr>
+<tr class="row-odd"><td><p>テンプレートファイル</p></td>
+<td><p>下記内容を登録します。</p>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+
+<span class="nt">build_arg_defaults</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;--ignore-certs&#39;</span>
+
+<span class="nt">images</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">base_image</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">image</span> <span class="cp">}}</span>
+
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ansible_core</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">ansible_core</span> <span class="cp">}}</span>
+<span class="w">  </span><span class="nt">ansible_runner</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">ansible_runner</span> <span class="cp">}}</span>
+<span class="w">  </span><span class="nt">system</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">bindep_file</span> <span class="cp">}}</span>
+<span class="w">  </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">python_requirements_file</span> <span class="cp">}}</span>
+<span class="cp">{%</span> <span class="k">if</span> <span class="nv">galaxy_requirements_file</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+<span class="w">  </span><span class="nt">galaxy</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">galaxy_requirements_file</span> <span class="cp">}}</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="w">  </span><span class="nt">python_interpreter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python3.11&quot;</span>
+<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/python3.11&quot;</span>
+
+<span class="nt">additional_build_steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">append_base</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RUN /usr/bin/python3.11 -m pip install --upgrade pip</span>
+
+<span class="nt">options</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">package_manager_path</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">package_manager_path</span> <span class="cp">}}</span>
+<span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+</pre></div>
+</div>
+</td>
+<td><p>将来的に、必要となる <cite>ansible_core</cite> のバージョンは変更となる可能性があります。</p>
+<p>その結果、必要となる <cite>Python</cite> のバージョンが変更となり、<cite>python_interpreter</cite> の値も変更となる可能性があります。</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible共通 ▶ 実行環境管理</span> に実行環境定義のテンプレートファイルとテンプレートファイルに代入する設定値の紐付けを登録します。</div>
+</div>
+<table class="docutils align-left" id="id66">
+<caption><span class="caption-number">表 6.11 </span><span class="caption-text"><span class="menuselection">Ansible共通 ▶ 実行環境管理</span> に設定するパラメータ一覧</span><a class="headerlink" href="#id66" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 32.6%" />
+<col style="width: 34.8%" />
+<col style="width: 32.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>実行環境名</p></td>
+<td><p>azure_ee</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>実行環境構築方法</p></td>
+<td><p>ITA</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>タグ名</p></td>
+<td><p>azure_ee_image</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>実行環境定義名</p></td>
+<td><p>実行環境パラメータ定義/azure_ee</p></td>
+<td><p><span class="menuselection">入力用 ▶ 実行環境パラメータ定義</span> のexecution_environment_name</p></td>
+</tr>
+<tr class="row-even"><td><p>テンプレート名</p></td>
+<td><p>azure_ee_template</p></td>
+<td><p><span class="menuselection">Ansible共通 ▶ 実行環境定義テンプレート管理</span> のテンプレート名</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible[Legacy/Pioneer/Legacy-Role] ▶ Movement一覧</span> （実行しようとするAnsible作業のMovement）に実行環境設定を登録します。</div>
+<div class="line">実行環境設定に関連しないパラメータについては記載省略としています。</div>
+</div>
+<table class="docutils align-left" id="id67">
+<caption><span class="caption-number">表 6.12 </span><span class="caption-text"><span class="menuselection">Ansible[Legacy/Pioneer/Legacy-Role] ▶ Movement一覧</span> に設定するパラメータ一覧</span><a class="headerlink" href="#id67" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 10.9%" />
+<col style="width: 10.9%" />
+<col style="width: 10.9%" />
+<col style="width: 34.8%" />
+<col style="width: 32.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="3"><p>MovementID</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>Movement名</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>遅延タイマー</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="8"><p>Ansible
+利用情報</p></td>
+<td colspan="2"><p>ホスト指定形式</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>WinRM接続</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ヘッダーセクション</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>オプションパラメータ</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible.cfg</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Ansible Execution Agent 利用情報</p></td>
+<td><p>実行環境</p></td>
+<td><p>azure_ee</p></td>
+<td><p><span class="menuselection">Ansible共通 ▶ 実行環境管理</span> の実行環境名</p></td>
+</tr>
+<tr class="row-odd"><td><p>ansible-builder</p>
+<p>パラメータ</p>
+</td>
+<td><p>ansible-builderで実行環境をbuildする際にansible-builderのパラメータが必要であれば入力します。</p>
+<p>詳細については、 <a class="reference external" href="https://ansible.readthedocs.io/projects/builder/en/latest/usage/">ansible-builder</a> のマニュアルをご参照ください。</p>
+</td>
+<td><p>通常は設定不要です。</p>
+<p>（ビルド時のデバッグ用途で <code class="docutils literal notranslate"><span class="pre">-v</span> <span class="pre">3</span></code> を指定する等で使用）</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Ansible Automation Controller 利用情報</p></td>
+<td><p>実行環境</p></td>
+<td><p>（記載省略・使用しません）</p></td>
+<td><p>ー</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id17">
+<h3><span class="section-number">6.4.3. </span>自作モジュールを使用する例<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
+<ul>
+<li><div class="line-block">
+<div class="line">このケースでは下記条件でカスタマイズを施します。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">ベースイメージは「registry.access.redhat.com/ubi9/ubi-init:latest」を使用する</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">自作モジュールは「 <code class="file docutils literal notranslate"><span class="pre">/tmp/ansible_module/my_module.py</span></code> 」を使用する</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<section id="id18">
+<h4>自作モジュールの配置<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">使用したい自作モジュールをAnsible Execution Agentの「 <code class="file docutils literal notranslate"><span class="pre">/tmp/ansible_module/my_module.py</span></code> 」に配置します。</div>
+<div class="line">また、Ansible Execution Agentの実行ユーザがアクセスできるように読み取り権限を付与します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id68">
+<div class="code-block-caption"><span class="caption-number">リスト 6.19 </span><span class="caption-text">コマンド例（読み取り権限の付与）</span><a class="headerlink" href="#id68" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[userA@aea ~]$ </span>chmod<span class="w"> </span>a+r<span class="w"> </span>/tmp/ansible_module/my_module.py
+<span class="gp">[userA@aea ~]$ </span>ls<span class="w"> </span>-al<span class="w"> </span>/tmp/ansible_module/my_module.py
+<span class="go">-rw-r--r--. 1 userA userA 1024 Jan 1 00:00 /tmp/ansible_module/my_module.py</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id19">
+<h4>ITAでの実行環境定義登録<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible共通 ▶ 実行環境定義テンプレート管理</span> に実行環境定義のテンプレートファイルを登録します。</div>
+</div>
+<table class="docutils align-left" id="id69">
+<caption><span class="caption-number">表 6.13 </span><span class="caption-text"><span class="menuselection">Ansible共通 ▶ 実行環境定義テンプレート管理</span> に設定するパラメータ一覧</span><a class="headerlink" href="#id69" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 32.6%" />
+<col style="width: 34.8%" />
+<col style="width: 32.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>テンプレート名</p></td>
+<td><p>my_module_ubi9_template</p></td>
+<td><p>今回の説明では「my_module_ubi9_template」を使用しますが、変更した場合は必要に応じて読み替えてください。</p></td>
+</tr>
+<tr class="row-odd"><td><p>テンプレートファイル</p></td>
+<td><p>下記内容を登録します。</p>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+
+<span class="nt">build_arg_defaults</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;--ignore-certs&#39;</span>
+
+<span class="nt">images</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">base_image</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">image</span> <span class="cp">}}</span>
+
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ansible_core</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">ansible_core</span> <span class="cp">}}</span>
+<span class="w">  </span><span class="nt">ansible_runner</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">ansible_runner</span> <span class="cp">}}</span>
+<span class="w">  </span><span class="nt">system</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">bindep_file</span> <span class="cp">}}</span>
+<span class="w">  </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">python_requirements_file</span> <span class="cp">}}</span>
+<span class="cp">{%</span> <span class="k">if</span> <span class="nv">galaxy_requirements_file</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+<span class="w">  </span><span class="nt">galaxy</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">galaxy_requirements_file</span> <span class="cp">}}</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="w">  </span><span class="nt">python_interpreter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python39&quot;</span>
+<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/python3.9&quot;</span>
+
+<span class="hll"><span class="nt">additional_build_files</span><span class="p">:</span>
+</span><span class="hll"><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/ansible_module/my_module.py</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">configs</span>
+</span>
+<span class="nt">additional_build_steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">append_base</span><span class="p">:</span>
+<span class="hll"><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">COPY _build/configs/my_module.py /usr/share/ansible/plugins/modules/</span>
+</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RUN /usr/bin/python3.9 -m pip install --upgrade pip</span>
+
+<span class="nt">options</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">package_manager_path</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">package_manager_path</span> <span class="cp">}}</span>
+<span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+</pre></div>
+</div>
+</td>
+<td><p>自作モジュールのファイルパスが異なる場合は、<span class="menuselection">additional_build_files ▶ src</span> 及び <span class="menuselection">additional_build_steps ▶ append_base ▶ COPY</span> の値を 変更してください。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible共通 ▶ 実行環境管理</span> に実行環境定義のテンプレートファイルとテンプレートファイルに代入する設定値の紐付けを登録します。</div>
+</div>
+<table class="docutils align-left" id="id70">
+<caption><span class="caption-number">表 6.14 </span><span class="caption-text"><span class="menuselection">Ansible共通 ▶ 実行環境管理</span> に設定するパラメータ一覧</span><a class="headerlink" href="#id70" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 32.6%" />
+<col style="width: 34.8%" />
+<col style="width: 32.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>実行環境名</p></td>
+<td><p>my_module_ubi9</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>実行環境構築方法</p></td>
+<td><p>ITA</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>タグ名</p></td>
+<td><p>my_module_ubi9_image</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>実行環境定義名</p></td>
+<td><p>実行環境パラメータ定義/~[Exastro standard] default (no galaxy collection)</p></td>
+<td><p>初期データとして用意されているものを使用します。</p></td>
+</tr>
+<tr class="row-even"><td><p>テンプレート名</p></td>
+<td><p>my_module_ubi9_template</p></td>
+<td><p><span class="menuselection">Ansible共通 ▶ 実行環境定義テンプレート管理</span> のテンプレート名</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible[Legacy/Pioneer/Legacy-Role] ▶ Movement一覧</span> （実行しようとするAnsible作業のMovement）に実行環境設定を登録します。</div>
+<div class="line">実行環境設定に関連しないパラメータについては記載省略としています。</div>
+</div>
+<table class="docutils align-left" id="id71">
+<caption><span class="caption-number">表 6.15 </span><span class="caption-text"><span class="menuselection">Ansible[Legacy/Pioneer/Legacy-Role] ▶ Movement一覧</span> に設定するパラメータ一覧</span><a class="headerlink" href="#id71" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 10.9%" />
+<col style="width: 10.9%" />
+<col style="width: 10.9%" />
+<col style="width: 34.8%" />
+<col style="width: 32.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="3"><p>MovementID</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>Movement名</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>遅延タイマー</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="8"><p>Ansible
+利用情報</p></td>
+<td colspan="2"><p>ホスト指定形式</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>WinRM接続</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ヘッダーセクション</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>オプションパラメータ</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible.cfg</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Ansible Execution Agent 利用情報</p></td>
+<td><p>実行環境</p></td>
+<td><p>my_module_ubi9</p></td>
+<td><p><span class="menuselection">Ansible共通 ▶ 実行環境管理</span> の実行環境名</p></td>
+</tr>
+<tr class="row-odd"><td><p>ansible-builder</p>
+<p>パラメータ</p>
+</td>
+<td><p>ansible-builderで実行環境をbuildする際にansible-builderのパラメータが必要であれば入力します。</p>
+<p>詳細については、 <a class="reference external" href="https://ansible.readthedocs.io/projects/builder/en/latest/usage/">ansible-builder</a> のマニュアルをご参照ください。</p>
+</td>
+<td><p>通常は設定不要です。</p>
+<p>（ビルド時のデバッグ用途で <code class="docutils literal notranslate"><span class="pre">-v</span> <span class="pre">3</span></code> を指定する等で使用）</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Ansible Automation Controller 利用情報</p></td>
+<td><p>実行環境</p></td>
+<td><p>（記載省略・使用しません）</p></td>
+<td><p>ー</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="ansible-automation-platform">
+<h2><span class="section-number">6.5. </span>Ansible Automation Platformでのカスタマイズ例<a class="headerlink" href="#ansible-automation-platform" title="Link to this heading">¶</a></h2>
+<section id="id21">
+<h3><span class="section-number">6.5.1. </span>コレクションを使用する例（無償版ベースイメージ）<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h3>
+<ul>
+<li><div class="line-block">
+<div class="line">このケースでは下記条件でカスタマイズを施します。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">ベースイメージは「registry.access.redhat.com/ubi9/ubi-init:latest」を使用する</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">コレクションは「Azure.AzCollection」を使用する</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<section id="id22">
+<h4>ansible-builderのインストール<a class="headerlink" href="#id22" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ansible-builderのインストールを行います。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id72">
+<div class="code-block-caption"><span class="caption-number">リスト 6.20 </span><span class="caption-text">コマンド（ControlNodeで実施）</span><a class="headerlink" href="#id72" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[root@control-node ~]# </span>dnf<span class="w"> </span>install<span class="w"> </span>--enablerepo<span class="o">=</span>ansible-automation-platform-2.4-for-rhel-8-x86_64-rpms<span class="w"> </span>ansible-builder
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id23">
+<h4>必要ファイルの準備<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ansible-builderでイメージを作成するために必要なファイルを作成します。</div>
+<div class="line">今回は下記ファイルを作成します。</div>
+<div class="line">（下記の4ファイルは特定の同一ディレクトリに格納することを推奨します）</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">execution-environment.yml</div>
+</div>
+<ul class="simple">
+<li><p>ansible-builderの定義ファイル</p></li>
+</ul>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id73">
+<div class="code-block-caption"><span class="caption-number">リスト 6.21 </span><span class="caption-text">execution-environment.yml</span><a class="headerlink" href="#id73" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+
+<span class="nt">build_arg_defaults</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;--ignore-certs&#39;</span>
+
+<span class="nt">images</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">base_image</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">registry.access.redhat.com/ubi9/ubi-init:latest</span>
+
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ansible_core</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ansible_core</span>
+<span class="w">  </span><span class="nt">ansible_runner</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ansible_runner</span>
+<span class="w">  </span><span class="nt">system</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bindep.txt</span>
+<span class="w">  </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python-requirements.txt</span>
+<span class="w">  </span><span class="nt">galaxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">galaxy-requirements.yml</span>
+<span class="w">  </span><span class="nt">python_interpreter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python3.11&quot;</span>
+<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/python3.11&quot;</span>
+
+<span class="nt">additional_build_steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">append_base</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RUN /usr/bin/python3.11 -m pip install --upgrade pip</span>
+
+<span class="nt">options</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">package_manager_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/bin/dnf</span>
+<span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+</pre></div>
+</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">galaxy-requirements.yml</div>
+</div>
+<ul class="simple">
+<li><p>インストールしたいansible-galaxy コレクションリストを記載するファイル</p></li>
+</ul>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id74">
+<div class="code-block-caption"><span class="caption-number">リスト 6.22 </span><span class="caption-text">galaxy-requirements.yml</span><a class="headerlink" href="#id74" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">collections</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.azcollection</span>
+</pre></div>
+</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">python-requirements.txt</div>
+</div>
+<ul class="simple">
+<li><p>Python の依存関係を解決するためにPython 要件を記載するファイル</p></li>
+</ul>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id75">
+<div class="code-block-caption"><span class="caption-number">リスト 6.23 </span><span class="caption-text">python-requirements.txt</span><a class="headerlink" href="#id75" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>pywinrm
+setuptools
+pexpect
+boto3
+paramiko
+boto
+certifi
+</pre></div>
+</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">bindep.txt</div>
+</div>
+<ul class="simple">
+<li><p>システムレベルの依存関係を解決するためにパッケージ要件を記載するファイル</p></li>
+</ul>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id76">
+<div class="code-block-caption"><span class="caption-number">リスト 6.24 </span><span class="caption-text">bindep.txt</span><a class="headerlink" href="#id76" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>openssh-clients
+sshpass
+expect
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id24">
+<h4>ansible-builderの実行<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">上記ファイルを基に、ansible-builderコマンドでイメージを作成します。</div>
+<div class="line">ここで指定したタグ名は後々使用するので控えておきます。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id77">
+<div class="code-block-caption"><span class="caption-number">リスト 6.25 </span><span class="caption-text">コマンド（ControlNodeで実施）</span><a class="headerlink" href="#id77" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[root@control-node ~]# </span>ansible-builder<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span><span class="o">[[</span>タグ名<span class="o">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">10分程度後に下記表示がされれば、正常にビルドが完了しています。</div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Complete! The build context can be found at: /[[pwd]]/context</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">念のため、「podman images」でカスタムイメージを確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id78">
+<div class="code-block-caption"><span class="caption-number">リスト 6.26 </span><span class="caption-text">コマンド（ControlNodeで実施）</span><a class="headerlink" href="#id78" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[root@control-node ~]# </span>podman<span class="w"> </span>images
+
+<span class="go">--表示例--</span>
+<span class="go">REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE</span>
+<span class="go">localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB</span>
+<span class="go">&lt;none&gt;                                                              &lt;none&gt;      cc220af5af51  5 minutes ago       2 GB</span>
+<span class="go">&lt;none&gt;                                                              &lt;none&gt;      a1bf761c249f  9 minutes ago       464 MB</span>
+<span class="go">registry.access.redhat.com/ubi9/ubi-init                            latest      b3be55cf7793  3 weeks ago         311 MB</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="controlnodeawx">
+<h4>ControlNodeのawxユーザ用にカスタムイメージをコピー<a class="headerlink" href="#controlnodeawx" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">作成したカスタムイメージを ControlNode のawxユーザで使用できるようにします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id79">
+<div class="code-block-caption"><span class="caption-number">リスト 6.27 </span><span class="caption-text">コマンド（ControlNodeで実施）</span><a class="headerlink" href="#id79" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go"> [root@control-node ~]# podman save -o /tmp/azure_ee.tar localhost/[[タグ名]]</span>
+<span class="go"> ...</span>
+<span class="go"> Writing manifest to image destination</span>
+<span class="go"> [root@control-node ~]# chown awx:awx /tmp/azure_ee.tar</span>
+<span class="go"> [root@control-node ~]# su awx -</span>
+<span class="go"> [awx@control-node ~]$ podman load -i /tmp/azure_ee.tar</span>
+<span class="go"> ...</span>
+<span class="go"> Writing manifest to image destination</span>
+<span class="go"> [awx@control-node ~]$ podman images</span>
+
+<span class="go"> --表示例--</span>
+<span class="go"> REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE</span>
+<span class="go"> localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB</span>
+<span class="go"> registry.access.redhat.com/ubi9/ubi-init                            latest      b3be55cf7793  3 weeks ago         311 MB</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="executionnodeawx">
+<h4>ExecutionNodeのawxユーザ用にカスタムイメージをコピー<a class="headerlink" href="#executionnodeawx" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">作成したカスタムイメージを ExecutionNode のawxユーザで使用できるようにします。</div>
+<div class="line">予め、ControlNodeより「/tmp/azure_ee.tar」の資材を転送しておきます。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id80">
+<div class="code-block-caption"><span class="caption-number">リスト 6.28 </span><span class="caption-text">コマンド（ExecutionNodeで実施）</span><a class="headerlink" href="#id80" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go"> [awx@execution-node ~]$ podman load -i /tmp/azure_ee.tar</span>
+<span class="go"> ...</span>
+<span class="go"> Writing manifest to image destination</span>
+<span class="go"> [awx@execution-node ~]$ podman images</span>
+
+<span class="go"> --表示例--</span>
+<span class="go"> REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE</span>
+<span class="go"> localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB</span>
+<span class="go"> registry.access.redhat.com/ubi9/ubi-init                            latest      b3be55cf7793  3 weeks ago         311 MB</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="aap">
+<h4>AAPに実行環境を登録<a class="headerlink" href="#aap" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">コピーしたカスタムイメージを使用する実行環境設定をAnsible Automation Platformに登録します。</div>
+</div>
+<figure class="align-default" id="id81">
+<a class="reference internal image-reference" href="../../_images/aap-env-3.png"><img alt="実行環境/新規実行環境の作成" src="../../_images/aap-env-3.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 6.3 </span><span class="caption-text">実行環境/新規実行環境の作成</span><a class="headerlink" href="#id81" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id25">
+<h4>ITAに実行環境を登録<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ITAに実行環境設定を登録します。</div>
+<div class="line">登録する環境名は、AAPで登録した名前（上記ではazure_ee_ubi9）となります。</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible[Legacy/Pioneer/Legacy-Role] ▶ Movement一覧</span> （実行しようとするAnsible作業のMovement）に実行環境設定を登録します。</div>
+<div class="line">実行環境設定に関連しないパラメータについては記載省略としています。</div>
+</div>
+<table class="docutils align-left" id="id82">
+<caption><span class="caption-number">表 6.16 </span><span class="caption-text"><span class="menuselection">Ansible[Legacy/Pioneer/Legacy-Role] ▶ Movement一覧</span> に設定するパラメータ一覧</span><a class="headerlink" href="#id82" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 10.9%" />
+<col style="width: 10.9%" />
+<col style="width: 10.9%" />
+<col style="width: 34.8%" />
+<col style="width: 32.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="3"><p>MovementID</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>Movement名</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>遅延タイマー</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="8"><p>Ansible
+利用情報</p></td>
+<td colspan="2"><p>ホスト指定形式</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>WinRM接続</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ヘッダーセクション</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>オプションパラメータ</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible.cfg</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Ansible Execution Agent 利用情報</p></td>
+<td><p>実行環境</p></td>
+<td><p>（記載省略・使用しません）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>ansible-builder</p>
+<p>パラメータ</p>
+</td>
+<td><p>（記載省略・使用しません）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>Ansible Automation Controller 利用情報</p></td>
+<td><p>実行環境</p></td>
+<td><p>e.g.) azure_ee_ubi9</p></td>
+<td><p><span class="menuselection">AAPに実行環境を登録</span> で登録した実行環境名</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id26">
+<h3><span class="section-number">6.5.2. </span>コレクションを使用する例（有償版ベースイメージ）<a class="headerlink" href="#id26" title="Link to this heading">¶</a></h3>
+<ul>
+<li><div class="line-block">
+<div class="line">このケースでは下記条件でカスタマイズを施します。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">ベースイメージは「registry.redhat.io/ansible-automation-platform-24/ee-minimal-rhel9:latest」を使用する</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">コレクションは「Azure.AzCollection」を使用する</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<section id="id27">
+<h4>ansible-builderのインストール<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ansible-builderのインストールを行います。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id83">
+<div class="code-block-caption"><span class="caption-number">リスト 6.29 </span><span class="caption-text">コマンド（ControlNodeで実施）</span><a class="headerlink" href="#id83" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[root@control-node ~]# </span>dnf<span class="w"> </span>install<span class="w"> </span>--enablerepo<span class="o">=</span>ansible-automation-platform-2.4-for-rhel-8-x86_64-rpms<span class="w"> </span>ansible-builder
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id28">
+<h4>必要ファイルの準備<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ansible-builderでイメージを作成するために必要なファイルを作成します。</div>
+<div class="line">今回は下記ファイルを作成します。</div>
+<div class="line">（下記の4ファイルは特定の同一ディレクトリに格納することを推奨します）</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">execution-environment.yml</div>
+</div>
+<ul class="simple">
+<li><p>ansible-builderの定義ファイル</p></li>
+</ul>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id84">
+<div class="code-block-caption"><span class="caption-number">リスト 6.30 </span><span class="caption-text">execution-environment.yml</span><a class="headerlink" href="#id84" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+
+<span class="nt">build_arg_defaults</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;--ignore-certs&#39;</span>
+
+<span class="nt">images</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">base_image</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">registry.redhat.io/ansible-automation-platform-24/ee-minimal-rhel9:latest</span>
+
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ansible_core</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ansible_core==2.16.0</span>
+<span class="w">  </span><span class="nt">ansible_runner</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ansible_runner</span>
+<span class="w">  </span><span class="nt">system</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bindep.txt</span>
+<span class="w">  </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python-requirements.txt</span>
+<span class="w">  </span><span class="nt">galaxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">galaxy-requirements.yml</span>
+<span class="w">  </span><span class="nt">python_interpreter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python3.11&quot;</span>
+<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/python3.11&quot;</span>
+
+<span class="nt">additional_build_steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">append_base</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RUN /usr/bin/python3.11 -m pip install --upgrade pip</span>
+
+<span class="nt">options</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">package_manager_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/bin/microdnf</span>
+<span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+</pre></div>
+</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">galaxy-requirements.yml</div>
+</div>
+<ul class="simple">
+<li><p>インストールしたいansible-galaxy コレクションリストを記載するファイル</p></li>
+</ul>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id85">
+<div class="code-block-caption"><span class="caption-number">リスト 6.31 </span><span class="caption-text">galaxy-requirements.yml</span><a class="headerlink" href="#id85" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">collections</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.azcollection</span>
+</pre></div>
+</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">python-requirements.txt</div>
+</div>
+<ul class="simple">
+<li><p>Python の依存関係を解決するためにPython 要件を記載するファイル</p></li>
+</ul>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id86">
+<div class="code-block-caption"><span class="caption-number">リスト 6.32 </span><span class="caption-text">python-requirements.txt</span><a class="headerlink" href="#id86" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>pywinrm
+setuptools
+pexpect
+boto3
+paramiko
+boto
+certifi
+</pre></div>
+</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">bindep.txt</div>
+</div>
+<ul class="simple">
+<li><p>システムレベルの依存関係を解決するためにパッケージ要件を記載するファイル</p></li>
+</ul>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id87">
+<div class="code-block-caption"><span class="caption-number">リスト 6.33 </span><span class="caption-text">bindep.txt</span><a class="headerlink" href="#id87" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>systemd-devel
+gcc
+python3.11-devel
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id29">
+<h4>ansible-builderの実行<a class="headerlink" href="#id29" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ansible-builderを実行する前に、ベースイメージをPullできるように「 <strong class="command">podman login</strong> 」を実施します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id88">
+<div class="code-block-caption"><span class="caption-number">リスト 6.34 </span><span class="caption-text">コマンド（ControlNodeで実施）</span><a class="headerlink" href="#id88" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[root@control-node ~]# </span>podman<span class="w"> </span>login<span class="w"> </span>registry.redhat.io
+
+<span class="go"> Username: [[RedHatアカウントのユーザ名]]</span>
+<span class="go"> Password: [[RedHatアカウントのパスワード]]</span>
+<span class="go"> Login Succeeded!</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">認証後、上記ファイルを基に、ansible-builderコマンドでイメージを作成します。</div>
+<div class="line">ここで指定したタグ名は後々使用するので控えておきます。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id89">
+<div class="code-block-caption"><span class="caption-number">リスト 6.35 </span><span class="caption-text">コマンド（ControlNodeで実施）</span><a class="headerlink" href="#id89" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[root@control-node ~]# </span>ansible-builder<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span><span class="o">[[</span>タグ名<span class="o">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">10分程度後に下記表示がされれば、正常にビルドが完了しています。</div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Complete! The build context can be found at: /[[pwd]]/context</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">念のため、「podman images」でカスタムイメージを確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id90">
+<div class="code-block-caption"><span class="caption-number">リスト 6.36 </span><span class="caption-text">コマンド（ControlNodeで実施）</span><a class="headerlink" href="#id90" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[root@control-node ~]# </span>podman<span class="w"> </span>images
+
+<span class="go">--表示例--</span>
+<span class="go">REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE</span>
+<span class="go">localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB</span>
+<span class="go">&lt;none&gt;                                                              &lt;none&gt;      cc220af5af51  5 minutes ago       2 GB</span>
+<span class="go">&lt;none&gt;                                                              &lt;none&gt;      a1bf761c249f  9 minutes ago       464 MB</span>
+<span class="go">registry.redhat.io/ansible-automation-platform-24/ee-minimal-rhel9  latest      b3be55cf7793  3 weeks ago         311 MB</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id30">
+<h4>ControlNodeのawxユーザ用にカスタムイメージをコピー<a class="headerlink" href="#id30" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">作成したカスタムイメージを ControlNode のawxユーザで使用できるようにします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id91">
+<div class="code-block-caption"><span class="caption-number">リスト 6.37 </span><span class="caption-text">コマンド（ControlNodeで実施）</span><a class="headerlink" href="#id91" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go"> [root@control-node ~]# podman save -o /tmp/azure_ee.tar localhost/[[タグ名]]</span>
+<span class="go"> ...</span>
+<span class="go"> Writing manifest to image destination</span>
+<span class="go"> [root@control-node ~]# chown awx:awx /tmp/azure_ee.tar</span>
+<span class="go"> [root@control-node ~]# su awx -</span>
+<span class="go"> [awx@control-node ~]$ podman load -i /tmp/azure_ee.tar</span>
+<span class="go"> ...</span>
+<span class="go"> Writing manifest to image destination</span>
+<span class="go"> [awx@control-node ~]$ podman images</span>
+
+<span class="go"> --表示例--</span>
+<span class="go"> REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE</span>
+<span class="go"> localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB</span>
+<span class="go"> registry.redhat.io/ansible-automation-platform-24/ee-minimal-rhel9  latest      b3be55cf7793  3 weeks ago         311 MB</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id31">
+<h4>ExecutionNodeのawxユーザ用にカスタムイメージをコピー<a class="headerlink" href="#id31" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">作成したカスタムイメージを ExecutionNode のawxユーザで使用できるようにします。</div>
+<div class="line">予め、ControlNodeより「/tmp/azure_ee.tar」の資材を転送しておきます。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id92">
+<div class="code-block-caption"><span class="caption-number">リスト 6.38 </span><span class="caption-text">コマンド（ExecutionNodeで実施）</span><a class="headerlink" href="#id92" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go"> [awx@execution-node ~]$ podman load -i /tmp/azure_ee.tar</span>
+<span class="go"> ...</span>
+<span class="go"> Writing manifest to image destination</span>
+<span class="go"> [awx@execution-node ~]$ podman images</span>
+
+<span class="go"> --表示例--</span>
+<span class="go"> REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE</span>
+<span class="go"> localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB</span>
+<span class="go"> registry.redhat.io/ansible-automation-platform-24/ee-minimal-rhel9  latest      b3be55cf7793  3 weeks ago         311 MB</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id32">
+<h4>AAPに実行環境を登録<a class="headerlink" href="#id32" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">コピーしたカスタムイメージを使用する実行環境設定をAnsible Automation Platformに登録します。</div>
+</div>
+<figure class="align-default" id="id93">
+<a class="reference internal image-reference" href="../../_images/aap-env.png"><img alt="実行環境/新規実行環境の作成" src="../../_images/aap-env.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 6.4 </span><span class="caption-text">実行環境/新規実行環境の作成</span><a class="headerlink" href="#id93" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id33">
+<h4>ITAに実行環境を登録<a class="headerlink" href="#id33" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ITAに実行環境設定を登録します。</div>
+<div class="line">登録する環境名は、AAPで登録した名前（上記ではazure_ee）となります。</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible[Legacy/Pioneer/Legacy-Role] ▶ Movement一覧</span> （実行しようとするAnsible作業のMovement）に実行環境設定を登録します。</div>
+<div class="line">実行環境設定に関連しないパラメータについては記載省略としています。</div>
+</div>
+<table class="docutils align-left" id="id94">
+<caption><span class="caption-number">表 6.17 </span><span class="caption-text"><span class="menuselection">Ansible[Legacy/Pioneer/Legacy-Role] ▶ Movement一覧</span> に設定するパラメータ一覧</span><a class="headerlink" href="#id94" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 10.9%" />
+<col style="width: 10.9%" />
+<col style="width: 10.9%" />
+<col style="width: 34.8%" />
+<col style="width: 32.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="3"><p>MovementID</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>Movement名</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>遅延タイマー</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="8"><p>Ansible
+利用情報</p></td>
+<td colspan="2"><p>ホスト指定形式</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>WinRM接続</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ヘッダーセクション</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>オプションパラメータ</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible.cfg</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Ansible Execution Agent 利用情報</p></td>
+<td><p>実行環境</p></td>
+<td><p>（記載省略・使用しません）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>ansible-builder</p>
+<p>パラメータ</p>
+</td>
+<td><p>（記載省略・使用しません）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>Ansible Automation Controller 利用情報</p></td>
+<td><p>実行環境</p></td>
+<td><p>e.g.) azure_ee</p></td>
+<td><p><span class="menuselection">AAPに実行環境を登録</span> で登録した実行環境名</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id34">
+<h3><span class="section-number">6.5.3. </span>自作モジュールを使用する例<a class="headerlink" href="#id34" title="Link to this heading">¶</a></h3>
+<ul>
+<li><div class="line-block">
+<div class="line">このケースでは下記条件でカスタマイズを施します。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">ベースイメージは「registry.access.redhat.com/ubi9/ubi-init:latest」を使用する</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">自作モジュールは「 <code class="file docutils literal notranslate"><span class="pre">/tmp/ansible_module/my_module.py</span></code> 」を使用する</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<section id="id35">
+<h4>自作モジュールの配置<a class="headerlink" href="#id35" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">使用したい自作モジュールをAnsible Automation PlatformのControlNodeの「 <code class="file docutils literal notranslate"><span class="pre">/tmp/ansible_module/my_module.py</span></code> 」に配置します。</div>
+<div class="line">また、ansible-builderの実行ユーザがアクセスできるように読み取り権限を付与します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id95">
+<div class="code-block-caption"><span class="caption-number">リスト 6.39 </span><span class="caption-text">コマンド（ControlNodeで実施）</span><a class="headerlink" href="#id95" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[root@control-node ~]# </span>chmod<span class="w"> </span>a+r<span class="w"> </span>/tmp/ansible_module/my_module.py
+<span class="gp">[root@control-node ~]# </span>ls<span class="w"> </span>-al<span class="w"> </span>/tmp/ansible_module/my_module.py
+<span class="go">-rw-r--r--. 1 root root 1024 Jan 1 00:00 /tmp/ansible_module/my_module.py</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id36">
+<h4>ansible-builderのインストール<a class="headerlink" href="#id36" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ansible-builderのインストールを行います。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id96">
+<div class="code-block-caption"><span class="caption-number">リスト 6.40 </span><span class="caption-text">コマンド（ControlNodeで実施）</span><a class="headerlink" href="#id96" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[root@control-node ~]# </span>dnf<span class="w"> </span>install<span class="w"> </span>--enablerepo<span class="o">=</span>ansible-automation-platform-2.4-for-rhel-8-x86_64-rpms<span class="w"> </span>ansible-builder
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id37">
+<h4>必要ファイルの準備<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ansible-builderでイメージを作成するために必要なファイルを作成します。</div>
+<div class="line">今回は下記ファイルを作成します。</div>
+<div class="line">（下記の3ファイルは特定の同一ディレクトリに格納することを推奨します）</div>
+</div>
+<div class="line-block">
+<div class="line">なお自作モジュールを使用するにあたり、 <code class="file docutils literal notranslate"><span class="pre">execution-environment.yml</span></code> の21～23行目・27行目を追加していますが、</div>
+<div class="line"><span class="menuselection">コレクションを使用する例</span> で作成した <code class="file docutils literal notranslate"><span class="pre">execution-environment.yml</span></code> に対して同様に追加することで応用することも可能です。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">execution-environment.yml</div>
+</div>
+<ul class="simple">
+<li><p>ansible-builderの定義ファイル</p></li>
+</ul>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id97">
+<div class="code-block-caption"><span class="caption-number">リスト 6.41 </span><span class="caption-text">execution-environment.yml</span><a class="headerlink" href="#id97" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+
+<span class="nt">build_arg_defaults</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;--ignore-certs&#39;</span>
+
+<span class="nt">images</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">base_image</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">registry.access.redhat.com/ubi9/ubi-init:latest</span>
+
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ansible_core</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ansible_core</span>
+<span class="w">  </span><span class="nt">ansible_runner</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ansible_runner</span>
+<span class="w">  </span><span class="nt">system</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bindep.txt</span>
+<span class="w">  </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python-requirements.txt</span>
+<span class="w">  </span><span class="nt">python_interpreter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python39&quot;</span>
+<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/python3.9&quot;</span>
+
+<span class="hll"><span class="nt">additional_build_files</span><span class="p">:</span>
+</span><span class="hll"><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/ansible_module/my_module.py</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">configs</span>
+</span>
+<span class="nt">additional_build_steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">append_base</span><span class="p">:</span>
+<span class="hll"><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">COPY _build/configs/my_module.py /usr/share/ansible/plugins/modules/</span>
+</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RUN /usr/bin/python3.11 -m pip install --upgrade pip</span>
+
+<span class="nt">options</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">package_manager_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/bin/microdnf</span>
+<span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+</pre></div>
+</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">python-requirements.txt</div>
+</div>
+<ul class="simple">
+<li><p>Python の依存関係を解決するためにPython 要件を記載するファイル</p></li>
+</ul>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id98">
+<div class="code-block-caption"><span class="caption-number">リスト 6.42 </span><span class="caption-text">python-requirements.txt</span><a class="headerlink" href="#id98" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>pywinrm
+setuptools
+pexpect
+boto3
+paramiko
+boto
+certifi
+</pre></div>
+</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">bindep.txt</div>
+</div>
+<ul class="simple">
+<li><p>システムレベルの依存関係を解決するためにパッケージ要件を記載するファイル</p></li>
+</ul>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id99">
+<div class="code-block-caption"><span class="caption-number">リスト 6.43 </span><span class="caption-text">bindep.txt</span><a class="headerlink" href="#id99" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>openssh-clients
+sshpass
+expect
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id38">
+<h4>ansible-builderの実行<a class="headerlink" href="#id38" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">上記ファイルを基に、ansible-builderコマンドでイメージを作成します。</div>
+<div class="line">ここで指定したタグ名は後々使用するので控えておきます。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id100">
+<div class="code-block-caption"><span class="caption-number">リスト 6.44 </span><span class="caption-text">コマンド（ControlNodeで実施）</span><a class="headerlink" href="#id100" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[root@control-node ~]# </span>ansible-builder<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span><span class="o">[[</span>タグ名<span class="o">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">10分程度後に下記表示がされれば、正常にビルドが完了しています。</div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Complete! The build context can be found at: /[[pwd]]/context</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">念のため、「podman images」でカスタムイメージを確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id101">
+<div class="code-block-caption"><span class="caption-number">リスト 6.45 </span><span class="caption-text">コマンド（ControlNodeで実施）</span><a class="headerlink" href="#id101" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[root@control-node ~]# </span>podman<span class="w"> </span>images
+
+<span class="go">--表示例--</span>
+<span class="go">REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE</span>
+<span class="go">localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB</span>
+<span class="go">&lt;none&gt;                                                              &lt;none&gt;      cc220af5af51  5 minutes ago       2 GB</span>
+<span class="go">&lt;none&gt;                                                              &lt;none&gt;      a1bf761c249f  9 minutes ago       464 MB</span>
+<span class="go">registry.access.redhat.com/ubi9/ubi-init                            latest      b3be55cf7793  3 weeks ago         311 MB</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id39">
+<h4>ControlNodeのawxユーザ用にカスタムイメージをコピー<a class="headerlink" href="#id39" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">作成したカスタムイメージを ControlNode のawxユーザで使用できるようにします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id102">
+<div class="code-block-caption"><span class="caption-number">リスト 6.46 </span><span class="caption-text">コマンド（ControlNodeで実施）</span><a class="headerlink" href="#id102" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go"> [root@control-node ~]# podman save -o /tmp/my_module_ubi9.tar localhost/[[タグ名]]</span>
+<span class="go"> ...</span>
+<span class="go"> Writing manifest to image destination</span>
+<span class="go"> [root@control-node ~]# chown awx:awx /tmp/my_module_ubi9.tar</span>
+<span class="go"> [root@control-node ~]# su awx -</span>
+<span class="go"> [awx@control-node ~]$ podman load -i /tmp/my_module_ubi9.tar</span>
+<span class="go"> ...</span>
+<span class="go"> Writing manifest to image destination</span>
+<span class="go"> [awx@control-node ~]$ podman images</span>
+
+<span class="go"> --表示例--</span>
+<span class="go"> REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE</span>
+<span class="go"> localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB</span>
+<span class="go"> registry.access.redhat.com/ubi9/ubi-init                            latest      b3be55cf7793  3 weeks ago         311 MB</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id40">
+<h4>ExecutionNodeのawxユーザ用にカスタムイメージをコピー<a class="headerlink" href="#id40" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">作成したカスタムイメージを ExecutionNode のawxユーザで使用できるようにします。</div>
+<div class="line">予め、ControlNodeより「/tmp/my_module_ubi9.tar」の資材を転送しておきます。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id103">
+<div class="code-block-caption"><span class="caption-number">リスト 6.47 </span><span class="caption-text">コマンド（ExecutionNodeで実施）</span><a class="headerlink" href="#id103" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go"> [awx@execution-node ~]$ podman load -i /tmp/my_module_ubi9.tar</span>
+<span class="go"> ...</span>
+<span class="go"> Writing manifest to image destination</span>
+<span class="go"> [awx@execution-node ~]$ podman images</span>
+
+<span class="go"> --表示例--</span>
+<span class="go"> REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE</span>
+<span class="go"> localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB</span>
+<span class="go"> registry.access.redhat.com/ubi9/ubi-init                            latest      b3be55cf7793  3 weeks ago         311 MB</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id41">
+<h4>AAPに実行環境を登録<a class="headerlink" href="#id41" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">コピーしたカスタムイメージを使用する実行環境設定をAnsible Automation Platformに登録します。</div>
+</div>
+<figure class="align-default" id="id104">
+<a class="reference internal image-reference" href="../../_images/aap-env-2.png"><img alt="実行環境/新規実行環境の作成" src="../../_images/aap-env-2.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 6.5 </span><span class="caption-text">実行環境/新規実行環境の作成</span><a class="headerlink" href="#id104" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id42">
+<h4>ITAに実行環境を登録<a class="headerlink" href="#id42" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ITAに実行環境設定を登録します。</div>
+<div class="line">登録する環境名は、AAPで登録した名前（上記ではmy_module_ubi9_image）となります。</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible[Legacy/Pioneer/Legacy-Role] ▶ Movement一覧</span> （実行しようとするAnsible作業のMovement）に実行環境設定を登録します。</div>
+<div class="line">実行環境設定に関連しないパラメータについては記載省略としています。</div>
+</div>
+<table class="docutils align-left" id="id105">
+<caption><span class="caption-number">表 6.18 </span><span class="caption-text"><span class="menuselection">Ansible[Legacy/Pioneer/Legacy-Role] ▶ Movement一覧</span> に設定するパラメータ一覧</span><a class="headerlink" href="#id105" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 10.9%" />
+<col style="width: 10.9%" />
+<col style="width: 10.9%" />
+<col style="width: 34.8%" />
+<col style="width: 32.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="3"><p>MovementID</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>Movement名</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>遅延タイマー</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="8"><p>Ansible
+利用情報</p></td>
+<td colspan="2"><p>ホスト指定形式</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>WinRM接続</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ヘッダーセクション</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>オプションパラメータ</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible.cfg</p></td>
+<td><p>（記載省略）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Ansible Execution Agent 利用情報</p></td>
+<td><p>実行環境</p></td>
+<td><p>（記載省略・使用しません）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>ansible-builder</p>
+<p>パラメータ</p>
+</td>
+<td><p>（記載省略・使用しません）</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>Ansible Automation Controller 利用情報</p></td>
+<td><p>実行環境</p></td>
+<td><p>e.g.) my_module_ubi9_image</p></td>
+<td><p><span class="menuselection">AAPに実行環境を登録</span> で登録した実行環境名</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="collect.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">5. </span>収集機能</a></li>
+    <li class="next"><a href="../terraform_driver/index.html" title="次のトピックへ"><span>次のトピックへ</span>Terraform ドライバ</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

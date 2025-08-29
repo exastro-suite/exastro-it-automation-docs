@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Quick Start &#8212; Documentation  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Glossary" href="../../glossary/index.html" />
+    <link rel="prev" title="Learn" href="../index.html" /> 
+  </head>
+<body id="page" class="en">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="Go"><img src="../../_static/img/search.png" alt="Go"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../en/2.6/learn/quickstart/index.html">current</option>
+              <option value="../../../../en/2.6/learn/quickstart/index.html">2.6(current)</option>
+              <option value="../../../../en/2.5/learn/quickstart/index.html" selected>2.5</option>
+              <option value="../../../../en/2.4/learn/quickstart/index.html">2.4</option>
+              <option value="../../../../en/2.3/learn/quickstart/index.html">2.3</option>
+              <option value="../../../../en/2.2/learn/quickstart/index.html">2.2</option>
+              <option value="../../../../en/2.1/learn/quickstart/index.html">2.1</option>
+              <option value="../../../../en/2.0/learn/quickstart/index.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.5/learn/quickstart/index.html">日本語</option>
+              <option value="../../../../en/2.5/learn/quickstart/index.html" selected>English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="../index.html" title="Previous topic">Learn</a></li>
+        <li class="next"><a href="../../glossary/index.html" title="Next topic">Glossary</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">Configuration and Construction guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Learn</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Quick Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preparation">Preparation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-parameter-sheet">Create a Parameter Sheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configure-work-items">Configure Work Items</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#register-an-ansible-playbook">Register an Ansible Playbook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#link-movements-and-ansible-playbooks">Link Movements and Ansible Playbooks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#link-parameter-sheet-items-and-ansible-playbook-variables">Link Parameter Sheet Items and Ansible Playbook Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#register-devices">Register Devices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#repetitive-task-1st-time">Repetitive task (1st time)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#register-operation-overview-1st-time">Register Operation Overview (1st time)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-parameters-1st-time">Set Parameters (1st time)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#execute-task-1st-time">Execute Task (1st time)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#repetitive-task-2nd-time">Repetitive task (2nd time)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#register-operation-overview-2nd-time">Register Operation Overview (2nd time)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-parameters-2nd-time">Set Parameters (2nd time)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#execute-task-2nd-time">Execute Task (2nd time)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">Learn</a></li>
+    
+    <li>Quick Start</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="quick-start">
+<h1>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading">¶</a></h1>
+<div class="line-block">
+<div class="line">This scenario teaches you the basic operations of Exastro IT Automation by using a simple example: changing a hostname.</div>
+<div class="line">The goal of this scenario is to help you understand the greatest benefit of automation with Exastro IT Automation.</div>
+</div>
+<div class="line-block">
+<div class="line">For this scenario, you’ll need to perform the following preparatory steps:</div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="#quickstart-prepared"><span class="std std-ref">Preparation</span></a></p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#quickstart-server-information-parmeter"><span class="std std-ref">Create a Parameter Sheet</span></a></p></li>
+<li><p><a class="reference internal" href="#quickstart-create-movement"><span class="std std-ref">Configure Work Items</span></a></p></li>
+<li><p><a class="reference internal" href="#quickstart-regist-playbook"><span class="std std-ref">Register an Ansible Playbook</span></a></p></li>
+<li><p><a class="reference internal" href="#quickstart-asign-playbook-with-movement"><span class="std std-ref">Link Movements and Ansible Playbooks</span></a></p></li>
+<li><p><a class="reference internal" href="#quickstart-asign-playbook-variable-with-parameters"><span class="std std-ref">Link Parameter Sheet Items and Ansible Playbook Variables</span></a></p></li>
+<li><p><a class="reference internal" href="#quickstart-regist-host"><span class="std std-ref">Register Devices</span></a></p></li>
+</ol>
+</li>
+</ul>
+<div class="line-block">
+<div class="line">After completing the preparatory steps, you’ll perform the minimum necessary operations, such as registering an operation overview and configuring parameters, to repeatedly execute the task.</div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="#quickstart-1st"><span class="std std-ref">Repetitive Task (1st Time)</span></a></p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#quickstart-1st-regist-operation"><span class="std std-ref">Register Operation Overview (1st Time)</span></a></p></li>
+<li><p><a class="reference internal" href="#quickstart-1st-regist-parameter"><span class="std std-ref">Set Parameters (1st Time)</span></a></p></li>
+<li><p><a class="reference internal" href="#quickstart-1st-run"><span class="std std-ref">Execute Task (1st Time)</span></a></p></li>
+</ol>
+</li>
+<li><p><a class="reference internal" href="#quickstart-2nd"><span class="std std-ref">Repetitive Task (2nd Time)</span></a></p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#quickstart-2nd-regist-operation"><span class="std std-ref">Register Operation Overview (2nd Time)</span></a></p></li>
+<li><p><a class="reference internal" href="#quickstart-2nd-regist-parameter"><span class="std std-ref">Set Parameters (2nd Time)</span></a></p></li>
+<li><p><a class="reference internal" href="#quickstart-2nd-run"><span class="std std-ref">Execute Task (2nd Time)</span></a></p></li>
+</ol>
+</li>
+</ul>
+<div class="line-block">
+<div class="line">The goal of this scenario is for you to understand that once you complete the initial setup, you can perform the same task repeatedly with simple operations.</div>
+</div>
+</section>
+<section id="prerequisites">
+<h1>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">¶</a></h1>
+<div class="line-block">
+<div class="line">The following conditions are necessary to run this scenario:</div>
+</div>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>An available server (RHEL8).</p></li>
+<li><p>The user must be able to log in via SSH and have full sudoer privileges.</p></li>
+<li><p>A workspace for the task.</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="preparation">
+<span id="quickstart-prepared"></span><h1>Preparation<a class="headerlink" href="#preparation" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Design the format for system configuration information.</div>
+</div>
+<div class="line-block">
+<div class="line">You don’t need to manage all system information as parameters. You can add or review them as needed when management becomes necessary in the future.</div>
+</div>
+</div></blockquote>
+<section id="create-a-parameter-sheet">
+<span id="quickstart-server-information-parmeter"></span><h2>Create a Parameter Sheet<a class="headerlink" href="#create-a-parameter-sheet" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><span class="menuselection">Parameter Sheet Creation</span>, you manage parameter sheets for registering configuration values (parameters) used during operations.</div>
+</div>
+<div class="line-block">
+<div class="line">Create a parameter sheet to manage hostnames.</div>
+<div class="line"><span class="menuselection">Parameter Sheet Creation ▶ Parameter Sheet Definition/Creation</span>, Create a parameter sheet named “Server Basic Information” to manage hostnames.</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/パラメータシート作成定義.png"><img alt="Create a parameter sheet" src="../../_images/%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%82%B7%E3%83%BC%E3%83%88%E4%BD%9C%E6%88%90%E5%AE%9A%E7%BE%A9.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-number">Table 53 </span><span class="caption-text">Parameter Sheet Creation (Server Basic Information) - Item Settings</span><a class="headerlink" href="#id1" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting Item</p></th>
+<th class="head"><p>Setting Value (Item 1)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Field Name</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Hostname</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>Field Name(For Rest API)</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Hostname</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>Input Method</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">String(Single</kbd> <kbd class="kbd docutils literal notranslate">Line)</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>Maximum Bytes</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">64</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>Regexp</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Initial Value</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Required</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>Unique Constraint</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Description</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Remarks</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-number">Table 54 </span><span class="caption-text">Configuration values for the creation of the Server Basic Information Parameter Sheet</span><a class="headerlink" href="#id2" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting Item</p></th>
+<th class="head"><p>Setting Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Item Number</p></td>
+<td><p>(Automatic Input)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Parameter Sheet Name</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Server</kbd> <kbd class="kbd docutils literal notranslate">Basic</kbd> <kbd class="kbd docutils literal notranslate">Information</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>Parameter Sheet Name(REST)</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Server_Information</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>Object To Be Created</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Parameter</kbd> <kbd class="kbd docutils literal notranslate">Sheet(Hosted</kbd> <kbd class="kbd docutils literal notranslate">with</kbd> <kbd class="kbd docutils literal notranslate">Operations)</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>Display Order</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bundle Usage</p></td>
+<td><p>Uncheck “Use” (Disabled)</p></td>
+</tr>
+<tr class="row-even"><td><p>Last Updated Timestamp</p></td>
+<td><p>(Automatic Input)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Last Updated User</p></td>
+<td><p>(Automatic Input)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="configure-work-items">
+<span id="quickstart-create-movement"></span><h2>Configure Work Items<a class="headerlink" href="#configure-work-items" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">To register a work procedure, you define a Movement (Job), which is the work unit handled in Exastro IT Automation.</div>
+</div>
+<div class="line-block">
+<div class="line">In Exastro IT Automation, work is managed in units called Movements. A Movement corresponds to a work item in a work procedure manual.</div>
+<div class="line">A Movement is used to associate IaC (Infrastructure as Code) like an Ansible Playbook, or to link variables within the IaC to setting values in a parameter sheet.</div>
+</div>
+<div class="line-block">
+<div class="line">:menuselection: From <cite>Ansible-Legacy –&gt; Movement list</cite>, you register a Movement for hostname settings.</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/Movement登録.png"><img alt="Movement Registration" src="../../_images/Movement%E7%99%BB%E9%8C%B2.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-number">Table 55 </span><span class="caption-text">Movement Information Settings</span><a class="headerlink" href="#id3" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Movement Name</p></th>
+<th class="head"><p>Ansible Usage Information</p></th>
+<th class="head"></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p>Host Specification Format</p></th>
+<th class="head"><p>Header Section</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Hostname</kbd> <kbd class="kbd docutils literal notranslate">settings</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">IP</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">*See</kbd> <kbd class="kbd docutils literal notranslate">the</kbd> <kbd class="kbd docutils literal notranslate">Header</kbd> <kbd class="kbd docutils literal notranslate">section.</kbd></p></td>
+</tr>
+</tbody>
+</table>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-number">Listing 259 </span><span class="caption-text">Header Section</span><a class="headerlink" href="#id4" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>hosts:<span class="w"> </span>all
+<span class="w">  </span>remote_user:<span class="w"> </span><span class="s2">&quot;{{ __loginuser__ }}&quot;</span>
+<span class="w">  </span>gather_facts:<span class="w"> </span>no
+<span class="w">  </span>become:<span class="w"> </span>yes
+</pre></div>
+</div>
+</div>
+</section>
+<section id="register-an-ansible-playbook">
+<span id="quickstart-regist-playbook"></span><h2>Register an Ansible Playbook<a class="headerlink" href="#register-an-ansible-playbook" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">You will now register an Ansible Playbook. An Ansible Playbook corresponds to a command described in an operation manual.</div>
+<div class="line">In Ansible-Legacy mode, it is assumed that you will use a Playbook that you have created yourself.</div>
+<div class="line">A benefit of using Ansible-Legacy mode is the ability to freely create procedures by developing Playbooks that suit your specific needs.</div>
+<div class="line">However, to use Ansible-Legacy mode, you need knowledge of Playbook creation, as you must create the Playbooks yourself.</div>
+</div>
+<div class="line-block">
+<div class="line">In this scenario, you’ll use the following Playbook. Please copy the code below and create hostname.yml in YAML format.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-number">Listing 260 </span><span class="caption-text">hostname.yml</span><a class="headerlink" href="#id5" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>name:<span class="w"> </span>Set<span class="w"> </span>a<span class="w"> </span>hostname
+<span class="w">  </span>ansible.builtin.hostname:
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ hostname }}&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible-Legacy ▶ Playbook Library</span>, you’ll register the Playbook mentioned above.</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/Playbook素材集.png"><img alt="Playbook登録" src="../../_images/Playbook%E7%B4%A0%E6%9D%90%E9%9B%86.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-number">Table 56 </span><span class="caption-text">Ansible Playbook Information registration</span><a class="headerlink" href="#id6" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Playbook Material Name</p></th>
+<th class="head"><p>Playbook Material</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">hostname</kbd></p></td>
+<td><p><code class="file docutils literal notranslate"><span class="pre">hostname.yml</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="link-movements-and-ansible-playbooks">
+<span id="quickstart-asign-playbook-with-movement"></span><h2>Link Movements and Ansible Playbooks<a class="headerlink" href="#link-movements-and-ansible-playbooks" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">You will now associate an Ansible Playbook with the defined Movement. Additionally, you will link the variables within the Ansible Playbook to the parameter sheet items registered in <a class="reference internal" href="#quickstart-server-information-parmeter"><span class="std std-ref">Create a Parameter Sheet</span></a>.</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible-Legacy ▶ Movement-Role Association</span>, you will now associate a Movement with an Ansible Playbook.</div>
+<div class="line">In this scenario, we will use hostname.yml.</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/Movement-Playbook紐付.png"><img alt="Movement-Playbook linkage" src="../../_images/Movement-Playbook%E7%B4%90%E4%BB%98.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-number">Table 57 </span><span class="caption-text">Registering Movement-Playbook Association Information</span><a class="headerlink" href="#id7" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Movement Name</p></th>
+<th class="head"><p>Playbook Material</p></th>
+<th class="head"><p>Include order</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Hostname</kbd> <kbd class="kbd docutils literal notranslate">settings</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">hostname.yml</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">1</kbd></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="link-parameter-sheet-items-and-ansible-playbook-variables">
+<span id="quickstart-asign-playbook-variable-with-parameters"></span><h2>Link Parameter Sheet Items and Ansible Playbook Variables<a class="headerlink" href="#link-parameter-sheet-items-and-ansible-playbook-variables" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">In hostname.yml, you can set the hostname for the target server by assigning the hostname to the <kbd class="kbd docutils literal notranslate">hostname</kbd> variable.</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible-Legacy ▶ Auto-Assignment Registration Settings</span> You will now configure the settings to assign the parameter from the hostname field in the Server Basic Information Parameter Sheet to the <kbd class="kbd docutils literal notranslate">hostname</kbd> variable in the Ansible Playbook.</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/代入値自動登録.png"><img alt="Automatic Value Assignment Settings" src="../../_images/%E4%BB%A3%E5%85%A5%E5%80%A4%E8%87%AA%E5%8B%95%E7%99%BB%E9%8C%B2.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-number">Table 58 </span><span class="caption-text">Automatic value assignment settings</span><a class="headerlink" href="#id8" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 44.4%" />
+<col style="width: 11.1%" />
+<col style="width: 22.2%" />
+<col style="width: 22.2%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter Sheet(From)</p></th>
+<th class="head"><p>Registration Method</p></th>
+<th class="head"><p>Movement Name</p></th>
+<th class="head"><p>IaC Variable(To)</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>Menu Group:Menu:Item</p></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"><p>Movement Name:Variable Name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">For</kbd> <kbd class="kbd docutils literal notranslate">Automatic</kbd> <kbd class="kbd docutils literal notranslate">Value</kbd> <kbd class="kbd docutils literal notranslate">Registration:Server</kbd> <kbd class="kbd docutils literal notranslate">Basic</kbd> <kbd class="kbd docutils literal notranslate">Information:Hostname</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Value</kbd> <kbd class="kbd docutils literal notranslate">Type</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Hostname</kbd> <kbd class="kbd docutils literal notranslate">Settings</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Hostname</kbd> <kbd class="kbd docutils literal notranslate">Settings:hostname</kbd></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="register-devices">
+<span id="quickstart-regist-host"></span><h2>Register Devices<a class="headerlink" href="#register-devices" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Register the target servers in the device list.</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible Common ▶ Device list</span>,you register the connection information for the target servers.</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/機器一覧登録設定.gif"><img alt="Device list registration" src="../../_images/%E6%A9%9F%E5%99%A8%E4%B8%80%E8%A6%A7%E7%99%BB%E9%8C%B2%E8%A8%AD%E5%AE%9A.gif" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id9">
+<caption><span class="caption-number">Table 59 </span><span class="caption-text">Device list settings</span><a class="headerlink" href="#id9" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15.4%" />
+<col style="width: 15.4%" />
+<col style="width: 23.1%" />
+<col style="width: 15.4%" />
+<col style="width: 15.4%" />
+<col style="width: 15.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>HW Device Type</p></th>
+<th class="head"><p>Host Name</p></th>
+<th class="head"><p>IP Address</p></th>
+<th class="head"><p>Login Password</p></th>
+<th class="head"><p>SSH Key Authentication Information</p></th>
+<th class="head"><p>Ansible Usage Information</p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"><p>User</p></th>
+<th class="head"><p>SSH Private Key File</p></th>
+<th class="head"><p>Legacy/Role Usage Information</p></th>
+</tr>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"><p>Authentication Method</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">SV</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">server01</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">*Set</kbd> <kbd class="kbd docutils literal notranslate">a</kbd> <kbd class="kbd docutils literal notranslate">proper</kbd> <kbd class="kbd docutils literal notranslate">IP</kbd> <kbd class="kbd docutils literal notranslate">address</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Connection</kbd> <kbd class="kbd docutils literal notranslate">Username</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">(Private</kbd> <kbd class="kbd docutils literal notranslate">Key</kbd> <kbd class="kbd docutils literal notranslate">File)</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Key</kbd> <kbd class="kbd docutils literal notranslate">Authentication(No</kbd> <kbd class="kbd docutils literal notranslate">Passphrase)</kbd></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In this scenario, we’ll use key authentication, but you can also use password authentication.
+Please change the authentication method as needed, depending on how you log in to the target server.</p>
+</div>
+</section>
+</section>
+<section id="repetitive-task-1st-time">
+<span id="quickstart-1st"></span><h1>Repetitive task (1st time)<a class="headerlink" href="#repetitive-task-1st-time" title="Link to this heading">¶</a></h1>
+<p>Before we consider the specific parameter settings and work procedures, we’ll start by creating a work plan.
+First, let’s briefly organize the key information: what to do, how to do it, when to do it, and which devices to do it on.</p>
+<table class="docutils align-default" id="id10">
+<caption><span class="caption-number">Table 60 </span><span class="caption-text">Work Approach</span><a class="headerlink" href="#id10" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Execution Date And Time</p></td>
+<td><p>2024/04/01 12:00:00</p></td>
+</tr>
+<tr class="row-even"><td><p>Target</p></td>
+<td><p>Target Server(RHEL8)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Work Details</p></td>
+<td><p>Hostname Change</p></td>
+</tr>
+</tbody>
+</table>
+<section id="register-operation-overview-1st-time">
+<span id="quickstart-1st-regist-operation"></span><h2>Register Operation Overview (1st time)<a class="headerlink" href="#register-operation-overview-1st-time" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">When you register an operation, you define the work summary for carrying out the task. You must create one operation for each task, and you should not reuse operations.</div>
+<div class="line">Based on the work policy you’ve already decided on, let’s fill in the operation details.</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="menuselection">Basic Console ▶ Operation List</span>, register the task execution date and time, as well as the task name.</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/オペレーション登録.png"><img alt="Operation Registration" src="../../_images/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E7%99%BB%E9%8C%B2.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id11">
+<caption><span class="caption-number">Table 61 </span><span class="caption-text">Operation Registration Details</span><a class="headerlink" href="#id11" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 60.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operation Name</p></th>
+<th class="head"><p>Execution Schedule</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">RHEL8</kbd> <kbd class="kbd docutils literal notranslate">Hostname</kbd> <kbd class="kbd docutils literal notranslate">Change</kbd> <kbd class="kbd docutils literal notranslate">Task</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">In this scenario, the task execution date and time can be set arbitrarily. However, if the actual work date has been determined, it is recommended to set the exact scheduled execution date and time.</div>
+<div class="line">For tasks that are performed repeatedly, such as periodic operations, if the exact work date is not determined, it is acceptable to register the current date and time.</div>
+</div>
+</div>
+</section>
+<section id="set-parameters-1st-time">
+<span id="quickstart-1st-regist-parameter"></span><h2>Set Parameters (1st time)<a class="headerlink" href="#set-parameters-1st-time" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">The parameter sheet is used to register the parameters to be configured for each device.</div>
+<div class="line">For the operation, select the task created in the task overview registration, such as <kbd class="kbd docutils literal notranslate">RHEL8</kbd> <kbd class="kbd docutils literal notranslate">Hostname</kbd> <kbd class="kbd docutils literal notranslate">Change</kbd> <kbd class="kbd docutils literal notranslate">Task</kbd>. By selecting an operation, you can associate the target server and parameters with that operation.</div>
+<div class="line">In this scenario, the hostname <kbd class="kbd docutils literal notranslate">server01</kbd> is set as the target server for the task.</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="menuselection">Input ▶ Basic Server Information</span>, parameters are registered for the host.</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/パラメータ登録.png"><img alt="Parameter Registration" src="../../_images/%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E7%99%BB%E9%8C%B2.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id12">
+<caption><span class="caption-number">Table 62 </span><span class="caption-text">Basic Server Parameter Settings</span><a class="headerlink" href="#id12" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Host Name</p></th>
+<th class="head"><p>Operation</p></th>
+<th class="head"><p>Parameters</p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p>Operation Name</p></th>
+<th class="head"><p>Host Name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">server01</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8</kbd> <kbd class="kbd docutils literal notranslate">Hostname</kbd> <kbd class="kbd docutils literal notranslate">Change</kbd> <kbd class="kbd docutils literal notranslate">Task</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">server01</kbd></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="execute-task-1st-time">
+<span id="quickstart-1st-run"></span><h2>Execute Task (1st time)<a class="headerlink" href="#execute-task-1st-time" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p>Pre-execution Check</p>
+<div class="line-block">
+<div class="line">First, let’s check the current status of the server.</div>
+<div class="line">Log in to the target server via SSH and check the current hostname.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-number">Listing 261 </span><span class="caption-text">Command</span><a class="headerlink" href="#id13" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Getting the Hostname</span>
+hostnamectl<span class="w"> </span>status<span class="w"> </span>--static
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-number">Listing 262 </span><span class="caption-text">Execution Result</span><a class="headerlink" href="#id14" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># The results will differ between environments.</span>
+localhost
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Task Execution</p>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible-Legacy ▶ Task Execution</span>, select the <kbd class="kbd docutils literal notranslate">Setting</kbd> <kbd class="kbd docutils literal notranslate">the</kbd> <kbd class="kbd docutils literal notranslate">Hostname</kbd> Movement, then click <span class="guilabel"> Task Execution</span>.</div>
+<div class="line">Next, in <span class="menuselection">Task Execution Settings</span>, select <kbd class="kbd docutils literal notranslate">RHEL8</kbd> <kbd class="kbd docutils literal notranslate">Hostname</kbd> <kbd class="kbd docutils literal notranslate">Change</kbd> <kbd class="kbd docutils literal notranslate">Task</kbd> for the operation, and click <span class="guilabel">Confirm Selection</span>.</div>
+<div class="line">Finally, review the execution details and click <span class="guilabel">Confirm Selection</span>.</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="menuselection">Check Task Status</span> After the screen opens and the execution is complete, verify that the status has changed to ‘Completed’.</div>
+</div>
+</li>
+</ol>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/作業実行.gif"><img alt="Task Execution" src="../../_images/%E4%BD%9C%E6%A5%AD%E5%AE%9F%E8%A1%8C.gif" style="width: 1200px;" />
+</a>
+</figure>
+<ol class="arabic">
+<li><p>Post-check</p>
+<div class="line-block">
+<div class="line">Log in to the target server via SSH again and verify that the hostname has been changed.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-number">Listing 263 </span><span class="caption-text">Command</span><a class="headerlink" href="#id15" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Getting the Hostname</span>
+hostnamectl<span class="w"> </span>status<span class="w"> </span>--static
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-number">Listing 264 </span><span class="caption-text">Execution Result</span><a class="headerlink" href="#id16" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>server01
+</pre></div>
+</div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<section id="repetitive-task-2nd-time">
+<span id="quickstart-2nd"></span><h1>Repetitive task (2nd time)<a class="headerlink" href="#repetitive-task-2nd-time" title="Link to this heading">¶</a></h1>
+<p>Before considering specific parameter settings or task procedures, start by creating a work plan.
+First, let’s briefly organize the information: when, on which device, what will be done, and how it will be carried out.</p>
+<table class="docutils align-default" id="id17">
+<caption><span class="caption-number">Table 63 </span><span class="caption-text">Task Policy</span><a class="headerlink" href="#id17" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Execution Schedule</p></td>
+<td><p>2024/05/01 12:00:00</p></td>
+</tr>
+<tr class="row-even"><td><p>Target of the Task</p></td>
+<td><p>Target Server(RHEL8)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Task Details</p></td>
+<td><p>Hostname Update</p></td>
+</tr>
+</tbody>
+</table>
+<section id="register-operation-overview-2nd-time">
+<span id="quickstart-2nd-regist-operation"></span><h2>Register Operation Overview (2nd time)<a class="headerlink" href="#register-operation-overview-2nd-time" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">During operation registration, the task overview for performing the work is defined. Create one operation per task. Operations should not be reused.</div>
+<div class="line">Enter the operation details based on the previously established work policy.</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="menuselection">Basic Console ▶ Operation List</span>, register the task execution date and time, as well as the task name.</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/更新用オペレーション登録.png"><img alt="Operation Registration" src="../../_images/%E6%9B%B4%E6%96%B0%E7%94%A8%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E7%99%BB%E9%8C%B2.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id18">
+<caption><span class="caption-number">Table 64 </span><span class="caption-text">Operation Registration Details</span><a class="headerlink" href="#id18" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 60.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operation Name</p></th>
+<th class="head"><p>Scheduled Date and Time</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">RHEL8</kbd> <kbd class="kbd docutils literal notranslate">Hostname</kbd> <kbd class="kbd docutils literal notranslate">Update</kbd> <kbd class="kbd docutils literal notranslate">Operation</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/05/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">For this scenario, any appropriate date and time can be used for the task execution date and time. However, if the work date is fixed, it is recommended to set the accurate scheduled execution date and time.</div>
+<div class="line">For recurring tasks such as regular maintenance where the exact work date is not determined, it is acceptable to register the current date and time.</div>
+</div>
+</div>
+</section>
+<section id="set-parameters-2nd-time">
+<span id="quickstart-2nd-regist-parameter"></span><h2>Set Parameters (2nd time)<a class="headerlink" href="#set-parameters-2nd-time" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">In this scenario, the hostname <kbd class="kbd docutils literal notranslate">server01</kbd> was set as the parameter value.</div>
+<div class="line">However, the hostname is also managed in the <span class="menuselection">Device List</span>, resulting in duplicate management of the hostname.</div>
+</div>
+<div class="line-block">
+<div class="line">In Exastro IT Automation, device information can be acquired via ansible_common_ita_original_variable, and the hostname of the target host can be obtained using the variable <kbd class="kbd docutils literal notranslate">__inventory_hostname__</kbd>. This enables centralized management of parameters.</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="menuselection">Input ▶ Basic Console</span>, let’s register the hostname listed in the device list using the ITA-specific variables.</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/更新用パラメータ設定.png"><img alt="Parameter Settings" src="../../_images/%E6%9B%B4%E6%96%B0%E7%94%A8%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E8%A8%AD%E5%AE%9A.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id19">
+<caption><span class="caption-number">Table 65 </span><span class="caption-text">Configuration Values for Basic Server Parameters</span><a class="headerlink" href="#id19" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 50.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Host Name</p></th>
+<th class="head"><p>Operation</p></th>
+<th class="head"><p>Parameter</p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p>Operation Name</p></th>
+<th class="head"><p>Host Name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">server01</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/05/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_RHEL8</kbd> <kbd class="kbd docutils literal notranslate">Hostname</kbd> <kbd class="kbd docutils literal notranslate">Update</kbd> <kbd class="kbd docutils literal notranslate">Operation</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">&quot;{{</kbd> <kbd class="kbd docutils literal notranslate">__inventory_hostname__</kbd> <kbd class="kbd docutils literal notranslate">}}&quot;</kbd></p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">Using the __inventory_hostname__ variable enables referencing the host information stored in the device list.</div>
+<div class="line">Next, update the hostname of the target server to db01.</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="menuselection">Ansible Common ▶ Device list</span>, update the hostname of the target server to db01</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/機器一覧ホスト名変更.gif"><img alt="Parameter Registration" src="../../_images/%E6%A9%9F%E5%99%A8%E4%B8%80%E8%A6%A7%E3%83%9B%E3%82%B9%E3%83%88%E5%90%8D%E5%A4%89%E6%9B%B4.gif" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-default" id="id20">
+<caption><span class="caption-number">Table 66 </span><span class="caption-text">Configuration Values in the Device List</span><a class="headerlink" href="#id20" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15.4%" />
+<col style="width: 15.4%" />
+<col style="width: 23.1%" />
+<col style="width: 15.4%" />
+<col style="width: 15.4%" />
+<col style="width: 15.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>HWDevice Type</p></th>
+<th class="head"><p>Host Name</p></th>
+<th class="head"><p>IP Address</p></th>
+<th class="head"><p>Login Password</p></th>
+<th class="head"><p>ssh Authentication Key Info</p></th>
+<th class="head"><p>Ansible Configuration Information</p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"><p>User</p></th>
+<th class="head"><p>ssh Authentication Key Info</p></th>
+<th class="head"><p>Linkegacy/Role Usage Information</p></th>
+</tr>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"><p>Authentication Method</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">SV</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">db01</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">*Set</kbd> <kbd class="kbd docutils literal notranslate">the</kbd> <kbd class="kbd docutils literal notranslate">appropriate</kbd> <kbd class="kbd docutils literal notranslate">IP</kbd> <kbd class="kbd docutils literal notranslate">address</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Connection</kbd> <kbd class="kbd docutils literal notranslate">Username</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">(Private</kbd> <kbd class="kbd docutils literal notranslate">Key</kbd> <kbd class="kbd docutils literal notranslate">File)</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Key</kbd> <kbd class="kbd docutils literal notranslate">Authentication(No</kbd> <kbd class="kbd docutils literal notranslate">Passphrase)</kbd></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="execute-task-2nd-time">
+<span id="quickstart-2nd-run"></span><h2>Execute Task (2nd time)<a class="headerlink" href="#execute-task-2nd-time" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p>Execute Task</p>
+<div class="line-block">
+<div class="line">In <span class="menuselection">Ansible-Legacy ▶ Execution</span>, select the <kbd class="kbd docutils literal notranslate">Host</kbd> <kbd class="kbd docutils literal notranslate">Name</kbd> <kbd class="kbd docutils literal notranslate">Setting</kbd> Movement, and click <span class="guilabel"> Working execution</span> to run the task.</div>
+<div class="line">Next, in <span class="menuselection">Working execution setting</span>, select the <kbd class="kbd docutils literal notranslate">RHEL8</kbd> <kbd class="kbd docutils literal notranslate">Hostname</kbd> <kbd class="kbd docutils literal notranslate">Update</kbd> <kbd class="kbd docutils literal notranslate">Task</kbd> operation, then click <span class="guilabel">Decision to select</span>.</div>
+<div class="line">Finally, review the execution detail, then click <span class="guilabel">Working execution</span>.</div>
+</div>
+<div class="line-block">
+<div class="line">Open the <span class="menuselection">Check operation status</span>, after the execution is complete, confirm that the status has changed to “Completed.”</div>
+</div>
+</li>
+</ol>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/更新作業実行.gif"><img alt="Execute Task" src="../../_images/%E6%9B%B4%E6%96%B0%E4%BD%9C%E6%A5%AD%E5%AE%9F%E8%A1%8C.gif" style="width: 1200px;" />
+</a>
+</figure>
+<ol class="arabic">
+<li><p>Post-Execution Check</p>
+<div class="line-block">
+<div class="line">Log in to the server again via SSH and verify that the hostname has been changed.</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-number">Listing 265 </span><span class="caption-text">Command</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Getting the Hostname</span>
+hostnamectl<span class="w"> </span>status<span class="w"> </span>--static
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id22">
+<div class="code-block-caption"><span class="caption-number">Listing 266 </span><span class="caption-text">Execution Result</span><a class="headerlink" href="#id22" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>db01
+</pre></div>
+</div>
+</div>
+</li>
+</ol>
+<div class="line-block">
+<div class="line">The following steps, <span class="menuselection">Ansible Common ▶ Device list</span>, by simply changing the hostname and executing the task, you can update the hostname.</div>
+</div>
+</section>
+</section>
+<section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h1>
+<div class="line-block">
+<div class="line">Through the scenario of setting the hostname on a RHEL8 server, you have learned the basic operation of Exastro IT Automation.</div>
+<div class="line">Additionally, you have learned about the greatest benefit of automation with Exastro IT Automation: improving efficiency by automating repetitive tasks.</div>
+</div>
+</section>
+
+
+</div>
+
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/en/2.5/terms/en.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

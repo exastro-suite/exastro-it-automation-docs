@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=57fb2187" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,9 +72,10 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
-              <option value="../../../../ja/2.5/learn/hostgroup/hostgroup.html">current</option>
-              <option value="../../../../ja/2.5/learn/hostgroup/hostgroup.html">2.5(current)</option>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/learn/hostgroup/hostgroup.html">current</option>
+              <option value="../../../../ja/2.6/learn/hostgroup/hostgroup.html">2.6(current)</option>
+              <option value="../../../../ja/2.5/learn/hostgroup/hostgroup.html">2.5</option>
               <option value="../../../../ja/2.4/learn/hostgroup/hostgroup.html" selected>2.4</option>
               <option value="../../../../ja/2.3/learn/hostgroup/hostgroup.html">2.3</option>
               <option value="../../../../ja/2.2/learn/hostgroup/hostgroup.html">2.2</option>
@@ -91,7 +92,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               <option value="../../../../ja/2.4/learn/hostgroup/hostgroup.html" selected>日本語</option>
               <option value="../../../../en/2.4/learn/hostgroup/hostgroup.html">English</option>
             </select>
@@ -247,9 +248,6 @@
 <div class="line">本シナリオでは、簡単な例としてOSの設定を題材に Exastro IT Automation の基本操作を学習します。</div>
 <div class="line">詳しくは <a class="reference internal" href="../../manuals/host_group/host_group.html"><span class="doc">ホストグループ機能</span></a> を参照してください。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-0">ホストグループ<a class="headerlink" href="#term-0" title="Link to this term">¶</a></dt><dt id="term-1">ホストグループとは、ホスト群を論理的な単位（機能・役割）でまとめたグループのことを指します。<a class="headerlink" href="#term-1" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <section id="id2">
 <h2>パラメータ設計<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <div class="line-block">
@@ -269,9 +267,6 @@
 <div class="line">まずは、タイムゾーンの設定をするために必要な、<kbd class="kbd docutils literal notranslate">Timezone</kbd> (タイムゾーン名) とタイムゾーンに設定する <kbd class="kbd docutils literal notranslate">UTC</kbd> と <kbd class="kbd docutils literal notranslate">JST</kbd> のデータシートを作成します。</div>
 <div class="line">具体的には、データシートを作成し、その中にタイムゾーンとして登録するパラメータを投入します。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-2">データシート<a class="headerlink" href="#term-2" title="Link to this term">¶</a></dt><dt id="term-Exastro-IT-Automation">Exastro IT Automation が使用する固定値のパラメータを管理するデータ構造のことです。<a class="headerlink" href="#term-Exastro-IT-Automation" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <div class="line-block">
 <div class="line">データシートを作成します。</div>
 </div>
@@ -954,28 +949,28 @@
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">SV</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">dbA</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">接続ユーザ名</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">(秘密鍵ファイル)</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">鍵認証(パスフレーズなし)</kbd></p></td>
 </tr>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">SV</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">dbB</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">接続ユーザ名</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">(秘密鍵ファイル)</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">鍵認証(パスフレーズなし)</kbd></p></td>
 </tr>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">SV</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">webA</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">接続ユーザ名</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">(秘密鍵ファイル)</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">鍵認証(パスフレーズなし)</kbd></p></td>
 </tr>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">SV</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">webB</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">192.168.0.1</kbd> <kbd class="kbd docutils literal notranslate">※適切なIPアドレスを設定</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">接続ユーザ名</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">(秘密鍵ファイル)</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">鍵認証(パスフレーズなし)</kbd></p></td>
@@ -1024,9 +1019,6 @@
 <div class="line">オペレーション登録では、作業を実施する際の作業概要を定義します。オペレーションは各作業ごとに1つ作成します。オペレーションは使いまわさないようにしましょう。</div>
 <div class="line">先に決めた作業の方針を元にオペレーション情報を記入しましょう。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-3">オペレーション<a class="headerlink" href="#term-3" title="Link to this term">¶</a></dt><dt id="term-4">実施する作業のことで、オペレーションに対して作業対象とパラメータが紐づきます。<a class="headerlink" href="#term-4" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <div class="line-block">
 <div class="line"><span class="menuselection">基本コンソール ▶ オペレーション一覧</span> から、作業実施日時や作業名を登録します。</div>
 </div>
@@ -1047,7 +1039,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">基本設定_全台用</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></p></td>
 </tr>
 </tbody>
 </table>
@@ -1201,17 +1193,17 @@
 </thead>
 <tbody>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">[HG]All_SV</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">Asia/Tokyo</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">10.15.1.30</kbd></p></td>
 </tr>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">[HG]db_SV</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">Asia/Tokyo</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">10.15.1.30</kbd></p></td>
 </tr>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">[HG]web_SV</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">Asia/Tokyo</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">10.15.1.62</kbd></p></td>
 </tr>
@@ -1243,15 +1235,15 @@
 </thead>
 <tbody>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">dbA</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">dbA</kbd></p></td>
 </tr>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">dbB</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">dbB</kbd></p></td>
 </tr>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">webA</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">webA</kbd></p></td>
 </tr>
 </tbody>
@@ -1295,19 +1287,19 @@
 </thead>
 <tbody>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">dbA</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">Asia/Tokyo</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">10.15.1.30</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">ホストグループ分解機能</kbd></p></td>
 </tr>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">dbB</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">Asia/Tokyo</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">10.15.1.30</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">ホストグループ分解機能</kbd></p></td>
 </tr>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">webA</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/01</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_全台用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">Asia/Tokyo</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">10.15.1.62</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">ホストグループ分解機能</kbd></p></td>
@@ -1446,9 +1438,6 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 <div class="line">オペレーション登録では、作業を実施する際の作業概要を定義します。オペレーションは各作業ごとに1つ作成します。オペレーションは使いまわさないようにしましょう。</div>
 <div class="line">先に決めた作業の方針を元にオペレーション情報を記入しましょう。</div>
 </div>
-<dl class="simple glossary">
-<dt id="term-5">オペレーション<a class="headerlink" href="#term-5" title="Link to this term">¶</a></dt><dt id="term-6">実施する作業のことで、オペレーションに対して作業対象とパラメータが紐づきます。<a class="headerlink" href="#term-6" title="Link to this term">¶</a></dt><dd></dd>
-</dl>
 <div class="line-block">
 <div class="line"><span class="menuselection">基本コンソール ▶ オペレーション一覧</span> から、作業実施日時や作業名を登録します。</div>
 </div>
@@ -1469,7 +1458,7 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 </thead>
 <tbody>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">基本設定_追加用</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00</kbd></p></td>
 </tr>
 </tbody>
 </table>
@@ -1563,7 +1552,7 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 </thead>
 <tbody>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">[HG]web_SV</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_追加用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_追加用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">Asia/Tokyo</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">10.15.1.62</kbd></p></td>
 </tr>
@@ -1595,7 +1584,7 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 </thead>
 <tbody>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">webB</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_追加用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_追加用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">webB</kbd></p></td>
 </tr>
 </tbody>
@@ -1639,7 +1628,7 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 </thead>
 <tbody>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">webB</kbd></p></td>
-<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_追加用</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">2024/04/02</kbd> <kbd class="kbd docutils literal notranslate">12:00:00_基本設定_追加用</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">Asia/Tokyo</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">10.15.1.62</kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">ホストグループ分解機能</kbd></p></td>
@@ -1772,8 +1761,8 @@ nameserver<span class="w"> </span><span class="m">10</span>.15.1.62
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2023 NEC Corporation</small>
-    <small><a href="/terms/ja.html">サイト規約</a></small>
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.4/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

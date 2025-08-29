@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>1. CI/CD For IaC機能 &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="OASE" href="../oase/index.html" />
+    <link rel="prev" title="CI/CD for IaC" href="index.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/cicd_for_iac/cicd_for_iac.html" selected>current</option>
+              <option value="../../../../ja/2.6/manuals/cicd_for_iac/cicd_for_iac.html" selected>2.6(current)</option>
+              <option value="../../../../ja/2.5/manuals/cicd_for_iac/cicd_for_iac.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/cicd_for_iac/cicd_for_iac.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/cicd_for_iac/cicd_for_iac.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/cicd_for_iac/cicd_for_iac.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/cicd_for_iac/cicd_for_iac.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/cicd_for_iac/cicd_for_iac.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/cicd_for_iac/cicd_for_iac.html" selected>日本語</option>
+              <option value="../../../../en/2.6/manuals/cicd_for_iac/cicd_for_iac.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="index.html" title="前のトピックへ">CI/CD for IaC</a></li>
+        <li class="next"><a href="../oase/index.html" title="次のトピックへ">OASE</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../it_automation_base/index.html">基本操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../host_group/index.html">ホストグループ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible-driver/index.html">Ansible ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform_driver/index.html">Terraform ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import/index.html">エクスポート・インポート</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">CI/CD for IaC</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. CI/CD For IaC機能</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">1.1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1.2. 用語の定義</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">1.3. CI/CD For IaC機能の概要</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id4">1.3.1. 機能概要</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id5">1.3.2. 機能概要図</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">1.4. CI/CD For IaC機能 メニュー構成</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id7">1.4.1. メニュー/画面一覧</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">1.5. CI/CD For IaC機能 利用手順</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id9">1.5.1. 作業フロー</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">1.6. CI/CD For IaC機能メニュー操作説明</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id11">1.6.1. CI/CD For IaC メニュー</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id14">1.6.2. CI/CD For IaC 非表示メニュー</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">1.7. 付録</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#git">1.7.1. 資材をGitリポジトリに登録する場合の注意事項</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#cicd-for-iac-role-package-notes">1.7.2. ロールパッケージ管理に紐付する資材をGitリポジトリに登録する場合の注意事項</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintenance/index.html">メンテナンス</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">1. CI/CD For IaC機能</a><ul>
+<li><a class="reference internal" href="#id1">1.1. はじめに</a></li>
+<li><a class="reference internal" href="#id2">1.2. 用語の定義</a></li>
+<li><a class="reference internal" href="#id3">1.3. CI/CD For IaC機能の概要</a><ul>
+<li><a class="reference internal" href="#id4">1.3.1. 機能概要</a></li>
+<li><a class="reference internal" href="#id5">1.3.2. 機能概要図</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">1.4. CI/CD For IaC機能 メニュー構成</a><ul>
+<li><a class="reference internal" href="#id7">1.4.1. メニュー/画面一覧</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">1.5. CI/CD For IaC機能 利用手順</a><ul>
+<li><a class="reference internal" href="#id9">1.5.1. 作業フロー</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10">1.6. CI/CD For IaC機能メニュー操作説明</a><ul>
+<li><a class="reference internal" href="#id11">1.6.1. CI/CD For IaC メニュー</a><ul>
+<li><a class="reference internal" href="#cicd-for-iac-remote-repository">リモートリポジトリ</a></li>
+<li><a class="reference internal" href="#cicd-for-iac-file-link">資材紐付</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14">1.6.2. CI/CD For IaC 非表示メニュー</a><ul>
+<li><a class="reference internal" href="#id15">リモートリポジトリ資材</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id16">1.7. 付録</a><ul>
+<li><a class="reference internal" href="#git">1.7.1. 資材をGitリポジトリに登録する場合の注意事項</a></li>
+<li><a class="reference internal" href="#cicd-for-iac-role-package-notes">1.7.2. ロールパッケージ管理に紐付する資材をGitリポジトリに登録する場合の注意事項</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">CI/CD for IaC</a></li>
+    
+    <li><span class="section-number">1. </span>CI/CD For IaC機能</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="ci-cd-for-iac">
+<h1><span class="section-number">1. </span>CI/CD For IaC機能<a class="headerlink" href="#ci-cd-for-iac" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2><span class="section-number">1.1. </span>はじめに<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書では、CI/CD For IaC機能の機能および操作方法について説明します。</div>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">1.2. </span>用語の定義<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書では以下として記載します。</div>
+</div>
+<table class="docutils align-default" id="id18">
+<caption><span class="caption-number">表 1.160 </span><span class="caption-text">用語説明</span><a class="headerlink" href="#id18" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>用語名</p></th>
+<th class="head"><p>内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ITA</p></td>
+<td><p>「Exastro IT Automation」の略語です。</p></td>
+</tr>
+<tr class="row-odd"><td><p>紐付元資材</p></td>
+<td><p>CI/CD For IaC機能で連携するGitリポジトリ内の資材を表します。</p></td>
+</tr>
+<tr class="row-even"><td><p>紐付先資材</p></td>
+<td><p>ITAの連携ドライバ「Ansible-Driver」と「Terraform-Cloud/EP-Driver」と「Terraform-CLI-Driver」の下記メニューからアップロードする資材を表します。</p>
+<ul class="simple">
+<li><p>Ansible-Legacy/Playbook素材集</p></li>
+<li><p>Ansible-Pioneer/対話ファイル素材集</p></li>
+<li><p>Ansible-LegacyRole/ロールパッケージ管理</p></li>
+<li><p>Ansible共通/ファイル管理</p></li>
+<li><p>Ansible共通/テンプレート管理</p></li>
+<li><p>Terraform-Cloud-EP/Module素材集</p></li>
+<li><p>Terraform-Cloud-EP/Policy管理</p></li>
+<li><p>Terraform-CLI/Module素材集</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id3">
+<h2><span class="section-number">1.3. </span>CI/CD For IaC機能の概要<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<section id="id4">
+<h3><span class="section-number">1.3.1. </span>機能概要<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">CI/CD For IaC機能は、大きく分けて2つの機能があります。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">Git連携機能</div>
+</div>
+<div class="line-block">
+<div class="line">ITA内にGitリポジトリのクローンを作成します。</div>
+<div class="line">クローンを介して定期的に紐付元資材の更新を検知しITAの「リモートリポジトリ資材」メニューに一覧を作成します。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">資材紐付機能</div>
+</div>
+<div class="line-block">
+<div class="line">紐付元資材と紐付先資材の紐付を登録し、紐付先資材の動作検証を行う為のオペレーションとMovementを登録します。</div>
+<div class="line">紐付元資材が更新されると、紐付先資材が自動更新され、動作検証を行う為のオペレーションとMovementで作業実行を行います。</div>
+</div>
+</li>
+</ol>
+</section>
+<section id="id5">
+<h3><span class="section-number">1.3.2. </span>機能概要図<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">CI/CD For IaC機能の概要図を以下に示します。</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/CICD_overviews.png"><img alt="../../_images/CICD_overviews.png" src="../../_images/CICD_overviews.png" style="width: 800px;" />
+</a>
+</section>
+</section>
+<section id="id6">
+<h2><span class="section-number">1.4. </span>CI/CD For IaC機能 メニュー構成<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本章では、CI/CD For IaC機能のメニュー構成について説明します。</div>
+</div>
+<section id="id7">
+<h3><span class="section-number">1.4.1. </span>メニュー/画面一覧<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">CI/CD For IaC機能のメニュー一覧を以下に記述します。</div>
+</div>
+<table class="docutils align-default" id="id19">
+<caption><span class="caption-number">表 1.161 </span><span class="caption-text">表 2.1-1 CI/CD For IaC機能 メニュー一覧</span><a class="headerlink" href="#id19" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>No</strong></p></th>
+<th class="head"><p><strong>メニューグループ</strong></p></th>
+<th class="head"><p><strong>メニュー・画面</strong></p></th>
+<th class="head"><p><strong>概要</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td rowspan="3"><p>CI/CD For IaC</p></td>
+<td><p>リモートリポジトリ</p></td>
+<td><p>Gitリポジトリの情報を管理</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>リモートリポジトリ資材</p></td>
+<td><p>Gitリポジトリの資材情報を管理</p>
+<p>※インストール時は非表示のメニューです。</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>資材紐付</p></td>
+<td><p>紐付元資材と紐付先資材との紐付情報を管理</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id8">
+<h2><span class="section-number">1.5. </span>CI/CD For IaC機能 利用手順<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">CI/CD For IaC機能の利用手順について説明します。</div>
+</div>
+<section id="id9">
+<h3><span class="section-number">1.5.1. </span>作業フロー<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">CI/CD For IaC機能の標準的な作業フローは以下のとおりです。</div>
+<div class="line">各作業の詳細は次項に記載しています。</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/CICD_flow.png"><img alt="../../_images/CICD_flow.png" src="../../_images/CICD_flow.png" style="width: 5.68819in; height: 3.35972in;" />
+</a>
+<p><strong>作業フロー詳細と参照先</strong></p>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">リモートリポジトリの登録</div>
+<div class="line">連携するGitリポジトリの情報を登録します。</div>
+<div class="line">詳細は「<a class="reference internal" href="#cicd-for-iac-remote-repository"><span class="std std-ref">リモートリポジトリ</span></a>」メニューを参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">資材紐付の登録</div>
+<div class="line">紐付元資材と紐付先資材の紐付を登録します。</div>
+<div class="line">詳細は「<a class="reference internal" href="#cicd-for-iac-file-link"><span class="std std-ref">資材紐付</span></a>」メニューを参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">資材紐付にオペレーション+Movementの情報を登録</div>
+<div class="line">更新された紐付先資材の動作検証を行う場合に、オペレーションとMovementを登録します。</div>
+<div class="line">詳細は「<a class="reference internal" href="#cicd-for-iac-file-link"><span class="std std-ref">資材紐付</span></a>」メニューを参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">自動での資材更新と動作検証の確認</div>
+<div class="line">紐付元資材が更新される度に、紐付先資材が自動更新されることを確認します。</div>
+<div class="line">また、オペレーションとMovementを登録している場合に、作業実行が自動で行われることを確認します。</div>
+<div class="line">詳細は「<a class="reference internal" href="#cicd-for-iac-file-link"><span class="std std-ref">資材紐付</span></a>」メニューを参照してください。</div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<section id="id10">
+<h2><span class="section-number">1.6. </span>CI/CD For IaC機能メニュー操作説明<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本章では、CI/CD For IaC機能のメニュー操作について説明します。</div>
+</div>
+<section id="id11">
+<h3><span class="section-number">1.6.1. </span>CI/CD For IaC メニュー<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">本節では、CI/CD For IaC機能をインストールした状態で表示されるメニューの操作について記載します。</div>
+</div>
+<section id="cicd-for-iac-remote-repository">
+<span id="id12"></span><h4>リモートリポジトリ<a class="headerlink" href="#cicd-for-iac-remote-repository" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">「リモートリポジトリ」メニューでは、連携するGItリポジトリの情報を登録します。</div>
+</div>
+</li>
+</ol>
+<figure class="align-default" id="id20">
+<a class="reference internal image-reference" href="../../_images/remote_repository_menu.png"><img alt="サブメニュー画面（リモートリポジトリ）" src="../../_images/remote_repository_menu.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.120 </span><span class="caption-text">サブメニュー画面（リモートリポジトリ）</span><a class="headerlink" href="#id20" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<ol class="arabic" start="2">
+<li><div class="line-block">
+<div class="line">リモートリポジトリ画面の入力項目は以下の通りです。</div>
+</div>
+<table class="docutils align-default" id="id21">
+<caption><span class="caption-number">表 1.162 </span><span class="caption-text">リモートリポジトリ画面 入力項目一覧</span><a class="headerlink" href="#id21" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p><strong>項目</strong></p></th>
+<th class="head"><p><strong>説明</strong></p></th>
+<th class="head"><p><strong>入力必須</strong></p></th>
+<th class="head"><p><strong>入力形式</strong></p></th>
+<th class="head"><p><strong>制約事項</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>リモートリポジトリ名</p></td>
+<td><p>CI/CD For IaC 機能の各メニューでリモートリポジトリを示す名称を示す名称を入力してください。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長255バイト</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>リモートリポジトリ
+(URL)</p></td>
+<td><p>git clone コマンドに指定する Gitリポジトリの URL を入力してください。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長255バイト</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ブランチ</p></td>
+<td><p>git cloneコマンドに指定する Gitリポジトリのブランチ名を入力して下さい。</p>
+<p>未入力時は default ブランチが指定されます。</p>
+</td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長255バイト</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>プロトコル</p></td>
+<td><p>Gitリポジトリと接続するプロトコルを選択して下さい。</p>
+<p>● https</p>
+<p>リモートのGitリポジトリとhttpsで接続する場合に選択してください。</p>
+<p>● sshパスワード認証</p>
+<p>リモートのGitリポジトリとsshのパスワード認証で接続する場合に選択して下さい。</p>
+<p>● ssh鍵認証(パスフレーズなし)※現在使用できません。</p>
+<p>リモートのGitリポジトリとsshの鍵認証で接続する場合に選択して下さい。</p>
+<p>● ssh鍵認証(パスフレーズあり)※現在使用できません。</p>
+<p>リモートのGitリポジトリとsshのパスフレーズ付鍵認証で接続する場合に選択して下さい。</p>
+</td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>Visibilityタイプ</p></td>
+<td><p>GitリポジトリのVisibilityタイプ(Public/Private)を選択して下さい。
+プロトコルでhttpsを選択した場合、
+Visibilityタイプの選択は必須入力です。</p></td>
+<td><p>ー</p></td>
+<td><p>リスト選択</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>Gitアカウント</p></td>
+<td><p>ユーザ</p></td>
+<td><p>Git cloneコマンド実行時に求められるユーザを入力して下さい。
+VisibilityタイプでPrivateを選択した場合、ユーザの入力は必須です。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長255バイト</p></td>
+</tr>
+<tr class="row-even"><td><p>パスワード</p></td>
+<td><p>Gitのcloneコマンドを実行した際に求められるパスワードを入力してください。</p>
+<p>Visibility タイプでPrivateを選択した場合、パスワードの入力は必須です。</p>
+<p>尚、GitHubでは2021年8月13 日でパスワード認証が廃止されます。</p>
+<p><a class="reference external" href="https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/">参考URL</a></p>
+<p>パスワード認証が廃止されている GitHub を利用している場合、Git アカウント情報のパスワードには、自身で個人アクセストークンを作成し入力して下さい。</p>
+<p><a class="reference external" href="https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">個人アクセストークン作成法</a></p>
+</td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長255バイト</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="3"><p>ssh接続情報</p></td>
+<td><p>パスワード</p></td>
+<td><p>Git cloneコマンド実行時に求められる Linux ユーザのパスワードを入力して下さい。</p>
+<p>プロトコルでsshパスワード認証を選択した場合、パスワードの入力は必須です。</p>
+</td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長255バイト</p></td>
+</tr>
+<tr class="row-even"><td><p>パスフレーズ</p></td>
+<td><p>Git cloneコマンド実行時に求められる鍵ファイルに設定されているパスフレーズを入力して下さい。</p>
+<p>プロトコルでssh鍵認証を選択した場合、パスフレーズの入力は必須です。</p>
+</td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長255バイト</p></td>
+</tr>
+<tr class="row-odd"><td><p>接続パラメータ</p></td>
+<td><p>Gitのcloneコマンドを実行時に環境変数「GIT_SSH_COMMANDに設定するパラメータを入力します。</p>
+<p>GIT SSH COMMANDは、Git2.3以降のバージョンで設定できる環境変数です。
+ITAサーバにインストールされていているGitバージョンがGit2.3より古い場合は、設定されたパラメータは無効になります。</p>
+<p>環境変数「GIT_SSH_COMMAND」はデフォルトで下記のパラメータを設定しています。
+設定されたパラメータはこの後ろに追加されます。</p>
+<p>UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no</p>
+<p>また、git config-globalにcore.sshCommandの設定が無い場合、下記のパラメータを設定します。</p>
+<p>ssh –o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no</p>
+<p>git config –globalにcore.sshCommand を設定している場合、下記のパラメータを含めて下さい。</p>
+<p>-o UserKnownHostsFile=/dev/null-o StrictHostKeyChecking=no</p>
+</td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長4000バイト</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Proxy</p></td>
+<td><p>Address</p></td>
+<td><p>プロキシサーバのアドレスを入力します。</p>
+<p>ITA がプロキシ環境下にある場合、Gitサーバまでの疎通のために設定が必要な場合があります。</p>
+<p>プロキシサーバの URL が <cite>http://procy.gate.co.jp:8080</cite> の場合</p>
+<p>Address には <cite>http://procy.gate.co.jp</cite> を入力します。</p>
+<p>Port には 8080 を入力します。</p>
+</td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長255バイト</p></td>
+</tr>
+<tr class="row-odd"><td><p>port</p></td>
+<td><p>プロキシサーバのポートを入力します。</p>
+<p>ITAがプロキシ環境下にある場合、
+Git サーバまでの疎通のために設定が必要な場合があります。</p>
+</td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>リモートリポジトリ同期情報</p></td>
+<td><p>自動同期</p></td>
+<td><p>Gitリポジトリとの同期を自動で行うかを選択して下さい。</p>
+<p>True：入力された周期で Gitリポジトリとの同期を行います。</p>
+<p>False:Gitリポジトリとの同期は自動で行いません。</p>
+</td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>初期値：有効</p></td>
+</tr>
+<tr class="row-odd"><td><p>周期(秒)</p></td>
+<td><p>Git リポジトリとの同期を自動で行う周期を入力して下さい。</p>
+<p>未入力時のデフォルトは60秒です。</p>
+</td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>単位：秒</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>通信リトライ情報</p></td>
+<td><p>回数</p></td>
+<td><p>Gitとの通信に失敗した場合、通信をリトライする回数を入力して下さい。
+未入力時のデフォルトは 3 回です。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>周期(ms)</p></td>
+<td><p>Gitとの通信に失敗した場合、通信をリトライする間隔を入力して下さい。
+未入力時のデフォルトは1000msです。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>単位：ms</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>備考</p></td>
+<td><p>自由記述欄です。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長4000ﾊﾞｲﾄ</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">リモートリポジトリとの同期状態を表示する項目は以下の通りです。</div>
+</div>
+<table class="docutils align-left" id="id22">
+<caption><span class="caption-number">表 1.163 </span><span class="caption-text">リモートリポジトリ画面 同期状態表示項目一覧</span><a class="headerlink" href="#id22" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>状態</p></td>
+<td><div class="line-block">
+<div class="line">Gitリポジトリとの同期状態を下記4つの状態で表示します。</div>
+<div class="line">空白： レコードの新規登録・更新・廃止からの復活を行った状態</div>
+<div class="line">正常： Git リポジトリとの同期が正常に行われている状態</div>
+<div class="line">異常： Git リポジトリとの同期で異常が発生した状態</div>
+<div class="line">再開： 再開ボタンをクリックした状態</div>
+<div class="line">状態が異常になると、Git リポジトリとの同期が停止します。</div>
+<div class="line">再開するには、再開ボタンをクリックするか、該当レコードを更新して下さい。</div>
+<div class="line">「<a class="reference internal" href="#cicd-for-iac-repository-register-notes"><span class="std std-ref">資材をGitリポジトリに登録する場合の注意事項</span></a>」を参照して下さい。</div>
+</div>
+</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>詳細情報</p></td>
+<td><div class="line-block">
+<div class="line">状態が異常になった場合、異常となった原因が表示されます。</div>
+<div class="line">再開ボタンをクリックするか、該当レコードを更新すると詳細情報はクリアされます。</div>
+</div>
+</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>最終日時</p></td>
+<td><div class="line-block">
+<div class="line">最後に Git リポジトリと同期を行った日時が表示されます。</div>
+<div class="line">再開ボタンをクリックするか、該当レコードを更新すると最終日時はクリアされます。</div>
+</div>
+</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>再開ボタン</p></td>
+<td><div class="line-block">
+<div class="line">状態が異常の場合にボタンが活性化します。</div>
+<div class="line">再開ボタンをクリックすると状態が再開になります。</div>
+</div>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</section>
+<section id="cicd-for-iac-file-link">
+<span id="id13"></span><h4>資材紐付<a class="headerlink" href="#cicd-for-iac-file-link" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">「資材紐付」メニューでは、紐付元資材と紐付先資材を紐付し、紐付先資材の動作検証を行う為のオペレーションとMovementを登録します。</div>
+<div class="line">紐付元資材が更新されると、内部機能で紐付先資材を自動更新し、動作検証を行う為のオペレーションとMovementで作業実行を行い、処理結果が表示されます。</div>
+</div>
+</li>
+</ol>
+<figure class="align-default" id="id23">
+<a class="reference internal image-reference" href="../../_images/file_link_menu.png"><img alt="サブメニュー画面（資材紐付）" src="../../_images/file_link_menu.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.121 </span><span class="caption-text">サブメニュー画面（資材紐付）</span><a class="headerlink" href="#id23" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<ol class="arabic" start="2">
+<li><div class="line-block">
+<div class="line">資材紐付画面の入力項目は以下の通りです。</div>
+</div>
+<table class="docutils align-left" id="id24">
+<caption><span class="caption-number">表 1.164 </span><span class="caption-text">資材紐付画面 入力項目一覧</span><a class="headerlink" href="#id24" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 9.4%" />
+<col style="width: 9.4%" />
+<col style="width: 9.4%" />
+<col style="width: 29.4%" />
+<col style="width: 14.1%" />
+<col style="width: 14.1%" />
+<col style="width: 14.1%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p><strong>項目</strong></p></th>
+<th class="head"><p><strong>説明</strong></p></th>
+<th class="head"><p><strong>入力必須</strong></p></th>
+<th class="head"><p><strong>入力形式</strong></p></th>
+<th class="head"><p><strong>制約事項</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="3"><p>紐付先資材名</p></td>
+<td><p>紐付先資材に登録されている資材名を入力してください。
+この名前は、紐付先資材タイプにより、下記メニューの項目に紐付けます。
+各メニューの項目と同等の入力規則があります。各項目の入力規則に従い、資材名を入力してください。</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>メニュー名</p></th>
+<th class="head"><p>項目名</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ansible-Legacy/Playbook 素材集</p></td>
+<td><p>Paybook 素材名</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ansible-Pioneer/対話ファイル素材集</p></td>
+<td><p>対象項目なし</p></td>
+</tr>
+<tr class="row-even"><td><p>Ansible-LegacyRole/ロールパッケージ管理</p></td>
+<td><p>ロールパッケージ名</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ansible 共通/ファイル管理</p></td>
+<td><p>ファイル埋込変数名</p></td>
+</tr>
+<tr class="row-even"><td><p>Ansible 共通/テンプレート管理</p></td>
+<td><p>ﾃﾝﾌﾟﾚｰﾄ埋込変数名</p></td>
+</tr>
+<tr class="row-odd"><td><p>Terraform-Cloud-EP/Module素材集</p></td>
+<td><p>Module 素材名</p></td>
+</tr>
+<tr class="row-even"><td><p>Terraform-Cloud-EP/Policy 管理</p></td>
+<td><p>Policy 名</p></td>
+</tr>
+<tr class="row-odd"><td><p>Terraform-CLI/Module素材集</p></td>
+<td><p>Module 素材名</p></td>
+</tr>
+</tbody>
+</table>
+<p>紐付先資材名に入力した資材名の登録有無等の条件により紐付処理が異なります。
+詳細は「4.紐付先資材の更新処理の流れ」を参照してください。</p>
+<p>また、紐付先資材名を変更する場合「5.紐付先資材名を変更する場合の注意事項」を参照して下さい。</p>
+</td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長255バイト</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>Gitリポジトリ(From)</p></td>
+<td colspan="2" rowspan="2"><p>資材パス</p></td>
+<td rowspan="2"><p>「<a class="reference internal" href="#cicd-for-iac-remote-repository"><span class="std std-ref">リモートリポジトリ</span></a>」メニューに登録されているリモートリポジトリの資材パスが一覧で表示されます。</p>
+<p>紐付先資材タイプが「Ansible-LegacyRole/ロールパッケージ管理」メニューの場合、「<a class="reference internal" href="#cicd-for-iac-role-package-notes"><span class="std std-ref">ロールパッケージ管理に紐付する資材をGitリポジトリに登録する場合の注意事項</span></a>」を参照してください。</p>
+</td>
+<td rowspan="2"><p>〇</p></td>
+<td rowspan="2"><p>リスト選択</p></td>
+<td rowspan="2"></td>
+</tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"><td rowspan="4"><p>Exastro ITautmation (To)</p></td>
+<td colspan="2"><p>紐付先資材タイプ</p></td>
+<td><p>紐付先資材タイプ（メニュー）を選択して下さい。
+紐付先資材は下記のメニューから選択できます。
+各メニューを選択するには、各メニューに対応したドライバがインストールされている必要があります。</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>メニュー名</p></th>
+<th class="head"><p>インストールが必</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ansible-Legacy/Playbook素材集</p></td>
+<td rowspan="5"><p>Ansible-Driver</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ansible-Pioneer/対話ファイル素材集</p></td>
+</tr>
+<tr class="row-even"><td><p>Ansible-LegacyRole/ロールパッケージ管理</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ansible 共通/ファイル管理</p></td>
+</tr>
+<tr class="row-even"><td><p>Ansible 共通/テンプレート管理</p></td>
+</tr>
+<tr class="row-odd"><td><p>Terraform/Module 素材集</p></td>
+<td rowspan="2"><p>Terraform-Cloud/EP-Driver</p></td>
+</tr>
+<tr class="row-even"><td><p>Terraform/Policy 管理</p></td>
+</tr>
+<tr class="row-odd"><td><p>Terraform-CLI/Module素材集</p></td>
+<td><p>Terraform-CLI-Driver</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>テンプレート管理</p></td>
+<td><p>変数定義</p></td>
+<td><p>紐付先資材タイプで「Ansible 共通/テンプレート管理」メニューを選択した場合、資材に必要な変数定義を入力して下さい。
+「Ansible 共通/テンプレート管理」メニュー以外を選択している場合は入力不要です。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長4000バイト</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>Ansible-Pioneer</p></td>
+<td><p>対話種別</p></td>
+<td><p>「Ansible-Pioneer/対話種別」メニューに登録されている対話種別が一覧に表示されます。
+紐付先資材タイプで「Ansible-Pioneer/対話ファイル素材集」メニューを選択した場合、紐付先資材の対話種別を一覧より選択して下さい。
+紐付先資材タイプで「Ansible-Pioneer/対話ファイル素材集」メニュー以外を選択している場合は選択不要です。</p></td>
+<td><p>ー</p></td>
+<td><p>リスト選択</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>OS種別</p></td>
+<td><p>「Ansible-Pioneer/OS 種別」メニューに登録されているOS種別が一覧に表示されます。
+紐付先資材タイプで「Ansible-Pioneer/対話ファイル素材集」メニューを選択した場合、紐付先資材のOS種別を一覧より選択して下さい。
+紐付先資材タイプで「Ansible-Pioneer/対話ファイル素材集」メニュー以外を選択している場合は選択不要です。</p></td>
+<td><p>ー</p></td>
+<td><p>リスト選択</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>素材同期情報</p></td>
+<td colspan="2"><p>自動同期</p></td>
+<td><p>Git リポジトリの資材が更新された場合に紐付先資材の更新を自動で行うかを選択して下さい。</p>
+<p>True：Git リポジトリの資材が更新された場合、紐付先資材の更新を自動で行います。</p>
+<p>False：Git リポジトリの資材が更新されても紐付先資材の更新を行いません。</p>
+</td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>初期値：有効</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>デリバリ情報</p></td>
+<td colspan="2"><p>オペレーション</p></td>
+<td><p>「基本コンソール/投入オペレーション一覧」メニューに登録されているオペレーションの一覧が表示されます。</p>
+<p>紐付先資材を更新した場合に、Movemnet を実行するオペレーションを選択します。</p>
+</td>
+<td><p>ー</p></td>
+<td><p>リスト選択</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>Movement</p></td>
+<td><p>「基本コンソール/Movement一覧」メニューに登録されているMovement の一覧が表示されます。</p>
+<p>紐付先資材を更新した場合に、実行するMovementを選択します。</p>
+</td>
+<td><p>ー</p></td>
+<td><p>リスト選択</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ドライラン</p></td>
+<td><p>Movement を実行するモードを選択します。</p>
+<p>True:を選択した場合、ドライランモード（Ansibleドライバの場合はドライラン、Terraformドライバの場合はPlan確認）でMovementを実行します。</p>
+<p>Falseもしくは未選択時はドライランモードでは実行しません。</p>
+</td>
+<td><p>ー</p></td>
+<td><p>リスト選択</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>備考</p></td>
+<td><p>自由記述欄です。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長4000バイト</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">Gitリポジトリの資材と紐付先資材との同期の状態を表示する項目は以下の通りです。</div>
+</div>
+<table class="docutils align-left" id="id25">
+<caption><span class="caption-number">表 1.165 </span><span class="caption-text">資材紐付画面 状態表示項目一覧</span><a class="headerlink" href="#id25" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 20.0%" />
+<col style="width: 60.0%" />
+<col style="width: 10.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p><strong>項目</strong></p></th>
+<th class="head"><p><strong>説明</strong></p></th>
+<th class="head"><p><strong>備考</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td rowspan="4"><p>資材同期情報</p></td>
+<td><p>状態</p></td>
+<td><p>紐付元資材と紐付先資材の同期状態を下記4つの状態で表示します。</p>
+<p>空白： レコードの新規登録・更新・廃止からの復活を行った状態。</p>
+<p>正常： 紐付元資材と紐付先資材の同期が正常に行われている状態</p>
+<p>異常： 以下の2通りの状態が考えられます。</p>
+<p>・紐付元資材と紐付先資材の同期で異常が発生した状態</p>
+<p>・紐付先資材の更新により、設定されているオペレーションとMovementで作業実行をしたが作業実行が出来なかった状態※1</p>
+<p>再開： 再開ボタンをクリックした状態</p>
+<p>状態が異常になると、紐付元資材と紐付先資材の同期が停止します。再開するには、再開ボタンをクリックするか、該当レコードを更新して下さい。</p>
+</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>詳細情報</p></td>
+<td><p>紐付元資材と紐付先資材の同期状態が異常になった場合、異常となった原因が表示されます。</p>
+<p>再開ボタンをクリックするか、該当レコードを更新すると詳細情報はクリアされます。</p>
+</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>最終日時</p></td>
+<td><p>最後に紐付元資材と紐付先資材の同期を行った日時が表示されます。</p>
+<p>再開ボタンをクリックするか、該当レコードを更新すると最終日時はクリアされます。</p>
+</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>再開ボタン</p></td>
+<td><p>状態が異常の場合にボタンが活性します。</p>
+<p>再開ボタンをクリックすると状態が再開になります。</p>
+</td>
+<td></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>デリバリ情報</p></td>
+<td><p>詳細情報</p></td>
+<td><p>紐付先資材の更新により、設定されているオペレーションと Movement で作業実行をしたが作業実行が出来なかった場合、実行出来なかったエラー原因が表示されます。※1</p>
+<p>尚、作業実行が実行できた場合、実行結果が異常かどうかの判定※2 はしていません。
+作業状態確認ボタンをクリックし「各ドライバ/作業状態確認」メニューより実行結果を確認して下さい。</p>
+<p>再開ボタンをクリックするか、該当レコードを更新すると詳細情報はクリアされます。</p>
+</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>作業インスンスNo</p></td>
+<td><p>オペレーションと Movement で作業実行が実行できた場合、作業実行の作業インスタンス No が表示されます。</p>
+<p>再開ボタンをクリックするか、該当レコードを更新すると作業インスタンス No はクリアされます。</p>
+</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>作業状態確認ボタン</p></td>
+<td><p>オペレーションと Movement で作業実行が実行できた場合、作業状態確認ボタンが活性します。</p>
+<p>作業状態確認ボタンをクリックすると、「各ドライバ/作業状態確認」メニューが表示され、作業実行の状態を確認する事が出来ます。</p>
+<p>「作業状態確認」の詳細については各ドライバの「利用手順マニュアル」を参照してください。</p>
+<p>再開ボタンをクリックするか、該当レコードを更新すると作業状態確認ボタンは非活性になります。</p>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<div class="line-block">
+<div class="line">※1 オペレーションやMovementが廃止されている場合など。</div>
+<div class="line">※2 紐付先資材に誤りがあった場合や、作業実行に必要な情報が不足している場合など。</div>
+</div>
+<ol class="arabic" id="cicd-for-iac-link-file-upload-flow">
+<li><div class="line-block">
+<div class="line">紐付先資材の更新処理の流れ</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/CICD_flow2.png"><img alt="../../_images/CICD_flow2.png" src="../../_images/CICD_flow2.png" style="width: 600px;" />
+</a>
+</li>
+</ol>
+<div class="line-block">
+<div class="line">※1 紐付先資材タイプが「Ansible-Pioneer/対話ファイル素材集」の場合、紐付先資材名は対話種別とOS種別の組み合わせになります。</div>
+<div class="line">※2 作業実行に必要な情報が不足している場合、作業実行が失敗する場合があります。</div>
+<div class="line">※3 項目の差分は備考も含まれます。また、備考については常に空白で更新されます。</div>
+<div class="line">※4 「<a class="reference internal" href="#cicd-for-iac-file-link"><span class="std std-ref">資材紐付</span></a>」メニューの「資材同期情報/状態」項目に「異常」を、「資材同期情報/詳細情報」項目にエラー原因を設定します。</div>
+<div class="line">※5 「<a class="reference internal" href="#cicd-for-iac-file-link"><span class="std std-ref">資材紐付</span></a>」メニューの「資材同期情報/状態」項目に「異常」を、「デリバリ情報/詳細情報」項目にエラー原因を設定します。</div>
+<div class="line">※6 「<a class="reference internal" href="#cicd-for-iac-file-link"><span class="std std-ref">資材紐付</span></a>」メニューの「資材同期情報/状態」項目に「正常」を設定します。</div>
+</div>
+<ol class="arabic" id="cicd-for-iac-file-link-change-name">
+<li><div class="line-block">
+<div class="line">紐付先資材名を変更する場合の注意事項</div>
+<div class="line">紐付先資材名を変更した場合、紐付先資材の変更前のレコードはそのまま残り、変更後の紐付先資材名で新しいレコードが作成されます。</div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<section id="id14">
+<h3><span class="section-number">1.6.2. </span>CI/CD For IaC 非表示メニュー<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">本節では、CI/CD For IaC機能をインストールした状態では表示されないメニューの操作について記載します。</div>
+<div class="line">各メニューにアクセスするには、「管理コンソール/ロール・メニュー紐付管理」で各メニューを復活処理を行うことによって表示されるようになります。</div>
+</div>
+<section id="id15">
+<h4>リモートリポジトリ資材<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">「リモートリポジトリ資材」メニューには、紐付元資材の一覧が表示されます。</div>
+</div>
+<div class="line-block">
+<div class="line">「リモートリポジトリ資材」メニューに表示される情報は内部機能で更新しています。</div>
+<div class="line">レコード追加・更新・削除は行わないで下さい。</div>
+</div>
+</li>
+</ol>
+<figure class="align-default" id="id26">
+<a class="reference internal image-reference" href="../../_images/remote_repository_file_menu.png"><img alt="サブメニュー画面（リモートリポジトリ資材）" src="../../_images/remote_repository_file_menu.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.122 </span><span class="caption-text">サブメニュー画面（リモートリポジトリ資材）</span><a class="headerlink" href="#id26" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">リモートリポジトリ資材画面の表示項目は以下の通りです。</div>
+</div>
+<table class="docutils align-default" id="id27">
+<caption><span class="caption-number">表 1.166 </span><span class="caption-text">リモートリポジトリ資材画面 項目一覧</span><a class="headerlink" href="#id27" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>項目</strong></p></th>
+<th class="head"><p><strong>説明</strong></p></th>
+<th class="head"><p><strong>入力必須</strong></p></th>
+<th class="head"><p><strong>入力形式</strong></p></th>
+<th class="head"><p><strong>制約事項</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>リモートリポジトリ名</p></td>
+<td><p>「<a class="reference internal" href="#cicd-for-iac-remote-repository"><span class="std std-ref">リモートリポジトリ</span></a>」メニューで登録したリモートリポジトリ名が表示されます。</p></td>
+<td><p>○</p></td>
+<td><p>リスト選択</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>資材パス</p></td>
+<td><p>紐付元資材の資材パスが表示されます。</p>
+<p>「<a class="reference internal" href="#cicd-for-iac-remote-repository"><span class="std std-ref">リモートリポジトリ</span></a>」メニューの「同期状態」が「異常」が設定されているリモートリポジトリの資材パスは表示されません。</p>
+</td>
+<td><p>○</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長4096ﾊﾞｲﾄ</p></td>
+</tr>
+<tr class="row-even"><td><p>資材タイプ</p></td>
+<td><p>対象がAnsible-LegacyRoleの資材の場合は「Rolesディレクトリ」が、それ以外では「ファイル」が入ります。</p></td>
+<td><p>○</p></td>
+<td><p>リスト選択</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</section>
+</section>
+</section>
+<section id="id16">
+<h2><span class="section-number">1.7. </span>付録<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h2>
+<section id="git">
+<span id="cicd-for-iac-repository-register-notes"></span><h3><span class="section-number">1.7.1. </span>資材をGitリポジトリに登録する場合の注意事項<a class="headerlink" href="#git" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">資材をGitリポジトリに登録する場合の注意事項を以下に記述します。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">256バイト以上の資材名が含まれるGitリポジトリを「<a class="reference internal" href="#cicd-for-iac-remote-repository"><span class="std std-ref">リモートリポジトリ</span></a>」メニューに登録すると、Git clone commandが異常終了します。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ファイルパスも含めて4096バイト以上の資材名が含まれるGitリポジトリを「<a class="reference internal" href="#cicd-for-iac-remote-repository"><span class="std std-ref">リモートリポジトリ</span></a>」メニューに登録すると、Git clone commandが異常終了します。</div>
+</div>
+</li>
+</ol>
+</section>
+<section id="cicd-for-iac-role-package-notes">
+<span id="id17"></span><h3><span class="section-number">1.7.2. </span>ロールパッケージ管理に紐付する資材をGitリポジトリに登録する場合の注意事項<a class="headerlink" href="#cicd-for-iac-role-package-notes" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">「Ansible-LegacyRole/ロールパッケージ管理」メニューに紐付する資材をGitリポジトリに登録する場合の注意事項を以下に記述します。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">rolesという名前のディレクトリを含むディレクトリを作成し、この配下にロールパッケージに必要なファイル・ディレクトリを配置して下さい。</div>
+<div class="line">ロールパッケージとしてzipで固められる資材は、rolesディレクトリの上位ディレクトリ配下になります。ただし、Gitリポジトリのルートディレクトリ直下にrolesという名前のディレクトリを作成しても、「Ansible-LegacyRole/ロールパッケージ管理」メニューに紐付するrolesディレクトリとして認識しません。</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">以下のようなファイル・ディレクトリ構成の場合、「sample/roles」はrolesディレクトリとして認識しますが、「roles」はrolesディレクトリとして認識しません。</div>
+</div>
+<div class="line-block">
+<div class="line">Gitリポジトリのルートディレクトリ</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id28">
+<div class="code-block-caption"><span class="caption-number">リスト 1.25 </span><span class="caption-text">Gitリポジトリのルートディレクトリ</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>|-  roles          ・・・・・・・roles ディレクトリとして認識しません。
+|   |  ita_readme_test_role.yml
+|   |- test_role
+|      |-  defaults
+|      |     main.yml
+|      |-  tasks
+|            main.yml
+|
+|- sample
+    | ita_readme_test_role.yml
+    |- roles       ・・・・・・・roles ディレクトリとして認識します。
+        |- test_role
+           |- defaults
+           |     main.yml
+           |- tasks
+                 main.yml
+</pre></div>
+</div>
+</div>
+</li>
+</ol>
+<div class="line-block">
+<div class="line">「<a class="reference internal" href="#cicd-for-iac-file-link"><span class="std std-ref">資材紐付</span></a>」メニューの資材パスに「sample/roles」が表示されます。「Ansible-LegacyRole/ロールパッケージ管理」メニューに紐付ける資材パスには、「sample/roles」を選択して下さい。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/sample_roles.png"><img alt="sample_role" src="../../_images/sample_roles.png" style="width: 800px;" />
+</a>
+</figure>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span>CI/CD for IaC</a></li>
+    <li class="next"><a href="../oase/index.html" title="次のトピックへ"><span>次のトピックへ</span>OASE</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

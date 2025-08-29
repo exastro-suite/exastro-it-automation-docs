@@ -1,4 +1,6 @@
 
+:orphan:
+
 .. list-table:: 共通設定 (Exastro IT Automation) のオプションパラメータ
    :widths: 25 25 10 20
    :header-rows: 1

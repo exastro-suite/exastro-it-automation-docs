@@ -3,7 +3,7 @@
 
    | 作業前の Pod 起動数の確認をし、状態を記録します。
 
-   .. code-block:: bash 
+   .. code-block:: bash
      :caption: コマンド
 
      RS_AG=`kubectl get deploy ita-ag-oase -o jsonpath='{@.spec.replicas}{"\n"}' --namespace exastro`
@@ -12,7 +12,7 @@
 
    | Pod 起動数を 0 に変更し、データベースの更新を停止します。
 
-   .. code-block:: bash 
+   .. code-block:: bash
      :caption: コマンド
 
      kubectl scale deployment ita-ag-oase --namespace exastro --replicas=0

@@ -126,7 +126,7 @@ Fluent Bit: helm chart values.yamlの準備
 インストール
 ------------
 
-| helmによるインストール手順は公式の手順に従ってインストールします。  
+| helmによるインストール手順は公式の手順に従ってインストールします。
 
 .. note::
    | 公式の手順のまま実施しているため、namespaceは指定しておりません。
@@ -188,7 +188,7 @@ Fluent Bit: helm chart values.yamlの準備
 
 - | 集約したログファイルの内容(例)
 
-  .. code-block:: json
+  .. code-block:: text
      :caption: 集約したログファイルの内容
 
      {"stream":"stdout","logtag":"F","record_date":"20240301","log":"2024/03/01 16:40:09.098836 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting"}

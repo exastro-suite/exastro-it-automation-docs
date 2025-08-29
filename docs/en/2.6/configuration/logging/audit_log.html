@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>1. Monitoring log &#8212; Documentation  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+  </head>
+<body id="page" class="en">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="Go"><img src="../../_static/img/search.png" alt="Go"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../en/2.6/configuration/logging/audit_log.html">current</option>
+              <option value="../../../../en/2.6/configuration/logging/audit_log.html">2.6(current)</option>
+              <option value="../../../../en/2.5/configuration/logging/audit_log.html" selected>2.5</option>
+              <option value="../../../../en/2.4/configuration/logging/audit_log.html">2.4</option>
+              <option value="../../../../en/2.3/configuration/logging/audit_log.html">2.3</option>
+              <option value="../../../../en/2.2/configuration/logging/audit_log.html">2.2</option>
+              <option value="../../../../en/2.1/configuration/logging/audit_log.html">2.1</option>
+              <option value="../../../../en/2.0/configuration/logging/audit_log.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.5/configuration/logging/audit_log.html">日本語</option>
+              <option value="../../../../en/2.5/configuration/logging/audit_log.html" selected>English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Configuration and Construction guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">1. Monitoring log</a><ul>
+<li><a class="reference internal" href="#introduction">1.1. Introduction</a></li>
+<li><a class="reference internal" href="#monitoring-log-output-destination">1.2. Monitoring log output destination</a></li>
+<li><a class="reference internal" href="#monitoring-log-setting-items">1.3. Monitoring log setting items.</a></li>
+<li><a class="reference internal" href="#monitoring-log-contents">1.4. Monitoring log contents</a></li>
+<li><a class="reference internal" href="#fetching-monitoring-log">1.5. Fetching Monitoring log</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    
+    <li><span class="section-number">1. </span>Monitoring log</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="monitoring-log">
+<h1><span class="section-number">1. </span>Monitoring log<a class="headerlink" href="#monitoring-log" title="Link to this heading">¶</a></h1>
+<section id="introduction">
+<h2><span class="section-number">1.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">The Exastro system operates on API base, the monitoring log outputs When Who did What.</div>
+<div class="line">This document contains description regarding the different setting values for the Monitoring log.</div>
+</div>
+</section>
+<section id="monitoring-log-output-destination">
+<span id="security-audit-log"></span><h2><span class="section-number">1.2. </span>Monitoring log output destination<a class="headerlink" href="#monitoring-log-output-destination" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">The monitoring log is output to the playform-auth container’s “/var/log/exastro” directory with the file name “exastro-audio.log”(default).</div>
+<div class="line"><br /></div>
+<div class="line">In the Kubernetes environment, users can specify persistent vlumes to output to a directory in a persistent volume.</div>
+<div class="line">※For more information regarding Persistent volumes, see the Installation documents:doc:<cite>../../installation/online/exastro/kubernetes</cite>.</div>
+</div>
+</section>
+<section id="monitoring-log-setting-items">
+<h2><span class="section-number">1.3. </span>Monitoring log setting items.<a class="headerlink" href="#monitoring-log-setting-items" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">The items that can be configured are the <kbd class="kbd docutils literal notranslate">AUDIT_LOG</kbd> items of the Exastro Platform authentication function’s Option Parameters.</div>
+</div>
+<table class="filter-table docutils align-left" id="id1">
+<caption><span class="caption-text">Exastro Platform authentication optional settings</span><a class="headerlink" href="#id1" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 31.2%" />
+<col style="width: 31.2%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameters</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Change</p></th>
+<th class="head"><p>Default Value / Available Options</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>exastro-platform.platform-auth.extraEnv.EXTERNAL_URL</p></td>
+<td><div class="line-block">
+<div class="line">Exastro Platform Endpoint’s public URL</div>
+<div class="line">This setting must be configured when service connection failures occur due to discrepancies between the Exastro endpoint and the public URL caused by reverse proxies or PAT (Port Address Translation).</div>
+</div>
+</td>
+<td><p>Enabled</p></td>
+<td><div class="line-block">
+<div class="line">Public endpoint URL</div>
+<div class="line">(http[s]://your-exastro.domain:port)</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>exastro-platform.platform-auth.extraEnv.EXTERNAL_URL_MNG</p></td>
+<td><div class="line-block">
+<div class="line">Public URL of the Exastro Platform Management Console endpoint</div>
+<div class="line">This setting is required when a mismatch occurs between the Exastro endpoint and the public URL due to reverse proxies or PAT (Port Address Translation), which can lead to service connection failures.</div>
+</div>
+</td>
+<td><p>Enabled</p></td>
+<td><div class="line-block">
+<div class="line">Public endpoint URL</div>
+<div class="line">(http[s]://your-exastro.domain:port)</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>exastro-platform.platform-auth.extraEnv.AUDIT_LOG_ENABLED</p></td>
+<td><div class="line-block">
+<div class="line">Enable audit log output</div>
+</div>
+</td>
+<td><p>Enabled</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">True</strong> (Default): Output</div>
+<div class="line"><strong class="program">False</strong>: Do not output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>exastro-platform.platform-auth.extraEnv.AUDIT_LOG_PATH</p></td>
+<td><div class="line-block">
+<div class="line">Audit log file name (file path)</div>
+</div>
+</td>
+<td><p>Enabled</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">exastro-audit.log</strong> (Default)</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>exastro-platform.platform-auth.extraEnv.AUDIT_LOG_FILE_MAX_BYTE</p></td>
+<td><div class="line-block">
+<div class="line">You can specify the maximum size (in bytes) of the audit log file.</div>
+</div>
+</td>
+<td><p>Enabled</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">100000000</strong> (Default)</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>exastro-platform.platform-auth.extraEnv.AUDIT_LOG_BACKUP_COUNT</p></td>
+<td><div class="line-block">
+<div class="line">Number of backup audit log files</div>
+<div class="line">When the audit log file exceeds the specified maximum size (in bytes), backup files are created with the original file name appended by a ‘.’ and a number, up to the specified backup count.</div>
+</div>
+</td>
+<td><p>Enabled</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">30</strong> (Default)</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>exastro-platform.platform-auth.ingress.enabled</p></td>
+<td><p>Whether to use Ingress in the Exastro Platform</p></td>
+<td><p>Enabled</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">true</strong> (Default): Deploy an Ingress Controller to enable access to the Exastro Platform.</div>
+<div class="line"><strong class="program">false</strong> : Do not deploy the Ingress Controller.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>exastro-platform.platform-auth.ingress.hosts[0].host</p></td>
+<td><div class="line-block">
+<div class="line">Hostname or FQDN of the Exastro Platform Management Console endpoint</div>
+<div class="line">DNS record registration is required separately</div>
+</div>
+</td>
+<td><p>Enabled (When using Ingress)</p></td>
+<td><p>“exastro-suite.example.local”</p></td>
+</tr>
+<tr class="row-even"><td><p>exastro-platform.platform-auth.ingress.hosts[0].paths[0].path</p></td>
+<td><p>Rules for the Management Console endpoint path in Exastro Platform</p></td>
+<td><p>Disabled</p></td>
+<td><p>“/”</p></td>
+</tr>
+<tr class="row-odd"><td><p>exastro-platform.platform-auth.ingress.hosts[0].paths[0].pathType</p></td>
+<td><p>Path match condition for the Exastro Platform Management Console endpoint</p></td>
+<td><p>Disabled</p></td>
+<td><p>“Prefix”</p></td>
+</tr>
+<tr class="row-even"><td><p>exastro-platform.platform-auth.ingress.hosts[0].paths[0].backend</p></td>
+<td><p>Exastro Platform Management Console service name</p></td>
+<td><p>Disabled</p></td>
+<td><p>“http”</p></td>
+</tr>
+<tr class="row-odd"><td><p>exastro-platform.platform-auth.ingress.hosts[1].host</p></td>
+<td><div class="line-block">
+<div class="line">Exastro Platform endpoint hostname or FQDN</div>
+<div class="line">A DNS record must be registered separately</div>
+</div>
+</td>
+<td><p>Enabled (When using Ingress)</p></td>
+<td><p>“exastro-suite-mng.example.local”</p></td>
+</tr>
+<tr class="row-even"><td><p>exastro-platform.platform-auth.ingress.hosts[1].paths[0].path</p></td>
+<td><p>Endpoint path rules for Exastro Platform</p></td>
+<td><p>Disabled</p></td>
+<td><p>“/”</p></td>
+</tr>
+<tr class="row-odd"><td><p>exastro-platform.platform-auth.ingress.hosts[1].paths[0].pathType</p></td>
+<td><p>Exastro Platform endpoint path match condition</p></td>
+<td><p>Disabled</p></td>
+<td><p>“Prefix”</p></td>
+</tr>
+<tr class="row-even"><td><p>exastro-platform.platform-auth.ingress.hosts[1].paths[0].backend</p></td>
+<td><p>Exastro Platform endpoint service name</p></td>
+<td><p>Disabled</p></td>
+<td><p>“httpMng”</p></td>
+</tr>
+<tr class="row-odd"><td><p>exastro-platform.platform-auth.ingress.tls[0].secretName</p></td>
+<td><p>Name of the Kubernetes secret storing the SSL/TLS certificate for the public Exastro Platform endpoint</p></td>
+<td><p>Enabled (When using Ingress)</p></td>
+<td><p>Any string</p></td>
+</tr>
+<tr class="row-even"><td><p>exastro-platform.platform-auth.ingress.tls[0].hosts</p></td>
+<td><p>Hostname or FQDN for the Exastro Platform public endpoint using SSL/TLS</p></td>
+<td><p>Enabled (When using Ingress)</p></td>
+<td><p>Any string</p></td>
+</tr>
+<tr class="row-odd"><td><p>exastro-platform.platform-auth.ingress.secrets[0].name</p></td>
+<td><p>Name of the Kubernetes secret that stores the SSL/TLS certificate for the Exastro Platform public endpoint</p></td>
+<td><p>Enabled (When using Ingress)</p></td>
+<td><p>Any string</p></td>
+</tr>
+<tr class="row-even"><td><p>exastro-platform.platform-auth.ingress.secrets[0].certificate</p></td>
+<td><p>Value of the certificate file used for the SSL/TLS certificate of the Exastro Platform public endpoint</p></td>
+<td><p>Enabled (When using Ingress)</p></td>
+<td><div class="line-block">
+<div class="line">Example of a certificate file value</div>
+<div class="line">—–BEGIN CERTIFICATE—–</div>
+<div class="line">…</div>
+<div class="line">—–END CERTIFICATE—–</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>exastro-platform.platform-auth.ingress.secrets[0].key</p></td>
+<td><p>Value of the key file used for the SSL/TLS certificate of the Exastro Platform public endpoint</p></td>
+<td><p>Enabled (When using Ingress)</p></td>
+<td><div class="line-block">
+<div class="line">Example of a key file value</div>
+<div class="line">—–BEGIN PRIVATE KEY—–</div>
+<div class="line">…</div>
+<div class="line">—–END PRIVATE KEY—–</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>exastro-platform.platform-auth.service.type</p></td>
+<td><p>Exastro Platform service type</p></td>
+<td><p>Enabled</p></td>
+<td><div class="line-block">
+<div class="line"><strong class="program">ClusterIP</strong> (Default): Select when using an Ingress Controller</div>
+<div class="line"><strong class="program">LoadBalancer</strong> : Select when using a LoadBalancer</div>
+<div class="line"><strong class="program">NodePort</strong> : Select when using NodePort</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>exastro-platform.platform-auth.service.http.nodePort</p></td>
+<td><div class="line-block">
+<div class="line">Service public port number for Exastro Platform</div>
+</div>
+</td>
+<td><p>Enabled (When using  NodePort)</p></td>
+<td><p>“30080”</p></td>
+</tr>
+<tr class="row-even"><td><p>exastro-platform.platform-auth.service.httpMng.nodePort</p></td>
+<td><div class="line-block">
+<div class="line">Exastro Platform system administration public port number</div>
+</div>
+</td>
+<td><p>Enabled (When using NodePort)</p></td>
+<td><p>“30081”</p></td>
+</tr>
+<tr class="row-odd"><td><p>exastro-platform.platform-auth.image.repository</p></td>
+<td><p>“Container image repository name</p></td>
+<td><p>Disabled</p></td>
+<td><p>“docker.io/exastro/exastro-platform-auth”</p></td>
+</tr>
+<tr class="row-even"><td><p>exastro-platform.platform-auth.image.tag</p></td>
+<td><p>Container image tag</p></td>
+<td><p>Disabled</p></td>
+<td><p><cite>“”</cite></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="monitoring-log-contents">
+<h2><span class="section-number">1.4. </span>Monitoring log contents<a class="headerlink" href="#monitoring-log-contents" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">The monitoring log is output in <kbd class="kbd docutils literal notranslate">Json</kbd> <kbd class="kbd docutils literal notranslate">format</kbd>.</div>
+<div class="line">1 event(API call) starts a detailed section and contains the following:</div>
+</div>
+<table class="docutils align-left" id="id2">
+<caption><span class="caption-text">Monitoring log contents</span><a class="headerlink" href="#id2" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17.6%" />
+<col style="width: 23.5%" />
+<col style="width: 35.3%" />
+<col style="width: 23.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Item name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Log example</p></th>
+<th class="head"><p>Remarks</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ts</p></td>
+<td><p>Event call date/time</p></td>
+<td><p>“2024-03-11T01:15:58.147Z”</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>user_id</p></td>
+<td><p>User ID</p></td>
+<td><p>“155427e2-c154-49d8-a2b7-9496bb0e6b25”</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>username</p></td>
+<td><p>Username</p></td>
+<td><p>“admin_user”</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>org_id</p></td>
+<td><p>Organization ID</p></td>
+<td><p>“org1”</p></td>
+<td><p>If operated from the System admin side, “-” will be output.</p></td>
+</tr>
+<tr class="row-even"><td><p>ws_id</p></td>
+<td><p>Workspace ID</p></td>
+<td><p>“ws1”</p></td>
+<td><p>If the operation comes from outside the workspace, “-” will be output.</p></td>
+</tr>
+<tr class="row-odd"><td><p>level</p></td>
+<td><p>Message level</p></td>
+<td><p>“INFO”</p></td>
+<td><p>“INFO”= :API call succeeded. “ERROR”= :API call failed.</p></td>
+</tr>
+<tr class="row-even"><td><p>full_path</p></td>
+<td><p>Called endpoint and parameter.</p></td>
+<td><p>“/api/org1/platform/workspaces?”</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>access_route</p></td>
+<td><p>Access route’s IP address</p></td>
+<td><p>[“0.0.0.0”]</p></td>
+<td><p>If there are multiple routes, divide them with commas.</p></td>
+</tr>
+<tr class="row-even"><td><p>remote_addr</p></td>
+<td><p>Remote access IP address</p></td>
+<td><p>“0.0.0.0”</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>request_headers</p></td>
+<td><p>Request header when the API is called.</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>request_user_headers</p></td>
+<td><p>Request header when the API is called.</p></td>
+<td><div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">“User-Id”: “4c5c8c11-d7fa-4963-9dc5-5a7c3d923ad6”,</div>
+<div class="line">“Roles”: “”,</div>
+<div class="line">“Org-Roles”: “X29yZ2FuaXphdGlvbi1tYW5hZ2Vy”,</div>
+<div class="line">“Language”: null</div>
+</div>
+<div class="line">}</div>
+</div>
+</td>
+<td><p>Roles, Org-Roles information is a base64 encoded value.</p></td>
+</tr>
+<tr class="row-odd"><td><p>request_body</p></td>
+<td><p>Request body when the API is called.</p></td>
+<td><p>null</p></td>
+<td><p>If not contents, “null” will be output.</p></td>
+</tr>
+<tr class="row-even"><td><p>request_form</p></td>
+<td><p>Request from when the API is called.</p></td>
+<td><p>null</p></td>
+<td><p>If not contents, “null” will be output.</p></td>
+</tr>
+<tr class="row-odd"><td><p>request_files</p></td>
+<td><p>Request files when the API is called.</p></td>
+<td><p>null</p></td>
+<td><p>If not contents, “null” will be output.</p></td>
+</tr>
+<tr class="row-even"><td><p>status_code</p></td>
+<td><p>Status code when the API is called.</p></td>
+<td><p>200</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>“audit” fixed</p></td>
+<td><p>“audit”</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>message</p></td>
+<td><p>Response message</p></td>
+<td><p>“audit: response. 200”</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>message_id</p></td>
+<td><p>API response message ID</p></td>
+<td><p>“-”</p></td>
+<td><p>If the API call results contains a response message, this will display the Message ID.</p></td>
+</tr>
+<tr class="row-even"><td><p>message_text</p></td>
+<td><p>API response message</p></td>
+<td><p>“-”</p></td>
+<td><p>If the API call results contains a response message, this will display the Message.</p></td>
+</tr>
+<tr class="row-odd"><td><p>stack_info</p></td>
+<td><p>Stack information when API meets an error.</p></td>
+<td><p>null</p></td>
+<td><p>Outputs the Stack information when an API error occurs. If there are no errors, “null” will be output.</p></td>
+</tr>
+<tr class="row-even"><td><p>process</p></td>
+<td><p>Process ID</p></td>
+<td><p>7</p></td>
+<td><p>Process ID</p></td>
+</tr>
+<tr class="row-odd"><td><p>log_ts</p></td>
+<td><p>Log output date/time</p></td>
+<td><p>“2024-03-12T01:29:36.357Z”</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>userid</p></td>
+<td><p>Process user ID</p></td>
+<td><p>“76541d8f-6de4-4b49-8fe6-58640c15a965”</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>method</p></td>
+<td><p>Method when API is called.</p></td>
+<td><p>“GET”</p></td>
+<td><p>Method when “GET”,”POST”,”PUT”,”PATCH”,”DELETE” is called.</p></td>
+</tr>
+<tr class="row-even"><td><p>content_type</p></td>
+<td><p>Media type when API is called.</p></td>
+<td><p>“application/json”</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fetching-monitoring-log">
+<span id="security-audit-log-get"></span><h2><span class="section-number">1.5. </span>Fetching Monitoring log<a class="headerlink" href="#fetching-monitoring-log" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">The Monitoring logs can be downloaded from the Organization management page.</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/audit_log_top.png"><img alt="Top monitoring log" src="../../_images/audit_log_top.png" style="width: 1200px;" />
+</a>
+</figure>
+<div class="line-block">
+<div class="line">In the <span class="menuselection">Download</span> tab, users can specify what part of the monitoring log to download.</div>
+<div class="line">Specify the values for the  monitoring period in <span class="guilabel"></span> and press <span class="guilabel">Apply</span>.</div>
+<div class="line">Press the <span class="guilabel">Download</span> button at the bottom of the page to create an archive of the Monitoring log. The log will automatically be downloaded after it is done.</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/audit_log_target_period.png"><img alt="Monitoring log target period" src="../../_images/audit_log_target_period.png" style="width: 1200px;" />
+</a>
+</figure>
+<div class="line-block">
+<div class="line">In the <span class="menuselection">History</span> tab, all created archives of the created monitoring logs are displayed. Users can check the status of them and download them from this page.</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">Monitoring logs are saved for 365 days after creation by default.</div>
+<div class="line">Archived Monitoring logs are deleted after 7 days after creation by default.</div>
+<div class="line">Up to 100 Monitoring log archives can be created.</div>
+</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/audit_log_history.png"><img alt="Monitoring log history" src="../../_images/audit_log_history.png" style="width: 1200px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id3">
+<caption><span class="caption-text">Monitoring log history item list</span><a class="headerlink" href="#id3" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Item name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>(Download button)</p></td>
+<td><p>Allows users to download the monitoring log file from the specified period.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Download date/time</p></td>
+<td><p>Displays when the Monitoring log was downloaded.</p></td>
+</tr>
+<tr class="row-even"><td><p>Status</p></td>
+<td><div class="line-block">
+<div class="line">Displays the process status of the Archived monitoring log. The Status codes are as following.</div>
+<div class="line">NotExecuted</div>
+<div class="line">Executing</div>
+<div class="line">Completion</div>
+<div class="line">Failed</div>
+<div class="line">NoData</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Target period</p></td>
+<td><p>Displays the target period in the following format: [To] ～ [From]</p></td>
+</tr>
+<tr class="row-even"><td><p>Number of output targets</p></td>
+<td><p>Displays the number of monitoring logs within the specified period.指定した対象期間範囲内での監査ログの件数が表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Process result message</p></td>
+<td><p>Displays an error message if an error occurs while the Archive is being created.</p></td>
+</tr>
+<tr class="row-even"><td><p>User</p></td>
+<td><p>Displays the user who downloaded the monitoring log.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/en/2.5/terms/en.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

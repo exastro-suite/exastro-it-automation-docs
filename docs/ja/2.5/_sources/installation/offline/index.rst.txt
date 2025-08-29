@@ -11,9 +11,9 @@
    :maxdepth: 2
 
    exastro/index
-   
-   .. oase_agent/index
-   
+
+.. oase_agent/index
+
 .. raw:: html
 
    </div>

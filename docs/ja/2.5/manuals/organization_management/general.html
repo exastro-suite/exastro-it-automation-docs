@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=57fb2187" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,9 +72,10 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
-              <option value="../../../../ja/2.5/manuals/organization_management/general.html" selected>current</option>
-              <option value="../../../../ja/2.5/manuals/organization_management/general.html" selected>2.5(current)</option>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/organization_management/general.html">current</option>
+              <option value="../../../../ja/2.6/manuals/organization_management/general.html">2.6(current)</option>
+              <option value="../../../../ja/2.5/manuals/organization_management/general.html" selected>2.5</option>
               <option value="../../../../ja/2.4/manuals/organization_management/general.html">2.4</option>
               <option value="../../../../ja/2.3/manuals/organization_management/general.html">2.3</option>
               <option value="../../../../ja/2.2/manuals/organization_management/general.html">2.2</option>
@@ -91,7 +92,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               <option value="../../../../ja/2.5/manuals/organization_management/general.html" selected>日本語</option>
               <option value="../../../../en/2.5/manuals/organization_management/general.html">English</option>
             </select>
@@ -131,7 +132,7 @@
 <li class="toctree-l5"><a class="reference internal" href="#id8">1.4.3. 二要素認証設定</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#exastro-refresh-token">1.5. トークン発行</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">1.5. トークン発行</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="workspace.html">2. Workspace (ワークスペース)</a></li>
@@ -158,6 +159,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
 </ul>
 
     <!-- <ul>
@@ -181,7 +183,7 @@
 <li><a class="reference internal" href="#id8">1.4.3. 二要素認証設定</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#exastro-refresh-token">1.5. トークン発行</a></li>
+<li><a class="reference internal" href="#id9">1.5. トークン発行</a></li>
 </ul>
 </li>
 </ul>
@@ -211,7 +213,7 @@
 <section id="id2">
 <h2><span class="section-number">1.1. </span>はじめに<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <div class="line-block">
-<div class="line">本書は、オーガナイゼーション管理の画面操作する際のログイン方法について記載したものです。</div>
+<div class="line">本書は、オーガナイゼーション管理の画面を操作する際のログイン方法について記載したものです。</div>
 </div>
 </section>
 <section id="organization-manager-login">
@@ -225,7 +227,7 @@
 </a>
 </figure>
 <table class="docutils align-left" id="id10">
-<caption><span class="caption-number">表 1.80 </span><span class="caption-text">項目説明</span><a class="headerlink" href="#id10" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 1.81 </span><span class="caption-text">項目説明</span><a class="headerlink" href="#id10" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 16.7%" />
 <col style="width: 83.3%" />
@@ -274,7 +276,7 @@
 </figure>
 </li>
 <li><div class="line-block">
-<div class="line">アカウント情報の更新し、 <span class="guilabel">更新</span> ボタンを押下します。</div>
+<div class="line">アカウント情報の更新を行い、 <span class="guilabel">更新</span> ボタンを押下します。</div>
 </div>
 <figure class="align-left">
 <a class="with-border-thin reference internal image-reference" href="../../_images/login3.png"><img alt="初回ログイン" class="with-border-thin" src="../../_images/login3.png" style="width: 600px;" />
@@ -306,10 +308,10 @@
 </section>
 <section id="id5">
 <h2><span class="section-number">1.4. </span>アカウント管理<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
-<p>アカウント管理では、自身のアカウント編集、パスワード変更、二要素認証設定、トークン発行が行えます。</p>
+<p>アカウント管理では、自身のアカウント編集、パスワード変更、二要素認証設定、トークン発行ができます。</p>
 <ol class="arabic">
 <li><div class="line-block">
-<div class="line">アカウント管理はログインユーザーのアイコンを選択して表示されるメニューから <span class="menuselection">アカウント管理</span> を選択することにより設定できます。</div>
+<div class="line">アカウント管理はログインユーザーのアイコンを選択して表示されるメニューから <span class="guilabel">アカウント管理</span> を選択することにより設定できます。</div>
 </div>
 <figure class="align-left">
 <a class="with-border-thin reference internal image-reference" href="../../_images/setting_profile_v2-4.png"><img alt="アカウント管理" class="with-border-thin" src="../../_images/setting_profile_v2-4.png" style="width: 600px;" />
@@ -327,7 +329,7 @@
 <h3><span class="section-number">1.4.1. </span>アカウント編集<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><div class="line-block">
-<div class="line">アカウント編集（Personal info）より、Eメール、名、姓、所属、説明を変更することができます。</div>
+<div class="line"><span class="menuselection">アカウント管理</span> 画面のPersonal infoより、言語切り替え、およびEメール、名、姓、所属、説明を変更することができます。</div>
 </div>
 <figure class="align-left">
 <a class="with-border-thin reference internal image-reference" href="../../_images/setting_profile_account_v2-4.png"><img alt="アカウント管理_アカウント編集" class="with-border-thin" src="../../_images/setting_profile_account_v2-4.png" style="width: 600px;" />
@@ -346,7 +348,7 @@
 <h3><span class="section-number">1.4.2. </span>パスワード変更<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><div class="line-block">
-<div class="line">[Account security] &gt; [Signing in] &gt; [Basic authentication]より、パスワード変更画面を表示します。</div>
+<div class="line">[Account security] &gt; [Signing in] &gt; [Basic authentication]より、<span class="guilabel">Update</span> を押下します。</div>
 </div>
 <figure class="align-left">
 <a class="with-border-thin reference internal image-reference" href="../../_images/setting_profile_password_v2-4.png"><img alt="アカウント管理_パスワード変更画面" class="with-border-thin" src="../../_images/setting_profile_password_v2-4.png" style="width: 600px;" />
@@ -354,7 +356,7 @@
 </figure>
 </li>
 <li><div class="line-block">
-<div class="line">[Update]より、自身のパスワードを変更することができます。</div>
+<div class="line">自身のパスワードを変更することができます。</div>
 </div>
 <figure class="align-left">
 <a class="with-border-thin reference internal image-reference" href="../../_images/setting_profile_password_update.png"><img alt="アカウント管理_パスワード変更" class="with-border-thin" src="../../_images/setting_profile_password_update.png" style="width: 400px;" />
@@ -367,15 +369,15 @@
 <h3><span class="section-number">1.4.3. </span>二要素認証設定<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><div class="line-block">
-<div class="line">[Account security] &gt; [Signing in] &gt; [Two-factor authentication]より、二要素認証設定画面を表示します。</div>
+<div class="line">[Account security] &gt; [Signing in] &gt; [Two-factor authentication]より、:guilabel:` Set up Authenticator application` を押下します。</div>
 </div>
 <figure class="align-left">
-<a class="with-border-thin reference internal image-reference" href="../../_images/two_factor_authentication.png"><img alt="アカウント管理_二要素認証設定外面" class="with-border-thin" src="../../_images/two_factor_authentication.png" style="width: 600px;" />
+<a class="with-border-thin reference internal image-reference" href="../../_images/two_factor_authentication.png"><img alt="アカウント管理_二要素認証設定画面" class="with-border-thin" src="../../_images/two_factor_authentication.png" style="width: 600px;" />
 </a>
 </figure>
 </li>
 <li><div class="line-block">
-<div class="line">[Set up Authenticator application]より、パスワードを入力してログイン後、二段階認証の設定を行うことができます。</div>
+<div class="line">パスワードを入力してログイン後、二要素認証の設定を行うことができます。</div>
 </div>
 <figure class="align-left">
 <a class="with-border-thin reference internal image-reference" href="../../_images/two_factor_authentication_login.png"><img alt="アカウント管理_二要素認証設定_パスワード" class="with-border-thin" src="../../_images/two_factor_authentication_login.png" style="width: 400px;" />
@@ -389,9 +391,9 @@
 </ol>
 </section>
 </section>
-<section id="exastro-refresh-token">
-<span id="id9"></span><h2><span class="section-number">1.5. </span>トークン発行<a class="headerlink" href="#exastro-refresh-token" title="Link to this heading">¶</a></h2>
-<p>本システムにおいて、APIを呼び出す際に必要となるアクセストークンがありますが、アクセストークンの発行には、本説明で説明するリフレッシュトークンが必要となります。</p>
+<section id="id9">
+<h2><span class="section-number">1.5. </span>トークン発行<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h2>
+<p>本システムにおいて、APIを呼び出すにはアクセストークンが必要です。アクセストークンの発行には、本説明で扱うリフレッシュトークンが必要となります。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <div class="line-block">
@@ -485,8 +487,8 @@
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2023 NEC Corporation</small>
-    <small><a href="/terms/ja.html">サイト規約</a></small>
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.5/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

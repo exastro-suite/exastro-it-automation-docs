@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>5. 管理コンソール &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="6. 基本コンソール" href="basic_console.html" />
+    <link rel="prev" title="4. 共通操作" href="common_operation.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/it_automation_base/management_console.html" selected>current</option>
+              <option value="../../../../ja/2.6/manuals/it_automation_base/management_console.html" selected>2.6(current)</option>
+              <option value="../../../../ja/2.5/manuals/it_automation_base/management_console.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/it_automation_base/management_console.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/it_automation_base/management_console.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/it_automation_base/management_console.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/it_automation_base/management_console.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/it_automation_base/management_console.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/it_automation_base/management_console.html" selected>日本語</option>
+              <option value="../../../../en/2.6/manuals/it_automation_base/management_console.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="common_operation.html" title="前のトピックへ"><span class="section-number">4. </span>共通操作</a></li>
+        <li class="next"><a href="basic_console.html" title="次のトピックへ"><span class="section-number">6. </span>基本コンソール</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">基本操作</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="general.html">1. ログイン方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="to_mainmenu.html">2. メインメニューへのアクセス</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dashboard.html">3. メインメニュー(DashBoard)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common_operation.html">4. 共通操作</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5. 管理コンソール</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#management-console-introduction">5.1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">5.2. 概要</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">5.3. 画面説明</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id5">5.3.1. 管理コンソールへのアクセス方法</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#menu-unique-operation">5.4. 各メニュー個別情報</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#system-setting">5.4.1. システム設定</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id8">5.4.2. メニューグループ管理</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#menu-list">5.4.3. メニュー管理</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#role-menu-link">5.4.4. ロール・メニュー紐付管理</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id12">5.4.5. オペレーション削除管理</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id13">5.4.6. ファイル削除管理</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">5.5. 独自メニュー</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#custom-menu-sample">5.5.1. 独自メニュー利用方法</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#javascript">5.5.2. JavaScriptライブラリ情報</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#it-automation-javascript-css">5.5.3. IT Automation JavaScript/CSS情報</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="basic_console.html">6. 基本コンソール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conductor.html">7. Conductor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../host_group/index.html">ホストグループ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible-driver/index.html">Ansible ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform_driver/index.html">Terraform ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import/index.html">エクスポート・インポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cicd_for_iac/index.html">CI/CD for IaC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintenance/index.html">メンテナンス</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">5. 管理コンソール</a><ul>
+<li><a class="reference internal" href="#management-console-introduction">5.1. はじめに</a></li>
+<li><a class="reference internal" href="#id3">5.2. 概要</a></li>
+<li><a class="reference internal" href="#id4">5.3. 画面説明</a><ul>
+<li><a class="reference internal" href="#id5">5.3.1. 管理コンソールへのアクセス方法</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#menu-unique-operation">5.4. 各メニュー個別情報</a><ul>
+<li><a class="reference internal" href="#system-setting">5.4.1. システム設定</a></li>
+<li><a class="reference internal" href="#id8">5.4.2. メニューグループ管理</a></li>
+<li><a class="reference internal" href="#menu-list">5.4.3. メニュー管理</a><ul>
+<li><a class="reference internal" href="#id10">5.4.3.1. 「独自メニュー用素材」の機能概要</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#role-menu-link">5.4.4. ロール・メニュー紐付管理</a></li>
+<li><a class="reference internal" href="#id12">5.4.5. オペレーション削除管理</a></li>
+<li><a class="reference internal" href="#id13">5.4.6. ファイル削除管理</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14">5.5. 独自メニュー</a><ul>
+<li><a class="reference internal" href="#custom-menu-sample">5.5.1. 独自メニュー利用方法</a><ul>
+<li><a class="reference internal" href="#id16">5.5.1.1. 利用手順</a></li>
+<li><a class="reference internal" href="#sample-file">5.5.1.2. 独自メニュー用素材サンプル</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#javascript">5.5.2. JavaScriptライブラリ情報</a><ul>
+<li><a class="reference internal" href="#jquery">5.5.2.1. jQuery</a></li>
+<li><a class="reference internal" href="#select2">5.5.2.2. select2</a></li>
+<li><a class="reference internal" href="#ace">5.5.2.3. Ace</a></li>
+<li><a class="reference internal" href="#exceljs">5.5.2.4. ExcelJS</a></li>
+<li><a class="reference internal" href="#diff2html">5.5.2.5. diff2html</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#it-automation-javascript-css">5.5.3. IT Automation JavaScript/CSS情報</a><ul>
+<li><a class="reference internal" href="#common-js">5.5.3.1. common.js</a><ul>
+<li><a class="reference internal" href="#fn-fetch">5.5.3.1.1. fn.fetch</a></li>
+<li><a class="reference internal" href="#fn-xhr">5.5.3.1.2. fn.xhr</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#common-css">5.5.3.2. common.css</a></li>
+<li><a class="reference internal" href="#ui-js">5.5.3.3. ui.js</a></li>
+<li><a class="reference internal" href="#table-js">5.5.3.4. table.js</a></li>
+<li><a class="reference internal" href="#dialog-js">5.5.3.5. dialog.js</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">基本操作</a></li>
+    
+    <li><span class="section-number">5. </span>管理コンソール</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="id1">
+<h1><span class="section-number">5. </span>管理コンソール<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<section id="management-console-introduction">
+<span id="id2"></span><h2><span class="section-number">5.1. </span>はじめに<a class="headerlink" href="#management-console-introduction" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書は、ITAシステムの管理コンソールの概要および操作方法について記載したものです。</div>
+</div>
+</section>
+<section id="id3">
+<h2><span class="section-number">5.2. </span>概要<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">管理コンソールでは、初期メニュー以外に、利用部門が独自の情報をITAのデータベース上で管理する場合、管理レベルにあった個別メニューの作成が出来ます。</div>
+<div class="line">個別メニューの登録／変更／削除をご使用される際は、製品サポートへお問い合わせ下さい。</div>
+</div>
+<table class="docutils align-left" id="id18">
+<caption><span class="caption-number">表 5.26 </span><span class="caption-text">Webコンテンツメニュー/画面一覧</span><a class="headerlink" href="#id18" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>No.</strong></p></th>
+<th class="head"><p><strong>メニューグループ</strong></p></th>
+<th class="head"><p><strong>メニュー・画面</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td rowspan="7"><p>管理コンソール</p></td>
+<td><p>メインメニュー</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>システム設定</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>メニューグループ管理</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>メニュー管理</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>ロール・メニュー紐付管理</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>オペレーション削除管理</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>ファイル削除管理</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id4">
+<h2><span class="section-number">5.3. </span>画面説明<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">管理コンソールの画面について説明します。</div>
+</div>
+<section id="id5">
+<h3><span class="section-number">5.3.1. </span>管理コンソールへのアクセス方法<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">ログインに成功したITAはメインメニューに遷移します。</div>
+<div class="line">メインメニューのDashBoardから管理コンソールを選ぶことで、管理コンソールへ遷移出来ます。</div>
+<div class="line">左側のメニューグループタブから管理コンソールを選ぶことで、管理コンソール内のメニューを指定して遷移することも出来ます。</div>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/MainMenu.gif"><img alt="メインメニュー" src="../../_images/MainMenu.gif" style="width: 800px;" />
+</a>
+</figure>
+</section>
+</section>
+<section id="menu-unique-operation">
+<span id="id6"></span><h2><span class="section-number">5.4. </span>各メニュー個別情報<a class="headerlink" href="#menu-unique-operation" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">各メニュー個別の情報を説明します。</div>
+</div>
+<section id="system-setting">
+<span id="id7"></span><h3><span class="section-number">5.4.1. </span>システム設定<a class="headerlink" href="#system-setting" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">ITAシステム導入・運用時に設定すべき各種情報の更新を行います。</div>
+</div>
+<table class="docutils align-left" id="id19">
+<caption><span class="caption-number">表 5.27 </span><span class="caption-text">システム設定</span><a class="headerlink" href="#id19" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>No.</strong></p></th>
+<th class="head"><p><strong>項目名</strong></p></th>
+<th class="head"><p><strong>説明</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>識別ID</p></td>
+<td><p>システム設定識別用のIDです。</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>項目名</p></td>
+<td><p>システム設定の項目名です。</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>設定値</p></td>
+<td><p>システム設定の設定値です。</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>備考</p></td>
+<td><p>項目の説明が記載されています。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">危険</p>
+<div class="line-block">
+<div class="line">「識別ID」は変更しないで下さい。ITAの動作が保証されません。</div>
+</div>
+</div>
+</section>
+<section id="id8">
+<h3><span class="section-number">5.4.2. </span>メニューグループ管理<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">メニュー（子）はメニューグループ（親）に属します。この画面では親となるメニューグループの登録／更新／廃止を行います。</div>
+</div>
+<table class="docutils align-left" id="id20">
+<caption><span class="caption-number">表 5.28 </span><span class="caption-text">メニューグループ管理</span><a class="headerlink" href="#id20" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>No.</strong></p></th>
+<th class="head"><p><strong>項目名</strong></p></th>
+<th class="head"><p><strong>説明</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>メニューグループID</p></td>
+<td><p>メニューグループのIDです。</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>親メニューグループ</p></td>
+<td><p>親のメニューグループを設定できます。</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>メニューグループ名(ja)</p></td>
+<td><p>日本語のメニューグループ名を設定できます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>メニューグループ名(en)</p></td>
+<td><p>英語のメニューグループ名を設定できます。</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>パネル画像</p></td>
+<td><p>メニューグループのパネル画像を設定できます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>パラメータシート作成利用フラグ</p></td>
+<td><p>パラメータシート作成機能の「対象メニューグループ」として利用可能かどうかのフラグを設定できます。</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>表示順序</p></td>
+<td><p>DashBoardでのメニューグループの表示順序を設定できます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>備考</p></td>
+<td><p>自由記述欄です。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<ul>
+<li><div class="line-block">
+<div class="line">データ更新系の操作のため、システム管理者でログインして下さい。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">メニューグループ名称は、<strong>一意</strong>である必要があります。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">メニューグループ名称は重複登録出来ません。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">「表示順序」の昇順にメインメニューに表示されます。「表示順序」が同じ場合は、「メニューグループID」の昇順で表示されます。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">「パネル用画像」に使用出来るのは<strong>PNGファイルのみ</strong>です。</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">「備考」は任意です。</div>
+</div>
+</div>
+</section>
+<section id="menu-list">
+<span id="id9"></span><h3><span class="section-number">5.4.3. </span>メニュー管理<a class="headerlink" href="#menu-list" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">この画面でコンテンツの機能（メニュー）の登録／更新／廃止を行います。</div>
+</div>
+<table class="docutils align-left" id="id21">
+<caption><span class="caption-number">表 5.29 </span><span class="caption-text">メニュー管理</span><a class="headerlink" href="#id21" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>No.</strong></p></th>
+<th class="head"><p><strong>項目名</strong></p></th>
+<th class="head"><p><strong>説明</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>メニューID</p></td>
+<td><p>メニューのIDです。</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>メニューグループ</p></td>
+<td><p>親となるメニューグループを設定できます。</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>メニュー名(ja)</p></td>
+<td><p>日本語のメニュー名を設定できます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>メニュー名(en)</p></td>
+<td><p>英語のメニュー名を設定できます。</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>メニュー名(rest)</p></td>
+<td><p>restでのメニュー名を設定できます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>メニューグループ内表示順序</p></td>
+<td><p>メニューグループのサブメニューで表示する順序を設定できます。</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>オートフィルタチェック</p></td>
+<td><p>メニュー表示時に「オートフィルタ」のチェックボックスにチェックを入れるかどうか設定できます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>初回フィルタ</p></td>
+<td><p>メニュー表示時に「フィルタ」をクリックした状態で表示するかどうか設定できます。</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>独自メニュー用素材</p></td>
+<td><p>独自メニューを表示するためのZIPを登録できます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>Web表示最大行数</p></td>
+<td><p>「一覧」に表示する最大行数を設定できます。</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>Web表示前確認行数</p></td>
+<td><p>「一覧」に出力する前に確認ダイアログを表示する最大行数を設定できます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>Excel出力最大行数</p></td>
+<td><p>Excel出力する最大行数を設定できます。</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>ソートキー</p></td>
+<td><p>「一覧」に表示する並び順を設定できます。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<ul>
+<li><div class="line-block">
+<div class="line">メニュー名称は<strong>一意</strong>である必要があります。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ソートキーはJSON形式の表記で設定する必要があります。</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<ul>
+<li><div class="line-block">
+<div class="line">Excel出力最大行数は0～1048576まで設定可能です。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ソートキーは項目名にASC/DESC、値にキーとなるカラム名を入力して下さい。例）　{&quot;ASC&quot;:&quot;display_order&quot;}</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">「備考」は任意です。</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="line-block">
+<div class="line">「Web表示最大行数」と「Web表示前確認行数」には次のような関係があります。</div>
+</div>
+<figure class="align-center" id="id22">
+<a class="reference internal image-reference" href="../../_images/Web表示最大行数の処理概要.png"><img alt="Web表示最大行数の処理概要" src="../../_images/Web%E8%A1%A8%E7%A4%BA%E6%9C%80%E5%A4%A7%E8%A1%8C%E6%95%B0%E3%81%AE%E5%87%A6%E7%90%86%E6%A6%82%E8%A6%81.png" style="width: 6in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 5.1 </span><span class="caption-text">Web表示最大行数の処理概要</span><a class="headerlink" href="#id22" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">「各メニュー項目一覧」または「各メニュー項目一覧の全履歴数」が「Excel出力最大行数」を超えている場合、</div>
+<div class="line">「全件ダウンロード・ファイル一括登録」タブでのエクセル形式のファイルダウンロードは中止されます。</div>
+<div class="line">JSON形式のファイルはダウンロードが可能です。</div>
+<div class="line">画面下部の変更履歴全件ダウンロードは出力し確認する用途で、アップロードには対応しておりません。</div>
+</div>
+<section id="id10">
+<h4><span class="section-number">5.4.3.1. </span>「独自メニュー用素材」の機能概要<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line"><span class="menuselection">メニュー管理</span> メニューでメニューを直接登録した場合に使用される素材です。</div>
+<div class="line">既存メニューやパラメータシート作成機能で作成されたメニューには登録しても使用されません。</div>
+<div class="line">メニュー上に表示させたいHTML、Javascript、CSS等をZIPに圧縮して登録します。</div>
+<div class="line">メインで表示させたいHTMLは「main.html」というファイル名固定です。</div>
+<div class="line">「main.html」内で使用されるファイル名は任意です。</div>
+<div class="line">ZIP内のファイルは全てフォルダ直下に配置する必要があります。</div>
+<div class="line">新規で作成したメニューで「独自メニュー用素材」が登録されていない場合は、そのメニューを表示しても何も表示されません。</div>
+<div class="line">独自メニューを表示したい場合は「独自メニュー用素材」を登録後、<span class="menuselection">ロール・メニュー紐付管理</span> メニューで表示させたいメニューに対して、「メンテナンス可」または「閲覧のみ」の権限を付与する必要があります。</div>
+</div>
+<p>独自メニュー用素材の利用方法とサンプルについては <a class="reference internal" href="#custom-menu-sample"><span class="std std-ref">独自メニュー利用方法</span></a> を参照してください。</p>
+</section>
+</section>
+<section id="role-menu-link">
+<span id="id11"></span><h3><span class="section-number">5.4.4. </span>ロール・メニュー紐付管理<a class="headerlink" href="#role-menu-link" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">各メニューとロール対応付けの登録／更新／廃止を行います。</div>
+</div>
+<div class="line-block">
+<div class="line">Exastro Platform「ロール管理」で登録したロールと「<a class="reference internal" href="#menu-list"><span class="std std-ref">メニュー管理</span></a>」で登録したメニューがリストボックスに表示されるので（下図 ①,②）、それぞれを選択し、紐付タイプ（下図 ③）を選択します。</div>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/ロール・メニュー紐付管理_設定画面.png"><img alt="グループメニュー権限の設定画面（ロール・メニュー紐付管理）" src="../../_images/%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E7%B4%90%E4%BB%98%E7%AE%A1%E7%90%86_%E8%A8%AD%E5%AE%9A%E7%94%BB%E9%9D%A2.png" style="width: 5in;" />
+</a>
+</figure>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">ロールに紐付かないメニュー画面はメニューグループに表示されません。</div>
+</div>
+</div>
+<table class="docutils align-left" id="id23">
+<caption><span class="caption-number">表 5.30 </span><span class="caption-text">ロール・メニュー紐付管理</span><a class="headerlink" href="#id23" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>No.</strong></p></th>
+<th class="head"><p><strong>項目名</strong></p></th>
+<th class="head"><p><strong>説明</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>UUID</p></td>
+<td><p>ロール・メニュー紐付管理のIDです。</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>ロール</p></td>
+<td><p>紐付けるロールを設定できます。</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>メニュー</p></td>
+<td><p>紐付けるメニューを設定できます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>紐付</p></td>
+<td><p>ロールに対してメニューをメンテナンス可能にするか閲覧のみにするかを設定できます。</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>備考</p></td>
+<td><p>自由記述欄です。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">「備考」は任意です。</div>
+</div>
+</div>
+</section>
+<section id="id12">
+<h3><span class="section-number">5.4.5. </span>オペレーション削除管理<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<p>詳細については、メンテナンスの「<a class="reference internal" href="../maintenance/operation_autoclean.html"><span class="doc">オペレーション削除管理</span></a>」を参照してください。</p>
+</section>
+<section id="id13">
+<h3><span class="section-number">5.4.6. </span>ファイル削除管理<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<p>詳細については、メンテナンスの「<a class="reference internal" href="../maintenance/file_autoclean.html"><span class="doc">ファイル削除機能</span></a>」を参照してください。</p>
+</section>
+</section>
+<section id="id14">
+<h2><span class="section-number">5.5. </span>独自メニュー<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h2>
+<section id="custom-menu-sample">
+<span id="id15"></span><h3><span class="section-number">5.5.1. </span>独自メニュー利用方法<a class="headerlink" href="#custom-menu-sample" title="Link to this heading">¶</a></h3>
+<section id="id16">
+<h4><span class="section-number">5.5.1.1. </span>利用手順<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">(1) <span class="menuselection">メニュー管理</span> メニューで「独自メニュー用素材」を登録し、新規メニューを作成します。</div>
+<div class="line">登録する「独自メニュー用素材」は <a class="reference internal" href="#sample-file"><span class="std std-ref">独自メニュー用素材サンプル</span></a> を参考に作成してください。</div>
+</div>
+<figure class="align-center" id="id24">
+<a class="reference internal image-reference" href="../../_images/sample1_menu_regist.png"><img alt="新規メニュー登録" src="../../_images/sample1_menu_regist.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 5.2 </span><span class="caption-text">新規メニュー登録</span><a class="headerlink" href="#id24" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">(2) <span class="menuselection">ロール・メニュー紐付管理</span> メニューで登録したメニューに対して、「メンテナンス可」または「閲覧のみ」の権限を付与します。</div>
+</div>
+<figure class="align-center" id="id25">
+<a class="reference internal image-reference" href="../../_images/sample1_role_regist.png"><img alt="ロール・メニュー紐付管理登録" src="../../_images/sample1_role_regist.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 5.3 </span><span class="caption-text">ロール・メニュー紐付管理登録</span><a class="headerlink" href="#id25" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">(3) 登録したメニューを表示します。</div>
+</div>
+</section>
+<section id="sample-file">
+<span id="id17"></span><h4><span class="section-number">5.5.1.2. </span>独自メニュー用素材サンプル<a class="headerlink" href="#sample-file" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">サンプル①</div>
+<div class="line">1枚の画像と <span class="guilabel">Hello</span> ボタンを押下すると「Hello」というアラートを表示します。</div>
+<div class="line"><a class="reference download internal" download="" href="../../_downloads/db9be6bcdd58fabf6bf158e9102e4b8b/sample.zip"><code class="xref download docutils literal notranslate"><span class="pre">サンプル①素材</span></code></a></div>
+</div>
+<figure class="align-center" id="id26">
+<a class="reference internal image-reference" href="../../_images/sample_menu1.png"><img alt="サンプル①" src="../../_images/sample_menu1.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 5.4 </span><span class="caption-text">サンプル①</span><a class="headerlink" href="#id26" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">サンプル②</div>
+<div class="line">他のITAのメニューと同じようなメニューを表示します。</div>
+<div class="line"><a class="reference download internal" download="" href="../../_downloads/a2d3b3e42e6acf05c2863242e98ebe48/sample2.zip"><code class="xref download docutils literal notranslate"><span class="pre">サンプル②素材</span></code></a></div>
+</div>
+<figure class="align-center" id="id27">
+<a class="reference internal image-reference" href="../../_images/sample_menu2.png"><img alt="サンプル②" src="../../_images/sample_menu2.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 5.5 </span><span class="caption-text">サンプル②</span><a class="headerlink" href="#id27" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">サンプル③</div>
+<div class="line">「独自メニュー用素材」を登録せずに作成したメニューを表示した場合</div>
+</div>
+<figure class="align-center" id="id28">
+<a class="reference internal image-reference" href="../../_images/sample_menu3.png"><img alt="サンプル③" src="../../_images/sample_menu3.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 5.6 </span><span class="caption-text">サンプル③</span><a class="headerlink" href="#id28" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="javascript">
+<h3><span class="section-number">5.5.2. </span>JavaScriptライブラリ情報<a class="headerlink" href="#javascript" title="Link to this heading">¶</a></h3>
+<p>ITAで使用しているJavaScriptライブラリなどは以下の通りです。</p>
+<section id="jquery">
+<h4><span class="section-number">5.5.2.1. </span>jQuery<a class="headerlink" href="#jquery" title="Link to this heading">¶</a></h4>
+<p>JavaScriptコードをより容易に記述できるようにしたライブラリ。</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>URL</p></td>
+<td><p><a class="reference external" href="https://jquery.com/">https://jquery.com/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>GitHub</p></td>
+<td><p><a class="reference external" href="https://github.com/jquery/jquery">https://github.com/jquery/jquery</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>ライセンス</p></td>
+<td><p>MIT license</p></td>
+</tr>
+<tr class="row-even"><td><p>使用バージョン</p></td>
+<td><p>3.5.1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;/_/ita/lib/jquery/jquery.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="select2">
+<h4><span class="section-number">5.5.2.2. </span>select2<a class="headerlink" href="#select2" title="Link to this heading">¶</a></h4>
+<p>選択ボックスを便利にするjQueryライブラリ。別途jQueryの読み込みが必要です。</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>URL</p></td>
+<td><p><a class="reference external" href="https://select2.org/">https://select2.org/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>GitHub</p></td>
+<td><p><a class="reference external" href="https://github.com/jquery/jquery">https://github.com/jquery/jquery</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>ライセンス</p></td>
+<td><p>MIT license</p></td>
+</tr>
+<tr class="row-even"><td><p>使用バージョン</p></td>
+<td><p>4.0.13</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="n">defer</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;/_/ita/lib/select2/select2.min.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/_/ita/lib/select2/select2.min.css&quot;</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="ace">
+<h4><span class="section-number">5.5.2.3. </span>Ace<a class="headerlink" href="#ace" title="Link to this heading">¶</a></h4>
+<p>Web用の高機能テキストエディタ―。</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>URL</p></td>
+<td><p><a class="reference external" href="https://ace.c9.io/">https://ace.c9.io/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>GitHub</p></td>
+<td><p><a class="reference external" href="https://github.com/ajaxorg/ace-builds/">https://github.com/ajaxorg/ace-builds/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>ライセンス</p></td>
+<td><p>BSD license</p></td>
+</tr>
+<tr class="row-even"><td><p>使用バージョン</p></td>
+<td><p>v1.5.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>モード</p></td>
+<td><p>json,python,terraform,text,yaml</p></td>
+</tr>
+<tr class="row-even"><td><p>テーマ</p></td>
+<td><p>chrome,monokai</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="n">defer</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;/_/ita/lib/ace/ace.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="exceljs">
+<h4><span class="section-number">5.5.2.4. </span>ExcelJS<a class="headerlink" href="#exceljs" title="Link to this heading">¶</a></h4>
+<p>スプレッドシートのデータとスタイルを読み取り・操作、XLSXおよびJSONへの書き出し。</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>GitHub</p></td>
+<td><p><a class="reference external" href="https://github.com/exceljs/exceljs">https://github.com/exceljs/exceljs</a></p></td>
+</tr>
+<tr class="row-even"><td><p>ライセンス</p></td>
+<td><p>MIT license</p></td>
+</tr>
+<tr class="row-odd"><td><p>使用バージョン</p></td>
+<td><p>4.3.0</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;/_/ita/lib/exceljs/exceljs.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="diff2html">
+<h4><span class="section-number">5.5.2.5. </span>diff2html<a class="headerlink" href="#diff2html" title="Link to this heading">¶</a></h4>
+<p>git diffまたはunified diffからHTML差分を生成。</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>URL</p></td>
+<td><p><a class="reference external" href="https://diff2html.xyz/">https://diff2html.xyz/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>GitHub</p></td>
+<td><p><a class="reference external" href="https://github.com/rtfpessoa/diff2html">https://github.com/rtfpessoa/diff2html</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>ライセンス</p></td>
+<td><p>MIT license</p></td>
+</tr>
+<tr class="row-even"><td><p>使用バージョン</p></td>
+<td><p>v2.11.3</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;/_/ita/lib/diff2html/diff2html.min.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/_/ita/lib/diff2html/diff2html.css&quot;</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="it-automation-javascript-css">
+<h3><span class="section-number">5.5.3. </span>IT Automation JavaScript/CSS情報<a class="headerlink" href="#it-automation-javascript-css" title="Link to this heading">¶</a></h3>
+<p>ITAで使用しているJavaScript/CSSの説明です。独自メニュー作成時にITAと同様の画面を表示したい場合に使用できます。</p>
+<p>使用の際は別途jQueryと言語ファイルの読み込みが必要になります。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;/_/ita/lib/jquery/jquery.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span><span class="n">let</span> <span class="n">getMessage</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;module&quot;</span><span class="o">&gt;</span>
+    <span class="kn">import</span><span class="w"> </span><span class="p">{</span><span class="n">messageid_ja</span><span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;/_/ita/js/messageid_ja.js&#39;</span><span class="p">;</span>
+    <span class="n">getMessage</span> <span class="o">=</span> <span class="n">messageid_ja</span><span class="p">();</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<section id="common-js">
+<h4><span class="section-number">5.5.3.1. </span>common.js<a class="headerlink" href="#common-js" title="Link to this heading">¶</a></h4>
+<p>変数fnに基本的な各種関数をまとめたものです。他のITA JavaScriptを使用する際に必須になります。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;/_/ita/js/common.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>主な関数は下記の通りです。</p>
+<section id="fn-fetch">
+<h5><span class="section-number">5.5.3.1.1. </span>fn.fetch<a class="headerlink" href="#fn-fetch" title="Link to this heading">¶</a></h5>
+<p>ITA APIにリクエストを送信します。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fn</span><span class="p">.</span><span class="nx">fetch</span><span class="p">(</span><span class="w"> </span><span class="nx">URL</span><span class="p">,</span><span class="w"> </span><span class="nx">TOKEN</span><span class="p">,</span><span class="w"> </span><span class="nx">METHOD</span><span class="p">,</span><span class="w"> </span><span class="nx">BODY</span><span class="w"> </span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>URL</p></td>
+<td><p>APIエンドポイント。「/api/{organization_id}/workspaces/{workspace_id}/ita」は省略してください。</p></td>
+</tr>
+<tr class="row-even"><td><p>TOKEN</p></td>
+<td><p>基本的にnullを指定。Worker内などで使用する場合はTokenを別途取得して渡してください。</p></td>
+</tr>
+<tr class="row-odd"><td><p>METHOD</p></td>
+<td><p>POST,GETなどメソッド。省略した場合はGETになります。</p></td>
+</tr>
+<tr class="row-even"><td><p>BODY</p></td>
+<td><p>POSTの場合のbodyデータ。省略可。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>使用例</strong></p>
+<p>オペレーション一覧を取得します。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">operationList</span><span class="p">(){</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fn</span><span class="p">.</span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;/menu/operation_list/filter/&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;discard&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;NORMAL&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">}});</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="fn-xhr">
+<h5><span class="section-number">5.5.3.1.2. </span>fn.xhr<a class="headerlink" href="#fn-xhr" title="Link to this heading">¶</a></h5>
+<p>データの登録を行います。</p>
+<p>※fn.fetchでもデータの登録は可能ですが、こちらはデータ登録に機能を絞り登録時の進捗が表示されます。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fn</span><span class="p">.</span><span class="nx">xhr</span><span class="p">(</span><span class="w"> </span><span class="nx">URL</span><span class="p">,</span><span class="w"> </span><span class="nx">FORMDATA</span><span class="w"> </span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>URL</p></td>
+<td><p>APIエンドポイント。「/menu/{menu_name_rest}/maintenance/all/」</p></td>
+</tr>
+<tr class="row-even"><td><p>FORMDATA</p></td>
+<td><p>登録用データをフォームデータに変換して渡してください。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>使用例</strong></p>
+<p>オペレーションを1件登録します。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">registerOperation</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">registerOperation</span><span class="p">(){</span>
+<span class="w">    </span><span class="c1">// フォームデータ</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">formData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">FormData</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// 登録データ</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">regsterData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">parameter</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">discard</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;0&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">operation_name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;オペレーション名&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">scheduled_date_for_execution</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2024/12/31 00:00:00&#39;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">file</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">            </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Register&#39;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">];</span>
+
+<span class="w">    </span><span class="c1">// パラメータをフォームデータに追加（regsterDataを文字列に変換する）</span>
+<span class="w">    </span><span class="nx">formData</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;json_parameters&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="w"> </span><span class="nx">regsterData</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// 登録</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fn</span><span class="p">.</span><span class="nx">xhr</span><span class="p">(</span><span class="s1">&#39;/menu/operation_list/maintenance/all/&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">formData</span><span class="w"> </span><span class="p">);</span>
+
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="common-css">
+<h4><span class="section-number">5.5.3.2. </span>common.css<a class="headerlink" href="#common-css" title="Link to this heading">¶</a></h4>
+<p>ITAの基本的な画面のスタイルです。ITA JavaScriptを使用する場合は読み込み必須です。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/_/ita/css/common.css&quot;</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="ui-js">
+<h4><span class="section-number">5.5.3.3. </span>ui.js<a class="headerlink" href="#ui-js" title="Link to this heading">¶</a></h4>
+<p>ITAの基本的な画面を生成します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="n">defer</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;/_/ita/js/ui.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>使用例</strong></p>
+<p>タブが３つある画面を作成します。</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;content&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 対象</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">$content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#content&#39;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// ui.js</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">ui</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CommonUi</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// メニュー情報</span>
+<span class="w">    </span><span class="nx">ui</span><span class="p">.</span><span class="nx">info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">menu_info</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">menu_name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;タブメニューサンプル&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">menu_info</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;タブメニューサンプルです。&#39;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">// タブ内部のHTML</span>
+<span class="w">    </span><span class="nx">ui</span><span class="p">.</span><span class="nx">tab1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;Tab1 Contents&#39;</span><span class="p">};</span>
+<span class="w">    </span><span class="nx">ui</span><span class="p">.</span><span class="nx">tab2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;Tab2 Contents&#39;</span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">// タブ定義</span>
+<span class="w">    </span><span class="c1">// nameで上記で設定した関数が呼ばれます。タブのIDにもなります。</span>
+<span class="w">    </span><span class="c1">// titleがタブに表示されます。</span>
+<span class="w">    </span><span class="c1">// type: &#39;blank&#39;を指定すると空のタブが作成されます。</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">tabs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tab1&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;タブ１&#39;</span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tab2&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;タブ２&#39;</span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tab3&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;タブ３&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;blank&#39;</span><span class="p">}</span>
+<span class="w">    </span><span class="p">];</span>
+
+<span class="w">    </span><span class="c1">// タブHTML作成</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">tabHtml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ui</span><span class="p">.</span><span class="nx">contentTab</span><span class="p">(</span><span class="w"> </span><span class="nx">tabs</span><span class="w"> </span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// メニュータイトル・説明欄</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">menuHtml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ui</span><span class="p">.</span><span class="nx">commonContainer</span><span class="p">(</span><span class="w"> </span><span class="nx">ui</span><span class="p">.</span><span class="nx">info</span><span class="p">.</span><span class="nx">menu_info</span><span class="p">.</span><span class="nx">menu_name</span><span class="p">,</span><span class="w"> </span><span class="nx">ui</span><span class="p">.</span><span class="nx">info</span><span class="p">.</span><span class="nx">menu_info</span><span class="p">.</span><span class="nx">menu_info</span><span class="p">,</span><span class="w"> </span><span class="nx">tabHtml</span><span class="w"> </span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// 対象にtabContentクラスをセットしHTMLをセット</span>
+<span class="w">    </span><span class="nx">$content</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;tabContent&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="w"> </span><span class="nx">menuHtml</span><span class="w"> </span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// タブ３はblankで作成したため、別途HTMLをセットする</span>
+<span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#tab3&#39;</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;.sectionBody&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;Tab3 Contents&#39;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// タブイベントをセット。引数に最初に開いてあるタブのnameを指定。</span>
+<span class="w">    </span><span class="nx">ui</span><span class="p">.</span><span class="nx">contentTabEvent</span><span class="p">(</span><span class="s1">&#39;#tab1&#39;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// メニュー詳細ボタンイベントをセット</span>
+<span class="w">    </span><span class="nx">ui</span><span class="p">.</span><span class="nx">setCommonEvents</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="table-js">
+<h4><span class="section-number">5.5.3.4. </span>table.js<a class="headerlink" href="#table-js" title="Link to this heading">¶</a></h4>
+<p>指定したパラメータシートのTable表示・編集ができます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="n">defer</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;/_/ita/js/table.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">table</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">DataTable</span><span class="p">(</span><span class="w"> </span><span class="nx">ID</span><span class="p">,</span><span class="w"> </span><span class="nx">MODE</span><span class="p">,</span><span class="w"> </span><span class="nx">INFO</span><span class="p">,</span><span class="w"> </span><span class="nx">PARAMS</span><span class="w"> </span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">$table</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">table</span><span class="p">.</span><span class="nx">setup</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>ユニークなIDを指定。</p></td>
+</tr>
+<tr class="row-even"><td><p>MODE</p></td>
+<td><p>view（基本） or history（履歴表示）。</p></td>
+</tr>
+<tr class="row-odd"><td><p>INFO</p></td>
+<td><p>メニュー情報。「/menu/{menuNanmeRest}/info/」で取得した情報を渡してください。</p></td>
+</tr>
+<tr class="row-even"><td><p>PARAMS</p></td>
+<td><p>必須パラメータ指定。詳細は下記使用例を参照してください。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>使用例</strong></p>
+<p>オペレーション一覧を表示します。</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;content&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 対象</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">$content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#content&#39;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// オペレーション一覧メニュー名（REST）</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">menuNanmeRest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;operation_list&#39;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// メニュー情報を取得</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fn</span><span class="p">.</span><span class="nx">fetch</span><span class="p">(</span><span class="sb">`/menu/</span><span class="si">${</span><span class="nx">menuNanmeRest</span><span class="si">}</span><span class="sb">/info/`</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// 必須パラメータ取得</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fn</span><span class="p">.</span><span class="nx">getCommonParams</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">params</span><span class="p">.</span><span class="nx">menuNameRest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">menuNanmeRest</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// テーブル作成</span>
+<span class="w">    </span><span class="c1">// table.setup()でTableのjQueryオブジェが返ってきます。</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">table</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">DataTable</span><span class="p">(</span><span class="s1">&#39;operationList&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;view&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">info</span><span class="p">,</span><span class="w"> </span><span class="nx">params</span><span class="w"> </span><span class="p">);</span>
+<span class="w">    </span><span class="nx">$content</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="w"> </span><span class="nx">table</span><span class="p">.</span><span class="nx">setup</span><span class="p">()</span><span class="w"> </span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="dialog-js">
+<h4><span class="section-number">5.5.3.5. </span>dialog.js<a class="headerlink" href="#dialog-js" title="Link to this heading">¶</a></h4>
+<p>ダイアログを表示します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="n">defer</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;/_/ita/js/dialog.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/_/ita/css/dialog.css&quot;</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">dialog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Dialog</span><span class="p">(</span><span class="w"> </span><span class="nx">CONFIG</span><span class="p">,</span><span class="w"> </span><span class="nx">FUNCTIONS</span><span class="w"> </span><span class="p">);</span>
+<span class="nx">dialog</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="w"> </span><span class="nx">CONTENTS</span><span class="w"> </span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>CONFIG</p></td>
+<td><p>ダイアログ構成情報。</p></td>
+</tr>
+<tr class="row-even"><td><p>FUNCTIONS</p></td>
+<td><p>ダイアログのボタンを押したときの関数。</p></td>
+</tr>
+<tr class="row-odd"><td><p>CONTENTS</p></td>
+<td><p>ダイアログボディHTML</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>使用例</strong></p>
+<p>Hello worldとダイアログで表示し、OKと閉じるで処理を分ける。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">helloWorld</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nx">flag</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;OK!&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;CLOSE!!&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">helloWorld</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="w"> </span><span class="nx">resolve</span><span class="w"> </span><span class="p">){</span>
+<span class="w">        </span><span class="c1">// ボタンを押したときの動作</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">functions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// OKを押した場合の関数</span>
+<span class="w">            </span><span class="nx">ok</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
+<span class="w">                </span><span class="k">this</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="w">                </span><span class="nx">resolve</span><span class="p">(</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">);</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="c1">// 閉じるを押した場合の関数</span>
+<span class="w">            </span><span class="nx">close</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
+<span class="w">                </span><span class="k">this</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="w">                </span><span class="nx">resolve</span><span class="p">(</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">};</span>
+<span class="w">        </span><span class="c1">// ダイアログ表示定義</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// モーダルの位置 top or center</span>
+<span class="w">            </span><span class="nx">position</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="c1">// ヘッダー情報</span>
+<span class="w">            </span><span class="nx">header</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;ダイアログテスト&#39;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="c1">// 幅</span>
+<span class="w">            </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;640px&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="c1">// フッター情報</span>
+<span class="w">            </span><span class="nx">footer</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="c1">// ボタン情報</span>
+<span class="w">                </span><span class="nx">button</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="c1">// functionsと同じキー名で紐づけ。</span>
+<span class="w">                    </span><span class="c1">// text: 表示テキスト。</span>
+<span class="w">                    </span><span class="c1">// action: ボタンの役割（positive,restore,duplicat,warning,danger,history,normal,negative）※色が変わるだけです。</span>
+<span class="w">                    </span><span class="c1">// style: スタイルを指定。</span>
+<span class="w">                    </span><span class="nx">ok</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;OK&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;default&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;width:160px;&#39;</span><span class="p">},</span>
+<span class="w">                    </span><span class="nx">close</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;閉じる&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;normal&#39;</span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">};</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">dialog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Dialog</span><span class="p">(</span><span class="w"> </span><span class="nx">config</span><span class="p">,</span><span class="w"> </span><span class="nx">functions</span><span class="w"> </span><span class="p">);</span>
+<span class="w">        </span><span class="nx">dialog</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;&lt;div style=&quot;padding:24px;text-align:center;font-size:24px;&quot;&gt;Hello World&lt;/div&gt;&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="common_operation.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">4. </span>共通操作</a></li>
+    <li class="next"><a href="basic_console.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">6. </span>基本コンソール</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

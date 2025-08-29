@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>6. メンテナンスモード &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="7. データバックアップ・リストア" href="backup_and_restore.html" />
+    <link rel="prev" title="5. 監視" href="monitoring.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/maintenance/maintenance_mode.html" selected>current</option>
+              <option value="../../../../ja/2.6/manuals/maintenance/maintenance_mode.html" selected>2.6(current)</option>
+              <option value="../../../../ja/2.5/manuals/maintenance/maintenance_mode.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/maintenance/maintenance_mode.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/maintenance/maintenance_mode.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/maintenance/maintenance_mode.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/maintenance/maintenance_mode.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/maintenance/maintenance_mode.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/maintenance/maintenance_mode.html" selected>日本語</option>
+              <option value="../../../../en/2.6/manuals/maintenance/maintenance_mode.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="monitoring.html" title="前のトピックへ"><span class="section-number">5. </span>監視</a></li>
+        <li class="next"><a href="backup_and_restore.html" title="次のトピックへ"><span class="section-number">7. </span>データバックアップ・リストア</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../it_automation_base/index.html">基本操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../host_group/index.html">ホストグループ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible-driver/index.html">Ansible ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform_driver/index.html">Terraform ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import/index.html">エクスポート・インポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cicd_for_iac/index.html">CI/CD for IaC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">メンテナンス</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="service_list.html">1. サービス一覧</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log_list.html">2. ログ一覧</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log_level.html">3. ログレベル</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../share/ja/manuals/maintenance/log_aggregation.html">4. ログの集約</a></li>
+<li class="toctree-l3"><a class="reference internal" href="monitoring.html">5. 監視</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">6. メンテナンスモード</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">6.1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">6.2. メンテナンスモードとは</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#ita-maintenance-mode-purpose-of-use">6.2.1. メンテナンスモードの利用用途</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#ita-maintenance-mode-setting-value">6.2.2. メンテナンスモードの種類と設定値について</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">6.3. メンテナンスモードの確認、設定変更について</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ita-maintenance-mode-get-backyard-execute-check">6.4. バックヤード起動状態一括取得</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id8">6.4.1. 前提条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id9">6.4.2. 事前準備</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id10">6.4.3. バックヤード起動状態一括取得の実行</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="backup_and_restore.html">7. データバックアップ・リストア</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file_autoclean.html">8. ファイル削除機能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="operation_autoclean.html">9. オペレーション削除管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gitlab_token.html">10. Gitlab認証トークンの更新手順</a></li>
+<li class="toctree-l3"><a class="reference internal" href="physical_deletion.html">11. データの物理削除</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">6. メンテナンスモード</a><ul>
+<li><a class="reference internal" href="#id2">6.1. はじめに</a></li>
+<li><a class="reference internal" href="#id3">6.2. メンテナンスモードとは</a><ul>
+<li><a class="reference internal" href="#ita-maintenance-mode-purpose-of-use">6.2.1. メンテナンスモードの利用用途</a></li>
+<li><a class="reference internal" href="#ita-maintenance-mode-setting-value">6.2.2. メンテナンスモードの種類と設定値について</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">6.3. メンテナンスモードの確認、設定変更について</a></li>
+<li><a class="reference internal" href="#ita-maintenance-mode-get-backyard-execute-check">6.4. バックヤード起動状態一括取得</a><ul>
+<li><a class="reference internal" href="#id8">6.4.1. 前提条件</a></li>
+<li><a class="reference internal" href="#id9">6.4.2. 事前準備</a></li>
+<li><a class="reference internal" href="#id10">6.4.3. バックヤード起動状態一括取得の実行</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">メンテナンス</a></li>
+    
+    <li><span class="section-number">6. </span>メンテナンスモード</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="ita-maintenance-mode">
+<span id="id1"></span><h1><span class="section-number">6. </span>メンテナンスモード<a class="headerlink" href="#ita-maintenance-mode" title="Link to this heading">¶</a></h1>
+<section id="id2">
+<h2><span class="section-number">6.1. </span>はじめに<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書では、ITAにおける メンテナンスモード について説明します。</div>
+<div class="line">メンテナンスモードの設定はシステム管理者のみ可能です（オーガナイゼーションユーザーからはアクセス出来ません）。</div>
+</div>
+</section>
+<section id="id3">
+<h2><span class="section-number">6.2. </span>メンテナンスモードとは<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">データの閲覧は可能な状態で、データベースに対する登録・更新やバックヤード処理を止め、データベースのバックアップやバージョンアップをより安全に行うための機能です。</div>
+<div class="line">メンテナンスモードは、システム上の全オーガナイゼーション・ワークスペースに対して適用されます。</div>
+</div>
+<section id="ita-maintenance-mode-purpose-of-use">
+<span id="id4"></span><h3><span class="section-number">6.2.1. </span>メンテナンスモードの利用用途<a class="headerlink" href="#ita-maintenance-mode-purpose-of-use" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">メンテナンスモードには「サーバーサイドジョブ停止」と「読み取り専用モード」の2つの種類があります。</div>
+<div class="line">「サーバーサイドジョブ停止」をONにすると、作業実行などを行うバックヤード機能が、新たに処理を実行しなくなります。</div>
+<div class="line">ただし「サーバーサイドジョブ停止」をONにした時点ですでに動作している処理（ステータスが「準備中」「実行中」「実行中(遅延)」のもの）については、ステータスが「完了」「完了(異常)」「想定外エラー」となるまで処理が継続されます。</div>
+<div class="line">「読み取り専用モード」をONにすると、データベースに対する登録・更新を行うすべての機能が利用できなくなります。（各メニューからのデータの閲覧は可能です。）</div>
+<div class="line">詳細は「<a class="reference internal" href="#ita-maintenance-mode-setting-value"><span class="std std-ref">メンテナンスモードの種類と設定値について</span></a>」を参照してください。</div>
+<div class="line"><br /></div>
+<div class="line">また「<a class="reference internal" href="#ita-maintenance-mode-get-backyard-execute-check"><span class="std std-ref">バックヤード起動状態一括取得</span></a>」APIを利用し、ステータスが「準備中」「実行中」「実行中(遅延)」のバックヤード処理を一括で取得することができます。</div>
+<div class="line">これらを利用し</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">「サーバーサイドジョブ停止」をONにする。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">「バックヤード起動状態一括取得」でステータスが「準備中」「実行中」「実行中(遅延)」の処理を確認し、無くなるまで待機する。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">「読み取り専用モード」をONにする。</div>
+</div>
+</li>
+</ul>
+<div class="line-block">
+<div class="line">という手順を踏むことで、データベースのバックアップやバージョンアップを実行する前に、動作中のバックヤード処理を無くすことができます。</div>
+</div>
+<figure class="align-default" id="id11">
+<a class="reference internal image-reference" href="../../_images/purpose_of_use_v2-4.png"><img alt="メンテナンスモードの利用用途" src="../../_images/purpose_of_use_v2-4.png" style="width: 600px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 6.6 </span><span class="caption-text">メンテナンスモードの利用用途</span><a class="headerlink" href="#id11" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">メンテナンスモードをONにすると、Web画面の上部にメンテナンス中である旨のメッセージが表示されます。</div>
+</div>
+<figure class="align-default" id="id12">
+<a class="reference internal image-reference" href="../../_images/mode_message.png"><img alt="メンテナンスモード中のWeb画面" src="../../_images/mode_message.png" style="width: 600px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 6.7 </span><span class="caption-text">メンテナンスモード中のWeb画面</span><a class="headerlink" href="#id12" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="ita-maintenance-mode-setting-value">
+<span id="id5"></span><h3><span class="section-number">6.2.2. </span>メンテナンスモードの種類と設定値について<a class="headerlink" href="#ita-maintenance-mode-setting-value" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">メンテナンスモードの種類と設定値は以下です。</div>
+</div>
+<table class="docutils align-left" id="id13">
+<caption><span class="caption-number">表 6.19 </span><span class="caption-text">メンテナンスモードの種類と設定値について</span><a class="headerlink" href="#id13" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>種類</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>サーバーサイドジョブ停止</p></td>
+<td><p>OFFもしくはON</p></td>
+<td><div class="line-block">
+<div class="line">以下のバックヤードが行う処理について、サーバーサイドジョブ停止がONである場合はステータスが「未実行」の状態で停止し、処理が行われないようになります。（作業実行などの登録自体は可能です。）</div>
+<div class="line">サーバーサイドジョブ停止をONにする前にステータスが「準備中」「実行中」「実行中(遅延)」となっている対象については「完了」「完了(異常)」「想定外エラー」となるまで処理が行われます。</div>
+<div class="line">- ita-by-ansible-execute(Ansible作業実行)</div>
+<div class="line">- ita-by-terraform-cloud-ep-execute(Terraform Cloud/EP作業実行)</div>
+<div class="line">- ita-by-terraform-cli-execute(Terraform CLI作業実行)</div>
+<div class="line">- ita-by-menu-create(パラメータシート作成)</div>
+<div class="line">- ita-by-menu-export-import(メニューエクスポート・インポート)</div>
+<div class="line">- ita-by-excel-export-import(Excel一括エクスポート・インポート)</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>読み取り専用モード</p></td>
+<td><p>OFFもしくはON</p></td>
+<td><div class="line-block">
+<div class="line">データの登録/更新が発生するすべての機能が利用できなくなり、すべてのバックヤードが行う処理についても停止されます。</div>
+<div class="line"><strong>各メニューからのデータの閲覧は可能となります。</strong></div>
+<div class="line">利用できなくなる主な機能は以下です。</div>
+<div class="line">- 各メニューからのデータ登録/更新</div>
+<div class="line">- Conductor作成および作業実行</div>
+<div class="line">- 各ドライバーの作業実行</div>
+<div class="line">- パラメータシート定義・作成の実行</div>
+<div class="line">- メニューエクスポート・インポートの実行</div>
+<div class="line">- Excel一括エクスポート・インポートの実行</div>
+<div class="line">- ログレベルの変更</div>
+<div class="line">- オーガナイゼーションの作成</div>
+<div class="line">- ワークスペースの作成・更新・削除</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id6">
+<h2><span class="section-number">6.3. </span>メンテナンスモードの確認、設定変更について<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">メンテナンスモードの確認および設定変更は、下記の手順で行ないます。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">Exastro システムにシステム管理者でログインします。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">メニューより <span class="menuselection">システム状態設定</span> をクリックします。</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/settings_running_state_menu.png"><img alt="../../_images/settings_running_state_menu.png" class="align-left" src="../../_images/settings_running_state_menu.png" style="width: 200px;" />
+</a>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">システム状態一覧</span> 画面に現在のメンテナンスモードの設定値が表示されます。変更したいメンテナンスモードの設定を切り替え、 <span class="guilabel">登録</span> をクリックします。</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/settings_running_state_maintenancemode.png"><img alt="../../_images/settings_running_state_maintenancemode.png" src="../../_images/settings_running_state_maintenancemode.png" style="width: 600px;" />
+</a>
+</figure>
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 83.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>サーバーサイドジョブ停止</p></td>
+<td><div class="line-block">
+<div class="line">ONにするとサーバーサイドジョブが起動停止します。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>読み取り専用モード</p></td>
+<td><div class="line-block">
+<div class="line">ONにすると読み取り専用モードとなり、データの書き込みが停止します。</div>
+<div class="line">ONの場合、ログレベルの変更は反映されません。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</section>
+<section id="ita-maintenance-mode-get-backyard-execute-check">
+<span id="id7"></span><h2><span class="section-number">6.4. </span>バックヤード起動状態一括取得<a class="headerlink" href="#ita-maintenance-mode-get-backyard-execute-check" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">システム上のすべてのオーガナイゼーションおよびワークスペースにおける、以下のバックヤードが行う処理についてステータスが「準備中」「実行中」「実行中(遅延)」である対象を取得します。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">ita-by-conductor-synchronize(Conductor作業実行)</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ita-by-ansible-execute(Ansible作業実行)</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ita-by-terraform-cloud-ep-execute(Terraform Cloud/EP作業実行)</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ita-by-terraform-cli-execute(Terraform CLI作業実行)</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ita-by-menu-create(パラメータシート作成)</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ita-by-menu-export-import(メニューエクスポート・インポート)</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ita-by-excel-export-import(Excel一括エクスポート・インポート)</div>
+</div>
+</li>
+</ul>
+<div class="line-block">
+<div class="line">また、システム単位/各オーガナイゼーション単位/各ワークスペース単位でステータス「準備中」「実行中」「実行中(遅延)」である処理のカウントを取得できます。</div>
+<div class="line"><strong>※このカウントについては「ita-by-conductor-synchronize(Conductor作業実行)」のステータスが「準備中」「実行中」「実行中(遅延)」であるものは含まれません。</strong></div>
+<div class="line">（Conductor内で実行される各ドライバの処理はカウントされます。）</div>
+</div>
+<section id="id8">
+<h3><span class="section-number">6.4.1. </span>前提条件<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">本作業には下記のコマンドが必要となるため、事前にインストールをしてください。</div>
+</div>
+<ul class="simple">
+<li><p>作業クライアントに必要なアプリケーション</p>
+<ul>
+<li><p><kbd class="kbd docutils literal notranslate">curl</kbd></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">git</kbd></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">jq</kbd></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id9">
+<h3><span class="section-number">6.4.2. </span>事前準備<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">GitHub リポジトリから取得した資材の中にある、シェルスクリプトを実行しバックヤード起動状態を一括取得します。</div>
+<div class="line">confファイルは、各種設定・取得シェルで使用します。</div>
+</div>
+<ol class="arabic">
+<li><p>バックヤード起動状態一括取得のシェルスクリプトを、リポジトリから <kbd class="kbd docutils literal notranslate">git</kbd> <kbd class="kbd docutils literal notranslate">clone</kbd> により取得します。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exastro Platform の資材を入手</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/exastro-suite/exastro-platform.git
+</pre></div>
+</div>
+</li>
+<li><p>取得した資材のtoolsフォルダに移動し、API設定ファイル（ <code class="file docutils literal notranslate"><span class="pre">api-auth.conf</span></code> ）のAPI実行先URLを、システム管理者用サイトアドレスに変更します。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>api-auth.conf
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">変更箇所</div>
+</div>
+<ul>
+<li><p>api-auth.conf</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CONF_BASE_URL</span><span class="o">={</span>システム管理者用サイトアドレス<span class="o">}</span>
+<span class="nv">CURL_OPT</span><span class="o">=</span>-svk
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">自己証明書を利用している場合、証明書エラーが発生します。</div>
+<div class="line">設定ファイル内の <kbd class="kbd docutils literal notranslate">CURL_OPT=</kbd>-<kbd class="kbd docutils literal notranslate">sv</kbd> を <kbd class="kbd docutils literal notranslate">CURL_OPT=</kbd>-<kbd class="kbd docutils literal notranslate">svk</kbd> に変更することで証明書エラーを回避できますが、認証機関から発行された正しい証明書をインストールすることを推奨します。</div>
+</div>
+</div>
+</li>
+</ol>
+</section>
+<section id="id10">
+<h3><span class="section-number">6.4.3. </span>バックヤード起動状態一括取得の実行<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<ul>
+<li><p>コマンド</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./get-backyard-execute-check.sh
+</pre></div>
+</div>
+</li>
+<li><p>コマンド実行後に入力（入力例）</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>your<span class="w"> </span>username<span class="w"> </span>:<span class="w"> </span>システム管理者自身のユーザー名を入力します
+your<span class="w"> </span>password<span class="w"> </span>:<span class="w"> </span>システム管理者自身のパスワードを入力します
+</pre></div>
+</div>
+</li>
+<li><p>成功時の結果表示</p>
+<div class="line-block">
+<div class="line"><cite>&quot;result&quot;: &quot;000-00000&quot;</cite> が、成功したことを示しています。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;<span class="w"> </span>HTTP/1.1<span class="w"> </span><span class="m">200</span><span class="w"> </span>OK
+&lt;<span class="w"> </span>Date:<span class="w"> </span>Tue,<span class="w"> </span><span class="m">10</span><span class="w"> </span>Oct<span class="w"> </span><span class="m">2023</span><span class="w"> </span><span class="m">07</span>:59:09<span class="w"> </span>GMT
+&lt;<span class="w"> </span>Content-Type:<span class="w"> </span>application/json
+&lt;<span class="w"> </span>Content-Length:<span class="w"> </span><span class="m">2449</span>
+&lt;<span class="w"> </span>Connection:<span class="w"> </span>keep-alive
+&lt;
+<span class="o">{</span><span class="w"> </span><span class="o">[</span>data<span class="w"> </span>not<span class="w"> </span>shown<span class="o">]</span>
+*<span class="w"> </span>Connection<span class="w"> </span><span class="c1">#0 to host platform-auth left intact</span>
+<span class="o">{</span>
+<span class="w">  </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;execute_count&quot;</span>:<span class="w"> </span><span class="m">3</span>,<span class="w">  </span><span class="c1"># システム全体でのステータス「準備中」「実行中」「実行中(遅延)」対象のカウント（ita-by-conductor-synchronizeを含まない）</span>
+<span class="w">    </span><span class="s2">&quot;organizations&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">      </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;Organization_01&quot;</span>,#<span class="w"> </span>システム上のオーガナイゼーション
+<span class="w">        </span><span class="s2">&quot;execute_count&quot;</span>:<span class="w"> </span><span class="m">2</span>,<span class="w">  </span><span class="c1"># オーガナイゼーション単位でのステータス「準備中」「実行中」「実行中(遅延)」対象のカウント（ita-by-conductor-synchronizeを含まない）</span>
+<span class="w">        </span><span class="s2">&quot;workspaces&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">          </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;Workspace_01&quot;</span>,<span class="w">  </span><span class="c1"># オーガナイゼーション上のワークスペース</span>
+<span class="w">            </span><span class="s2">&quot;execute_count&quot;</span>:<span class="w"> </span><span class="m">2</span>,<span class="w">  </span><span class="c1"># ワークスペース単位でのステータス「準備中」「実行中」「実行中(遅延)」対象のカウント（ita-by-conductor-synchronizeを含まない）</span>
+<span class="w">            </span><span class="s2">&quot;backyards&quot;</span>:<span class="w"> </span><span class="o">{</span><span class="w">  </span><span class="c1"># 各バックヤード機能でステータスが「準備中」「実行中」「実行中(遅延)」の対象がある場合、対象のID, 最終更新日時, ステータスID, ステータス名称が格納されます</span>
+<span class="w">              </span><span class="s2">&quot;ita-by-ansible-execute&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                  </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;965dfd15-b741-4dd8-9136-00e505b14c44&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;last_update_timestamp&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-10-10T16:58:18.748121Z&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;status_id&quot;</span>:<span class="w"> </span><span class="s2">&quot;3&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;status_name&quot;</span>:<span class="w"> </span><span class="s2">&quot;実行中&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                  </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;f3d52038-cb76-470f-ab7e-1898df107a87&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;last_update_timestamp&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-10-10T16:58:39.247824Z&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;status_id&quot;</span>:<span class="w"> </span><span class="s2">&quot;3&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;status_name&quot;</span>:<span class="w"> </span><span class="s2">&quot;実行中&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">              </span><span class="o">]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-conductor-synchronize&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                  </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;6b9743ab-73fd-49e9-b20b-910f00546827&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;last_update_timestamp&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-10-10T16:55:04.053156Z&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;status_id&quot;</span>:<span class="w"> </span><span class="s2">&quot;3&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;status_name&quot;</span>:<span class="w"> </span><span class="s2">&quot;実行中&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                  </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;9b8ab1d7-b2f7-4e78-8529-e79b63ce495b&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;last_update_timestamp&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-10-10T16:50:02.175727Z&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;status_id&quot;</span>:<span class="w"> </span><span class="s2">&quot;3&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;status_name&quot;</span>:<span class="w"> </span><span class="s2">&quot;実行中&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">              </span><span class="o">]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-excel-export-import&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-menu-create&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-menu-export-import&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-terraform-cli-execute&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-terraform-cloud-ep-execute&quot;</span>:<span class="w"> </span><span class="o">[]</span>
+<span class="w">            </span><span class="o">}</span>
+<span class="w">          </span><span class="o">}</span>
+<span class="w">        </span><span class="o">]</span>
+<span class="w">      </span><span class="o">}</span>,
+<span class="w">      </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;Organization_02&quot;</span>,<span class="w">  </span><span class="c1"># システム上のオーガナイゼーション</span>
+<span class="w">        </span><span class="s2">&quot;execute_count&quot;</span>:<span class="w"> </span><span class="m">1</span>,<span class="w">  </span><span class="c1"># オーガナイゼーション単位でのステータス「準備中」「実行中」「実行中(遅延)」対象のカウント（ita-by-conductor-synchronizeを含まない）</span>
+<span class="w">        </span><span class="s2">&quot;workspaces&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">          </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;Workspace_01&quot;</span>,<span class="w">  </span><span class="c1"># オーガナイゼーション上のワークスペース</span>
+<span class="w">            </span><span class="s2">&quot;execute_count&quot;</span>:<span class="w"> </span><span class="m">0</span>,<span class="w">  </span><span class="c1"># ワークスペース単位でのステータス「準備中」「実行中」「実行中(遅延)」対象のカウント（ita-by-conductor-synchronizeを含まない）</span>
+<span class="w">            </span><span class="s2">&quot;backyards&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">              </span><span class="s2">&quot;ita-by-ansible-execute&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-conductor-synchronize&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-excel-export-import&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-menu-create&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-menu-export-import&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-terraform-cli-execute&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-terraform-cloud-ep-execute&quot;</span>:<span class="w"> </span><span class="o">[]</span>
+<span class="w">            </span><span class="o">}</span>
+<span class="w">          </span><span class="o">}</span>,
+<span class="w">          </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;Workspace_02&quot;</span>,<span class="w">  </span><span class="c1"># オーガナイゼーション上のワークスペース</span>
+<span class="w">            </span><span class="s2">&quot;execute_count&quot;</span>:<span class="w"> </span><span class="m">1</span>,<span class="w">  </span><span class="c1"># ワークスペース単位でのステータス「準備中」「実行中」「実行中(遅延)」対象のカウント（ita-by-conductor-synchronizeを含まない）</span>
+<span class="w">            </span><span class="s2">&quot;backyards&quot;</span>:<span class="w"> </span><span class="o">{</span><span class="w">  </span><span class="c1"># 各バックヤード機能でステータスが「準備中」「実行中」「実行中(遅延)」の対象がある場合、対象のID, 最終更新日時, ステータスID, ステータス名称が格納されます</span>
+<span class="w">              </span><span class="s2">&quot;ita-by-ansible-execute&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-conductor-synchronize&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-excel-export-import&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-menu-create&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-menu-export-import&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-terraform-cli-execute&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-terraform-cloud-ep-execute&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                  </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;da1ac029-5e2d-45d7-8516-3c54edbad45d&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;last_update_timestamp&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-10-10T17:13:58.744328Z&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;status_id&quot;</span>:<span class="w"> </span><span class="s2">&quot;3&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;status_name&quot;</span>:<span class="w"> </span><span class="s2">&quot;実行中&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">              </span><span class="o">]</span>
+<span class="w">            </span><span class="o">}</span>
+<span class="w">          </span><span class="o">}</span>
+<span class="w">        </span><span class="o">]</span>
+<span class="w">      </span><span class="o">}</span>
+<span class="w">    </span><span class="o">]</span>
+<span class="w">  </span><span class="o">}</span>,
+<span class="w">  </span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;000-00000&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;ts&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-10-10T07:59:05.079Z&quot;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">以下の例のように、execute_countが0になった後に「読み取り専用モード」をONに設定することを推奨します。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;<span class="w"> </span>HTTP/1.1<span class="w"> </span><span class="m">200</span><span class="w"> </span>OK
+&lt;<span class="w"> </span>Date:<span class="w"> </span>Tue,<span class="w"> </span><span class="m">10</span><span class="w"> </span>Oct<span class="w"> </span><span class="m">2023</span><span class="w"> </span><span class="m">07</span>:59:09<span class="w"> </span>GMT
+&lt;<span class="w"> </span>Content-Type:<span class="w"> </span>application/json
+&lt;<span class="w"> </span>Content-Length:<span class="w"> </span><span class="m">2449</span>
+&lt;<span class="w"> </span>Connection:<span class="w"> </span>keep-alive
+&lt;
+<span class="o">{</span><span class="w"> </span><span class="o">[</span>data<span class="w"> </span>not<span class="w"> </span>shown<span class="o">]</span>
+*<span class="w"> </span>Connection<span class="w"> </span><span class="c1">#0 to host platform-auth left intact</span>
+<span class="o">{</span>
+<span class="w">  </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;execute_count&quot;</span>:<span class="w"> </span><span class="m">0</span>,<span class="w">  </span><span class="c1"># システム全体でのステータス「準備中」「実行中」「実行中(遅延)」対象のカウント（ita-by-conductor-synchronizeを含まない）</span>
+<span class="w">    </span><span class="s2">&quot;organizations&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">      </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;Organization_01&quot;</span>,<span class="w">  </span><span class="c1"># システム上のオーガナイゼーション</span>
+<span class="w">        </span><span class="s2">&quot;execute_count&quot;</span>:<span class="w"> </span><span class="m">0</span>,<span class="w">  </span><span class="c1"># オーガナイゼーション単位でのステータス「準備中」「実行中」「実行中(遅延)」対象のカウント（ita-by-conductor-synchronizeを含まない）</span>
+<span class="w">        </span><span class="s2">&quot;workspaces&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">          </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;Workspace_01&quot;</span>,<span class="w">  </span><span class="c1"># オーガナイゼーション上のワークスペース</span>
+<span class="w">            </span><span class="s2">&quot;execute_count&quot;</span>:<span class="w"> </span><span class="m">0</span>,<span class="w">  </span><span class="c1"># ワークスペース単位でのステータス「準備中」「実行中」「実行中(遅延)」対象のカウント（ita-by-conductor-synchronizeを含まない）</span>
+<span class="w">            </span><span class="s2">&quot;backyards&quot;</span>:<span class="w"> </span><span class="o">{</span><span class="w">  </span><span class="c1"># 各バックヤード機能でステータスが「準備中」「実行中」「実行中(遅延)」の対象がある場合、対象のID, 最終更新日時, ステータスID, ステータス名称が格納されます</span>
+<span class="w">              </span><span class="s2">&quot;ita-by-ansible-execute&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-conductor-synchronize&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                  </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;6b9743ab-73fd-49e9-b20b-910f00546827&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;last_update_timestamp&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-10-10T16:55:04.053156Z&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;status_id&quot;</span>:<span class="w"> </span><span class="s2">&quot;3&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;status_name&quot;</span>:<span class="w"> </span><span class="s2">&quot;実行中&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                  </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;9b8ab1d7-b2f7-4e78-8529-e79b63ce495b&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;last_update_timestamp&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-10-10T16:50:02.175727Z&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;status_id&quot;</span>:<span class="w"> </span><span class="s2">&quot;3&quot;</span>,
+<span class="w">                  </span><span class="s2">&quot;status_name&quot;</span>:<span class="w"> </span><span class="s2">&quot;実行中&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">              </span><span class="o">]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-excel-export-import&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-menu-create&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-menu-export-import&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-terraform-cli-execute&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-terraform-cloud-ep-execute&quot;</span>:<span class="w"> </span><span class="o">[]</span>
+<span class="w">            </span><span class="o">}</span>
+<span class="w">          </span><span class="o">}</span>
+<span class="w">        </span><span class="o">]</span>
+<span class="w">      </span><span class="o">}</span>,
+<span class="w">      </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;Organization_02&quot;</span>,<span class="w">  </span><span class="c1"># システム上のオーガナイゼーション</span>
+<span class="w">        </span><span class="s2">&quot;execute_count&quot;</span>:<span class="w"> </span><span class="m">0</span>,<span class="w">  </span><span class="c1"># オーガナイゼーション単位でのステータス「準備中」「実行中」「実行中(遅延)」対象のカウント（ita-by-conductor-synchronizeを含まない）</span>
+<span class="w">        </span><span class="s2">&quot;workspaces&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">          </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;Workspace_01&quot;</span>,<span class="w">  </span><span class="c1"># オーガナイゼーション上のワークスペース</span>
+<span class="w">            </span><span class="s2">&quot;execute_count&quot;</span>:<span class="w"> </span><span class="m">0</span>,<span class="w">  </span><span class="c1"># ワークスペース単位でのステータス「準備中」「実行中」「実行中(遅延)」対象のカウント（ita-by-conductor-synchronizeを含まない）</span>
+<span class="w">            </span><span class="s2">&quot;backyards&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">              </span><span class="s2">&quot;ita-by-ansible-execute&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-conductor-synchronize&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-excel-export-import&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-menu-create&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-menu-export-import&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-terraform-cli-execute&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-terraform-cloud-ep-execute&quot;</span>:<span class="w"> </span><span class="o">[]</span>
+<span class="w">            </span><span class="o">}</span>
+<span class="w">          </span><span class="o">}</span>,
+<span class="w">          </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;Workspace_02&quot;</span>,<span class="w">  </span><span class="c1"># オーガナイゼーション上のワークスペース</span>
+<span class="w">            </span><span class="s2">&quot;execute_count&quot;</span>:<span class="w"> </span><span class="m">0</span>,<span class="w">  </span><span class="c1"># ワークスペース単位でのステータス「準備中」「実行中」「実行中(遅延)」対象のカウント（ita-by-conductor-synchronizeを含まない）</span>
+<span class="w">            </span><span class="s2">&quot;backyards&quot;</span>:<span class="w"> </span><span class="o">{</span><span class="w">  </span><span class="c1"># 各バックヤード機能でステータスが「準備中」「実行中」「実行中(遅延)」の対象がある場合、対象のID, 最終更新日時, ステータスID, ステータス名称が格納されます</span>
+<span class="w">              </span><span class="s2">&quot;ita-by-ansible-execute&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-conductor-synchronize&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-excel-export-import&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-menu-create&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-menu-export-import&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-terraform-cli-execute&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">              </span><span class="s2">&quot;ita-by-terraform-cloud-ep-execute&quot;</span>:<span class="w"> </span><span class="o">[]</span>
+<span class="w">            </span><span class="o">}</span>
+<span class="w">          </span><span class="o">}</span>
+<span class="w">        </span><span class="o">]</span>
+<span class="w">      </span><span class="o">}</span>
+<span class="w">    </span><span class="o">]</span>
+<span class="w">  </span><span class="o">}</span>,
+<span class="w">  </span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;000-00000&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;ts&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-10-10T07:59:05.079Z&quot;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>RestAPIを直接呼び出す場合は以下の内容で呼び出すことが出来ます。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;システム管理者のユーザー名を設定してください:システム管理者のパスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
+<span class="nv">BASE_URL</span><span class="o">=</span>システム管理者用サイトアドレスを設定してください
+
+curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/ita/backyard-execute-check/&quot;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="monitoring.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">5. </span>監視</a></li>
+    <li class="next"><a href="backup_and_restore.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">7. </span>データバックアップ・リストア</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

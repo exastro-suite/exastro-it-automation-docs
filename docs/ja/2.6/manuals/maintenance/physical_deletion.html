@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>11. データの物理削除 &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="テンプレート" href="../../templates/index.html" />
+    <link rel="prev" title="10. Gitlab認証トークンの更新手順" href="gitlab_token.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/maintenance/physical_deletion.html" selected>current</option>
+              <option value="../../../../ja/2.6/manuals/maintenance/physical_deletion.html" selected>2.6(current)</option>
+              <option value="../../../../ja/2.5/manuals/maintenance/physical_deletion.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/maintenance/physical_deletion.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/maintenance/physical_deletion.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/maintenance/physical_deletion.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/maintenance/physical_deletion.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/maintenance/physical_deletion.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/maintenance/physical_deletion.html" selected>日本語</option>
+              <option value="../../../../en/2.6/manuals/maintenance/physical_deletion.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="gitlab_token.html" title="前のトピックへ"><span class="section-number">10. </span>Gitlab認証トークンの更新手順</a></li>
+        <li class="next"><a href="../../templates/index.html" title="次のトピックへ">テンプレート</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../it_automation_base/index.html">基本操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../host_group/index.html">ホストグループ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible-driver/index.html">Ansible ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform_driver/index.html">Terraform ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import/index.html">エクスポート・インポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cicd_for_iac/index.html">CI/CD for IaC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">メンテナンス</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="service_list.html">1. サービス一覧</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log_list.html">2. ログ一覧</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log_level.html">3. ログレベル</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../share/ja/manuals/maintenance/log_aggregation.html">4. ログの集約</a></li>
+<li class="toctree-l3"><a class="reference internal" href="monitoring.html">5. 監視</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintenance_mode.html">6. メンテナンスモード</a></li>
+<li class="toctree-l3"><a class="reference internal" href="backup_and_restore.html">7. データバックアップ・リストア</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file_autoclean.html">8. ファイル削除機能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="operation_autoclean.html">9. オペレーション削除管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gitlab_token.html">10. Gitlab認証トークンの更新手順</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">11. データの物理削除</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">11.1. 目的</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">11.2. 前提条件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">11.3. 概要</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">11.4. 詳細</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id6">11.4.1. メニュー「基本コンソール:メニュー-テーブル紐付管理」の復活・設定</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id7">11.4.2. 該当メニューの紐付設定</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id9">11.4.3. 該当メニューの削除許可フラグ有効化</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id10">11.4.4. 情報の削除</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">11. データの物理削除</a><ul>
+<li><a class="reference internal" href="#id2">11.1. 目的</a></li>
+<li><a class="reference internal" href="#id3">11.2. 前提条件</a></li>
+<li><a class="reference internal" href="#id4">11.3. 概要</a></li>
+<li><a class="reference internal" href="#id5">11.4. 詳細</a><ul>
+<li><a class="reference internal" href="#id6">11.4.1. メニュー「基本コンソール:メニュー-テーブル紐付管理」の復活・設定</a></li>
+<li><a class="reference internal" href="#id7">11.4.2. 該当メニューの紐付設定</a><ul>
+<li><a class="reference internal" href="#id8">削除非推奨のメニュー</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">11.4.3. 該当メニューの削除許可フラグ有効化</a></li>
+<li><a class="reference internal" href="#id10">11.4.4. 情報の削除</a><ul>
+<li><a class="reference internal" href="#id11">該当情報の選択</a></li>
+<li><a class="reference internal" href="#id12">削除対象確認</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">メンテナンス</a></li>
+    
+    <li><span class="section-number">11. </span>データの物理削除</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="id1">
+<h1><span class="section-number">11. </span>データの物理削除<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<section id="id2">
+<h2><span class="section-number">11.1. </span>目的<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">不要となったデータを削除することによるリソースの削減、およびパフォーマンスの向上が挙げられます。</div>
+<div class="line">また、削除対象のリソースによっては、機密情報の完全削除を通じてセキュリティを強化することも可能です。</div>
+</div>
+</section>
+<section id="id3">
+<h2><span class="section-number">11.2. </span>前提条件<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">削除できるユーザーは、<span class="menuselection">管理コンソール▶ロール-メニュー紐付管理</span> で設定したメニューの紐付 <strong class="program">メンテナンス＋削除可</strong> となっているロールのユーザーとなります。</div>
+<div class="line">また、削除対象となるメニューについては、<span class="menuselection">基本コンソール▶メニュー-テーブル紐付管理</span> から削除許可フラグを <strong class="program">有効（True）</strong> にする必要があります。</div>
+<div class="line"><span class="menuselection">基本コンソール▶メニュー-テーブル紐付管理</span> は、初期状態では非表示（廃止データ扱い）となっているため <strong class="program">復活</strong> ならびに <strong class="program">メンテナンス可</strong> への変更が必要です。</div>
+</div>
+</section>
+<section id="id4">
+<h2><span class="section-number">11.3. </span>概要<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Exastro IT Automation におけるデータの物理削除とは、データベースからのデータ物理削除、ならびに、ファイルの削除となります。</div>
+<div class="line">削除されたデータやファイルは復元することができません。</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">危険</p>
+<div class="line-block">
+<div class="line">物理削除は、データ復旧ができないというリスクを伴うため、慎重に検討する必要があります。</div>
+<div class="line">システムに初期状態で存在するデータを削除した場合、正常に動作しなくなる恐れがあるため注意が必要です。</div>
+</div>
+</div>
+</section>
+<section id="id5">
+<h2><span class="section-number">11.4. </span>詳細<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+<section id="id6">
+<h3><span class="section-number">11.4.1. </span>メニュー「基本コンソール:メニュー-テーブル紐付管理」の復活・設定<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">該当メニューの物理削除を実行するためには、メニュー <span class="menuselection">基本コンソール▶メニュー-テーブル紐付管理</span> を使用できることが前提となります。</div>
+<div class="line">初期状態では、メニュー <span class="menuselection">基本コンソール▶メニュー-テーブル紐付管理</span> は表示されず、該当メニューの情報を削除することができません。</div>
+<div class="line">メニュー <span class="menuselection">基本コンソール▶メニュー-テーブル紐付管理</span> を使用できるようにするには、以下の手順で状態を変更する必要があります。</div>
+<div class="line">すでに、復活状態で紐付 <strong class="program">メンテナンス可</strong> 状態となっている場合は、設定不要です。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">メニュー <span class="menuselection">メニュー-テーブル紐付管理</span> の復活</div>
+</div>
+<div class="line-block">
+<div class="line">メニュー <span class="menuselection">メニュー-テーブル紐付管理</span> を復活するには以下の手順で実施します。</div>
+<div class="line"><br /></div>
+<div class="line">フィルタで、廃止：廃止のみ、メニュー： <strong class="program">基本コンソール:メニュー-テーブル紐付管理</strong> を絞り込みます。</div>
+<div class="line">表示されている明細を選択して、<span class="guilabel">編集</span> ⇒ <span class="guilabel">復活</span> ⇒ <span class="guilabel">編集確認</span> ⇒ <span class="guilabel">編集反映</span> を実施します。</div>
+</div>
+<figure class="align-left">
+<a class="with-border-thin reference internal image-reference" href="../../_images/filter_menu_table.png"><img alt="メニュー「基本コンソール:メニュー-テーブル紐付管理」の復活" class="with-border-thin" src="../../_images/filter_menu_table.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">メニュー <span class="menuselection">メニュー-テーブル紐付管理</span> の紐付 <strong class="program">メンテナンス可</strong> 設定</div>
+</div>
+<div class="line-block">
+<div class="line">フィルタで、<strong class="program">メニュー：基本コンソール:メニュー-テーブル紐付管理</strong> を絞り込みます。</div>
+<div class="line">表示されている明細を選択して、<span class="guilabel">編集</span> ⇒ 紐付 <strong class="program">メンテナンス可</strong> 選択 ⇒ <span class="guilabel">編集反映</span> を実施します。</div>
+</div>
+<figure class="align-left">
+<a class="with-border-thin reference internal image-reference" href="../../_images/menu_table_link_update.png"><img alt="メニュー「基本コンソール:メニュー-テーブル紐付管理」の紐付「メンテナンス可」設定" class="with-border-thin" src="../../_images/menu_table_link_update.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+</ol>
+</section>
+<section id="id7">
+<h3><span class="section-number">11.4.2. </span>該当メニューの紐付設定<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">続いて、削除したい情報が存在するメニューのロールを変更する必要があります。</div>
+<div class="line">すでに、紐付 <strong class="program">メンテナンス＋削除可</strong> となっている場合は、設定不要です。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">該当メニューの紐付 <strong class="program">メンテナンス＋削除可</strong> 設定</div>
+</div>
+<div class="line-block">
+<div class="line">フィルタで、メニュー：該当メニューを絞り込みます。</div>
+<div class="line">表示されている明細を選択、編集⇒紐付 <strong class="program">メンテナンス＋削除可</strong> 選択⇒編集反映を実施します。</div>
+</div>
+<figure class="align-left">
+<a class="with-border-thin reference internal image-reference" href="../../_images/user_menu_update.png"><img alt="メニュー「基本コンソール:メニュー-テーブル紐付管理」の紐付「メンテナンス可」設定" class="with-border-thin" src="../../_images/user_menu_update.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">一部のメニューについては、紐付で <strong class="program">メンテナンス＋削除可</strong> を設定できますが、削除することができないメニュー、削除するとシステムが動作しなくなるメニューがあります。</div>
+<div class="line">削除非推奨メニューついては、次の内容を確認してください。</div>
+</div>
+</div>
+<section id="id8">
+<h4>削除非推奨のメニュー<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h4>
+<table class="filter-table docutils align-left" id="id13">
+<caption><span class="caption-number">表 11.1 </span><span class="caption-text">削除非推奨のメニュー</span><a class="headerlink" href="#id13" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 22.2%" />
+<col style="width: 44.4%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">UUID</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">メニュー</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">補足</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">110103</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">イベント:イベントフロー</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">110104</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">イベント:イベント履歴</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">110104-001</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">イベント:イベント履歴</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">20208</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Ansible-Legacy:作業実行</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">20208-001</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Ansible-Legacy:作業実行</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">20209</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Ansible-Legacy:作業状態確認</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">20310</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Ansible-Pioneer:作業実行</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">20310-001</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Ansible-Pioneer:作業実行</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">20311</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Ansible-Pioneer:作業状態確認</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">20410</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Ansible-LegacyRole:作業実行</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">20410-001</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Ansible-LegacyRole:作業実行</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">20411</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Ansible-LegacyRole:作業状態確認</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">30101</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Conductor:Conductorインターフェース情報</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">全件削除時にConductor編集/作業実行でエラーとなる</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">30104</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Conductor:Conductor編集/作業実行</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">30106</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Conductor:Conductor作業確認</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">50101</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">パラメータシート作成:パラメータシート定義・作成</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">50501</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">パラメータ集:パラメータ集</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">60101</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">エクスポート/インポート:メニューエクスポート</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">60102</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">エクスポート/インポート:メニューインポート</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">60104</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">エクスポート/インポート:Excel一括エクスポート</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">60105</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">エクスポート/インポート:Excel一括インポート</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">80113</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Terraform-Cloud/EP:作業実行</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">80115</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Terraform-Cloud/EP:作業状態確認</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">90108</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Terraform-CLI:作業実行</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">90110</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Terraform-CLI:作業状態確認</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">[システムで付与されたID]</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">[独自のメニューグループ]</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">削除不可</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id9">
+<h3><span class="section-number">11.4.3. </span>該当メニューの削除許可フラグ有効化<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">続いて、削除したい情報が存在するメニューの削除許可フラグを有効化する必要があります。</div>
+<div class="line">削除許可フラグの有効化は、メニュー <span class="menuselection">基本コンソール▶メニュー-テーブル紐付管理</span> より行います。</div>
+<div class="line">すでに、削除許可フラグが有効化されている場合は、設定不要です。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">該当メニューの削除許可フラグ有効化</div>
+</div>
+<div class="line-block">
+<div class="line">フィルタで、メニュー：該当メニューを絞り込みます。</div>
+<div class="line">表示されている明細を選択して、編集⇒削除許可フラグ <strong class="program">True</strong> 選択⇒編集反映を実施します。</div>
+</div>
+<figure class="align-left">
+<a class="with-border-thin reference internal image-reference" href="../../_images/menu_table_link_list_update.png"><img alt="該当メニューの削除許可フラグ有効化" class="with-border-thin" src="../../_images/menu_table_link_list_update.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+</ol>
+</section>
+<section id="id10">
+<h3><span class="section-number">11.4.4. </span>情報の削除<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">上述した、設定を行うことで、該当情報の削除が行えるようになります。</div>
+<div class="line">該当情報の削除は、該当メニューを選択して、フィルタやデフォルト表示された一覧から、削除対象となる情報を選択して削除します。</div>
+<div class="line"><span class="guilabel">削除</span> ボタンが非表示の場合は、設定を再度確認してください。</div>
+</div>
+<section id="id11">
+<h4>該当情報の選択<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">該当メニューで、情報を絞り込む際は、フィルタで情報を絞り込みます。（メニューによっては、フィルタが無い場合もあります）</div>
+<div class="line">表示されている明細を選択して、<span class="guilabel">削除</span> ボタンを押下することで、削除対象確認が表示されます。</div>
+</div>
+<figure class="align-left">
+<a class="with-border-thin reference internal image-reference" href="../../_images/delete_target_select.png"><img alt="該当情報の選択" class="with-border-thin" src="../../_images/delete_target_select.png" style="width: 600px;" />
+</a>
+</figure>
+</section>
+<section id="id12">
+<h4>削除対象確認<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">選択された削除対象の情報が表示されます。</div>
+<div class="line">対象に問題が無ければ、<span class="guilabel">削除</span> ボタン押下します。</div>
+<div class="line">押下後、削除の実行確認が表示されます。</div>
+<div class="line">削除の実行確認で、<kbd class="kbd docutils literal notranslate">delete</kbd> を入力することで、選択された情報が削除されます。</div>
+</div>
+<figure class="align-left">
+<a class="with-border-thin reference internal image-reference" href="../../_images/delete_target_confirm.png"><img alt="削除対象確認" class="with-border-thin" src="../../_images/delete_target_confirm.png" style="width: 600px;" />
+</a>
+</figure>
+<figure class="align-left">
+<a class="with-border-thin reference internal image-reference" href="../../_images/delete_execute_confirm.png"><img alt="削除の実行確認" class="with-border-thin" src="../../_images/delete_execute_confirm.png" style="width: 600px;" />
+</a>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">ファイルがCloud上のストレージに格納されている場合は、削除に時間がかかる場合があります。</div>
+<div class="line">タイムアウトによりエラーが発生した場合でも、実際の削除処理が継続されている可能性がありますので、フィルタで画面を更新し、対象が消えるまでお待ちください。</div>
+</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">危険</p>
+<div class="line-block">
+<div class="line">物理削除されたデータ、ならびに、ファイルは復旧することはできません。</div>
+<div class="line">また、履歴がある場合は、履歴を含めたすべての内容が削除されます。</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="gitlab_token.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">10. </span>Gitlab認証トークンの更新手順</a></li>
+    <li class="next"><a href="../../templates/index.html" title="次のトピックへ"><span>次のトピックへ</span>テンプレート</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

@@ -1,0 +1,1913 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>5. 収集機能 &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="6. Ansible実行環境のカスタマイズ" href="ansible_ee_custom.html" />
+    <link rel="prev" title="4. Ansible-LegacyRole" href="ansible_legacyrole.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/ansible-driver/collect.html" selected>current</option>
+              <option value="../../../../ja/2.6/manuals/ansible-driver/collect.html" selected>2.6(current)</option>
+              <option value="../../../../ja/2.5/manuals/ansible-driver/collect.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/ansible-driver/collect.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/ansible-driver/collect.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/ansible-driver/collect.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/ansible-driver/collect.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/ansible-driver/collect.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/ansible-driver/collect.html" selected>日本語</option>
+              <option value="../../../../en/2.6/manuals/ansible-driver/collect.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="ansible_legacyrole.html" title="前のトピックへ"><span class="section-number">4. </span>Ansible-LegacyRole</a></li>
+        <li class="next"><a href="ansible_ee_custom.html" title="次のトピックへ"><span class="section-number">6. </span>Ansible実行環境のカスタマイズ</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../it_automation_base/index.html">基本操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../host_group/index.html">ホストグループ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Ansible ドライバ</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ansible_common.html">1. Ansible共通</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansible_legacy.html">2. Ansible-Legacy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansible_pioneer.html">3. Ansible-Pioneer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansible_legacyrole.html">4. Ansible-LegacyRole</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5. 収集機能</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">5.1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">5.2. 収集機能概要</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id4">5.2.1. 収集機能について</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id7">5.2.2. パラメータシートへの登録方法について</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">5.3. 収集機能でのディレクトリ、ファイル構造、変数取り扱い</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#target-directory-file-structure">5.3.1. 収集対象ディレクトリ、ファイル構造</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id11">5.3.2. 取り扱う変数と種類</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">5.4. 収集機能 メニュー構成</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id13">5.4.1. メニュー/画面一覧</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">5.5. 収集機能の利用手順</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id15">5.5.1. 作業フロー</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">5.6. 収集機能・操作方法説明</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#ansible">5.6.1. Ansible 共通</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#ansible-legacyansible-pioneeransible-legacyrole">5.6.2. Ansible-Legacy、Ansible-Pioneer、Ansible-LegacyRole</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#backyard">5.6.3. BackYardコンテンツ</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">5.7. 付録</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id21">5.7.1. 参考資材</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#about-execute-example">5.7.2. 収集実行例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ansible_ee_custom.html">6. Ansible実行環境のカスタマイズ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform_driver/index.html">Terraform ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import/index.html">エクスポート・インポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cicd_for_iac/index.html">CI/CD for IaC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintenance/index.html">メンテナンス</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">5. 収集機能</a><ul>
+<li><a class="reference internal" href="#id2">5.1. はじめに</a></li>
+<li><a class="reference internal" href="#id3">5.2. 収集機能概要</a><ul>
+<li><a class="reference internal" href="#id4">5.2.1. 収集機能について</a><ul>
+<li><a class="reference internal" href="#id5">収集機能概要図</a></li>
+<li><a class="reference internal" href="#id6">収集機能データ登録処理概要図</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7">5.2.2. パラメータシートへの登録方法について</a><ul>
+<li><a class="reference internal" href="#id8">収集機能の動作要件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">5.3. 収集機能でのディレクトリ、ファイル構造、変数取り扱い</a><ul>
+<li><a class="reference internal" href="#target-directory-file-structure">5.3.1. 収集対象ディレクトリ、ファイル構造</a></li>
+<li><a class="reference internal" href="#id11">5.3.2. 取り扱う変数と種類</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id12">5.4. 収集機能 メニュー構成</a><ul>
+<li><a class="reference internal" href="#id13">5.4.1. メニュー/画面一覧</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14">5.5. 収集機能の利用手順</a><ul>
+<li><a class="reference internal" href="#id15">5.5.1. 作業フロー</a><ul>
+<li><a class="reference internal" href="#id16">収集機能作業フロー</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id17">5.6. 収集機能・操作方法説明</a><ul>
+<li><a class="reference internal" href="#ansible">5.6.1. Ansible 共通</a><ul>
+<li><a class="reference internal" href="#about-collected-item-value-list">収集項目値管理</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ansible-legacyansible-pioneeransible-legacyrole">5.6.2. Ansible-Legacy、Ansible-Pioneer、Ansible-LegacyRole</a><ul>
+<li><a class="reference internal" href="#about-collect-status">収集状況の確認</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#backyard">5.6.3. BackYardコンテンツ</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id20">5.7. 付録</a><ul>
+<li><a class="reference internal" href="#id21">5.7.1. 参考資材</a></li>
+<li><a class="reference internal" href="#about-execute-example">5.7.2. 収集実行例</a><ul>
+<li><a class="reference internal" href="#id23">複数ファイルの同一メニューを対象とした場合</a></li>
+<li><a class="reference internal" href="#about-values-for-collected-files">収集対象ファイルの値の取り扱い</a></li>
+<li><a class="reference internal" href="#id27">複数の同一ファイル名がアップロード対象ファイルの指定例</a></li>
+<li><a class="reference internal" href="#id28">ファイル削除時の収集対象ファイル内の記載例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">Ansible ドライバ</a></li>
+    
+    <li><span class="section-number">5. </span>収集機能</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="id1">
+<h1><span class="section-number">5. </span>収集機能<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<section id="id2">
+<h2><span class="section-number">5.1. </span>はじめに<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書では、ITAの収集機能および操作方法について説明します。</div>
+</div>
+</section>
+<section id="id3">
+<h2><span class="section-number">5.2. </span>収集機能概要<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本章では収集機能について説明します。</div>
+</div>
+<section id="id4">
+<h3><span class="section-number">5.2.1. </span>収集機能について<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">収集機能とは、ITAで実施した、作業実行結果（規定のフォーマットで出力されたソースファイル）を元に、パラメータシートへ値を自動で登録する機能です。</div>
+<div class="line">本機能は、Ansible-Driverを対象としています。</div>
+<div class="line">Ansibleの詳細情報については、「Ansibleの製品マニュアル」を参照してください。</div>
+<div class="line">Ansible-Driverの詳細については、「<a class="reference internal" href="index.html"><span class="doc">Ansible ドライバ</span></a>」を参照してください。</div>
+<div class="line">パラメータシートの詳細については、「<a class="reference internal" href="../create_param/menu_creation.html"><span class="doc">パラメータシート作成機能</span></a>」を参照してください。</div>
+</div>
+<section id="id5">
+<h4>収集機能概要図<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">以下は、収集機能実行までの全体の概要図です。</div>
+</div>
+<figure class="align-left" id="id29">
+<span id="overview-all"></span><a class="reference internal image-reference" href="../../_images/overview_all.drawio.png"><img alt="収集機能概要図" src="../../_images/overview_all.drawio.png" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 5.7 </span><span class="caption-text">収集機能概要図</span><a class="headerlink" href="#id29" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id6">
+<h4>収集機能データ登録処理概要図<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">以下は、収集機能のデータ登録処理の概要図です。</div>
+<div class="line">ファイル格納先、収集項目値管理の設定値に従い、パラメータシートへの登録、更新を行います。</div>
+</div>
+<figure class="align-left" id="id30">
+<a class="reference internal image-reference" href="../../_images/overview_process.drawio.png"><img alt="収集機能データ登録処理概要図" src="../../_images/overview_process.drawio.png" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 5.8 </span><span class="caption-text">収集機能データ登録処理概要図</span><a class="headerlink" href="#id30" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">※収集機能のデータ型の取り扱い例については、「 <a class="reference internal" href="#about-values-for-collected-files"><span class="std std-ref">収集対象ファイルの値の取り扱い</span></a> 」をご参照ください。</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id7">
+<h3><span class="section-number">5.2.2. </span>パラメータシートへの登録方法について<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">収集機能は、登録された設定値から対象のファイルの値をパラメータシートに登録、更新します。</div>
+</div>
+<section id="id8">
+<h4>収集機能の動作要件<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ITAで以下の設定がされている必要があります。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">パラメータシート定義・作成</span> にて、パラメータシート（ホスト/オペレーションあり）が作成されている</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">収集項目値管理</span> にて、作業実行結果（ソースファイル）とパラメータシートの項目と紐づけ設定がされている</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">収集対象機器（ホスト名）が、機器一覧に登録済み</div>
+</div>
+</li>
+</ul>
+<div class="line-block">
+<div class="line">作業実行後に、以下の状態である場合、パラメータシートへの登録を実施します。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">作業実行の結果、正常に完了している</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">作業実行の出力結果として、規定の構造でディレクトリ、ファイルが配置されている</div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">パラメータシートへの登録元となるソースファイルを生成するIaC（Playbook、Role）については、各ユーザー様で準備する必要があります。</div>
+<div class="line">参考： Ansible Playbook Collection（OS設定収集）</div>
+<div class="line"><a class="reference external" href="https://github.com/exastro-suite/playbook-collection-docs/blob/master/README.ja.md">https://github.com/exastro-suite/playbook-collection-docs/blob/master/README.ja.md</a></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="id9">
+<h2><span class="section-number">5.3. </span>収集機能でのディレクトリ、ファイル構造、変数取り扱い<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本章では収集機能で扱うディレクトリ、ファイル構造、変数について説明します。</div>
+</div>
+<section id="target-directory-file-structure">
+<span id="id10"></span><h3><span class="section-number">5.3.1. </span>収集対象ディレクトリ、ファイル構造<a class="headerlink" href="#target-directory-file-structure" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>収集対象のファイルフォーマット</p>
+<div class="literal-block-wrapper docutils container" id="id31">
+<div class="code-block-caption"><span class="caption-number">リスト 5.29 </span><span class="caption-text">Yaml形式で出力されたファイル</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>■ファイル名：RH_snmp.yml
+■ファイルの内容：
+VAR_RH_sshd_config:
+<span class="w">  </span>-<span class="w"> </span>key:<span class="w"> </span>PermitRootLogin
+<span class="w">    </span>value:<span class="w"> </span>yes
+<span class="w">  </span>-<span class="w"> </span>key:<span class="w"> </span>PasswordAuthentication
+<span class="w">    </span>value:<span class="w"> </span>no
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>収集対象ディレクトリ構造</p></li>
+</ol>
+<div class="line-block">
+<div class="line">収集対象ディレクトリについて、収集対象ディレクトリパス（ソースファイルの出力先として）をIaC(Playbook,Role)内にて、で以下の変数として扱えます。</div>
+</div>
+<span id="table-ita-original-variable"></span><table class="docutils align-left" id="id32">
+<caption><span class="caption-number">表 5.31 </span><span class="caption-text">収集機能対象ディレクトリITA独自変数</span><a class="headerlink" href="#id32" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 35.7%" />
+<col style="width: 53.6%" />
+<col style="width: 10.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ITA独自変数</p></th>
+<th class="head"><p>変数指定内容</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>__parameter_dir__</p></td>
+<td><p>作業結果ディレクトリ配下の「_parameters」のパスへ変換されます。</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>__parameters_file_dir__</p></td>
+<td><p>作業結果ディレクトリ配下の「_parameters_file」のパスへ変換されます。</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>__parameters_dir_for_epc__</p></td>
+<td><p>作業ディレクトリ配下の「_parameters」のパスへ変換されます。</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>__parameters_file_dir_for_epc__</p></td>
+<td><p>作業ディレクトリ配下の「_parameters_file」のパスへ変換されます。</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">収集対象のディレクトリ（_parameters）の上位ディレクトリのパスについて、Ansible-Driverの実行モード、実施した作業Noに依存します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id33">
+<div class="code-block-caption"><span class="caption-number">リスト 5.30 </span><span class="caption-text">収集対象ディレクトリパス</span><a class="headerlink" href="#id33" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>|-  _parameters           ※1
+|   |-  localhost         ※2
+|       |-  SAMPLE.yml    ※3
+|-  _parameters_file      ※4
+|   |-  localhost         ※2
+        |-  test.txt      ※5
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">※上位ディレクトリのパス以降の階層構造</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">備考</div>
+<div class="line">※1 収集対象ディレクトリ（名称固定）</div>
+<div class="line">※2 ホスト名（機器一覧に登録されているものが収集対象）</div>
+<div class="line">※3 収集対象ファイル</div>
+<div class="line">※4 収集対象ディレクトリファイルアップロード用（名称固定）</div>
+<div class="line">※5 ファイルアップロード対象ファイル</div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">ソースファイルを生成するPlaybookを作成する際の出力先について、「<a class="reference internal" href="#table-ita-original-variable"><span class="std std-ref">収集機能対象ディレクトリITA独自変数</span></a>」を使用しない場合、以下の構造を認識してPlaybookを記述する必要があります。</div>
+</div>
+</div>
+<table class="docutils align-left" id="id34">
+<caption><span class="caption-number">表 5.32 </span><span class="caption-text">Ansible-Driverモード別上位ディレクトリパス</span><a class="headerlink" href="#id34" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17.9%" />
+<col style="width: 17.9%" />
+<col style="width: 53.6%" />
+<col style="width: 10.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>モード</p></th>
+<th class="head"><p>モード別識別子</p></th>
+<th class="head"><p>階層構造</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ansible-Legacy</p></td>
+<td><p>legacy</p></td>
+<td><p>/&lt;上位ディレクトリ(Ansible）&gt;/legacy/</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Ansible-Pioneer</p></td>
+<td><p>pioneer</p></td>
+<td><p>/&lt;上位ディレクトリ(Ansible）&gt;/pioneer/</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Ansible-LegacyRole</p></td>
+<td><p>legacy_role</p></td>
+<td><p>/&lt;上位ディレクトリ(Ansible）&gt;/legacy_role/</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">※上位ディレクトリ(Ansible）は、 <code class="file docutils literal notranslate"><span class="pre">/storage/&lt;Organization&gt;/&lt;Workspace&gt;/driver/ansible/</span></code> です。</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">■　e.g.) 収集対象ファイルのファイルパス、ディレクトリ構造</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id35">
+<div class="code-block-caption"><span class="caption-number">リスト 5.31 </span><span class="caption-text">収集対象ファイルのファイルパス、ディレクトリ構造</span><a class="headerlink" href="#id35" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>実行モード：<span class="w"> </span>Ansible-Legacy
+作業No：<span class="w"> </span><span class="m">00000000</span>-0000-0000-0000-000000000001
+対象ホスト：<span class="w"> </span>localhost
+作業実行ディレクトリ<span class="w">    </span>：<span class="w"> </span>/storage/Organization/Workspace/driver/ansible/legacy/00000000-0000-0000-0000-000000000001/in/
+作業実行結果ディレクトリ：<span class="w"> </span>/storage/Organization/Workspace/driver/ansible/legacy/00000000-0000-0000-0000-000000000001/out/
+収集対象ファイルパス、ディレクトリ構造：
+<span class="w">  </span>-<span class="w"> </span>/storage/Organization/Workspace/driver/ansible/legacy/00000000-0000-0000-0000-000000000001/in/_parameters/localhost/SAMPLE.yml
+<span class="w">  </span>-<span class="w"> </span>/storage/Organization/Workspace/driver/ansible/legacy/00000000-0000-0000-0000-000000000001/in/_parameters/localhost/OS/RH_snmpd.yml
+<span class="w">  </span>-<span class="w"> </span>/storage/Organization/Workspace/driver/ansible/legacy/00000000-0000-0000-0000-000000000001/in/_parameters_file/localhost/TEST.txt
+<span class="w">  </span>-<span class="w"> </span>/storage/Organization/Workspace/driver/ansible/legacy/00000000-0000-0000-0000-000000000001/out/_parameters/localhost/SAMPLE.yml
+<span class="w">  </span>-<span class="w"> </span>/storage/Organization/Workspace/driver/ansible/legacy/00000000-0000-0000-0000-000000000001/out/_parameters/localhost/OS/RH_snmpd.yml
+<span class="w">  </span>-<span class="w"> </span>/storage/Organization/Workspace/driver/ansible/legacy/00000000-0000-0000-0000-000000000001/out/_parameters_file/localhost/TEST.txt
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">ファイルアップロード項目のパラメータシートを収集対象とする場合、ソースファイルの変数の値（ファイル名/ファイルパス）と該当するファイルが、_parameters_file配下に配置されている必要があります。</div>
+<div class="line">収集項目値管理の設定は、「収集項目値管理」参照してください。</div>
+<div class="line">ファイルアップロードの最大ファイルサイズについて、「<a class="reference internal" href="../create_param/menu_creation.html"><span class="doc">パラメータシート作成機能</span></a>」を参照してください。</div>
+<div class="line">_parameters_file配下に配置されているアップロード対象ファイルの指定方法として、以下の記載方法があります。</div>
+</div>
+<table class="docutils align-left" id="id36">
+<caption><span class="caption-number">表 5.33 </span><span class="caption-text">アップロード対象ファイルの指定方法</span><a class="headerlink" href="#id36" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 21.7%" />
+<col style="width: 65.2%" />
+<col style="width: 13.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>指定方式</p></th>
+<th class="head"><p>YAMLファイルへの記載方法</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ファイル名指定</p></td>
+<td><p>VAR_FILE_NAME : &lt;‘ファイル名&gt; ’</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ファイルパス指定 (後方一致)</p></td>
+<td><p>VAR_FILE_NAME : ‘/&lt;階層X&gt;/&lt;ファイル名&gt;’</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">ファイル名指定時、該当するファイルが複数存在する場合、対象となるファイルは、ランダムとなります。</div>
+<div class="line">ファイルパス指定(後方一致)時、該当するファイルが複数ある場合、対象となるファイルは、ランダムとなります。</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">■　e.g.) 通常変数の構造の変数の場合のディレクトリ構造とソースファイルの内容</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id37">
+<div class="code-block-caption"><span class="caption-number">リスト 5.32 </span><span class="caption-text">通常変数の構造の変数の場合のディレクトリ構造とソースファイルの内容</span><a class="headerlink" href="#id37" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span> ■構造
+ 【上位ディレクトリ】
+    |-  _parameters
+    |   |-  localhost
+    |       |-  SAMPLE.yml             ※ソースファイル
+    |-  _parameters_file
+    |   |-  localhost
+    |      |-  test.txt                ※アップロード対象ファイル
+    |      |-  APP001
+              |-  config               ※アップロード対象ファイル
+ ■収集対象ファイル名：SAMPLE.yml
+ ■ファイルの内容
+ VAR_upload_file: test.txt
+ VAR_upload_fileX: config
+ VAR_upload_fileZ: &#39;/APP001/config&#39;
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id11">
+<h3><span class="section-number">5.3.2. </span>取り扱う変数と種類<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">収集機能で扱うソースファイル内で扱える変数は以下の3種類があります。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">通常変数</div>
+<div class="line-block">
+<div class="line">変数名に対して具体値を1つ定義できる変数です。</div>
+</div>
+</div>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id38">
+<div class="code-block-caption"><span class="caption-number">リスト 5.33 </span><span class="caption-text">通常変数の場合</span><a class="headerlink" href="#id38" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_users</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+</pre></div>
+</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">複数具体値変数</div>
+<div class="line-block">
+<div class="line">変数名に対して具体値を複数定義できる変数です。</div>
+</div>
+</div>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id39">
+<div class="code-block-caption"><span class="caption-number">リスト 5.34 </span><span class="caption-text">複数具体値の構造の変数の場合</span><a class="headerlink" href="#id39" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="nt">VAR_users</span><span class="p">:</span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
+</pre></div>
+</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">多段変数</div>
+<div class="line-block">
+<div class="line">階層化された変数です。</div>
+</div>
+</div>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id40">
+<div class="code-block-caption"><span class="caption-number">リスト 5.35 </span><span class="caption-text">多段変数の構造の変数の場合</span><a class="headerlink" href="#id40" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="nt">VAR_users</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">user-name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice</span><span class="w">      </span><span class="c1">#メンバ変数</span>
+<span class="w">      </span><span class="nt">authorized</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">変数名は、下記の7文字を除くascii文字(0x20～0x7e)が使用出来ます。</div>
+<div class="line-block">
+<div class="line">&quot; . [ ] ' \ :</div>
+</div>
+<div class="line">尚、クォーテーションで囲まないと変数名の先頭に使用出来ない文字がいくつかあります。</div>
+<div class="line">詳しくは、Ansibleドキュメント <a class="reference external" href="https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html#gotchas">Yamlsyntax</a>を参照下さい。</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id12">
+<h2><span class="section-number">5.4. </span>収集機能 メニュー構成<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本章では、収集機能のメニュー構成について説明します。</div>
+</div>
+<section id="id13">
+<h3><span class="section-number">5.4.1. </span>メニュー/画面一覧<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><span class="menuselection">Ansible共通</span> のメニュー</div>
+<div class="line"><span class="menuselection">Ansible共通</span> のメニュー一覧を以下に記述します。</div>
+</div>
+</li>
+</ol>
+<table class="docutils align-left" id="id41">
+<caption><span class="caption-number">表 5.34 </span><span class="caption-text">Ansible共通 メニュー/画面一覧</span><a class="headerlink" href="#id41" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>メニューグループ</p></th>
+<th class="head"><p>メニュー・画面</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Ansible共通</p></td>
+<td><p>収集項目値管理</p></td>
+<td><div class="line-block">
+<div class="line">作業実行の出力結果（ソースファイル）と、パラメータシートの項目の紐づけ設定を行い、</div>
+<div class="line">収集機能で登録する対象パラメータを管理します。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<figure class="align-left" id="id42">
+<a class="reference internal image-reference" href="../../_images/collected_item_value_list.png"><img alt="設定項目値管理画面" src="../../_images/collected_item_value_list.png" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 5.9 </span><span class="caption-text">設定項目値管理画面</span><a class="headerlink" href="#id42" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">Ansible driver メニュー</div>
+<div class="line">Ansible driverの各メニューグループに対応するメニュー一覧を以下に記述します。</div>
+</div>
+</li>
+</ol>
+<table class="docutils align-left" id="id43">
+<caption><span class="caption-number">表 5.35 </span><span class="caption-text">Ansible driver メニュー/画面一覧</span><a class="headerlink" href="#id43" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>メニューグループ</p></th>
+<th class="head"><p>メニュー・画面</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Ansible-Legacy</p></td>
+<td><p>作業管理</p></td>
+<td><p>作業実行履歴を管理します。収集機能によるパラメータシートの登録状況、実行ログを参照します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Ansible-LegacyRole</p></td>
+<td><p>作業管理</p></td>
+<td><p>作業実行履歴を管理します。収集機能によるパラメータシートの登録状況、実行ログを参照します。</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Ansible-Pioneer</p></td>
+<td><p>作業管理</p></td>
+<td><p>作業実行履歴を管理します。収集機能によるパラメータシートの登録状況、実行ログを参照します。</p></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-left" id="id44">
+<a class="reference internal image-reference" href="../../_images/execution_list_legacy.png"><img alt="作業管理画面" src="../../_images/execution_list_legacy.png" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 5.10 </span><span class="caption-text">作業管理画面</span><a class="headerlink" href="#id44" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="id14">
+<h2><span class="section-number">5.5. </span>収集機能の利用手順<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">収集機能の利用手順について説明します</div>
+</div>
+<section id="id15">
+<h3><span class="section-number">5.5.1. </span>作業フロー<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">収集機能の実施における標準的なフローは以下のとおりです。</div>
+<div class="line">ITA Ansible-Driverの利用方法は、「<a class="reference internal" href="index.html"><span class="doc">Ansible ドライバ</span></a>」を参照してください。</div>
+<div class="line">ITA 基本コンソールの利用方法は、「<a class="reference internal" href="../it_automation_base/basic_console.html"><span class="doc">基本コンソール</span></a>」を参照してください。</div>
+</div>
+<section id="id16">
+<h4>収集機能作業フロー<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">以下は、Ansibleで作業を実行し、パラメータシートへ収集するまでの流れです。</div>
+</div>
+<ul>
+<li><p>作業フロー詳細と参照先</p>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">パラメータシート（ホスト/オペレーションあり）の作成</div>
+<div class="line"><span class="menuselection">パラメータシート作成</span> の <span class="menuselection">パラメータシート定義・作成</span> の画面からのパラメータシートを作成します。</div>
+<div class="line">詳細は「<a class="reference internal" href="../create_param/menu_creation.html"><span class="doc">パラメータシート作成機能</span></a>」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">収集項目値管理</span> の登録</div>
+<div class="line"><span class="menuselection">Ansible共通</span> の <span class="menuselection">収集項目値管理</span> の画面から、ソースファイルとパラメータシートの項目の紐付情報の登録をします。</div>
+<div class="line">詳細は「<a class="reference internal" href="#about-collected-item-value-list"><span class="std std-ref">収集項目値管理</span></a>」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">作業準備</div>
+<div class="line">作業実行のための準備を行います。</div>
+<div class="line">詳細は、「<a class="reference internal" href="index.html"><span class="doc">Ansible ドライバ</span></a>」 、「<a class="reference internal" href="../it_automation_base/conductor.html"><span class="doc">Conductor</span></a>」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">作業実行</div>
+<div class="line">実行日時、投入オペレーション、Movement、ワークフローを選択し処理の実行を指示します。</div>
+<div class="line">実行について「<a class="reference internal" href="index.html"><span class="doc">Ansible ドライバ</span></a>」 、「<a class="reference internal" href="../it_automation_base/conductor.html"><span class="doc">Conductor</span></a>」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">収集機能実行</div>
+<div class="line">作業実行が完了した作業Noを収集機能の対象として、パラメータシートへの登録処理を実施します。</div>
+<div class="line">詳細は「<a class="reference internal" href="#about-backyard"><span class="std std-ref">BackYardコンテンツ</span></a>」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">収集状況確認</div>
+<div class="line">「<span class="menuselection">Ansible-Legacy</span> 」/「<span class="menuselection">Ansible-Pioneer</span> 」/「<span class="menuselection">Ansible-LegacyRole</span> 」の <span class="menuselection">作業管理</span> の画面では、完了した作業の収集状態の確認、ログファイルがDL可能です。</div>
+<div class="line">詳細は「<a class="reference internal" href="#about-collect-status"><span class="std std-ref">収集状況の確認</span></a>」を参照してください。</div>
+</div>
+</li>
+</ol>
+</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="id17">
+<h2><span class="section-number">5.6. </span>収集機能・操作方法説明<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本章では、収集機能で利用するメニューの機能について説明します。</div>
+<div class="line">登録方法の詳細は、関連マニュアルの「<a class="reference internal" href="../it_automation_base/basic_console.html"><span class="doc">基本コンソール</span></a>」をご参照下さい。</div>
+</div>
+<section id="ansible">
+<h3><span class="section-number">5.6.1. </span>Ansible 共通<a class="headerlink" href="#ansible" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">本節では、<span class="menuselection">Ansible共通</span> での操作について記載します。</div>
+</div>
+<section id="about-collected-item-value-list">
+<span id="id18"></span><h4>収集項目値管理<a class="headerlink" href="#about-collected-item-value-list" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><span class="menuselection">収集項目値管理</span> では、収集項目とパラメータシートの項目の紐付設定を行います。</div>
+</div>
+<figure class="align-left" id="id45">
+<a class="reference internal image-reference" href="../../_images/submenu_collected_item_value_list.png"><img alt="サブメニュー画面（収集項目値管理）" src="../../_images/submenu_collected_item_value_list.png" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 5.11 </span><span class="caption-text">サブメニュー画面（収集項目値管理）</span><a class="headerlink" href="#id45" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">一覧 ▶ 登録 or 編集</span> より、収集項目の登録を行います。</div>
+</div>
+<figure class="align-left" id="id46">
+<a class="reference internal image-reference" href="../../_images/edit_collected_item_value_list.png"><img alt="登録、編集画面（収集項目値管理）" src="../../_images/edit_collected_item_value_list.png" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 5.12 </span><span class="caption-text">登録、編集画面（収集項目値管理）</span><a class="headerlink" href="#id46" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">収集項目値管理</span> 画面の項目一覧は以下のとおりです。</div>
+</div>
+</li>
+</ol>
+<table class="docutils align-left" id="id47">
+<caption><span class="caption-number">表 5.36 </span><span class="caption-text">登録画面項目一覧（収集項目値管理）：収集項目(From)</span><a class="headerlink" href="#id47" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目：収集項目(From)</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>パース形式</p></td>
+<td><p>YAML:YAML形式のファイルを解析し、パラメータを生成します。</p></td>
+<td><p>〇</p></td>
+<td><p>※1</p></td>
+</tr>
+<tr class="row-odd"><td><p>PREFIX（ファイル名）</p></td>
+<td><p>ファイル名の拡張子を除いて入力して下さい。</p></td>
+<td><p>〇</p></td>
+<td><p>※1</p></td>
+</tr>
+<tr class="row-even"><td><p>変数名</p></td>
+<td><div class="line-block">
+<div class="line">収集対象の変数名を入力して下さい。</div>
+<div class="line">配列、ハッシュ構造の場合、メンバ変数の入力が必須となります。</div>
+</div>
+</td>
+<td><p>〇</p></td>
+<td><p>※1</p></td>
+</tr>
+<tr class="row-odd"><td><p>メンバ変数</p></td>
+<td><p>変数が複数具体値、多段変数の場合入力して下さい。</p></td>
+<td></td>
+<td><p>※1</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-left" id="id48">
+<caption><span class="caption-number">表 5.37 </span><span class="caption-text">登録画面項目一覧（収集項目値管理）：パラメータシート(To)</span><a class="headerlink" href="#id48" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目：パラメータシート(To)</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>メニューグループ:メニュー:項目</p></td>
+<td><div class="line-block">
+<div class="line">項目を選択して下さい。</div>
+<div class="line">メニューグループ名、メニュー名、項目名を「:」区切りで接続した形で表示されます。</div>
+</div>
+</td>
+<td></td>
+<td><p>※2</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">※1 ファイル名、変数、メンバ変数入力値の例</div>
+<div class="line">※2 同一の「<span class="menuselection">パラメータシート(To)</span> - <span class="menuselection">メニューグループ：メニュー：項目</span> 」に対して、複数の「<span class="menuselection">PREFIX(ファイル名)</span> - <span class="menuselection">変数名</span> 」を設定している場合、ファイル順に処理が実行されます。詳しくは「<a class="reference internal" href="#about-execute-example"><span class="std std-ref">収集実行例</span></a>」参照。</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">■e.g.) 通常変数の構造の変数の場合</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id49">
+<div class="code-block-caption"><span class="caption-number">リスト 5.36 </span><span class="caption-text">通常変数の構造の変数の場合</span><a class="headerlink" href="#id49" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>■ファイル名: SAMPLE.yml
+■ファイルの内容
+
+VAR_sample_config_1: yes
+VAR_sample_config_2: test_parameter
+
+■収集値項目管理の収集項目(FROM)の入力可能な値
+
+PREFIX(ファイル名): SAMPLE
+変数名： VAR_sample_config_1
+         VAR_sample_config_2
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">■ e.g.) 複数具体値の構造の変数の場合1</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id50">
+<div class="code-block-caption"><span class="caption-number">リスト 5.37 </span><span class="caption-text">複数具体値の構造の変数の場合1</span><a class="headerlink" href="#id50" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>■ファイル名: SAMPLE_2.yml
+■ファイルの内容
+
+VAR_sample2_conf:
+  - SAMPLE1
+  - SAMPLE2
+  - SAMPLE3
+
+■収集値項目管理の収集項目(FROM)の入力可能な値
+PREFIX(ファイル名): SAMPLE_2
+変数名： VAR_sample2_conf
+メンバ変数：  [0]
+             [1]
+             [2]
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">■ e.g.) 複数具体値の構造の変数の場合2</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id51">
+<div class="code-block-caption"><span class="caption-number">リスト 5.38 </span><span class="caption-text">複数具体値の構造の変数の場合2</span><a class="headerlink" href="#id51" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>■ファイル名: RH_sshd.yml
+■ファイルの内容
+
+VAR_RH_sshd_config:
+  - key: PermitRootLogin
+    value: yes
+  - key: PasswordAuthentication
+    value: no
+
+ ■収集値項目管理の収集項目(FROM)の入力可能な値
+ PREFIX(ファイル名): RH_sshd
+ 変数名： VAR_RH_sshd_config:
+ メンバ変数：  [0].key
+              [0].value
+              [1].key
+              [1].value
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">■e.g.)複数具体値の構造の変数の場合3</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id52">
+<div class="code-block-caption"><span class="caption-number">リスト 5.39 </span><span class="caption-text">複数具体値の構造の変数の場合3</span><a class="headerlink" href="#id52" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>■ファイル名: RH_snmp.yml
+■ファイルの内容
+
+VAR_RH_snmpd_info:
+  com2sec:
+    - sec_name: &quot;testsec&quot;
+      source: &quot;192.168.1.0/24&quot;
+      community: &quot;public&quot;
+    - sec_name: &quot;local&quot;
+      source: &quot;localhost&quot;
+      community: &quot;private&quot;
+
+■収集値項目管理の収集項目(FROM)の入力可能な値
+PREFIX(ファイル名): RH_snmp
+変数名： VAR_RH_snmp_config:
+メンバ変数：  com2sec[0].sec_name
+             com2sec[0].source
+             com2sec[0].community
+             com2sec[1].sec_name
+             com2sec[1].source
+             com2sec[1].community
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="ansible-legacyansible-pioneeransible-legacyrole">
+<h3><span class="section-number">5.6.2. </span>Ansible-Legacy、Ansible-Pioneer、Ansible-LegacyRole<a class="headerlink" href="#ansible-legacyansible-pioneeransible-legacyrole" title="Link to this heading">¶</a></h3>
+<section id="about-collect-status">
+<span id="id19"></span><h4>収集状況の確認<a class="headerlink" href="#about-collect-status" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">各メニューグループ（<span class="menuselection">Ansible-Legacy</span> /<span class="menuselection">Ansible-Pioneer</span> /<span class="menuselection">Ansible-LegacyRole</span> ）の <span class="menuselection">作業管理</span> の画面では、完了した作業の収集状態の確認、ログファイルがDL可能です。</div>
+</div>
+<figure class="align-left" id="id53">
+<a class="reference internal image-reference" href="../../_images/submenu_execution_list_legacy.png"><img alt="作業管理画面" src="../../_images/submenu_execution_list_legacy.png" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 5.13 </span><span class="caption-text">作業管理画面</span><a class="headerlink" href="#id53" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id54">
+<caption><span class="caption-number">表 5.38 </span><span class="caption-text">作業管理画面収集状況詳細</span><a class="headerlink" href="#id54" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ステータス</p></td>
+<td><div class="line-block">
+<div class="line">収集機能の実行状況の表示</div>
+<div class="line">対象外：収集機能対象外　（対象ファイルなし）</div>
+<div class="line">収集済み：収集機能実施済み</div>
+<div class="line">収集済み（通知あり）：登録/更新中に不備があった場合</div>
+<div class="line">収集エラー：Movementのオペレーション、ホストに不備がある場合</div>
+</div>
+</td>
+<td><p>※</p></td>
+</tr>
+<tr class="row-odd"><td><p>収集ログ</p></td>
+<td><p>収集機能実行のログをダウンロード</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-left" id="id55">
+<caption><span class="caption-number">表 5.39 </span><span class="caption-text">収集状況詳細</span><a class="headerlink" href="#id55" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">作業状態</div>
+<div class="line">ステータス</div>
+</div>
+</th>
+<th class="head"><p>収集機能対象</p></th>
+<th class="head"><p>対象ファイル</p></th>
+<th class="head"><div class="line-block">
+<div class="line">収集状況</div>
+<div class="line">ステータス</div>
+</div>
+</th>
+<th class="head"><p>収集ログ</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>完了以外</p></td>
+<td><p>なし</p></td>
+<td><p>対象外</p></td>
+<td><p>空</p></td>
+<td><p>空</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>完了以外</p></td>
+<td><p>あり</p></td>
+<td><p>対象外</p></td>
+<td><p>空</p></td>
+<td><p>空</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>完了</p></td>
+<td><p>なし</p></td>
+<td><p>対象</p></td>
+<td><p>対象外</p></td>
+<td><p>ログファイルあり</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>完了</p></td>
+<td><p>あり</p></td>
+<td><p>対象</p></td>
+<td><p>収集済み</p></td>
+<td><p>ログファイルあり</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>完了</p></td>
+<td><p>あり</p></td>
+<td><p>対象</p></td>
+<td><p>収集済み(通知あり）</p></td>
+<td><p>ログファイルあり</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>完了</p></td>
+<td><p>あり</p></td>
+<td><p>対象</p></td>
+<td><p>収集エラー</p></td>
+<td><p>ログファイルあり</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">※ステータスの表記について</div>
+<div class="line">作業状態が完了でない場合、収集機能対象外の為、<span class="menuselection">収集状況</span> は更新されないため、空のままとなります。</div>
+<div class="line">作業状態が完了で、収集対象ファイルが存在しない場合、ステータスは収集済み、収集ログは空の状態となります。</div>
+<div class="line"><span class="menuselection">設定項目値管理</span> の不備により、登録処理が失敗した場合でも収集済み（通知あり）となります。詳細は、以下ログファイル出力内容例を参照してください。</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>ログファイル出力内容例</strong></div>
+</div>
+<div class="line-block">
+<div class="line">■ e.g.) ログファイル出力内容例</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id56">
+<div class="code-block-caption"><span class="caption-number">リスト 5.40 </span><span class="caption-text">ログファイル出力例 - 収集済み</span><a class="headerlink" href="#id56" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span> Collect START (host name: exastro-test-1 file name: [&#39;Ansible_conf&#39;])
+ REST DATA (host name: exastro-test-1 menu ID: collect_001 operation NO: 4001e182-51d2-4918-96e0-5981c4dc6d5f)
+ Collect END (host name: exastro-test-1 file name: [&#39;Ansible_conf&#39;])
+ Collect START (host name: exastro-test-2 file name: [&#39;Ansible_conf&#39;])
+ REST DATA (host name: exastro-test-2 menu ID: collect_001 operation NO: 4001e182-51d2-4918-96e0-5981c4dc6d5f)
+ Collect END (host name: exastro-test-2 file name: [&#39;Ansible_conf&#39;])
+ Collect START (host name: exastro-test-3 file name: [&#39;Ansible_conf&#39;])
+ REST DATA (host name: exastro-test-3 menu ID: collect_001 operation NO: 4001e182-51d2-4918-96e0-5981c4dc6d5f)
+ Collect END (host name: exastro-test-3 file name: [&#39;Ansible_conf&#39;])
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id57">
+<div class="code-block-caption"><span class="caption-number">リスト 5.41 </span><span class="caption-text">ログファイル出力例 - 収集済み(通知あり)</span><a class="headerlink" href="#id57" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Collect START (host name: exastro-test-1 file name: [&#39;Ansible_conf&#39;])
+{&#39;item_1&#39;: [{&#39;status_code&#39;: &#39;&#39;, &#39;msg_args&#39;: &#39;&#39;, &#39;msg&#39;: &#39;Regular expression error (1,Value:sample_value)&#39;}]}
+[Process] Failed to register or update data in CMDB. (1/1)
+Collect END (host name: exastro-test-1 file name: [&#39;Ansible_conf&#39;])
+Collect START (host name: exastro-test-2 file name: [&#39;Ansible_conf&#39;])
+{&#39;item_1&#39;: [{&#39;status_code&#39;: &#39;&#39;, &#39;msg_args&#39;: &#39;&#39;, &#39;msg&#39;: &#39;Regular expression error (1,Value:sample_value)&#39;}]}
+[Process] Failed to register or update data in CMDB. (1/1)
+Collect END (host name: exastro-test-2 file name: [&#39;Ansible_conf&#39;])
+Collect START (host name: exastro-test-3 file name: [&#39;Ansible_conf&#39;])
+{&#39;item_1&#39;: [{&#39;status_code&#39;: &#39;&#39;, &#39;msg_args&#39;: &#39;&#39;, &#39;msg&#39;: &#39;Regular expression error (1,Value:sample_value)&#39;}]}
+[Process] Failed to register or update data in CMDB. (1/1)
+Collect END (host name: exastro-test-3 file name: [&#39;Ansible_conf&#39;])
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id58">
+<div class="code-block-caption"><span class="caption-number">リスト 5.42 </span><span class="caption-text">ログファイル出力例 - 収集エラー[Operation]</span><a class="headerlink" href="#id58" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[Process] Operation is abolished, so registration and update processing is skipped (Operation No: 4001e182-51d2-4918-96e0-5981c4dc6d5f)
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id59">
+<div class="code-block-caption"><span class="caption-number">リスト 5.43 </span><span class="caption-text">ログファイル出力例 - 収集エラー[host]</span><a class="headerlink" href="#id59" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[Process] The registration / update process is skipped because the target device has not been registered or has been abolished (host name: exastro-test-1).
+[Process] The registration / update process is skipped because the target device has not been registered or has been abolished (host name: exastro-test-2).
+[Process] The registration / update process is skipped because the target device has not been registered or has been abolished (host name: exastro-test-3).
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id60">
+<div class="code-block-caption"><span class="caption-number">リスト 5.44 </span><span class="caption-text">ログファイル出力例 - 対象外</span><a class="headerlink" href="#id60" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[Process] There is no file in the collection target directory.
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="backyard">
+<span id="about-backyard"></span><h3><span class="section-number">5.6.3. </span>BackYardコンテンツ<a class="headerlink" href="#backyard" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>パラメータシートへの登録処理の概要</p>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">正常に完了した作業の一覧を取得します。</div>
+<div class="line">収集対象ステータス： 完了</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">収集対象作業Noから以下の情報を取得します。</div>
+<div class="line">- オペレーション情報</div>
+<div class="line">- 対象ホスト</div>
+<div class="line">- 対象ソースファイル</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">対象のホストが機器一覧に登録されているか確認します。</div>
+</div>
+<div class="line-block">
+<div class="line">登録： 収集対象</div>
+<div class="line">未登録： 対象外</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">対象ソースファイルと収集項目値管理から対象パラメータシートのメニューIDを取得</div>
+<div class="line">※対象ソースファイルが複数ある場合、ファイル名の昇順で処理を実行します。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">1～4 の情報から登録、更新用のパラメータを生成します。</div>
+<div class="line">対象のメニューに対して、データ確認を実施し、登録、更新かを判定します。</div>
+<div class="line">登録：　オペレーション、ホスト組み合わせで、一意のデータが登録されていない</div>
+<div class="line">更新：　オペレーション、ホスト組み合わせで、一意のデータが登録されている</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">パラメータシートへのデータの登録/更新を実施します。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">作業Noに収集状況のステータスを更新します。</div>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+<div class="line-block">
+<div class="line">なお、パラメータシートへのデータ登録のタイミングはBackyardの実行プロセスの周期に依存します。</div>
+<div class="line">対象の作業結果については、「<a class="reference internal" href="index.html"><span class="doc">Ansible ドライバ</span></a>」を参照してください。</div>
+</div>
+</section>
+</section>
+<section id="id20">
+<h2><span class="section-number">5.7. </span>付録<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h2>
+<section id="id21">
+<h3><span class="section-number">5.7.1. </span>参考資材<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">以下、IaC(Playbook、Role)の参考例となります。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">Exastro Playbook Collection</div>
+<div class="line"><a class="reference external" href="https://github.com/exastro-suite/playbook-collection-docs/blob/master/README.ja.md">https://github.com/exastro-suite/playbook-collection-docs/blob/master/README.ja.md</a></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">Ansibleコンフィグ取得、パラメータ生成Playbook</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="makeyml-ansible-yml">
+<div class="code-block-caption"><span class="caption-number">リスト 5.45 </span><span class="caption-text">makeYml_Ansible.yml</span><a class="headerlink" href="#makeyml-ansible-yml" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>-<span class="w"> </span>name:<span class="w"> </span>make<span class="w"> </span>yaml<span class="w"> </span>file
+<span class="w">   </span>blockinfile:
+<span class="w">     </span>create:<span class="w"> </span>yes
+<span class="w">     </span>mode:<span class="w"> </span><span class="m">0644</span>
+<span class="w">     </span>insertbefore:<span class="w"> </span>EOF
+<span class="w">     </span>marker:<span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">     </span>dest:<span class="w"> </span><span class="s2">&quot;{{ __parameter_dir__  }}/{{ inventory_hostname }}/Ansible_conf.yml&quot;</span>
+<span class="w">     </span>content:<span class="w"> </span><span class="p">|</span>
+<span class="w">       </span>ansible_architecture:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_architecture<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_bios_version:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_bios_version<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_default_ipv4__address:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_default_ipv4.address<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_default_ipv4__interface:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_default_ipv4.interface<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_default_ipv4__network:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_default_ipv4.network<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_distribution:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_distribution<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_distribution_file_path:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_distribution_file_path<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_distribution_file_variety:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_distribution_file_variety<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_distribution_major_version:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_distribution_major_version<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_distribution_release:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_distribution_release<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_distribution_version:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_distribution_version<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_machine:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_machine<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_memtotal_mb:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_memtotal_mb<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_nodename:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_nodename<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_os_family:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_os_family<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_pkg_mgr:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_pkg_mgr<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_processor_cores:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_processor_cores<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_processor_count:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_processor_count<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_processor_threads_per_core:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_processor_threads_per_core<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_processor_vcpus:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_processor_vcpus<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_product_name:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_product_name<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_product_serial:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_product_serial<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_product_uuid:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_product_uuid<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_product_version:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_product_version<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_python__executable:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_python.executable<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_python_version:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_python_version<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>ansible_service_mgr:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_service_mgr<span class="w"> </span><span class="o">}}</span>
+<span class="w">       </span>vconsole_config:<span class="w"> </span>vconsole.conf
+<span class="w">       </span>yum_config:<span class="w"> </span>yum.conf
+
+-<span class="w"> </span>name:<span class="w"> </span>get<span class="w"> </span>vconsole<span class="w"> </span>config
+<span class="w">  </span>fetch:
+<span class="w">    </span>src:<span class="w"> </span>/etc/vconsole.conf
+<span class="w">    </span>dest:<span class="w"> </span><span class="s2">&quot;{{ __parameters_file_dir__ }}/{{ inventory_hostname }}/&quot;</span>
+<span class="w">    </span>flat:<span class="w"> </span>yes
+
+-<span class="w"> </span>name:<span class="w"> </span>get<span class="w"> </span>yum<span class="w"> </span>config
+<span class="w">  </span>fetch:
+<span class="w">    </span>src:<span class="w"> </span>/etc/yum.conf
+<span class="w">    </span>dest:<span class="w"> </span><span class="s2">&quot;{{ __parameters_file_dir__ }}/{{ inventory_hostname }}/&quot;</span>
+<span class="w">    </span>flat:<span class="w"> </span>yes
+</pre></div>
+</div>
+</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">※　makeYml_Ansible.yml実行して、収集対象のソースファイル(yaml)を生成する場合、gather_factsを有効にする必要があります。</div>
+<div class="line">「Ansible-Legacy」-「Movement一覧」編集時、「ヘッダーセクション」に以下を記載してください。</div>
+<div class="line">設定変更については、「<a class="reference internal" href="index.html"><span class="doc">Ansible ドライバ</span></a>」を参照してください。</div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id61">
+<div class="code-block-caption"><span class="caption-number">リスト 5.46 </span><span class="caption-text">gather_facts有効設定例</span><a class="headerlink" href="#id61" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span>
+<span class="w">  </span><span class="nt">remote_user</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">  </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="about-execute-example">
+<span id="id22"></span><h3><span class="section-number">5.7.2. </span>収集実行例<a class="headerlink" href="#about-execute-example" title="Link to this heading">¶</a></h3>
+<section id="id23">
+<h4>複数ファイルの同一メニューを対象とした場合<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">収集項目値管理にて、一つの「メニュー-項目」に対して、複数の「PREFIX(ファイル名)-変数名」の設定をしている場合、対象ホストの収集対象ディレクトリ内に、該当する複数のソースファイルがある場合の収集処理の例について記載します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id24">
+<div class="code-block-caption"><span class="caption-number">リスト 5.47 </span><span class="caption-text">収集対象ファイル</span><a class="headerlink" href="#id24" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【上位ディレクトリ】
+   |-  _parameters
+       |-  ita-sample01
+           |-  SAMPLE_01.yml
+           |-  SAMPLE_02.yml
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>■ 収集項目値管理設定</strong></div>
+</div>
+<div class="line-block">
+<div class="line">■ファイル名：SAMPLE_01.yml ,SAMPLE_02.yml</div>
+</div>
+<table class="docutils align-left" id="id62">
+<caption><span class="caption-number">表 5.40 </span><span class="caption-text">ファイルの内容</span><a class="headerlink" href="#id62" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>SAMPLE_01.yml</p></th>
+<th class="head"><p>SAMPLE_02.yml</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">VAR_sample_config_1: 1</div>
+<div class="line">VAR_sample_config_2: 2</div>
+<div class="line">VAR_sample_config_3: 3</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">VAR_sample_config_1: “A”</div>
+<div class="line">VAR_sample_config_B: “B”</div>
+<div class="line">VAR_sample_config_X: “X”</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><strong>■ 収集値項目管理の設定と対象メニュー項目の収集例</strong></div>
+</div>
+<ol class="arabic simple">
+<li><p>収集値項目管理の設定と対象メニュー-項目</p></li>
+</ol>
+<figure class="align-left" id="id63">
+<a class="reference internal image-reference" href="../../_images/link_parameter_collected_item_value_list.drawio.png"><img alt="収集値項目管理の設定とパラメータシート" src="../../_images/link_parameter_collected_item_value_list.drawio.png" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 5.14 </span><span class="caption-text">収集値項目管理の設定とパラメータシート</span><a class="headerlink" href="#id63" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><strong>■対象ファイル、収集値項目管理の設定内容に沿って、ファイル単位に収集処理を実行</strong></div>
+</div>
+<ol class="arabic simple">
+<li><p>SAMPLE_01.yml の登録処理（登録）</p></li>
+</ol>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/var_sample_01_register.png"><img alt="SAMPLE_01.yml の登録処理（登録）" src="../../_images/var_sample_01_register.png" style="width: 6.00785in; height: 0.51786in;" />
+</a>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>SAMPLE_02.yml の登録処理（更新）</p></li>
+</ol>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/var_sample_02_update.png"><img alt="SAMPLE_02.yml の登録処理（更新）" src="../../_images/var_sample_02_update.png" style="width: 6.06086in; height: 0.52304in;" />
+</a>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p>収集機能完了後のレコードの状態</p></li>
+</ol>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/var_sample_03_end.png"><img alt="収集機能完了後のレコードの状態" src="../../_images/var_sample_03_end.png" style="width: 6.06086in; height: 0.52834in;" />
+</a>
+</figure>
+</section>
+<section id="about-values-for-collected-files">
+<span id="id25"></span><h4>収集対象ファイルの値の取り扱い<a class="headerlink" href="#about-values-for-collected-files" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Yaml形式で出力された収集対象ファイルについて、パラメータシートへの登録処理時の値の取り扱いについて以下として扱います。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id26">
+<div class="code-block-caption"><span class="caption-number">リスト 5.48 </span><span class="caption-text">Sample.yml</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_TEST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TEST</span>
+<span class="nt">VAR_STR_TEST1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;TEST1&#39;</span>
+<span class="nt">VAR_STR_TEST2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;TEST2&quot;</span>
+<span class="nt">VAR_null</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="nt">VAR_NULL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NULL</span>
+<span class="nt">VAR_STR_null</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;null&quot;</span>
+<span class="nt">VAR_STR_NULL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;NULL&quot;</span>
+<span class="nt">VAR_true</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">VAR_false</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">VAR_STR_true</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
+<span class="nt">VAR_STR_false</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;false&quot;</span>
+<span class="nt">VAR_YES</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YES</span>
+<span class="nt">VAR_NO</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NO</span>
+<span class="nt">VAR_STR_YES</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;YES&quot;</span>
+<span class="nt">VAR_STR_NO</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;NO&quot;</span>
+<span class="nt">VAR_NON</span><span class="p">:</span>
+<span class="nt">VAR_Quotation</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span>
+<span class="nt">VAR_WQuotation</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="nt">VAR_INT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">■ 収集対象YAML(sample.yml)のキーと値</div>
+</div>
+<table class="docutils align-left" id="id64">
+<caption><span class="caption-number">表 5.41 </span><span class="caption-text">収集対象YAML(sample.yml)のキーと値</span><a class="headerlink" href="#id64" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 10.7%" />
+<col style="width: 35.7%" />
+<col style="width: 35.7%" />
+<col style="width: 17.9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>キー</p></th>
+<th class="head"><p>値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>VAR_TEST</p></td>
+<td><p>TEST</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>VAR_STR_TEST1</p></td>
+<td><p>'TEST1'</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>VAR_STR_TEST2</p></td>
+<td><p>&quot;TEST2&quot;</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>VAR_null</p></td>
+<td><p>null</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>VAR_NULL</p></td>
+<td><p>NULL</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>VAR_STR_null</p></td>
+<td><p>&quot;null&quot;</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>VAR_STR_NULL</p></td>
+<td><p>&quot;NULL&quot;</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>VAR_true</p></td>
+<td><p>true</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>VAR_false</p></td>
+<td><p>false</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>VAR_STR_true</p></td>
+<td><p>&quot;true&quot;</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>VAR_STR_false</p></td>
+<td><p>&quot;false&quot;</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>VAR_YES</p></td>
+<td><p>YES</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>VAR_NO</p></td>
+<td><p>NO</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p>VAR_STR_YES</p></td>
+<td><p>&quot;YES&quot;</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p>VAR_STR_NO</p></td>
+<td><p>&quot;NO&quot;</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><p>VAR_NON</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>17</p></td>
+<td><p>VAR_Quotation</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">''</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>18</p></td>
+<td><p>VAR_WQuotation</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>19</p></td>
+<td><p>VAR_INT</p></td>
+<td><p>100</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">■ 収集対象YAML(sample.yml)の収集</div>
+</div>
+<table class="docutils align-left" id="id65">
+<caption><span class="caption-number">表 5.42 </span><span class="caption-text">収集対象YAML(sample.yml)の収集</span><a class="headerlink" href="#id65" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>収集対象 (キー:値)</p></th>
+<th class="head"><div class="line-block">
+<div class="line">パラメータシート</div>
+<div class="line">項目名</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">RESTAPIレスポンス</div>
+<div class="line">値</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">RESTAPIレスポンス</div>
+<div class="line">データ型</div>
+</div>
+</th>
+<th class="head"><p>WEB画面表示</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>VAR_TEST: TEST</p></td>
+<td><p>パラメータ/VAR_TEST</p></td>
+<td><p>&quot;TEST&quot;</p></td>
+<td><p>string</p></td>
+<td><p>TEST</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>VAR_STR_TEST1: 'TEST1'</p></td>
+<td><p>パラメータ/VAR_STR_TEST1</p></td>
+<td><p>&quot;TEST1&quot;</p></td>
+<td><p>string</p></td>
+<td><p>TEST1</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>VAR_STR_TEST2: &quot;TEST2&quot;</p></td>
+<td><p>パラメータ/VAR_STR_TEST2</p></td>
+<td><p>&quot;TEST2&quot;</p></td>
+<td><p>string</p></td>
+<td><p>TEST2</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>VAR_null: null</p></td>
+<td><p>パラメータ/VAR_null</p></td>
+<td><p>null</p></td>
+<td><p>null</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>VAR_NULL: NULL</p></td>
+<td><p>パラメータ/VAR_NULL</p></td>
+<td><p>null</p></td>
+<td><p>null</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>VAR_STR_null: &quot;null&quot;</p></td>
+<td><p>パラメータ/VAR_STR_null</p></td>
+<td><p>&quot;null&quot;</p></td>
+<td><p>string</p></td>
+<td><p>null</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>VAR_STR_NULL: &quot;NULL&quot;</p></td>
+<td><p>パラメータ/VAR_STR_NULL</p></td>
+<td><p>&quot;NULL&quot;</p></td>
+<td><p>string</p></td>
+<td><p>NULL</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>VAR_true: true</p></td>
+<td><p>パラメータ/VAR_true</p></td>
+<td><p>&quot;true&quot;</p></td>
+<td><p>string</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>VAR_false: false</p></td>
+<td><p>パラメータ/VAR_false</p></td>
+<td><p>&quot;false&quot;</p></td>
+<td><p>string</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>VAR_STR_true: &quot;true&quot;</p></td>
+<td><p>パラメータ/VAR_STR_true</p></td>
+<td><p>&quot;true&quot;</p></td>
+<td><p>string</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>VAR_STR_false: &quot;false&quot;</p></td>
+<td><p>パラメータ/VAR_STR_false</p></td>
+<td><p>&quot;false&quot;</p></td>
+<td><p>string</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>VAR_YES: YES</p></td>
+<td><p>パラメータ/VAR_YES</p></td>
+<td><p>&quot;true&quot;</p></td>
+<td><p>string</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>VAR_NO: NO</p></td>
+<td><p>パラメータ/VAR_NO</p></td>
+<td><p>&quot;false&quot;</p></td>
+<td><p>string</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p>VAR_STR_YES: &quot;YES&quot;</p></td>
+<td><p>パラメータ/VAR_STR_YES</p></td>
+<td><p>&quot;YES&quot;</p></td>
+<td><p>string</p></td>
+<td><p>YES</p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p>VAR_STR_NO: &quot;NO&quot;</p></td>
+<td><p>パラメータ/VAR_STR_NO</p></td>
+<td><p>&quot;NO&quot;</p></td>
+<td><p>string</p></td>
+<td><p>NO</p></td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><p>VAR_NON:</p></td>
+<td><p>パラメータ/VAR_NON</p></td>
+<td><p>null</p></td>
+<td><p>null</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>17</p></td>
+<td><p>VAR_Quotation: ''</p></td>
+<td><p>パラメータ/VAR_Quotation</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code></p></td>
+<td><p>string</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>18</p></td>
+<td><p>VAR_WQuotation: &quot;&quot;</p></td>
+<td><p>パラメータ/VAR_WQuotation</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code></p></td>
+<td><p>string</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>19</p></td>
+<td><p>VAR_INT: 100</p></td>
+<td><p>パラメータ/VAR_INT</p></td>
+<td><p>&quot;100&quot;</p></td>
+<td><p>string</p></td>
+<td><p>100</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">※RESTAPIレスポンスの値、データ型、WEB画面上の表示について記載しています。</div>
+<div class="line">※パラメータシートの項目は、文字列(単一行)の場合です。</div>
+</div>
+<ul class="simple">
+<li><p>対象パラメータシートの画面上の表示結果</p></li>
+</ul>
+<figure class="align-default" id="id66">
+<a class="reference internal image-reference" href="../../_images/val_test_filter_item1_9.png"><img alt="対象パラメータシートの画面上の表示結果1" src="../../_images/val_test_filter_item1_9.png" style="width: 6.96252in; height: 1.98221in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 5.15 </span><span class="caption-text">対象パラメータシートの画面上の表示結果1</span><a class="headerlink" href="#id66" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id67">
+<a class="reference internal image-reference" href="../../_images/val_test_filter_item10_19.png"><img alt="対象パラメータシートの画面上の表示結果2" src="../../_images/val_test_filter_item10_19.png" style="width: 6.96252in; height: 1.98221in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 5.16 </span><span class="caption-text">対象パラメータシートの画面上の表示結果2</span><a class="headerlink" href="#id67" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>対象パラメータシートのRESTAPI(filter)での取得結果</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id68">
+<div class="code-block-caption"><span class="caption-number">リスト 5.49 </span><span class="caption-text">RESTAPI(filter)のレスポンス</span><a class="headerlink" href="#id68" title="Link to this code">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">            </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;base_datetime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023/05/17 13:58:47&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;discard&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;host_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;exastro-test-1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TEST&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_10&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_11&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_12&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_13&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_14&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YES&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_15&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NO&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_16&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_17&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_18&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_19&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TEST1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_3&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TEST2&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_4&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_5&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_6&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;null&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_7&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NULL&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_8&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;item_9&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;last_execute_timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023/05/17 13:58:47&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;last_update_date_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023/05/17 14:00:07.944031&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;last_updated_user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;収集作業機能&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;operation_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023/01/01 00:00:00&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;operation_name_disp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OP1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;operation_name_select&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023/01/01 00:00_OP1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;remarks&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ede113f8-14b1-48bf-8b3f-409f68b107ae&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;000-00000&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ts&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-05-17T05:54:03.937Z&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id27">
+<h4>複数の同一ファイル名がアップロード対象ファイルの指定例<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Yaml形式で出力された収集対象ファイルについて、同一ホストで、階層別で同一ファイル名を取り扱う必要がある場合に、アップロード対象ファイルの指定例について記載します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id69">
+<div class="code-block-caption"><span class="caption-number">リスト 5.50 </span><span class="caption-text">収集対象ファイルのファイルパス、ディレクトリ構造(複数の同一ファイル名)</span><a class="headerlink" href="#id69" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【上位ディレクトリ】
+   |-  _parameters
+   |   |-  localhost
+   |       |-  SAMPLE.yml
+   |-  _parameters_file
+   |   |-  localhost
+             |-  APP001
+                 |-  config                   #①
+             |-  APP002
+                 |-  config                   #②
+             |-  APP003
+                 |-  config                   #③
+             |-  APP002
+                 |-  config                   #④
+
+  ■収集対象ファイル名：SAMPLE.yml
+  ■ファイルの内容
+  VAR_upload_file_1: config
+  VAR_upload_file_2: ‘/APP002/config’
+  VAR_upload_file_3: ‘/APP001/config’
+  VAR_upload_file_4: ‘/APP003/APP002/config’
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">※上位ディレクトリについては、「<a class="reference internal" href="#target-directory-file-structure"><span class="std std-ref">収集対象ディレクトリ、ファイル構造</span></a>」をご参照ください。</div>
+<div class="line">収集対象ファイルの内容収集時に対処となるファイルの実体は以下となります。</div>
+</div>
+<table class="docutils align-left" id="id70">
+<caption><span class="caption-number">表 5.43 </span><span class="caption-text">収集対象ファイルとファイルの実体</span><a class="headerlink" href="#id70" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 40.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>収集項目(FROM)/変数名</p></th>
+<th class="head"><p>対象ファイル</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>VAR_upload_file_1</p></td>
+<td><p>①、②、③、④のファイルからランダム</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>VAR_upload_file_2</p></td>
+<td><p>②、④のファイルからランダム</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>VAR_upload_file_3</p></td>
+<td><p>①のファイルが対象</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>VAR_upload_file_4</p></td>
+<td><p>④のファイルが対象</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id28">
+<h4>ファイル削除時の収集対象ファイル内の記載例<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ファイルアップロード項目のファイル削除する場合の収集対象ファイルの指定例について記載します。</div>
+<div class="line">削除するファイルについて対象の変数名の値を空文字として設定することで削除可能です。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id71">
+<div class="code-block-caption"><span class="caption-number">リスト 5.51 </span><span class="caption-text">ファイルアップロード項目の削除収集対象ファイルのファイルパス、ディレクトリ構造</span><a class="headerlink" href="#id71" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【上位ディレクトリ】
+   |-  _parameters
+   |   |-  localhost
+   |       |-  SAMPLE.yml   ※ソースファイル
+   |-  _parameters_file
+   |   |-  localhost
+
+ ■収集対象ファイル名: SAMPLE.yml
+ ■ファイルの内容
+ VAR_upload_file: &quot;&quot;         ※アップロード対象ファイル
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="ansible_legacyrole.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">4. </span>Ansible-LegacyRole</a></li>
+    <li class="next"><a href="ansible_ee_custom.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">6. </span>Ansible実行環境のカスタマイズ</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

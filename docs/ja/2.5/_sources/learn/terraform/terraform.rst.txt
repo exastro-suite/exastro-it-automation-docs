@@ -28,8 +28,6 @@ IaaSの払い出し
 | オペレーション登録では、作業を実施する際の作業概要を定義します。
 | 先に決めた作業の方針を元にオペレーション情報を記入しましょう。
 
-.. glossary:: オペレーション
-   実施する作業のことで、オペレーションに対して作業対象とパラメータが紐づきます。
 
 | :menuselection:`基本コンソール --> オペレーション一覧` から、作業実施日時や作業名を登録します。
 
@@ -55,8 +53,6 @@ Workspace管理
 
 | Workspace管理では、Terraformで利用するWorkspaceについてのメンテナンス（閲覧/登録/更新／/廃止リソース削除）を行います。
 
-.. glossary:: Workspace
-   WorkspaceはTerraformコマンドを実行するためのディレクトリとして利用します。
 
 | Terraformコマンドを実行するためにWorkspaceを作成します。
 | :menuselection:`Terraform CLI --> Workspace管理` から、Terraformコマンドを実行するために、「tfe_ws001」というWorkspaceを作成します。
@@ -72,7 +68,7 @@ Workspace管理
    * - Workspace名
      - 備考
    * - :kbd:`tfe_ws001`
-     - 
+     -
 
 作業項目の設定
 --------------
@@ -92,7 +88,7 @@ Workspace管理
 
    * - Movement名
      - Terraform利用情報
-   * - 
+   * -
      - Workspace
    * - :kbd:`tfe_mov001`
      - :kbd:`tfe_ws001`
@@ -102,14 +98,12 @@ Module素材集
 
 | Module素材集では、ユーザーが作成したModuleのメンテナンス（閲覧/登録/更新/廃止）を行います。
 
-.. glossary:: Moduleの記述
-   Moduleファイルは、HCL（HashiCorp ConfigurationLanguage）というHashiCorp社独自の言語により記述します。
 
 | 使用するModuleファイルをModule素材集から登録します。
 | 利用する Moduleファイル は下記になります。
 | 本シナリオでは、main.tf と variables.tf を使用します。
 
-.. code-block:: bash
+.. code-block:: hcl
    :caption: main.tf
 
    provider "azurerm" {
@@ -281,7 +275,7 @@ Module素材集
    * - :kbd:`variables`
      - :kbd:`variables.tf`
    * - :kbd:`main`
-     - :kbd:`main.tf`  
+     - :kbd:`main.tf`
 
 Movement-Module紐付
 -------------------
@@ -308,8 +302,6 @@ Movement-Module紐付
 
 | :menuselection:`パラメータシート作成` では、作業時に利用する設定値(パラメータ)を登録するためのパラメータシートを管理します。
 
-.. glossary:: パラメータシート
-   システムのパラメータ情報を管理するデータ構造のことです。
 
 | Azure認証情報として、パラメータシートを作成します。
 | :menuselection:`パラメータシート作成 --> パラメータシート定義・作成` から、Azure認証情報を管理するために、「Azureパラメータ」というパラメータシートを作成します。
@@ -343,7 +335,7 @@ Movement-Module紐付
      - :kbd:`クライアントシークレット`
      - :kbd:`リソースグループ名`
      - :kbd:`ロケーション`
-   * - 項目の名前(Rest API用) 
+   * - 項目の名前(Rest API用)
      - :kbd:`subscription_id`
      - :kbd:`tenant_id`
      - :kbd:`client_id`
@@ -365,19 +357,19 @@ Movement-Module紐付
      - :kbd:`128`
      - :kbd:`128`
    * - 正規表現
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
    * - 初期値
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
    * - 必須
      - ✓
      - ✓
@@ -386,26 +378,26 @@ Movement-Module紐付
      - ✓
      - ✓
    * - 一意制約
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
    * - 説明
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
    * - 備考
-     - 
-     - 
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
+     -
+     -
 
 .. list-table:: パラメータシート作成(Azureパラメータ)のパラメータシート作成情報の設定値
    :widths: 5 10
@@ -510,12 +502,12 @@ Movement-Module紐付
 
   * - オペレーション
     - パラメータ
-    - 
-    - 
-    - 
-    - 
-    - 
-  * - 
+    -
+    -
+    -
+    -
+    -
+  * -
     - Azure認証情報
     - Azure認証情報
     - Azure認証情報

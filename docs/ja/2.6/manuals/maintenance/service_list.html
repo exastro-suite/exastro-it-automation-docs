@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>1. サービス一覧 &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="2. ログ一覧" href="log_list.html" />
+    <link rel="prev" title="メンテナンス" href="index.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/maintenance/service_list.html" selected>current</option>
+              <option value="../../../../ja/2.6/manuals/maintenance/service_list.html" selected>2.6(current)</option>
+              <option value="../../../../ja/2.5/manuals/maintenance/service_list.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/maintenance/service_list.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/maintenance/service_list.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/maintenance/service_list.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/maintenance/service_list.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/maintenance/service_list.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/manuals/maintenance/service_list.html" selected>日本語</option>
+              <option value="../../../../en/2.6/manuals/maintenance/service_list.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="index.html" title="前のトピックへ">メンテナンス</a></li>
+        <li class="next"><a href="log_list.html" title="次のトピックへ"><span class="section-number">2. </span>ログ一覧</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../it_automation_base/index.html">基本操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../host_group/index.html">ホストグループ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible-driver/index.html">Ansible ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform_driver/index.html">Terraform ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import/index.html">エクスポート・インポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cicd_for_iac/index.html">CI/CD for IaC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">メンテナンス</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. サービス一覧</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1.1. サービス一覧詳細</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="log_list.html">2. ログ一覧</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log_level.html">3. ログレベル</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../share/ja/manuals/maintenance/log_aggregation.html">4. ログの集約</a></li>
+<li class="toctree-l3"><a class="reference internal" href="monitoring.html">5. 監視</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintenance_mode.html">6. メンテナンスモード</a></li>
+<li class="toctree-l3"><a class="reference internal" href="backup_and_restore.html">7. データバックアップ・リストア</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file_autoclean.html">8. ファイル削除機能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="operation_autoclean.html">9. オペレーション削除管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gitlab_token.html">10. Gitlab認証トークンの更新手順</a></li>
+<li class="toctree-l3"><a class="reference internal" href="physical_deletion.html">11. データの物理削除</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">1. サービス一覧</a><ul>
+<li><a class="reference internal" href="#id2">1.1. サービス一覧詳細</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">メンテナンス</a></li>
+    
+    <li><span class="section-number">1. </span>サービス一覧</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="id1">
+<h1><span class="section-number">1. </span>サービス一覧<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<div class="line-block">
+<div class="line">本書では Exastro IT Automation の各サービスを以下に記載します。</div>
+</div>
+<section id="id2">
+<h2><span class="section-number">1.1. </span>サービス一覧詳細<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">以下の一覧の「監視対象」列には監視すべきサービスを記載しています。</div>
+<div class="line">監視対象のサービスは「〇」、対象外のサービスは「×」を記載しています。</div>
+</div>
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 22.7%" />
+<col style="width: 1.5%" />
+<col style="width: 37.9%" />
+<col style="width: 37.9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">サービス</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">監視対象</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">説明</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">備考</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ita-ag-oase</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">OASEとイベント収集したい外部サービスとのエージェント</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">ita-api-admin</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">システム管理関連の利用を受け付けるAPI</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ita-api-oase-receiver</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">OASE専用の利用を受け付けるAPI</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">ita-api-organization</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ITA全般のAPI</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ita-by-ansible-agent</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">×</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Ansible-Coreで作業実行を行う際の作業対象用エージェント</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ita-by-ansible-executeで監視しているため監視対象としない。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">ita-by-ansible-execute</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Ansible作業実行を管理するバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ita-by-ansible-legacy-role-vars-listup</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Ansible-LegacyRoleで利用する変数を刈り取るバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">ita-by-ansible-legacy-vars-listup</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Ansible-Legacyで利用する変数を刈り取るバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ita-by-ansible-pioneer-vars-listup</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Ansible-Pioneerで利用する変数を刈り取るバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">ita-by-ansible-towermaster-sync</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Ansible Towerの登録情報をITAに同期するバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ita-by-cicd-for-iac</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaCの設定を元に、リモートリポジトリとITAの資材を紐づけるバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">ita-by-collector</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">収集項目値管理の設定を元に、Ansibleの作業実行結果をパラメータシートへ自動で登録するバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ita-by-conductor-regularly</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Conductor定期作業実行を行うバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">ita-by-conductor-synchronize</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Conductor作業を管理するバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ita-by-excel-export-import</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">一括Excelエクスポート/インポートを実行するバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">ita-by-execinstance-dataautoclean</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">オペレーション削除管理の設定を元に、期限を過ぎたオペレーションに紐づくデータ削除を行うバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ita-by-file-autoclean</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ファイル削除管理の設定を元に、期限を過ぎたファイル削除を行うバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">ita-by-hostgroup-split</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ホストグループの設定を元に、パラメータシートに登録されたデータをホストごとに分解して登録するバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ita-by-menu-create</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">メニュー（パラメータシート）を作成するバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">ita-by-menu-export-import</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">メニューエクスポート/インポートを実行するバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ita-by-oase-conclusion</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">OASEのルール判定を実行するバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">ita-by-terraform-cli-execute</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Terraform-CLI作業実行を管理するバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ita-by-terraform-cli-vars-listup</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Terraform-CLIで利用する変数を刈り取るバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">ita-by-terraform-cloud-ep-execute</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Terraform-Cloud/EP作業実行を管理するバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ita-by-terraform-cloud-ep-vars-listup</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Terraform-Cloud/EPで利用する変数を刈り取るバックグラウンド実行サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">ita-migration</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">×</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ITAのマイグレーション用サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">インストール/アップグレード時のみのため監視対象としない。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ita-web-server</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ITAのフロントエンドWebサービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">platform-api</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">共通基盤APIコントローラーサービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">platform-auth</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">共通基盤認証・認可サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">platform-job</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">共通基盤ジョブサービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">platform-migration</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">×</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">共通基盤マイグレーションサービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">インストール/アップグレード時のみのため監視対象としない。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">platform-web</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">共通基盤フロントエンドWebサービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">keycloak</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ID管理・アクセス管理サービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Exastro システムのユーザー管理全般</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">mariadb</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">データベース</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Exastro システムの主データベース</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">mongodb</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ドキュメント指向データベース</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">主にOASE機能で利用</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">gitlab</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">DevSecOpsプラットフォームサービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">主にExastro IT AutomationでGitリポジトリ機能として利用</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span>メンテナンス</a></li>
+    <li class="next"><a href="log_list.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">2. </span>ログ一覧</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>
