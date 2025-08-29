@@ -12,7 +12,7 @@
 
    online/index
    offline/index
-   
+
 .. .. raw:: html
 
 ..    </div>

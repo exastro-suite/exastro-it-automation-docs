@@ -1,0 +1,623 @@
+# Default values for Exastro.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+global:
+  itaGlobalDefinition:
+    config:
+      DEFAULT_LANGUAGE: "ja"
+      LANGUAGE: "en"
+      TZ: "Asia/Tokyo"
+    secret:
+      ENCRYPT_KEY: ""
+    persistence:
+      enabled: true
+      accessMode: ReadWriteMany
+      size: 10Gi
+      volumeType: hostPath # e.g.) hostPath or AKS
+      storageClass: "-" # e.g.) azurefile or - (None)
+      # matchLabels:
+      #   release: "stable"
+      # matchExpressions:
+      #   - {key: environment, operator: In, values: [dev]}
+  itaDatabaseDefinition:
+    config:
+      DB_VENDOR: "mariadb"
+      DB_HOST: "mariadb"
+      DB_PORT: "3306"
+      DB_DATABASE: "ITA_DB"
+    secret:
+      DB_ADMIN_USER: "root"
+      DB_ADMIN_PASSWORD: "Ch@ngeMeDBAdm"
+      DB_USER: "ITA_USER"
+      DB_PASSWORD: "Ch@ngeMeITADB"
+  pfGlobalDefinition:
+    config:
+      DEFAULT_LANGUAGE: "ja"
+      LANGUAGE: "en"
+      TZ: "Asia/Tokyo"
+    secret:
+      ENCRYPT_KEY: ""
+  pfAuditLogDefinition:
+    name: pf-auditlog
+    persistence:
+      enabled: false
+      reinstall: false
+      accessMode: ReadWriteMany
+      size: 10Gi
+      volumeType: hostPath # e.g.) hostPath or AKS
+      storageClass: "-" # e.g.) azurefile or - (None)
+      # matchLabels:
+      #   release: "stable"
+      # matchExpressions:
+      #   - {key: environment, operator: In, values: [dev]}
+  pfDatabaseDefinition:
+    config:
+      DB_VENDOR: "mariadb"
+      DB_HOST: "mariadb"
+      DB_PORT: "3306"
+      DB_DATABASE: "platform"
+    secret:
+      DB_ADMIN_USER: "root"
+      DB_ADMIN_PASSWORD: "Ch@ngeMeDBAdm"
+      DB_USER: "pf-user"
+      DB_PASSWORD: "Ch@ngeMePFDB"
+  keycloakDefinition:
+    secret:
+      SYSTEM_ADMIN: "admin"
+      SYSTEM_ADMIN_PASSWORD: "Ch@ngeMeKCAdm"
+      KEYCLOAK_DB_USER: "keycloak"
+      KEYCLOAK_DB_PASSWORD: "Ch@ngeMeKCADB"
+  gitlabDefinition:
+    config:
+      GITLAB_PROTOCOL: "http"
+      GITLAB_HOST: "" # "gitlab" if use container.
+      GITLAB_PORT: "8080"
+    secret:
+      GITLAB_ROOT_PASSWORD: "Ch@ngeMeGL"
+      GITLAB_ROOT_TOKEN: "change-this-token"
+  mongoDefinition:
+    config:
+      MONGO_PROTOCOL: "http"
+      MONGO_HOST: "mongo" # "mongo" if use container.
+      MONGO_PORT: "27017"
+    secret:
+      MONGO_ADMIN_USER: "admin"
+      MONGO_ADMIN_PASSWORD: "Ch@ngeMeMGAdm"
+
+exastro-it-automation:
+  ita-api-admin:
+    replicaCount: 1
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-api-admin"
+      tag: ""
+      pullPolicy: IfNotPresent
+    extraEnv:
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+
+  ita-api-organization:
+    replicaCount: 1
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-api-organization"
+      tag: ""
+      pullPolicy: IfNotPresent
+    extraEnv:
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+
+  ita-api-oase-receiver:
+    replicaCount: 1
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-api-oase-receiver"
+      tag: ""
+      pullPolicy: IfNotPresent
+    extraEnv:
+      LISTEN_PORT: "8000"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+
+  ita-api-ansible-execution-receiver:
+    replicaCount: 1
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-api-ansible-execution-receiver"
+      tag: ""
+      pullPolicy: IfNotPresent
+    extraEnv:
+      LISTEN_PORT: "8000"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+
+  ita-by-ansible-execute:
+    replicaCount: 1
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-ansible-execute"
+      tag: ""
+      pullPolicy: IfNotPresent
+    extraEnv:
+      EXECUTE_INTERVAL: "3"
+      ANSIBLE_AGENT_IMAGE: "docker.io/exastro/exastro-it-automation-by-ansible-agent"
+      ANSIBLE_AGENT_IMAGE_TAG: ""
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    serviceAccount:
+      create: false
+      name: "ita-by-ansible-execute-sa"
+
+  ita-by-ansible-legacy-role-vars-listup:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "10"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-ansible-legacy-role-vars-listup"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-ansible-legacy-vars-listup:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "10"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-ansible-legacy-vars-listup"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-ansible-pioneer-vars-listup:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "10"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-ansible-pioneer-vars-listup"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-ansible-towermaster-sync:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "10"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-ansible-towermaster-sync"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-cicd-for-iac:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "10"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-cicd-for-iac"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-collector:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "10"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-collector"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-conductor-regularly:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "10"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-conductor-regularly"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-conductor-synchronize:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "3"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-conductor-synchronize"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-excel-export-import:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "10"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-excel-export-import"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-execinstance-dataautoclean:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "10"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-execinstance-dataautoclean"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-file-autoclean:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "10"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-file-autoclean"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-hostgroup-split:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "10"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-hostgroup-split"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-menu-create:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "10"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-menu-create"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-menu-export-import:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "10"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-menu-export-import"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-oase-conclusion:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "10"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-oase-conclusion"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-terraform-cli-execute:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "3"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-terraform-cli-execute"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-terraform-cli-vars-listup:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "10"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-terraform-cli-vars-listup"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-terraform-cloud-ep-execute:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "3"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-terraform-cloud-ep-execute"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-by-terraform-cloud-ep-vars-listup:
+    replicaCount: 1
+    extraEnv:
+      EXECUTE_INTERVAL: "10"
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-by-terraform-cloud-ep-vars-listup"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-web-server:
+    replicaCount: 1
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-web-server"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+  ita-migration:
+    extraEnv:
+      PLATFORM_API_HOST: "platform-api"
+      PLATFORM_API_PORT: "8000"
+    image:
+      repository: "docker.io/exastro/exastro-it-automation-migration"
+      tag: ""
+      pullPolicy: IfNotPresent
+
+exastro-platform:
+  platform-api:
+    image:
+      repository: "docker.io/exastro/exastro-platform-api"
+      tag: ""
+
+  platform-auth:
+    extraEnv:
+      # Please set the URL to access
+      EXTERNAL_URL: ""
+      EXTERNAL_URL_MNG: ""
+    ingress:
+      enabled: true
+      hosts:
+        - host: exastro-suite.example.local
+          paths:
+            - path: /
+              pathType: Prefix
+              backend: "http"
+        - host: exastro-suite-mng.example.local
+          paths:
+            - path: /
+              pathType: Prefix
+              backend: "httpMng"
+      tls: []
+        # - secretName: chart-example-tls
+        #   hosts:
+        #     - chart-example.local
+      secrets: []
+        # - name: chart-example-tls
+        #   certificate: |-
+        #     -----BEGIN CERTIFICATE-----
+        #     ...
+        #     -----END CERTIFICATE-----
+        #   key: |-
+        #     -----BEGIN PRIVATE KEY-----
+        #     ...
+        #     -----END PRIVATE KEY-----
+    service:
+      type: ClusterIP
+      # http:
+      #   nodePort: 30080
+      # httpMng:
+      #   nodePort: 30081
+    image:
+      repository: "docker.io/exastro/exastro-platform-auth"
+      tag: ""
+
+  platform-job:
+    extraEnv:
+      # LOG_LEVEL: "INFO"
+      # SUB_PROCESS_TERMINATE_REQUEST_SECONDS: "1800"
+      # SUB_PROCESS_ACCEPTABLE: "2"
+      # SUB_PROCESS_MAX_JOBS: "10"
+      # SUB_PROCESS_WATCH_INTERVAL_SECONDS: "1.0"
+      # SUB_PROCESS_DB_RECONNECT_INTERVAL_SECONDS: "60"
+      # SUB_PROCESS_DB_HEALTH_CHECK_INTERVAL_SECONDS: "5"
+      # SUB_PROCESS_MAX_CANCEL_TIMEOUT: "10"
+      # JOB_STATUS_WATCH_INTERVAL_SECONDS: "1.0"
+      # JOB_CANCEL_TIMEOUT_SECONDS: "5.0"
+      # JOB_NOTIFICATION_TIMEOUT_SECONDS: "20"
+      # JOB_NOTIFICATION_TEAMS_CONNECTION_TIMEOUT: "3.0"
+      # JOB_NOTIFICATION_TEAMS_READ_TIMEOUT: "10.0"
+      # JOB_NOTIFICATION_SMTP_TIMEOUT: "10.0"
+      # JOB_NOTIFICATION_SMTPS_SSL_VERIFY_ENABLED: "TRUE"
+      # JOB_FORCE_UPDATE_STATUS_TIMEOUT_SECONDS: "60"
+      # JOB_FORCE_UPDATE_STATUS_INTERVAL_SECONDS: "180"
+      # JOB_FORCE_UPDATE_STATUS_PROGRASS_SECONDS: "600"
+    image:
+      repository: "docker.io/exastro/exastro-platform-job"
+      tag: ""
+
+  platform-migration:
+    image:
+      repository: "docker.io/exastro/exastro-platform-migration"
+      tag: ""
+
+  platform-web:
+    image:
+      repository: "docker.io/exastro/exastro-platform-web"
+      tag: ""
+
+  mariadb:
+    enabled: false
+    image:
+      repository: "docker.io/mariadb"
+      tag: "10.11"
+      pullPolicy: IfNotPresent
+    imagePullSecrets: []
+    persistence:
+      enabled: true
+      accessMode: ReadWriteOnce
+      size: 20Gi
+      storageClass: "-" # e.g.) azurefile or - (None)
+      matchLabels:
+        name: pv-database
+      matchExpressions:
+        # - {key: name, operator: In, values: [pv-database]}
+    dbSetup:
+      dbConfInfo:
+        name: mysql-server-conf-config
+        customCnf: |-
+          [mysqld]
+          character-set-server=utf8mb4
+          collation-server=utf8mb4_bin
+          secure_file_priv=/tmp
+          lower_case_table_names=1
+          [client]
+          default-character-set=utf8mb4
+    resources:
+      requests:
+        memory: "256Mi"
+        cpu: "1m"
+      limits:
+        memory: "2Gi"
+        cpu: "4"
+
+  keycloak:
+    enabled: true
+    image:
+      repository: "docker.io/exastro/keycloak"
+      tag: ""
+      pullPolicy: IfNotPresent
+    extraEnv:
+      # If you use Azure MySQL, add options like below
+      # KC_DB_URL_PROPERTIES: "?useSSL=false"
+    resources: {}
+      # requests:
+      #   memory: "256Mi"
+      #   cpu: "1m"
+      # limits:
+      #   memory: "2Gi"
+      #   cpu: "4"
+
+  gitlab:
+    enabled: false
+    extraEnv:
+      GITLAB_OMNIBUS_CONFIG: |
+        postgresql['shared_buffers'] = "2048MB"
+        postgresql['work_mem'] = "128MB"
+        postgresql['maintenance_work_mem'] = "128MB"
+        postgresql['effective_cache_size'] = "128MB"
+        postgresql['checkpoint_segments'] = 16
+        postgresql['checkpoint_timeout'] = "10min"
+        external_url 'http://gitlab:40080'
+        nginx['listen_port'] = 40080
+        gitlab_rails['initial_root_password'] = "${GITLAB_ROOT_PASSWORD:-}"
+        gitlab_rails['registry_enabled'] = false;
+        gitlab_rails['db_prepared_statements'] = false;
+        gitlab_rails['monitoring_whitelist'] = ['0.0.0.0/0']
+        # gitlab_rails['env'] = {'MALLOC_CONF' => 'dirty_decay_ms:1000,muzzy_decay_ms:1000'}
+        # puma['worker_processes'] = 0
+        prometheus_monitoring['enable'] = false
+        # sidekiq['max_concurrency'] = 10
+        # gitaly['env'] = {'MALLOC_CONF' => 'dirty_decay_ms:1000,muzzy_decay_ms:1000', 'GITALY_COMMAND_SPAWN_MAX_PARALLEL' => '2'}
+      GITLAB_POST_RECONFIGURE_SCRIPT: |
+        while ! curl -sfI -o /dev/null http://localhost:40080/-/readiness;
+        do
+        echo "GitLab service is not ready."
+        sleep 1
+        done
+        echo "GitLab service started normally"
+        curl -Ssf -H "PRIVATE-TOKEN: ${GITLAB_ROOT_TOKEN:-}" "http://localhost:40080/api/v4/version" || (
+          gitlab-rails runner "token = User.find_by_username('root').personal_access_tokens.create(scopes: [:api, :write_repository, :sudo], name: 'exastro system token'); token.set_token('${GITLAB_ROOT_TOKEN:-}'); token.save!"
+        )
+        echo "GitLab post reconfigure script ended."
+    image:
+      repository: "docker.io/gitlab/gitlab-ce"
+      tag: "15.11.13-ce.0"
+      pullPolicy: IfNotPresent
+      # Overrides the image tag whose default is the chart appVersion.
+    persistence:
+      enabled: true
+      volumeName: pv-gitlab
+      accessMode: ReadWriteMany
+      size: 20Gi
+      storageClass: "-" # e.g.) azurefile or - (None)
+      matchLabels:
+        name: pv-gitlab
+      matchExpressions:
+        # - {key: name, operator: In, values: [pv-gitlab]}
+    resources: {}
+      # requests:
+      #   memory: "4Gi"
+      #   cpu: "4"
+      # limits:
+      #   memory: "8Gi"
+      #   cpu: "8"
+    service:
+      type: ClusterIP
+      name: gitlab
+      port: 40080
+      # nodePort: 30082
+
+  mongo:
+    enabled: true
+    image:
+      repository: "docker.io/mongo"
+      pullPolicy: IfNotPresent
+      # Overrides the image tag whose default is the chart appVersion.
+      tag: "6.0"
+    persistence:
+      enabled: true
+      accessMode: ReadWriteOnce
+      size: 20Gi
+      storageClass: "-" # e.g.) azurefile, local-path or - (None)
+      matchLabels:
+        # release: "pv-mongo"
+      matchExpressions:
+        # - {key: name, operator: In, values: [pv-mongo]}
+    dbSetup:
+      dbConfInfo:
+        name: mongo-server-conf-config
+        customCnf: |
+          systemLog:
+            verbosity: 0
+            # destination: file
+            # path: /root/logs/mongod.log
+            timeStampFormat: iso8601-utc
+          # storage:
+          #   directoryPerDB: true
+          #   dbPath: /root/data
+          #   engine: wiredTiger
+          #   wiredTiger:
+          #     engineConfig:
+          #       cacheSizeGB: 1
+          #   journal:
+          #     enabled: true
+          # processManagement:
+          #   fork: true
+          # net:
+          #   port: 27017
+          #   bindIp: 0.0.0.0
+          # security:
+          #   authorization: enabled
+    resources: {}
+      # requests:
+      #   memory: "4Gi"
+      #   cpu: "4"
+      # limits:
+      #   memory: "8Gi"
+      #   cpu: "4"
+    affinity:
+      podAntiAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+        - labelSelector:
+            matchExpressions:
+            - key: name
+              operator: In
+              values:
+              - mongo
+          topologyKey: kubernetes.io/hostname
+

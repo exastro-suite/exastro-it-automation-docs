@@ -16,7 +16,17 @@
 			}
 		},
 		"terminal.integrated.defaultProfile.linux": "bash",
-	},
+  "[rst]": {
+   "editor.fontFamily": "'Illusion N', 'BIZ UDGothic','BIZ UDゴシック','MS ゴシック'"
+  },
+  "[restructuredtext]": {
+   "editor.fontFamily": "'Illusion N', 'BIZ UDGothic','BIZ UDゴシック','MS ゴシック'"
+  },
+  "restructuredtext.linter.doc8.extraArgs": [
+   "--config",
+   "${workspaceFolder}/doc8.ini"
+  ],
+ },
 	"extensions": [
 		"MS-CEINTL.vscode-language-pack-ja",
 		"ms-python.python",
@@ -30,7 +40,8 @@
 		"searKing.preview-vscode",
 		"hediet.vscode-drawio",
 		"nopeslide.vscode-drawio-plugin-mermaid",
-  "l13rary.l13-diff",
+  		"l13rary.l13-diff",
+		"swyddfa.esbonio",
 	],
 	"customizations": {
 		"vscode": {
@@ -41,6 +52,16 @@
      }
     },
     "terminal.integrated.defaultProfile.linux": "bash",
+    "[rst]": {
+     "editor.fontFamily": "'Illusion N', 'BIZ UDGothic','BIZ UDゴシック','MS ゴシック'"
+    },
+    "[restructuredtext]": {
+     "editor.fontFamily": "'Illusion N', 'BIZ UDGothic','BIZ UDゴシック','MS ゴシック'"
+    },
+    "restructuredtext.linter.doc8.extraArgs": [
+     "--config",
+     "${workspaceFolder}/doc8.ini"
+    ],
    },
    "extensions": [
     "MS-CEINTL.vscode-language-pack-ja",
@@ -56,6 +77,7 @@
     "hediet.vscode-drawio",
     "nopeslide.vscode-drawio-plugin-mermaid",
     "l13rary.l13-diff",
+    "swyddfa.esbonio",
    ],
   },
  },

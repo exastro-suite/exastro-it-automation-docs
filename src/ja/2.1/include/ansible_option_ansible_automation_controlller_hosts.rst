@@ -1,4 +1,6 @@
 
+:orphan:
+
 #. | :menuselection:`Ansible共通-->Ansible Automation Controller ホスト一覧` では、Ansible Automation ControllerのRestAPI実行に必要な情報、および構築資材をAnsible Automation Controllerにファイル転送するために必要な情報のメンテナンス(閲覧/登録/更新/廃止)を行います。
    | クラスタ構成の場合は、構成している全てのサーバを登録してください。
    | ただし、Ansible Automation Controllerのhop nodeの登録は不要です。

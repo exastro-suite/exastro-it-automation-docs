@@ -46,7 +46,7 @@ OASE Agent on Docker Compose - Online
   .. list-table:: ハードウェア要件(最小構成)
    :widths: 1, 1
    :header-rows: 1
-  
+
    * - リソース種別
      - 要求リソース
    * - CPU
@@ -101,6 +101,8 @@ OASE Agent on Docker Compose - Online
    | また、利用する一般ユーザは sudoer で、全操作権限を持っている必要があります。
 
 
+.. include:: ../../../include/oase_agent_recommendations.rst
+
 インストール
 ============
 
@@ -119,7 +121,7 @@ OASE Agent on Docker Compose - Online
 
    cd exastro-docker-compose/ita_ag_oase
 
-| 環境変数の設定ファイル（.env）を、サンプルから作成します。 
+| 環境変数の設定ファイル（.env）を、サンプルから作成します。
 
 .. code-block:: shell
    :caption: （Docker利用時）サンプルからコピー
@@ -131,7 +133,7 @@ OASE Agent on Docker Compose - Online
 
    cp .env.podman.sample .env
 
-| 末尾のパラメータ一覧を参考に、起動に必要な情報を .env に登録します。 
+| 末尾のパラメータ一覧を参考に、起動に必要な情報を .env に登録します。
 
 .. code-block:: shell
 
@@ -145,19 +147,19 @@ OASE Agent on Docker Compose - Online
 .. code-block:: shell
    :caption: docker コマンドを利用する場合(Docker環境)
 
-   docker compose up -d --wait  
+   docker compose up -d --wait
 
 .. code-block:: shell
    :caption: docker-compose コマンドを利用する場合(Podman環境)
 
-   docker-compose up -d --wait  
+   docker-compose up -d --wait
 
 パラメータ一覧
 ==============
 
 | Exastro OASE Agentの仕様と一部のパラメータの関連については、:ref:`oase_agent_flow` にて説明しています。
 
-.. list-table:: 
+.. list-table::
  :widths: 5, 7, 1, 5
  :header-rows: 1
 
@@ -197,7 +199,7 @@ OASE Agent on Docker Compose - Online
    - OASE エージェント の実行ユーザ
    - 不要
    - 1000 (デフォルト): Docker 利用の場合
-  
+
      0: Podman 利用の場合
  * - HOST_DOCKER_GID
    - ホスト上の Docker のグループID
@@ -265,7 +267,7 @@ OASE Agent on Docker Compose - Online
 アップグレードの準備
 --------------------
 
-.. warning:: 
+.. warning::
   | アップグレード実施前に、バックアップを取得しておくことを推奨します。
   | バックアップ対象は :file:`~/exastro-docker-compose/ita_ag_oase/.volumes/` です。
 
@@ -320,12 +322,12 @@ OASE Agent on Docker Compose - Online
 .. code-block:: shell
    :caption: docker コマンドを利用する場合(Docker環境)
 
-   docker compose up -d --wait  
+   docker compose up -d --wait
 
 .. code-block:: shell
    :caption: docker-compose コマンドを利用する場合(Podman環境)
 
-   docker-compose up -d --wait  
+   docker-compose up -d --wait
 
 
 アンインストール
@@ -336,7 +338,7 @@ OASE Agent on Docker Compose - Online
 アンインストールの準備
 ----------------------
 
-.. warning:: 
+.. warning::
   | アンインストール実施前に、バックアップを取得しておくことを推奨します。
   | バックアップ対象は :file:`~/exastro-docker-compose/ita_ag_oase/.volumes/` です。
 

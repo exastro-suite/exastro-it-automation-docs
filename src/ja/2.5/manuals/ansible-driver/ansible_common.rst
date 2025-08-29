@@ -1061,7 +1061,7 @@ Ansible共通メニュー構成
       | Proxy           | Address         | プロキシサーバのアドレスを入力します。                        | ー        | 手動入力     | 最\                                                   |
       |                 |                 |                                                               |           |              | 大255バイト                                           |
       |                 |                 | ITAがプロキシ環境下にある場合、\                              |           |              |                                                       |
-      |                 |                 | Ansible Core/Ansible Automation Controller\                   |           |              |                                                       |
+      |                 |                 | Ansible Automation Controller\                                |           |              |                                                       |
       |                 |                 | までの疎通のために設定が必要な場合があります。                |           |              |                                                       |
       |                 |                 |                                                               |           |              |                                                       |
       |                 |                 | プロキシサーバのURLが\                                        |           |              |                                                       |

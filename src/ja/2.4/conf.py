@@ -21,7 +21,7 @@ MenuSelection.BULLET_CHARACTER = '▶'
 # -- Project information -----------------------------------------------------
 
 project = 'Documentation'
-copyright = '2019-2023 NEC Corporation'
+copyright = '2019-2025 NEC Corporation'
 author = 'NEC'
 
 # The full version, including alpha/beta/rc tags
@@ -62,6 +62,10 @@ languages = ["ja", "en"]
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', "**/_*"]
 
+
+# Previous versions hide all warnings
+# Reference: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-suppress_warnings
+suppress_warnings = ['docutils','ref','index','toc','i18n','duplicate_declaration','image','epub','app','config','misc','autodoc','autosummary','intersphinx']
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -117,8 +121,9 @@ html_context = {
         'en': 'English'
     },
     'versions': {
-        'current': '2.5',
-        '2.5(current)': '2.5',
+        'current': '2.6',
+        '2.6(current)': '2.6',
+        '2.5': '2.5',
         '2.4': '2.4',
         '2.3': '2.3',
         '2.2': '2.2',

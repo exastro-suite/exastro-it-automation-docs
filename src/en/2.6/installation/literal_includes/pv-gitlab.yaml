@@ -1,0 +1,17 @@
+# pv-gitlab.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-gitlab
+spec:
+  claimRef:
+    name: pvc-gitlab
+    namespace: exastro
+  capacity:
+    storage: 20Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /var/data/exastro-suite/exastro-platform/gitlab
+    type: DirectoryOrCreate

@@ -23,20 +23,20 @@
    :header-rows: 1
    :align: left
 
-   * - オプションパラメータ   
+   * - オプションパラメータ
      - 指定方法
      - Ansible Automation Controllerの設定箇所
      - 備考
    * - | -v
-       | --verbose 
+       | --verbose
      - | -v
        | -vv
        | -vvv
        | -vvvv
        | -vvvvv
-       | --verbose 
+       | --verbose
      - :menuselection:`テンプレート` の :menuselection:`詳細` に v の数が設定される。
-     - | ・vの合計値を適用 
+     - | ・vの合計値を適用
        | ・--verboseは、-vと同様
        | 例：--verbose -vvv の場合、-vvvvと同様
        | ・vを6以上指定した場合 、vは5の指定となる
@@ -64,7 +64,7 @@
      - | ・EXTRA_VARS:変数名、具体値をjson形式またはyaml形式
        | e.g.) json形式の場合
        | 　-extra-vars={"VAR_1":"directory"}
-       | e.g.) yaml形式の場合 
+       | e.g.) yaml形式の場合
        | 　-extra-vars=VAR_1:directory
        | ・複数定義した場合、最後に定義したパラメータが有効
    * - | -t
@@ -94,7 +94,7 @@
    * - --start-at-task
      - --start-at-task=START_AT_TASK
      - | ※Ansible Automation ControllerのWebUI には--start-at-taskの表示はありません。
-       | ansible-playbookコマンドの--start-at-taskと同様の扱いになります。 
+       | ansible-playbookコマンドの--start-at-taskと同様の扱いになります。
      - ・複数定義した場合、最後に定義したパラメータが有効
    * - | -ufc
        | --use _fact_cache

@@ -57,7 +57,7 @@
         <dt>Document version</dt>
         <dd>
           <div>
-            <select name="version" onchange="location.href=value;">
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
               {%- for display_ver, path_ver in versions.items() %}
               {%- set file_path = language ~ '/' ~ path_ver ~ '/' ~ pagename %}
               <option value="../../{{ pathto(file_path) }}" {%- if path_ver == version %} selected{%- endif -%}>{{ display_ver }}</option>
@@ -73,7 +73,7 @@
         <dt>Language</dt>
         <dd>
           <div>
-            <select name="lang" onchange="location.href=value;">
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
               {%- for lang, display_lang in languages.items() %}
               {%- set file_path = lang ~ '/' ~ version ~ '/' ~ pagename %}
               <option value="../../{{ pathto(file_path) }}" {%- if lang == language %} selected{%- endif %}>{{ display_lang }}</option>
@@ -167,7 +167,7 @@
 <div id="footer">
   <footer class="divInner">
     <small>Copyright © {{ copyright }}</small>
-    <small><a href="/terms/{{ language }}.html">サイト規約</a></small>
+    <small><a href="/{{ language }}/{{ version }}/terms/{{ language }}.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
 

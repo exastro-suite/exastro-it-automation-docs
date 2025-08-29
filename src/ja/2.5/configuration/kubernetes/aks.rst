@@ -38,7 +38,7 @@ AKS クラスタの作成例
    .. csv-table::
     :header: 変数, 説明
     :widths: 30, 30
-   
+
       RESOURCE_GROUP, 利用するリソースグループ名
       CLUSTER_NAME, 作成する AKS クラスタ名
       PUBLIC_IP_PREFIX_NAME, パブリック IP プレフィックス名

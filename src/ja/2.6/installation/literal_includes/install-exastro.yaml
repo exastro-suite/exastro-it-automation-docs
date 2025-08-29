@@ -1,0 +1,101 @@
+---
+- name: exastroのインストール
+  hosts: K8S
+  gather_facts: yes
+  tasks:
+    - name: helmを展開
+      shell:
+        cmd: tar xzvf /tmp/work/offline-files/get.helm.sh/helm*.tar.gz
+        chdir: /tmp/work/offline-files/get.helm.sh
+
+    - name: helmをコピー
+      shell:
+        cmd: cp /tmp/work/offline-files/get.helm.sh/linux-amd64/helm /usr/local/bin
+
+    - name: シェルスクリプトをコピー
+      copy:
+        src: /tmp/work/exastro-image-load.sh
+        dest: /tmp/work
+        mode: 0755
+
+    - name: exastroのコンテナイメージを展開
+      shell:
+        cmd: tar xzf /tmp/work/exastro-image.tar.gz
+        chdir: /tmp/work
+
+
+    - name: シェルスクリプトを実行
+      shell:
+        cmd: ./exastro-image-load.sh
+        chdir: /tmp/work
+
+    - name: exastro helm chartをコピー
+      copy:
+        src: /tmp/work/exastro-x.x.x.tgz
+        dest: /tmp/work
+        mode: 0755
+        remote_src: false
+
+    - name: exastro.yamlをコピー
+      copy:
+        src: /tmp/work/exastro.yaml
+        dest: /tmp/work
+        mode: 0755
+
+    - name: pv-database.yamlをコピー
+      copy:
+        src: /tmp/work/pv-database.yaml
+        dest: /tmp/work
+        remote_src: false
+      when: "'k8s-node1' in group_names"
+
+    - name: pv-ita-common.yamlをコピー
+      copy:
+        src: /tmp/work/pv-ita-common.yaml
+        dest: /tmp/work
+        remote_src: false
+      when: "'k8s-node1' in group_names"
+
+    - name: pv-mongo.yamlをコピー
+      copy:
+        src: /tmp/work/pv-mongo.yaml
+        dest: /tmp/work
+        remote_src: false
+      when: "'k8s-node1' in group_names"
+
+    - name: pv-gitlab.yaml をコピー
+      copy:
+        src: /tmp/work/pv-gitlab.yaml
+        dest: /tmp/work
+        remote_src: false
+      when: "'k8s-node1' in group_names"
+
+    - name: pv-pf-auditlog.yaml をコピー
+      copy:
+        src: /tmp/work/pv-pf-auditlog.yaml
+        dest: /tmp/work
+        remote_src: false
+      when: "'k8s-node1' in group_names"
+
+    - name: シェルスクリプトのコピー
+      copy:
+        src: /tmp/work/apply-pv.sh
+        dest: /tmp/work
+        mode: 0755
+        remote_src: false
+      when: "'k8s-node1' in group_names"
+      
+    - name: シェルスクリプトを実行 
+      shell: 
+        cmd: /tmp/work/apply-pv.sh  
+        chdir: /tmp/work
+      ignore_errors: true
+      when: "'k8s-node1' in group_names"
+
+    - name: exec exastro v2
+      shell:
+        cmd: /usr/local/bin/helm install exastro ./exastro-x.x.x.tgz  --namespace exastro --create-namespace --values exastro.yaml
+        chdir: /tmp/work
+      when: "'k8s-node1' in group_names"
+    - debug:
+        msg: need checking exastro pod command kubectl get pod -n exastro
