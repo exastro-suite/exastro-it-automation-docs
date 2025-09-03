@@ -1,0 +1,17 @@
+# pv-mongo.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-mongo
+spec:
+  claimRef:
+    name: volume-mongo-storage-mongo-0
+    namespace: exastro
+  capacity:
+    storage: 20Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /var/data/exastro-suite/exastro-platform/mongo
+    type: DirectoryOrCreate
