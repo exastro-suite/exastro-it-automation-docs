@@ -657,6 +657,7 @@ OASE メニュー
        | ・_exastro_end_time
        | ・_exastro_type
        | ・_exastro_host
+       | ・_exastro_agent_name
      - 〇
      - リスト選択
      - ー
