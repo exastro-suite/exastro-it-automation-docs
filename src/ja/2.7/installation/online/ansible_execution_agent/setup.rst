@@ -178,8 +178,18 @@ Ansible Execution Agent - Online
      - 可
      - 2.5.1
      -
-
-
+   * - EXECUTION_LIMIT
+     - エージェントが同時に処理できる作業の最大数を制御できます。
+     - 5
+     - 可
+     - 2.7.0
+     -
+   * - MOVEMENT_LIMIT
+     - エージェントが一度に取得する未実行の作業の最大数を制御できます。
+     - 1
+     - 可
+     - 2.7.0
+     -
 .. tip::
   | EXECUTION_ENVIRONMENT_NAMES: エージェントで作業対象とする実行環境を分けたい場合等に指定してください。
   | 複数指定する際には、「,」区切りで指定してください。
@@ -190,6 +200,43 @@ Ansible Execution Agent - Online
          EXECUTION_ENVIRONMENT_NAMES=<実行環境名1>,<実行環境名2>
 
   | 実行環境名については、 :ref:`ansible_execution_environment_list` を参照してください。
+
+
+.. tip::
+  | エージェントの同時実行数や一度に取得する作業件数を変更するには、以下の設定値を変更後、サービスを再起動してください。
+
+  - EXECUTION_LIMIT: 同時実行可能な並列度の変更
+  - MOVEMENT_LIMIT: 一度に取得する未実行作業の件数の変更
+
+  | 例えば、EXECUTION_LIMIT=10と設定すると、最大10件の作業が並列で実行されます。また、MOVEMENT_LIMIT=5と設定すると、一度に最大5件の未実行作業を取得します。
+
+  | サービスの再起動手順については、 :ref:`ansible_execution_agent_service_cmd` を参照してください。
+
+.. tip::
+  | ワークスペース内での作業分散
+
+  MOVEMENT_LIMIT は、1つのワークスペース内で複数の Ansible Execution Agent を構成している場合に、作業の分散を制御する設定です。
+
+  - MOVEMENT_LIMIT の値を小さく設定すると、作業が複数の Ansible Execution Agent に均等に分散されます。
+  - MOVEMENT_LIMIT の値を大きく設定すると、作業が特定の Ansible Execution Agent に集中しやすくなります。
+
+.. tip::
+  | 作業の並列実行について
+
+  - EXECUTION_LIMIT の値を大きく設定すると、Ansible Execution Agent が同時に実行できる作業の数が増えます。
+  - この設定値を変更する際は、Ansible Execution Agent がインストールされているサーバーのスペックやリソース状況を考慮する必要があります。
+
+.. tip::
+  | 実行中の作業がある場合、EXECUTION_LIMITの設定値と、実行中の作業件数の差分を使用して未実行作業を取得します。
+
+  - EXECUTION_LIMIT=10
+  - MOVEMENT_LIMIT=5
+
+  | 作業実施件数が0件の場合: 5件の未実行作業取得
+  | 作業実施件数が5件の場合: 5件の未実行作業取得
+  | 作業実施件数が8件の場合: 2件の未実行作業取得
+  | 作業実施件数が10件の場合: 作業件数が10件以下になるまで、未実行作業取得はスキップ
+
 
 .. _ansible_execution_agent_install:
 
@@ -653,7 +700,7 @@ Ansible Execution Agentのインストール
 4. 以下、Enterを押下すると、必要な設定値を対話形式での入力が開始されます。
 
 .. code-block:: bash
- 
+
    'No value + Enter' is input while default value exists, the default value will be used.
    ->  Enter
 
@@ -731,7 +778,7 @@ Ansible Execution Agentのインストール
 
 .. tabs::
 
-   .. tab:: AlmaLinux8
+   .. tab:: AlmaLinux
 
      .. code-block:: bash
 
