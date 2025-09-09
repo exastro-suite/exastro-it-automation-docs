@@ -81,6 +81,10 @@
        | 1つのコンテナ基盤で、複数のOASE Agentを起動することも可能です。
    * - Active-Standby構成
      - ストレージを共有した、Active-Standby構成によって可用性を実現します。
+   * - 監視ツールとAgentの冗長構成
+     - | 収集対象が1つで、監視ツールが冗長構成の場合、複数のOASE Agentが各監視ツールから情報を収集します。
+       | 重複排除機能により、1つの情報として統合して収集することが可能です。
+       | この機能により、OASE Agentの冗長構成による高可用性を実現します。
 
 
 - 複数の外部システムとまとめて連携
@@ -99,4 +103,10 @@
 
 .. figure:: /images/ja/diagram/oase_agent_kousei_03.drawio.png
    :alt: 外部システムと個別に連携 イメージ
+   :width: 750px
+
+- 監視ツールとAgentの冗長構成
+
+.. figure:: /images/ja/diagram/oase_agent_kousei_04.drawio.png
+   :alt: 監視ツールとAgentの冗長構成
    :width: 750px
