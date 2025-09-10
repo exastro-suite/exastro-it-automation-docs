@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>4. 仮想マシン管理 &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="5. ゲストOS管理" href="guestos_management.html" />
+    <link rel="prev" title="3. ホスト管理" href="host_management.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/templates/vmware/vm_management.html" selected>current</option>
+              <option value="../../../../ja/2.6/templates/vmware/vm_management.html" selected>2.6(current)</option>
+              <option value="../../../../ja/2.5/templates/vmware/vm_management.html">2.5</option>
+              <option value="../../../../ja/2.4/templates/vmware/vm_management.html">2.4</option>
+              <option value="../../../../ja/2.3/templates/vmware/vm_management.html">2.3</option>
+              <option value="../../../../ja/2.2/templates/vmware/vm_management.html">2.2</option>
+              <option value="../../../../ja/2.1/templates/vmware/vm_management.html">2.1</option>
+              <option value="../../../../ja/2.0/templates/vmware/vm_management.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/templates/vmware/vm_management.html" selected>日本語</option>
+              <option value="../../../../en/2.6/templates/vmware/vm_management.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="host_management.html" title="前のトピックへ"><span class="section-number">3. </span>ホスト管理</a></li>
+        <li class="next"><a href="guestos_management.html" title="次のトピックへ"><span class="section-number">5. </span>ゲストOS管理</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/index.html">マニュアル</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">テンプレート</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">VMWare</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="template_resource.html">1. テンプレート資材</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cluster_management.html">2. クラスタ管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="host_management.html">3. ホスト管理</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">4. 仮想マシン管理</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">4.1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">4.2. メニュー項目</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#vmware-vmcreate">仮想マシン</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#vmware-vmcreate-master">仮想マシン(マスタ)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#vmware-template-master">テンプレート(マスタ)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#vmware-datastore-master">データストア(マスタ)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#vmware-nw-master">ネットワーク(マスタ)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#vmware-folder-master">フォルダ(マスタ)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#cpu">CPU(マスタ)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#vmware-memory-master">メモリ(マスタ)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#vmware-disk-master">ディスク(マスタ)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#vmware-vmstate-master">仮想マシン状態(マスタ)</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">4.3. 利用手順(仮想マシン作成)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">4.4. 利用手順(仮想マシン状態管理)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="guestos_management.html">5. ゲストOS管理</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deploymentGuide/index.html">1st Model 導入ガイド 第1.0版 （ITAバージョン2.5.0版）</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">4. 仮想マシン管理</a><ul>
+<li><a class="reference internal" href="#id2">4.1. はじめに</a></li>
+<li><a class="reference internal" href="#id3">4.2. メニュー項目</a><ul>
+<li><a class="reference internal" href="#vmware-vmcreate">仮想マシン</a></li>
+<li><a class="reference internal" href="#vmware-vmcreate-master">仮想マシン(マスタ)</a></li>
+<li><a class="reference internal" href="#vmware-template-master">テンプレート(マスタ)</a></li>
+<li><a class="reference internal" href="#vmware-datastore-master">データストア(マスタ)</a></li>
+<li><a class="reference internal" href="#vmware-nw-master">ネットワーク(マスタ)</a></li>
+<li><a class="reference internal" href="#vmware-folder-master">フォルダ(マスタ)</a></li>
+<li><a class="reference internal" href="#cpu">CPU(マスタ)</a></li>
+<li><a class="reference internal" href="#vmware-memory-master">メモリ(マスタ)</a></li>
+<li><a class="reference internal" href="#vmware-disk-master">ディスク(マスタ)</a></li>
+<li><a class="reference internal" href="#vmware-vmstate-master">仮想マシン状態(マスタ)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id13">4.3. 利用手順(仮想マシン作成)</a></li>
+<li><a class="reference internal" href="#id14">4.4. 利用手順(仮想マシン状態管理)</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">テンプレート</a></li>
+    <li><a href="index.html">VMWare</a></li>
+    
+    <li><span class="section-number">4. </span>仮想マシン管理</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="id1">
+<h1><span class="section-number">4. </span>仮想マシン管理<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<section id="id2">
+<h2><span class="section-number">4.1. </span>はじめに<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書では、Exastro IT Automation（以下、ITA）における仮想マシンを作成する機能と操作手順について説明します。</div>
+</div>
+</section>
+<section id="id3">
+<h2><span class="section-number">4.2. </span>メニュー項目<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<section id="vmware-vmcreate">
+<span id="id4"></span><h3>仮想マシン<a class="headerlink" href="#vmware-vmcreate" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">仮想マシン作成を行うための中心的なメニューです。本メニューで登録された情報に基づいて仮想マシンが作成されます。</div>
+<div class="line">※ホスト名は「localhost」を設定してください。仮想マシンはオペレーション単位で管理をしてください。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/vm_v2_5.png"><img alt="仮想マシンメニュー画面" src="../../_images/vm_v2_5.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id15">
+<caption><span class="caption-number">表 4.44 </span><span class="caption-text">メニュー項目一覧（仮想マシン作成）</span><a class="headerlink" href="#id15" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>入力方法</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>仮想マシン</p></td>
+<td><p>vCenter内に作成される仮想マシンの表示名を選択します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>テンプレート</p></td>
+<td><p>作成する仮想マシンのテンプレート名を選択します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>IPアドレス</p></td>
+<td><p>作成する仮想マシンに割り当てるIPアドレスを選択します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>vCenterホスト名</p></td>
+<td><p>接続対象のvCenterのホスト名を選択します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>データストア</p></td>
+<td><p>vCenter内で使用するデータストア名を選択します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>フォルダ</p></td>
+<td><p>作成する仮想マシンを格納するフォルダ名を選択します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>CPU</p></td>
+<td><p>作成する仮想マシンのCPU数を選択します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>メモリ</p></td>
+<td><p>作成する仮想マシンのメモリ容量(MB)を選択します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>ディスク</p></td>
+<td><p>作成する仮想マシンのディスク容量(GB)を選択します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vmware-vmcreate-master">
+<span id="id5"></span><h3>仮想マシン(マスタ)<a class="headerlink" href="#vmware-vmcreate-master" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">仮想マシン作成時に使用する仮想マシン名を登録します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/vm_master_v2_5.png"><img alt="仮想マシン(マスタ)メニュー画面" src="../../_images/vm_master_v2_5.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id16">
+<caption><span class="caption-number">表 4.45 </span><span class="caption-text">メニュー項目一覧（仮想マシン(マスタ)）</span><a class="headerlink" href="#id16" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">項目</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">説明</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力必須</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力方法</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">制約事項</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">仮想マシン名</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">vCenter内に作成される仮想マシンの表示名を登録します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">最大長64バイト</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vmware-template-master">
+<span id="id6"></span><h3>テンプレート(マスタ)<a class="headerlink" href="#vmware-template-master" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">仮想マシン作成時に使用するテンプレート情報を登録します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/template_master_v2_5.png"><img alt="テンプレート(マスタ)メニュー画面" src="../../_images/template_master_v2_5.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id17">
+<caption><span class="caption-number">表 4.46 </span><span class="caption-text">メニュー項目一覧（テンプレート(マスタ)）</span><a class="headerlink" href="#id17" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">項目</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">説明</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力必須</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力方法</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">制約事項</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">テンプレート名</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">作成する仮想マシンのテンプレート名を入力します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">最大長128バイト</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">ユーザー</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">設定したテンプレートにログインするユーザー名を入力します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">最大長32バイト</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">パスワード</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">設定したテンプレートにログインするパスワードを入力します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">パスワード形式</div>
+<div class="line">最大長32バイト</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vmware-datastore-master">
+<span id="id7"></span><h3>データストア(マスタ)<a class="headerlink" href="#vmware-datastore-master" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">仮想マシンの作成時に使用するデータストア情報を登録します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/datastore_master_v2_5.png"><img alt="データストア(マスタ)メニュー画面" src="../../_images/datastore_master_v2_5.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id18">
+<caption><span class="caption-number">表 4.47 </span><span class="caption-text">メニュー項目一覧（データストア(マスタ)）</span><a class="headerlink" href="#id18" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">項目</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">説明</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力必須</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力方法</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">制約事項</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">データストア名</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">vCenter内で使用するデータストア名を入力します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">最大長42バイト</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vmware-nw-master">
+<span id="id8"></span><h3>ネットワーク(マスタ)<a class="headerlink" href="#vmware-nw-master" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">仮想マシン作成時に使用するネットワーク情報を登録します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/nw_master_v2_5.png"><img alt="ネットワーク(マスタ)メニュー画面" src="../../_images/nw_master_v2_5.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id19">
+<caption><span class="caption-number">表 4.48 </span><span class="caption-text">メニュー項目一覧（ネットワーク(マスタ)）</span><a class="headerlink" href="#id19" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>入力方法</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>IPアドレス</p></td>
+<td><p>作成する仮想マシンに割り当てるIPアドレスを入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+<tr class="row-odd"><td><p>ネットワーク名</p></td>
+<td><p>vCenter内で使用するネットワーク名を入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+<tr class="row-even"><td><p>サブネットマスク</p></td>
+<td><p>設定したIPアドレスに対応するサブネットマスクを入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+<tr class="row-odd"><td><p>デフォルトゲートウェイ</p></td>
+<td><p>設定したIPアドレスに対応するデフォルトゲートウェイを入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+<tr class="row-even"><td><p>DNSサーバ①</p></td>
+<td><p>設定したIPアドレスに対応する1つ目のDNSサーバを入力します。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+<tr class="row-odd"><td><p>DNSサーバ②</p></td>
+<td><p>設定したIPアドレスに対応する2つ目のDNSサーバを入力します。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vmware-folder-master">
+<span id="id9"></span><h3>フォルダ(マスタ)<a class="headerlink" href="#vmware-folder-master" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">仮想マシン作成時に使用するフォルダ情報を登録します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/folder_master_v2_5.png"><img alt="フォルダ(マスタ)メニュー画面" src="../../_images/folder_master_v2_5.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id20">
+<caption><span class="caption-number">表 4.49 </span><span class="caption-text">メニュー項目一覧（フォルダ）</span><a class="headerlink" href="#id20" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">項目</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">説明</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力必須</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力方法</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">制約事項</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">フォルダ名</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">作成する仮想マシンを格納するフォルダ名を入力します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">最大長128バイト</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="cpu">
+<span id="vmware-cpu-master"></span><h3>CPU(マスタ)<a class="headerlink" href="#cpu" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">仮想マシン作成時に使用するCPU数を登録します。</div>
+<div class="line">テンプレートの仕様に合わせて設定してください。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/cpu_master_v2_5.png"><img alt="CPU(マスタ)メニュー画面" src="../../_images/cpu_master_v2_5.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id21">
+<caption><span class="caption-number">表 4.50 </span><span class="caption-text">メニュー項目一覧（CPU(マスタ)）</span><a class="headerlink" href="#id21" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">項目</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">説明</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力必須</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力方法</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">制約事項</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">CPU</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">作成する仮想マシンのCPU数を入力します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">最大長32バイト</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vmware-memory-master">
+<span id="id10"></span><h3>メモリ(マスタ)<a class="headerlink" href="#vmware-memory-master" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">仮想マシン作成時に使用するメモリ容量を登録します。</div>
+<div class="line">テンプレートの仕様に合わせて設定してください。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/memory_master_v2_5.png"><img alt="メモリ(マスタ)メニュー画面" src="../../_images/memory_master_v2_5.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id22">
+<caption><span class="caption-number">表 4.51 </span><span class="caption-text">メニュー項目一覧（メモリ(マスタ)）</span><a class="headerlink" href="#id22" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">項目</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">説明</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力必須</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力方法</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">制約事項</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">メモリ(MB)</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">作成する仮想マシンのメモリ容量をMB単位で入力します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">最大長32バイト</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vmware-disk-master">
+<span id="id11"></span><h3>ディスク(マスタ)<a class="headerlink" href="#vmware-disk-master" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">仮想マシン作成時に使用するディスク容量を登録します。</div>
+<div class="line">テンプレートの仕様に合わせて設定してください。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/disk_master_v2_5.png"><img alt="ディスク(マスタ)メニュー画面" src="../../_images/disk_master_v2_5.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id23">
+<caption><span class="caption-number">表 4.52 </span><span class="caption-text">メニュー項目一覧（ディスク(マスタ)）</span><a class="headerlink" href="#id23" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">項目</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">説明</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力必須</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力方法</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">制約事項</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ディスク(GB)</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">作成する仮想マシンのディスク容量をGB単位で入力します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">最大長32バイト</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vmware-vmstate-master">
+<span id="id12"></span><h3>仮想マシン状態(マスタ)<a class="headerlink" href="#vmware-vmstate-master" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">仮想マシンの状態管理に必要な「状態名」と「状態」を定義します。</div>
+<div class="line">本メニューは、ITAにおける仮想マシン状態のMovementで使用され、仮想マシンの起動・停止・再起動・サスペンドなどの操作を制御するためのマスタデータとして機能します。</div>
+</div>
+<div class="line-block">
+<div class="line">なお、起動設定はすでにマスタとして登録済みです。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/vm_state_master_v2_5.png"><img alt="仮想マシン状態(マスタ)メニュー画面" src="../../_images/vm_state_master_v2_5.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id24">
+<caption><span class="caption-number">表 4.53 </span><span class="caption-text">メニュー項目一覧（仮想マシン状態(マスタ)）</span><a class="headerlink" href="#id24" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">項目</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">説明</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力必須</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力方法</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">制約事項</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">状態名</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">仮想マシンの操作名称を管理します。</div>
+<div class="line">（例：起動、停止、サスペンド）</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">最大長64バイト</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">状態</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">仮想マシンに対して実行される状態を入力します。</div>
+<div class="line">（例：powered-On、powered-Off、suspended）</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">〇</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">最大長64バイト</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id13">
+<h2><span class="section-number">4.3. </span>利用手順(仮想マシン作成)<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">仮想マシン作成の利用手順について説明します。</div>
+<div class="line">本手順を実行する前に、<strong>vCenter上で仮想マシン作成用のテンプレートを事前に作成しておく必要があります</strong>。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><strong>vCenter接続情報を登録</strong></div>
+<div class="line"><span class="menuselection">VMware ▶ クラスタ管理 ▶ vCenter Server(マスタ)</span> から、接続先vCenterの情報を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="cluster_management.html#vcenter-server-master"><span class="std std-ref">vCenter Server(マスタ)</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>グローバル変数管理の編集</strong></div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ グローバル変数管理</span> から、対象のグローバル変数に具体値を設定します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="../../manuals/ansible-driver/ansible_common.html#ansible-common-global-variable-list"><span class="std std-ref">グローバル変数管理</span></a> 」を参照してください。</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/global_variable_list_v2-4.png"><img alt="グローバル変数の編集画面" src="../../_images/global_variable_list_v2-4.png" style="width: 800px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>仮想マシン名を登録</strong></div>
+<div class="line"><span class="menuselection">仮想マシン管理 ▶ 仮想マシン(マスタ)</span> から、作成する仮想マシン名の情報を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#vmware-vmcreate-master"><span class="std std-ref">仮想マシン(マスタ)</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>テンプレート名を登録</strong></div>
+<div class="line"><span class="menuselection">仮想マシン管理 ▶ テンプレート(マスタ)</span> から、作成する仮想マシンのテンプレート名を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#vmware-template-master"><span class="std std-ref">テンプレート(マスタ)</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>データストア名を登録</strong></div>
+<div class="line"><span class="menuselection">仮想マシン管理 ▶ データストア(マスタ)</span> から、接続するvCenter内のデータストア名の情報を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#vmware-datastore-master"><span class="std std-ref">データストア(マスタ)</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>ネットワーク名を登録</strong></div>
+<div class="line"><span class="menuselection">仮想マシン管理 ▶ネットワーク(マスタ)</span> から、作成する仮想マシンのネットワーク名を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#vmware-nw-master"><span class="std std-ref">ネットワーク(マスタ)</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>フォルダ名を登録</strong></div>
+<div class="line"><span class="menuselection">仮想マシン管理 ▶ フォルダ(マスタ)</span> から、作成する仮想マシンを格納するフォルダ名を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#vmware-folder-master"><span class="std std-ref">フォルダ(マスタ)</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>CPU数を登録</strong></div>
+<div class="line"><span class="menuselection">仮想マシン管理 ▶CPU(マスタ)</span> から、作成する仮想マシンのCPU数を登録します。</div>
+<div class="line">この値はテンプレートの仕様に基づいて設定してください。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#vmware-cpu-master"><span class="std std-ref">CPU(マスタ)</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>メモリ容量を登録</strong></div>
+<div class="line"><span class="menuselection">仮想マシン管理 ▶ メモリ(マスタ)</span> から、作成する仮想マシンのメモリ容量を登録します。</div>
+<div class="line">この値はテンプレートの仕様に基づいて設定してください。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#vmware-memory-master"><span class="std std-ref">メモリ(マスタ)</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>ディスク容量を登録</strong></div>
+<div class="line"><span class="menuselection">仮想マシン管理 ▶ ディスク(マスタ)</span> から、作成する仮想マシンのディスク容量を登録します。</div>
+<div class="line">この値はテンプレートの仕様に基づいて設定してください。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#vmware-disk-master"><span class="std std-ref">ディスク(マスタ)</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>作業対象の仮想マシン情報を登録</strong></div>
+<div class="line"><span class="menuselection">仮想マシン管理 ▶ 仮想マシン</span> から、作業対象の仮想マシン情報を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#vmware-vmcreate"><span class="std std-ref">仮想マシン</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>Conductorの選択</strong></div>
+</div>
+<div class="line-block">
+<div class="line">12-1 メインメニューから <span class="menuselection">Conductor</span> メニューを選択します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/conductor_mainmenuv2_5.png"><img alt="メインメニュー画面" src="../../_images/conductor_mainmenuv2_5.png" style="width: 800px;" />
+</a>
+</figure>
+<div class="line-block">
+<div class="line">12-2 <span class="menuselection">Conductor一覧</span> メニューを選択します。</div>
+</div>
+<div class="line-block">
+<div class="line">12-3 <span class="menuselection">仮想マシン作成</span> の詳細ボタンを押下します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/conductorlist_v2_5.png"><img alt="Conductor一覧画面" src="../../_images/conductorlist_v2_5.png" style="width: 800px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>Conductorの実行</strong></div>
+</div>
+<div class="line-block">
+<div class="line">13-1 作業実行ボタンを押下します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/conductor_execute_createvmv2_5.png"><img alt="Conductor仮想マシン作成画面" src="../../_images/conductor_execute_createvmv2_5.png" style="width: 800px;" />
+</a>
+</figure>
+<div class="line-block">
+<div class="line">13-2 オペレーション選択ボタンより、仮想マシン作成を実行するオペレーションを選択します。</div>
+</div>
+<div class="line-block">
+<div class="line">13-3 作業実行ボタンより、仮想マシン作成の作業を実行します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/conductor_execute2_createvmv2_5.png"><img alt="Conductor仮想マシン作成画面" src="../../_images/conductor_execute2_createvmv2_5.png" style="width: 800px;" />
+</a>
+</figure>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">Conductor作業履歴で「想定外エラー」や「異常終了」と表示された場合は、</div>
+<div class="line"><span class="menuselection">仮想マシン管理</span> の各メニューや <span class="menuselection">Ansible共通 ▶ グローバル変数管理</span> に入力した情報に誤りが無いか確認をお願いいたします。</div>
+</div>
+</div>
+</section>
+<section id="id14">
+<h2><span class="section-number">4.4. </span>利用手順(仮想マシン状態管理)<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">仮想マシン状態の利用手順について説明します。</div>
+<div class="line"><span class="menuselection">仮想マシン管理 ▶ 仮想マシン</span> の「サーバー状態」項目より、仮想マシンの起動・停止・再起動・サスペンドなどの操作を制御することができます。</div>
+<div class="line">※本手順は、仮想マシン作成のMovementを実行して作業対象の仮想マシンが作成済みであることを前提としています。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><strong>作業対象の仮想マシン情報の起動状態を登録</strong></div>
+<div class="line"><span class="menuselection">仮想マシン管理 ▶ 仮想マシン</span> の「サーバー状態」項目より、作業対象の仮想マシンの起動状態を登録します。</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/vmstate_v2_5.png"><img alt="サーバー状態の編集画面" src="../../_images/vmstate_v2_5.png" style="width: 800px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>Conductorの選択</strong></div>
+</div>
+<div class="line-block">
+<div class="line">2-1 メインメニューから <span class="menuselection">Conductor</span> メニューを選択します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/conductor_mainmenuv2_5.png"><img alt="メインメニュー画面" src="../../_images/conductor_mainmenuv2_5.png" style="width: 800px;" />
+</a>
+</figure>
+<div class="line-block">
+<div class="line">2-2 <span class="menuselection">Conductor一覧</span> メニューを選択します。</div>
+</div>
+<div class="line-block">
+<div class="line">2-3 <span class="menuselection">仮想マシン状態</span> の詳細ボタンを押下します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/conductorlist_v2_5.png"><img alt="Conductor一覧画面" src="../../_images/conductorlist_v2_5.png" style="width: 800px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>Conductorの実行</strong></div>
+</div>
+<div class="line-block">
+<div class="line">3-1 作業実行ボタンを押下します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/conductor_execute_vmstatev2_5.png"><img alt="Conductor仮想マシン状態画面" src="../../_images/conductor_execute_vmstatev2_5.png" style="width: 800px;" />
+</a>
+</figure>
+<div class="line-block">
+<div class="line">3-2 オペレーション選択ボタンより、仮想マシン状態を実行するオペレーションを選択します。</div>
+</div>
+<div class="line-block">
+<div class="line">3-3 作業実行ボタンより、仮想マシン状態の作業を実行します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/conductor_execute2_vmstatev2_5.png"><img alt="Conductor仮想マシン状態画面" src="../../_images/conductor_execute2_vmstatev2_5.png" style="width: 800px;" />
+</a>
+</figure>
+</li>
+</ol>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="host_management.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">3. </span>ホスト管理</a></li>
+    <li class="next"><a href="guestos_management.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">5. </span>ゲストOS管理</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

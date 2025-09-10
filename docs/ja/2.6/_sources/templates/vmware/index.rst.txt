@@ -4,10 +4,10 @@ VMWare
 
 .. toctree::
    :maxdepth: 2
-   :numbered: 4
+   :numbered: 2
 
    template_resource
-   create_server
-   resource_management
-   server_reboot
-   hosts_copy
+   cluster_management
+   host_management
+   vm_management
+   guestos_management
