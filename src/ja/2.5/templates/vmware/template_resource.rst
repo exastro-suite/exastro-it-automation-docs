@@ -9,7 +9,7 @@
 配布サイト
 ------------
 | テンプレートは以下のURLから取得できます。
-| https://github.com/exastro-suite/templates/releases
+| https://github.com/exastro-suite/templates/tree/main/VMWare/createVM/package
 
 使用ファイル
 -------------
