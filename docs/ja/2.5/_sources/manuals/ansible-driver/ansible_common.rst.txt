@@ -737,7 +737,7 @@ Ansible共通メニュー構成
    |  「localhost」を指定して作業実行するとansibleホスト内で作業が実行されます。
    |  pioneerで「localhost」は使用できません。
 
-   .. figure:: /images/ja/ansible_common/devaicelist/device_list_v2_5.png
+   .. figure:: /images/ja/ansible_common/devaicelist/devicelist_v2_5.png
       :width: 800px
       :alt: サブメニュー画面（機器一覧）
 

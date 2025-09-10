@@ -39,7 +39,7 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="2. VM作成" href="create_server.html" />
+    <link rel="next" title="2. クラスタ管理" href="cluster_management.html" />
     <link rel="prev" title="VMWare" href="index.html" /> 
   </head>
 <body id="page" class="ja">
@@ -103,7 +103,7 @@
     <div id="toolbarNavigation">
       <ul>
         <li class="prev"><a href="index.html" title="前のトピックへ">VMWare</a></li>
-        <li class="next"><a href="create_server.html" title="次のトピックへ"><span class="section-number">2. </span>VM作成</a></li>
+        <li class="next"><a href="cluster_management.html" title="次のトピックへ"><span class="section-number">2. </span>クラスタ管理</a></li>
       </ul>
     </div>
   </div>
@@ -122,18 +122,18 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">テンプレート</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">VMWare</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">1. テンプレート資材</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id2">1.1. テンプレート資材</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#id3">1.1.1. サイト</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#id4">1.1.2. ファイル名</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1.1. テンプレート資材の取得</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id3">配布サイト</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id4">使用ファイル</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#id5">1.2. モジュール追加</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">1.2. モジュールの追加手順</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="create_server.html">2. VM作成</a></li>
-<li class="toctree-l3"><a class="reference internal" href="resource_management.html">3. リソース管理</a></li>
-<li class="toctree-l3"><a class="reference internal" href="server_reboot.html">4. サーバー再起動</a></li>
-<li class="toctree-l3"><a class="reference internal" href="hosts_copy.html">5. hosts配布</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cluster_management.html">2. クラスタ管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="host_management.html">3. ホスト管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vm_management.html">4. 仮想マシン管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="guestos_management.html">5. ゲストOS管理</a></li>
 </ul>
 </li>
 </ul>
@@ -155,12 +155,12 @@
   <div id="tocButton"></div>
   <ul>
 <li><a class="reference internal" href="#">1. テンプレート資材</a><ul>
-<li><a class="reference internal" href="#id2">1.1. テンプレート資材</a><ul>
-<li><a class="reference internal" href="#id3">1.1.1. サイト</a></li>
-<li><a class="reference internal" href="#id4">1.1.2. ファイル名</a></li>
+<li><a class="reference internal" href="#id2">1.1. テンプレート資材の取得</a><ul>
+<li><a class="reference internal" href="#id3">配布サイト</a></li>
+<li><a class="reference internal" href="#id4">使用ファイル</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id5">1.2. モジュール追加</a></li>
+<li><a class="reference internal" href="#id5">1.2. モジュールの追加手順</a></li>
 </ul>
 </li>
 </ul>
@@ -188,104 +188,123 @@
   <section id="id1">
 <h1><span class="section-number">1. </span>テンプレート資材<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
 <div class="line-block">
-<div class="line">本書では、テンプレート資材の場所を以下に記載します。</div>
+<div class="line">本書では、VMwareテンプレートを利用するために必要な資材の取得方法と、動作環境の準備手順について説明します。</div>
 </div>
 <section id="id2">
-<h2><span class="section-number">1.1. </span>テンプレート資材<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<h2><span class="section-number">1.1. </span>テンプレート資材の取得<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <section id="id3">
-<h3><span class="section-number">1.1.1. </span>サイト<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
-<p><a class="reference external" href="https://github.com/exastro-suite/templates/releases">https://github.com/exastro-suite/templates/releases</a></p>
+<h3>配布サイト<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">テンプレートは以下のURLから取得できます。</div>
+<div class="line"><a class="reference external" href="https://github.com/exastro-suite/templates/tree/main/VMWare/createVM/package">https://github.com/exastro-suite/templates/tree/main/VMWare/createVM/package</a></div>
+</div>
 </section>
 <section id="id4">
-<h3><span class="section-number">1.1.2. </span>ファイル名<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
-<p>template-createVM-1.0.0-ita-2.4.0.kym</p>
-<p>インポート方法は「 <a class="reference internal" href="../../manuals/export_import/menu_export_import.html#menu-import"><span class="std std-ref">メニューインポート</span></a> 」を参照してください。</p>
+<h3>使用ファイル<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">使用するテンプレートファイル名は以下の通りです。</div>
+<div class="line">インポート方法については「 <a class="reference internal" href="../../manuals/export_import/menu_export_import.html#menu-import"><span class="std std-ref">メニューインポート</span></a> 」を参照してください。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>template-createVM-1.0.0-ita-2.5.2.kym</strong></div>
+</div>
 </section>
 </section>
 <section id="id5">
-<h2><span class="section-number">1.2. </span>モジュール追加<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+<h2><span class="section-number">1.2. </span>モジュールの追加手順<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
 <div class="line-block">
-<div class="line">テンプレートを利用するにはコンテナに、community.vmwareのモジュールの追加が必要です。</div>
-<div class="line">下記にモジュールを追加するための例を記載します。</div>
+<div class="line">VMwareテンプレートの動作には、<cite>community.vmware</cite> モジュールの導入が必要です。</div>
+<div class="line">以下に、モジュールの追加手順例を記載します。</div>
 </div>
-<p>1.RHEL環境に接続します。</p>
-<p>2.以下のコマンドを入力し、クローンを作成します。</p>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><strong>ITAインストール環境への接続</strong></div>
+<div class="line">ITAがインストールされた環境に接続します。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>Dockerfileの編集</strong></div>
+<div class="line">以下のコマンドを実行して、Dockerfileを開きます。</div>
+</div>
 <div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-number">リスト 1.26 </span><span class="caption-text">形式</span><a class="headerlink" href="#id6" title="Link to this code">¶</a></div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">su</span> <span class="o">-</span>
-<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">exastro</span><span class="o">-</span><span class="n">suite</span><span class="o">/</span><span class="n">exastro</span><span class="o">-</span><span class="n">it</span><span class="o">-</span><span class="n">automation</span><span class="o">.</span><span class="n">git</span> <span class="o">-</span><span class="n">b</span> <span class="mf">2.4.0</span>
+<div class="code-block-caption"><span class="caption-number">リスト 1.26 </span><span class="caption-text">コマンド（Dockerfileの編集）</span><a class="headerlink" href="#id6" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/exastro-docker-compose</span>
+<span class="go">vim ita_by_ansible_execute/templates/work/Dockerfile</span>
 </pre></div>
 </div>
 </div>
-<p>3.クローン作成後、以下のコマンドを入力しDockerファイルを開きます。</p>
+<div class="line-block">
+<div class="line">Dockerfileの末尾に、以下を追記します。</div>
+</div>
 <div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-number">リスト 1.27 </span><span class="caption-text">形式</span><a class="headerlink" href="#id7" title="Link to this code">¶</a></div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">exastro</span><span class="o">-</span><span class="n">it</span><span class="o">-</span><span class="n">automation</span>
-<span class="n">vim</span> <span class="n">ita_root</span><span class="o">/</span><span class="n">ita_by_ansible_execute</span><span class="o">/</span><span class="n">ita_ansible_agent</span><span class="o">/</span><span class="n">Dockerfile</span>
+<div class="code-block-caption"><span class="caption-number">リスト 1.27 </span><span class="caption-text">Dockerfileの追記内容</span><a class="headerlink" href="#id7" title="Link to this code">¶</a></div>
+<div class="highlight-docker notranslate"><div class="highlight"><pre><span></span><span class="k">ENV</span><span class="w"> </span><span class="nv">http_proxy</span><span class="o">=</span>http://&lt;your-proxy-host&gt;:&lt;port&gt;/
+<span class="k">ENV</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span>http://&lt;your-proxy-host&gt;:&lt;port&gt;/
+<span class="k">ENV</span><span class="w"> </span><span class="nv">https_proxy</span><span class="o">=</span>http://&lt;your-proxy-host&gt;:&lt;port&gt;/
+<span class="k">ENV</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span>http://&lt;your-proxy-host&gt;:&lt;port&gt;/
+
+<span class="k">RUN</span><span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span><span class="nv">pyvmomi</span><span class="o">==</span><span class="m">8</span>.0.3.0.1<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>pyVim<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span>ansible-galaxy<span class="w"> </span>collection<span class="w"> </span>install<span class="w"> </span>community.vmware
 </pre></div>
 </div>
 </div>
-<p>4.Dockerファイル内の「useradd -m -s /bin/bash -g $GROUPNAME $USERNAME」の記述がある行の下に、以下のコマンドを入力します。</p>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>Dockerイメージのビルド</strong></div>
+<div class="line">編集したDockerfileをもとに、以下のコマンドで新しいイメージをビルドします。</div>
+</div>
 <div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-number">リスト 1.28 </span><span class="caption-text">形式</span><a class="headerlink" href="#id8" title="Link to this code">¶</a></div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&amp;&amp;  useradd -m -s /bin/bash -g $GROUPNAME $USERNAME \
-&amp;&amp;  pip3.9 install --upgrade ansible \
-&amp;&amp;  pip3 install pyvmomi \
-&amp;&amp;  pip3 install pyVim \
-&amp;&amp; ansible-galaxy collection install community.vmware -p /usr/local/lib/python3.9/site-packages/ansible_collections
+<div class="code-block-caption"><span class="caption-number">リスト 1.28 </span><span class="caption-text">コマンド（Dockerイメージのビルド）</span><a class="headerlink" href="#id8" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">docker build -f ita_by_ansible_execute/templates/work/Dockerfile -t exastro/ita-ansible-agent:2.5.2 . --build-arg ANSIBLE_AGENT_BASE_IMAGE=exastro/exastro-it-automation-by-ansible-agent --build-arg ANSIBLE_AGENT_BASE_IMAGE_TAG=2.5.2</span>
 </pre></div>
 </div>
 </div>
-<p>5.入力後、Dockerファイルの上書きを行います。</p>
-<p>6.以下のコマンドを入力し、ビルドを行います。</p>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>.env ファイルの更新</strong></div>
+<div class="line">以下のコマンドで <cite>.env</cite> ファイルを開き、イメージ名とタグを更新します。</div>
+</div>
 <div class="literal-block-wrapper docutils container" id="id9">
-<div class="code-block-caption"><span class="caption-number">リスト 1.29 </span><span class="caption-text">形式</span><a class="headerlink" href="#id9" title="Link to this code">¶</a></div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">podman</span> <span class="n">build</span> <span class="o">--</span><span class="nb">format</span><span class="o">=</span><span class="n">docker</span> <span class="o">-</span><span class="n">f</span> <span class="n">ita_root</span><span class="o">/</span><span class="n">ita_by_ansible_execute</span><span class="o">/</span><span class="n">ita_ansible_agent</span><span class="o">/</span><span class="n">Dockerfile</span> <span class="o">-</span><span class="n">t</span> <span class="n">exastro</span><span class="o">/</span><span class="n">ita</span><span class="o">-</span><span class="n">ansible</span><span class="o">-</span><span class="n">agent</span><span class="p">:</span><span class="mf">2.4.0</span> <span class="o">.</span>
+<div class="code-block-caption"><span class="caption-number">リスト 1.29 </span><span class="caption-text">コマンド（<cite>.env</cite> ファイルの編集）</span><a class="headerlink" href="#id9" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/exastro-docker-compose</span>
+<span class="go">vim .env</span>
 </pre></div>
 </div>
 </div>
-<p>7.以下のコマンドを入力し、tarファイルに圧縮します。</p>
-<div class="literal-block-wrapper docutils container" id="id10">
-<div class="code-block-caption"><span class="caption-number">リスト 1.30 </span><span class="caption-text">形式</span><a class="headerlink" href="#id10" title="Link to this code">¶</a></div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">podman</span> <span class="n">save</span> <span class="n">localhost</span><span class="o">/</span><span class="n">exastro</span><span class="o">/</span><span class="n">ita</span><span class="o">-</span><span class="n">ansible</span><span class="o">-</span><span class="n">agent</span><span class="p">:</span><span class="mf">2.4.0</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">ita</span><span class="o">-</span><span class="n">agent</span><span class="o">-</span><span class="mf">24.</span><span class="n">tar</span>
-</pre></div>
-</div>
-</div>
-<p>8.7で作成したtarファイルをITAインストール環境に移動</p>
-<p>9.以下のコマンドを入力し、コンテナイメージをファイルから読み込みます。</p>
-<div class="literal-block-wrapper docutils container" id="id11">
-<div class="code-block-caption"><span class="caption-number">リスト 1.31 </span><span class="caption-text">形式</span><a class="headerlink" href="#id11" title="Link to this code">¶</a></div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">load</span> <span class="o">&lt;</span> <span class="n">ita</span><span class="o">-</span><span class="n">agent</span><span class="o">-</span><span class="mf">24.</span><span class="n">tar</span>
-</pre></div>
-</div>
-</div>
-<p>10..envファイルの更新をします。
-設定ファイル <code class="file docutils literal notranslate"><span class="pre">~/exastro-docker-compose/.env</span></code></p>
-<div class="literal-block-wrapper docutils container" id="id12">
-<div class="code-block-caption"><span class="caption-number">リスト 1.32 </span><span class="caption-text">形式</span><a class="headerlink" href="#id12" title="Link to this code">¶</a></div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">exastro</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">compose</span>
-<span class="n">vim</span> <span class="o">.</span><span class="n">env</span>
-</pre></div>
-</div>
-</div>
-<div class="literal-block-wrapper docutils container" id="id13">
-<div class="code-block-caption"><span class="caption-number">リスト 1.33 </span><span class="caption-text">形式</span><a class="headerlink" href="#id13" title="Link to this code">¶</a></div>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">#### Ansible エージェントのコンテナイメージのリポジトリ</span>
-<span class="linenos">2</span><span class="nv">ANSIBLE_AGENT_IMAGE</span><span class="o">=</span>localhost/exastro/ita-ansible-agent
-<span class="linenos">3</span><span class="c1">#### Ansible エージェントのコンテナイメージのタグ</span>
-<span class="hll"><span class="linenos">4</span><span class="nv">ANSIBLE_AGENT_IMAGE_TAG</span><span class="o">=</span><span class="m">2</span>.4.0
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Ansible エージェントのコンテナイメージのリポジトリ</span>
+<span class="hll"><span class="na">ANSIBLE_AGENT_IMAGE</span><span class="o">=</span><span class="s">exastro/ita-ansible-agent</span>
+</span><span class="c1">#### Ansible エージェントのコンテナイメージのタグ</span>
+<span class="hll"><span class="na">ANSIBLE_AGENT_IMAGE_TAG</span><span class="o">=</span><span class="s">2.5.2</span>
 </span></pre></div>
 </div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>環境の再構築</strong></div>
+<div class="line"><cite>.env</cite> ファイルの編集後、以下のコマンドを実行して環境を再構築します。</div>
 </div>
-<p>11.以下のコマンドをdocker環境で入力し、環境変数の反映をします。</p>
-<div class="literal-block-wrapper docutils container" id="id14">
-<div class="code-block-caption"><span class="caption-number">リスト 1.34 </span><span class="caption-text">形式</span><a class="headerlink" href="#id14" title="Link to this code">¶</a></div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">compose</span> <span class="n">stop</span> <span class="n">ita</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">ansible</span><span class="o">-</span><span class="n">execute</span>
-
-<span class="n">docker</span> <span class="n">compose</span> <span class="n">up</span> <span class="o">-</span><span class="n">d</span> <span class="n">ita</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">ansible</span><span class="o">-</span><span class="n">execute</span>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-number">リスト 1.30 </span><span class="caption-text">コマンド（編集を反映）</span><a class="headerlink" href="#id10" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/exastro-docker-compose</span>
+<span class="go">sh setup.sh install</span>
 </pre></div>
 </div>
 </div>
+<div class="line-block">
+<div class="line">実行中に以下のようなプロンプトが表示されます。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-number">リスト 1.31 </span><span class="caption-text">実行時のプロンプト</span><a class="headerlink" href="#id11" title="Link to this code">¶</a></div>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="na">...</span>
+<span class="hll"><span class="na">Regenerate .env file? (y/n) [default</span><span class="o">:</span><span class="w"> </span><span class="s">n]: n</span>
+</span><span class="na">...</span>
+<span class="hll"><span class="na">Deploy Exastro containers now? (y/n) [default</span><span class="o">:</span><span class="w"> </span><span class="s">n]: y</span>
+</span><span class="na">...</span>
+</pre></div>
+</div>
+</div>
+</li>
+</ol>
 </section>
 </section>
 
@@ -296,7 +315,7 @@
 <div id="articleNavigation">
   <ul>
     <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span>VMWare</a></li>
-    <li class="next"><a href="create_server.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">2. </span>VM作成</a></li>
+    <li class="next"><a href="cluster_management.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">2. </span>クラスタ管理</a></li>
   </ul>
 </div>
 
