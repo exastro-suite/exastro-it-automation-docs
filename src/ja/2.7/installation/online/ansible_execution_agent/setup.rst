@@ -190,52 +190,103 @@ Ansible Execution Agent - Online
      - 可
      - 2.7.0
      -
-.. tip::
-  | EXECUTION_ENVIRONMENT_NAMES: エージェントで作業対象とする実行環境を分けたい場合等に指定してください。
-  | 複数指定する際には、「,」区切りで指定してください。
 
+
+.. _ansible_execution_user_recommendation_detail:
+
+パラメータの詳細
+----------------
+
+EXECUTION_ENVIRONMENT_NAMES
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+| 実行環境名を指定することで、ITA上で定義されている実行環境のうち、特定の実行環境のみをエージェントで作業対象とすることができます。
+| エージェントで作業対象とする実行環境を分けたい場合等に指定してください。
+| 複数指定する際には、「,」区切りで指定してください。
+
+
+.. code-block:: bash
+
+       EXECUTION_ENVIRONMENT_NAMES=<実行環境名1>,<実行環境名2>
+
+| 実行環境名については、 :ref:`ansible_execution_environment_list` を参照してください。
+
+
+MOVEMENT_LIMIT
+^^^^^^^^^^^^^^
+
+| MOVEMENT_LIMIT は、1つのワークスペース内で複数の Ansible Execution Agent を構成している場合に、作業の分散を制御する設定です。
+
+- MOVEMENT_LIMIT の値を小さく設定すると、作業が複数の Ansible Execution Agent に均等に分散されます。
+- MOVEMENT_LIMIT の値を大きく設定すると、作業が特定の Ansible Execution Agent に集中しやすくなります。
+
+.. code-block:: bash
+
+       MOVEMENT_LIMIT=1
+
+| 設定値の変更方法、影響について、 :ref:`ansible_execution_limits_impact` を参照してください。
+
+
+EXECUTION_LIMIT
+^^^^^^^^^^^^^^^
+
+| EXECUTION_LIMIT は、Ansible Execution Agent が同時に実行できる作業の最大数を制御する設定です。
+| EXECUTION_LIMIT の値を大きく設定すると、Ansible Execution Agent が同時に実行できる作業の数が増えます。
+
+
+.. code-block:: bash
+
+       EXECUTION_LIMIT=5
+
+
+.. tip:: | この設定値を変更する際は、Ansible Execution Agent がインストールされているサーバーのスペックやリソース状況を考慮する必要があります。
+
+
+| 設定値の変更方法、影響について、 :ref:`ansible_execution_limits_impact` を参照してください。
+
+
+パラメータ変更による動作影響
+----------------------------
+
+.. _ansible_execution_parameter_change:
+
+パラメータの変更・反映方法方法について
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| env内のパラメータを変更する場合は、envファイルを直接編集し、サービスを再起動してください。
+| サービスの再起動手順については、 :ref:`ansible_execution_agent_service_cmd` を参照してください。
+
+
+.. _ansible_execution_limits_impact:
+
+MOVEMENT_LIMIT・EXECUTION_LIMITの影響
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| エージェントの同時実行数や一度に取得する作業件数を変更するには、以下のパラメータを変更後、設定を反映してください。
+
+- MOVEMENT_LIMIT: エージェントが一度に取得する未実行の作業の最大数の変更
+- EXECUTION_LIMIT: エージェントが同時に処理できる作業の最大数の変更
+
+
+
+| MOVEMENT_LIMITとEXECUTION_LIMITの設定値により、未実行作業の取得方法が異なります。
+| 実行中の作業がある場合、EXECUTION_LIMITの設定値と、実行中の作業件数の差分を使用して未実行作業を取得します。
+
+.. tip:: | 例えば、MOVEMENT_LIMIT=5、EXECUTION_LIMIT=10と設定した場合、以下のように動作します。
 
   .. code-block:: bash
 
-         EXECUTION_ENVIRONMENT_NAMES=<実行環境名1>,<実行環境名2>
+       MOVEMENT_LIMIT=5
+       EXECUTION_LIMIT=10
 
-  | 実行環境名については、 :ref:`ansible_execution_environment_list` を参照してください。
+  | EXECUTION_LIMIT=10と設定すると、最大10件の作業が並列で実行されます。
+  | MOVEMENT_LIMIT=5と設定すると、一度に最大5件の未実行作業を取得します。実行中の作業がある場合、取得する未実行作業の件数は、EXECUTION_LIMITの設定値と実行中の作業件数の差分となります。
 
+  | 以下のように動作します。
 
-.. tip::
-  | エージェントの同時実行数や一度に取得する作業件数を変更するには、以下の設定値を変更後、サービスを再起動してください。
-
-  - EXECUTION_LIMIT: 同時実行可能な並列度の変更
-  - MOVEMENT_LIMIT: 一度に取得する未実行作業の件数の変更
-
-  | 例えば、EXECUTION_LIMIT=10と設定すると、最大10件の作業が並列で実行されます。また、MOVEMENT_LIMIT=5と設定すると、一度に最大5件の未実行作業を取得します。
-
-  | サービスの再起動手順については、 :ref:`ansible_execution_agent_service_cmd` を参照してください。
-
-.. tip::
-  | ワークスペース内での作業分散
-
-  MOVEMENT_LIMIT は、1つのワークスペース内で複数の Ansible Execution Agent を構成している場合に、作業の分散を制御する設定です。
-
-  - MOVEMENT_LIMIT の値を小さく設定すると、作業が複数の Ansible Execution Agent に均等に分散されます。
-  - MOVEMENT_LIMIT の値を大きく設定すると、作業が特定の Ansible Execution Agent に集中しやすくなります。
-
-.. tip::
-  | 作業の並列実行について
-
-  - EXECUTION_LIMIT の値を大きく設定すると、Ansible Execution Agent が同時に実行できる作業の数が増えます。
-  - この設定値を変更する際は、Ansible Execution Agent がインストールされているサーバーのスペックやリソース状況を考慮する必要があります。
-
-.. tip::
-  | 実行中の作業がある場合、EXECUTION_LIMITの設定値と、実行中の作業件数の差分を使用して未実行作業を取得します。
-
-  - EXECUTION_LIMIT=10
-  - MOVEMENT_LIMIT=5
-
-  | 作業実施件数が0件の場合: 5件の未実行作業取得
-  | 作業実施件数が5件の場合: 5件の未実行作業取得
-  | 作業実施件数が8件の場合: 2件の未実行作業取得
-  | 作業実施件数が10件の場合: 作業件数が10件以下になるまで、未実行作業取得はスキップ
+  - 作業実施件数が0件の場合: 5件の未実行作業取得します。
+  - 作業実施件数が5件の場合: 5件の未実行作業取得します。
+  - 作業実施件数が8件の場合: 2件の未実行作業取得します。
+  - 作業実施件数が10件の場合: 作業件数が10件以下になるまで、未実行作業取得はスキップします。
 
 
 .. _ansible_execution_agent_install:
