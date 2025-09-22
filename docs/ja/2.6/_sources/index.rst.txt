@@ -19,6 +19,7 @@ Exastro IT Automation Documentation 2.6
    reference/index
    kb/index
    glossary/index
+   release_notes/index
    contribute/index
 
 .. raw:: html
