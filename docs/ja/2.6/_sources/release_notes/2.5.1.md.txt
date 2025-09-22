@@ -1,0 +1,46 @@
+# Exastro IT Automation 2.5.1
+
+リリース日: 2024年11月14日
+
+## 機能追加
+
+### ansible実行エージェントのインストール方式対応（[#2584](https://github.com/exastro-suite/exastro-it-automation/issues/2584), [#89](https://github.com/exastro-suite/exastro-it-automation/issues/89)）
+Ansible実行エージェントを従来のコンテナ方式だけでなく、インストール方式でも利用できるようになりました。これにより、開発環境や運用環境に応じて柔軟な構成が可能となり、既存システムとの連携やカスタマイズ性が向上します。
+
+### ansible実行エージェントのログ出力改善（[#2605](https://github.com/exastro-suite/exastro-it-automation/issues/2605)）
+Ansible実行エージェントの子プロセスでログファイルが出力されない問題を解消し、より詳細な実行ログが取得できるようになりました。これにより、トラブルシュートや運用監視が容易になります。
+
+## バグ修正
+
+### 比較機能のファイルアップロード項目・差分判定の不具合修正（[#2573](https://github.com/exastro-suite/exastro-it-automation/issues/2573), [#2574](https://github.com/exastro-suite/exastro-it-automation/issues/2574), [#2582](https://github.com/exastro-suite/exastro-it-automation/issues/2582), [#2587](https://github.com/exastro-suite/exastro-it-automation/issues/2587), [#2602](https://github.com/exastro-suite/exastro-it-automation/issues/2602)）
+ファイルアップロード項目と他項目の比較ができない、ファイルがない場合やレコードなし時のエラー、項目名に「.」が含まれる場合の差分判定ミス、差分がないのに差分有りと判定されるなど、比較機能に関する複数の不具合を修正しました。また、バイナリデータのテキストファイル詳細比較を制限し、誤判定やエラーを防止しています。
+
+### エクスポート/インポート・大容量ファイル関連の不具合修正（[#2585](https://github.com/exastro-suite/exastro-it-automation/issues/2585), [#2575](https://github.com/exastro-suite/exastro-it-automation/issues/2575), [#2572](https://github.com/exastro-suite/exastro-it-automation/issues/2572), [#2597](https://github.com/exastro-suite/exastro-it-automation/issues/2597), [#2581](https://github.com/exastro-suite/exastro-it-automation/issues/2581)）
+大容量ファイル（3.8GBなど）を含むメニューのエクスポートやインポート時にコンテナが落ちる、データ登録ができない、バージョン違いでの作業用DB構築不備、Conductor一覧のインポート後に詳細が表示できないなど、エクスポート/インポート機能の安定性を大幅に向上させました。
+
+### Terraform-CLI/Cloud/EPの代入値自動登録設定のバージョンアップ時エラー修正（[#2607](https://github.com/exastro-suite/exastro-it-automation/issues/2607)）
+バージョンアップ（migration利用時）のみ、Terraform-CLIとTerraform-Cloud/EPの代入値自動登録設定の登録でシステムエラーとなる問題を修正しました。これにより、バージョンアップ時の移行作業が円滑に行えます。
+
+### バックヤードのDBコネクション残存問題修正（[#2588](https://github.com/exastro-suite/exastro-it-automation/issues/2588)）
+バックヤード処理でデータベースのコネクションが残る問題を修正し、リソースリークやパフォーマンス低下を防止しました。
+
+### 廃止レコード復活不可の不具合修正（[#2565](https://github.com/exastro-suite/exastro-it-automation/issues/2565)）
+廃止したレコードのあるパラメータシートに必須項目を追加すると、廃止レコードが復活できなくなる問題を修正しました。これにより、データ管理の柔軟性が向上します。
+
+### テキストエディタ・独自メニューのJavaScriptエラー修正（[#2599](https://github.com/exastro-suite/exastro-it-automation/issues/2599), [#2591](https://github.com/exastro-suite/exastro-it-automation/issues/2591)）
+テキストエディタでファイル編集中にCTRL+Fを押すとJavaScriptエラーが発生する、独自メニューでITAのJavaScript（table.js）を利用した際にエラーで処理が中断する問題を修正しました。
+
+### Ansible関連の認証方式・資材ビルド・ログ出力の不具合修正（[#2593](https://github.com/exastro-suite/exastro-it-automation/issues/2593), [#2590](https://github.com/exastro-suite/exastro-it-automation/issues/2590)）
+機器一覧の認証方式が空白の場合のエラー原因が分かりづらい、最新資材ビルド時にansible-agentでエラーが発生するなど、Ansible連携に関する不具合を修正しました。
+
+## 改善
+
+### migrationコンテナのrestartポリシー廃止（[#126](https://github.com/exastro-suite/exastro-docker-compose/issues/126)）
+migration用コンテナのrestartポリシーを廃止し、不要な自動再起動を防止しました。これにより、運用時の予期せぬリソース消費やトラブルを回避できます。
+
+### Exastro service URLの入力必須化（[#125](https://github.com/exastro-suite/exastro-docker-compose/issues/125)）
+Exastro service URLの入力を必須とし、設定ミスや接続エラーの発生を未然に防止します。
+
+### 2.5.1バージョンアップ・修正反映（[#2576](https://github.com/exastro-suite/exastro-it-automation/issues/2576), [#124](https://github.com/exastro-suite/exastro-docker-compose-dev/pull/23), [#124](https://github.com/exastro-suite/exastro-docker-compose/issues/124), [#85](https://github.com/exastro-suite/exastro-helm/issues/85)）
+本バージョンで実施された各種修正内容をDocker Compose、Helmチャート、開発用リポジトリに反映しました。これにより、コンテナ環境やKubernetes環境での導入・運用がよりスムーズになっています。
+
