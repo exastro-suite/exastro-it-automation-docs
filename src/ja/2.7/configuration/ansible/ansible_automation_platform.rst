@@ -54,15 +54,18 @@ Ansible Automation Platform
 
 .. tabs::
 
-   .. tab:: Ansible Automation Platform (ハイブリッドパターン)
+   .. tab:: AAP 2.4(ハイブリッド)
 
-      Ansible Automation Platform (ハイブリッドパターン)を下記に記載します。
+      Ansible Automation Platform 2.4 (ハイブリッドパターン)を下記に記載します。
 
-      .. figure:: /images/ja/diagram/aap_hybrid.png
-         :alt: Ansible Automation Platform (ハイブリッドパターン)
+      .. figure:: /images/ja/diagram/aap24_hybrid.drawio.png
+         :alt: Ansible Automation Platform 2.4 (ハイブリッドパターン)
          :width: 900px
 
-         Ansible Automation Platform (ハイブリッドパターン)
+         Ansible Automation Platform 2.4 (ハイブリッドパターン)
+                
+      | ※Ansible Automation Platform構成内の通信の詳細については
+      | 　`Chapter 5. Network ports and protocols | Red Hat Ansible Automation Platform planning guide | Red Hat Ansible Automation Platform | 2.4 | Red Hat Documentation <https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_planning_guide/ref-network-ports-protocols_planning>`_ も併せてご参照ください。
 
 
       .. list-table:: システム通信要件
@@ -70,102 +73,214 @@ Ansible Automation Platform
          :header-rows: 1
          :align: left
 
-         * - | 通信番号
-             | ※1
+         * - | 番号
            - FROM
            - TO
            - | プロトコル
-             | [ポート番号　※2]
+             | [ポート番号　※1]
            - 主な用途
          * - ①
            - ITAシステム
-           - Hybrid ノード
+           - Hybrid Node
            - | http(s)
              | [80(443)/tcp]
-           - Ansible Automation Platform 制御通信
+           - Ansible Automation Platform に対する制御通信
          * - ②
            - ITAシステム
-           - Hybrid ノード
+           - Hybrid Node
            - ssh [22/tcp]
-           - Ansible Automation Platform 作業実行用通信
+           - ITA作業用ディレクトリ(/var/lib/exastro)への資材転送
          * - ③
            - ITAシステム
-           - Git
+           - GitLab
            - | http(s)
              | [80(443)/tcp]
-           - ファイル連携
+           - AnsibleProject(Playbook/Role/Inventory等)の同期
          * - ④
-           - Hybrid ノード
-           - 対象機器
+           - Hybrid Node
+           - Managed Node(作業対象)
            - | Any
-             | (ssh [22/tcp] telnet [23/tcp] 等 ※3）
-           - 自動構成の対象機器へのコマンド実行
+             | (ssh [22/tcp] WinRM [5985-5986/tcp] telnet [23/tcp] 等 ※2)
+           - Ansible実行のために接続
          * - ⑤
-           - Hybrid ノード
-           - Git
+           - Hybrid Node
+           - GitLab
            - | http(s)
              | [80(443)/tcp]
-           - ファイル連携
+           - AnsibleProject(Playbook/Role/Inventory等)の同期
 
-      | ※1 Ansible Automation Platform (ハイブリッドパターン)の構成イメージの番号と紐づく通信番号を記載。
-      | ※2 ポート番号は標準的なポート番号を記載。
-      | ※3 代表的な例を記載。Ansibleモジュールにより利用プロトコルが異なる。
+      | ※1 ポート番号はプロトコルに対する標準的なポート番号を記載しており、環境によって異なる場合があります。
+      | ※2 ④の通信で使用するプロトコルには代表的な例を記載しています。Ansibleモジュールにより利用プロトコルが異なる場合があります。
 
-   .. tab:: Ansible Automation Platform (実行ノード分離パターン)
+   .. tab:: AAP 2.4(実行ノード分離)
 
-      Ansible Automation Platform (実行ノード分離パターン)を下記に記載します。
+      Ansible Automation Platform 2.4 (実行ノード分離パターン)を下記に記載します。
 
-      .. figure:: /images/ja/diagram/aap_divide.png
-        :alt: Ansible Automation Platform (実行ノード分離パターン)
+      .. figure:: /images/ja/diagram/aap24_divide.drawio.png
+        :alt: Ansible Automation Platform 2.4 (実行ノード分離パターン)
         :width: 1200px
 
-        Ansible Automation Platform (実行ノード分離パターン)
+        Ansible Automation Platform 2.4 (実行ノード分離パターン)
+                
+      | ※Ansible Automation Platform構成内の通信の詳細については
+      | 　`Chapter 5. Network ports and protocols | Red Hat Ansible Automation Platform planning guide | Red Hat Ansible Automation Platform | 2.4 | Red Hat Documentation <https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_planning_guide/ref-network-ports-protocols_planning>`_ も併せてご参照ください。
+
 
       .. list-table:: システム通信要件
          :widths: 10 20 20 40 100
          :header-rows: 1
          :align: left
 
-         * - | 通信番号
-             | ※1
+         * - | 番号
            - FROM
            - TO
            - | プロトコル
-             | [ポート番号　※2]
+             | [ポート番号　※1]
            - 主な用途
          * - ①
            - ITAシステム
-           - Controle ノード
+           - Controller Node
            - | http(s)
              | [80(443)/tcp]
-           - Ansible Automation Platform 制御通信
+           - Ansible Automation Platform に対する制御通信
          * - ②
            - ITAシステム
-           - Controle ノード
+           - Execution Node
            - ssh [22/tcp]
-           - Ansible Automation Platform 作業実行用通信
+           - ITA作業用ディレクトリ(/var/lib/exastro)への資材転送
          * - ③
            - ITAシステム
-           - Git
+           - GitLab
            - | http(s)
              | [80(443)/tcp]
-           - ファイル連携
+           - AnsibleProject(Playbook/Role/Inventory等)の同期
          * - ④
-           - Controle ノード
-           - 対象機器
+           - Execution Node
+           - Managed Node(作業対象)
            - | Any
-             | (ssh [22/tcp] telnet [23/tcp] 等 ※3）
-           - 自動構成の対象機器へのコマンド実行
+             | (ssh [22/tcp] WinRM [5985-5986/tcp] telnet [23/tcp] 等 ※2)
+           - Ansible実行のために接続
          * - ⑤
-           - Controle ノード
-           - Git
+           - Controller Node
+           - GitLab
            - | http(s)
              | [80(443)/tcp]
-           - ファイル連携
+           - AnsibleProject(Playbook/Role/Inventory等)の同期
 
-      | ※1 Ansible Automation Controller (実行ノード分離パターン)の構成イメージに上記番号と紐づく通信番号を記載。
-      | ※2 ポート番号は標準的なポート番号を記載。
-      | ※3 代表的な例を記載。Ansibleモジュールにより利用プロトコルが異なる。
+      | ※1 ポート番号はプロトコルに対する標準的なポート番号を記載しており、環境によって異なる場合があります。
+      | ※2 ④の通信で使用するプロトコルには代表的な例を記載しています。Ansibleモジュールにより利用プロトコルが異なる場合があります。
+   .. tab:: AAP 2.5(ハイブリット)
+
+      Ansible Automation Platform 2.5 (ハイブリットパターン)を下記に記載します。
+
+      .. figure:: /images/ja/diagram/aap25_hybrid.drawio.png
+        :alt: Ansible Automation Platform 2.5 (ハイブリットパターン)
+        :width: 900px
+
+        Ansible Automation Platform 2.5 (ハイブリットパターン)
+        
+      | ※Ansible Automation Platform構成内の通信の詳細については
+      | 　`Chapter 6. Network ports and protocols | Planning your installation | Red Hat Ansible Automation Platform | 2.5 | Red Hat Documentation <https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/planning_your_installation/ref-network-ports-protocols_planning>`_ も併せてご参照ください。
+
+      .. list-table:: システム通信要件
+         :widths: 10 20 20 40 100
+         :header-rows: 1
+         :align: left
+
+         * - | 番号
+           - FROM
+           - TO
+           - | プロトコル
+             | [ポート番号　※1]
+           - 主な用途
+         * - ①
+           - ITAシステム
+           - Platform Gateway
+           - | http(s)
+             | [80(443)/tcp]
+           - Ansible Automation Platform に対する制御通信
+         * - ②
+           - ITAシステム
+           - Hybrid Node
+           - ssh [22/tcp]
+           - ITA作業用ディレクトリ(/var/lib/exastro)への資材転送
+         * - ③
+           - ITAシステム
+           - GitLab
+           - | http(s)
+             | [80(443)/tcp]
+           - AnsibleProject(Playbook/Role/Inventory等)の同期
+         * - ④
+           - Hybrid Node
+           - Managed Node(作業対象)
+           - | Any
+             | (ssh [22/tcp] WinRM [5985-5986/tcp] telnet [23/tcp] 等 ※2)
+           - Ansible実行のために接続
+         * - ⑤
+           - Hybrid Node
+           - GitLab
+           - | http(s)
+             | [80(443)/tcp]
+           - AnsibleProject(Playbook/Role/Inventory等)の同期
+
+      | ※1 ポート番号はプロトコルに対する標準的なポート番号を記載しており、環境によって異なる場合があります。
+      | ※2 ④の通信で使用するプロトコルには代表的な例を記載しています。Ansibleモジュールにより利用プロトコルが異なる場合があります。
+   .. tab:: AAP 2.5(実行ノード分離)
+
+      Ansible Automation Platform 2.5 (実行ノード分離パターン)を下記に記載します。
+
+      .. figure:: /images/ja/diagram/aap25_divide.drawio.png
+        :alt: Ansible Automation Platform 2.5 (実行ノード分離パターン)
+        :width: 1200px
+
+        Ansible Automation Platform 2.5 (実行ノード分離パターン)
+        
+      | ※Ansible Automation Platform構成内の通信の詳細については
+      | 　`Chapter 6. Network ports and protocols | Planning your installation | Red Hat Ansible Automation Platform | 2.5 | Red Hat Documentation <https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/planning_your_installation/ref-network-ports-protocols_planning>`_ も併せてご参照ください。
+
+      .. list-table:: システム通信要件
+         :widths: 10 20 20 40 100
+         :header-rows: 1
+         :align: left
+
+         * - | 番号
+           - FROM
+           - TO
+           - | プロトコル
+             | [ポート番号　※1]
+           - 主な用途
+         * - ①
+           - ITAシステム
+           - Platform Gateway
+           - | http(s)
+             | [80(443)/tcp]
+           - Ansible Automation Platform に対する制御通信
+         * - ②
+           - ITAシステム
+           - Execution Node
+           - ssh [22/tcp]
+           - ITA作業用ディレクトリ(/var/lib/exastro)への資材転送
+         * - ③
+           - ITAシステム
+           - GitLab
+           - | http(s)
+             | [80(443)/tcp]
+           - AnsibleProject(Playbook/Role/Inventory等)の同期
+         * - ④
+           - Execution Node
+           - Managed Node(作業対象)
+           - | Any
+             | (ssh [22/tcp] WinRM [5985-5986/tcp] telnet [23/tcp] 等 ※2)
+           - Ansible実行のために接続
+         * - ⑤
+           - Controller Node
+           - GitLab
+           - | http(s)
+             | [80(443)/tcp]
+           - AnsibleProject(Playbook/Role/Inventory等)の同期
+
+      | ※1 ポート番号はプロトコルに対する標準的なポート番号を記載しており、環境によって異なる場合があります。
+      | ※2 ④の通信で使用するプロトコルには代表的な例を記載しています。Ansibleモジュールにより利用プロトコルが異なる場合があります。
 
 
 システム要件
@@ -218,12 +333,12 @@ Playbook連携
 
 
 
-ITA作業用ディレクトリの準備
+ITA作業用ディレクトリ・ファイル転送ユーザの準備
 ---------------------------
 
-| Ansible Automation Platform サーバに ITA 作業用ディレクトリを作成してください。
-| クラスタ構成の場合は、構成している全てのサーバにディレクトリを作成してください。
-| ただし、Ansible Automation Platform の Hop ノードにはディレクトリ作成不要です。
+| Ansible Automation Platformの Execution Node に ITA作業用ディレクトリを作成してください。
+| クラスタ構成の場合は、構成している全ての Execution Node にディレクトリを作成してください。
+| Ansible Automation Platformの Platform Gateway(2.5のみ)/Controller Node/Hop Node にはディレクトリ作成不要です。
 |
 
 .. list-table:: ITA作業用ディレクトリの作成情報
@@ -253,46 +368,25 @@ ITA作業用ディレクトリの公開
 Ansible Automation Platform へのファイル転送ユーザーの準備
 ----------------------------------------------------------
 
-| ITA から Ansible Automation Platformの プロジェクトを生成する際、Ansible Automation Platform の下記ディレクトリに Playbook 一式をファイル転送します必要があります。
+| ITA から Ansible Automation Platform のプロジェクトを生成する際、Ansible Automation Platform の下記ディレクトリに Playbook 一式をファイル転送する必要があります。
 | ファイル転送するLinuxユーザーを準備してください。
-|
-| ・SCM 管理ディレクトリ(/var/lib/awx/projects)
-| 　※Ansible Tower3.xの場合にLinuxユーザーでPlaybook一式をファイル転送します。
+| ※Ansible Automation Platform インストール時に生成される awx ユーザーにパスワードを設定し使用することを推奨します。
+
 | ・ITA作業用ディレクトリ(/var/lib/exastro)
 
-| Linux ユーザーは、Ansible Automation Platform インストール時に生成される awx ユーザーにパスワードを設定し使用することを強く推奨します。
 
-.. warning::
- | awx ユーザー以外のユーザーを用意し使用し、SCM 管理パス(/var/lib/awx/projects)のパーミッションの変更を行う運用は Red Hat のサポート対象外となりますのでご注意ください。
-
-| 準備した Linux ユーザーは、ITA システムに登録する必要があります。 :ref:`ansible_common_ansible_automation_controller_hosts` を参照し、登録を行ってください。
+| 準備した Linuxユーザーは、ITA システムに登録する必要があります。
+| :ref:`ansible_common_ansible_automation_controller_hosts` を参照し、登録を行ってください。
 
 
-Ansible Automation Platformと連携するGitへのユーザーの準備
+Ansible Automation Platformと連携するGitLabへのユーザーの準備
 ----------------------------------------------------------
 
 | ITA から Ansible Automation Platform のプロジェクトを生成する際の SCM タイプを Git にしています。
-| 連携先の Git リポジトリは、Ansible driverのバックヤード機能がインストールされているホストに作成されます。
-| Ansible Automation Platformから、この Git リポジトリにssh鍵認証で接続する Linux ユーザーを準備してください。
+| 連携先の Git リポジトリは、ITA構築時に指定した外部のGitLab サーバに作成されます。
 |
-| ユーザーを作成操作可能なアクセストークンが必要となります。設定方法は :ref:`installation_kubernetes_gitlablinkage` を参照してください。
-
-
-.. list-table:: ITA インストール時に生成される SSH 鍵認証用 Linux ユーザー情報
-   :widths: 35 200
-   :header-rows: 1
-   :align: left
-
-   * - 項目
-     - 値
-   * - ユーザー
-     - awx
-   * - パスワード
-     - 未設定
-   * - 秘密鍵
-     - /home/awx/.ssh/rsa_awx_key
-   * - 公開鍵
-     - /home/awx/.ssh/rsa_awx_key.pub
+| ユーザーを作成・操作可能なアクセストークンが必要となります。
+| 設定方法は :ref:`installation_kubernetes_gitlablinkage` を参照してください。
 
 
 
