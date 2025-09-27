@@ -1,0 +1,30 @@
+# Exastro IT Automation 2.0.5
+
+リリース日: 2023年03月29日
+
+## 機能追加
+
+### CPU負荷軽減施策の実施（[#851](https://github.com/exastro-suite/exastro-it-automation/issues/851)）
+システム全体のCPU負荷を軽減するための施策を実施しました。これにより、大規模な自動化処理や複数ユーザーによる同時利用時でも、より安定したパフォーマンスを維持できるようになりました。運用コストの削減や、リソース効率の向上にも寄与しています。
+
+### 作業ディレクトリのパス変更（[#850](https://github.com/exastro-suite/exastro-it-automation/issues/850)）
+従来の`/storage`ディレクトリからtmpディレクトリへ作業ディレクトリのパスを変更しました。これにより、ファイルI/Oのパフォーマンスが向上し、一時ファイルの管理がより効率的になります。システムの運用や保守性の向上にもつながっています。
+
+## バグ修正
+
+### 代入値自動登録設定・変数抜出・テンプレート関連の不具合修正（[#536](https://github.com/exastro-suite/exastro-it-automation/issues/536), [#723](https://github.com/exastro-suite/exastro-it-automation/issues/723), [#725](https://github.com/exastro-suite/exastro-it-automation/issues/725), [#637](https://github.com/exastro-suite/exastro-it-automation/issues/637), [#893](https://github.com/exastro-suite/exastro-it-automation/issues/893), [#748](https://github.com/exastro-suite/exastro-it-automation/issues/748)）
+代入値自動登録設定でファイル埋込変数やテンプレート埋込変数を指定した場合の異常終了や、TPF_・CPF_・GBL_変数の表示不備、TPF変数を与えた場合の例外発生、テンプレート管理の変数定義が正しく読み込まれない問題など、変数管理やテンプレート連携に関する複数の不具合を修正しました。これにより、複雑な変数やテンプレートを利用した自動化シナリオでも安定して動作します。
+
+### Legacy-Role・ロールパッケージ・Playbook関連の不具合修正（[#908](https://github.com/exastro-suite/exastro-it-automation/issues/908), [#864](https://github.com/exastro-suite/exastro-it-automation/issues/864), [#855](https://github.com/exastro-suite/exastro-it-automation/issues/855), [#853](https://github.com/exastro-suite/exastro-it-automation/issues/853), [#839](https://github.com/exastro-suite/exastro-it-automation/issues/839), [#856](https://github.com/exastro-suite/exastro-it-automation/issues/856), [#848](https://github.com/exastro-suite/exastro-it-automation/issues/848)）
+空のITA readmeを含むロールパッケージや0バイトのロールパッケージ(zip)の登録時のエラー、GBL変数の記載場所によるエラー、defaults/main.yamlとReadmeファイルの変数定義型不一致によるシステムエラー、ロールパッケージファイル内容による登録不可、Movement-ロール紐付が登録された状態でMovement一覧を廃止した場合の変数刈り取り不備、項目なしパラメータシートデータによる他Playbookの変数刈り取り不備など、Legacy-Roleやロールパッケージ管理に関する多くの不具合を修正しました。これにより、さまざまなロールパッケージやPlaybookを利用した運用がより安定します。
+
+### アップロードファイル・パラメータシート・ファイル一括登録の不具合修正（[#919](https://github.com/exastro-suite/exastro-it-automation/issues/919), [#854](https://github.com/exastro-suite/exastro-it-automation/issues/854)）
+アップロードファイルがあるメニューを更新しファイル一括登録を行った際のシステムエラーや、パラメータシートに後から項目を追加した場合にキーが取得できない問題を修正しました。これにより、ファイル管理やパラメータシートの運用がより柔軟かつ安全に行えます。
+
+### AAC・Conductor・ファイル共有・独自変数関連の不具合修正（[#976](https://github.com/exastro-suite/exastro-it-automation/issues/976), [#903](https://github.com/exastro-suite/exastro-it-automation/issues/903), [#813](https://github.com/exastro-suite/exastro-it-automation/issues/813)）
+AACからAnsible実行時に`__conductor_workflowdir__`を利用したファイル共有ができない問題や、ConductorからLegacy-RoleのMovementを実行した場合のITA独自変数のパス不正、PlaybookでITA独自変数配下にファイルを生成した場合の不備など、ファイル共有や独自変数の運用に関する不具合を修正しました。これにより、ConductorやAACを利用した高度な自動化シナリオでも正しくファイル連携が行えます。
+
+## 改善
+
+（該当なし）
+
