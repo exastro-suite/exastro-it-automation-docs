@@ -40,7 +40,8 @@ extensions = [
     'sphinx_tabs.tabs',
     'sphinx_toolbox.collapse',
     'sphinx.ext.todo',
-    'sphinxcontrib.googleanalytics'
+    'sphinxcontrib.googleanalytics',
+    'myst_parser'
 ]
 
 # Fontpath for blockdiag (truetype font)
@@ -129,6 +130,11 @@ html_context = {
         '2.1': '2.1',
         '2.0': '2.0'
     }
+}
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown', 
 }
 
 [extensions]
