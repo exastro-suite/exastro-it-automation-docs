@@ -301,6 +301,13 @@ Movement ID
      - 変数名
    * - オペレーション
      - __operation__
+   * - オペレーション実施予定日時
+     - __operation_datetime__
+   * - オペレーションID
+     - __operation_id__
+   * - オペレーション名称
+     - __operation_name__
+
 
 | 設定値 : 「YYYY/MM/DD HH:MM」_「オペレーションID」:「オペレーション名称」
 | YYYY/MM/DD HH:MM: :menuselection:`基本コンソール --> オペレーション一覧` の :menuselection:`実施予定日時`
@@ -417,6 +424,26 @@ ConductorインスタンスID
 | 「_parameters_file」：収集したファイルの格納先用
 | ※パラメータの対象がファイルアップロードカラムの場合のファイル配置
 |
+
+オーガナイゼーション管理
+************************
+
+| オーガナイゼーション管理に用いる値を下記の変数として扱えます。
+
+.. list-table::
+   :widths: 50 80
+   :header-rows: 1
+   :align: left
+
+   * - 項目名
+     - 変数名
+   * - オーガナイゼーション ID
+     - __organization_id__
+   * - ワークスペース ID
+     - __workspace_id__
+   * - サービス用公開エンドポイント
+     - __external_url__
+
 
 変数の抜出および具体値登録
 --------------------------

@@ -35,6 +35,9 @@ global:
       DEFAULT_LANGUAGE: "ja"
       LANGUAGE: "en"
       TZ: "Asia/Tokyo"
+      # Please set the URL to access
+      EXTERNAL_URL: "https://your-exastro.domain"
+      EXTERNAL_URL_MNG: "https://your-exastro-mng.domain"
     secret:
       ENCRYPT_KEY: ""
   pfAuditLogDefinition:
@@ -375,10 +378,7 @@ exastro-platform:
       tag: ""
 
   platform-auth:
-    extraEnv:
-      # Please set the URL to access
-      EXTERNAL_URL: "https://your-exastro.domain"
-      EXTERNAL_URL_MNG: "https://your-exastro-mng.domain"
+    extraEnv: {}
     ingress:
       enabled: false
       hosts:
