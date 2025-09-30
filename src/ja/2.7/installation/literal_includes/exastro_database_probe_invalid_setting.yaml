@@ -35,6 +35,9 @@ global:
       DEFAULT_LANGUAGE: "ja"
       LANGUAGE: "en"
       TZ: "Asia/Tokyo"
+      # Please set the URL to access
+      EXTERNAL_URL: ""
+      EXTERNAL_URL_MNG: ""
     secret:
       ENCRYPT_KEY: ""
   pfAuditLogDefinition:
@@ -46,7 +49,7 @@ global:
       size: 10Gi
       volumeType: hostPath # e.g.) hostPath or AKS
       storageClass: "-" # e.g.) azurefile or - (None)
-      # matchLabels: 
+      # matchLabels:
       #   release: "stable"
       # matchExpressions:
       #   - {key: environment, operator: In, values: [dev]}
@@ -364,10 +367,7 @@ exastro-platform:
       tag: ""
 
   platform-auth:
-    extraEnv:
-      # Please set the URL to access
-      EXTERNAL_URL: ""
-      EXTERNAL_URL_MNG: ""
+    extraEnv: {}
     ingress:
       enabled: true
       hosts:

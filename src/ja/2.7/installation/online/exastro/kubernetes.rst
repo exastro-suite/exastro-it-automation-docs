@@ -165,13 +165,16 @@ Helm リポジトリの登録
         .. code-block:: diff
            :caption: exastro.yaml
 
-              platform-auth:
-                extraEnv:
+              pfGlobalDefinition:
+                config:
                   # Please set the URL to access
            -      EXTERNAL_URL: "http://exastro-suite.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io"
            -      EXTERNAL_URL_MNG: "http://exastro-suite-mng.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io"
            +      EXTERNAL_URL: "https://exastro-suite.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io"
            +      EXTERNAL_URL_MNG: "https://exastro-suite-mng.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io"
+
+              platform-auth:
+                extraEnv: {}
                 ingress:
                   enabled: true
                   annotations:

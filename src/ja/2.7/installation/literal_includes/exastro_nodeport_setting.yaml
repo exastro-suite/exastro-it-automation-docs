@@ -35,6 +35,9 @@ global:
       DEFAULT_LANGUAGE: "ja"
       LANGUAGE: "en"
       TZ: "Asia/Tokyo"
+      # Please set the URL to access
+      EXTERNAL_URL: "http://10.10.10.10:30080"
+      EXTERNAL_URL_MNG: "http://10.10.10.10:30081"
     secret:
       ENCRYPT_KEY: ""
   pfAuditLogDefinition:
@@ -375,10 +378,7 @@ exastro-platform:
       tag: ""
 
   platform-auth:
-    extraEnv:
-      # Please set the URL to access
-      EXTERNAL_URL: "http://10.10.10.10:30080"
-      EXTERNAL_URL_MNG: "http://10.10.10.10:30081"
+    extraEnv: {}
     ingress:
       enabled: false
       hosts:

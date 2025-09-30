@@ -214,16 +214,19 @@ Setting example
 
         | ※ If HTTPS connectivity is activated while using Ingress, the following settings must be configured.
 
-      .. code-block:: diff
-         :caption: exastro.yaml
+        .. code-block:: diff
+           :caption: exastro.yaml
 
-          platform-auth:
-            extraEnv:
-              # Please set the URL to access
+              pfGlobalDefinition:
+                config:
+                  # Please set the URL to access
            -      EXTERNAL_URL: "http://exastro-suite.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io"
            -      EXTERNAL_URL_MNG: "http://exastro-suite-mng.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io"
            +      EXTERNAL_URL: "https://exastro-suite.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io"
            +      EXTERNAL_URL_MNG: "https://exastro-suite-mng.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io"
+
+              platform-auth:
+                extraEnv: {}
                 ingress:
                   enabled: true
                   annotations:

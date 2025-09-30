@@ -35,6 +35,9 @@ global:
       DEFAULT_LANGUAGE: "ja"
       LANGUAGE: "en"
       TZ: "Asia/Tokyo"
+      # Please set the URL to access
+      EXTERNAL_URL: "http://exastro-suite.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io"
+      EXTERNAL_URL_MNG: "http://exastro-suite-mng.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io"
     secret:
       ENCRYPT_KEY: ""
   pfAuditLogDefinition:
@@ -375,10 +378,7 @@ exastro-platform:
       tag: ""
 
   platform-auth:
-    extraEnv:
-      # Please set the URL to access
-      EXTERNAL_URL: "http://exastro-suite.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io"
-      EXTERNAL_URL_MNG: "http://exastro-suite-mng.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io"
+    extraEnv: {}
     ingress:
       enabled: true
       annotations:

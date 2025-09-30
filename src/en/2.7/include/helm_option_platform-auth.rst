@@ -9,18 +9,6 @@
      - Description
      - Change
      - Default Value / Available Options
-   * - exastro-platform.platform-auth.extraEnv.EXTERNAL_URL
-     - | Exastro Platform Endpoint's public URL
-       | This setting must be configured when service connection failures occur due to discrepancies between the Exastro endpoint and the public URL caused by reverse proxies or PAT (Port Address Translation).
-     - Enabled
-     - | Public endpoint URL
-       | (http[s]://your-exastro.domain:port)
-   * - exastro-platform.platform-auth.extraEnv.EXTERNAL_URL_MNG
-     - | Public URL of the Exastro Platform Management Console endpoint
-       | This setting is required when a mismatch occurs between the Exastro endpoint and the public URL due to reverse proxies or PAT (Port Address Translation), which can lead to service connection failures.
-     - Enabled
-     - | Public endpoint URL
-       | (http[s]://your-exastro.domain:port)
    * - exastro-platform.platform-auth.extraEnv.AUDIT_LOG_ENABLED
      - | Enable audit log output
      - Enabled

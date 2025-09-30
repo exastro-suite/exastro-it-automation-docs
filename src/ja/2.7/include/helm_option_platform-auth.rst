@@ -9,18 +9,6 @@
      - 説明
      - 変更
      - デフォルト値・選択可能な設定値
-   * - exastro-platform.platform-auth.extraEnv.EXTERNAL_URL
-     - | Exastro Platform エンドポイントの公開URL。
-       | リバースプロキシや PAT(Port Address Transport) などにより、Exastro のエンドポイントと公開時の URL に齟齬が発生することで、サービス接続に失敗する場合に設定をする必要があります。
-     - 可
-     - | 公開用エンドポイントのURL
-       | (http[s]://your-exastro.domain:port)
-   * - exastro-platform.platform-auth.extraEnv.EXTERNAL_URL_MNG
-     - | Exastro Platform 管理コンソールのエンドポイントの公開URL。
-       | リバースプロキシや PAT(Port Address Transport) などにより、Exastro のエンドポイントと公開時の URL に齟齬が発生することで、サービス接続に失敗する場合に設定をする必要があります。
-     - 可
-     - | 公開用エンドポイントのURL
-       | (http[s]://your-exastro.domain:port)
    * - exastro-platform.platform-auth.extraEnv.AUDIT_LOG_ENABLED
      - | 監査ログの出力有無。
      - 可

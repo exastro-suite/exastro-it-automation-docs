@@ -69,6 +69,18 @@
      - Exastro 共通基盤で公開する内部の Web エンドポイントで利用するポート番号(TCP)
      - 不可
      - "8000"
+   * - global.pfGlobalDefinition.config.EXTERNAL_URL
+     - | Exastro Platform エンドポイントの公開URL。
+       | リバースプロキシや PAT(Port Address Transport) などにより、Exastro のエンドポイントと公開時の URL に齟齬が発生することで、サービス接続に失敗する場合に設定をする必要があります。
+     - 可
+     - | 公開用エンドポイントのURL
+       | (http[s]://your-exastro.domain:port)
+   * - global.pfGlobalDefinition.config.EXTERNAL_URL_MNG
+     - | Exastro Platform 管理コンソールのエンドポイントの公開URL。
+       | リバースプロキシや PAT(Port Address Transport) などにより、Exastro のエンドポイントと公開時の URL に齟齬が発生することで、サービス接続に失敗する場合に設定をする必要があります。
+     - 可
+     - | 公開用エンドポイントのURL
+       | (http[s]://your-exastro.domain:port)
    * - global.pfGlobalDefinition.secret.ENCRYPT_KEY
      - | Exastro Platform 内で保管するデータの暗号化と復号のための AES キー。
        | 任意の32バイト ASCII 文字を BASE64 エンコードした値
