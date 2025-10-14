@@ -319,16 +319,20 @@ OASE管理
      - 制約事項
    * - イベント種別
      - | テンプレートを使用するイベント種別を選択します。
-       | ・新規
-       | ・既知（判定済み）
-       | ・既知（時間切れ）
-       | ・未知
+       | ・1.新規イベント（受信時）
+       | ・2.新規イベント（統合時）
+       | ・3.新規イベント（判定前）
+       | ・4.既知イベント（判定時）
+       | ・5.既知イベント（TTL有効期限切れ）
+       | ・6.未知イベント（判定時）
      - 〇
      - リスト選択
      - ー
    * - テンプレート
      - | 通知で使用するテンプレートを編集できます。
-       | 下記4種類はデフォルトで使用するテンプレートになります。
+       | 下記6種類はデフォルトで使用するテンプレートになります。
+       | ・New(received).j2
+       | ・New(consolidated).j2
        | ・New.j2
        | ・Known(evaluated).j2
        | ・Known(timeout).j2
@@ -361,6 +365,67 @@ OASE管理
 | テンプレートの初期設定値は下記のとおりです。
 
 .. code-block:: none
+   :name: New(received).j2
+   :caption: New(received).j2
+   :lineno-start: 1
+
+    [TITLE]
+    Event Received;
+
+    [BODY]
+    Event Received;
+    Detailed information
+      Event Factor             : {% if exastro_edit_count == 1 %}Primary Event{% else %}Consolidated Event{% endif %} ({{ exastro_edit_count }})
+      Event collection settings: {{ labels._exastro_event_collection_settings_id }}
+      Event fetch time         : {{ labels._exastro_fetched_time }}
+      Event end time           : {{ labels._exastro_end_time }}
+      Event type               : {{ labels._exastro_type }}
+
+      Re-evaluation
+        Event                  : {{ exastro_events }}
+
+      Label:
+        {% for key, value in labels.items() %}
+        ・{{ key }}: {{ value }}
+        {% endfor %}
+
+      Agent:
+        {% for key, value in exastro_agents.items() %}
+        ・{{ key }}: {{ value }}
+        {% endfor %}
+
+.. code-block:: none
+   :name: New(consolidated).j2
+   :caption: New(consolidated).j2
+   :lineno-start: 1
+
+    [TITLE]
+    Event Consolidated by Deduplication {% if labels._exastro_timeout == 1 %} (ttl expired) {% endif %};
+
+    [BODY]
+    Event Consolidated by Deduplication {% if labels._exastro_timeout == 1 %} (ttl expired) {% endif %};
+    Detailed information
+      Event Factor             : {% if exastro_edit_count == 1 %}Primary Event{% else %}Consolidated Event{% endif %} ({{ exastro_edit_count }})
+      Event collection settings: {{ labels._exastro_event_collection_settings_id }}
+      Event fetch time         : {{ labels._exastro_fetched_time }}
+      Event end time           : {{ labels._exastro_end_time }}
+      Event type               : {{ labels._exastro_type }}
+
+      Re-evaluation
+        Event                  : {{ exastro_events }}
+
+      Label:
+        {% for key, value in labels.items() %}
+        ・{{ key }}: {{ value }}
+        {% endfor %}
+
+      Agent:
+        {% for key, value in exastro_agents.items() %}
+        ・{{ key }}: {{ value }}
+        {% endfor %}
+
+
+.. code-block:: none
    :name: New.j2
    :caption: New.j2
    :lineno-start: 1
@@ -370,20 +435,20 @@ OASE管理
 
     [BODY]
     Detailed information
-    　Event ID                 : {{ _id }}
-    　Event collection settings: {{ labels._exastro_event_collection_settings_id }}
-    　Event fetch time         : {{ labels._exastro_fetched_time }}
-    　Event end time           : {{ labels._exastro_end_time }}
-    　Event type               : {{ labels._exastro_type }}
+      Event ID                 : {{ _id }}
+      Event collection settings: {{ labels._exastro_event_collection_settings_id }}
+      Event fetch time         : {{ labels._exastro_fetched_time }}
+      Event end time           : {{ labels._exastro_end_time }}
+      Event type               : {{ labels._exastro_type }}
 
-    　Re-evaluation
-    　　Evaluation rule name   : {{ labels._exastro_rule_name }}
-    　　Event                  : {{ exastro_events }}
+      Re-evaluation
+        Evaluation rule name   : {{ labels._exastro_rule_name }}
+        Event                  : {{ exastro_events }}
 
-    　Label:
-    　  {% for key, value in labels.items() %}
-    　　・{{ key }}: {{ value }}
-    　　{% endfor %}
+      Label:
+        {% for key, value in labels.items() %}
+        ・{{ key }}: {{ value }}
+        {% endfor %}
 
 
 .. code-block:: none
@@ -396,20 +461,20 @@ OASE管理
 
     [BODY]
     Detailed information
-    　Event ID                 : {{ _id }}
-    　Event collection settings: {{ labels._exastro_event_collection_settings_id }}
-    　Event fetch time         : {{ labels._exastro_fetched_time }}
-    　Event end time           : {{ labels._exastro_end_time }}
-    　Event type               : {{ labels._exastro_type }}
+      Event ID                 : {{ _id }}
+      Event collection settings: {{ labels._exastro_event_collection_settings_id }}
+      Event fetch time         : {{ labels._exastro_fetched_time }}
+      Event end time           : {{ labels._exastro_end_time }}
+      Event type               : {{ labels._exastro_type }}
 
-    　Re-evaluation
-    　　Evaluation rule name   : {{ labels._exastro_rule_name }}
-    　　Event                  : {{ exastro_events }}
+      Re-evaluation
+        Evaluation rule name   : {{ labels._exastro_rule_name }}
+        Event                  : {{ exastro_events }}
 
-    　Label:
-    　  {% for key, value in labels.items() %}
-    　　・{{ key }}: {{ value }}
-    　　{% endfor %}
+      Label:
+        {% for key, value in labels.items() %}
+        ・{{ key }}: {{ value }}
+        {% endfor %}
 
 
 .. code-block:: none
@@ -422,20 +487,20 @@ OASE管理
 
     [BODY]
     Detailed information
-    　Event ID                 : {{ _id }}
-    　Event collection settings: {{ labels._exastro_event_collection_settings_id }}
-    　Event fetch time         : {{ labels._exastro_fetched_time }}
-    　Event end time           : {{ labels._exastro_end_time }}
-    　Event type               : {{ labels._exastro_type }}
+      Event ID                 : {{ _id }}
+      Event collection settings: {{ labels._exastro_event_collection_settings_id }}
+      Event fetch time         : {{ labels._exastro_fetched_time }}
+      Event end time           : {{ labels._exastro_end_time }}
+      Event type               : {{ labels._exastro_type }}
 
-    　Re-evaluation
-    　　Evaluation rule name   : {{ labels._exastro_rule_name }}
-    　　Event                  : {{ exastro_events }}
+      Re-evaluation
+        Evaluation rule name   : {{ labels._exastro_rule_name }}
+        Event                  : {{ exastro_events }}
 
-    　Label:
-    　  {% for key, value in labels.items() %}
-    　　・{{ key }}: {{ value }}
-    　　{% endfor %}
+      Label:
+        {% for key, value in labels.items() %}
+        ・{{ key }}: {{ value }}
+        {% endfor %}
 
 
 .. code-block:: none
@@ -448,20 +513,20 @@ OASE管理
 
     [BODY]
     Detailed information
-    　Event ID                 : {{ _id }}
-    　Event collection settings: {{ labels._exastro_event_collection_settings_id }}
-    　Event fetch time         : {{ labels._exastro_fetched_time }}
-    　Event end time           : {{ labels._exastro_end_time }}
-    　Event type               : {{ labels._exastro_type }}
+      Event ID                 : {{ _id }}
+      Event collection settings: {{ labels._exastro_event_collection_settings_id }}
+      Event fetch time         : {{ labels._exastro_fetched_time }}
+      Event end time           : {{ labels._exastro_end_time }}
+      Event type               : {{ labels._exastro_type }}
 
-    　Re-evaluation
-    　　Evaluation rule name   : {{ labels._exastro_rule_name }}
-    　　Event                  : {{ exastro_events }}
+      Re-evaluation
+        Evaluation rule name   : {{ labels._exastro_rule_name }}
+        Event                  : {{ exastro_events }}
 
-    　Label:
-    　  {% for key, value in labels.items() %}
-    　　・{{ key }}: {{ value }}
-    　　{% endfor %}
+      Label:
+        {% for key, value in labels.items() %}
+        ・{{ key }}: {{ value }}
+        {% endfor %}
 
 
 付録
