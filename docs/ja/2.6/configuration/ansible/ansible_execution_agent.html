@@ -189,6 +189,7 @@
 <li><a class="reference internal" href="#ansible-execution-agent-other-requirements">4.3.5. その他の要件</a><ul>
 <li><a class="reference internal" href="#rhel">RHEL(サポート付きライセンス利用の場合)</a></li>
 <li><a class="reference internal" href="#ansible-builder">Ansible builderで使用する動作確認済みのベースイメージ</a></li>
+<li><a class="reference internal" href="#ansible-agent-linger-note">ユーザーセッション切断後のプロセス維持</a></li>
 </ul>
 </li>
 </ul>
@@ -241,8 +242,8 @@
 </div>
 <section id="id3">
 <h3><span class="section-number">4.2.1. </span>構成パターン<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
-<table class="docutils align-left" id="id11">
-<caption><span class="caption-number">表 4.1 </span><span class="caption-text">システム構成パターン</span><a class="headerlink" href="#id11" title="Link to this table">¶</a></caption>
+<table class="docutils align-left" id="id12">
+<caption><span class="caption-number">表 4.1 </span><span class="caption-text">システム構成パターン</span><a class="headerlink" href="#id12" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 33.3%" />
@@ -309,8 +310,8 @@
 <ul class="simple">
 <li><p>動作確認済み構成</p></li>
 </ul>
-<table class="docutils align-left" id="id12">
-<caption><span class="caption-number">表 4.2 </span><span class="caption-text">動作確認済み最小構成</span><a class="headerlink" href="#id12" title="Link to this table">¶</a></caption>
+<table class="docutils align-left" id="id13">
+<caption><span class="caption-number">表 4.2 </span><span class="caption-text">動作確認済み最小構成</span><a class="headerlink" href="#id13" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>リソース種別</p></th>
 <th class="head"><p>要求リソース</p></th>
@@ -328,8 +329,8 @@
 </tr>
 </tbody>
 </table>
-<table class="docutils align-left" id="id13">
-<caption><span class="caption-number">表 4.3 </span><span class="caption-text">動作確認済み推奨構成</span><a class="headerlink" href="#id13" title="Link to this table">¶</a></caption>
+<table class="docutils align-left" id="id14">
+<caption><span class="caption-number">表 4.3 </span><span class="caption-text">動作確認済み推奨構成</span><a class="headerlink" href="#id14" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>リソース種別</p></th>
 <th class="head"><p>要求リソース</p></th>
@@ -360,8 +361,8 @@
 <div class="line-block">
 <div class="line">動作確認済みのOSは以下です。</div>
 </div>
-<table class="docutils align-left" id="id14">
-<caption><span class="caption-number">表 4.4 </span><span class="caption-text">動作確認済みOS</span><a class="headerlink" href="#id14" title="Link to this table">¶</a></caption>
+<table class="docutils align-left" id="id15">
+<caption><span class="caption-number">表 4.4 </span><span class="caption-text">動作確認済みOS</span><a class="headerlink" href="#id15" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>OS種別</p></th>
 <th class="head"><p>バージョン</p></th>
@@ -404,8 +405,8 @@ Permissive
 </div>
 <section id="ansible-execution-agent-software-requirements">
 <span id="id8"></span><h4>ソフトウェア要件<a class="headerlink" href="#ansible-execution-agent-software-requirements" title="Link to this heading">¶</a></h4>
-<table class="docutils align-left" id="id15">
-<caption><span class="caption-number">表 4.5 </span><span class="caption-text">ソフトウェア要件</span><a class="headerlink" href="#id15" title="Link to this table">¶</a></caption>
+<table class="docutils align-left" id="id16">
+<caption><span class="caption-number">表 4.5 </span><span class="caption-text">ソフトウェア要件</span><a class="headerlink" href="#id16" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -531,8 +532,8 @@ sudo<span class="w"> </span>subscription-manager<span class="w"> </span>repos<sp
 <ul class="simple">
 <li><p>動作確認済みビルドのベースイメージ</p></li>
 </ul>
-<table class="docutils align-left" id="id16">
-<caption><span class="caption-number">表 4.6 </span><span class="caption-text">動作確認済みビルドのベースイメージ</span><a class="headerlink" href="#id16" title="Link to this table">¶</a></caption>
+<table class="docutils align-left" id="id17">
+<caption><span class="caption-number">表 4.6 </span><span class="caption-text">動作確認済みビルドのベースイメージ</span><a class="headerlink" href="#id17" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>ベースイメージ種別</p></th>
 <th class="head"><p>イメージ取得先</p></th>
@@ -550,6 +551,19 @@ sudo<span class="w"> </span>subscription-manager<span class="w"> </span>repos<sp
 </tr>
 </tbody>
 </table>
+</section>
+<section id="ansible-agent-linger-note">
+<span id="id11"></span><h4>ユーザーセッション切断後のプロセス維持<a class="headerlink" href="#ansible-agent-linger-note" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Ansible実行エージェントを構成したエージェントユーザーがログアウトするとプロセスが停止し、ITAの作業実行がタイムアウトします。</div>
+</div>
+<div class="line-block">
+<div class="line">以下のコマンドを実行し、エージェントユーザーのプロセスがログアウト後も継続して動作するよう設定してください。</div>
+<div class="line">※ <cite>&lt;agent_user&gt;</cite> には、使用しているAnsible実行ユーザー名を指定してください。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>loginctl<span class="w"> </span>enable-linger<span class="w"> </span>&lt;agent_user&gt;
+</pre></div>
+</div>
 </section>
 </section>
 </section>

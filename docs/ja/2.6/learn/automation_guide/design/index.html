@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>自動化の設計方法論 &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../../_static/translations.js?v=4755f45a"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+    <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
+    <script src="../../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../ja/2.6/learn/automation_guide/design/index.html" selected>current</option>
+              <option value="../../../../../ja/2.6/learn/automation_guide/design/index.html" selected>2.6(current)</option>
+              <option value="../../../../../ja/2.5/learn/automation_guide/design/index.html">2.5</option>
+              <option value="../../../../../ja/2.4/learn/automation_guide/design/index.html">2.4</option>
+              <option value="../../../../../ja/2.3/learn/automation_guide/design/index.html">2.3</option>
+              <option value="../../../../../ja/2.2/learn/automation_guide/design/index.html">2.2</option>
+              <option value="../../../../../ja/2.1/learn/automation_guide/design/index.html">2.1</option>
+              <option value="../../../../../ja/2.0/learn/automation_guide/design/index.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../ja/2.6/learn/automation_guide/design/index.html" selected>日本語</option>
+              <option value="../../../../../en/2.6/learn/automation_guide/design/index.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/index.html">マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">HOME</a></li>
+    
+    <li>自動化の設計方法論</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="id1">
+<h1>自動化の設計方法論<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<div class="line-block">
+<div class="line">この章では、Exastroを使用した自動化基盤の設計方法について、実践的なアプローチを学習します。</div>
+<div class="line">良い設計は実装の品質と保守性を大きく左右するため、十分な時間をかけて設計することが重要です。</div>
+</div>
+<section id="id2">
+<h2>設計プロセスの全体像<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">自動化の設計は以下のステップで進めます：</div>
+</div>
+<pre  class="mermaid">
+        graph TD
+    A[要件分析] --&gt; B[アーキテクチャ設計]
+    B --&gt; C[パラメータ設計]
+    C --&gt; D[Movement設計]
+    D --&gt; E[Conductor設計]
+    E --&gt; F[テスト設計]
+    F --&gt; G[運用設計]
+    </pre></section>
+<section id="id3">
+<h2>要件分析<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<section id="id4">
+<h3>機能要件の整理<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">まず、自動化で実現したい機能を明確に定義します：</div>
+</div>
+<table class="docutils align-default" id="id25">
+<caption><span class="caption-text">機能要件の例</span><a class="headerlink" href="#id25" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>カテゴリ</p></th>
+<th class="head"><p>要件内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>構築機能</strong></p></td>
+<td><p>サーバの初期構築、ミドルウェアインストール</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>設定機能</strong></p></td>
+<td><p>設定ファイルの配布、サービス設定変更</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>運用機能</strong></p></td>
+<td><p>定期メンテナンス、ログ管理、監視設定</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>復旧機能</strong></p></td>
+<td><p>障害時の自動復旧、バックアップからの復元</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id5">
+<h3>非機能要件の整理<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">システムの品質に関わる要件も重要です：</div>
+</div>
+<ol class="arabic simple">
+<li><p><strong>パフォーマンス要件</strong></p>
+<ul class="simple">
+<li><p>実行時間の上限（例：30分以内）</p></li>
+<li><p>同時実行可能数（例：10台まで並列）</p></li>
+<li><p>リソース使用量の制限</p></li>
+</ul>
+</li>
+<li><p><strong>可用性要件</strong></p>
+<ul class="simple">
+<li><p>稼働率の目標（例：99.9%）</p></li>
+<li><p>復旧時間の目標（例：15分以内）</p></li>
+<li><p>障害時の代替手段</p></li>
+</ul>
+</li>
+<li><p><strong>セキュリティ要件</strong></p>
+<ul class="simple">
+<li><p>アクセス制御の方針</p></li>
+<li><p>ログ保存期間と暗号化</p></li>
+<li><p>秘匿情報の管理方法</p></li>
+</ul>
+</li>
+<li><p><strong>運用要件</strong></p>
+<ul class="simple">
+<li><p>監視項目と通知方法</p></li>
+<li><p>バックアップとリストア手順</p></li>
+<li><p>変更管理プロセス</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="id6">
+<h2>アーキテクチャ設計<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<section id="id7">
+<h3>レイヤー構造の設計<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Exastroの自動化基盤を以下のレイヤーで構造化します：</div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>┌─────────────────────────────────────┐
+│ Conductor Layer (ワークフロー制御)    │
+├─────────────────────────────────────┤
+│ Movement Layer (作業単位)            │
+├─────────────────────────────────────┤
+│ Parameter Layer (設定値管理)         │
+├─────────────────────────────────────┤
+│ Playbook Layer (実行ロジック)        │
+├─────────────────────────────────────┤
+│ Infrastructure Layer (対象機器)      │
+└─────────────────────────────────────┘
+</pre></div>
+</div>
+<p><strong>各レイヤーの責務</strong>:</p>
+<ul class="simple">
+<li><p><strong>Conductor Layer</strong>: 複数作業の順序制御と条件分岐</p></li>
+<li><p><strong>Movement Layer</strong>: 単一作業の定義と管理</p></li>
+<li><p><strong>Parameter Layer</strong>: 環境固有の設定値管理</p></li>
+<li><p><strong>Playbook Layer</strong>: 実際の作業ロジック</p></li>
+<li><p><strong>Infrastructure Layer</strong>: 対象システムとネットワーク</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3>コンポーネント分割の原則<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">再利用性と保守性を高めるため、以下の原則でコンポーネントを分割します：</div>
+</div>
+<ol class="arabic">
+<li><p><strong>機能的凝集性</strong></p>
+<p>関連する機能をまとめ、無関係な機能は分離</p>
+</li>
+<li><p><strong>疎結合性</strong></p>
+<p>コンポーネント間の依存関係を最小化</p>
+</li>
+<li><p><strong>単一責任</strong></p>
+<p>各コンポーネントは一つの明確な責任を持つ</p>
+</li>
+<li><p><strong>抽象化レベル</strong></p>
+<p>同じ抽象化レベルの処理をまとめる</p>
+</li>
+</ol>
+</section>
+</section>
+<section id="id9">
+<h2>パラメータ設計<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h2>
+<section id="id10">
+<h3>既存資産からのパラメータ抽出<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">パラメータシート設計の第一歩は、既存の構築手順書やPlaybookからパラメータを体系的に抽出することです。</div>
+</div>
+<p><strong>1. 既存手順書の分析手法</strong></p>
+<div class="line-block">
+<div class="line">構築手順書から自動化対象を特定し、パラメータを抽出する体系的な手法：</div>
+</div>
+<table class="docutils align-default" id="id26">
+<caption><span class="caption-text">手順書分析のチェックポイント</span><a class="headerlink" href="#id26" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>分析項目</p></th>
+<th class="head"><p>着眼点</p></th>
+<th class="head"><p>抽出例</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>設定ファイル</strong></p></td>
+<td><p>書き換える設定値</p></td>
+<td><p>IPアドレス、ポート番号、ドメイン名</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>コマンドパラメータ</strong></p></td>
+<td><p>環境により変わる引数</p></td>
+<td><p>ユーザ名、パスワード、ファイルパス</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>条件分岐</strong></p></td>
+<td><p>環境による処理の違い</p></td>
+<td><p>OS種別、バージョン、役割</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>リソース情報</strong></p></td>
+<td><p>サイジングに関わる値</p></td>
+<td><p>CPU数、メモリサイズ、ディスク容量</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>外部依存</strong></p></td>
+<td><p>他システムとの連携情報</p></td>
+<td><p>外部サーバURL、認証情報</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>実際の分析例：Apache構築手順書から</strong></p>
+<div class="literal-block-wrapper docutils container" id="id27">
+<div class="code-block-caption"><span class="caption-text">元の手順書（例）</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1. Apache HTTPサーバをインストール
+   # yum install httpd
+
+2. 設定ファイルを編集（/etc/httpd/conf/httpd.conf）
+   ServerRoot &quot;/etc/httpd&quot;
+   Listen 80                          ← ポート設定
+   ServerName www.example.com:80      ← サーバ名
+   DocumentRoot &quot;/var/www/html&quot;       ← ドキュメントルート
+
+3. SSL設定（本番環境のみ）
+   Listen 443 ssl
+   SSLEngine on
+   SSLCertificateFile /etc/ssl/certs/server.crt    ← 証明書パス
+   SSLCertificateKeyFile /etc/ssl/private/server.key
+
+4. ログ設定
+   ErrorLog logs/error_log
+   LogLevel warn                      ← ログレベル（開発:debug、本番:warn）
+
+5. サービス起動
+   # systemctl enable httpd
+   # systemctl start httpd
+</pre></div>
+</div>
+</div>
+<p><strong>抽出されるパラメータ</strong></p>
+<div class="literal-block-wrapper docutils container" id="id28">
+<div class="code-block-caption"><span class="caption-text">手順書から抽出したパラメータ</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># 基本設定パラメータ</span>
+<span class="nt">basic_config</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Listenポート&quot;</span>
+<span class="w">    </span><span class="nt">variable</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http_port&quot;</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;integer&quot;</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+<span class="w">    </span><span class="nt">validation</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1-65535&quot;</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;サーバ名&quot;</span>
+<span class="w">    </span><span class="nt">variable</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;server_name&quot;</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;string&quot;</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">example</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;www.example.com&quot;</span>
+
+<span class="c1"># 環境依存パラメータ</span>
+<span class="nt">environment_specific</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;SSL有効化&quot;</span>
+<span class="w">    </span><span class="nt">variable</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ssl_enabled&quot;</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;boolean&quot;</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;本番環境のみtrue&quot;</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ログレベル&quot;</span>
+<span class="w">    </span><span class="nt">variable</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;log_level&quot;</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;select&quot;</span>
+<span class="w">    </span><span class="nt">options</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;debug&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;info&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;warn&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;error&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">mapping</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">development</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;debug&quot;</span>
+<span class="w">      </span><span class="nt">staging</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;info&quot;</span>
+<span class="w">      </span><span class="nt">production</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;warn&quot;</span>
+</pre></div>
+</div>
+</div>
+<p><strong>2. Playbookからのパラメータ逆算</strong></p>
+<div class="line-block">
+<div class="line">既存のPlaybookがある場合は、そこからパラメータを逆算して抽出：</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id29">
+<div class="code-block-caption"><span class="caption-text">既存Playbook例</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Apacheインストールと設定&quot;</span>
+<span class="w">  </span><span class="nt">yum</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">httpd</span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">present</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;httpd.conf設定&quot;</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">httpd.conf.j2</span>
+<span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/httpd/conf/httpd.conf</span>
+<span class="w">  </span><span class="nt">vars</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">http_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span><span class="w">                    </span><span class="c1"># ← パラメータ候補</span>
+<span class="w">    </span><span class="nt">server_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">ansible_fqdn</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"> </span><span class="c1"># ← 動的値</span>
+<span class="w">    </span><span class="nt">document_root</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/var/www/html&quot;</span><span class="w">    </span><span class="c1"># ← 固定値？要検討</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;SSL設定（本番環境のみ）&quot;</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssl.conf.j2</span>
+<span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/httpd/conf.d/ssl.conf</span>
+<span class="w">  </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">environment == &quot;production&quot;</span><span class="w">   </span><span class="c1"># ← 条件分岐パラメータ</span>
+</pre></div>
+</div>
+</div>
+<p><strong>逆算によるパラメータ設計</strong></p>
+<div class="literal-block-wrapper docutils container" id="id30">
+<div class="code-block-caption"><span class="caption-text">Playbookから逆算したパラメータ設計</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># 必須パラメータ（Playbookで必ず使用）</span>
+<span class="nt">required_parameters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;HTTPポート&quot;</span>
+<span class="w">    </span><span class="nt">variable</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http_port&quot;</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;integer&quot;</span>
+<span class="w">    </span><span class="nt">usage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;template</span><span class="nv"> </span><span class="s">vars&quot;</span>
+<span class="w">    </span><span class="nt">playbook_reference</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;httpd.conf.j2&quot;</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;環境識別子&quot;</span>
+<span class="w">    </span><span class="nt">variable</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;environment&quot;</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;select&quot;</span>
+<span class="w">    </span><span class="nt">options</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;development&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;staging&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;production&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">usage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;conditional</span><span class="nv"> </span><span class="s">execution&quot;</span>
+<span class="w">    </span><span class="nt">playbook_reference</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;when条件&quot;</span>
+
+<span class="c1"># オプションパラメータ（デフォルト値あり）</span>
+<span class="nt">optional_parameters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ドキュメントルート&quot;</span>
+<span class="w">    </span><span class="nt">variable</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;document_root&quot;</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;string&quot;</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/var/www/html&quot;</span>
+<span class="w">    </span><span class="nt">customizable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+</div>
+<p><strong>3. パラメータ分析マトリクス</strong></p>
+<div class="line-block">
+<div class="line">抽出したパラメータを以下のマトリクスで分析・整理：</div>
+</div>
+<table class="docutils align-default" id="id31">
+<caption><span class="caption-text">パラメータ分析マトリクス</span><a class="headerlink" href="#id31" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 15.0%" />
+<col style="width: 15.0%" />
+<col style="width: 15.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ名</p></th>
+<th class="head"><p>データ型</p></th>
+<th class="head"><p>必須性</p></th>
+<th class="head"><p>変更頻度</p></th>
+<th class="head"><p>影響範囲</p></th>
+<th class="head"><p>設定方法</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>server_name</strong></p></td>
+<td><p>string</p></td>
+<td><p>必須</p></td>
+<td><p>構築時のみ</p></td>
+<td><p>アプリケーション</p></td>
+<td><p>手動入力</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>http_port</strong></p></td>
+<td><p>integer</p></td>
+<td><p>必須</p></td>
+<td><p>まれ</p></td>
+<td><p>ネットワーク</p></td>
+<td><p>選択式</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>ssl_enabled</strong></p></td>
+<td><p>boolean</p></td>
+<td><p>任意</p></td>
+<td><p>構築時のみ</p></td>
+<td><p>セキュリティ</p></td>
+<td><p>環境自動判定</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>log_level</strong></p></td>
+<td><p>select</p></td>
+<td><p>任意</p></td>
+<td><p>運用中</p></td>
+<td><p>運用性</p></td>
+<td><p>環境別デフォルト</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>max_clients</strong></p></td>
+<td><p>integer</p></td>
+<td><p>任意</p></td>
+<td><p>チューニング時</p></td>
+<td><p>パフォーマンス</p></td>
+<td><p>計算式</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id11">
+<h3>パラメータシートの体系的設計手法<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+<p><strong>1. レイヤー別パラメータ分類</strong></p>
+<div class="line-block">
+<div class="line">パラメータをシステムのレイヤーに応じて分類し、管理しやすくします：</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id32">
+<div class="code-block-caption"><span class="caption-text">レイヤー別パラメータ分類例</span><a class="headerlink" href="#id32" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># インフラレイヤー</span>
+<span class="nt">infrastructure</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">network</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">subnet_cidr</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10.0.1.0/24&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">gateway_ip</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10.0.1.1&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">dns_servers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;8.8.4.4&quot;</span><span class="p p-Indicator">]</span>
+
+<span class="w">  </span><span class="nt">compute</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">instance_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;m5.large&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">disk_size_gb</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">availability_zone</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ap-northeast-1a&quot;</span>
+
+<span class="c1"># OSレイヤー</span>
+<span class="nt">operating_system</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">basic</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;web01&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">timezone</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Asia/Tokyo&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">locale</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ja_JP.UTF-8&quot;</span>
+
+<span class="w">  </span><span class="nt">security</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ssh_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">22</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">firewall_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">selinux_mode</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;enforcing&quot;</span>
+
+<span class="c1"># ミドルウェアレイヤー</span>
+<span class="nt">middleware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">web_server</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">software_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;apache&quot;</span><span class="w">  </span><span class="c1"># apache/nginx</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2.4&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">worker_processes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+
+<span class="w">  </span><span class="nt">application</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">app_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;myapp&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">app_version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1.2.3&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">config_template</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;production&quot;</span>
+</pre></div>
+</div>
+</div>
+<p><strong>2. 環境間差異の管理戦略</strong></p>
+<div class="line-block">
+<div class="line">環境間の差異を効率的に管理するための設計パターン：</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id33">
+<div class="code-block-caption"><span class="caption-text">環境差異管理の設計パターン</span><a class="headerlink" href="#id33" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># パターン1: 環境別マスタデータ</span>
+<span class="nt">environment_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">development</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">performance_level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;basic&quot;</span>
+<span class="w">    </span><span class="nt">security_level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;standard&quot;</span>
+<span class="w">    </span><span class="nt">monitoring_level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;basic&quot;</span>
+<span class="w">    </span><span class="nt">backup_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+
+<span class="w">  </span><span class="nt">production</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">performance_level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;high&quot;</span>
+<span class="w">    </span><span class="nt">security_level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;strict&quot;</span>
+<span class="w">    </span><span class="nt">monitoring_level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;comprehensive&quot;</span>
+<span class="w">    </span><span class="nt">backup_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="c1"># パターン2: 継承型設定</span>
+<span class="nt">base_config</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;base</span>
+<span class="w">  </span><span class="nt">web_server</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">software</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;apache&quot;</span>
+<span class="w">    </span><span class="nt">modules</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;mod_ssl&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;mod_rewrite&quot;</span><span class="p p-Indicator">]</span>
+
+<span class="nt">development_config</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*base</span>
+<span class="w">  </span><span class="nt">web_server</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">log_level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;debug&quot;</span>
+<span class="w">    </span><span class="nt">ssl_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+
+<span class="nt">production_config</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*base</span>
+<span class="w">  </span><span class="nt">web_server</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">log_level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;warn&quot;</span>
+<span class="w">    </span><span class="nt">ssl_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">performance_tuning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+</div>
+<p><strong>3. 依存関係の明示化</strong></p>
+<div class="line-block">
+<div class="line">パラメータ間の依存関係を明示的に設計：</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id34">
+<div class="code-block-caption"><span class="caption-text">パラメータ依存関係の設計</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">parameter_dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ssl_configuration</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">trigger_parameter</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ssl_enabled&quot;</span>
+<span class="w">    </span><span class="nt">dependent_parameters</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ssl_certificate_path&quot;</span>
+<span class="w">        </span><span class="nt">required_when</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ssl_enabled</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">true&quot;</span>
+<span class="w">        </span><span class="nt">validation</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;file_exists&quot;</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ssl_private_key_path&quot;</span>
+<span class="w">        </span><span class="nt">required_when</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ssl_enabled</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">true&quot;</span>
+<span class="w">        </span><span class="nt">validation</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;file_exists&quot;</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https_port&quot;</span>
+<span class="w">        </span><span class="nt">default_when</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ssl_enabled</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">true&quot;</span>
+<span class="w">        </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">443</span>
+
+<span class="w">  </span><span class="nt">database_connection</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">trigger_parameter</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;database_type&quot;</span>
+<span class="w">    </span><span class="nt">dependent_parameters</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;db_host&quot;</span>
+<span class="w">        </span><span class="nt">required_when</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;database_type</span><span class="nv"> </span><span class="s">!=</span><span class="nv"> </span><span class="s">&#39;sqlite&#39;&quot;</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;db_port&quot;</span>
+<span class="w">        </span><span class="nt">default_when</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;database_type</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">&#39;mysql&#39;&quot;</span>
+<span class="w">        </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3306</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id12">
+<h3>実践的なパラメータシート設計プロセス<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<p><strong>ステップ1: 現状調査と要件整理</strong></p>
+<div class="literal-block-wrapper docutils container" id="id35">
+<div class="code-block-caption"><span class="caption-text">調査チェックリスト</span><a class="headerlink" href="#id35" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>□ 既存手順書の収集と分析
+  - 構築手順書
+  - 運用手順書
+  - 設定変更手順書
+  - トラブルシューティング手順書
+
+□ 既存システムの現状調査
+  - 設定ファイルの内容確認
+  - 環境間での設定差異調査
+  - 変更履歴の分析
+
+□ 関係者へのヒアリング
+  - 構築担当者からのノウハウ聞き取り
+  - 運用担当者からの課題聞き取り
+  - 利用者からの要望聞き取り
+</pre></div>
+</div>
+</div>
+<p><strong>ステップ2: パラメータ抽出ワークショップ</strong></p>
+<table class="docutils align-default" id="id36">
+<caption><span class="caption-text">ワークショップの進行例</span><a class="headerlink" href="#id36" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 25.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>時間</p></th>
+<th class="head"><p>活動</p></th>
+<th class="head"><p>成果物</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>30分</strong></p></td>
+<td><p>手順書レビュー</p></td>
+<td><p>パラメータ候補リスト</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>60分</strong></p></td>
+<td><p>パラメータ分類作業</p></td>
+<td><p>カテゴリ別パラメータ整理表</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>30分</strong></p></td>
+<td><p>依存関係分析</p></td>
+<td><p>パラメータ関係図</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>60分</strong></p></td>
+<td><p>バリデーション設計</p></td>
+<td><p>検証ルール定義書</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>30分</strong></p></td>
+<td><p>優先度設定</p></td>
+<td><p>実装優先度マトリクス</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>ステップ3: パラメータシート設計書の作成</strong></p>
+<div class="literal-block-wrapper docutils container" id="id37">
+<div class="code-block-caption"><span class="caption-text">パラメータシート設計書テンプレート</span><a class="headerlink" href="#id37" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">parameter_sheet_design</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sheet_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Webサーバ構築パラメータ&quot;</span>
+<span class="w">  </span><span class="nt">sheet_purpose</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Apache</span><span class="nv"> </span><span class="s">Webサーバの構築・運用に必要な設定値管理&quot;</span>
+<span class="w">  </span><span class="nt">target_environments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;development&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;staging&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;production&quot;</span><span class="p p-Indicator">]</span>
+
+<span class="w">  </span><span class="nt">parameter_groups</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">basic_information</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;サーバの基本情報&quot;</span>
+<span class="w">      </span><span class="nt">parameters</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;hostname&quot;</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;string&quot;</span>
+<span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">validation_rule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;^[a-zA-Z0-9-]+$&quot;</span>
+<span class="w">          </span><span class="nt">max_length</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">63</span>
+<span class="w">          </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;サーバのホスト名&quot;</span>
+<span class="w">          </span><span class="nt">input_method</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;manual&quot;</span>
+
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ip_address&quot;</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;string&quot;</span>
+<span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">validation_rule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;^(</span><span class="err">\</span><span class="s">d{1,3}</span><span class="err">\</span><span class="s">.){3}</span><span class="err">\</span><span class="s">d{1,3}$&quot;</span>
+<span class="w">          </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;サーバのIPアドレス&quot;</span>
+<span class="w">          </span><span class="nt">input_method</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;manual&quot;</span>
+<span class="w">          </span><span class="nt">unique</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="w">    </span><span class="nt">web_server_config</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Webサーバの設定&quot;</span>
+<span class="w">      </span><span class="nt">parameters</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http_port&quot;</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;integer&quot;</span>
+<span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+<span class="w">          </span><span class="nt">validation_rule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1-65535&quot;</span>
+<span class="w">          </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;HTTPサービスのポート番号&quot;</span>
+<span class="w">          </span><span class="nt">input_method</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;select&quot;</span>
+<span class="w">          </span><span class="nt">options</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">80</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">8080</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">8000</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+</div>
+<p><strong>ステップ4: プロトタイプによる検証</strong></p>
+<div class="literal-block-wrapper docutils container" id="id38">
+<div class="code-block-caption"><span class="caption-text">プロトタイプ検証項目</span><a class="headerlink" href="#id38" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">prototype_validation</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">data_entry_test</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scenario</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;新規環境構築&quot;</span>
+<span class="w">      </span><span class="nt">test_data</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;development環境のサンプルデータ&quot;</span>
+<span class="w">      </span><span class="nt">validation_points</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;必須項目の入力漏れ検出&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;データ型バリデーション&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;依存関係チェック&quot;</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scenario</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;設定変更&quot;</span>
+<span class="w">      </span><span class="nt">test_data</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;本番環境の一部設定変更&quot;</span>
+<span class="w">      </span><span class="nt">validation_points</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;変更影響範囲の特定&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;ロールバック用データの保存&quot;</span>
+
+<span class="w">  </span><span class="nt">playbook_integration_test</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">test_movement</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Apache構築Movement&quot;</span>
+<span class="w">      </span><span class="nt">parameter_mapping</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;パラメータシートとPlaybook変数の対応確認&quot;</span>
+<span class="w">      </span><span class="nt">execution_test</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;実際の構築処理での動作確認&quot;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id13">
+<h3>バリデーション設計の詳細化<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<p><strong>1. 段階的バリデーション設計</strong></p>
+<div class="literal-block-wrapper docutils container" id="id39">
+<div class="code-block-caption"><span class="caption-text">段階的バリデーション例</span><a class="headerlink" href="#id39" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">validation_stages</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage1_syntax</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ip_address&quot;</span>
+<span class="w">      </span><span class="nt">rule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;format_validation&quot;</span>
+<span class="w">      </span><span class="nt">pattern</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;^(</span><span class="err">\</span><span class="s">d{1,3}</span><span class="err">\</span><span class="s">.){3}</span><span class="err">\</span><span class="s">d{1,3}$&quot;</span>
+<span class="w">      </span><span class="nt">error_message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;IPアドレスの形式が正しくありません&quot;</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;hostname&quot;</span>
+<span class="w">      </span><span class="nt">rule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;length_validation&quot;</span>
+<span class="w">      </span><span class="nt">max_length</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">63</span>
+<span class="w">      </span><span class="nt">error_message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ホスト名は63文字以内で入力してください&quot;</span>
+
+<span class="w">  </span><span class="nt">stage2_business_logic</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ssl_enabled&quot;</span>
+<span class="w">      </span><span class="nt">rule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;conditional_requirement&quot;</span>
+<span class="w">      </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;environment</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">&#39;production&#39;&quot;</span>
+<span class="w">      </span><span class="nt">requirement</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ssl_enabled</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">true&quot;</span>
+<span class="w">      </span><span class="nt">error_message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;本番環境ではSSLを有効にする必要があります&quot;</span>
+
+<span class="w">  </span><span class="nt">stage3_infrastructure</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ip_address&quot;</span>
+<span class="w">      </span><span class="nt">rule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;network_reachability&quot;</span>
+<span class="w">      </span><span class="nt">test_method</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ping_test&quot;</span>
+<span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">      </span><span class="nt">error_message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;指定されたIPアドレスに到達できません&quot;</span>
+
+<span class="w">  </span><span class="nt">stage4_integration</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;database_connection&quot;</span>
+<span class="w">      </span><span class="nt">rule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;service_connectivity&quot;</span>
+<span class="w">      </span><span class="nt">test_method</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;connection_test&quot;</span>
+<span class="w">      </span><span class="nt">required_parameters</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;db_host&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;db_port&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;db_user&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">error_message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;データベースへの接続に失敗しました&quot;</span>
+</pre></div>
+</div>
+</div>
+<p><strong>2. 動的バリデーション設計</strong></p>
+<div class="literal-block-wrapper docutils container" id="id40">
+<div class="code-block-caption"><span class="caption-text">動的バリデーション例</span><a class="headerlink" href="#id40" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">dynamic_validations</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">capacity_check</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">trigger</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;instance_type</span><span class="nv"> </span><span class="s">OR</span><span class="nv"> </span><span class="s">expected_load&quot;</span>
+<span class="w">    </span><span class="nt">validation_logic</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no"># CPUとメモリの容量チェック</span>
+<span class="w">      </span><span class="no">required_cpu = expected_load.concurrent_users / 100</span>
+<span class="w">      </span><span class="no">required_memory = expected_load.data_size_gb * 1.5</span>
+
+<span class="w">      </span><span class="no">instance_specs = lookup_instance_specs(instance_type)</span>
+
+<span class="w">      </span><span class="no">if instance_specs.cpu &lt; required_cpu:</span>
+<span class="w">        </span><span class="no">return error(&quot;CPU不足: 必要{}、選択{}&quot;, required_cpu, instance_specs.cpu)</span>
+
+<span class="w">      </span><span class="no">if instance_specs.memory &lt; required_memory:</span>
+<span class="w">        </span><span class="no">return error(&quot;メモリ不足: 必要{}、選択{}&quot;, required_memory, instance_specs.memory)</span>
+
+<span class="w">  </span><span class="nt">dependency_consistency</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">trigger</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ssl_enabled</span><span class="nv"> </span><span class="s">OR</span><span class="nv"> </span><span class="s">https_port&quot;</span>
+<span class="w">    </span><span class="nt">validation_logic</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">if ssl_enabled and not https_port:</span>
+<span class="w">        </span><span class="no">auto_suggest(&quot;https_port&quot;, 443)</span>
+
+<span class="w">      </span><span class="no">if https_port and not ssl_enabled:</span>
+<span class="w">        </span><span class="no">return warning(&quot;HTTPSポートが設定されていますがSSLが無効です&quot;)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id14">
+<h3>設定の分類と管理戦略<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<p><strong>1. パラメータライフサイクル管理</strong></p>
+<table class="docutils align-default" id="id41">
+<caption><span class="caption-text">パラメータライフサイクル分類</span><a class="headerlink" href="#id41" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ライフサイクル</p></th>
+<th class="head"><p>変更頻度</p></th>
+<th class="head"><p>管理方法</p></th>
+<th class="head"><p>例</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Static</strong></p></td>
+<td><p>変更なし</p></td>
+<td><p>設計時に決定、コード化</p></td>
+<td><p>標準ポート、プロトコル</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Configuration</strong></p></td>
+<td><p>構築時のみ</p></td>
+<td><p>パラメータシートで管理</p></td>
+<td><p>サーバ名、IP、ドメイン</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Operational</strong></p></td>
+<td><p>運用中に変更</p></td>
+<td><p>運用パラメータシートで管理</p></td>
+<td><p>ログレベル、タイムアウト</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Dynamic</strong></p></td>
+<td><p>頻繁に変更</p></td>
+<td><p>外部システム連携で取得</p></td>
+<td><p>負荷情報、ステータス</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. 権限とアクセス制御の設計</strong></p>
+<div class="literal-block-wrapper docutils container" id="id42">
+<div class="code-block-caption"><span class="caption-text">パラメータアクセス制御設計</span><a class="headerlink" href="#id42" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">access_control</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">parameter_groups</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">infrastructure</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">read_roles</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;infrastructure_admin&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;system_operator&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">write_roles</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;infrastructure_admin&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">approval_required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="w">    </span><span class="nt">application</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">read_roles</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;app_admin&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;app_developer&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;system_operator&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">write_roles</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;app_admin&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;app_developer&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">approval_required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+
+<span class="w">    </span><span class="nt">security</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">read_roles</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;security_admin&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;infrastructure_admin&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">write_roles</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;security_admin&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">approval_required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">change_notification</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;security_team&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;management&quot;</span><span class="p p-Indicator">]</span>
+
+<span class="w">  </span><span class="nt">sensitive_parameters</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;database_password&quot;</span>
+<span class="w">      </span><span class="nt">encryption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">audit_logging</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">access_roles</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;db_admin&quot;</span><span class="p p-Indicator">]</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ssl_private_key&quot;</span>
+<span class="w">      </span><span class="nt">encryption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">audit_logging</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">access_roles</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;security_admin&quot;</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id15">
+<h3>バリデーション設計<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">パラメータの整合性を保つため、以下の段階的なバリデーションを設計します：</div>
+</div>
+<p><strong>1. 入力時バリデーション</strong></p>
+<div class="literal-block-wrapper docutils container" id="id43">
+<div class="code-block-caption"><span class="caption-text">入力時バリデーション例</span><a class="headerlink" href="#id43" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">input_validations</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">format_check</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ip_address</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">pattern</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;^(\d{1,3}\.){3}\d{1,3}$&#39;</span>
+<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;正しいIPアドレス形式で入力してください（例：192.168.1.100）&quot;</span>
+<span class="w">      </span><span class="nt">example</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;192.168.1.100&quot;</span>
+
+<span class="w">    </span><span class="nt">hostname</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">pattern</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;^[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]$&#39;</span>
+<span class="w">      </span><span class="nt">max_length</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">63</span>
+<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ホスト名は英数字とハイフンのみ使用可能です（63文字以内）&quot;</span>
+
+<span class="w">    </span><span class="nt">port_number</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;integer&quot;</span>
+<span class="w">      </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">65535</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ポート番号は1-65535の範囲で入力してください&quot;</span>
+
+<span class="w">  </span><span class="nt">business_logic_check</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ssl_certificate_path</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">required_when</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ssl_enabled</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">true&quot;</span>
+<span class="w">      </span><span class="nt">file_extension</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;.crt&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;.pem&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;SSLが有効な場合は証明書ファイルパスが必要です&quot;</span>
+
+<span class="w">    </span><span class="nt">backup_retention_days</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">min_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">max_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2555</span><span class="w">  </span><span class="c1"># 7年</span>
+<span class="w">      </span><span class="nt">default_by_environment</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">development</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">        </span><span class="nt">staging</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">        </span><span class="nt">production</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">365</span>
+</pre></div>
+</div>
+</div>
+<p><strong>2. 環境整合性バリデーション</strong></p>
+<div class="literal-block-wrapper docutils container" id="id44">
+<div class="code-block-caption"><span class="caption-text">環境整合性バリデーション例</span><a class="headerlink" href="#id44" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">environment_consistency</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">network_configuration</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">validation_rule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;network_reachability&quot;</span>
+<span class="w">    </span><span class="nt">parameters</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;ip_address&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;subnet_mask&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;gateway&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">test_method</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no"># ネットワーク設定の整合性チェック</span>
+<span class="w">      </span><span class="no">network = calculate_network(ip_address, subnet_mask)</span>
+<span class="w">      </span><span class="no">if not is_in_network(gateway, network):</span>
+<span class="w">        </span><span class="no">return error(&quot;ゲートウェイがサブネット範囲外です&quot;)</span>
+
+<span class="w">  </span><span class="nt">service_dependency</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">validation_rule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;service_connectivity&quot;</span>
+<span class="w">    </span><span class="nt">parameters</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;database_host&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;database_port&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">test_method</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no"># データベース接続確認</span>
+<span class="w">      </span><span class="no">if not test_connection(database_host, database_port, timeout=5):</span>
+<span class="w">        </span><span class="no">return error(&quot;データベースサーバに接続できません&quot;)</span>
+
+<span class="w">  </span><span class="nt">resource_capacity</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">validation_rule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;capacity_check&quot;</span>
+<span class="w">    </span><span class="nt">parameters</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;cpu_cores&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;memory_gb&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;expected_load&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">test_method</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no"># リソース容量の妥当性チェック</span>
+<span class="w">      </span><span class="no">required_memory = expected_load * 0.1  # 概算</span>
+<span class="w">      </span><span class="no">if memory_gb &lt; required_memory:</span>
+<span class="w">        </span><span class="no">return warning(&quot;メモリ容量が不足する可能性があります&quot;)</span>
+</pre></div>
+</div>
+</div>
+<p><strong>3. 統合バリデーション</strong></p>
+<div class="literal-block-wrapper docutils container" id="id45">
+<div class="code-block-caption"><span class="caption-text">統合バリデーション例</span><a class="headerlink" href="#id45" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">integration_validations</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">cross_parameter_consistency</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># SSL設定の整合性</span>
+<span class="w">    </span><span class="nt">ssl_configuration</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">trigger_parameters</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;ssl_enabled&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;https_port&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;ssl_certificate_path&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">validation_logic</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">if ssl_enabled:</span>
+<span class="w">          </span><span class="no">required_params = [&quot;https_port&quot;, &quot;ssl_certificate_path&quot;, &quot;ssl_private_key_path&quot;]</span>
+<span class="w">          </span><span class="no">missing = [p for p in required_params if not locals()[p]]</span>
+<span class="w">          </span><span class="no">if missing:</span>
+<span class="w">            </span><span class="no">return error(&quot;SSL有効時は以下が必要: {}&quot;, missing)</span>
+
+<span class="w">          </span><span class="no">if https_port == http_port:</span>
+<span class="w">            </span><span class="no">return error(&quot;HTTPSポートとHTTPポートは異なる値を設定してください&quot;)</span>
+
+<span class="w">    </span><span class="c1"># 負荷分散設定の整合性</span>
+<span class="w">    </span><span class="nt">load_balancer_configuration</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">trigger_parameters</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;lb_enabled&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;backend_servers&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">validation_logic</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">if lb_enabled and len(backend_servers) &lt; 2:</span>
+<span class="w">          </span><span class="no">return warning(&quot;負荷分散には2台以上のバックエンドサーバを推奨します&quot;)</span>
+
+<span class="w">  </span><span class="nt">deployment_readiness</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># デプロイ準備状況チェック</span>
+<span class="w">    </span><span class="nt">infrastructure_readiness</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">check_items</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ネットワーク疎通確認&quot;</span>
+<span class="w">          </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ping_test&quot;</span>
+<span class="w">          </span><span class="nt">targets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;all_target_hosts&quot;</span><span class="p p-Indicator">]</span>
+
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;必要ポート開放確認&quot;</span>
+<span class="w">          </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;port_connectivity&quot;</span>
+<span class="w">          </span><span class="nt">targets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;required_ports&quot;</span><span class="p p-Indicator">]</span>
+
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ディスク容量確認&quot;</span>
+<span class="w">          </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;disk_space_check&quot;</span>
+<span class="w">          </span><span class="nt">minimum_required</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10GB&quot;</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="movement">
+<h2>Movement設計<a class="headerlink" href="#movement" title="Link to this heading">¶</a></h2>
+<section id="id16">
+<h3>Movement分割の戦略<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Movementは以下の観点で適切に分割します：</div>
+</div>
+<p><strong>1. 責任範囲による分割</strong></p>
+<ul class="simple">
+<li><p><strong>OS基盤設定</strong>: OS設定、ユーザ管理、セキュリティ設定</p></li>
+<li><p><strong>ミドルウェア構築</strong>: Webサーバ、DBサーバ、監視エージェント</p></li>
+<li><p><strong>アプリケーション配備</strong>: アプリ配布、設定配布、サービス起動</p></li>
+<li><p><strong>運用作業</strong>: バックアップ、ログ管理、メンテナンス</p></li>
+</ul>
+<p><strong>2. 実行タイミングによる分割</strong></p>
+<ul class="simple">
+<li><p><strong>初期構築</strong>: システム導入時の一回限りの作業</p></li>
+<li><p><strong>定期メンテナンス</strong>: 日次、週次、月次の定期作業</p></li>
+<li><p><strong>緊急対応</strong>: 障害時やセキュリティ対応</p></li>
+<li><p><strong>廃止作業</strong>: システム廃止時のクリーンアップ</p></li>
+</ul>
+<p><strong>3. 影響範囲による分割</strong></p>
+<ul class="simple">
+<li><p><strong>単体作業</strong>: 一台のサーバで完結する作業</p></li>
+<li><p><strong>連携作業</strong>: 複数サーバ間での協調が必要な作業</p></li>
+<li><p><strong>全体作業</strong>: 環境全体に影響する作業</p></li>
+</ul>
+</section>
+<section id="id17">
+<h3>Movement間の依存関係管理<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Movement間の依存関係は以下の方法で管理します：</div>
+</div>
+<p><strong>1. 前提条件の明文化</strong></p>
+<div class="literal-block-wrapper docutils container" id="id46">
+<div class="code-block-caption"><span class="caption-text">Movement前提条件の例</span><a class="headerlink" href="#id46" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">prerequisites</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;OS基盤設定&quot;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;OSの基本設定が完了していること&quot;</span>
+<span class="w">    </span><span class="nt">validation</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;systemctl</span><span class="nv"> </span><span class="s">is-active</span><span class="nv"> </span><span class="s">network&quot;</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ディスク容量&quot;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;最低10GB以上の空き容量があること&quot;</span>
+<span class="w">    </span><span class="nt">validation</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;df</span><span class="nv"> </span><span class="s">/</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">awk</span><span class="nv"> </span><span class="s">&#39;NR==2</span><span class="nv"> </span><span class="s">{print</span><span class="nv"> </span><span class="s">$4}&#39;</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">$(cat)</span><span class="nv"> </span><span class="s">-gt</span><span class="nv"> </span><span class="s">10485760&quot;</span>
+</pre></div>
+</div>
+</div>
+<p><strong>2. 順序制御の設計</strong></p>
+<pre  class="mermaid">
+        graph TB
+    A[OS基盤設定] --&gt; B[セキュリティ設定]
+    A --&gt; C[ネットワーク設定]
+    B --&gt; D[ミドルウェアインストール]
+    C --&gt; D
+    D --&gt; E[アプリケーション配備]
+    E --&gt; F[サービス起動]
+    </pre></section>
+</section>
+<section id="id18">
+<h2>エラーハンドリング設計<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h2>
+<section id="id19">
+<h3>エラー分類と対応戦略<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">エラーを以下のように分類し、それぞれに応じた対応戦略を定義します：</div>
+</div>
+<table class="docutils align-default" id="id47">
+<caption><span class="caption-text">エラー分類と対応</span><a class="headerlink" href="#id47" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 35.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>エラー分類</p></th>
+<th class="head"><p>例</p></th>
+<th class="head"><p>対応戦略</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>一時的エラー</strong></p></td>
+<td><p>ネットワーク瞬断、一時的な高負荷</p></td>
+<td><p>自動リトライ（回数制限あり）</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>設定エラー</strong></p></td>
+<td><p>パラメータ不正、権限不足</p></td>
+<td><p>停止してログ出力、手動確認要求</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>環境エラー</strong></p></td>
+<td><p>ディスク容量不足、サービス停止</p></td>
+<td><p>前提条件チェックで事前検出</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>重大エラー</strong></p></td>
+<td><p>システム破損、データ損失</p></td>
+<td><p>即座に停止、アラート発行</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id20">
+<h3>ロールバック設計<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">作業失敗時の復旧方法を事前に設計します：</div>
+</div>
+<p><strong>1. スナップショット方式</strong></p>
+<div class="literal-block-wrapper docutils container" id="id48">
+<div class="code-block-caption"><span class="caption-text">スナップショット取得例</span><a class="headerlink" href="#id48" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">pre_tasks</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;設定変更前のバックアップ取得&quot;</span>
+<span class="w">    </span><span class="nt">copy</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">config_file_path</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">      </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">config_file_path</span><span class="nv"> </span><span class="s">}}.backup.{{</span><span class="nv"> </span><span class="s">ansible_date_time.epoch</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">      </span><span class="nt">backup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+</pre></div>
+</div>
+</div>
+<p><strong>2. 差分適用方式</strong></p>
+<div class="literal-block-wrapper docutils container" id="id49">
+<div class="code-block-caption"><span class="caption-text">差分管理例</span><a class="headerlink" href="#id49" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">rollback_info</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;service_stop&quot;</span>
+<span class="w">    </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;httpd&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;config_restore&quot;</span>
+<span class="w">    </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/etc/httpd/conf/httpd.conf.backup&quot;</span>
+<span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/etc/httpd/conf/httpd.conf&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;service_start&quot;</span>
+<span class="w">    </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;httpd&quot;</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="id21">
+<h2>テスト設計<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h2>
+<section id="id22">
+<h3>テストレベルの定義<a class="headerlink" href="#id22" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">自動化の品質を保証するため、以下のレベルでテストを設計します：</div>
+</div>
+<ol class="arabic simple">
+<li><p><strong>単体テスト</strong> - 個別Playbookの動作確認</p></li>
+<li><p><strong>結合テスト</strong> - Movement間の連携確認</p></li>
+<li><p><strong>システムテスト</strong> - エンドツーエンドの動作確認</p></li>
+<li><p><strong>受入テスト</strong> - 業務要件の達成確認</p></li>
+</ol>
+</section>
+<section id="id23">
+<h3>継続的テストの仕組み<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">開発と運用の両フェーズで継続的にテストを実行する仕組みを設計します：</div>
+</div>
+<pre  class="mermaid">
+        graph LR
+    A[コード変更] --&gt; B[静的解析]
+    B --&gt; C[単体テスト]
+    C --&gt; D[結合テスト]
+    D --&gt; E[本番デプロイ]
+    E --&gt; F[監視・メトリクス]
+    F --&gt; A
+    </pre></section>
+</section>
+<section id="id24">
+<h2>次のステップ<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">設計方法論を理解したら、次は <a class="reference internal" href="../implementation/index.html"><span class="doc">実装のベストプラクティス</span></a> で実際の実装手法を学習しましょう。</div>
+<div class="line">実装フェーズでは、これらの設計を具体的なExastroコンポーネントに落とし込む方法を解説します。</div>
+</div>
+</section>
+</section>
+
+
+</div>
+
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

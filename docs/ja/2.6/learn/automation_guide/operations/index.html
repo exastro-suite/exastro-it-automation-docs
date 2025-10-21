@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>運用とガバナンス &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../../_static/translations.js?v=4755f45a"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+    <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
+    <script src="../../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../ja/2.6/learn/automation_guide/operations/index.html" selected>current</option>
+              <option value="../../../../../ja/2.6/learn/automation_guide/operations/index.html" selected>2.6(current)</option>
+              <option value="../../../../../ja/2.5/learn/automation_guide/operations/index.html">2.5</option>
+              <option value="../../../../../ja/2.4/learn/automation_guide/operations/index.html">2.4</option>
+              <option value="../../../../../ja/2.3/learn/automation_guide/operations/index.html">2.3</option>
+              <option value="../../../../../ja/2.2/learn/automation_guide/operations/index.html">2.2</option>
+              <option value="../../../../../ja/2.1/learn/automation_guide/operations/index.html">2.1</option>
+              <option value="../../../../../ja/2.0/learn/automation_guide/operations/index.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../ja/2.6/learn/automation_guide/operations/index.html" selected>日本語</option>
+              <option value="../../../../../en/2.6/learn/automation_guide/operations/index.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/index.html">マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">HOME</a></li>
+    
+    <li>運用とガバナンス</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="id1">
+<h1>運用とガバナンス<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<div class="line-block">
+<div class="line">この章では、実装した自動化基盤を継続的に運用し、組織全体での活用を促進するためのガバナンスとベストプラクティスを学習します。</div>
+<div class="line">良い運用体制は自動化の価値を最大化し、組織の成熟度向上につながります。</div>
+</div>
+<section id="id2">
+<h2>運用体制の構築<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<section id="id3">
+<h3>組織体制の設計<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">自動化基盤の運用には以下の役割と責任を明確に定義します：</div>
+</div>
+<table class="docutils align-default" id="id22">
+<caption><span class="caption-text">運用体制の役割分担</span><a class="headerlink" href="#id22" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>役割</p></th>
+<th class="head"><p>責任範囲</p></th>
+<th class="head"><p>主な業務</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>プラットフォーム管理者</strong></p></td>
+<td><p>Exastro基盤全体の管理</p></td>
+<td><p>システム管理、アップデート、全体設計</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>ワークスペース管理者</strong></p></td>
+<td><p>個別ワークスペースの管理</p></td>
+<td><p>ユーザ管理、権限設定、ワークスペース運用</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>自動化エンジニア</strong></p></td>
+<td><p>自動化コンテンツの開発</p></td>
+<td><p>Movement/Playbook開発、テスト実行</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>運用エンジニア</strong></p></td>
+<td><p>日常的な自動化実行</p></td>
+<td><p>作業実行、結果確認、問題対応</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>アーキテクト</strong></p></td>
+<td><p>自動化戦略の策定</p></td>
+<td><p>標準化、ガイドライン策定、教育</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="raci">
+<h3>RACI マトリクスの活用<a class="headerlink" href="#raci" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">具体的な作業項目に対する責任を明確化します：</div>
+</div>
+<table class="docutils align-default" id="id23">
+<caption><span class="caption-text">RACI マトリクス例</span><a class="headerlink" href="#id23" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 14.0%" />
+<col style="width: 14.0%" />
+<col style="width: 14.0%" />
+<col style="width: 14.0%" />
+<col style="width: 14.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>作業項目</p></th>
+<th class="head"><p>プラット フォーム 管理者</p></th>
+<th class="head"><p>ワークス ペース 管理者</p></th>
+<th class="head"><p>自動化 エンジニア</p></th>
+<th class="head"><p>運用 エンジニア</p></th>
+<th class="head"><p>アーキテクト</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>新規Movement開発</strong></p></td>
+<td><p>I</p></td>
+<td><p>A</p></td>
+<td><p>R</p></td>
+<td><p>C</p></td>
+<td><p>C</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>本番環境での実行</strong></p></td>
+<td><p>I</p></td>
+<td><p>C</p></td>
+<td><p>C</p></td>
+<td><p>R/A</p></td>
+<td><p>I</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>システムアップデート</strong></p></td>
+<td><p>R/A</p></td>
+<td><p>C</p></td>
+<td><p>I</p></td>
+<td><p>I</p></td>
+<td><p>C</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>標準化ガイドライン策定</strong></p></td>
+<td><p>C</p></td>
+<td><p>C</p></td>
+<td><p>C</p></td>
+<td><p>I</p></td>
+<td><p>R/A</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>障害対応</strong></p></td>
+<td><p>A</p></td>
+<td><p>R</p></td>
+<td><p>R</p></td>
+<td><p>R</p></td>
+<td><p>C</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>R=Responsible（実行責任）、A=Accountable（説明責任）、C=Consulted（相談対象）、I=Informed（情報共有対象）</p>
+</div>
+</section>
+</section>
+<section id="id4">
+<h2>変更管理プロセス<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<section id="id5">
+<h3>変更管理のフレームワーク<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">自動化コンテンツの変更は以下のプロセスで管理します：</div>
+</div>
+<pre  class="mermaid">
+        graph TD
+    A[変更要求] --&gt; B[影響分析]
+    B --&gt; C[変更承認]
+    C --&gt; D[開発・テスト]
+    D --&gt; E[ステージング検証]
+    E --&gt; F[本番適用]
+    F --&gt; G[事後レビュー]
+    G --&gt; H[知識ベース更新]
+    </pre><p><strong>各ステップの詳細</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>変更要求</strong>: 変更の背景、目的、期待効果を明確化</p></li>
+<li><p><strong>影響分析</strong>: 技術的影響、運用への影響、リスク評価</p></li>
+<li><p><strong>変更承認</strong>: 承認基準に基づく判定、優先度設定</p></li>
+<li><p><strong>開発・テスト</strong>: 実装、単体テスト、コードレビュー</p></li>
+<li><p><strong>ステージング検証</strong>: 本番同等環境での統合テスト</p></li>
+<li><p><strong>本番適用</strong>: 段階的適用、ロールバック準備</p></li>
+<li><p><strong>事後レビュー</strong>: 結果評価、教訓の抽出</p></li>
+<li><p><strong>知識ベース更新</strong>: ドキュメント更新、ナレッジ共有</p></li>
+</ol>
+</section>
+<section id="id6">
+<h3>変更カテゴリと承認プロセス<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">変更の影響度に応じて承認プロセスを分類します：</div>
+</div>
+<table class="docutils align-default" id="id24">
+<caption><span class="caption-text">変更カテゴリ別承認プロセス</span><a class="headerlink" href="#id24" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>カテゴリ</p></th>
+<th class="head"><p>定義</p></th>
+<th class="head"><p>承認者</p></th>
+<th class="head"><p>承認期間</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>緊急変更</strong></p></td>
+<td><p>緊急度の高い障害対応</p></td>
+<td><p>ワークスペース管理者</p></td>
+<td><p>即座</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>標準変更</strong></p></td>
+<td><p>定型的な変更作業</p></td>
+<td><p>自動承認（事前承認済み）</p></td>
+<td><p>なし</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>通常変更</strong></p></td>
+<td><p>一般的な改善・機能追加</p></td>
+<td><p>変更委員会</p></td>
+<td><p>1週間</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>重要変更</strong></p></td>
+<td><p>高影響度の変更</p></td>
+<td><p>変更委員会 + 上位管理者</p></td>
+<td><p>2週間</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id7">
+<h2>品質管理とテスト戦略<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
+<section id="id8">
+<h3>多段階テスト戦略<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">自動化の品質を保証するため、以下の多段階テストを実施します：</div>
+</div>
+<p><strong>1. 開発段階のテスト</strong></p>
+<div class="literal-block-wrapper docutils container" id="id25">
+<div class="code-block-caption"><span class="caption-text">開発段階テストの例</span><a class="headerlink" href="#id25" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">development_tests</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;構文チェック&quot;</span>
+<span class="w">    </span><span class="nt">tasks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ansible-playbook --syntax-check</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ansible-lint playbook.yml</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yamllint playbook.yml</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;静的解析&quot;</span>
+<span class="w">    </span><span class="nt">tasks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">security_scan</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playbook.yml</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">dependency_check</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requirements.yml</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">best_practice_check</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playbook.yml</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;単体テスト&quot;</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;test_vm&quot;</span>
+<span class="w">    </span><span class="nt">tasks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run_playbook</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playbook.yml</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">verify_results</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test_cases.yml</span>
+</pre></div>
+</div>
+</div>
+<p><strong>2. 統合段階のテスト</strong></p>
+<div class="literal-block-wrapper docutils container" id="id26">
+<div class="code-block-caption"><span class="caption-text">統合テストの例</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">integration_tests</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Movement結合テスト&quot;</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;integration&quot;</span>
+<span class="w">    </span><span class="nt">test_scenarios</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scenario</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;正常系フルシナリオ&quot;</span>
+<span class="w">        </span><span class="nt">movements</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;setup&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;configure&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;deploy&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scenario</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;異常系リカバリシナリオ&quot;</span>
+<span class="w">        </span><span class="nt">inject_failures</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;network_error&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;disk_full&quot;</span><span class="p p-Indicator">]</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Conductor結合テスト&quot;</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;integration&quot;</span>
+<span class="w">    </span><span class="nt">test_workflows</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">workflow</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;full_deployment&quot;</span>
+<span class="w">        </span><span class="nt">parallel_execution</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">workflow</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;rollback_scenario&quot;</span>
+<span class="w">        </span><span class="nt">failure_simulation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+</div>
+<p><strong>3. 本番準備段階のテスト</strong></p>
+<div class="literal-block-wrapper docutils container" id="id27">
+<div class="code-block-caption"><span class="caption-text">本番準備テストの例</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">production_readiness_tests</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;性能テスト&quot;</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;performance&quot;</span>
+<span class="w">    </span><span class="nt">metrics</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">execution_time</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;</span><span class="nv"> </span><span class="s">30min&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">resource_usage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;</span><span class="nv"> </span><span class="s">80%&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">success_rate</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&gt;</span><span class="nv"> </span><span class="s">99%&quot;</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;障害耐性テスト&quot;</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;chaos&quot;</span>
+<span class="w">    </span><span class="nt">chaos_tests</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">network_partition</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">high_cpu_load</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">memory_exhaustion</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;セキュリティテスト&quot;</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;security&quot;</span>
+<span class="w">    </span><span class="nt">security_tests</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vulnerability_scan</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">penetration_test</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">compliance_check</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id9">
+<h3>自動化されたテストパイプライン<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">CI/CDパイプラインと連携したテスト自動化を実装します：</div>
+</div>
+<pre  class="mermaid">
+        graph LR
+    A[コード変更] --&gt; B[自動テスト実行]
+    B --&gt; C[品質ゲート判定]
+    C --&gt; D[ステージング配布]
+    D --&gt; E[統合テスト実行]
+    E --&gt; F[本番配布承認]
+    F --&gt; G[本番配布]
+    </pre></section>
+</section>
+<section id="id10">
+<h2>監視とメトリクス<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h2>
+<section id="id11">
+<h3>包括的な監視戦略<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">自動化基盤の健全性を継続的に監視します：</div>
+</div>
+<p><strong>1. 技術的メトリクス</strong></p>
+<table class="docutils align-default" id="id28">
+<caption><span class="caption-text">技術的監視項目</span><a class="headerlink" href="#id28" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 35.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>カテゴリ</p></th>
+<th class="head"><p>監視項目</p></th>
+<th class="head"><p>閾値例</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>可用性</strong></p></td>
+<td><p>Exastro システム稼働率</p></td>
+<td><p>&gt; 99.5%</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>パフォーマンス</strong></p></td>
+<td><p>Movement平均実行時間</p></td>
+<td><p>&lt; 目標時間の120%</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>信頼性</strong></p></td>
+<td><p>自動化成功率</p></td>
+<td><p>&gt; 95%</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>リソース</strong></p></td>
+<td><p>CPU/メモリ使用率</p></td>
+<td><p>&lt; 80%</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. ビジネスメトリクス</strong></p>
+<table class="docutils align-default" id="id29">
+<caption><span class="caption-text">ビジネス監視項目</span><a class="headerlink" href="#id29" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 35.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>カテゴリ</p></th>
+<th class="head"><p>監視項目</p></th>
+<th class="head"><p>目標値例</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>効率化</strong></p></td>
+<td><p>作業時間削減率</p></td>
+<td><p>&gt; 50%</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>品質向上</strong></p></td>
+<td><p>人的エラー削減率</p></td>
+<td><p>&gt; 80%</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>コスト削減</strong></p></td>
+<td><p>運用コスト削減額</p></td>
+<td><p>目標値以上</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>満足度</strong></p></td>
+<td><p>利用者満足度</p></td>
+<td><p>&gt; 4.0/5.0</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id12">
+<h3>アラートとエスカレーション<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">問題の早期発見と適切な対応のためのアラート体系を構築します：</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id30">
+<div class="code-block-caption"><span class="caption-text">アラート設定例</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">alert_rules</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;自動化失敗率高&quot;</span>
+<span class="w">    </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;failure_rate</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">10%</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">1hour&quot;</span>
+<span class="w">    </span><span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;warning&quot;</span>
+<span class="w">    </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;automation_team&quot;</span><span class="p p-Indicator">]</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;システム応答なし&quot;</span>
+<span class="w">    </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;system_unavailable</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">5min&quot;</span>
+<span class="w">    </span><span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;critical&quot;</span>
+<span class="w">    </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;platform_team&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;manager&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">escalation</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">delay</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;15min&quot;</span>
+<span class="w">        </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;on_call_engineer&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">delay</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;30min&quot;</span>
+<span class="w">        </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;management&quot;</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="id13">
+<h2>継続的改善プロセス<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h2>
+<section id="id14">
+<h3>改善サイクルの運用<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">PDCA サイクルに基づく継続的改善を実施します：</div>
+</div>
+<pre  class="mermaid">
+        graph TD
+    A[Plan: 改善計画策定] --&gt; B[Do: 改善実施]
+    B --&gt; C[Check: 効果測定]
+    C --&gt; D[Act: 標準化・展開]
+    D --&gt; A
+
+    A1[現状分析] --&gt; A
+    A2[目標設定] --&gt; A
+    A3[施策立案] --&gt; A
+
+    B --&gt; B1[試験実施]
+    B --&gt; B2[効果検証]
+
+    C --&gt; C1[データ収集]
+    C --&gt; C2[評価分析]
+
+    D --&gt; D1[ベストプラクティス化]
+    D --&gt; D2[水平展開]
+    </pre><p><strong>改善のアプローチ</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>データ駆動型改善</strong></p>
+<ul class="simple">
+<li><p>メトリクスに基づく問題発見</p></li>
+<li><p>根本原因分析の実施</p></li>
+<li><p>効果測定による検証</p></li>
+</ul>
+</li>
+<li><p><strong>ユーザフィードバック</strong></p>
+<ul class="simple">
+<li><p>定期的な満足度調査</p></li>
+<li><p>改善要望の収集</p></li>
+<li><p>ユーザ参加型の改善活動</p></li>
+</ul>
+</li>
+<li><p><strong>技術トレンド対応</strong></p>
+<ul class="simple">
+<li><p>新技術の調査・検証</p></li>
+<li><p>ベストプラクティスの取り込み</p></li>
+<li><p>業界標準への適合</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="id15">
+<h2>ナレッジマネジメント<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h2>
+<section id="id16">
+<h3>知識の体系化と共有<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">自動化に関する知識を体系的に管理・共有します：</div>
+</div>
+<p><strong>1. ドキュメント体系</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>知識ベース/
+├── 標準・ガイドライン/
+│   ├── 設計標準
+│   ├── コーディング規約
+│   └── 運用手順
+├── 技術情報/
+│   ├── アーキテクチャ設計書
+│   ├── 実装ガイド
+│   └── トラブルシューティング
+├── 事例・パターン/
+│   ├── 成功事例
+│   ├── 失敗事例
+│   └── 設計パターン
+└── 教育・トレーニング/
+    ├── 基礎講座
+    ├── 実践演習
+    └── 認定プログラム
+</pre></div>
+</div>
+<p><strong>2. 知識共有の仕組み</strong></p>
+<table class="docutils align-default" id="id31">
+<caption><span class="caption-text">知識共有活動</span><a class="headerlink" href="#id31" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 35.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>活動</p></th>
+<th class="head"><p>頻度</p></th>
+<th class="head"><p>内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>技術勉強会</strong></p></td>
+<td><p>月次</p></td>
+<td><p>新技術紹介、事例共有</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>レトロスペクティブ</strong></p></td>
+<td><p>スプリント毎</p></td>
+<td><p>改善点の抽出と対策</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>コードレビュー</strong></p></td>
+<td><p>随時</p></td>
+<td><p>品質向上と知識伝達</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>メンタリング</strong></p></td>
+<td><p>継続的</p></td>
+<td><p>スキル向上支援</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id17">
+<h2>災害復旧と事業継続<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h2>
+<section id="id18">
+<h3>バックアップ戦略<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">自動化基盤の可用性を保つためのバックアップ戦略を策定します：</div>
+</div>
+<p><strong>1. データバックアップ</strong></p>
+<div class="literal-block-wrapper docutils container" id="id32">
+<div class="code-block-caption"><span class="caption-text">バックアップ戦略例</span><a class="headerlink" href="#id32" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">backup_strategy</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">configuration_data</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">frequency</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;daily&quot;</span>
+<span class="w">    </span><span class="nt">retention</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;30days&quot;</span>
+<span class="w">    </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;remote_storage&quot;</span>
+<span class="w">    </span><span class="nt">encryption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="w">  </span><span class="nt">playbook_repository</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">frequency</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;real_time&quot;</span>
+<span class="w">    </span><span class="nt">retention</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;unlimited&quot;</span>
+<span class="w">    </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;primary_git&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;backup_git&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">verification</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;automated_restore_test&quot;</span>
+
+<span class="w">  </span><span class="nt">execution_history</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">frequency</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;daily&quot;</span>
+<span class="w">    </span><span class="nt">retention</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1year&quot;</span>
+<span class="w">    </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;archive_storage&quot;</span>
+<span class="w">    </span><span class="nt">compression</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+</div>
+<p><strong>2. 災害復旧手順</strong></p>
+<div class="literal-block-wrapper docutils container" id="id33">
+<div class="code-block-caption"><span class="caption-text">災害復旧手順例</span><a class="headerlink" href="#id33" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">disaster_recovery</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rto</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4hours&quot;</span><span class="w">  </span><span class="c1"># Recovery Time Objective</span>
+<span class="w">  </span><span class="nt">rpo</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1hour&quot;</span><span class="w">   </span><span class="c1"># Recovery Point Objective</span>
+
+<span class="w">  </span><span class="nt">procedures</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;障害状況の確認&quot;</span>
+<span class="w">      </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform_team&quot;</span>
+<span class="w">      </span><span class="nt">max_time</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;30min&quot;</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;バックアップからの復旧&quot;</span>
+<span class="w">      </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform_team&quot;</span>
+<span class="w">      </span><span class="nt">max_time</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2hours&quot;</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;動作確認とテスト&quot;</span>
+<span class="w">      </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;automation_team&quot;</span>
+<span class="w">      </span><span class="nt">max_time</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1hour&quot;</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;サービス再開&quot;</span>
+<span class="w">      </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;service_owner&quot;</span>
+<span class="w">      </span><span class="nt">max_time</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;30min&quot;</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="id19">
+<h2>コンプライアンス管理<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h2>
+<section id="id20">
+<h3>セキュリティとコンプライアンス<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">自動化基盤のセキュリティとコンプライアンス要件を管理します：</div>
+</div>
+<p><strong>1. アクセス制御</strong></p>
+<table class="docutils align-default" id="id34">
+<caption><span class="caption-text">アクセス制御マトリクス</span><a class="headerlink" href="#id34" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>リソース</p></th>
+<th class="head"><p>閲覧</p></th>
+<th class="head"><p>実行</p></th>
+<th class="head"><p>管理</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>パラメータシート</strong></p></td>
+<td><p>運用者</p></td>
+<td><p>運用者</p></td>
+<td><p>ワークスペース管理者</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Movement</strong></p></td>
+<td><p>全ユーザ</p></td>
+<td><p>運用者</p></td>
+<td><p>自動化エンジニア</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>実行履歴</strong></p></td>
+<td><p>実行者・管理者</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>ワークスペース管理者</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>システム設定</strong></p></td>
+<td><p>管理者</p></td>
+<td><p>管理者</p></td>
+<td><p>プラットフォーム管理者</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. 監査とコンプライアンス</strong></p>
+<div class="literal-block-wrapper docutils container" id="id35">
+<div class="code-block-caption"><span class="caption-text">監査項目例</span><a class="headerlink" href="#id35" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">audit_requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">access_logging</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">login_events</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">permission_changes</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sensitive_data_access</span>
+
+<span class="w">  </span><span class="nt">change_tracking</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">configuration_changes</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playbook_modifications</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user_management_changes</span>
+
+<span class="w">  </span><span class="nt">compliance_checks</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">security_policy_compliance</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data_retention_compliance</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">access_control_compliance</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="id21">
+<h2>次のステップ<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">運用のベストプラクティスを理解したら、最後に <a class="reference internal" href="../examples/index.html"><span class="doc">実践事例とパターン</span></a> で実際の導入事例を学習しましょう。</div>
+<div class="line">事例を通じて、これまで学習した内容が実際の環境でどのように適用されるかを確認できます。</div>
+</div>
+</section>
+</section>
+
+
+</div>
+
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>
