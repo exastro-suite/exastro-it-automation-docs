@@ -11,3 +11,4 @@ sphinx-toolbox
 sphinx-intl
 sphinxcontrib-googleanalytics
 myst_parser
+sphinxcontrib-mermaid

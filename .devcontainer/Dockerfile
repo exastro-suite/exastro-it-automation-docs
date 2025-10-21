@@ -22,7 +22,7 @@ RUN apt-get install -y ca-certificates fonts-ipafont plantuml lsof \
 
 RUN set -eux && \
     python -m pip install --proxy=$HTTP_PROXY --upgrade pip && \
-    python -m pip install --proxy=$HTTP_PROXY sphinx sphinx-autobuild rstcheck sphinxcontrib-blockdiag sphinxcontrib-blockdiag sphinxcontrib-seqdiag sphinxcontrib-actdiag sphinxcontrib-nwdiag sphinx-copybutton sphinx-tabs sphinx-toolbox watchfiles sphinxcontrib-googleanalytics && \
+    python -m pip install --proxy=$HTTP_PROXY sphinx sphinx-autobuild rstcheck sphinxcontrib-blockdiag sphinxcontrib-blockdiag sphinxcontrib-seqdiag sphinxcontrib-actdiag sphinxcontrib-nwdiag sphinx-copybutton sphinx-tabs sphinx-toolbox watchfiles sphinxcontrib-googleanalytics sphinxcontrib-mermaid && \
     python -m pip install --proxy=$HTTP_PROXY myst-parser doc8 rstcheck[sphinx]
 
 RUN curl -kL https://github.com/jgm/pandoc/releases/download/2.19.2/pandoc-2.19.2-1-amd64.deb \

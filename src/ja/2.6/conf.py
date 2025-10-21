@@ -41,7 +41,8 @@ extensions = [
     'sphinx_toolbox.collapse',
     'sphinx.ext.todo',
     'sphinxcontrib.googleanalytics',
-    'myst_parser'
+    'myst_parser',
+    'sphinxcontrib.mermaid'
 ]
 
 # Fontpath for blockdiag (truetype font)
