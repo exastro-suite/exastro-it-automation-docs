@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>自動化インテグレーションガイド &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/learn/automation_guide/index.html" selected>current</option>
+              <option value="../../../../ja/2.6/learn/automation_guide/index.html" selected>2.6(current)</option>
+              <option value="../../../../ja/2.5/learn/automation_guide/index.html">2.5</option>
+              <option value="../../../../ja/2.4/learn/automation_guide/index.html">2.4</option>
+              <option value="../../../../ja/2.3/learn/automation_guide/index.html">2.3</option>
+              <option value="../../../../ja/2.2/learn/automation_guide/index.html">2.2</option>
+              <option value="../../../../ja/2.1/learn/automation_guide/index.html">2.1</option>
+              <option value="../../../../ja/2.0/learn/automation_guide/index.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/learn/automation_guide/index.html" selected>日本語</option>
+              <option value="../../../../en/2.6/learn/automation_guide/index.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/index.html">マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    
+    <li>自動化インテグレーションガイド</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="id1">
+<h1>自動化インテグレーションガイド<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<div class="line-block">
+<div class="line">本ガイドでは、Exastro IT Automationを使用して効果的な自動化の仕組みを作成するための体系的なアプローチを学習します。</div>
+<div class="line">単発の作業を実行するのではなく、継続的に運用可能で拡張性のある自動化基盤の構築を目的としています。</div>
+</div>
+<section id="id2">
+<h2>概要<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">IT運用の自動化において、一度限りの作業実行と継続的な自動化基盤の構築は大きく異なります。</div>
+<div class="line">このガイドでは、以下の要素を組み合わせた持続可能な自動化の仕組み作りを学習します：</div>
+</div>
+<ul class="simple">
+<li><p><strong>標準化された作業手順の設計</strong></p></li>
+<li><p><strong>再利用可能なコンポーネントの作成</strong></p></li>
+<li><p><strong>継続的な改善プロセスの構築</strong></p></li>
+<li><p><strong>チーム全体での知識共有の仕組み</strong></p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>学習の流れ<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本ガイドは以下の順序で段階的に学習を進めることで、実践的な自動化スキルを身につけられるよう構成されています。</div>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts/index.html">基本概念と設計思想</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="concepts/index.html#id2">自動化の段階的発展</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/index.html#exastro">Exastroによる自動化の特徴</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/index.html#id6">自動化設計の基本原則</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/index.html#id10">自動化対象の分析手法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/index.html#id12">成熟度モデルの活用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/index.html#id13">次のステップ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="design/index.html">自動化の設計方法論</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="design/index.html#id2">設計プロセスの全体像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design/index.html#id3">要件分析</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design/index.html#id6">アーキテクチャ設計</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design/index.html#id9">パラメータ設計</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design/index.html#movement">Movement設計</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design/index.html#id18">エラーハンドリング設計</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design/index.html#id21">テスト設計</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design/index.html#id24">次のステップ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="implementation/index.html">実装のベストプラクティス</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="implementation/index.html#id2">実装の全体的なアプローチ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementation/index.html#id4">パラメータシートの実装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementation/index.html#playbook">Playbook実装のベストプラクティス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementation/index.html#movement">Movement実装のパターン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementation/index.html#conductor">Conductor実装の高度なテクニック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementation/index.html#id13">テスト実装の自動化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementation/index.html#id15">継続的改善の仕組み</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementation/index.html#id18">次のステップ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="operations/index.html">運用とガバナンス</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="operations/index.html#id2">運用体制の構築</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations/index.html#id4">変更管理プロセス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations/index.html#id7">品質管理とテスト戦略</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations/index.html#id10">監視とメトリクス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations/index.html#id13">継続的改善プロセス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations/index.html#id15">ナレッジマネジメント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations/index.html#id17">災害復旧と事業継続</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations/index.html#id19">コンプライアンス管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations/index.html#id21">次のステップ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples/index.html">実践事例とパターン</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/index.html#web">事例1: Webアプリケーション基盤の自動化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/index.html#id7">事例2: 大規模インフラの統合管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/index.html#id12">事例3: 金融機関のセキュリティ強化自動化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/index.html#id17">事例4: レガシーシステムからの段階的移行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/index.html#id22">パラメータシート設計のパターンとアンチパターン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/index.html#id27">適用時の考慮事項</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/index.html#id31">まとめ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/index.html#id32">次のステップ</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="id4">
+<h2>対象読者<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">このガイドは以下のような方を対象としています：</div>
+</div>
+<ul class="simple">
+<li><p>IT運用チームのリーダーやアーキテクト</p></li>
+<li><p>自動化基盤の設計・構築を担当する技術者</p></li>
+<li><p>Exastroの基本操作を理解しており、より高度な活用を目指す方</p></li>
+<li><p>組織全体の運用効率化を推進する立場の方</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>前提条件<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本ガイドを効果的に活用するために、以下の前提知識があることを推奨します：</div>
+</div>
+<ol class="arabic simple">
+<li><p><strong>Exastroの基本操作</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../quickstart/index.html"><span class="doc">クイックスタート</span></a> を完了していること</p></li>
+<li><p>ワークスペース、Movement、パラメータシートの基本概念を理解していること</p></li>
+</ul>
+</li>
+<li><p><strong>IT運用の基礎知識</strong></p>
+<ul class="simple">
+<li><p>サーバ構築・運用の基本的な流れを理解していること</p></li>
+<li><p>構成管理ツール（Ansible等）の基本的な使用経験</p></li>
+</ul>
+</li>
+<li><p><strong>運用環境</strong></p>
+<ul class="simple">
+<li><p>作業対象となるサーバまたは検証環境があること</p></li>
+<li><p>Exastroワークスペースへの管理者権限があること</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id6">
+<h2>学習成果<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">このガイドを完了することで、以下のスキルを習得できます：</div>
+</div>
+<ol class="arabic simple">
+<li><p><strong>設計スキル</strong></p>
+<ul class="simple">
+<li><p>自動化対象の適切な分析と設計手法</p></li>
+<li><p>スケーラブルなパラメータ設計</p></li>
+<li><p>保守性を考慮したPlaybook設計</p></li>
+</ul>
+</li>
+<li><p><strong>実装スキル</strong></p>
+<ul class="simple">
+<li><p>再利用可能なコンポーネントの作成</p></li>
+<li><p>エラーハンドリングとログ設計</p></li>
+<li><p>テスト手法の実装</p></li>
+</ul>
+</li>
+<li><p><strong>運用スキル</strong></p>
+<ul class="simple">
+<li><p>継続的改善プロセスの構築</p></li>
+<li><p>監視・メトリクス収集の仕組み</p></li>
+<li><p>チーム運用のベストプラクティス</p></li>
+</ul>
+</li>
+<li><p><strong>組織スキル</strong></p>
+<ul class="simple">
+<li><p>知識共有とドキュメント化の手法</p></li>
+<li><p>ガバナンスと品質管理</p></li>
+<li><p>教育・トレーニング体系の構築</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id7">
+<h2>次のステップ<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">まずは <a class="reference internal" href="concepts/index.html"><span class="doc">基本概念と設計思想</span></a> から開始し、自動化の基本概念と設計思想を理解することから始めましょう。</div>
+<div class="line">各章は独立して学習することも可能ですが、順序に従って進めることで体系的な理解が得られます。</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">本ガイドの内容は実際の運用環境での経験に基づいていますが、組織の要件や環境に応じて適切にカスタマイズして活用してください。</div>
+<div class="line">また、Exastroの機能アップデートに伴い、一部の手順や推奨事項が変更される可能性があります。</div>
+</div>
+</div>
+</section>
+</section>
+
+
+</div>
+
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>
