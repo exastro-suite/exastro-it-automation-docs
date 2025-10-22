@@ -298,24 +298,6 @@ OASE管理
    | 詳細は :ref:`about_decode` を参照してください。
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .. _notification_template_common:
 
 通知テンプレート（共通）
