@@ -184,11 +184,22 @@ OASE管理
       |                                    | ・メールサーバの場合はホスト名を入力します。           |              |              |                 |
       |                                    |                                                        |              |              |                 |
       |                                    | ・APIの場合はURLを入力します。                         |              |              |                 |
+      |                                    |                                                        |              |              |                 | 
+      |                                    | ・Jinja2形式で予約変数を使用できます。                 |              |              |                 |
+      |                                    |                                                        |              |              |                 |      
+      |                                    | 　使用可能な予約変数の詳細は\                          |              |              |                 |
+      |                                    | :ref:`reserved-variables` を参照してください。         |              |              |                 |
       +------------------------------------+--------------------------------------------------------+--------------+--------------+-----------------+
       | ポート                             | イベント収集対象のポートを入力します。                 | ー           | 手動入力     | 0～65535        |
       +-----------------+------------------+--------------------------------------------------------+--------------+--------------+-----------------+
       | 認証情報        | リクエスト\      | リクエストヘッダーを入力します。                       | ー           | 手動入力     | 最大長4000バイト|
-      |                 | ヘッダー         |                                                        |              |              |                 |
+      |                 | ヘッダー         |                                                        |              |              |                 | 
+      |                 |                  | ・JSON形式で入力します。                               |              |              |                 |
+      |                 |                  |                                                        |              |              |                 |      
+      |                 |                  | ・Jinja2形式で予約変数を使用できます。                 |              |              |                 |
+      |                 |                  |                                                        |              |              |                 |      
+      |                 |                  | 　使用可能な予約変数の詳細は\                          |              |              |                 |
+      |                 |                  | :ref:`reserved-variables` を参照してください。         |              |              |                 |
       |                 +------------------+--------------------------------------------------------+--------------+--------------+-----------------+
       |                 | プロキシ         | イベント収集対象のプロキシURIを入力します。            | ー           | 手動入力     | 最大長255バイト |
       |                 +------------------+--------------------------------------------------------+--------------+--------------+-----------------+
@@ -204,8 +215,9 @@ OASE管理
       |                 |                  |                                                        |              |              |                 |
       |                 |                  | デフォルトでINBOXを参照します。                        |              |              |                 |
       +-----------------+------------------+--------------------------------------------------------+--------------+--------------+-----------------+
-      | パラメータ                         | JSON形式で入力します。                                 | ー           | 手動入力     | 最大長255バイト |
+      | パラメータ                         | ・JSON形式で入力します。                               | ー           | 手動入力     | 最大長255バイト |
       |                                    |                                                        |              |              |                 |
+      |                                    | ・Jinja2形式で予約変数を使用できます。                 |              |              |                 |
       |                                    |                                                        |              |              |                 |
       |                                    | ・リクエストメソッドがGETの場合、\                     |              |              |                 |
       |                                    | クエリパラメータ(接続先に追加される、"?"以降の値）\    |              |              |                 |
@@ -214,13 +226,8 @@ OASE管理
       |                                    | ・リクエストメソッドがPOSTの場、\                      |              |              |                 |
       |                                    | リクエストのペイロードとして使用されます。             |              |              |                 |
       |                                    |                                                        |              |              |                 |
-      |                                    |                                                        |              |              |                 |
-      |                                    | ・2.4.2以降のバージョンでは、下記の予約変数を\         |              |              |                 |
-      |                                    | イベントの前回取得日(時)として設定することができます。 |              |              |                 |
-      |                                    |                                                        |              |              |                 |
-      |                                    | - EXASTRO_LAST_FETCHED_YY_MM_DD (例)2024/01/10 01:23:45|              |              |                 |
-      |                                    | - EXASTRO_LAST_FETCHED_DD_MM_YY (例)10/01/24 01:23:45  |              |              |                 |
-      |                                    | - EXASTRO_LAST_FETCHED_TIMESTAMP (例)1704817434        |              |              |                 |
+      |                                    | ・使用可能な予約変数の詳細は\                          |              |              |                 |
+      |                                    | :ref:`reserved-variables` を参照してください。         |              |              |                 |
       +------------------------------------+--------------------------------------------------------+--------------+--------------+-----------------+
       | レスポンスキー                     | レスポンスのペイロードから、OASEのイベントとして\      | ー           | 手動入力     | 最大長255バイト |
       |                                    | 受け取るプロパティの、親となるキーを指定します。       |              |              | ※3              |
@@ -260,6 +267,7 @@ OASE管理
 
 | ※2 接続方式・認証情報・リクエストメソッドについて、必要な組み合わせは以下のとおりです。
 
+
 .. list-table::
    :widths: 1 1 1
    :header-rows: 1
@@ -291,6 +299,7 @@ OASE管理
 .. warning::
    | 収集先がメールの場合、文字コードの種類によりデコードできない文字を省いて収集イベントを保存する場合があります。
    | 詳細は :ref:`about_decode` を参照してください。
+
 
 .. _notification_template_common:
 
@@ -1213,3 +1222,233 @@ Grafana
      | 認証トークンがクリップボードに貼り付けられます。
 
   9. | クリップボードの認証トークンを、 :menuselection:`OASE管理 --> イベント収集` の :menuselection:`認証トークン` に貼り付けます。
+
+
+
+.. _reserved-variables:
+
+
+利用可能な予約変数一覧
+------------------------------
+| :menuselection:`OASE管理 --> イベント収集` では、以下の項目で予約変数が使用可能です。
+
+- :dfn:`接続先`
+- :dfn:`リクエストヘッダー` 
+- :dfn:`パラメータ`
+
+
+予約変数
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table:: 
+   :widths: 40 30 30
+   :class: colwidths-given
+   :header-rows: 1
+
+   * - 変数名
+     - 説明
+     - 出力例
+   * - EXASTRO_LAST_FETCHED_TIMESTAMP
+     - 前回取得時日時（UNIXタイムスタンプ）
+     - 1704817434
+   * - EXASTRO_LAST_FETCHED_DD_MM_YY
+     - 前回取得時日時（DD/MM/YY HH:MM:SS形式）
+     - 10/01/24 01:23:45
+   * - EXASTRO_LAST_FETCHED_YY_MM_DD
+     - 前回取得時日時（YYYY/MM/DD HH:MM:SS形式）
+     - 2024/01/10 01:23:45
+   * - EXASTRO_LAST_FETCHED_EVENT_IS_EXIST
+     - 前回取得イベントの存在フラグ
+     - True、False
+   * - EXASTRO_LAST_FETCHED_EVENT
+     - 前回取得イベントのrawデータのオブジェクト
+     - | (例: Zabbixの場合)
+       | {"eventid": "xxx", "souce": "xxx", "object": ...}
+       | 使用方法については :ref:`oase_last_fetched_event` を参照 
+   * - EXASTRO_EVENT_COLLECTION_SETTING
+     - イベント収集設定の項目のオブジェクト
+     - :ref:`oase_collectiong_setting` を参照
+   * - EXASTRO_LAST_FETCHED_TIME
+     - | 前回取得時日時（YYYY-MM-DD HH:MM:SS形式）
+       | ※文字列orオブジェクト
+     - 2025-09-19 10:45:34
+   * - EXASTRO_CURRENT_TIME
+     - | 現在時刻（YYYY-MM-DD HH:MM:SS形式）
+       | ※文字列orオブジェクト
+     - 2025-09-19 10:45:34
+
+.. _oase_last_fetched_event:
+
+EXASTRO_LAST_FETCHED_EVENTで参照できる項目
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+| 前回取得されたイベント情報から動的に内容を参照できます。
+| JMESPath形式で指定可能です。
+
+**〇使用例**
+
+| 以下は前回取得されたイベントデータの例です。
+
+.. code-block:: json
+
+   {
+       "eventid": "12345",
+       "clock": "1704817434",
+       "source": "0",
+       "object": "0",
+       "objectid": "10001",
+       "value": "1"
+   }
+
+| このデータから clock 項目を取得し、Zabbix APIの event.get メソッドのパラメータとして設定する例を以下に示します。
+
+.. code-block:: jinja
+
+  {
+      "jsonrpc": "2.0",
+      "method": "event.get", 
+      "params": {
+          "output": "extend",
+          "time_from": "{{ EXASTRO_LAST_FETCHED_EVENT.clock }}",
+      },
+      "id": 1
+  }
+
+.. _oase_collectiong_setting:
+
+EXASTRO_EVENT_COLLECTION_SETTINGで参照できる項目一覧
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+| :ref:`agent` に登録された情報を予約変数として参照することができます。
+| 以下は、使用可能な項目と対応する変数名の一覧です。
+
+.. list-table:: 
+   :widths: 30 40
+   :header-rows: 1
+
+   * - 項目名
+     - 変数名.属性
+   * - イベント収集設定名
+     - EXASTRO_EVENT_COLLECTION_SETTING.EVENT_COLLECTION_SETTINGS_NAME
+   * - 接続先
+     - EXASTRO_EVENT_COLLECTION_SETTING.URL
+   * - ポート
+     - EXASTRO_EVENT_COLLECTION_SETTING.PORT
+   * - リクエストヘッダー
+     - EXASTRO_EVENT_COLLECTION_SETTING.REQUEST_HEADER
+   * - プロキシ
+     - EXASTRO_EVENT_COLLECTION_SETTING.PROXY
+   * - 認証トークン
+     - EXASTRO_EVENT_COLLECTION_SETTING.AUTH_TOKEN
+   * - ユーザー名
+     - EXASTRO_EVENT_COLLECTION_SETTING.USERNAME
+   * - パスワード
+     - EXASTRO_EVENT_COLLECTION_SETTING.PASSWORD
+   * - メールボックス名
+     - EXASTRO_EVENT_COLLECTION_SETTING.MAILBOXNAME
+   * - パラメータ
+     - EXASTRO_EVENT_COLLECTION_SETTING.PARAMETER
+   * - レスポンスキー
+     - EXASTRO_EVENT_COLLECTION_SETTING.RESPONSE_KEY
+   * - レスポンスリストフラグ
+     - EXASTRO_EVENT_COLLECTION_SETTING.RESPONSE_LIST_FLAG
+   * - イベントIDキー
+     - EXASTRO_EVENT_COLLECTION_SETTING.EVENT_ID_KEY
+   * - TTL
+     - EXASTRO_EVENT_COLLECTION_SETTING.TTL
+
+設定例
+^^^^^^^^
+
+| 各設定箇所での予約変数の使用例を示します。
+
+接続先での使用例
+"""""""""""""""""""""""""""
+| 接続先URLに認証トークンを埋め込み、URLパラメータとして渡す。
+
+.. figure:: /images/ja/oase/oase_management/oase_connectexample_v2-7.png
+   :width: 800px
+   :alt: OASE接続先例
+
+.. code-block:: jinja
+
+    http://monitor.example.com/api/org_name/workspaces/ws_name/ita/menu/event_collection/filter?token={{ EXASTRO_EVENT_COLLECTION_SETTING.AUTH_TOKEN | urlencode() }}
+
+リクエストヘッダーでの使用例
+""""""""""""""""""""""""""""""""""""
+| APIのリクエストヘッダーにBearerトークンを含めて認証を行う。
+
+.. figure:: /images/ja/oase/oase_management/oase_requestexample_v2-7.png
+   :width: 800px
+   :alt: OASEリクエストヘッダー例
+
+.. code-block:: jinja
+
+    {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer {{ EXASTRO_EVENT_COLLECTION_SETTING.AUTH_TOKEN }}"
+    }
+
+パラメータでの使用例
+""""""""""""""""""""""""""""""""""""
+#. | **イベント収集時に、現在日時や前回取得日時をフィルター条件として指定**
+
+   | 現在日時を指定
+
+   .. figure:: /images/ja/oase/oase_management/oase_paramexample1_v2-7.png
+      :width: 800px
+      :alt: OASEパラメータ例1
+
+
+   .. code-block:: jinja
+       
+      {
+        "discard": { "NORMAL": "0" },
+        "last_update_date_time": {
+          "RANGE": {
+            "START": "{{ EXASTRO_CURRENT_TIME }}"
+          }
+        }
+      }
+
+   | 前回取得日時（YYYY/MM/DD形式）を指定
+
+   .. figure:: /images/ja/oase/oase_management/oase_paramexample2_v2-7.png
+      :width: 800px
+      :alt: OASEパラメータ例2
+
+   .. code-block:: jinja
+
+      {
+        "discard": { "NORMAL": "0" },
+        "last_update_date_time": {
+          "RANGE": {
+            "START": "{{ EXASTRO_LAST_FETCHED_YY_MM_DD }}"
+          }
+        }
+      }
+
+
+#. | **Zabbix連携での使用**
+   | イベント取得時の条件分岐（前回取得イベントの有無による処理の切り替え）
+   - 前回取得イベントが存在する場合　：前回取得イベントIDの次のイベントから取得
+   - 前回取得イベントが存在しない場合：前回取得時刻以降のイベントを取得
+
+   .. figure:: /images/ja/oase/oase_management/oase_paramexample3_v2-7.png
+      :width: 800px
+      :alt: OASEパラメータ例3
+
+   .. code-block:: jinja
+
+       {
+           "jsonrpc": "2.0",
+           "method": "problem.get",
+           "params": {
+               "output": "extend",
+               {% if EXASTRO_LAST_FETCHED_EVENT_IS_EXIST %}
+                 "eventid_from": "{{ EXASTRO_LAST_FETCHED_EVENT.eventid|int + 1 }}",
+               {% else %}
+                 "time_from": "{{ EXASTRO_LAST_FETCHED_TIMESTAMP }}",
+               {% endif %}
+           },
+           "auth": "{{ EXASTRO_EVENT_COLLECTION_SETTING.AUTH_TOKEN }}",
+           "id": 1
+       }
