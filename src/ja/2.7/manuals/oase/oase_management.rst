@@ -184,20 +184,20 @@ OASE管理
       |                                    | ・メールサーバの場合はホスト名を入力します。           |              |              |                 |
       |                                    |                                                        |              |              |                 |
       |                                    | ・APIの場合はURLを入力します。                         |              |              |                 |
-      |                                    |                                                        |              |              |                 | 
+      |                                    |                                                        |              |              |                 |
       |                                    | ・Jinja2形式で予約変数を使用できます。                 |              |              |                 |
-      |                                    |                                                        |              |              |                 |      
+      |                                    |                                                        |              |              |                 |
       |                                    | 　使用可能な予約変数の詳細は\                          |              |              |                 |
       |                                    | :ref:`reserved-variables` を参照してください。         |              |              |                 |
       +------------------------------------+--------------------------------------------------------+--------------+--------------+-----------------+
       | ポート                             | イベント収集対象のポートを入力します。                 | ー           | 手動入力     | 0～65535        |
       +-----------------+------------------+--------------------------------------------------------+--------------+--------------+-----------------+
       | 認証情報        | リクエスト\      | リクエストヘッダーを入力します。                       | ー           | 手動入力     | 最大長4000バイト|
-      |                 | ヘッダー         |                                                        |              |              |                 | 
+      |                 | ヘッダー         |                                                        |              |              |                 |
       |                 |                  | ・JSON形式で入力します。                               |              |              |                 |
-      |                 |                  |                                                        |              |              |                 |      
+      |                 |                  |                                                        |              |              |                 |
       |                 |                  | ・Jinja2形式で予約変数を使用できます。                 |              |              |                 |
-      |                 |                  |                                                        |              |              |                 |      
+      |                 |                  |                                                        |              |              |                 |
       |                 |                  | 　使用可能な予約変数の詳細は\                          |              |              |                 |
       |                 |                  | :ref:`reserved-variables` を参照してください。         |              |              |                 |
       |                 +------------------+--------------------------------------------------------+--------------+--------------+-----------------+
@@ -308,6 +308,11 @@ OASE管理
 
 1. | :menuselection:`OASE管理 --> 通知テンプレート（共通）` では、OASEの通知機能で使用するテンプレートをメンテナンス（閲覧/登録/更新/廃止）できます。
 
+.. tip:: | 通知テンプレートの変更について
+   | デフォルトの通知テンプレートは、利用する通知方法( :ref:`notification_entry` )に応じて内容を変更、または項目を追加してください。
+   | メール以外の通知方法を利用する場合、通知のテンプレートのフォーマット調整が必須です。
+
+
 .. figure:: /images/ja/oase/oase_management/notification_template_menu.png
    :width: 800px
    :alt: サブメニュー画面（通知テンプレート（共通））
@@ -368,8 +373,8 @@ OASE管理
      - 最大長4000バイト
 
 .. tip::
-   | デフォルトのテンプレートは、テンプレート・備考のみ更新することができ、その他の項目は更新することはできません。  
-   | また、デフォルトのテンプレートはレコードを廃止することもできません。  
+   | デフォルトのテンプレートは、テンプレート・備考のみ更新することができ、その他の項目は更新することはできません。
+   | また、デフォルトのテンプレートはレコードを廃止することもできません。
 
 | テンプレートの初期設定値は下記のとおりです。
 
@@ -1233,14 +1238,14 @@ Grafana
 | :menuselection:`OASE管理 --> イベント収集` では、以下の項目で予約変数が使用可能です。
 
 - :dfn:`接続先`
-- :dfn:`リクエストヘッダー` 
+- :dfn:`リクエストヘッダー`
 - :dfn:`パラメータ`
 
 
 予約変数
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. list-table:: 
+.. list-table::
    :widths: 40 30 30
    :class: colwidths-given
    :header-rows: 1
@@ -1264,7 +1269,7 @@ Grafana
      - 前回取得イベントのrawデータのオブジェクト
      - | (例: Zabbixの場合)
        | {"eventid": "xxx", "souce": "xxx", "object": ...}
-       | 使用方法については :ref:`oase_last_fetched_event` を参照 
+       | 使用方法については :ref:`oase_last_fetched_event` を参照
    * - EXASTRO_EVENT_COLLECTION_SETTING
      - イベント収集設定の項目のオブジェクト
      - :ref:`oase_collectiong_setting` を参照
@@ -1305,7 +1310,7 @@ EXASTRO_LAST_FETCHED_EVENTで参照できる項目
 
   {
       "jsonrpc": "2.0",
-      "method": "event.get", 
+      "method": "event.get",
       "params": {
           "output": "extend",
           "time_from": "{{ EXASTRO_LAST_FETCHED_EVENT.clock }}",
@@ -1320,7 +1325,7 @@ EXASTRO_EVENT_COLLECTION_SETTINGで参照できる項目一覧
 | :ref:`agent` に登録された情報を予約変数として参照することができます。
 | 以下は、使用可能な項目と対応する変数名の一覧です。
 
-.. list-table:: 
+.. list-table::
    :widths: 30 40
    :header-rows: 1
 
@@ -1399,7 +1404,7 @@ EXASTRO_EVENT_COLLECTION_SETTINGで参照できる項目一覧
 
 
    .. code-block:: jinja
-       
+
       {
         "discard": { "NORMAL": "0" },
         "last_update_date_time": {
@@ -1452,3 +1457,103 @@ EXASTRO_EVENT_COLLECTION_SETTINGで参照できる項目一覧
            "auth": "{{ EXASTRO_EVENT_COLLECTION_SETTING.AUTH_TOKEN }}",
            "id": 1
        }
+
+
+.. _notification_template_sample:
+
+通知テンプレート（共通）の設定例
+----------------------------------
+
+.. _notification_template_sample_servicenow_register:
+
+ServiceNow(レコード登録)の設定例
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ServiceNow(レコード登録)を行う通知テンプレート（共通）の設定例を以下に示します。
+
+- ServiceNowのインシデントテーブルにレコード登録を行う設定例
+
+
+  | ここでは、デフォルトのテンプレートの内容から、TITLE の内容をServiceNowの short_description に、BODY に、labels, exastro_agents の内容をServiceNowの description に設定する例を示します。
+  | labels, exastro_agents の内容は、Jinjaテンプレートのループ処理を使用して、動的に設定しています。
+
+
+  - | 1.新規イベント（受信時）のテンプレート例: New(received).j2
+
+    .. code-block:: jinja
+
+       [TITLE]
+       Event Received.
+
+       [BODY]
+       {
+           "short_description": "Event Received.",
+           "description": "{% for key, value in labels.items() %}\n{{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %}",
+           "caller_id": "",
+           "impact": "2",
+           "urgency": "2",
+           "category": "Software",
+           "contact_type": "Phone",
+           "state": "1",
+           "subcategory": "Email",
+           "priority": "3",
+           "service": "Email Service"
+       }
+
+
+  - | 1.新規イベント（受信時）の通知例
+
+    .. figure:: /images/ja/oase/oase_management/snow_incident_sample_01_received.drawio.png
+      :width: 800px
+      :alt: 新規イベント（受信時）: ServiceNow(インシデント)
+
+
+  - | 2.新規イベント（統合時）のテンプレート例: New(consolidated).j2
+
+    .. code-block:: jinja
+
+       [TITLE]
+       Event Consolidated by Deduplication {% if labels._exastro_timeout == '1' %} (ttl expired) {% endif %}
+
+       [BODY]
+       {
+           "short_description": "Event Consolidated by Deduplication {% if labels._exastro_timeout == '1' %}(ttl expired){% else %} {% endif %}",
+           "description": "{% for key, value in labels.items() %}\n{{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %} , {% for key, value in exastro_agents.items() %}\n{{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %}",
+           "caller_id": "",
+           "impact": "2",
+           "urgency": "2",
+           "category": "Software",
+           "contact_type": "Phone",
+           "state": "1",
+           "subcategory": "Email",
+           "priority": "3",
+           "service": "Email Service"
+       }
+
+  - | 2.新規イベント（統合時）の通知例
+
+    .. figure:: /images/ja/oase/oase_management/snow_incident_sample_02_merged.drawio.png
+      :width: 800px
+      :alt: 新規イベント（統合時）: ServiceNow(インシデント)
+
+.. tip:: | TITLEについて
+   | ServiceNow (レコード登録) を通知方法として選択した場合、TITLE に記載した内容は使用されません。
+
+.. tip:: | BODYについて
+
+   | ServiceNow (レコード登録) を通知方法として選択した場合、BODY に記載した内容をリクエストボディとして使用します。
+
+   | そのため、BODY には、ServiceNow の REST API でレコード登録を行う際のリクエストボディの形式で記載する必要があります。
+
+   - テンプレート例はあくまで一例です。実際の運用に合わせて、適宜カスタマイズしてください。
+
+   - 使用するパラメータについては、ServiceNow の 利用するアプリケーションに応じて、 マニュアルや、REST API リファレンスを参照してください。
+
+     - `ServiceNowテーブルAPIマニュアル <https://www.servicenow.com/docs/ja-JP/bundle/washingtondc-api-reference/page/integrate/inbound-rest/concept/c_TableAPI.html>`_ 参照してください
+
+     - REST APIエクスプローラー
+
+       - `https://<instance-name>.service-now.com/$restapi.do`
+
+       -  REST APIエクスプローラーの利用については、`ServiceNowのマニュアル <https://www.servicenow.com/docs/ja-JP/bundle/washingtondc-api-reference/page/integrate/inbound-rest/task/t_GetStartedAccessExplorer.html>`_ を参照してください
+
