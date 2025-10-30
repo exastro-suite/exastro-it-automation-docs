@@ -89,6 +89,14 @@ OASE管理
 
    通知テンプレート（共通）概要
 
+| OASEの通知機能の通知テンプレートのイベント種別を以下に示します。
+
+.. figure:: /images/ja/oase/oase_management/notification_template_overview_template.drawio.png
+   :width: 800px
+   :alt: 通知テンプレートのイベント種別
+
+   通知テンプレートのイベント種別
+
 通知テンプレート（共通）利用手順
 =================================
 
