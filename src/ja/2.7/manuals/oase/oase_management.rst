@@ -1065,7 +1065,9 @@ Zabbix
            "jsonrpc":"2.0",
            "method":"problem.get",
            "id":1,
-           "params":{"time_from": "EXASTRO_LAST_FETCHED_TIMESTAMP"},
+           "params":{
+               "time_from": "{{ EXASTRO_LAST_FETCHED_TIMESTAMP }}"
+           },
            "auth":"<Zabbix APIトークン>"
          }
 
