@@ -1,0 +1,36 @@
+---
+- name: 資材配布など
+  hosts: K8S
+  tasks:
+    - name: k8s-nodeにディレクトリ作成
+      file:
+        path: /tmp/work
+        state: directory
+    
+    - name: パッケージを展開(rpmファイル)
+      unarchive:
+        src: /tmp/work/k8s-repo.tar.gz
+        dest: /tmp/work
+        mode: 0755
+        remote_src: false
+      
+    - name: パッケージを展開(offline-files)
+      unarchive:
+        src: /tmp/work/offline-files.tar.gz
+        dest: /tmp/work
+        mode: 0755
+        remote_src: false
+      
+    - name: パッケージをインストールするシェルスクリプトをコピー
+      copy:
+        src: /tmp/work/k8s-pkg-install.sh
+        dest: /tmp/work
+        mode: 0755
+
+    - name: パッケージをインストールする
+      shell:
+        cmd: /tmp/work/k8s-pkg-install.sh
+        chdir: /tmp/work/k8s-repo
+        
+
+
