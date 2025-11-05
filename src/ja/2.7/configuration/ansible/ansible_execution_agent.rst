@@ -244,16 +244,3 @@ Ansible builderで使用する動作確認済みのベースイメージ
    * - rhel9
      - registry.redhat.io/ansible-automation-platform-24/ee-supported-rhel9:latest
      - サポート付きライセンス利用の場合
-
-.. _ansible-agent-linger-note:
-
-ユーザーセッション切断後のプロセス維持
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| Ansible実行エージェントを構成したエージェントユーザーがログアウトするとプロセスが停止し、ITAの作業実行がタイムアウトします。
-
-| 以下のコマンドを実行し、エージェントユーザーのプロセスがログアウト後も継続して動作するよう設定してください。
-| ※ `<agent_user>` には、使用しているAnsible実行ユーザー名を指定してください。
-
-.. code-block:: bash
-
-   loginctl enable-linger <agent_user>
