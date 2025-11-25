@@ -551,6 +551,18 @@ OASE管理
         {% endfor %}
 
 
+.. tip:: Jinja2テンプレート利用の注意点
+
+    Jinja2テンプレートを用いて通知設定を行う際は、以下の点にご注意ください。
+
+    - 必須要素の定義: テンプレートには、通知のタイトルと本文を定義する **[TITLE]** および **[BODY]** 要素が **必須** です。
+
+    - 構文不足による通知失敗: 必須要素（[TITLE]または[BODY]）が不足している場合や、要素の記述に誤りがある場合、通知の実行は **失敗します**。
+
+    - 編集箇所: 出力内容を変更する場合は、 **[TITLE] および [BODY] の要素内部のみ** を編集してください。これらの要素自体を削除したり変更したりしないでください。
+
+    - Jinja2構文の参照: テンプレート内で使用する変数や制御構文の詳細については、Jinja2の公式ドキュメントを参照してください。
+
 付録
 ====
 
@@ -1485,8 +1497,8 @@ ServiceNow(レコード登録)を行う通知テンプレート（共通）の�
 - ServiceNowのインシデントテーブルにレコード登録を行う設定例
 
 
-  | ここでは、デフォルトのテンプレートの内容から、TITLE の内容をServiceNowの short_description に、BODY に、labels, exastro_agents の内容をServiceNowの description に設定する例を示します。
-  | labels, exastro_agents の内容は、Jinjaテンプレートのループ処理を使用して、動的に設定しています。
+  | ここでは、デフォルトのテンプレートの内容から、TITLE の内容をServiceNowの short_description に、BODY に、イベントRAWデータ, エージェント の内容をServiceNowの description に設定する例を示します。
+  | イベントRAWデータ(event), エージェント(exastro_agents) の内容は、Jinjaテンプレートのループ処理を使用して、動的に設定しています。
 
 
   - | 1.新規イベント（受信時）のテンプレート例: New(received).j2
@@ -1494,12 +1506,12 @@ ServiceNow(レコード登録)を行う通知テンプレート（共通）の�
     .. code-block:: jinja
 
        [TITLE]
-       Event Received.
+       Event Received. {% if exastro_edit_count == 1 %}Primary Event{% else %}Consolidated Event{% endif %} ({{ exastro_edit_count }})
 
        [BODY]
        {
-           "short_description": "Event Received.",
-           "description": "{% for key, value in labels.items() %}\n{{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %}",
+           "short_description": "Event Received. {% if exastro_edit_count == 1 %}Primary Event{% else %}Consolidated Event{% endif %} ({{ exastro_edit_count }}) ",
+           "description": "RAW Event Data: {% for key, value in event | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %},\n Agent: {% for key, value in exastro_agents | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %}",
            "caller_id": "",
            "impact": "2",
            "urgency": "2",
@@ -1529,7 +1541,7 @@ ServiceNow(レコード登録)を行う通知テンプレート（共通）の�
        [BODY]
        {
            "short_description": "Event Consolidated by Deduplication {% if labels._exastro_timeout == '1' %}(ttl expired){% else %} {% endif %}",
-           "description": "{% for key, value in labels.items() %}\n{{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %} , {% for key, value in exastro_agents.items() %}\n{{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %}",
+           "description": "RAW Event Data: {% for key, value in event | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %},\n Agent: {% for key, value in exastro_agents | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %}",
            "caller_id": "",
            "impact": "2",
            "urgency": "2",
