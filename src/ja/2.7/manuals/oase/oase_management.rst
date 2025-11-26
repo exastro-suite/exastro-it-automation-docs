@@ -1498,7 +1498,7 @@ ServiceNow(レコード登録)を行う通知テンプレート（共通）の�
 
 
   | ここでは、デフォルトのテンプレートの内容から、TITLE の内容をServiceNowの short_description に、BODY に、イベントRAWデータ, エージェント の内容をServiceNowの description に設定する例を示します。
-  | イベントRAWデータ(event), エージェント(exastro_agents) の内容は、Jinjaテンプレートのループ処理を使用して、動的に設定しています。
+  | イベントRAWデータ(raw_event_data), エージェント(exastro_agents) の内容は、Jinjaテンプレートのループ処理を使用して、動的に設定しています。
 
 
   - | 1.新規イベント（受信時）のテンプレート例: New(received).j2
@@ -1511,7 +1511,7 @@ ServiceNow(レコード登録)を行う通知テンプレート（共通）の�
        [BODY]
        {
            "short_description": "Event Received. {% if exastro_edit_count == 1 %}Primary Event{% else %}Consolidated Event{% endif %} ({{ exastro_edit_count }}) ",
-           "description": "RAW Event Data: {% for key, value in event | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %},\n Agent: {% for key, value in exastro_agents | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %}",
+           "description": "RAW Event Data: {% for key, value in raw_event_data | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %},\n Agent: {% for key, value in exastro_agents | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %}",
            "caller_id": "",
            "impact": "2",
            "urgency": "2",
@@ -1541,7 +1541,7 @@ ServiceNow(レコード登録)を行う通知テンプレート（共通）の�
        [BODY]
        {
            "short_description": "Event Consolidated by Deduplication {% if labels._exastro_timeout == '1' %}(ttl expired){% else %} {% endif %}",
-           "description": "RAW Event Data: {% for key, value in event | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %},\n Agent: {% for key, value in exastro_agents | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %}",
+           "description": "RAW Event Data: {% for key, value in raw_event_data | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %},\n Agent: {% for key, value in exastro_agents | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %}",
            "caller_id": "",
            "impact": "2",
            "urgency": "2",
