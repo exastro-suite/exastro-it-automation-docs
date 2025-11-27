@@ -1536,11 +1536,11 @@ ServiceNow(レコード登録)を行う通知テンプレート（共通）の�
     .. code-block:: jinja
 
        [TITLE]
-       Event Consolidated by Deduplication {% if labels._exastro_timeout == '1' %} (ttl expired) {% endif %}
+       Event Consolidated by Deduplication {% if exastro_dup_notification_queue | default('0') == '1' %} (ttl expired) {% endif %}
 
        [BODY]
        {
-           "short_description": "Event Consolidated by Deduplication {% if labels._exastro_timeout == '1' %}(ttl expired){% else %} {% endif %}",
+           "short_description": "Event Consolidated by Deduplication {% if exastro_dup_notification_queue | default('0') == '1' %}(ttl expired){% else %} {% endif %}",
            "description": "RAW Event Data: {% for key, value in raw_event_data | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %},\n Agent: {% for key, value in exastro_agents | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %}",
            "caller_id": "",
            "impact": "2",
