@@ -142,7 +142,9 @@ OS要件
 
 - Python3.11がインストールされていること
 - インストールを実行するユーザで :command:`python3` と :command:`pip3` コマンドが実行できること
--  :command:`python3` と :command:`pip3` コマンドがPython3.11に紐づいていること
+
+.. note::
+   | Almalinuxでは :command:`python3` と :command:`pip3` コマンドがPython3.11に紐づいている必要があります。
 
 なお、インストール時には下記のansible-builderおよびansible-runnerのインストールが自動的に行われます。
 
