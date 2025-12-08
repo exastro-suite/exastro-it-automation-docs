@@ -55,7 +55,7 @@ html: Makefile
 # 	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(DOCSDIR)" $(SPHINXOPTS) $(O)
 # 	touch $(DOCSDIR)/.nojekyll
 	version=`git branch --contains | cut -d " " -f 2` ; \
-	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/index.html > $(DOCSDIR)/index.html
+	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/index.html > $(DOCSDIR)/index.html ; \
 	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/redirect.html > $(DOCSDIR)/redirect.html
 
 html-%: $(addprefix html-, $(NAMES))
@@ -68,7 +68,7 @@ html-%:
 	done
 	touch $(DOCSDIR)/.nojekyll
 	version=`git branch --contains | cut -d " " -f 2` ; \
-	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/index.html > $(DOCSDIR)/index.html
+	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/index.html > $(DOCSDIR)/index.html ; \
 	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/redirect.html > $(DOCSDIR)/redirect.html
 
 html-all:
@@ -81,7 +81,7 @@ html-all:
 	done
 	touch $(DOCSDIR)/.nojekyll
 	version=`ls -1r "$(SOURCEDIR)/ja/" | head -n 1` ; \
-	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/index.html > $(DOCSDIR)/index.html
+	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/index.html > $(DOCSDIR)/index.html ; \
 	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/redirect.html > $(DOCSDIR)/redirect.html
 
 clean:
