@@ -31,6 +31,10 @@
      - | 〇
      - | OASE専用の利用を受け付けるAPI
      - |
+   * - | ita-api-ansible-execution-receiver
+     - | 〇
+     - | Ansible Execution Agent連携時に使用されるAPI
+     - |
    * - | ita-api-organization
      - | 〇
      - | ITA全般のAPI
