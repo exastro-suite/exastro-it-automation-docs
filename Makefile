@@ -56,6 +56,7 @@ html: Makefile
 # 	touch $(DOCSDIR)/.nojekyll
 	version=`git branch --contains | cut -d " " -f 2` ; \
 	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/index.html > $(DOCSDIR)/index.html
+	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/redirect.html > $(DOCSDIR)/redirect.html
 
 html-%: $(addprefix html-, $(NAMES))
 
@@ -68,6 +69,7 @@ html-%:
 	touch $(DOCSDIR)/.nojekyll
 	version=`git branch --contains | cut -d " " -f 2` ; \
 	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/index.html > $(DOCSDIR)/index.html
+	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/redirect.html > $(DOCSDIR)/redirect.html
 
 html-all:
 	@for version in `ls -1 $(SOURCEDIR)/ja` ; do \
