@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>1. メニューエクスポート・インポート &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/tabs.js?v=3030b3cb"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="2. Excel一括エクスポート・インポート" href="excel_export_import.html" />
+    <link rel="prev" title="エクスポート・インポート" href="index.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/manuals/export_import/menu_export_import.html" selected>current</option>
+              <option value="../../../../ja/2.7/manuals/export_import/menu_export_import.html" selected>2.7(current)</option>
+              <option value="../../../../ja/2.6/manuals/export_import/menu_export_import.html">2.6</option>
+              <option value="../../../../ja/2.5/manuals/export_import/menu_export_import.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/export_import/menu_export_import.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/export_import/menu_export_import.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/export_import/menu_export_import.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/export_import/menu_export_import.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/export_import/menu_export_import.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/manuals/export_import/menu_export_import.html" selected>日本語</option>
+              <option value="../../../../en/2.7/manuals/export_import/menu_export_import.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="index.html" title="前のトピックへ">エクスポート・インポート</a></li>
+        <li class="next"><a href="excel_export_import.html" title="次のトピックへ"><span class="section-number">2. </span>Excel一括エクスポート・インポート</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../it_automation_base/index.html">基本操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../host_group/index.html">ホストグループ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible-driver/index.html">Ansible ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform_driver/index.html">Terraform ドライバ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">エクスポート・インポート</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. メニューエクスポート・インポート</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1.1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">1.2. メニューエクスポート・インポートの概要</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id4">メニューエクスポート・インポートの詳細</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">1.3. エクスポート・インポートの環境による利用可否について</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#ita">環境差分（ITAのバージョン・インストールされているドライバ）について</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">1.4. メニューエクスポート・インポートのメニュー、画面構成</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id11">メニュー 一覧</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">1.5. 機能・操作方法説明</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id13">メニューエクスポート</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#menu-import">メニューインポート</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id15">メニューエクスポート・インポート管理</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="excel_export_import.html">2. Excel一括エクスポート・インポート</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../cicd_for_iac/index.html">CI/CD for IaC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintenance/index.html">メンテナンス</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">1. メニューエクスポート・インポート</a><ul>
+<li><a class="reference internal" href="#id2">1.1. はじめに</a></li>
+<li><a class="reference internal" href="#id3">1.2. メニューエクスポート・インポートの概要</a><ul>
+<li><a class="reference internal" href="#id4">メニューエクスポート・インポートの詳細</a><ul>
+<li><a class="reference internal" href="#id5">機能について</a></li>
+<li><a class="reference internal" href="#id6">モードについて</a></li>
+<li><a class="reference internal" href="#id7">使用例</a></li>
+<li><a class="reference internal" href="#id8">メニューエクスポート・インポート処理のリソース制限について</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">1.3. エクスポート・インポートの環境による利用可否について</a><ul>
+<li><a class="reference internal" href="#ita">環境差分（ITAのバージョン・インストールされているドライバ）について</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10">1.4. メニューエクスポート・インポートのメニュー、画面構成</a><ul>
+<li><a class="reference internal" href="#id11">メニュー 一覧</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id12">1.5. 機能・操作方法説明</a><ul>
+<li><a class="reference internal" href="#id13">メニューエクスポート</a></li>
+<li><a class="reference internal" href="#menu-import">メニューインポート</a></li>
+<li><a class="reference internal" href="#id15">メニューエクスポート・インポート管理</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">エクスポート・インポート</a></li>
+    
+    <li><span class="section-number">1. </span>メニューエクスポート・インポート</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="menu-export-import">
+<span id="id1"></span><h1><span class="section-number">1. </span>メニューエクスポート・インポート<a class="headerlink" href="#menu-export-import" title="Link to this heading">¶</a></h1>
+<section id="id2">
+<h2><span class="section-number">1.1. </span>はじめに<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書は、ITAのメニューエクスポート・インポートの機能および操作方法について説明します。</div>
+</div>
+</section>
+<section id="id3">
+<h2><span class="section-number">1.2. </span>メニューエクスポート・インポートの概要<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本章ではメニューエクスポート・インポートについて説明します。</div>
+</div>
+<section id="id4">
+<h3>メニューエクスポート・インポートの詳細<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<section id="id5">
+<h4>機能について<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">メニューエクスポート・インポートは、移行したいITAのメニューを選択し、メニュー単位でデータを上書きで移行します。</div>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/export_import_simple_diagram.png"><img alt="../../_images/export_import_simple_diagram.png" src="../../_images/export_import_simple_diagram.png" style="width: 600px;" />
+</a>
+</figure>
+</section>
+<section id="id6">
+<h4>モードについて<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">メニューエクスポート機能には2種類のモードがあります。</div>
+</div>
+<ol class="arabic simple">
+<li><p>環境移行</p></li>
+</ol>
+<div class="line-block">
+<div class="line">指定メニューのすべてのデータをエクスポートします。インポート先のデータをすべて置き換えます。</div>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/environmental_transition_diagram.png"><img alt="../../_images/environmental_transition_diagram.png" src="../../_images/environmental_transition_diagram.png" style="width: 600px;" />
+</a>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>時刻指定</p></li>
+</ol>
+<div class="line-block">
+<div class="line">指定時刻以降のデータのみエクスポートします。インポート先のデータと一意項目（ID、No等）が重複した場合はエクスポートしたデータが優先してインポートされます。</div>
+</div>
+<div class="line-block">
+<div class="line">例：2023年1月2日 17:00を指定した場合</div>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/time_designation_transition_diagram.png"><img alt="../../_images/time_designation_transition_diagram.png" src="../../_images/time_designation_transition_diagram.png" style="width: 720px;" />
+</a>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p>履歴</p></li>
+</ol>
+<div class="line-block">
+<div class="line">エクスポート対象データの履歴データについて「履歴あり/履歴なし」を選択してエクスポートします。インポート先のデータと一意項目（ID、No等）が重複した場合はエクスポートしたデータが優先してインポートされます。</div>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">履歴ありを指定した場合</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">履歴なしを指定した場合</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/jnl_1_diagram.drawio.png"><img alt="../../_images/jnl_1_diagram.drawio.png" src="../../_images/jnl_1_diagram.drawio.png" style="width: 720px;" />
+</a>
+</figure>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/jnl_2_diagram.drawio.png"><img alt="../../_images/jnl_2_diagram.drawio.png" src="../../_images/jnl_2_diagram.drawio.png" style="width: 720px;" />
+</a>
+</figure>
+</div></div>
+</section>
+<section id="id7">
+<h4>使用例<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">本機能ではワークスペースAとワークスペースBの2つの環境を使用して、以下のように機能を利用することを想定しています。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>パターン①：環境の複製</strong></div>
+</div>
+<div class="line-block">
+<div class="line">ワークスペースAに登録されているすべてのデータをワークスペースBに複製します。</div>
+</div>
+<div class="line-block">
+<div class="line">[手順]</div>
+</div>
+<ol class="arabic simple">
+<li><p>環境移行モードにてワークスペースAのデータを環境移行モードですべてエクスポートします。</p></li>
+<li><p>1でエクスポートしたデータをワークスペースBにインポートします。</p></li>
+</ol>
+<div class="line-block">
+<div class="line">※環境移行後はワークスペースBでデータの登録・更新を行えます。その後、再度ワークスペースAからデータを移行すると不整合が発生する可能性があるため非推奨です。</div>
+<div class="line">※双方向でのデータの移行は、データの不整合が発生する可能性があるため非推奨です。</div>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/environment_replication.png"><img alt="../../_images/environment_replication.png" src="../../_images/environment_replication.png" style="width: 1000px;" />
+</a>
+</figure>
+<div class="line-block">
+<div class="line"><strong>パターン②：データを投入するワークスペースと作業を実行するワークスペースを分ける</strong></div>
+</div>
+<div class="line-block">
+<div class="line">データの投入・テスト用ワークスペースと作業の実行のみを行う用のワークスペースの2点を用意する場合。</div>
+</div>
+<div class="line-block">
+<div class="line">[手順]</div>
+</div>
+<ol class="arabic simple">
+<li><p>環境移行モードにてワークスペースAのデータをすべてエクスポートします。</p></li>
+<li><p>1でエクスポートしたファイルをワークスペースBにインポートします。</p></li>
+<li><p>ワークスペースAでデータの更新があるたびにワークスペースBに時刻指定モードで差分データを移行します。</p></li>
+</ol>
+<div class="line-block">
+<div class="line">※データ移行を複数行う前提の場合、ワークスペースBでデータの登録・更新を行うとデータの不整合が発生する可能性があるため非推奨です。作業の実行のみであれば影響はありません。</div>
+<div class="line">※ワークスペースBにて作業の実行中にデータを移行する際は、実行中のデータに影響を与えないようにするため、時刻指定モードで差分データのみを移行するようにしてください。</div>
+<div class="line">※双方向でのデータの移行は、データの不整合が発生する可能性があるため非推奨です。</div>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/separate_servers.png"><img alt="../../_images/separate_servers.png" src="../../_images/separate_servers.png" style="width: 1000px;" />
+</a>
+</figure>
+</section>
+<section id="id8">
+<h4>メニューエクスポート・インポート処理のリソース制限について<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">メニューエクスポート・インポート中のリソースについて、<span class="menuselection">リソースプラン</span> で制御しています。</div>
+<div class="line">設定、適用方法については、 <a class="reference internal" href="../platform_management/plan.html#plan"><span class="std std-ref">リソースプラン</span></a>  を参照してください。</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">メニューエクスポート・インポート中の処理でのリソース制御について</div>
+</div>
+<p>リソースプラン値に従い、メニューエクスポート・インポートのバックヤード処理の入出力時に分割して処理を行いリソースを制御します。
+以下、リソースプランの設定値を上げると処理時間は短くなりますが、使用するリソース量は増加します。</p>
+<ul class="simple">
+<li><p>ita.organization.menu_export_import.buffer_size</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+<section id="id9">
+<h2><span class="section-number">1.3. </span>エクスポート・インポートの環境による利用可否について<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h2>
+<section id="ita">
+<h3>環境差分（ITAのバージョン・インストールされているドライバ）について<a class="headerlink" href="#ita" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">エクスポートする環境と、インポートする環境で、環境差分（ITAのバージョン・インストールされているドライバ）がある場合の実行パターン、</div>
+<div class="line">および、エクスポートしたKYMファイルの適用可能なITAの環境についてです。</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">KYMファイルについて、以下の条件を満たした場合、後方互換性があります。</div>
+<div class="line">・2.5.0以降のバージョンのITAで、エクスポートしたKYMファイルであること</div>
+<div class="line">・エクスポートしたITAのバージョンより、インポートするITAのバージョンが新しいこと</div>
+<div class="line">・エクスポートしたITAにインストールされているドライバが、インポートするITAのドライバにインストールされていること</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">以下、環境Aでエクスポートを実施し、環境Bへインポートする場合を例に記載します。</div>
+</div>
+<span id="export-import-environment-and-drivers"></span><table class="docutils align-left" id="id16">
+<caption><span class="caption-number">表 1.155 </span><span class="caption-text">エクスポート・インポートの環境による利用可否</span><a class="headerlink" href="#id16" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>ケース</p></th>
+<th class="head"><p>環境Aのバージョン</p></th>
+<th class="head"><p>環境Aのドライバ</p></th>
+<th class="head"><p>環境Bのバージョン</p></th>
+<th class="head"><p>環境Bのドライバ</p></th>
+<th class="head"><div class="line-block">
+<div class="line">環境差分</div>
+<div class="line">(バージョン・ドライバ)</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">環境A→環境Bへ</div>
+<div class="line">インポート可否</div>
+</div>
+</th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>A</p></td>
+<td><p>2.5.X</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line">OASE</div>
+</div>
+</td>
+<td><p>2.5.X</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line">OASE</div>
+</div>
+</td>
+<td><p>環境差分なし</p></td>
+<td><p>〇</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>B</p></td>
+<td><p>2.5.X</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+</div>
+</td>
+<td><p>2.5.X</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line">OASE</div>
+</div>
+</td>
+<td><p>ドライバ差分あり</p></td>
+<td><p>〇</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>C</p></td>
+<td><p>2.5.X</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line">OASE</div>
+</div>
+</td>
+<td><p>2.5.Y</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line">OASE</div>
+</div>
+</td>
+<td><p>バージョン差分あり</p></td>
+<td><p>〇</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>D</p></td>
+<td><p>2.5.X</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>2.5.Y</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line">OASE</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">バージョン差分あり(A:2.5.X &lt; B:2.5.Y)</div>
+<div class="line">ドライバ差分あり</div>
+</div>
+</td>
+<td><p>〇</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>E</p></td>
+<td><p>2.5.X</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line">OASE</div>
+</div>
+</td>
+<td><p>2.5.X</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>ドライバ差分あり</p></td>
+<td><p>△※</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>2.5.X</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line">OASE</div>
+</div>
+</td>
+<td><p>2.5.Y</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line"><br /></div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">バージョン差分あり(A:2.5.X &lt; B:2.5.Y)</div>
+<div class="line">ドライバ差分あり</div>
+</div>
+</td>
+<td><p>△※</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>G</p></td>
+<td><p>2.5.Y</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line">OASE</div>
+</div>
+</td>
+<td><p>2.5.X</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line">OASE</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">バージョン差分あり(A:2.5.Y &gt; B:2.5.X)</div>
+</div>
+</td>
+<td><p>×</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>H</p></td>
+<td><p>2.5.Y</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>2.5.X</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line">OASE</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">バージョン差分あり(A:2.5.Y &gt; B:2.5.X)</div>
+<div class="line">ドライバ差分あり</div>
+</div>
+</td>
+<td><p>×</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>I</p></td>
+<td><p>2.5.Y</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line">OASE</div>
+</div>
+</td>
+<td><p>2.5.X</p></td>
+<td><div class="line-block">
+<div class="line">CI/CD for IaC</div>
+<div class="line"><br /></div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">バージョン差分あり(A:2.5.Y &gt; B:2.5.X)</div>
+<div class="line">ドライバ差分あり</div>
+</div>
+</td>
+<td><p>×</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">ケースA（インポート可）</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">ケースB（インポート可）</button><button aria-controls="panel-1-1-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-2" name="1-2" role="tab" tabindex="-1">ケースC（インポート可）</button><button aria-controls="panel-1-1-3" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-3" name="1-3" role="tab" tabindex="-1">ケースD（インポート可）</button><button aria-controls="panel-1-1-4" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-4" name="1-4" role="tab" tabindex="-1">ケースE（インポート可※）</button><button aria-controls="panel-1-1-5" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-5" name="1-5" role="tab" tabindex="-1">ケースF（インポート可※）</button><button aria-controls="panel-1-1-6" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-6" name="1-6" role="tab" tabindex="-1">ケースG（インポート不可）</button><button aria-controls="panel-1-1-7" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-7" name="1-7" role="tab" tabindex="-1">ケースH（インポート不可）</button><button aria-controls="panel-1-1-8" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-8" name="1-8" role="tab" tabindex="-1">ケースI（インポート不可）</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/export_import_ptn_A.drawio.png"><img alt="エクスポート・インポート(ケースA)" src="../../_images/export_import_ptn_A.drawio.png" style="width: 800px;" />
+</a>
+</figure>
+</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/export_import_ptn_B.drawio.png"><img alt="エクスポート・インポート(ケースB)" src="../../_images/export_import_ptn_B.drawio.png" style="width: 800px;" />
+</a>
+</figure>
+</div><div aria-labelledby="tab-1-1-2" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-2" name="1-2" role="tabpanel" tabindex="0"><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/export_import_ptn_C.drawio.png"><img alt="エクスポート・インポート(ケースC)" src="../../_images/export_import_ptn_C.drawio.png" style="width: 800px;" />
+</a>
+</figure>
+</div><div aria-labelledby="tab-1-1-3" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-3" name="1-3" role="tabpanel" tabindex="0"><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/export_import_ptn_D.drawio.png"><img alt="エクスポート・インポート(ケースD)" src="../../_images/export_import_ptn_D.drawio.png" style="width: 800px;" />
+</a>
+</figure>
+</div><div aria-labelledby="tab-1-1-4" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-4" name="1-4" role="tabpanel" tabindex="0"><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/export_import_ptn_E.drawio.png"><img alt="エクスポート・インポート(ケースE)" src="../../_images/export_import_ptn_E.drawio.png" style="width: 800px;" />
+</a>
+</figure>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">ドライバのインストール・アンインストール機能（ <a class="reference internal" href="../platform_management/organization.html#organization-edit"><span class="std std-ref">オーガナイゼーション編集</span></a> ）を使用して、</div>
+<div class="line">ドライバのインストール状態を揃え、「ケースA」や「ケースB」の状態にすることで、インポートの実施が可能です。</div>
+</div>
+</div>
+</div><div aria-labelledby="tab-1-1-5" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-5" name="1-5" role="tabpanel" tabindex="0"><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/export_import_ptn_F.drawio.png"><img alt="エクスポート・インポート(ケースF)" src="../../_images/export_import_ptn_F.drawio.png" style="width: 800px;" />
+</a>
+</figure>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">ドライバのインストール・アンインストール機能（ <a class="reference internal" href="../platform_management/organization.html#organization-edit"><span class="std std-ref">オーガナイゼーション編集</span></a> ）を使用して、</div>
+<div class="line">ドライバのインストール状態を揃え、「ケースC」や「ケースD」の状態にすることで、インポートの実施が可能です。</div>
+</div>
+</div>
+</div><div aria-labelledby="tab-1-1-6" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-6" name="1-6" role="tabpanel" tabindex="0"><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/export_import_ptn_G.drawio.png"><img alt="エクスポート・インポート(ケースG)" src="../../_images/export_import_ptn_G.drawio.png" style="width: 800px;" />
+</a>
+</figure>
+</div><div aria-labelledby="tab-1-1-7" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-7" name="1-7" role="tabpanel" tabindex="0"><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/export_import_ptn_H.drawio.png"><img alt="エクスポート・インポート(ケースH)" src="../../_images/export_import_ptn_H.drawio.png" style="width: 800px;" />
+</a>
+</figure>
+</div><div aria-labelledby="tab-1-1-8" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-8" name="1-8" role="tabpanel" tabindex="0"><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/export_import_ptn_I.drawio.png"><img alt="エクスポート・インポート(ケースI)" src="../../_images/export_import_ptn_I.drawio.png" style="width: 800px;" />
+</a>
+</figure>
+</div></div>
+</section>
+</section>
+<section id="id10">
+<h2><span class="section-number">1.4. </span>メニューエクスポート・インポートのメニュー、画面構成<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本章では、メニューエクスポート・インポートのメニュー、画面構成について説明します</div>
+</div>
+<section id="id11">
+<h3>メニュー 一覧<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">メニューエクスポート・インポートのメニューを以下に示します。</div>
+</div>
+<table class="docutils align-left" id="id17">
+<caption><span class="caption-number">表 1.156 </span><span class="caption-text">ITAメニュー一覧</span><a class="headerlink" href="#id17" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>No</strong></p></th>
+<th class="head"><p><strong>メニューグループ</strong></p></th>
+<th class="head"><p><strong>メニュー・画面</strong></p></th>
+<th class="head"><p><strong>説明</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td rowspan="3"><p>エクスポート・インポート</p></td>
+<td><p>メニューエクスポート</p></td>
+<td><p>メニューのデータをエクスポートします。</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>メニューインポート</p></td>
+<td><p>メニューのデータをインポートします。</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>メニューエクスポート・インポート管理</p></td>
+<td><p>[メニューエクスポート]メニューで実行したエクスポートと、[メニューインポート]メニューで実行したインポートの状況を管理します。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id12">
+<h2><span class="section-number">1.5. </span>機能・操作方法説明<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h2>
+<section id="id13">
+<h3>メニューエクスポート<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">ITAシステムに登録されているデータを、メニューごとにエクスポートします。</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">データを別のITA環境に移す場合、すべてのメニューを対象に移動しないとデータの整合性が壊れる可能性があります。</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">一部エクスポート対象外のメニューが存在します。対象外のメニューは以下の通りです。</div>
+</div>
+<table class="docutils align-left">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>No</strong></p></th>
+<th class="head"><p><strong>メニューグループ</strong></p></th>
+<th class="head"><p><strong>メニュー・画面</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td rowspan="6"><p>エクスポート・インポート</p></td>
+<td><p>メニューエクスポート</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>メニューインポート</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>メニューエクスポート・インポート管理</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Excel 一括エクスポート</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Excel 一括インポート</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Excel 一括エクスポート・インポート管理</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td rowspan="5"><p>Conductor</p></td>
+<td><p>Conductor編集/作業実行</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>Conductor作業履歴</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>Conductor作業確認</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>Conductorインスタンス一覧</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>ConductorNodeインスタンス一覧</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td rowspan="4"><p>パラメータシート作成</p></td>
+<td><p>パラメータシート定義・作成</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>パラメータシート作成履歴</p></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p>選択1</p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p>選択2</p></td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><p>比較</p></td>
+<td><p>比較実行</p></td>
+</tr>
+<tr class="row-even"><td><p>17</p></td>
+<td rowspan="5"><p>Ansible-Legacy</p></td>
+<td><p>作業対象ホスト</p></td>
+</tr>
+<tr class="row-odd"><td><p>18</p></td>
+<td><p>代入値管理</p></td>
+</tr>
+<tr class="row-even"><td><p>19</p></td>
+<td><p>作業実行</p></td>
+</tr>
+<tr class="row-odd"><td><p>20</p></td>
+<td><p>作業状態確認</p></td>
+</tr>
+<tr class="row-even"><td><p>21</p></td>
+<td><p>作業管理</p></td>
+</tr>
+<tr class="row-odd"><td><p>22</p></td>
+<td rowspan="5"><p>Ansible-Pioneer</p></td>
+<td><p>作業対象ホスト</p></td>
+</tr>
+<tr class="row-even"><td><p>23</p></td>
+<td><p>代入値管理</p></td>
+</tr>
+<tr class="row-odd"><td><p>24</p></td>
+<td><p>作業実行</p></td>
+</tr>
+<tr class="row-even"><td><p>25</p></td>
+<td><p>作業状態確認</p></td>
+</tr>
+<tr class="row-odd"><td><p>26</p></td>
+<td><p>作業管理</p></td>
+</tr>
+<tr class="row-even"><td><p>27</p></td>
+<td rowspan="5"><p>Ansible-LegacyRole</p></td>
+<td><p>作業対象ホスト</p></td>
+</tr>
+<tr class="row-odd"><td><p>28</p></td>
+<td><p>代入値管理</p></td>
+</tr>
+<tr class="row-even"><td><p>29</p></td>
+<td><p>作業実行</p></td>
+</tr>
+<tr class="row-odd"><td><p>30</p></td>
+<td><p>作業状態確認</p></td>
+</tr>
+<tr class="row-even"><td><p>31</p></td>
+<td><p>作業管理</p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td rowspan="5"><p>Terraform-Cloud/EP</p></td>
+<td><p>作業実行</p></td>
+</tr>
+<tr class="row-even"><td><p>33</p></td>
+<td><p>作業状態確認</p></td>
+</tr>
+<tr class="row-odd"><td><p>34</p></td>
+<td><p>作業確認</p></td>
+</tr>
+<tr class="row-even"><td><p>35</p></td>
+<td><p>代入値管理</p></td>
+</tr>
+<tr class="row-odd"><td><p>36</p></td>
+<td><p>連携先Terraform管理</p></td>
+</tr>
+<tr class="row-even"><td><p>37</p></td>
+<td rowspan="4"><p>Terraform-CLI</p></td>
+<td><p>作業実行</p></td>
+</tr>
+<tr class="row-odd"><td><p>38</p></td>
+<td><p>作業状態確認</p></td>
+</tr>
+<tr class="row-even"><td><p>39</p></td>
+<td><p>作業管理</p></td>
+</tr>
+<tr class="row-odd"><td><p>40</p></td>
+<td><p>代入値管理</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">(1) エクスポートするモードと廃止情報を選択します。</div>
+<div class="line">モード一覧と廃止情報一覧を以下に示します。</div>
+</div>
+<table class="docutils align-left" id="id18">
+<caption><span class="caption-number">表 1.157 </span><span class="caption-text">モード一覧</span><a class="headerlink" href="#id18" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>名称</strong></p></th>
+<th class="head"><p><strong>説明</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>環境移行</p></td>
+<td><p>インポート時、既存データをすべて削除してデータを上書きします。</p></td>
+</tr>
+<tr class="row-odd"><td><p>時刻指定</p></td>
+<td><p>インポート時、指定した時刻以降に入力されたデータを各メニューの一意項目（ID、No等）を基に挿入・上書きします。</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-left" id="id19">
+<caption><span class="caption-number">表 1.158 </span><span class="caption-text">廃止情報一覧</span><a class="headerlink" href="#id19" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>名称</strong></p></th>
+<th class="head"><p><strong>説明</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>廃止を含む</p></td>
+<td><p>廃止状態のデータを含むすべてのデータをエクスポートします。</p></td>
+</tr>
+<tr class="row-odd"><td><p>廃止を除く</p></td>
+<td><p>廃止状態のデータを除いたデータをエクスポートします。</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-left" id="id20">
+<caption><span class="caption-number">表 1.159 </span><span class="caption-text">履歴</span><a class="headerlink" href="#id20" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>メニュー・画面</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>履歴あり</p></td>
+<td><p>履歴のレコードを含めてエクスポートします。</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>履歴なし</p></td>
+<td><p>履歴のレコードを含めずにエクスポートします。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">(2) エクスポートするメニューを選択して《エクスポート》ボタンを押下します。</div>
+</div>
+<figure class="align-center" id="id21">
+<a class="reference internal image-reference" href="../../_images/menu_export_1_v2-5.drawio.png"><img alt="メニューエクスポート画面(1)" src="../../_images/menu_export_1_v2-5.drawio.png" style="width: 1000px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.109 </span><span class="caption-text">メニューエクスポート画面(1)</span><a class="headerlink" href="#id21" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">初回の環境移行や新しくパラメータシート作成でメニューを作成した場合は下記のメニューをエクスポート対象に含むようにしてください。</div>
+<div class="line">含まないでエクスポート・インポートした場合、インポート時に完了（異常）になります。</div>
+<div class="line">・メニュー管理</div>
+<div class="line">・メニュー-テーブル紐付管理</div>
+<div class="line">・メニュー-カラム紐付管理</div>
+<div class="line">・ロール-メニュー紐付管理</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">(3) エクスポート確認のポップアップ画面が表示されますので、内容を確認して《エクスポート開始》ボタンを押下します。</div>
+</div>
+<figure class="align-center" id="id22">
+<a class="reference internal image-reference" href="../../_images/menu_export_2_v2-5.drawio.png"><img alt="メニューエクスポート画面(2)" src="../../_images/menu_export_2_v2-5.drawio.png" style="width: 1000px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.110 </span><span class="caption-text">メニューエクスポート画面(2)</span><a class="headerlink" href="#id22" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">(4) メニューを選択後、《エクスポート》ボタンを押下します。</div>
+<div class="line">自動でメニューエクスポート・インポート管理画面に遷移するのでエクスポート処理のステータスを確認してください。</div>
+</div>
+<figure class="align-center" id="id23">
+<a class="reference internal image-reference" href="../../_images/menu_export_3.png"><img alt="メニューエクスポート・インポート管理画面" src="../../_images/menu_export_3.png" style="width: 1000px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.111 </span><span class="caption-text">メニューエクスポート・インポート管理画面</span><a class="headerlink" href="#id23" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="menu-import">
+<span id="id14"></span><h3>メニューインポート<a class="headerlink" href="#menu-import" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">[メニューエクスポート]メニューでエクスポートしたデータをインポートします。</div>
+</div>
+<div class="line-block">
+<div class="line">(1) 《ファイル選択》ボタンを押下して、インポートするファイルを選択し、《開く》ボタンを押下します。</div>
+</div>
+<figure class="align-center" id="id24">
+<a class="reference internal image-reference" href="../../_images/menu_import_1.png"><img alt="メニューインポート画面(1)" src="../../_images/menu_import_1.png" style="width: 1000px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.112 </span><span class="caption-text">メニューインポート画面(1)</span><a class="headerlink" href="#id24" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id25">
+<a class="reference internal image-reference" href="../../_images/menu_import_2.png"><img alt="メニューインポート画面(2)" src="../../_images/menu_import_2.png" style="width: 1000px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.113 </span><span class="caption-text">メニューインポート画面(2)</span><a class="headerlink" href="#id25" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">(2) インポートしたファイル内のメニューの一覧が表示されます。インポートするメニューを選択して《インポート》ボタンを押下します。</div>
+<div class="line">チェックボックスがチェックされているメニューがインポート対象となります。</div>
+<div class="line">インポートする必要がないメニューは、チェックは外してください。</div>
+</div>
+<figure class="align-center" id="id26">
+<a class="reference internal image-reference" href="../../_images/menu_import_3_v2-5.drawio.png"><img alt="メニューインポート画面(3)" src="../../_images/menu_import_3_v2-5.drawio.png" style="width: 1000px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.114 </span><span class="caption-text">メニューインポート画面(3)</span><a class="headerlink" href="#id26" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">(3) インポート確認のポップアップ画面が表示されますので、内容を確認して《インポート開始》ボタンを押下します。</div>
+</div>
+<figure class="align-center" id="id27">
+<a class="reference internal image-reference" href="../../_images/menu_import_4_v2-5.drawio.png"><img alt="メニューインポート画面(4)" src="../../_images/menu_import_4_v2-5.drawio.png" style="width: 1000px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.115 </span><span class="caption-text">メニューインポート画面(4)</span><a class="headerlink" href="#id27" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">(4) 自動で[メニューエクスポート・インポート管理]に遷移するのでインポートの状況確認が行えます。</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">インポートのステータスが「実行中」の時にすぐに他の操作（画面の更新、他のメニューへの遷移など）を行うと</div>
+<div class="line">データ入れ替えのためタイミングによってはシステムエラーになる可能性がありますので少し時間を置いてから操作をするようにしてください。</div>
+</div>
+</div>
+<figure class="align-center" id="id28">
+<a class="reference internal image-reference" href="../../_images/menu_import_5.png"><img alt="メニューエクスポート・インポート管理画面" src="../../_images/menu_import_5.png" style="width: 1000px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.116 </span><span class="caption-text">メニューエクスポート・インポート管理画面</span><a class="headerlink" href="#id28" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id15">
+<h3>メニューエクスポート・インポート管理<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">[メニューエクスポート]メニューで実行したエクスポートと、[メニューインポート]メニューで実行したインポートの状況を管理します。</div>
+</div>
+<figure class="align-center" id="id29">
+<a class="reference internal image-reference" href="../../_images/menu_export_import_1_v2-5.drawio.png"><img alt="メニューエクスポート・インポート管理画面" src="../../_images/menu_export_import_1_v2-5.drawio.png" style="width: 1000px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.117 </span><span class="caption-text">メニューエクスポート・インポート管理画面</span><a class="headerlink" href="#id29" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id30">
+<caption><span class="caption-number">表 1.160 </span><span class="caption-text">一覧画面項目一覧（メニューエクスポート・インポート管理）</span><a class="headerlink" href="#id30" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>項目</strong></p></th>
+<th class="head"><p><strong>説明</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>実行No.</p></td>
+<td><p>一意のIDが自動採番されます</p></td>
+</tr>
+<tr class="row-odd"><td><p>ステータス</p></td>
+<td><div class="line-block">
+<div class="line">〔未実行〕、〔実行中〕、〔完了〕の順に遷移します。</div>
+</div>
+<div class="line-block">
+<div class="line">エラーが発生した場合は、〔完了(異常)〕になります。</div>
+</div>
+<div class="line-block">
+<div class="line">インポート時に〔完了(異常)〕になった場合はロールバックを実施し、データをインポート前の状態に戻します。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>処理種別</p></td>
+<td><div class="line-block">
+<div class="line">エクスポート・・・メニューエクスポート</div>
+<div class="line">インポート・・・メニューインポート</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>モード</p></td>
+<td><p>〔環境移行〕または〔時刻指定〕が表示されます。</p></td>
+</tr>
+<tr class="row-even"><td><p>廃止情報</p></td>
+<td><p>〔廃止を含む〕または〔廃止を除く〕が表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>履歴情報</p></td>
+<td><p>〔履歴あり〕または〔履歴なし〕が表示されます。</p></td>
+</tr>
+<tr class="row-even"><td><p>指定時刻</p></td>
+<td><p>モードが〔時刻指定〕の場合にのみ表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>ファイル名</p></td>
+<td><div class="line-block">
+<div class="line">エクスポートの場合、〔完了〕になるとエクスポートデータが表示されるので、ダウンロードして使用してください。</div>
+</div>
+<div class="line-block">
+<div class="line">インポートの場合、インポートしたデータが表示されます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>実行ユーザ</p></td>
+<td><div class="line-block">
+<div class="line">エクスポート処理またはインポート処理を実行したユーザが表示されます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>言語</p></td>
+<td><div class="line-block">
+<div class="line">インポート実行時のログインユーザーの言語情報が表示されます。</div>
+<div class="line">自動登録のため編集不可となります。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>実行ログ</p></td>
+<td><div class="line-block">
+<div class="line">エクスポート処理またはインポート処理時の、ステータスが「完了（異常）」の場合に</div>
+<div class="line">ログファイルのリンクが表示されます。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line"><span class="menuselection">メニューエクスポート・インポート管理</span> で、<span class="menuselection">ステータス</span> が「完了 (異常)」となった場合、<span class="menuselection">実行ログ</span> にファイルのリンクが表示されます。</div>
+</div>
+<figure class="align-center" id="id31">
+<a class="reference internal image-reference" href="../../_images/menu_export_import_2_v2-4.drawio.png"><img alt="メニューエクスポート・インポート管理画面：完了 (異常)" src="../../_images/menu_export_import_2_v2-4.drawio.png" style="width: 1000px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.118 </span><span class="caption-text">メニューエクスポート・インポート管理画面：完了 (異常)</span><a class="headerlink" href="#id31" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="literal-block-wrapper docutils container" id="id32">
+<div class="code-block-caption"><span class="caption-number">リスト 1.24 </span><span class="caption-text">例：KYMファイル内の構成に不備がある場合の実行ログについて</span><a class="headerlink" href="#id32" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># import_9ceea0bd-b193-4245-b1e5-a2d3e93b8e49.log</span>
+KYMファイル内に該当ファイルがありません。<span class="o">(</span>T_COMN_MENU_TABLE_LINK_DATA<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span>エクスポート・インポート</a></li>
+    <li class="next"><a href="excel_export_import.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">2. </span>Excel一括エクスポート・インポート</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.7/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

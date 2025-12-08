@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>4. CloudFormationロール &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="5. インフラメンバー" href="infrastructure_member.html" />
+    <link rel="prev" title="3. オートスケールWebシステム" href="auto_scaling.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../ja/2.7/templates/deploymentGuide/system_delete_guide/cloud_formation.html" selected>current</option>
+              <option value="../../../../../ja/2.7/templates/deploymentGuide/system_delete_guide/cloud_formation.html" selected>2.7(current)</option>
+              <option value="../../../../../ja/2.6/templates/deploymentGuide/system_delete_guide/cloud_formation.html">2.6</option>
+              <option value="../../../../../ja/2.5/templates/deploymentGuide/system_delete_guide/cloud_formation.html">2.5</option>
+              <option value="../../../../../ja/2.4/templates/deploymentGuide/system_delete_guide/cloud_formation.html">2.4</option>
+              <option value="../../../../../ja/2.3/templates/deploymentGuide/system_delete_guide/cloud_formation.html">2.3</option>
+              <option value="../../../../../ja/2.2/templates/deploymentGuide/system_delete_guide/cloud_formation.html">2.2</option>
+              <option value="../../../../../ja/2.1/templates/deploymentGuide/system_delete_guide/cloud_formation.html">2.1</option>
+              <option value="../../../../../ja/2.0/templates/deploymentGuide/system_delete_guide/cloud_formation.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../ja/2.7/templates/deploymentGuide/system_delete_guide/cloud_formation.html" selected>日本語</option>
+              <option value="../../../../../en/2.7/templates/deploymentGuide/system_delete_guide/cloud_formation.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="auto_scaling.html" title="前のトピックへ"><span class="section-number">3. </span>オートスケールWebシステム</a></li>
+        <li class="next"><a href="infrastructure_member.html" title="次のトピックへ"><span class="section-number">5. </span>インフラメンバー</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../learn/index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/index.html">マニュアル</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">テンプレート</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../vmware/index.html">VMWare</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">1st Model 導入ガイド 第1.0版 （ITAバージョン2.5.0版）</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1st_model_overview/index.html">1stモデル概要</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../1st_model_setup_guide/index.html">1stモデル導入手順</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../system_build_and_update_guide/index.html">システム構築・更新手順</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">システム削除手順</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="security_add-on.html">2. セキュリティ付帯機能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="auto_scaling.html">3. オートスケールWebシステム</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4. CloudFormationロール</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#aws">4.1. AWSリソースの確認</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#conductor">4.2. Conductor実行</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#aws-conductor">4.3. AWSリソースの確認(Conductor実行後)</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="infrastructure_member.html">5. インフラメンバー</a></li>
+<li class="toctree-l4"><a class="reference internal" href="infrastructure_admin.html">6. インフラ管理者​</a></li>
+<li class="toctree-l4"><a class="reference internal" href="infrastructure_user_base.html">7. インフラユーザー基盤</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AWS_admin.html">8. AWS管理者</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AWS_admin_base.html">9. AWS管理者基盤</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../conductor/index.html">Conductor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">4. CloudFormationロール</a><ul>
+<li><a class="reference internal" href="#aws">4.1. AWSリソースの確認</a></li>
+<li><a class="reference internal" href="#conductor">4.2. Conductor実行</a></li>
+<li><a class="reference internal" href="#aws-conductor">4.3. AWSリソースの確認(Conductor実行後)</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">HOME</a></li>
+    <li><a href="../../index.html">テンプレート</a></li>
+    <li><a href="../index.html">1st Model 導入ガイド 第1.0版 （ITAバージョン2.5.0版）</a></li>
+    <li><a href="index.html">システム削除手順</a></li>
+    
+    <li><span class="section-number">4. </span>CloudFormationロール</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="cloudformation">
+<h1><span class="section-number">4. </span>CloudFormationロール<a class="headerlink" href="#cloudformation" title="Link to this heading">¶</a></h1>
+<section id="aws">
+<h2><span class="section-number">4.1. </span>AWSリソースの確認<a class="headerlink" href="#aws" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p>AWS マネジメントコンソールにログインする</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">URL：<a class="reference external" href="https://xxxxxxxxxxxx.signin.aws.amazon.com/console">https://xxxxxxxxxxxx.signin.aws.amazon.com/console</a></div>
+<div class="line">ユーザー名：1st-model-admin</div>
+<div class="line">パスワード：<a class="reference external" href="mailto:P&#37;&#52;&#48;ssw0rd">P<span>&#64;</span>ssw0rd</a></div>
+</div>
+</div></blockquote>
+</li>
+<li><div class="line-block">
+<div class="line">「サービス &gt; CloudFormation &gt; スタック」へ移動する。</div>
+<div class="line">“aws-1st-model-01”でフィルターをかけて以下のスタックが作成されていることを確認する</div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line">aws-1st-model-01-CloudFormation-Role</div>
+</div>
+</div></blockquote>
+</li>
+<li><div class="line-block">
+<div class="line">「サービス &gt; IAM &gt; ロール」へ移動する。</div>
+<div class="line">“aws-1st-model-01”でフィルターをかけて以下のロールが作成されていることを確認する</div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line">aws-1st-model-01-BastionRole</div>
+<div class="line">aws-1st-model-01-CloudFormationRole</div>
+<div class="line">aws-1st-model-01-CloudTrailRole</div>
+<div class="line">aws-1st-model-01-GuardDutyRole</div>
+<div class="line">aws-1st-model-01-ScaleoutRole</div>
+<div class="line">aws-1st-model-01-SystemsManagerRole</div>
+<div class="line">aws-1st-model-01-VPCFlowLogRole</div>
+</div>
+</div></blockquote>
+</li>
+<li><div class="line-block">
+<div class="line">「サービス &gt; IAM &gt; ポリシー」へ移動する。</div>
+<div class="line">“aws-1st-model-01”でフィルターをかけて以下のポリシーが作成されていることを確認する</div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line">aws-1st-model-01-BastionOtherPolicy</div>
+<div class="line">aws-1st-model-01-CloudFormationCISPolicy</div>
+<div class="line">aws-1st-model-01-CloudFormationOtherPolicy</div>
+<div class="line">aws-1st-model-01-CloudFormationWAFLogPolicy</div>
+<div class="line">aws-1st-model-01-CloudTrailOtherPolicy</div>
+<div class="line">aws-1st-model-01-VPCFlowLogOtherPolicy</div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="conductor">
+<h2><span class="section-number">4.2. </span>Conductor実行<a class="headerlink" href="#conductor" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p>ITAに「AWS管理者」でログインする</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">実行者：AWS管理者</div>
+<div class="line">ユーザー名：aws-admin</div>
+<div class="line">パスワード：password</div>
+</div>
+</div>
+</li>
+<li><p>メインメニューの「Conductor」アイコンを押下する</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/cloud_formation_conductor_011.png"><img alt="../../../_images/cloud_formation_conductor_011.png" src="../../../_images/cloud_formation_conductor_011.png" style="width: 4.72721in; height: 4.6604in;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">「Conductor一覧」画面の「Conductor名称」が”CloudFormationロール / 削除”のレコードの「詳細」ボタンを押下する。</div>
+<div class="line">フィルタの「Conductor名称」で検索すると間違いがない</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/cloud_formation_conductor_021.png"><img alt="../../../_images/cloud_formation_conductor_021.png" src="../../../_images/cloud_formation_conductor_021.png" style="width: 4.72721in; height: 4.6604in;" />
+</a>
+</figure>
+</li>
+<li><p>「Conductor編集/作業実行」画面の「作業実行」ボタンを押下する</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/cloud_formation_conductor_031.png"><img alt="../../../_images/cloud_formation_conductor_031.png" src="../../../_images/cloud_formation_conductor_031.png" style="width: 4.72721in; height: 4.6604in;" />
+</a>
+</figure>
+</li>
+<li><p>「作業実行設定」ポップアップ画面の「オペレーション選択」ボタンを押下する</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/cloud_formation_conductor_041.png"><img alt="../../../_images/cloud_formation_conductor_041.png" src="../../../_images/cloud_formation_conductor_041.png" style="width: 4.72721in; height: 4.6604in;" />
+</a>
+</figure>
+</li>
+<li><p>「オペレーション選択」ポップアップ画面の”環境A(1stモデル)”のレコードを選択して「選択決定」ボタンを押下する</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/cloud_formation_conductor_051.png"><img alt="../../../_images/cloud_formation_conductor_051.png" src="../../../_images/cloud_formation_conductor_051.png" style="width: 4.72721in; height: 4.6604in;" />
+</a>
+</figure>
+</li>
+<li><p>「作業実行設定」ポップアップ画面の「作業実行」ボタンを押下する</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/cloud_formation_conductor_061.png"><img alt="../../../_images/cloud_formation_conductor_061.png" src="../../../_images/cloud_formation_conductor_061.png" style="width: 4.72721in; height: 4.6604in;" />
+</a>
+</figure>
+</li>
+<li><p>ステータスに「正常終了」が表示されることを確認する</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/cloud_formation_conductor_071.png"><img alt="../../../_images/cloud_formation_conductor_071.png" src="../../../_images/cloud_formation_conductor_071.png" style="width: 4.72721in; height: 4.6604in;" />
+</a>
+</figure>
+</li>
+</ol>
+</section>
+<section id="aws-conductor">
+<h2><span class="section-number">4.3. </span>AWSリソースの確認(Conductor実行後)<a class="headerlink" href="#aws-conductor" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p>AWS マネジメントコンソールにログインする</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">URL：<a class="reference external" href="https://xxxxxxxxxxxx.signin.aws.amazon.com/console">https://xxxxxxxxxxxx.signin.aws.amazon.com/console</a></div>
+<div class="line">ユーザー名：1st-model-admin</div>
+<div class="line">パスワード：<a class="reference external" href="mailto:P&#37;&#52;&#48;ssw0rd">P<span>&#64;</span>ssw0rd</a></div>
+</div>
+</div></blockquote>
+</li>
+<li><div class="line-block">
+<div class="line">「サービス &gt; CloudFormation &gt; スタック」へ移動する。</div>
+<div class="line">“aws-1st-model-01”でフィルターをかけて以下のスタックが削除されていることを確認する</div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line">aws-1st-model-01-CloudFormation-Role</div>
+</div>
+</div></blockquote>
+</li>
+<li><div class="line-block">
+<div class="line">「サービス &gt; IAM &gt; ロール」へ移動する。</div>
+<div class="line">“aws-1st-model-01”でフィルターをかけて以下のロールが削除されていることを確認する</div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line">aws-1st-model-01-BastionRole</div>
+<div class="line">aws-1st-model-01-CloudFormationRole</div>
+<div class="line">aws-1st-model-01-CloudTrailRole</div>
+<div class="line">aws-1st-model-01-GuardDutyRole</div>
+<div class="line">aws-1st-model-01-ScaleoutRole</div>
+<div class="line">aws-1st-model-01-SystemsManagerRole</div>
+<div class="line">aws-1st-model-01-VPCFlowLogRole</div>
+</div>
+</div></blockquote>
+</li>
+<li><div class="line-block">
+<div class="line">「サービス &gt; IAM &gt; ポリシー」へ移動する。</div>
+<div class="line">“aws-1st-model-01”でフィルターをかけて以下のポリシーが削除されていることを確認する</div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line">aws-1st-model-01-BastionOtherPolicy</div>
+<div class="line">aws-1st-model-01-CloudFormationCISPolicy</div>
+<div class="line">aws-1st-model-01-CloudFormationOtherPolicy</div>
+<div class="line">aws-1st-model-01-CloudFormationWAFLogPolicy</div>
+<div class="line">aws-1st-model-01-CloudTrailOtherPolicy</div>
+<div class="line">aws-1st-model-01-VPCFlowLogOtherPolicy</div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="auto_scaling.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">3. </span>オートスケールWebシステム</a></li>
+    <li class="next"><a href="infrastructure_member.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">5. </span>インフラメンバー</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.7/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

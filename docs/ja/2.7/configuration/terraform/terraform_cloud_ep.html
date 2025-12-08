@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>1. Terraform Cloud/EP &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="2. Terraform CLI" href="terraform_cli.html" />
+    <link rel="prev" title="Terraform" href="index.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/configuration/terraform/terraform_cloud_ep.html" selected>current</option>
+              <option value="../../../../ja/2.7/configuration/terraform/terraform_cloud_ep.html" selected>2.7(current)</option>
+              <option value="../../../../ja/2.6/configuration/terraform/terraform_cloud_ep.html">2.6</option>
+              <option value="../../../../ja/2.5/configuration/terraform/terraform_cloud_ep.html">2.5</option>
+              <option value="../../../../ja/2.4/configuration/terraform/terraform_cloud_ep.html">2.4</option>
+              <option value="../../../../ja/2.3/configuration/terraform/terraform_cloud_ep.html">2.3</option>
+              <option value="../../../../ja/2.2/configuration/terraform/terraform_cloud_ep.html">2.2</option>
+              <option value="../../../../ja/2.1/configuration/terraform/terraform_cloud_ep.html">2.1</option>
+              <option value="../../../../ja/2.0/configuration/terraform/terraform_cloud_ep.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/configuration/terraform/terraform_cloud_ep.html" selected>日本語</option>
+              <option value="../../../../en/2.7/configuration/terraform/terraform_cloud_ep.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="index.html" title="前のトピックへ">Terraform</a></li>
+        <li class="next"><a href="terraform_cli.html" title="次のトピックへ"><span class="section-number">2. </span>Terraform CLI</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">構成・構築ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../kubernetes/index.html">Kubernetes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docker_compose/index.html">Docker Compose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible/index.html">Ansible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OASE_agent/index.html">OASE Agent</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Terraform</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. Terraform Cloud/EP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">1.1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1.2. システム構成</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id3">1.2.1. システム構成イメージ</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">1.3. システム要件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-terraform-cloud-ep-initial-setting">1.4. 初期設定</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="terraform_cli.html">2. Terraform CLI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../client_requirements/index.html">クライアント動作要件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logging/index.html">ログ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../security/index.html">セキュリティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/index.html">マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">1. Terraform Cloud/EP</a><ul>
+<li><a class="reference internal" href="#id1">1.1. はじめに</a></li>
+<li><a class="reference internal" href="#id2">1.2. システム構成</a><ul>
+<li><a class="reference internal" href="#id3">1.2.1. システム構成イメージ</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">1.3. システム要件</a></li>
+<li><a class="reference internal" href="#configuration-terraform-cloud-ep-initial-setting">1.4. 初期設定</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">構成・構築ガイド</a></li>
+    <li><a href="index.html">Terraform</a></li>
+    
+    <li><span class="section-number">1. </span>Terraform Cloud/EP</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="terraform-cloud-ep">
+<h1><span class="section-number">1. </span>Terraform Cloud/EP<a class="headerlink" href="#terraform-cloud-ep" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2><span class="section-number">1.1. </span>はじめに<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Exastro IT Automation（以下、ITAとも記載する）で Terraform Cloud/Enterprise 連携機能 (以下、Terraform Cloud/EP driver) として運用する為のシステム構成と環境構築について説明します。</div>
+<div class="line"><br /></div>
+<div class="line">Terraform Cloud/EP driver を利用するにあたっては、Exastro IT Automation がインストール済みであることが前提です。</div>
+<div class="line">Exastro IT Automation のインストール方法に関しては、<a class="reference internal" href="../../installation/online/exastro/kubernetes.html"><span class="doc">Exastro on Kubernetes - Online</span></a> を参照してください。</div>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">1.2. </span>システム構成<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Terraform Cloud/EP driver は Exastro IT Automation のデプロイ時に選択した場合にのみ提供されます。</div>
+<div class="line"><br /></div>
+<div class="line">Terraform の利用については、ITA サーバとは別に Terraform Enterprise サーバか、クラウドサービスである Terraform Cloud を利用する必要があります。</div>
+<div class="line">Terraform の自動構成の実行対象がクラウド上から直接通信できないオンプレミス上にある場合は、Terraform Cloud Agents を利用して投入する構成が考えられます。</div>
+<div class="line"><br /></div>
+<div class="line">以下に Terraform Cloud/EP におけるシステム構成イメージを記載します。</div>
+</div>
+<section id="id3">
+<h3><span class="section-number">1.2.1. </span>システム構成イメージ<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../../_images/terraform_cloud_ep.png"><img alt="Terraform Cloud/EP システム構成イメージ" src="../../_images/terraform_cloud_ep.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.1 </span><span class="caption-text">Terraform Cloud/EP システム構成イメージ</span><a class="headerlink" href="#id6" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id7">
+<caption><span class="caption-number">表 1.10 </span><span class="caption-text">システム通信要件</span><a class="headerlink" href="#id7" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+<col style="width: 37.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">通信番号</div>
+<div class="line">※1</div>
+</div>
+</th>
+<th class="head"><p>FROM</p></th>
+<th class="head"><p>TO</p></th>
+<th class="head"><div class="line-block">
+<div class="line">プロトコル</div>
+<div class="line">(ポート番号※2)</div>
+</div>
+</th>
+<th class="head"><p>主な用途</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>①</p></td>
+<td><div class="line-block">
+<div class="line">ITAサーバ</div>
+<div class="line">(Web/AP機能)</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Terraform</div>
+<div class="line">※3</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">https</div>
+<div class="line">[443/tcp]</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">・ITA 画面での Organization/Workspace を Terraform 側への登録。</div>
+<div class="line">・ITA 画面での Organization/Workspace/Policy/PolicySet の情報取得。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>②</p></td>
+<td><div class="line-block">
+<div class="line">ITAサーバ</div>
+<div class="line">(Backyard機能)</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Terraform</div>
+<div class="line">※3</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">https</div>
+<div class="line">[443/tcp]</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">作業実行時の Terraform へのPlan/PolicyCheck/Apply の実行および結果の取得。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>③</p></td>
+<td><div class="line-block">
+<div class="line">Terraform</div>
+<div class="line">※3</div>
+</div>
+</td>
+<td><p>対象機器</p></td>
+<td><div class="line-block">
+<div class="line">Any</div>
+<div class="line">(利用する Terraformプロバイダにより異なる)</div>
+</div>
+</td>
+<td><p>Terraform から対象機器/クラウドサービスへのAPI 投入やコマンド実行</p></td>
+</tr>
+<tr class="row-odd"><td><p>④-1</p></td>
+<td><p>Terraform Cloud Agents</p></td>
+<td><div class="line-block">
+<div class="line">Terraform</div>
+<div class="line">※3</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">https</div>
+<div class="line">[443/tcp]</div>
+</div>
+</td>
+<td><p>Terraform Cloud Agent から Terraform 本体へAPI 通信を行う。</p></td>
+</tr>
+<tr class="row-even"><td><p>④-2</p></td>
+<td><p>Terraform Cloud Agents</p></td>
+<td><p>対象機器</p></td>
+<td><div class="line-block">
+<div class="line">Any</div>
+<div class="line">(利用する Terraformプロバイダにより異なる)</div>
+</div>
+</td>
+<td><p>Terraform から対象機器/クラウドサービスへのAPI 投入やコマンド実行</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">※1 Terraform Cloud/EPの構成イメージの番号と紐づく通信番号を記載。</div>
+<div class="line">※2 ポート番号は標準的なポート番号を記載。</div>
+<div class="line">※3 本記載の Terraform は、Terraform Enterprise および Terraform Cloudを指します。</div>
+</div>
+</section>
+</section>
+<section id="id4">
+<h2><span class="section-number">1.3. </span>システム要件<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Terraform Cloud/EP driver は Exastro IT Automation システムのシステム要件に準拠するため、<a class="reference internal" href="../../installation/online/exastro/kubernetes.html"><span class="doc">Exastro on Kubernetes - Online</span></a> を参照してください。</div>
+<div class="line">ここではTerraform Enterprise および Terraform Cloudのシステム要件を記載します。</div>
+</div>
+<table class="docutils align-left" id="id8">
+<caption><span class="caption-number">表 1.11 </span><span class="caption-text">Terraform 動作確認済みバージョン</span><a class="headerlink" href="#id8" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">システム</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">Terraformバージョン</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">注意事項</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">Terraform Enterprise</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">・1.4.6</div>
+<div class="line">・1.1.0</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">Terraform Cloud</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">・1.4.6</div>
+<div class="line">・1.4.0</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="configuration-terraform-cloud-ep-initial-setting">
+<span id="id5"></span><h2><span class="section-number">1.4. </span>初期設定<a class="headerlink" href="#configuration-terraform-cloud-ep-initial-setting" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Terraform Cloud/EP driver から Terraform に連携するために、Terraform からユーザトークンを発行する必要があります。</div>
+<div class="line">ブラウザより、Terraform にログインし [User Settings] &gt; [Tokens] &gt; [Create an API token]の順に押下することで発行されます。</div>
+</div>
+<figure class="align-default" id="id9">
+<a class="reference internal image-reference" href="../../_images/create_user_token.png"><img alt="ユーザトークン発行" src="../../_images/create_user_token.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.2 </span><span class="caption-text">ユーザトークン発行</span><a class="headerlink" href="#id9" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">発行されたユーザトークンは Exastro IT Automation システムに登録する必要があります。</div>
+<div class="line">マニュアル「<a class="reference internal" href="../../manuals/terraform_driver/terraform_cloud_ep.html"><span class="doc">Terraform Cloud/EP driver</span></a> -&gt; <a class="reference internal" href="../../manuals/terraform_driver/terraform_cloud_ep.html#terraform-cloud-ep-interface-information"><span class="std std-ref">インターフェース情報</span></a>」 を参照し、登録を行ってください。</div>
+</div>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span>Terraform</a></li>
+    <li class="next"><a href="terraform_cli.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">2. </span>Terraform CLI</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.7/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

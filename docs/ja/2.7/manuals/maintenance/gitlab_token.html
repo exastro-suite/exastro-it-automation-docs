@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>10. Gitlab認証トークンの更新手順 &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="11. データの物理削除" href="physical_deletion.html" />
+    <link rel="prev" title="9. オペレーション削除管理" href="operation_autoclean.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/manuals/maintenance/gitlab_token.html" selected>current</option>
+              <option value="../../../../ja/2.7/manuals/maintenance/gitlab_token.html" selected>2.7(current)</option>
+              <option value="../../../../ja/2.6/manuals/maintenance/gitlab_token.html">2.6</option>
+              <option value="../../../../ja/2.5/manuals/maintenance/gitlab_token.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/maintenance/gitlab_token.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/maintenance/gitlab_token.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/maintenance/gitlab_token.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/maintenance/gitlab_token.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/maintenance/gitlab_token.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/manuals/maintenance/gitlab_token.html" selected>日本語</option>
+              <option value="../../../../en/2.7/manuals/maintenance/gitlab_token.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="operation_autoclean.html" title="前のトピックへ"><span class="section-number">9. </span>オペレーション削除管理</a></li>
+        <li class="next"><a href="physical_deletion.html" title="次のトピックへ"><span class="section-number">11. </span>データの物理削除</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../it_automation_base/index.html">基本操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../host_group/index.html">ホストグループ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible-driver/index.html">Ansible ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform_driver/index.html">Terraform ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import/index.html">エクスポート・インポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cicd_for_iac/index.html">CI/CD for IaC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">メンテナンス</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="service_list.html">1. サービス一覧</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log_list.html">2. ログ一覧</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log_level.html">3. ログレベル</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../share/ja/manuals/maintenance/log_aggregation.html">4. ログの集約</a></li>
+<li class="toctree-l3"><a class="reference internal" href="monitoring.html">5. 監視</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintenance_mode.html">6. メンテナンスモード</a></li>
+<li class="toctree-l3"><a class="reference internal" href="backup_and_restore.html">7. データバックアップ・リストア</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file_autoclean.html">8. ファイル削除機能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="operation_autoclean.html">9. オペレーション削除管理</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">10. Gitlab認証トークンの更新手順</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">10.1. 目的</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">10.2. 前提条件</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id3">10.2.1. 条件</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">10.3. 概要</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">10.4. ルートトークンの有効期限切れ対応</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id6">10.4.1. Gitlab側でルートトークンを新規発行</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#ita">10.4.2. 新規発行したルートトークンをITAに反映</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#organization">10.5. Organization毎のパーソナルアクセストークンの有効期限切れ対応</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id12">10.5.1. Gitlab側でパーソナルアクセストークンを新規発行</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id18">10.5.2. 新規発行したパーソナルアクセストークンをITAに反映</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="physical_deletion.html">11. データの物理削除</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">10. Gitlab認証トークンの更新手順</a><ul>
+<li><a class="reference internal" href="#id1">10.1. 目的</a></li>
+<li><a class="reference internal" href="#id2">10.2. 前提条件</a><ul>
+<li><a class="reference internal" href="#id3">10.2.1. 条件</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">10.3. 概要</a></li>
+<li><a class="reference internal" href="#id5">10.4. ルートトークンの有効期限切れ対応</a><ul>
+<li><a class="reference internal" href="#id6">10.4.1. Gitlab側でルートトークンを新規発行</a><ul>
+<li><a class="reference internal" href="#id7">方法１：ブラウザで実行</a></li>
+<li><a class="reference internal" href="#id8">方法２：コマンドで実行</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ita">10.4.2. 新規発行したルートトークンをITAに反映</a><ul>
+<li><a class="reference internal" href="#docker-compose">方法１：docker-compose版</a><ul>
+<li><a class="reference internal" href="#env">.envを修正</a></li>
+<li><a class="reference internal" href="#id10">修正した.envを反映</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#kubenetes">方法２：Kubenetes版</a><ul>
+<li><a class="reference internal" href="#values-yaml">values.yamlを修正</a></li>
+<li><a class="reference internal" href="#id11">修正したvalues.yamlを反映</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#organization">10.5. Organization毎のパーソナルアクセストークンの有効期限切れ対応</a><ul>
+<li><a class="reference internal" href="#id12">10.5.1. Gitlab側でパーソナルアクセストークンを新規発行</a><ul>
+<li><a class="reference internal" href="#db">方法１・２共通：DBに接続して実施</a><ul>
+<li><a class="reference internal" href="#id13">現在使用しているユーザ・トークンを確認</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14">方法１：ブラウザで実行</a></li>
+<li><a class="reference internal" href="#id15">方法２：コマンドで実行</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id18">10.5.2. 新規発行したパーソナルアクセストークンをITAに反映</a><ul>
+<li><a class="reference internal" href="#id19">DBに接続して実施</a><ul>
+<li><a class="reference internal" href="#id20">対象レコードの確認</a></li>
+<li><a class="reference internal" href="#id21">対象レコードの更新</a></li>
+<li><a class="reference internal" href="#id22">対象レコードの更新確認</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">メンテナンス</a></li>
+    
+    <li><span class="section-number">10. </span>Gitlab認証トークンの更新手順</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="gitlab">
+<h1><span class="section-number">10. </span>Gitlab認証トークンの更新手順<a class="headerlink" href="#gitlab" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2><span class="section-number">10.1. </span>目的<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Gitlabのバージョン16からアクセストークンの有効期限が（有効期限が設定されていなかったものも含めて）1年以内になりました。</div>
+<div class="line">（参照：<a class="reference external" href="https://docs.gitlab.com/update/deprecations/#non-expiring-access-tokens">https://docs.gitlab.com/update/deprecations/#non-expiring-access-tokens</a> ）</div>
+</div>
+<div class="line-block">
+<div class="line">Exastroでは、Gitlabのルートトークンを使用して、Organization作成時にGitlabのパーソナルアクセストークンを生成しています。</div>
+<div class="line">ルートトークンの有効期限が切れてしまうことで、新規Organization作成時にGitlabのパーソナルアクセストークンを生成できなくなります。</div>
+<div class="line">また、Organization作成時に生成したGitlabのパーソナルアクセストークンの有効期限が切れてしまうことで、Ansible Automation Platform を用いたAnsible作業実行ができなくなります。</div>
+<div class="line">上記問題を解決する機能を提供するまでの運用回避策として、本頁では手動でのトークン更新手順を説明します。</div>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">10.2. </span>前提条件<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本頁で説明するGitlabトークンの更新手順では、下記の前提条件を満たしている必要があります。</div>
+</div>
+<section id="id3">
+<h3><span class="section-number">10.2.1. </span>条件<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<ul>
+<li><div class="line-block">
+<div class="line">ITAが使用しているDBに対してレコード操作できること</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">下記のいずれかの条件を満たしていること</div>
+</div>
+<ul class="simple">
+<li><p>Gitlabをブラウザで表示でき、ルートユーザとしてログインができること</p></li>
+<li><p>Gitlabを動作させているホスト（またはコンテナ内）で <strong class="command">gitlab-rails</strong> が実行できること</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id4">
+<h2><span class="section-number">10.3. </span>概要<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">大まかな手順の流れは下記の通りです。</div>
+</div>
+<ol class="arabic simple">
+<li><p>ルートトークンの有効期限切れ対応</p>
+<ol class="arabic simple">
+<li><p>Gitlab側でルートトークンを新規発行</p></li>
+<li><p>新規発行したルートトークンをITAに反映</p></li>
+</ol>
+</li>
+<li><p>Organization毎のパーソナルアクセストークンの有効期限切れ対応</p>
+<ol class="arabic simple">
+<li><p>Gitlab側でパーソナルアクセストークンを新規発行</p></li>
+<li><p>新規発行したパーソナルアクセストークンをITAに反映</p></li>
+</ol>
+</li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">危険</p>
+<div class="line-block">
+<div class="line">本手順では、サービスの一時的な停止が発生する可能性があります。</div>
+</div>
+</div>
+</section>
+<section id="id5">
+<h2><span class="section-number">10.4. </span>ルートトークンの有効期限切れ対応<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本頁で説明するコマンド例及び実行結果については下記条件で記載しています。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">Gitlabのルートユーザ名：root</div>
+</div>
+</li>
+</ul>
+<section id="id6">
+<h3><span class="section-number">10.4.1. </span>Gitlab側でルートトークンを新規発行<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">前提条件に応じて方法１または方法２で実施してください。</div>
+</div>
+<section id="id7">
+<h4>方法１：ブラウザで実行<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><p>ルートユーザでサインインします。</p>
+<figure class="align-default" id="id23">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_01.png"><img alt="ルートユーザのサインイン画面" src="../../_images/gitlab_token_01.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.1 </span><span class="caption-text">ルートユーザのサインイン画面</span><a class="headerlink" href="#id23" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>左上のアイコンを押下し、更に「Edit profile」を押下し、プロフィール編集画面を表示します。</p>
+<figure class="align-default" id="id24">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_02.png"><img alt="左上のアイコンを押下" src="../../_images/gitlab_token_02.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.2 </span><span class="caption-text">左上のアイコンを押下</span><a class="headerlink" href="#id24" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id25">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_03.png"><img alt="「Edit profile」を押下" src="../../_images/gitlab_token_03.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.3 </span><span class="caption-text">「Edit profile」を押下</span><a class="headerlink" href="#id25" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>「Access tokens」を押下し、トークン管理画面を表示します。</p>
+<figure class="align-default" id="id26">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_04.png"><img alt="「Access tokens」を押下" src="../../_images/gitlab_token_04.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.4 </span><span class="caption-text">「Access tokens」を押下</span><a class="headerlink" href="#id26" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>「Add new token」を押下し、トークン新規発行画面を表示します。</p>
+<figure class="align-default" id="id27">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_05.png"><img alt="「Add new token」を押下" src="../../_images/gitlab_token_05.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.5 </span><span class="caption-text">「Add new token」を押下</span><a class="headerlink" href="#id27" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>下記情報を入力します。</p>
+<ul>
+<li><div class="line-block">
+<div class="line">「Token name」は任意値ですが、管理上区別できるように別の名称とすることを推奨します。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">「Expiration date」は1年後の日付を選択します。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">「Select scopes」は「api」「write_repository」「sudo」を選択します。</div>
+</div>
+</li>
+</ul>
+<figure class="align-default" id="id28">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_06.png"><img alt="トークン発行画面" src="../../_images/gitlab_token_06.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.6 </span><span class="caption-text">トークン発行画面</span><a class="headerlink" href="#id28" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>「Create personal access token」を押下し、ルートトークンを新規作成します。</p>
+<figure class="align-default" id="id29">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_07.png"><img alt="「Create personal access token」を押下" src="../../_images/gitlab_token_07.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.7 </span><span class="caption-text">「Create personal access token」を押下</span><a class="headerlink" href="#id29" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>「Click to reveal」を押下し、ルートトークンを表示・コピーします。</p>
+<figure class="align-default" id="id30">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_08.png"><img alt="「Click to reveal」を押下" src="../../_images/gitlab_token_08.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.8 </span><span class="caption-text">「Click to reveal」を押下</span><a class="headerlink" href="#id30" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+<section id="id8">
+<h4>方法２：コマンドで実行<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Gitlabを実行しているサーバ（またはコンテナ内）に接続して下記コマンドを実施します。</div>
+<div class="line">Rubyの起動に数分かかるため、正常でも数分程度（マシンスペックに依ります）無応答状態になります。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">作成するルートトークンにつける名称を「 <code class="docutils literal notranslate"><span class="pre">name:</span> <span class="pre">'&lt;&lt;ここにルートトークンの名称を代入&gt;&gt;'</span></code> 」に代入します。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">任意値ですが、管理上区別できるように既存のものとは別の名称とすることを推奨します。</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">root@gitlab:/#</span>
+<span class="go"> gitlab-rails runner &quot;token = User.find_by_username(&#39;root&#39;).personal_access_tokens.create(scopes: [&#39;api&#39;,&#39;sudo&#39;,&#39;write_repository&#39;], name: &#39;&lt;&lt;ここにルートトークンの名称を代入&gt;&gt;&#39;, expires_at: 365.days.from_now); token_str = SecureRandom.hex(10); p token_str; token.set_token(token_str); token.save!&quot;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">20桁の文字列のみが出力されれば成功しています。</div>
+<div class="line">※成功した場合、表示された20桁の文字列がルートトークンです。</div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&quot;81453fa40820de8a4ad6&quot;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">なお、コマンドは下記ドキュメントを参考に作成しています。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://docs.gitlab.com/17.11/administration/operations/rails_console/#using-the-rails-runner">GitlabのRailsRunnerについて</a></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://docs.gitlab.com/17.11/user/profile/personal_access_tokens/#create-a-personal-access-token-programmatically">GitlabのRailsRunnerを使用したトークンの作成について</a></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section id="ita">
+<h3><span class="section-number">10.4.2. </span>新規発行したルートトークンをITAに反映<a class="headerlink" href="#ita" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">ITAをインストールした環境に応じて方法１または方法２で実施してください。</div>
+</div>
+<section id="docker-compose">
+<h4>方法１：docker-compose版<a class="headerlink" href="#docker-compose" title="Link to this heading">¶</a></h4>
+<section id="env">
+<h5>.envを修正<a class="headerlink" href="#env" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">「 <code class="file docutils literal notranslate"><span class="pre">~/exastro-docker-compose/.env</span></code> 」の「 <code class="docutils literal notranslate"><span class="pre">GITLAB_ROOT_TOKEN</span></code> 」の値を修正します。</div>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>### Parameters when using GitLab container
+...
+<span class="gd">- GITLAB_ROOT_TOKEN=glpat-oldoldoldoldoldoldol</span>
+<span class="gi">+ GITLAB_ROOT_TOKEN=glpat-RRRRRRRRRRRRRRRRRRRR</span>
+...
+</pre></div>
+</div>
+</section>
+<section id="id10">
+<h5>修正した.envを反映<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">「<code class="file docutils literal notranslate"><span class="pre">~/exastro-docker-compose/setup.sh</span></code> 」を実行して修正を反映します。</div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/exastro-docker-compose</span>
+<span class="go">sh setup.sh install</span>
+
+<span class="go">...</span>
+<span class="go">Regenerate .env file? (y/n) [default: n]: n</span>
+<span class="go">...</span>
+<span class="go">Deploy Exastro containers now? (y/n) [default: n]: y</span>
+<span class="go">...</span>
+</pre></div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">危険</p>
+<div class="line-block">
+<div class="line">実行時に各種コンテナの再起動をするため、サービスが一時的に停止します。</div>
+</div>
+</div>
+</section>
+</section>
+<section id="kubenetes">
+<h4>方法２：Kubenetes版<a class="headerlink" href="#kubenetes" title="Link to this heading">¶</a></h4>
+<section id="values-yaml">
+<h5>values.yamlを修正<a class="headerlink" href="#values-yaml" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">「 <code class="docutils literal notranslate"><span class="pre">global.gitlabDefinition.secret.GITLAB_ROOT_TOKEN</span></code> 」の値を修正します。</div>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>global:
+...
+<span class="w"> </span> gitlabDefinition:
+<span class="w"> </span>   config:
+<span class="w"> </span>     ...
+<span class="w"> </span>   secret:
+<span class="w"> </span>     ...
+<span class="gd">-      GITLAB_ROOT_TOKEN: &quot;glpat-oldoldoldoldoldoldol&quot;</span>
+<span class="gi">+      GITLAB_ROOT_TOKEN: &quot;glpat-RRRRRRRRRRRRRRRRRRRR&quot;</span>
+...
+</pre></div>
+</div>
+</section>
+<section id="id11">
+<h5>修正したvalues.yamlを反映<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">「 <strong class="command">helm upgrade</strong> 」を実行した後、「 <strong class="command">kubectl rollout</strong> 」を実行して修正を反映します。</div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">helm upgrade exastro exastro/exastro --install --namespace exastro --create-namespace --values values.yaml</span>
+
+<span class="go">kubectl rollout restart deploy/ita-api-admin -n exastro</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+<section id="organization">
+<h2><span class="section-number">10.5. </span>Organization毎のパーソナルアクセストークンの有効期限切れ対応<a class="headerlink" href="#organization" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本頁で説明するコマンド例及び実行結果については下記条件で記載しています。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">Gitlabのルートユーザ名：root</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">対象のオーガナイゼーションID：test-org-01</div>
+</div>
+</li>
+</ul>
+<section id="id12">
+<h3><span class="section-number">10.5.1. </span>Gitlab側でパーソナルアクセストークンを新規発行<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">前提条件に応じて方法１または方法２で実施してください。</div>
+</div>
+<section id="db">
+<h4>方法１・２共通：DBに接続して実施<a class="headerlink" href="#db" title="Link to this heading">¶</a></h4>
+<section id="id13">
+<h5>現在使用しているユーザ・トークンを確認<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">対象のORGANIZATION_IDを持つレコードのGITLAB_USER・GITLAB_TOKENの値を確認します。</div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[none]&gt; use ita_db;</span>
+<span class="go">[ita_db]&gt; select PRIMARY_KEY,ORGANIZATION_ID,GITLAB_USER,GITLAB_TOKEN,DISUSE_FLAG,LAST_UPDATE_TIMESTAMP from `t_comn_organization_db_info` where DISUSE_FLAG = &quot;0&quot;;</span>
+
+<span class="go">+--------------------------------------+-----------------+----------------------------------------------+----------------------------+-------------+----------------------------+</span>
+<span class="go">| PRIMARY_KEY                          | ORGANIZATION_ID | GITLAB_USER                                  | GITLAB_TOKEN               | DISUSE_FLAG | LAST_UPDATE_TIMESTAMP      |</span>
+<span class="go">+--------------------------------------+-----------------+----------------------------------------------+----------------------------+-------------+----------------------------+</span>
+<span class="go">| 4897f2a4-6167-4efd-bcf9-8919c7174691 | test-org-01     | ITA_ORG_AA1B2F4F-DB58-4ACB-B957-2827DD4E2624 | glpat-XXXXXXXXXXXXXXXXXXXX | 0           | 2025-07-16 08:10:42.684294 |</span>
+<span class="go">| f15d6f77-440f-456e-a350-ac6adcc429df | test-org-02     | ITA_ORG_9DF4997D-6AA6-493B-9EAC-EFF9A33012AF | glpat-AAAAAAAAAAAAAAAAAAAA | 0           | 2025-07-16 16:48:57.401197 |</span>
+<span class="go">| 28e3f7a1-93bd-40f9-9818-d8e146113709 | test-org-03     | ITA_ORG_66F72495-2CE3-4234-A890-6A6710F2A9BF | glpat-BBBBBBBBBBBBBBBBBBBB | 0           | 2025-07-16 16:49:30.051664 |</span>
+<span class="go">| 75b24423-dc4e-4f6d-b334-100305dda867 | test-org-04     | ITA_ORG_C80E920F-8279-4DFA-97EC-A68E4017D6D2 | glpat-CCCCCCCCCCCCCCCCCCCC | 0           | 2025-07-16 16:52:38.068131 |</span>
+<span class="go">| 955927c2-49fb-4ea8-9853-eab8c957b390 | test-org-05     | ITA_ORG_A96A7A66-45BD-4AFE-B7EF-FF554956A1BA | glpat-DDDDDDDDDDDDDDDDDDDD | 0           | 2025-07-16 16:50:41.399886 |</span>
+<span class="go">+--------------------------------------+-----------------+----------------------------------------------+----------------------------+-------------+----------------------------+</span>
+<span class="go">6 rows in set (0.001 sec)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id14">
+<h4>方法１：ブラウザで実行<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><p>ルートユーザでサインインします。</p>
+<figure class="align-default" id="id31">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_01.png"><img alt="ルートユーザのサインイン画面" src="../../_images/gitlab_token_01.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.9 </span><span class="caption-text">ルートユーザのサインイン画面</span><a class="headerlink" href="#id31" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>「Admin」を押下し、Admin areaを表示します。</p>
+<figure class="align-default" id="id32">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_09.png"><img alt="「Admin」を押下" src="../../_images/gitlab_token_09.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.10 </span><span class="caption-text">「Admin」を押下</span><a class="headerlink" href="#id32" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>「Users」を押下し、Admin area / Usersを表示します。</p>
+<figure class="align-default" id="id33">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_10.png"><img alt="「Users」を押下" src="../../_images/gitlab_token_10.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.11 </span><span class="caption-text">「Users」を押下</span><a class="headerlink" href="#id33" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>上記の「GITLAB_USER」で表示されていたユーザ名を押下し、ユーザの詳細画面を表示します。</p>
+<figure class="align-default" id="id34">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_11.png"><img alt="ユーザ名を押下" src="../../_images/gitlab_token_11.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.12 </span><span class="caption-text">ユーザ名を押下</span><a class="headerlink" href="#id34" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>「Impersonate」を押下し、該当ユーザとしてログインします。</p>
+<figure class="align-default" id="id35">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_12.png"><img alt="「Impersonate」を押下" src="../../_images/gitlab_token_12.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.13 </span><span class="caption-text">「Impersonate」を押下</span><a class="headerlink" href="#id35" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>左上のアイコンを押下し、更に「Edit profile」を押下し、プロフィール編集画面を表示します。</p>
+<figure class="align-default" id="id36">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_13.png"><img alt="左上のアイコンを押下" src="../../_images/gitlab_token_13.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.14 </span><span class="caption-text">左上のアイコンを押下</span><a class="headerlink" href="#id36" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id37">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_14.png"><img alt="「Edit profile」を押下" src="../../_images/gitlab_token_14.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.15 </span><span class="caption-text">「Edit profile」を押下</span><a class="headerlink" href="#id37" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>「Access tokens」を押下し、パーソナルアクセストークン管理画面を表示します。</p>
+<figure class="align-default" id="id38">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_15.png"><img alt="「Access tokens」を押下" src="../../_images/gitlab_token_15.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.16 </span><span class="caption-text">「Access tokens」を押下</span><a class="headerlink" href="#id38" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>「Add new token」を押下し、パーソナルアクセストークン新規発行画面を表示します。</p>
+<figure class="align-default" id="id39">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_16.png"><img alt="「Add new token」を押下" src="../../_images/gitlab_token_16.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.17 </span><span class="caption-text">「Add new token」を押下</span><a class="headerlink" href="#id39" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>下記情報を入力します。</p>
+<ul>
+<li><div class="line-block">
+<div class="line">「Token name」は任意値（デフォルトではGITLAB_USERと同値）ですが、管理上区別できるように別の名称とすることを推奨します。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">「Expiration date」は1年後の日付を選択します。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">「Select scopes」は「api」のみを選択します。</div>
+</div>
+</li>
+</ul>
+<figure class="align-default" id="id40">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_17.png"><img alt="トークン発行画面" src="../../_images/gitlab_token_17.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.18 </span><span class="caption-text">トークン発行画面</span><a class="headerlink" href="#id40" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>「Create personal access token」を押下し、パーソナルアクセストークンを新規作成します。</p>
+<figure class="align-default" id="id41">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_18.png"><img alt="「Create personal access token」を押下" src="../../_images/gitlab_token_18.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.19 </span><span class="caption-text">「Create personal access token」を押下</span><a class="headerlink" href="#id41" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>「Click to reveal」を押下し、パーソナルアクセストークンを表示・コピーします。</p>
+<figure class="align-default" id="id42">
+<a class="reference internal image-reference" href="../../_images/gitlab_token_19.png"><img alt="「Click to reveal」を押下" src="../../_images/gitlab_token_19.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 10.20 </span><span class="caption-text">「Click to reveal」を押下</span><a class="headerlink" href="#id42" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+<section id="id15">
+<h4>方法２：コマンドで実行<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Gitlabを実行しているサーバ（またはコンテナ内）に接続して下記コマンドを実施します。</div>
+<div class="line">Rubyの起動に数分かかるため、正常でも数分程度（マシンスペックに依ります）無応答状態になります。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">作成するパーソナルアクセストークンにつける名称を「 <code class="docutils literal notranslate"><span class="pre">name:</span> <span class="pre">'&lt;&lt;ここにパーソナルアクセストークンの名称を代入&gt;&gt;'</span></code> 」に代入します。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">任意値で、デフォルトではGITLAB_USERと同値ですが、管理上区別できるように別の名称とすることを推奨します。</div>
+</div>
+</li>
+</ul>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">■ 現在使用しているユーザ・トークンを確認</span> で確認したGITLAB_USERの値を「 <code class="docutils literal notranslate"><span class="pre">User.find_by_username('&lt;&lt;ここにGITLAB_USERを代入&gt;&gt;')</span></code> 」に代入します。</div>
+</div>
+</li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">root@gitlab:/#</span>
+<span class="go"> gitlab-rails runner &quot;token = User.find_by_username(&#39;&lt;&lt;ここにGITLAB_USERを代入&gt;&gt;&#39;).personal_access_tokens.create(scopes: [&#39;api&#39;], name: &#39;&lt;&lt;ここにパーソナルアクセストークンの名称を代入&gt;&gt;&#39;, expires_at: 365.days.from_now); token_str = SecureRandom.hex(10); p token_str; token.set_token(token_str); token.save!&quot;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">20桁の文字列のみが出力されれば成功しています。</div>
+<div class="line">※成功した場合、表示された20桁の文字列がパーソナルアクセストークンです。</div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&quot;81453fa40820de8a4ad6&quot;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">なお、コマンドは下記ドキュメントを参考に作成しています。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://docs.gitlab.com/17.11/administration/operations/rails_console/#using-the-rails-runner">GitlabのRailsRunnerについて</a></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://docs.gitlab.com/17.11/user/profile/personal_access_tokens/#create-a-personal-access-token-programmatically">GitlabのRailsRunnerを使用したトークンの作成について</a></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section id="id18">
+<h3><span class="section-number">10.5.2. </span>新規発行したパーソナルアクセストークンをITAに反映<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
+<section id="id19">
+<h4>DBに接続して実施<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h4>
+<section id="id20">
+<h5>対象レコードの確認<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">対象のORGANIZATION_IDを持つレコードのGITLAB_USERの値を確認します。</div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[none]&gt; use ita_db;</span>
+<span class="go">[ita_db]&gt; select PRIMARY_KEY,ORGANIZATION_ID,GITLAB_USER,GITLAB_TOKEN,DISUSE_FLAG,LAST_UPDATE_TIMESTAMP from `t_comn_organization_db_info` where DISUSE_FLAG = &quot;0&quot;;</span>
+
+<span class="go">+--------------------------------------+-----------------+----------------------------------------------+----------------------------+-------------+----------------------------+</span>
+<span class="go">| PRIMARY_KEY                          | ORGANIZATION_ID | GITLAB_USER                                  | GITLAB_TOKEN               | DISUSE_FLAG | LAST_UPDATE_TIMESTAMP      |</span>
+<span class="go">+--------------------------------------+-----------------+----------------------------------------------+----------------------------+-------------+----------------------------+</span>
+<span class="go">| 4897f2a4-6167-4efd-bcf9-8919c7174691 | test-org-01     | ITA_ORG_AA1B2F4F-DB58-4ACB-B957-2827DD4E2624 | glpat-XXXXXXXXXXXXXXXXXXXX | 0           | 2025-07-16 08:10:42.684294 |</span>
+<span class="go">| f15d6f77-440f-456e-a350-ac6adcc429df | test-org-02     | ITA_ORG_9DF4997D-6AA6-493B-9EAC-EFF9A33012AF | glpat-AAAAAAAAAAAAAAAAAAAA | 0           | 2025-07-16 16:48:57.401197 |</span>
+<span class="go">| 28e3f7a1-93bd-40f9-9818-d8e146113709 | test-org-03     | ITA_ORG_66F72495-2CE3-4234-A890-6A6710F2A9BF | glpat-BBBBBBBBBBBBBBBBBBBB | 0           | 2025-07-16 16:49:30.051664 |</span>
+<span class="go">| 75b24423-dc4e-4f6d-b334-100305dda867 | test-org-04     | ITA_ORG_C80E920F-8279-4DFA-97EC-A68E4017D6D2 | glpat-CCCCCCCCCCCCCCCCCCCC | 0           | 2025-07-16 16:52:38.068131 |</span>
+<span class="go">| 955927c2-49fb-4ea8-9853-eab8c957b390 | test-org-05     | ITA_ORG_A96A7A66-45BD-4AFE-B7EF-FF554956A1BA | glpat-DDDDDDDDDDDDDDDDDDDD | 0           | 2025-07-16 16:50:41.399886 |</span>
+<span class="go">+--------------------------------------+-----------------+----------------------------------------------+----------------------------+-------------+----------------------------+</span>
+<span class="go">6 rows in set (0.001 sec)</span>
+</pre></div>
+</div>
+</section>
+<section id="id21">
+<h5>対象レコードの更新<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h5>
+<ul>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">10.5.1. Gitlab側でパーソナルアクセストークンを新規発行</span> で発行したパーソナルアクセストークンを「 <code class="docutils literal notranslate"><span class="pre">GITLAB_TOKEN</span> <span class="pre">=</span> <span class="pre">&quot;&lt;&lt;ここにパーソナルアクセストークンを代入&gt;&gt;&quot;</span></code> 」に代入します。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">■ 対象レコードの確認</span> で確認したORGANIZATION_IDの値を「 <code class="docutils literal notranslate"><span class="pre">ORGANIZATION_ID</span> <span class="pre">=</span> <span class="pre">&quot;&lt;&lt;ここにORGANIZATION_IDを代入&gt;&gt;&quot;</span></code> 」に代入します。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">■ 対象レコードの確認</span> で確認したGITLAB_USERの値を「 <code class="docutils literal notranslate"><span class="pre">GITLAB_USER</span> <span class="pre">=</span> <span class="pre">&quot;&lt;&lt;ここにGITLAB_USERを代入&gt;&gt;&quot;</span></code> 」に代入します。</div>
+</div>
+</li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[ita_db]&gt; update `t_comn_organization_db_info` set GITLAB_TOKEN = &quot;&lt;&lt;ここにパーソナルアクセストークンを代入&gt;&gt;&quot; where ORGANIZATION_ID = &quot;&lt;&lt;ここにORGANIZATION_IDを代入&gt;&gt;&quot; and GITLAB_USER = &quot;&lt;&lt;ここにGITLAB_USERを代入&gt;&gt;&quot; and DISUSE_FLAG = &quot;0&quot;;</span>
+
+<span class="go">Query OK, 1 row affected (0.006 sec)</span>
+<span class="go">Rows matched: 1  Changed: 1  Warnings: 0</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">「 <code class="docutils literal notranslate"><span class="pre">Query</span> <span class="pre">OK,</span> <span class="pre">1</span> <span class="pre">row</span> <span class="pre">affected</span></code> 」と表示されることを確認してください。</div>
+</div>
+</section>
+<section id="id22">
+<h5>対象レコードの更新確認<a class="headerlink" href="#id22" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">対象のORGANIZATION_IDを持つレコードのGITLAB_TOKENの値のみが変更されていることを確認してください。</div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[ita_db]&gt; select PRIMARY_KEY,ORGANIZATION_ID,GITLAB_USER,GITLAB_TOKEN,DISUSE_FLAG,LAST_UPDATE_TIMESTAMP from `t_comn_organization_db_info` where DISUSE_FLAG = &quot;0&quot;;</span>
+
+<span class="go">+--------------------------------------+-----------------+----------------------------------------------+----------------------------+-------------+----------------------------+</span>
+<span class="go">| PRIMARY_KEY                          | ORGANIZATION_ID | GITLAB_USER                                  | GITLAB_TOKEN               | DISUSE_FLAG | LAST_UPDATE_TIMESTAMP      |</span>
+<span class="go">+--------------------------------------+-----------------+----------------------------------------------+----------------------------+-------------+----------------------------+</span>
+<span class="go">| 4897f2a4-6167-4efd-bcf9-8919c7174691 | test-org-01     | ITA_ORG_AA1B2F4F-DB58-4ACB-B957-2827DD4E2624 | glpat-YYYYYYYYYYYYYYYYYYYY | 0           | 2025-07-16 08:10:42.684294 |</span>
+<span class="go">| f15d6f77-440f-456e-a350-ac6adcc429df | test-org-02     | ITA_ORG_9DF4997D-6AA6-493B-9EAC-EFF9A33012AF | glpat-AAAAAAAAAAAAAAAAAAAA | 0           | 2025-07-16 16:48:57.401197 |</span>
+<span class="go">| 28e3f7a1-93bd-40f9-9818-d8e146113709 | test-org-03     | ITA_ORG_66F72495-2CE3-4234-A890-6A6710F2A9BF | glpat-BBBBBBBBBBBBBBBBBBBB | 0           | 2025-07-16 16:49:30.051664 |</span>
+<span class="go">| 75b24423-dc4e-4f6d-b334-100305dda867 | test-org-04     | ITA_ORG_C80E920F-8279-4DFA-97EC-A68E4017D6D2 | glpat-CCCCCCCCCCCCCCCCCCCC | 0           | 2025-07-16 16:52:38.068131 |</span>
+<span class="go">| 955927c2-49fb-4ea8-9853-eab8c957b390 | test-org-05     | ITA_ORG_A96A7A66-45BD-4AFE-B7EF-FF554956A1BA | glpat-DDDDDDDDDDDDDDDDDDDD | 0           | 2025-07-16 16:50:41.399886 |</span>
+<span class="go">+--------------------------------------+-----------------+----------------------------------------------+----------------------------+-------------+----------------------------+</span>
+<span class="go">6 rows in set (0.001 sec)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="operation_autoclean.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">9. </span>オペレーション削除管理</a></li>
+    <li class="next"><a href="physical_deletion.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">11. </span>データの物理削除</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.7/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

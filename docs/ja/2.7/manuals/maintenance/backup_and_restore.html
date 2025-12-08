@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>7. データバックアップ・リストア &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/tabs.js?v=3030b3cb"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="8. ファイル削除機能" href="file_autoclean.html" />
+    <link rel="prev" title="6. メンテナンスモード" href="maintenance_mode.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/manuals/maintenance/backup_and_restore.html" selected>current</option>
+              <option value="../../../../ja/2.7/manuals/maintenance/backup_and_restore.html" selected>2.7(current)</option>
+              <option value="../../../../ja/2.6/manuals/maintenance/backup_and_restore.html">2.6</option>
+              <option value="../../../../ja/2.5/manuals/maintenance/backup_and_restore.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/maintenance/backup_and_restore.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/maintenance/backup_and_restore.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/maintenance/backup_and_restore.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/maintenance/backup_and_restore.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/maintenance/backup_and_restore.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/manuals/maintenance/backup_and_restore.html" selected>日本語</option>
+              <option value="../../../../en/2.7/manuals/maintenance/backup_and_restore.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="maintenance_mode.html" title="前のトピックへ"><span class="section-number">6. </span>メンテナンスモード</a></li>
+        <li class="next"><a href="file_autoclean.html" title="次のトピックへ"><span class="section-number">8. </span>ファイル削除機能</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../it_automation_base/index.html">基本操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../host_group/index.html">ホストグループ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible-driver/index.html">Ansible ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform_driver/index.html">Terraform ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import/index.html">エクスポート・インポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cicd_for_iac/index.html">CI/CD for IaC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">メンテナンス</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="service_list.html">1. サービス一覧</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log_list.html">2. ログ一覧</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log_level.html">3. ログレベル</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../share/ja/manuals/maintenance/log_aggregation.html">4. ログの集約</a></li>
+<li class="toctree-l3"><a class="reference internal" href="monitoring.html">5. 監視</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintenance_mode.html">6. メンテナンスモード</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">7. データバックアップ・リストア</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">7.1. 目的</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">7.2. 前提条件</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id4">7.2.1. 条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#backup-encrypt-key">7.2.2. 暗号化キーのバックアップ</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">7.3. 概要</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">7.4. バックアップ</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id8">7.4.1. サービス停止</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id9">7.4.2. バックアップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id10">7.4.3. サービス再開</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">7.5. リストア</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#check-replica-count-restore">7.5.1. サービス停止</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id13">7.5.2. リストア</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id14">7.5.3. サービス再開</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="file_autoclean.html">8. ファイル削除機能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="operation_autoclean.html">9. オペレーション削除管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gitlab_token.html">10. Gitlab認証トークンの更新手順</a></li>
+<li class="toctree-l3"><a class="reference internal" href="physical_deletion.html">11. データの物理削除</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">7. データバックアップ・リストア</a><ul>
+<li><a class="reference internal" href="#id2">7.1. 目的</a></li>
+<li><a class="reference internal" href="#id3">7.2. 前提条件</a><ul>
+<li><a class="reference internal" href="#id4">7.2.1. 条件</a></li>
+<li><a class="reference internal" href="#backup-encrypt-key">7.2.2. 暗号化キーのバックアップ</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">7.3. 概要</a></li>
+<li><a class="reference internal" href="#id7">7.4. バックアップ</a><ul>
+<li><a class="reference internal" href="#id8">7.4.1. サービス停止</a></li>
+<li><a class="reference internal" href="#id9">7.4.2. バックアップ</a></li>
+<li><a class="reference internal" href="#id10">7.4.3. サービス再開</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id11">7.5. リストア</a><ul>
+<li><a class="reference internal" href="#check-replica-count-restore">7.5.1. サービス停止</a></li>
+<li><a class="reference internal" href="#id13">7.5.2. リストア</a></li>
+<li><a class="reference internal" href="#id14">7.5.3. サービス再開</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">メンテナンス</a></li>
+    
+    <li><span class="section-number">7. </span>データバックアップ・リストア</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="id1">
+<h1><span class="section-number">7. </span>データバックアップ・リストア<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<section id="id2">
+<h2><span class="section-number">7.1. </span>目的<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書では、Exastroシステムで利用する永続データのバックアップとリストア手順について説明します。</div>
+<div class="line">パブリッククラウドの仕組みにより、データバックアップの仕組みが利用可能であればそちらを利用しても問題ありません。</div>
+</div>
+</section>
+<section id="id3">
+<h2><span class="section-number">7.2. </span>前提条件<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本頁で紹介するバックアップ・リストア手順では、下記の前提条件を満たしている必要があります。</div>
+</div>
+<section id="id4">
+<h3><span class="section-number">7.2.1. </span>条件<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<ul>
+<li><div class="line-block">
+<div class="line">下記のコマンドが利用可能なこと</div>
+</div>
+<ul class="simple">
+<li><p><strong class="command">tar</strong></p></li>
+<li><p><strong class="command">kubectl</strong></p></li>
+</ul>
+</li>
+<li><div class="line-block">
+<div class="line">作業環境のサーバで充分なディスクの空き容量があること</div>
+</div>
+</li>
+</ul>
+</section>
+<section id="backup-encrypt-key">
+<span id="id5"></span><h3><span class="section-number">7.2.2. </span>暗号化キーのバックアップ<a class="headerlink" href="#backup-encrypt-key" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Exastro システムのパスワードや認証情報といった機密情報はすべて暗号化されています。</div>
+<div class="line">必ず、下記で取得した暗号化キーをバックアップして、適切に保管してください。</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">危険</p>
+<div class="line-block">
+<div class="line">暗号化キーを紛失した場合、バックアップデータからシステムを復旧した際にデータの復号ができなくなります。</div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-number">リスト 7.1 </span><span class="caption-text">コマンド（Exastro IT Automation ENCRYPT_KEY）</span><a class="headerlink" href="#id15" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>ita-secret-ita-global<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ENCRYPT_KEY}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-number">リスト 7.2 </span><span class="caption-text">出力結果</span><a class="headerlink" href="#id16" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">JnIoXzJtPic2MXFqRl1yI1chMj8hWzQrNypmVn41Pk8</span><span class="o">=</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-number">リスト 7.3 </span><span class="caption-text">コマンド（Exastro Platform ENCRYPT_KEY）</span><a class="headerlink" href="#id17" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>platform-secret-pf-global<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ENCRYPT_KEY}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-number">リスト 7.4 </span><span class="caption-text">出力結果</span><a class="headerlink" href="#id18" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">bHFZe2VEVVM2PmFeQDMqNG4oZT4lTlglLjJJekxBTHE</span><span class="o">=</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="id6">
+<h2><span class="section-number">7.3. </span>概要<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">バックアップ・リストア対象となるデータは下記の3つです。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">バックアップ・リストア対象</div>
+</div>
+<ul class="simple">
+<li><p>Exastro Platform のデータベース</p></li>
+<li><p>Exastro IT Automation のデータベース</p></li>
+<li><p>Exastro IT Automation の共有ファイル</p></li>
+<li><p>Exastro IT Automation OASE のMongoDB</p></li>
+</ul>
+</li>
+</ul>
+<div class="line-block">
+<div class="line">これらのデータを <strong class="command">kubectl</strong> コマンドを利用してバックアップ・リストアします。</div>
+</div>
+<div class="line-block">
+<div class="line">作業の流れは、まず、ユーザからのデータの書き込みを制限するために、リバースプロキシを停止します。</div>
+<div class="line">次にバックヤード処理を停止し、データのバックアップを実施します。</div>
+<div class="line">最後に、作業前の数に Pod 数を戻します。</div>
+</div>
+<div class="line-block">
+<div class="line">リストアの際の作業も同様の流れになります。</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">危険</p>
+<div class="line-block">
+<div class="line">本手順では、サービスの停止が発生します。</div>
+</div>
+</div>
+</section>
+<section id="id7">
+<h2><span class="section-number">7.4. </span>バックアップ<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
+<section id="id8">
+<h3><span class="section-number">7.4.1. </span>サービス停止<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>Pod 起動数の確認</p>
+<div class="line-block">
+<div class="line">作業前の Pod 起動数の確認をし、状態を記録します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-number">リスト 7.5 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy,statefulset<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{range .items[*]}{@.metadata.name}:{@.spec.replicas}{&quot;\n&quot;}&#39;</span><span class="w"> </span>-n<span class="w"> </span>exastro
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-number">リスト 7.6 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id20" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ita-api-admin:1
+ita-api-oase-receiver:1
+ita-api-organization:1
+ita-by-ansible-execute:1
+ita-by-ansible-legacy-role-vars-listup:1
+ita-by-ansible-legacy-vars-listup:1
+ita-by-ansible-pioneer-vars-listup:1
+ita-by-ansible-towermaster-sync:1
+ita-by-cicd-for-iac:1
+ita-by-collector:1
+ita-by-conductor-regularly:1
+ita-by-conductor-synchronize:1
+ita-by-excel-export-import:1
+ita-by-hostgroup-split:1
+ita-by-menu-create:1
+ita-by-menu-export-import:1
+ita-by-oase-conclusion:1
+ita-by-terraform-cli-execute:1
+ita-by-terraform-cli-vars-listup:1
+ita-by-terraform-cloud-ep-execute:1
+ita-by-terraform-cloud-ep-vars-listup:1
+ita-web-server:1
+mariadb:1
+platform-api:1
+platform-auth:1
+platform-job:1
+platform-web:1
+keycloak:1
+mongo:1
+:
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">各Deployment, StatefulSetのサービス名、replicas数が表示されます。</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">バージョンによって、表示されるサービスが異なります。</div>
+</div>
+</div>
+</li>
+<li><p>アプリケーションの停止</p>
+<div class="line-block">
+<div class="line">アプリケーション (platform-auth) の Pod 起動数を 0 に変更し、アクセスを制限します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-number">リスト 7.7 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">0</span><span class="w"> </span>--all<span class="o">=</span><span class="nb">true</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id22">
+<div class="code-block-caption"><span class="caption-number">リスト 7.8 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id22" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>deployment.apps/ita-api-admin<span class="w"> </span>scaled
+deployment.apps/ita-api-oase-receiver<span class="w"> </span>scaled
+deployment.apps/ita-api-organization<span class="w"> </span>scaled
+deployment.apps/ita-by-ansible-execute<span class="w"> </span>scaled
+deployment.apps/ita-by-ansible-legacy-role-vars-listup<span class="w"> </span>scaled
+deployment.apps/ita-by-ansible-legacy-vars-listup<span class="w"> </span>scaled
+deployment.apps/ita-by-ansible-pioneer-vars-listup<span class="w"> </span>scaled
+deployment.apps/ita-by-ansible-towermaster-sync<span class="w"> </span>scaled
+deployment.apps/ita-by-cicd-for-iac<span class="w"> </span>scaled
+deployment.apps/ita-by-collector<span class="w"> </span>scaled
+deployment.apps/ita-by-conductor-regularly<span class="w"> </span>scaled
+deployment.apps/ita-by-conductor-synchronize<span class="w"> </span>scaled
+deployment.apps/ita-by-excel-export-import<span class="w"> </span>scaled
+deployment.apps/ita-by-hostgroup-split<span class="w"> </span>scaled
+deployment.apps/ita-by-menu-create<span class="w"> </span>scaled
+deployment.apps/ita-by-menu-export-import<span class="w"> </span>scaled
+deployment.apps/ita-by-oase-conclusion<span class="w"> </span>scaled
+deployment.apps/ita-by-terraform-cli-execute<span class="w"> </span>scaled
+deployment.apps/ita-by-terraform-cli-vars-listup<span class="w"> </span>scaled
+deployment.apps/ita-by-terraform-cloud-ep-execute<span class="w"> </span>scaled
+deployment.apps/ita-by-terraform-cloud-ep-vars-listup<span class="w"> </span>scaled
+deployment.apps/ita-web-server<span class="w"> </span>scaled
+deployment.apps/mariadb<span class="w"> </span>scaled
+deployment.apps/platform-api<span class="w"> </span>scaled
+deployment.apps/platform-auth<span class="w"> </span>scaled
+deployment.apps/platform-job<span class="w"> </span>scaled
+deployment.apps/platform-web<span class="w"> </span>scaled
+statefulset.apps/keycloak<span class="w"> </span>scaled
+statefulset.apps/mongo<span class="w"> </span>scaled
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">バージョンによって、表示されるサービスが異なります。</div>
+</div>
+</div>
+</li>
+<li><p>データベースサービスのみ起動</p>
+<div class="line-block">
+<div class="line">作業のため、データベースのサービスのみ再起動します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id23">
+<div class="code-block-caption"><span class="caption-number">リスト 7.9 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id23" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deployment<span class="w"> </span>mariadb<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">OASE ドライバをインストールしている場合は、MongoDB のサービスを起動します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id24">
+<div class="code-block-caption"><span class="caption-number">リスト 7.10 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id24" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>statefulset<span class="w"> </span>mongo<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Pod 起動数の確認</p>
+<div class="line-block">
+<div class="line">データベース以外の Pod 数が 0 になっていることを確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id25">
+<div class="code-block-caption"><span class="caption-number">リスト 7.11 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id25" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id26">
+<div class="code-block-caption"><span class="caption-number">リスト 7.12 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME<span class="w">                                                     </span>READY<span class="w">   </span>UP-TO-DATE<span class="w">   </span>AVAILABLE<span class="w">   </span>AGE
+deployment.apps/ita-api-admin<span class="w">                            </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-api-oase-receiver<span class="w">                    </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-api-organization<span class="w">                     </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-execute<span class="w">                   </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-legacy-role-vars-listup<span class="w">   </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-legacy-vars-listup<span class="w">        </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-pioneer-vars-listup<span class="w">       </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-towermaster-sync<span class="w">          </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-cicd-for-iac<span class="w">                      </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-collector<span class="w">                         </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-conductor-regularly<span class="w">               </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-conductor-synchronize<span class="w">             </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-excel-export-import<span class="w">               </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-hostgroup-split<span class="w">                   </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-menu-create<span class="w">                       </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-menu-export-import<span class="w">                </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-oase-conclusion<span class="w">                   </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-terraform-cli-execute<span class="w">             </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-terraform-cli-vars-listup<span class="w">         </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-terraform-cloud-ep-execute<span class="w">        </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-terraform-cloud-ep-vars-listup<span class="w">    </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-web-server<span class="w">                           </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/mariadb<span class="w">                                  </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/platform-api<span class="w">                             </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/platform-auth<span class="w">                            </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/platform-job<span class="w">                             </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/platform-web<span class="w">                             </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+
+NAME<span class="w">                        </span>READY<span class="w">   </span>AGE
+statefulset.apps/keycloak<span class="w">   </span><span class="m">0</span>/0<span class="w">     </span>25h
+statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<span class="w">     </span>26h
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">バージョンによって、表示されるサービスが異なります。</div>
+</div>
+</div>
+</li>
+</ol>
+</section>
+<section id="id9">
+<h3><span class="section-number">7.4.2. </span>バックアップ<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Exastro システム内で、Exastro Platform と Exastro IT Automation でデータベースを共有するか、分離するかによって手順が異なります。</div>
+</div>
+<ol class="arabic">
+<li><p>メンテナンス用コンテナの作成</p>
+<div class="line-block">
+<div class="line">データベース、ファイルのバックアップ作業用コンテナの作成をします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id27">
+<div class="code-block-caption"><span class="caption-number">リスト 7.13 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>cat<span class="w"> </span><span class="s">&lt;&lt;_EOF_ | kubectl apply -f - --namespace exastro</span>
+<span class="linenos"> 2</span><span class="s">apiVersion: v1</span>
+<span class="linenos"> 3</span><span class="s">kind: Pod</span>
+<span class="linenos"> 4</span><span class="s">metadata:</span>
+<span class="linenos"> 5</span><span class="s">  name: exastro-maintenance</span>
+<span class="linenos"> 6</span><span class="s">  namespace: exastro</span>
+<span class="linenos"> 7</span><span class="s">spec:</span>
+<span class="linenos"> 8</span><span class="s">  containers:</span>
+<span class="linenos"> 9</span><span class="s">  - command:</span>
+<span class="linenos">10</span><span class="s">    - sh</span>
+<span class="linenos">11</span><span class="s">    - -c</span>
+<span class="linenos">12</span><span class="s">    args:</span>
+<span class="linenos">13</span><span class="s">    - |</span>
+<span class="linenos">14</span><span class="s">      #!/bin/bash</span>
+<span class="linenos">15</span><span class="s">      sleep 3600</span>
+<span class="linenos">16</span><span class="s">    env:</span>
+<span class="linenos">17</span><span class="s">    - name: PF_DB_DATABASE</span>
+<span class="linenos">18</span><span class="s">      valueFrom:</span>
+<span class="linenos">19</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">20</span><span class="s">          key: DB_DATABASE</span>
+<span class="linenos">21</span><span class="s">          name: platform-params-pf-database</span>
+<span class="linenos">22</span><span class="s">    - name: PF_DB_HOST</span>
+<span class="linenos">23</span><span class="s">      valueFrom:</span>
+<span class="linenos">24</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">25</span><span class="s">          key: DB_HOST</span>
+<span class="linenos">26</span><span class="s">          name: platform-params-pf-database</span>
+<span class="linenos">27</span><span class="s">    - name: PF_DB_PORT</span>
+<span class="linenos">28</span><span class="s">      valueFrom:</span>
+<span class="linenos">29</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">30</span><span class="s">          key: DB_PORT</span>
+<span class="linenos">31</span><span class="s">          name: platform-params-pf-database</span>
+<span class="linenos">32</span><span class="s">    - name: PF_DB_ADMIN_PASSWORD</span>
+<span class="linenos">33</span><span class="s">      valueFrom:</span>
+<span class="linenos">34</span><span class="s">        secretKeyRef:</span>
+<span class="linenos">35</span><span class="s">          key: DB_ADMIN_PASSWORD</span>
+<span class="linenos">36</span><span class="s">          name: platform-secret-pf-database</span>
+<span class="linenos">37</span><span class="s">    - name: PF_DB_ADMIN_USER</span>
+<span class="linenos">38</span><span class="s">      valueFrom:</span>
+<span class="linenos">39</span><span class="s">        secretKeyRef:</span>
+<span class="linenos">40</span><span class="s">          key: DB_ADMIN_USER</span>
+<span class="linenos">41</span><span class="s">          name: platform-secret-pf-database</span>
+<span class="linenos">42</span><span class="s">    - name: ITA_DB_DATABASE</span>
+<span class="linenos">43</span><span class="s">      valueFrom:</span>
+<span class="linenos">44</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">45</span><span class="s">          key: DB_DATABASE</span>
+<span class="linenos">46</span><span class="s">          name: ita-params-ita-database</span>
+<span class="linenos">47</span><span class="s">    - name: ITA_DB_HOST</span>
+<span class="linenos">48</span><span class="s">      valueFrom:</span>
+<span class="linenos">49</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">50</span><span class="s">          key: DB_HOST</span>
+<span class="linenos">51</span><span class="s">          name: ita-params-ita-database</span>
+<span class="linenos">52</span><span class="s">    - name: ITA_DB_PORT</span>
+<span class="linenos">53</span><span class="s">      valueFrom:</span>
+<span class="linenos">54</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">55</span><span class="s">          key: DB_PORT</span>
+<span class="linenos">56</span><span class="s">          name: ita-params-ita-database</span>
+<span class="linenos">57</span><span class="s">    - name: ITA_STORAGEPATH</span>
+<span class="linenos">58</span><span class="s">      valueFrom:</span>
+<span class="linenos">59</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">60</span><span class="s">          key: STORAGEPATH</span>
+<span class="linenos">61</span><span class="s">          name: ita-params-ita-global</span>
+<span class="linenos">62</span><span class="s">    - name: ITA_DB_ADMIN_PASSWORD</span>
+<span class="linenos">63</span><span class="s">      valueFrom:</span>
+<span class="linenos">64</span><span class="s">        secretKeyRef:</span>
+<span class="linenos">65</span><span class="s">          key: DB_ADMIN_PASSWORD</span>
+<span class="linenos">66</span><span class="s">          name: ita-secret-ita-database</span>
+<span class="linenos">67</span><span class="s">    - name: ITA_DB_ADMIN_USER</span>
+<span class="linenos">68</span><span class="s">      valueFrom:</span>
+<span class="linenos">69</span><span class="s">        secretKeyRef:</span>
+<span class="linenos">70</span><span class="s">          key: DB_ADMIN_USER</span>
+<span class="linenos">71</span><span class="s">          name: ita-secret-ita-database</span>
+<span class="linenos">72</span><span class="s">    image: mariadb:10.9</span>
+<span class="linenos">73</span><span class="s">    imagePullPolicy: IfNotPresent</span>
+<span class="linenos">74</span><span class="s">    name: exastro-maintenance</span>
+<span class="linenos">75</span><span class="s">    resources: {}</span>
+<span class="linenos">76</span><span class="s">    securityContext:</span>
+<span class="linenos">77</span><span class="s">      allowPrivilegeEscalation: false</span>
+<span class="linenos">78</span><span class="s">      readOnlyRootFilesystem: false</span>
+<span class="linenos">79</span><span class="s">      runAsGroup: 1000</span>
+<span class="linenos">80</span><span class="s">      runAsNonRoot: true</span>
+<span class="linenos">81</span><span class="s">      runAsUser: 1000</span>
+<span class="linenos">82</span><span class="s">    volumeMounts:</span>
+<span class="linenos">83</span><span class="s">    - mountPath: /storage</span>
+<span class="linenos">84</span><span class="s">      name: volume-ita-backup-storage</span>
+<span class="linenos">85</span><span class="s">  volumes:</span>
+<span class="linenos">86</span><span class="s">  - name: volume-ita-backup-storage</span>
+<span class="linenos">87</span><span class="s">    persistentVolumeClaim:</span>
+<span class="linenos">88</span><span class="s">      claimName: pvc-ita-global</span>
+<span class="linenos">89</span><span class="s">  restartPolicy: Always</span>
+<span class="linenos">90</span><span class="s">  securityContext: {}</span>
+<span class="linenos">91</span><span class="s">  serviceAccount: default</span>
+<span class="linenos">92</span><span class="s">  serviceAccountName: default</span>
+<span class="linenos">93</span><span class="s">_EOF_</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">インストール時に設定したMongoDBを利用している場合、MongoDBのバックアップ作業用コンテナの作成をします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id28">
+<div class="code-block-caption"><span class="caption-number">リスト 7.14 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>cat<span class="w"> </span><span class="s">&lt;&lt;_EOF_ | kubectl apply -f - --namespace exastro</span>
+<span class="linenos"> 2</span><span class="s">apiVersion: v1</span>
+<span class="linenos"> 3</span><span class="s">kind: Pod</span>
+<span class="linenos"> 4</span><span class="s">metadata:</span>
+<span class="linenos"> 5</span><span class="s">  name: exastro-oase-maintenance</span>
+<span class="linenos"> 6</span><span class="s">  namespace: exastro</span>
+<span class="linenos"> 7</span><span class="s">spec:</span>
+<span class="linenos"> 8</span><span class="s">  containers:</span>
+<span class="linenos"> 9</span><span class="s">  - command:</span>
+<span class="linenos">10</span><span class="s">    - sh</span>
+<span class="linenos">11</span><span class="s">    - -c</span>
+<span class="linenos">12</span><span class="s">    args:</span>
+<span class="linenos">13</span><span class="s">    - |</span>
+<span class="linenos">14</span><span class="s">      #!/bin/bash</span>
+<span class="linenos">15</span><span class="s">      sleep 3600</span>
+<span class="linenos">16</span><span class="s">    env:</span>
+<span class="linenos">17</span><span class="s">    - name: ITA_MONGO_HOST</span>
+<span class="linenos">18</span><span class="s">      valueFrom:</span>
+<span class="linenos">19</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">20</span><span class="s">          key: MONGO_HOST</span>
+<span class="linenos">21</span><span class="s">          name: ita-params-mongo</span>
+<span class="linenos">22</span><span class="s">    - name: ITA_MONGO_PORT</span>
+<span class="linenos">23</span><span class="s">      valueFrom:</span>
+<span class="linenos">24</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">25</span><span class="s">          key: MONGO_PORT</span>
+<span class="linenos">26</span><span class="s">          name: ita-params-mongo</span>
+<span class="linenos">27</span><span class="s">    - name: ITA_MONGO_ADMIN_USER</span>
+<span class="linenos">28</span><span class="s">      valueFrom:</span>
+<span class="linenos">29</span><span class="s">        secretKeyRef:</span>
+<span class="linenos">30</span><span class="s">          key: MONGO_ADMIN_USER</span>
+<span class="linenos">31</span><span class="s">          name: ita-secret-mongo</span>
+<span class="linenos">32</span><span class="s">    - name: ITA_MONGO_ADMIN_PASSWORD</span>
+<span class="linenos">33</span><span class="s">      valueFrom:</span>
+<span class="linenos">34</span><span class="s">        secretKeyRef:</span>
+<span class="linenos">35</span><span class="s">          key: MONGO_ADMIN_PASSWORD</span>
+<span class="linenos">36</span><span class="s">          name: ita-secret-mongo</span>
+<span class="linenos">37</span><span class="s">    image: mongo:6.0</span>
+<span class="linenos">38</span><span class="s">    imagePullPolicy: IfNotPresent</span>
+<span class="linenos">39</span><span class="s">    name: exastro-oase-maintenance</span>
+<span class="linenos">40</span><span class="s">    resources: {}</span>
+<span class="linenos">41</span><span class="s">    securityContext:</span>
+<span class="linenos">42</span><span class="s">      allowPrivilegeEscalation: false</span>
+<span class="linenos">43</span><span class="s">      readOnlyRootFilesystem: false</span>
+<span class="linenos">44</span><span class="s">    volumeMounts:</span>
+<span class="linenos">45</span><span class="s">    - mountPath: /storage</span>
+<span class="linenos">46</span><span class="s">      name: volume-ita-backup-storage</span>
+<span class="linenos">47</span><span class="s">  volumes:</span>
+<span class="linenos">48</span><span class="s">  - name: volume-ita-backup-storage</span>
+<span class="linenos">49</span><span class="s">    persistentVolumeClaim:</span>
+<span class="linenos">50</span><span class="s">      claimName: pvc-ita-global</span>
+<span class="linenos">51</span><span class="s">  restartPolicy: Always</span>
+<span class="linenos">52</span><span class="s">  securityContext: {}</span>
+<span class="linenos">53</span><span class="s">  serviceAccount: default</span>
+<span class="linenos">54</span><span class="s">  serviceAccountName: default</span>
+<span class="linenos">55</span><span class="s">_EOF_</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>データベースのバックアップ取得</p>
+<div class="line-block">
+<div class="line">データベースに対して <strong class="command">mysqldump</strong> バックアップを取得します。</div>
+<div class="line">Exastro Platform と Exastro IT Automation でデータベースサーバを共有するか、分離するかによって手順が異なります。</div>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" name="44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" role="tab" tabindex="0">データベースサーバを共有</button><button aria-controls="panel-0-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" name="44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" role="tab" tabindex="-1">データベースサーバを分離</button></div><div aria-labelledby="tab-0-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" class="sphinx-tabs-panel group-tab" id="panel-0-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" name="44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id29">
+<div class="code-block-caption"><span class="caption-number">リスト 7.15 </span><span class="caption-text">アプリケーション用データベースバックアップコマンド</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;mysqldump -h ${PF_DB_HOST} -P ${PF_DB_PORT} -u ${PF_DB_ADMIN_USER} -p${PF_DB_ADMIN_PASSWORD} --all-databases --ignore-table=mysql.global_priv --add-drop-table&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>exastro_mysqldump_platform_db_<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">&quot;%Y%m%d-%H%M%S&quot;</span><span class="sb">`</span>.sql.gz
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id30">
+<div class="code-block-caption"><span class="caption-number">リスト 7.16 </span><span class="caption-text">ユーザ用データベースバックアップコマンド</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;mysqldump -h ${PF_DB_HOST} -P ${PF_DB_PORT} -u ${PF_DB_ADMIN_USER} -p${PF_DB_ADMIN_PASSWORD} --allow-keywords --no-create-info mysql global_priv --where=&quot;user NOT IN (\&quot;mariadb.sys\&quot;, \&quot;root\&quot;, \&quot;keycloak\&quot;, \&quot;admin\&quot;, \&quot;healthcheck\&quot;, \&quot;pf-user\&quot;, \&quot;ITA_USER\&quot;)&quot;&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>exastro_mysqldump_platform_user_<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">&quot;%Y%m%d-%H%M%S&quot;</span><span class="sb">`</span>.sql.gz
+</pre></div>
+</div>
+</div>
+</div><div aria-labelledby="tab-0-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" name="44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id31">
+<div class="code-block-caption"><span class="caption-number">リスト 7.17 </span><span class="caption-text">Exastro Platform アプリケーション用データベースバックアップコマンド</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;mysqldump -h ${PF_DB_HOST} -P ${PF_DB_PORT} -u ${PF_DB_ADMIN_USER} -p${PF_DB_ADMIN_PASSWORD} --all-databases --ignore-table=mysql.global_priv --add-drop-table&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>exastro_mysqldump_platform_db_<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">&quot;%Y%m%d-%H%M%S&quot;</span><span class="sb">`</span>.sql.gz
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id32">
+<div class="code-block-caption"><span class="caption-number">リスト 7.18 </span><span class="caption-text">Exastro Platform ユーザ用データベースバックアップコマンド</span><a class="headerlink" href="#id32" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;mysqldump -h ${PF_DB_HOST} -P ${PF_DB_PORT} -u ${PF_DB_ADMIN_USER} -p${PF_DB_ADMIN_PASSWORD} --allow-keywords --no-create-info mysql global_priv --where=&quot;user NOT IN (\&quot;mariadb.sys\&quot;, \&quot;root\&quot;, \&quot;keycloak\&quot;, \&quot;admin\&quot;, \&quot;healthcheck\&quot;, \&quot;pf-user\&quot;, \&quot;ITA_USER\&quot;)&quot;&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>exastro_mysqldump_platform_user_<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">&quot;%Y%m%d-%H%M%S&quot;</span><span class="sb">`</span>.sql.gz
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id33">
+<div class="code-block-caption"><span class="caption-number">リスト 7.19 </span><span class="caption-text">Exastro IT Automation アプリケーション用データベースバックアップコマンド</span><a class="headerlink" href="#id33" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;mysqldump -h ${ITA_DB_HOST} -P ${ITA_DB_PORT} -u ${ITA_DB_ADMIN_USER} -p${ITA_DB_ADMIN_PASSWORD} --all-databases --add-drop-table&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>exastro_mysqldump_ita_db_<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">&quot;%Y%m%d-%H%M%S&quot;</span><span class="sb">`</span>.sql.gz
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id34">
+<div class="code-block-caption"><span class="caption-number">リスト 7.20 </span><span class="caption-text">Exastro IT Automation ユーザ用データベースバックアップコマンド</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;mysqldump -h ${ITA_DB_HOST} -P ${ITA_DB_PORT} -u ${ITA_DB_ADMIN_USER} -p${ITA_DB_ADMIN_PASSWORD} --allow-keywords --no-create-info mysql global_priv --where=&quot;user NOT IN (\&quot;mariadb.sys\&quot;, \&quot;root\&quot;, \&quot;keycloak\&quot;, \&quot;admin\&quot;, \&quot;healthcheck\&quot;, \&quot;pf-user\&quot;, \&quot;ITA_USER\&quot;)&quot;&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>exastro_mysqldump_ita_user_<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">&quot;%Y%m%d-%H%M%S&quot;</span><span class="sb">`</span>.sql.gz
+</pre></div>
+</div>
+</div>
+</div></div>
+</li>
+<li><p>ファイルのバックアップ取得</p>
+<div class="line-block">
+<div class="line">Exastro IT Automation のファイルのバックアップを取得します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id35">
+<div class="code-block-caption"><span class="caption-number">リスト 7.21 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id35" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;tar zcvf - ${ITA_STORAGEPATH}&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>exastro_storage_backup_ita_<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">&quot;%Y%m%d-%H%M%S&quot;</span><span class="sb">`</span>.tar.gz
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>MongoDBのバックアップ取得</p>
+<div class="line-block">
+<div class="line">OASEでインストール時に設定したMongoDBを利用している場合、MongoDBに対して <strong class="command">mongodump</strong> バックアップを取得します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id36">
+<div class="code-block-caption"><span class="caption-number">リスト 7.22 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id36" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>exastro-oase-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;mongodump --host=${ITA_MONGO_HOST} --port=${ITA_MONGO_PORT} --username=${ITA_MONGO_ADMIN_USER} --password=${ITA_MONGO_ADMIN_PASSWORD} --out=/storage/exastro_mongodump&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>tar<span class="w"> </span>cvfz<span class="w"> </span>~/exastro_mongodump_<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">&quot;%Y%m%d-%H%M%S&quot;</span><span class="sb">`</span>.tar.gz<span class="w"> </span>--directory<span class="o">=</span>/var/data/exastro-suite/exastro-it-automation/ita-common<span class="w"> </span>exastro_mongodump<span class="w"> </span>--remove-files
+</pre></div>
+</div>
+</li>
+<li><p>メンテナンス用コンテナの削除</p>
+<div class="line-block">
+<div class="line">バックアップ作業用コンテナを削除します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id37">
+<div class="code-block-caption"><span class="caption-number">リスト 7.23 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id37" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">※MongoDBを利用している場合</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>exastro-oase-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="id10">
+<h3><span class="section-number">7.4.3. </span>サービス再開<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>サービス再開</p>
+<div class="line-block">
+<div class="line">サービス停止時に取得した各 Deployment の Pod 起動数を元に戻します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id38">
+<div class="code-block-caption"><span class="caption-number">リスト 7.24 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id38" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">1</span><span class="w"> </span>--all<span class="o">=</span><span class="nb">true</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">個別にreplicas数を設定する場合は以下のコマンドで再開します。</div>
+<div class="line">サービス名は、停止時に確認した内容を入力してください。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id39">
+<div class="code-block-caption"><span class="caption-number">リスト 7.25 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id39" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deployment<span class="w"> </span><span class="o">[</span>サービス名<span class="o">]</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=[</span>replicas数<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Ver.2.4.0以降、サービス名：keycloak、mongodbについては以下のコマンドで再開します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id40">
+<div class="code-block-caption"><span class="caption-number">リスト 7.26 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id40" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>statefulset<span class="w"> </span><span class="o">[</span>サービス名<span class="o">]</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=[</span>replicas数<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">サービス名を複数指定する場合は、カンマ区切りで複数のサービス名を指定することができます。</div>
+</div>
+</div>
+</li>
+<li><p>Pod 起動数の確認</p>
+<div class="line-block">
+<div class="line">上記で起動した対象の Pod 数が元に戻りすべて <kbd class="kbd docutils literal notranslate">READY</kbd> になっていることを確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id41">
+<div class="code-block-caption"><span class="caption-number">リスト 7.27 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id41" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id42">
+<div class="code-block-caption"><span class="caption-number">リスト 7.28 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id42" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME<span class="w">                                                     </span>READY<span class="w">   </span>UP-TO-DATE<span class="w">   </span>AVAILABLE<span class="w">   </span>AGE
+deployment.apps/ita-api-admin<span class="w">                            </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-api-oase-receiver<span class="w">                    </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-api-organization<span class="w">                     </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-execute<span class="w">                   </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-legacy-role-vars-listup<span class="w">   </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-legacy-vars-listup<span class="w">        </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-pioneer-vars-listup<span class="w">       </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-towermaster-sync<span class="w">          </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-cicd-for-iac<span class="w">                      </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-collector<span class="w">                         </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-conductor-regularly<span class="w">               </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-conductor-synchronize<span class="w">             </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-excel-export-import<span class="w">               </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-hostgroup-split<span class="w">                   </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-menu-create<span class="w">                       </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-menu-export-import<span class="w">                </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-oase-conclusion<span class="w">                   </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-terraform-cli-execute<span class="w">             </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-terraform-cli-vars-listup<span class="w">         </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-terraform-cloud-ep-execute<span class="w">        </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-terraform-cloud-ep-vars-listup<span class="w">    </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-web-server<span class="w">                           </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/mariadb<span class="w">                                  </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/platform-api<span class="w">                             </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/platform-auth<span class="w">                            </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/platform-job<span class="w">                             </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/platform-web<span class="w">                             </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+
+NAME<span class="w">                        </span>READY<span class="w">   </span>AGE
+statefulset.apps/keycloak<span class="w">   </span><span class="m">1</span>/1<span class="w">     </span>26h
+statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<span class="w">     </span>26h
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">バージョンによって、表示されるサービスが異なります。</div>
+</div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<section id="id11">
+<h2><span class="section-number">7.5. </span>リストア<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h2>
+<section id="check-replica-count-restore">
+<span id="id12"></span><h3><span class="section-number">7.5.1. </span>サービス停止<a class="headerlink" href="#check-replica-count-restore" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>Pod 起動数の確認</p>
+<div class="line-block">
+<div class="line">作業前の Pod 起動数の確認をし、状態を記録します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id43">
+<div class="code-block-caption"><span class="caption-number">リスト 7.29 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id43" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy,statefulset<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{range .items[*]}{@.metadata.name}:{@.spec.replicas}{&quot;\n&quot;}&#39;</span><span class="w"> </span>-n<span class="w"> </span>exastro
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id44">
+<div class="code-block-caption"><span class="caption-number">リスト 7.30 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id44" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ita-api-admin:1
+ita-api-oase-receiver:1
+ita-api-organization:1
+ita-by-ansible-execute:1
+ita-by-ansible-legacy-role-vars-listup:1
+ita-by-ansible-legacy-vars-listup:1
+ita-by-ansible-pioneer-vars-listup:1
+ita-by-ansible-towermaster-sync:1
+ita-by-cicd-for-iac:1
+ita-by-collector:1
+ita-by-conductor-regularly:1
+ita-by-conductor-synchronize:1
+ita-by-excel-export-import:1
+ita-by-hostgroup-split:1
+ita-by-menu-create:1
+ita-by-menu-export-import:1
+ita-by-oase-conclusion:1
+ita-by-terraform-cli-execute:1
+ita-by-terraform-cli-vars-listup:1
+ita-by-terraform-cloud-ep-execute:1
+ita-by-terraform-cloud-ep-vars-listup:1
+ita-web-server:1
+mariadb:1
+platform-api:1
+platform-auth:1
+platform-job:1
+platform-web:1
+keycloak:1
+mongo:1
+:
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">各Deployment, StatefulSetのサービス名、replicas数が表示されます。</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">バージョンによって、表示されるサービスが異なります。</div>
+</div>
+</div>
+</li>
+<li><p>アプリケーションの停止</p>
+<div class="line-block">
+<div class="line">アプリケーション (platform-auth) の Pod 起動数を 0 に変更し、アクセスを制限します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id45">
+<div class="code-block-caption"><span class="caption-number">リスト 7.31 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id45" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">0</span><span class="w"> </span>--all<span class="o">=</span><span class="nb">true</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id46">
+<div class="code-block-caption"><span class="caption-number">リスト 7.32 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id46" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>deployment.apps/ita-api-admin<span class="w"> </span>scaled
+deployment.apps/ita-api-oase-receiver<span class="w"> </span>scaled
+deployment.apps/ita-api-organization<span class="w"> </span>scaled
+deployment.apps/ita-by-ansible-execute<span class="w"> </span>scaled
+deployment.apps/ita-by-ansible-legacy-role-vars-listup<span class="w"> </span>scaled
+deployment.apps/ita-by-ansible-legacy-vars-listup<span class="w"> </span>scaled
+deployment.apps/ita-by-ansible-pioneer-vars-listup<span class="w"> </span>scaled
+deployment.apps/ita-by-ansible-towermaster-sync<span class="w"> </span>scaled
+deployment.apps/ita-by-cicd-for-iac<span class="w"> </span>scaled
+deployment.apps/ita-by-collector<span class="w"> </span>scaled
+deployment.apps/ita-by-conductor-regularly<span class="w"> </span>scaled
+deployment.apps/ita-by-conductor-synchronize<span class="w"> </span>scaled
+deployment.apps/ita-by-excel-export-import<span class="w"> </span>scaled
+deployment.apps/ita-by-hostgroup-split<span class="w"> </span>scaled
+deployment.apps/ita-by-menu-create<span class="w"> </span>scaled
+deployment.apps/ita-by-menu-export-import<span class="w"> </span>scaled
+deployment.apps/ita-by-oase-conclusion<span class="w"> </span>scaled
+deployment.apps/ita-by-terraform-cli-execute<span class="w"> </span>scaled
+deployment.apps/ita-by-terraform-cli-vars-listup<span class="w"> </span>scaled
+deployment.apps/ita-by-terraform-cloud-ep-execute<span class="w"> </span>scaled
+deployment.apps/ita-by-terraform-cloud-ep-vars-listup<span class="w"> </span>scaled
+deployment.apps/ita-web-server<span class="w"> </span>scaled
+deployment.apps/mariadb<span class="w"> </span>scaled
+deployment.apps/platform-api<span class="w"> </span>scaled
+deployment.apps/platform-auth<span class="w"> </span>scaled
+deployment.apps/platform-job<span class="w"> </span>scaled
+deployment.apps/platform-web<span class="w"> </span>scaled
+statefulset.apps/keycloak<span class="w"> </span>scaled
+statefulset.apps/mongo<span class="w"> </span>scaled
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">バージョンによって、表示されるサービスが異なります。</div>
+</div>
+</div>
+</li>
+<li><p>データベースサービスのみ起動</p>
+<div class="line-block">
+<div class="line">作業のため、データベースのサービスのみ再起動します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id47">
+<div class="code-block-caption"><span class="caption-number">リスト 7.33 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id47" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deployment<span class="w"> </span>mariadb<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">OASE ドライバをインストールしている場合は、MongoDB のサービスを起動します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id48">
+<div class="code-block-caption"><span class="caption-number">リスト 7.34 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id48" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>statefulset<span class="w"> </span>mongo<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Pod 起動数の確認</p>
+<div class="line-block">
+<div class="line">データベース以外の Pod 数が 0 になっていることを確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id49">
+<div class="code-block-caption"><span class="caption-number">リスト 7.35 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id49" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id50">
+<div class="code-block-caption"><span class="caption-number">リスト 7.36 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id50" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME<span class="w">                                                     </span>READY<span class="w">   </span>UP-TO-DATE<span class="w">   </span>AVAILABLE<span class="w">   </span>AGE
+deployment.apps/ita-api-admin<span class="w">                            </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-api-oase-receiver<span class="w">                    </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-api-organization<span class="w">                     </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-execute<span class="w">                   </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-legacy-role-vars-listup<span class="w">   </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-legacy-vars-listup<span class="w">        </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-pioneer-vars-listup<span class="w">       </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-towermaster-sync<span class="w">          </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-cicd-for-iac<span class="w">                      </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-collector<span class="w">                         </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-conductor-regularly<span class="w">               </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-conductor-synchronize<span class="w">             </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-excel-export-import<span class="w">               </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-hostgroup-split<span class="w">                   </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-menu-create<span class="w">                       </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-menu-export-import<span class="w">                </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-oase-conclusion<span class="w">                   </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-terraform-cli-execute<span class="w">             </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-terraform-cli-vars-listup<span class="w">         </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-terraform-cloud-ep-execute<span class="w">        </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-by-terraform-cloud-ep-vars-listup<span class="w">    </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/ita-web-server<span class="w">                           </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/mariadb<span class="w">                                  </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/platform-api<span class="w">                             </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/platform-auth<span class="w">                            </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/platform-job<span class="w">                             </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+deployment.apps/platform-web<span class="w">                             </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
+
+NAME<span class="w">                        </span>READY<span class="w">   </span>AGE
+statefulset.apps/keycloak<span class="w">   </span><span class="m">0</span>/0<span class="w">     </span>25h
+statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<span class="w">     </span>26h
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">バージョンによって、表示されるサービスが異なります。</div>
+</div>
+</div>
+</li>
+</ol>
+</section>
+<section id="id13">
+<h3><span class="section-number">7.5.2. </span>リストア<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Exastro システム内で、Exastro Platform と Exastro IT Automation でデータベースを共有するか、分離するかによって手順が異なります。</div>
+</div>
+<ol class="arabic">
+<li><p>メンテナンス用コンテナの作成</p>
+<div class="line-block">
+<div class="line">データベース、ファイルのリストア作業用コンテナの作成をします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id51">
+<div class="code-block-caption"><span class="caption-number">リスト 7.37 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id51" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>cat<span class="w"> </span><span class="s">&lt;&lt;_EOF_ | kubectl apply -f - --namespace exastro</span>
+<span class="linenos"> 2</span><span class="s">apiVersion: v1</span>
+<span class="linenos"> 3</span><span class="s">kind: Pod</span>
+<span class="linenos"> 4</span><span class="s">metadata:</span>
+<span class="linenos"> 5</span><span class="s">  name: exastro-maintenance</span>
+<span class="linenos"> 6</span><span class="s">  namespace: exastro</span>
+<span class="linenos"> 7</span><span class="s">spec:</span>
+<span class="linenos"> 8</span><span class="s">  containers:</span>
+<span class="linenos"> 9</span><span class="s">  - command:</span>
+<span class="linenos">10</span><span class="s">    - sh</span>
+<span class="linenos">11</span><span class="s">    - -c</span>
+<span class="linenos">12</span><span class="s">    args:</span>
+<span class="linenos">13</span><span class="s">    - |</span>
+<span class="linenos">14</span><span class="s">      #!/bin/bash</span>
+<span class="linenos">15</span><span class="s">      sleep 3600</span>
+<span class="linenos">16</span><span class="s">    env:</span>
+<span class="linenos">17</span><span class="s">    - name: PF_DB_DATABASE</span>
+<span class="linenos">18</span><span class="s">      valueFrom:</span>
+<span class="linenos">19</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">20</span><span class="s">          key: DB_DATABASE</span>
+<span class="linenos">21</span><span class="s">          name: platform-params-pf-database</span>
+<span class="linenos">22</span><span class="s">    - name: PF_DB_HOST</span>
+<span class="linenos">23</span><span class="s">      valueFrom:</span>
+<span class="linenos">24</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">25</span><span class="s">          key: DB_HOST</span>
+<span class="linenos">26</span><span class="s">          name: platform-params-pf-database</span>
+<span class="linenos">27</span><span class="s">    - name: PF_DB_PORT</span>
+<span class="linenos">28</span><span class="s">      valueFrom:</span>
+<span class="linenos">29</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">30</span><span class="s">          key: DB_PORT</span>
+<span class="linenos">31</span><span class="s">          name: platform-params-pf-database</span>
+<span class="linenos">32</span><span class="s">    - name: PF_DB_ADMIN_PASSWORD</span>
+<span class="linenos">33</span><span class="s">      valueFrom:</span>
+<span class="linenos">34</span><span class="s">        secretKeyRef:</span>
+<span class="linenos">35</span><span class="s">          key: DB_ADMIN_PASSWORD</span>
+<span class="linenos">36</span><span class="s">          name: platform-secret-pf-database</span>
+<span class="linenos">37</span><span class="s">    - name: PF_DB_ADMIN_USER</span>
+<span class="linenos">38</span><span class="s">      valueFrom:</span>
+<span class="linenos">39</span><span class="s">        secretKeyRef:</span>
+<span class="linenos">40</span><span class="s">          key: DB_ADMIN_USER</span>
+<span class="linenos">41</span><span class="s">          name: platform-secret-pf-database</span>
+<span class="linenos">42</span><span class="s">    - name: ITA_DB_DATABASE</span>
+<span class="linenos">43</span><span class="s">      valueFrom:</span>
+<span class="linenos">44</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">45</span><span class="s">          key: DB_DATABASE</span>
+<span class="linenos">46</span><span class="s">          name: ita-params-ita-database</span>
+<span class="linenos">47</span><span class="s">    - name: ITA_DB_HOST</span>
+<span class="linenos">48</span><span class="s">      valueFrom:</span>
+<span class="linenos">49</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">50</span><span class="s">          key: DB_HOST</span>
+<span class="linenos">51</span><span class="s">          name: ita-params-ita-database</span>
+<span class="linenos">52</span><span class="s">    - name: ITA_DB_PORT</span>
+<span class="linenos">53</span><span class="s">      valueFrom:</span>
+<span class="linenos">54</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">55</span><span class="s">          key: DB_PORT</span>
+<span class="linenos">56</span><span class="s">          name: ita-params-ita-database</span>
+<span class="linenos">57</span><span class="s">    - name: ITA_STORAGEPATH</span>
+<span class="linenos">58</span><span class="s">      valueFrom:</span>
+<span class="linenos">59</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">60</span><span class="s">          key: STORAGEPATH</span>
+<span class="linenos">61</span><span class="s">          name: ita-params-ita-global</span>
+<span class="linenos">62</span><span class="s">    - name: ITA_DB_ADMIN_PASSWORD</span>
+<span class="linenos">63</span><span class="s">      valueFrom:</span>
+<span class="linenos">64</span><span class="s">        secretKeyRef:</span>
+<span class="linenos">65</span><span class="s">          key: DB_ADMIN_PASSWORD</span>
+<span class="linenos">66</span><span class="s">          name: ita-secret-ita-database</span>
+<span class="linenos">67</span><span class="s">    - name: ITA_DB_ADMIN_USER</span>
+<span class="linenos">68</span><span class="s">      valueFrom:</span>
+<span class="linenos">69</span><span class="s">        secretKeyRef:</span>
+<span class="linenos">70</span><span class="s">          key: DB_ADMIN_USER</span>
+<span class="linenos">71</span><span class="s">          name: ita-secret-ita-database</span>
+<span class="linenos">72</span><span class="s">    image: mariadb:10.9</span>
+<span class="linenos">73</span><span class="s">    imagePullPolicy: IfNotPresent</span>
+<span class="linenos">74</span><span class="s">    name: exastro-maintenance</span>
+<span class="linenos">75</span><span class="s">    resources: {}</span>
+<span class="linenos">76</span><span class="s">    securityContext:</span>
+<span class="linenos">77</span><span class="s">      allowPrivilegeEscalation: false</span>
+<span class="linenos">78</span><span class="s">      readOnlyRootFilesystem: false</span>
+<span class="linenos">79</span><span class="s">      runAsGroup: 1000</span>
+<span class="linenos">80</span><span class="s">      runAsNonRoot: true</span>
+<span class="linenos">81</span><span class="s">      runAsUser: 1000</span>
+<span class="linenos">82</span><span class="s">    volumeMounts:</span>
+<span class="linenos">83</span><span class="s">    - mountPath: /storage</span>
+<span class="linenos">84</span><span class="s">      name: volume-ita-backup-storage</span>
+<span class="linenos">85</span><span class="s">  volumes:</span>
+<span class="linenos">86</span><span class="s">  - name: volume-ita-backup-storage</span>
+<span class="linenos">87</span><span class="s">    persistentVolumeClaim:</span>
+<span class="linenos">88</span><span class="s">      claimName: pvc-ita-global</span>
+<span class="linenos">89</span><span class="s">  restartPolicy: Always</span>
+<span class="linenos">90</span><span class="s">  securityContext: {}</span>
+<span class="linenos">91</span><span class="s">  serviceAccount: default</span>
+<span class="linenos">92</span><span class="s">  serviceAccountName: default</span>
+<span class="linenos">93</span><span class="s">_EOF_</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">インストール時に設定したMongoDBを利用している場合、MongoDBのリストア作業用コンテナの作成をします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id52">
+<div class="code-block-caption"><span class="caption-number">リスト 7.38 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id52" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>cat<span class="w"> </span><span class="s">&lt;&lt;_EOF_ | kubectl apply -f - --namespace exastro</span>
+<span class="linenos"> 2</span><span class="s">apiVersion: v1</span>
+<span class="linenos"> 3</span><span class="s">kind: Pod</span>
+<span class="linenos"> 4</span><span class="s">metadata:</span>
+<span class="linenos"> 5</span><span class="s">  name: exastro-oase-maintenance</span>
+<span class="linenos"> 6</span><span class="s">  namespace: exastro</span>
+<span class="linenos"> 7</span><span class="s">spec:</span>
+<span class="linenos"> 8</span><span class="s">  containers:</span>
+<span class="linenos"> 9</span><span class="s">  - command:</span>
+<span class="linenos">10</span><span class="s">    - sh</span>
+<span class="linenos">11</span><span class="s">    - -c</span>
+<span class="linenos">12</span><span class="s">    args:</span>
+<span class="linenos">13</span><span class="s">    - |</span>
+<span class="linenos">14</span><span class="s">      #!/bin/bash</span>
+<span class="linenos">15</span><span class="s">      sleep 3600</span>
+<span class="linenos">16</span><span class="s">    env:</span>
+<span class="linenos">17</span><span class="s">    - name: ITA_MONGO_HOST</span>
+<span class="linenos">18</span><span class="s">      valueFrom:</span>
+<span class="linenos">19</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">20</span><span class="s">          key: MONGO_HOST</span>
+<span class="linenos">21</span><span class="s">          name: ita-params-mongo</span>
+<span class="linenos">22</span><span class="s">    - name: ITA_MONGO_PORT</span>
+<span class="linenos">23</span><span class="s">      valueFrom:</span>
+<span class="linenos">24</span><span class="s">        configMapKeyRef:</span>
+<span class="linenos">25</span><span class="s">          key: MONGO_PORT</span>
+<span class="linenos">26</span><span class="s">          name: ita-params-mongo</span>
+<span class="linenos">27</span><span class="s">    - name: ITA_MONGO_ADMIN_USER</span>
+<span class="linenos">28</span><span class="s">      valueFrom:</span>
+<span class="linenos">29</span><span class="s">        secretKeyRef:</span>
+<span class="linenos">30</span><span class="s">          key: MONGO_ADMIN_USER</span>
+<span class="linenos">31</span><span class="s">          name: ita-secret-mongo</span>
+<span class="linenos">32</span><span class="s">    - name: ITA_MONGO_ADMIN_PASSWORD</span>
+<span class="linenos">33</span><span class="s">      valueFrom:</span>
+<span class="linenos">34</span><span class="s">        secretKeyRef:</span>
+<span class="linenos">35</span><span class="s">          key: MONGO_ADMIN_PASSWORD</span>
+<span class="linenos">36</span><span class="s">          name: ita-secret-mongo</span>
+<span class="linenos">37</span><span class="s">    image: mongo:6.0</span>
+<span class="linenos">38</span><span class="s">    imagePullPolicy: IfNotPresent</span>
+<span class="linenos">39</span><span class="s">    name: exastro-oase-maintenance</span>
+<span class="linenos">40</span><span class="s">    resources: {}</span>
+<span class="linenos">41</span><span class="s">    securityContext:</span>
+<span class="linenos">42</span><span class="s">      allowPrivilegeEscalation: false</span>
+<span class="linenos">43</span><span class="s">      readOnlyRootFilesystem: false</span>
+<span class="linenos">44</span><span class="s">    volumeMounts:</span>
+<span class="linenos">45</span><span class="s">    - mountPath: /storage</span>
+<span class="linenos">46</span><span class="s">      name: volume-ita-backup-storage</span>
+<span class="linenos">47</span><span class="s">  volumes:</span>
+<span class="linenos">48</span><span class="s">  - name: volume-ita-backup-storage</span>
+<span class="linenos">49</span><span class="s">    persistentVolumeClaim:</span>
+<span class="linenos">50</span><span class="s">      claimName: pvc-ita-global</span>
+<span class="linenos">51</span><span class="s">  restartPolicy: Always</span>
+<span class="linenos">52</span><span class="s">  securityContext: {}</span>
+<span class="linenos">53</span><span class="s">  serviceAccount: default</span>
+<span class="linenos">54</span><span class="s">  serviceAccountName: default</span>
+<span class="linenos">55</span><span class="s">_EOF_</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>データベースのリストア実施</p>
+<div class="line-block">
+<div class="line">データベースに対して <strong class="command">mysqldump</strong> リストアを実施します。</div>
+<div class="line">Exastro Platform と Exastro IT Automation でデータベースサーバを共有するか、分離するかによって手順が異なります。</div>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" name="44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" role="tab" tabindex="0">データベースサーバを共有</button><button aria-controls="panel-1-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" name="44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" role="tab" tabindex="-1">データベースサーバを分離</button></div><div aria-labelledby="tab-1-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" class="sphinx-tabs-panel group-tab" id="panel-1-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" name="44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id53">
+<div class="code-block-caption"><span class="caption-number">リスト 7.39 </span><span class="caption-text">ユーザ用データベースリストアコマンド</span><a class="headerlink" href="#id53" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gzip<span class="w"> </span>-dc<span class="w"> </span>exastro_mysqldump_platform_user_YYYYMMDD-HHmmss.sql.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;mysql -h ${PF_DB_HOST} -P ${PF_DB_PORT} -u ${PF_DB_ADMIN_USER} -p${PF_DB_ADMIN_PASSWORD} mysql&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id54">
+<div class="code-block-caption"><span class="caption-number">リスト 7.40 </span><span class="caption-text">アプリケーション用データベースリストアコマンド</span><a class="headerlink" href="#id54" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gzip<span class="w"> </span>-dc<span class="w"> </span>exastro_mysqldump_platform_db_YYYYMMDD-HHmmss.sql.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/DEFINER[ ]*=[ ]*[^*]*\*/\*/&#39;</span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;mysql -h ${PF_DB_HOST} -P ${PF_DB_PORT} -u ${PF_DB_ADMIN_USER} -p${PF_DB_ADMIN_PASSWORD}&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id55">
+<div class="code-block-caption"><span class="caption-number">リスト 7.41 </span><span class="caption-text">データベース権限更新コマンド</span><a class="headerlink" href="#id55" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;MariaDB<span class="w"> </span>Pod名&gt;<span class="w"> </span>--bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;mysql -u root -ppassword -e &#39;FLUSH PRIVILEGES;&#39;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div><div aria-labelledby="tab-1-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" name="44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id56">
+<div class="code-block-caption"><span class="caption-number">リスト 7.42 </span><span class="caption-text">Exastro Platform ユーザ用データベースリストアコマンド</span><a class="headerlink" href="#id56" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gzip<span class="w"> </span>-dc<span class="w"> </span>exastro_mysqldump_platform_user_YYYYMMDD-HHmmss.sql.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;mysql -h ${PF_DB_HOST} -P ${PF_DB_PORT} -u ${PF_DB_ADMIN_USER} -p${PF_DB_ADMIN_PASSWORD} mysql&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id57">
+<div class="code-block-caption"><span class="caption-number">リスト 7.43 </span><span class="caption-text">Exastro Platform アプリケーション用データベースリストアコマンド</span><a class="headerlink" href="#id57" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gzip<span class="w"> </span>-dc<span class="w"> </span>exastro_mysqldump_platform_db_YYYYMMDD-HHmmss.sql.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/DEFINER[ ]*=[ ]*[^*]*\*/\*/&#39;</span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;mysql -h ${PF_DB_HOST} -P ${PF_DB_PORT} -u ${PF_DB_ADMIN_USER} -p${PF_DB_ADMIN_PASSWORD}&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id58">
+<div class="code-block-caption"><span class="caption-number">リスト 7.44 </span><span class="caption-text">Exastro Platform データベース権限更新コマンド</span><a class="headerlink" href="#id58" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;MariaDB<span class="w"> </span>Pod名&gt;<span class="w"> </span>--bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;mysql -u root -ppassword -e &#39;FLUSH PRIVILEGES;&#39;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id59">
+<div class="code-block-caption"><span class="caption-number">リスト 7.45 </span><span class="caption-text">Exastro IT Automation ユーザ用データベースリストアコマンド</span><a class="headerlink" href="#id59" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gzip<span class="w"> </span>-dc<span class="w"> </span>exastro_mysqldump_ita_user_YYYYMMDD-HHmmss.sql.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;mysql -h ${ITA_DB_HOST} -P ${ITA_DB_PORT} -u ${ITA_DB_ADMIN_USER} -p${ITA_DB_ADMIN_PASSWORD} mysql&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id60">
+<div class="code-block-caption"><span class="caption-number">リスト 7.46 </span><span class="caption-text">Exastro IT Automation アプリケーション用データベースリストアコマンド</span><a class="headerlink" href="#id60" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gzip<span class="w"> </span>-dc<span class="w"> </span>exastro_mysqldump_ita_db_YYYYMMDD-HHmmss.sql.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/DEFINER[ ]*=[ ]*[^*]*\*/\*/&#39;</span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;mysql -h ${ITA_DB_HOST} -P ${ITA_DB_PORT} -u ${ITA_DB_ADMIN_USER} -p${ITA_DB_ADMIN_PASSWORD}&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id61">
+<div class="code-block-caption"><span class="caption-number">リスト 7.47 </span><span class="caption-text">Exastro IT Automation データベース権限更新コマンド</span><a class="headerlink" href="#id61" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;MariaDB<span class="w"> </span>Pod名&gt;<span class="w"> </span>--bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;mysql -u root -ppassword -e &#39;FLUSH PRIVILEGES;&#39;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div></div>
+</li>
+<li><p>ファイルのリストア実施</p>
+<div class="line-block">
+<div class="line">Exastro IT Automation のファイルのリストアを実施します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id62">
+<div class="code-block-caption"><span class="caption-number">リスト 7.48 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id62" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;tar zxvf - -C /&#39;</span><span class="w"> </span>&lt;<span class="w"> </span>exastro_storage_backup_ita_YYYYMMDD-HHmmss.tar.gz
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>MongoDBのリストア実施</p>
+<div class="line-block">
+<div class="line">OASEでインストール時に設定したMongoDBを利用している場合、MongoDBのリストアを実施します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id63">
+<div class="code-block-caption"><span class="caption-number">リスト 7.49 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id63" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>-zxvf<span class="w"> </span>exastro_mongodump_YYYYMMDD-HHmmss.tar.gz<span class="w"> </span>-C<span class="w"> </span>/var/data/exastro-suite/exastro-it-automation/ita-common
+</pre></div>
+</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>exastro-oase-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;mongorestore --host=${ITA_MONGO_HOST} --port=${ITA_MONGO_PORT} --username=${ITA_MONGO_ADMIN_USER} --password=${ITA_MONGO_ADMIN_PASSWORD} /storage/exastro_mongodump&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/data/exastro-suite/exastro-it-automation/ita-common/exastro_mongodump/
+</pre></div>
+</div>
+</li>
+<li><p>メンテナンス用コンテナの削除</p>
+<div class="line-block">
+<div class="line">バックアップ作業用コンテナを削除します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id64">
+<div class="code-block-caption"><span class="caption-number">リスト 7.50 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id64" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">※MongoDBを利用している場合</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>exastro-oase-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="id14">
+<h3><span class="section-number">7.5.3. </span>サービス再開<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>サービス再開</p>
+<div class="line-block">
+<div class="line">サービス停止時に取得した各 Deployment の Pod 起動数を元に戻します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id65">
+<div class="code-block-caption"><span class="caption-number">リスト 7.51 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id65" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">1</span><span class="w"> </span>--all<span class="o">=</span><span class="nb">true</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">個別にreplicas数を設定する場合は以下のコマンドで再開します。</div>
+<div class="line">サービス名は、停止時に確認した内容を入力してください。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id66">
+<div class="code-block-caption"><span class="caption-number">リスト 7.52 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id66" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deployment<span class="w"> </span><span class="o">[</span>サービス名<span class="o">]</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=[</span>replicas数<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Ver.2.4.0以降、サービス名：keycloak、mongodbについては以下のコマンドで再開します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id67">
+<div class="code-block-caption"><span class="caption-number">リスト 7.53 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id67" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>statefulset<span class="w"> </span><span class="o">[</span>サービス名<span class="o">]</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=[</span>replicas数<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">サービス名を複数指定する場合は、カンマ区切りで複数のサービス名を指定することができます。</div>
+</div>
+</div>
+</li>
+<li><p>Pod 起動数の確認</p>
+<div class="line-block">
+<div class="line">上記で起動した対象の Pod 数が元に戻りすべて <kbd class="kbd docutils literal notranslate">READY</kbd> になっていることを確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id68">
+<div class="code-block-caption"><span class="caption-number">リスト 7.54 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id68" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id69">
+<div class="code-block-caption"><span class="caption-number">リスト 7.55 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id69" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME<span class="w">                                                     </span>READY<span class="w">   </span>UP-TO-DATE<span class="w">   </span>AVAILABLE<span class="w">   </span>AGE
+deployment.apps/ita-api-admin<span class="w">                            </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-api-oase-receiver<span class="w">                    </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-api-organization<span class="w">                     </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-execute<span class="w">                   </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-legacy-role-vars-listup<span class="w">   </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-legacy-vars-listup<span class="w">        </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-pioneer-vars-listup<span class="w">       </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-ansible-towermaster-sync<span class="w">          </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-cicd-for-iac<span class="w">                      </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-collector<span class="w">                         </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-conductor-regularly<span class="w">               </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-conductor-synchronize<span class="w">             </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-excel-export-import<span class="w">               </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-hostgroup-split<span class="w">                   </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-menu-create<span class="w">                       </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-menu-export-import<span class="w">                </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-oase-conclusion<span class="w">                   </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-terraform-cli-execute<span class="w">             </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-terraform-cli-vars-listup<span class="w">         </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-terraform-cloud-ep-execute<span class="w">        </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-by-terraform-cloud-ep-vars-listup<span class="w">    </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/ita-web-server<span class="w">                           </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/mariadb<span class="w">                                  </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/platform-api<span class="w">                             </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/platform-auth<span class="w">                            </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/platform-job<span class="w">                             </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+deployment.apps/platform-web<span class="w">                             </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
+
+NAME<span class="w">                        </span>READY<span class="w">   </span>AGE
+statefulset.apps/keycloak<span class="w">   </span><span class="m">1</span>/1<span class="w">     </span>26h
+statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<span class="w">     </span>26h
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">バージョンによって、表示されるサービスが異なります。</div>
+</div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="maintenance_mode.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">6. </span>メンテナンスモード</a></li>
+    <li class="next"><a href="file_autoclean.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">8. </span>ファイル削除機能</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.7/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>
