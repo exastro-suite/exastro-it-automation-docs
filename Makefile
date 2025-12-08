@@ -7,7 +7,7 @@ SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 PROJECTDIR    = .
 VERSION       = 2.5
-VERSIONS      = 2.0 2.1 2.2 2.3 2.4 2.5 2.6
+VERSIONS      = 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7
 SOURCEDIR     = $(PROJECTDIR)/src
 BUILDDIR      = $(PROJECTDIR)/_build
 DOCSDIR       = $(PROJECTDIR)/docs
@@ -83,4 +83,3 @@ html-all:
 
 clean:
 	rm -rf $(BUILDDIR) $(DOCSDIR)/*
-	

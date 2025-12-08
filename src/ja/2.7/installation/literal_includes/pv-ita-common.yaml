@@ -1,0 +1,17 @@
+# pv-ita-common.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-ita-common
+spec:
+  claimRef:
+    name: pvc-ita-global
+    namespace: exastro
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /var/data/exastro-suite/exastro-it-automation/ita-common
+    type: DirectoryOrCreate

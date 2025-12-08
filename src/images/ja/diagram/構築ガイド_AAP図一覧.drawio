@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="3">
-    <diagram name="AAP(Execution分離)" id="HrPJcTjiu_YD1BFE7S78">
-        <mxGraphModel dx="1823" dy="1182" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
+    <diagram name="AAP2.4以前(Execution分離)" id="HrPJcTjiu_YD1BFE7S78">
+        <mxGraphModel dx="985" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
             <root>
                 <mxCell id="zyLyGUna_AHrawo6U4M7-0"/>
                 <mxCell id="zyLyGUna_AHrawo6U4M7-1" parent="zyLyGUna_AHrawo6U4M7-0"/>
@@ -284,11 +284,14 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="tTNBHTlf7uFmPY4IN0_u-0" value="aap24_(hybrid/divide).drawio.pngをご参照ください" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;fontStyle=1" vertex="1" parent="zyLyGUna_AHrawo6U4M7-1">
+                    <mxGeometry x="10" y="50" width="300" height="30" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
-    <diagram id="P0Y6QexMz69vUVXYiUK5" name="AAP(Hybrid)">
-        <mxGraphModel dx="3647" dy="2363" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
+    <diagram id="P0Y6QexMz69vUVXYiUK5" name="AAP2.4以前(Hybrid)">
+        <mxGraphModel dx="985" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -459,11 +462,25 @@
                         <mxPoint x="1200" y="402.34000000000003" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="83vwVtJnEBBncDLJWOT4-1" value="aap24_(hybrid/divide).drawio.pngをご参照ください" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="10" y="50" width="300" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="o2MorJdueoUt1g7irs1j" name="AAP2.5以降">
+        <mxGraphModel dx="985" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="aXVRZPAx4LCg9ynn9H03-1" value="aap25_(hybrid/divide).drawio.pngをご参照ください" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="10" y="50" width="300" height="30" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram name="playbook連携" id="W60WxNa4HCeSVzPPv-fU">
-        <mxGraphModel dx="1094" dy="709" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
+        <mxGraphModel dx="870" dy="1061" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
             <root>
                 <mxCell id="Yoh04sfaqgSX8Owsgdn5-0"/>
                 <mxCell id="Yoh04sfaqgSX8Owsgdn5-1" parent="Yoh04sfaqgSX8Owsgdn5-0"/>

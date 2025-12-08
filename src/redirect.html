@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Exastro IT Automation</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-144561796-1');
+</script>
+<script>
+  // クエリパラメータを取得
+  const params = new URLSearchParams(window.location.search);
+  const redirectTo = params.get('redirect') || 'index.html'; // デフォルトのリダイレクト先
+ 
+  // 許可するパスのホワイトリスト
+  const allowedPaths = [
+    'installation',
+    'manuals',
+    'learn/quickstart',
+    'learn',
+    'templates',
+  ];
+  
+  // セキュリティチェック
+  function isValidRedirect(path) {
+    // 1. ホワイトリストチェック
+    if (allowedPaths.includes(path)) {
+      return true;
+    }
+    
+    // 2. 相対パスのみ許可（プロトコルや//で始まるものを拒否）
+    if (path.match(/^(https?:|\/\/|javascript:|data:)/i)) {
+      return false;
+    }
+    
+    // 3. パストラバーサル攻撃を防ぐ
+    if (path.includes('../') || path.includes('..\\')) {
+      return false;
+    }
+    
+    return true;
+  }
+   
+  window.location.href = 'ja/#__version__#/' + redirectTo;
+</script>
+</head>
+<body>
+</body>
+</html>

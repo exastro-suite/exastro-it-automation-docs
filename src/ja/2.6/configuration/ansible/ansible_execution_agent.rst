@@ -57,7 +57,7 @@ Ansible Execution Agent
 
 - :ref:`ansible_execution_agent_hardware_requirements`
 - :ref:`ansible_execution_agent_os_requirements`
-- :ref:`ansible_execution_agent_node_to_work_on`
+- :ref:`ansible_execution_agent_software_requirements`
 - :ref:`ansible_execution_agent_communication_requirements`
 - :ref:`ansible_execution_agent_other_requirements`
 
@@ -132,19 +132,23 @@ OS要件
     $ getenforce
     Permissive
 
-.. _ansible_execution_agent_node_to_work_on:
-
-作業対象機器
-------------
-
-| Ansible Coreで接続する作業対象機器には下記のソフトウェアのいずれかが必要となります。
 
 .. _ansible_execution_agent_software_requirements:
 
 ソフトウェア要件
-^^^^^^^^^^^^^^^^
+----------------
 
-.. list-table:: ソフトウェア要件
+以下の条件が満たされている必要があります。
+
+- Python3.11がインストールされていること
+- インストールを実行するユーザで :command:`python3` と :command:`pip3` コマンドが実行できること
+
+.. note::
+   | Almalinuxでは :command:`python3` と :command:`pip3` コマンドがPython3.11に紐づいている必要があります。
+
+なお、インストール時には下記のansible-builderおよびansible-runnerのインストールが自動的に行われます。
+
+.. list-table:: バージョン情報
    :widths: 50 50
    :header-rows: 1
    :align: left
@@ -155,21 +159,6 @@ OS要件
      - | 3.1.0
    * - | ansible-runner
      - | 2.4.1
-   * - | Python
-     - | 3.9 - 3.13
-   * - | PowerShell
-     - | 5.1
-
-.. tip::
-   | →Python3.11以上がインストールされている必要があります。また、AlmaLinuxの場合、python3コマンドとpip3コマンドに、上記バージョンのpythonのエイリアスが紐づいていること。
-   | RHELの場合、python3コマンドとpip3コマンドに、python3.9以上のエイリアスが紐づいていること。
-
-.. note::
-   | Exastro IT Automation 2.6 で使用する Ansible Core のバージョンは 2.18 です。
-
-.. danger::
-   | 作業対象機器のソフトウェア要件 は Exastro IT Automation のバージョン（Ansible Coreのバージョン）によって変更される可能性があります。
-   | Exastro IT Automationのバージョンを変更する際は、必ず作業対象機器のソフトウェア要件を確認してください。
 
 
 .. _ansible_execution_agent_communication_requirements:
