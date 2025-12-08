@@ -45,7 +45,14 @@
     
     return true;
   }
-   
+
+  if (isValidRedirect(redirectTo)) {
+    console.log('Valid redirect to:', redirectTo);
+  } else {
+    console.warn('Invalid redirect path detected. Redirecting to default index.html');
+    redirectTo = 'index.html';
+  }
+  
   window.location.href = 'ja/#__version__#/' + redirectTo;
 </script>
 </head>
