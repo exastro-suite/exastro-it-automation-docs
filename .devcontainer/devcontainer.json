@@ -89,8 +89,9 @@
 		"source=${localEnv:HOME}/.talisman/bin,target=/home/almalinux/.talisman/bin,type=bind",
 		"source=${localEnv:HOME}/.gitconfig,target=/home/sphinx/.gitconfig,type=bind",
 		"source=${localEnv:HOME}/.netrc,target=/home/sphinx/.netrc,type=bind",
-		"source=/mnt/mainte/certification/ZscalerRootCertificate.crt,target=/usr/local/share/ca-certificates/ZscalerRootCertificate.crt,type=bind",
-	],
+		"source=/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem,target=/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem,type=bind",
+		"source=/usr/share/pki/ca-trust-source/anchors/UserRootCertificate.crt,target=/etc/ssl/certs/ca-certificates.crt,type=bind",
+],
 	"workspaceFolder": "/workspace",
 	"containerEnv": {
 		"HTTP_PROXY": "${localEnv:HTTP_PROXY}",
@@ -99,6 +100,9 @@
 		"https_proxy": "${localEnv:HTTP_PROXY}",
 		"NO_PROXY": "localhost,127.0.0.1",
 		"no_proxy": "localhost,127.0.0.1",
-		"NODE_EXTRA_CA_CERTS": "/usr/local/share/ca-certificates/ZscalerRootCertificate.crt"
+		"SSL_CERT_FILE": "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem",
+		"REQUESTS_CA_BUNDLE": "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem",
+		"NODE_EXTRA_CA_CERTS": "/etc/ssl/certs/ca-certificates.crt",
+  "NODE_TLS_REJECT_UNAUTHORIZED": "1",
 	},
 }
