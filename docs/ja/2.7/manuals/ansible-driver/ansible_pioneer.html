@@ -1,0 +1,3627 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>3. Ansible-Pioneer &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="4. Ansible-LegacyRole" href="ansible_legacyrole.html" />
+    <link rel="prev" title="2. Ansible-Legacy" href="ansible_legacy.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/manuals/ansible-driver/ansible_pioneer.html" selected>current</option>
+              <option value="../../../../ja/2.7/manuals/ansible-driver/ansible_pioneer.html" selected>2.7(current)</option>
+              <option value="../../../../ja/2.6/manuals/ansible-driver/ansible_pioneer.html">2.6</option>
+              <option value="../../../../ja/2.5/manuals/ansible-driver/ansible_pioneer.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/ansible-driver/ansible_pioneer.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/ansible-driver/ansible_pioneer.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/ansible-driver/ansible_pioneer.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/ansible-driver/ansible_pioneer.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/ansible-driver/ansible_pioneer.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/manuals/ansible-driver/ansible_pioneer.html" selected>日本語</option>
+              <option value="../../../../en/2.7/manuals/ansible-driver/ansible_pioneer.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="ansible_legacy.html" title="前のトピックへ"><span class="section-number">2. </span>Ansible-Legacy</a></li>
+        <li class="next"><a href="ansible_legacyrole.html" title="次のトピックへ"><span class="section-number">4. </span>Ansible-LegacyRole</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../it_automation_base/index.html">基本操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../host_group/index.html">ホストグループ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Ansible ドライバ</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ansible_common.html">1. Ansible共通</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansible_legacy.html">2. Ansible-Legacy</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3. Ansible-Pioneer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">3.1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">3.2. Ansible-Pioneer概要</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">3.3. Ansible-Pioneer メニュー構成</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id4">3.3.1. メニュー/画面一覧</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">3.4. Ansible-Pioneer利用手順</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id6">3.4.1. Ansible-Pioneer作業フロー</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">3.5. Ansible-Pioneer メニュー操作方法説明</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id8">3.5.1. 基本コンソール</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#ansible">3.5.2. Ansible共通</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id9">3.5.3. Ansible-Pioneer</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#ansible-pioneer-write-dialog-file-ansible-pioneer">3.6. 対話ファイル（Ansible-Pioneer）の記述方法</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id20">3.6.1. 対話ファイルの構成</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id21">3.6.2. 対話モジュール</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id34">3.6.3. 正規表現</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id35">3.6.4. 注意事項</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id39">3.7. 付録</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#ansibleita">3.7.1. Ansible実行時に使用される投入データとITAメニューの紐づけ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#ansible-pioneer-the-linkage-between-the-output-data-used-during-ansible-execution-and-ita-menu">3.7.2. Ansible実行時に作成される結果データ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ansible_legacyrole.html">4. Ansible-LegacyRole</a></li>
+<li class="toctree-l3"><a class="reference internal" href="collect.html">5. 収集機能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansible_ee_custom.html">6. Ansible実行環境のカスタマイズ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform_driver/index.html">Terraform ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import/index.html">エクスポート・インポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cicd_for_iac/index.html">CI/CD for IaC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintenance/index.html">メンテナンス</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">3. Ansible-Pioneer</a><ul>
+<li><a class="reference internal" href="#id1">3.1. はじめに</a></li>
+<li><a class="reference internal" href="#id2">3.2. Ansible-Pioneer概要</a></li>
+<li><a class="reference internal" href="#id3">3.3. Ansible-Pioneer メニュー構成</a><ul>
+<li><a class="reference internal" href="#id4">3.3.1. メニュー/画面一覧</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">3.4. Ansible-Pioneer利用手順</a><ul>
+<li><a class="reference internal" href="#id6">3.4.1. Ansible-Pioneer作業フロー</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7">3.5. Ansible-Pioneer メニュー操作方法説明</a><ul>
+<li><a class="reference internal" href="#id8">3.5.1. 基本コンソール</a></li>
+<li><a class="reference internal" href="#ansible">3.5.2. Ansible共通</a></li>
+<li><a class="reference internal" href="#id9">3.5.3. Ansible-Pioneer</a><ul>
+<li><a class="reference internal" href="#os">OS種別</a></li>
+<li><a class="reference internal" href="#movement">Movement一覧</a></li>
+<li><a class="reference internal" href="#ansible-pioneer-dialog-type-list">対話種別</a></li>
+<li><a class="reference internal" href="#ansible-pioneer-dialog-files">対話ファイル素材集</a></li>
+<li><a class="reference internal" href="#ansible-pioneer-movement-details">Movement-対話種別紐付</a></li>
+<li><a class="reference internal" href="#ansible-pioneer-substitution-value-auto-registration-setting">代入値自動登録設定</a></li>
+<li><a class="reference internal" href="#ansible-pioneer-execution">作業実行</a></li>
+<li><a class="reference internal" href="#ansible-pioneer-check-operation-status">作業状態確認</a></li>
+<li><a class="reference internal" href="#ansible-pioneer-execution-list">作業管理</a></li>
+<li><a class="reference internal" href="#ansible-pioneer-target-host">作業対象ホスト</a></li>
+<li><a class="reference internal" href="#ansible-pioneer-substitution-value-list">代入値管理</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ansible-pioneer-write-dialog-file-ansible-pioneer">3.6. 対話ファイル（Ansible-Pioneer）の記述方法</a><ul>
+<li><a class="reference internal" href="#id20">3.6.1. 対話ファイルの構成</a></li>
+<li><a class="reference internal" href="#id21">3.6.2. 対話モジュール</a><ul>
+<li><a class="reference internal" href="#expect">expectモジュール</a><ul>
+<li><a class="reference internal" href="#id22">概要</a></li>
+<li><a class="reference internal" href="#id23">書式</a></li>
+<li><a class="reference internal" href="#id24">記述例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#state">stateモジュール</a><ul>
+<li><a class="reference internal" href="#id25">概要</a></li>
+<li><a class="reference internal" href="#id26">書式</a></li>
+<li><a class="reference internal" href="#id27">記述例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#command">commandモジュール</a><ul>
+<li><a class="reference internal" href="#id28">概要</a></li>
+<li><a class="reference internal" href="#id29">書式</a></li>
+<li><a class="reference internal" href="#ansible-pioneer-coomand-example">記述例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localaction">localactionモジュール</a><ul>
+<li><a class="reference internal" href="#id31">概要</a></li>
+<li><a class="reference internal" href="#id32">書式</a></li>
+<li><a class="reference internal" href="#id33">記述例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id34">3.6.3. 正規表現</a></li>
+<li><a class="reference internal" href="#id35">3.6.4. 注意事項</a><ul>
+<li><a class="reference internal" href="#statecommand">stateモジュールとcommandモジュールの使用時の注意事項</a></li>
+<li><a class="reference internal" href="#id36">複数具体値変数使用時の注意事項</a></li>
+<li><a class="reference internal" href="#id37">対話ファイル終了時の注意事項</a></li>
+<li><a class="reference internal" href="#yaml">対話ファイルをyaml形式で記載する際の注意事項</a></li>
+<li><a class="reference internal" href="#lang">作業対象のログインユーザのLANGについての注意事項</a></li>
+<li><a class="reference internal" href="#id38">作業対象へ投入するコマンドの終端コードについての注意事項</a></li>
+<li><a class="reference internal" href="#operating-system-command">Operating System Commandシーケンス</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id39">3.7. 付録</a><ul>
+<li><a class="reference internal" href="#ansibleita">3.7.1. Ansible実行時に使用される投入データとITAメニューの紐づけ</a><ul>
+<li><a class="reference internal" href="#id40">Ansible-Pioneer投入データ</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ansible-pioneer-the-linkage-between-the-output-data-used-during-ansible-execution-and-ita-menu">3.7.2. Ansible実行時に作成される結果データ</a><ul>
+<li><a class="reference internal" href="#id42">Ansible-Pioneer結果データに保存されるファイル一覧</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">Ansible ドライバ</a></li>
+    
+    <li><span class="section-number">3. </span>Ansible-Pioneer</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="ansible-pioneer">
+<h1><span class="section-number">3. </span>Ansible-Pioneer<a class="headerlink" href="#ansible-pioneer" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2><span class="section-number">3.1. </span>はじめに<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書では、Ansible driverのPioneer機能および操作方法について説明します。</div>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">3.2. </span>Ansible-Pioneer概要<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Ansibleに独自モジュールを追加し、対話形式による設定投入を可能とします。</div>
+<div class="line">Telnet, SSH でログイン可能なサーバ・ストレージ・ネットワーク各機器に対応しています。</div>
+</div>
+</section>
+<section id="id3">
+<h2><span class="section-number">3.3. </span>Ansible-Pioneer メニュー構成<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本章では、Ansible-Pioneerのメニュー構成について説明します。</div>
+</div>
+<section id="id4">
+<h3><span class="section-number">3.3.1. </span>メニュー/画面一覧<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><strong>基本コンソールのメニュー</strong></div>
+</div>
+</li>
+</ol>
+<div class="line-block">
+<div class="line">Ansible-Pioneerで利用する 基本コンソールのメニュー一覧を以下に記述します。</div>
+</div>
+<table class="docutils align-left" id="id43">
+<caption><span class="caption-number">表 3.46 </span><span class="caption-text">基本コンソール メニュー/画面一覧</span><a class="headerlink" href="#id43" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 7.1%" />
+<col style="width: 28.6%" />
+<col style="width: 64.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>メニュー画面</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>オペレーション一覧</p></td>
+<td><p>オペレーション一覧をメンテナンス(閲覧/登録/更新/廃止)できます。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic" start="2">
+<li><div class="line-block">
+<div class="line"><strong>Ansible共通のメニュー</strong></div>
+</div>
+</li>
+</ol>
+<div class="line-block">
+<div class="line">Ansible共通のメニュー一覧を以下に記述します。</div>
+</div>
+<table class="docutils align-left" id="id44">
+<caption><span class="caption-number">表 3.47 </span><span class="caption-text">Ansible共通 メニュー/画面一覧</span><a class="headerlink" href="#id44" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 7.1%" />
+<col style="width: 21.4%" />
+<col style="width: 71.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>メニュー・画面</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>機器一覧</p></td>
+<td><p>作業対象の機器情報を管理します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>インターフェース情報</p></td>
+<td><div class="line-block">
+<div class="line">Ansible Core、Ansible Automation Controller、Ansible Execution Agentのいずれの実行エンジンを使用するかを選択し、実行エンジンのサーバへの接続インターフェース情報を管理します。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Ansible Automation Controllerホスト一覧</p></td>
+<td><p>Ansible Automation ControllerのRestAPI実行に必要な情報、および構築資材をAnsible Automation Controllerにファイル転送するために必要な情報を管理します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>グローバル変数管理</p></td>
+<td><p>各モードのPlaybookや対話ファイルで共通利用する変数と具体値を管理します。</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>グローバル変数（センシティブ）管理</p></td>
+<td><div class="line-block">
+<div class="line">各モードのPlaybookや対話ファイルで共通利用する変数と具体値を管理します。</div>
+<div class="line">こちらで登録したグローバル変数は、暗号化して保存され、Ansible実行時には、ansible-vaultを通して使用されます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>ファイル管理</p></td>
+<td><p>各モードのPlaybookや対話ファイルで共通利用する素材ファイルと埋込変数を管理します。</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>テンプレート管理</p></td>
+<td><p>各モードのPlaybookや対話ファイルで共通利用するテンプレートファイルと埋込変数を管理します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>実行環境定義テンプレート管理</p></td>
+<td><p>Ansible Execution Agent内にansible-builderで実行環境（コンテナ）をbuildする際の実行環境定義ファイル(execution-environment.yml)のテンプレートファイルを管理します。</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>実行環境管理</p></td>
+<td><p>Ansible Execution Agent内にansible-builderで実行環境（コンテナ）をbuildする際の実行環境定義ファイル(execution-environment.yml)のテンプレートファイルと、テンプレートに埋め込むパラメータが定義されているパラメータシートの紐付を管理します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>エージェント管理</p></td>
+<td><p>ITAと接続したAnsible Execution Agentのエージェント名とバージョン情報を閲覧できます。</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>管理対象外変数リスト</p></td>
+<td><p>「 変数抜出対象資材 」で抜出した変数で、 <span class="menuselection">各モード ▶ 代入値自動登録設定</span> の  <span class="menuselection">:menuselection:`Movement名:変数名</span> に表示したくない変数を管理します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>共通変数利用リスト (※1)</p></td>
+<td><p><span class="menuselection">Ansible共通 ▶ グローバル変数管理</span> ・ <span class="menuselection">Ansible共通 ▶ グローバル変数（センシティブ）管理</span> ・ <span class="menuselection">Ansible共通 ▶ ファイル管理</span> ・ <span class="menuselection">Ansible共通 ▶ テンプレート管理</span> に登録されている変数が、どの素材( <span class="menuselection">Ansible-Legacy ▶ Playbook素材集</span> ・ <span class="menuselection">Ansible-Pioneer ▶ 対話ファイル素材集</span> ・ <span class="menuselection">Ansible-LegacyRole ▶ ロールパッケージ管理</span> )で使用しているかを閲覧できます。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">※1 非表示メニューは、内部処理で使用するメニューです。</div>
+<div class="line">ITAをインストールした状態では表示されないメニューに設定されています。</div>
+<div class="line">非表示メニューを表示するには、<span class="menuselection">管理コンソール ▶ ロール・メニュー紐付管理</span> で各メニューの復活処理を行います。詳細は「 <a class="reference internal" href="../it_automation_base/management_console.html"><span class="doc">管理コンソール</span></a> 」を参照してください。</div>
+<div class="line">内部処理で使用するメニューには、登録を行わないようにしてください。</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic" start="3">
+<li><div class="line-block">
+<div class="line"><strong>Ansible-Pioneerのメニュー</strong></div>
+</div>
+</li>
+</ol>
+<div class="line-block">
+<div class="line">Ansible-Pioneerのメニュー一覧を以下に記述します。</div>
+</div>
+<table class="docutils align-left" id="id45">
+<caption><span class="caption-number">表 3.48 </span><span class="caption-text">Ansible-Pioneer メニュー/画面一覧</span><a class="headerlink" href="#id45" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15.4%" />
+<col style="width: 23.1%" />
+<col style="width: 61.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>メニュー・画面</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Movement一覧</p></td>
+<td><p>Movementの一覧を管理します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>対話種別</p></td>
+<td><p>同一目的の対話ファイルをまとめる対話種別を管理します。</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>OS種別</p></td>
+<td><p>Pioneerより作業対象となる機器のOS種別を管理します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>対話ファイル素材集</p></td>
+<td><p>対話種別に紐づけるOS種別とITAシステム独自フォーマットの作業手順ファイル（以降、対話ファイルと称す。）を管理します。</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Movement-対話種別紐付</p></td>
+<td><p>Movementでインクルードする対話ファイルに対応した対話種別を管理します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>代入値自動登録設定</p></td>
+<td><p>パラメータシートに登録されているオぺレーションとホスト毎の項目値を紐付けるMovementと変数を管理します。</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>作業実行</p></td>
+<td><p>作業実行するMovementとオペレーションを選択し実行を指示します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>作業管理</p></td>
+<td><p>作業実行履歴を管理します。</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>作業状態確認</p></td>
+<td><p>作業実行状態を表示します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>作業対象ホスト</p></td>
+<td><p>作業実行毎の作業対象ホストを表示します。</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>代入値管理</p></td>
+<td><p>作業実行毎の変数の具体値を表示します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>Movement-変数紐付 （※1）</p></td>
+<td><p>Movementで使用している変数を管理します。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">※1 非表示メニューは、内部処理で使用するメニューです。</div>
+<div class="line">ITAをインストールした状態では表示されないメニューに設定されています。</div>
+<div class="line">非表示メニューを表示するには、<span class="menuselection">管理コンソール ▶ ロール・メニュー紐付管理</span> で各メニューの復活処理を行います。詳細は「 <a class="reference internal" href="../it_automation_base/management_console.html"><span class="doc">管理コンソール</span></a> 」を参照してください。</div>
+<div class="line">内部処理で使用するメニューには、登録を行わないようにしてください。</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id5">
+<h2><span class="section-number">3.4. </span>Ansible-Pioneer利用手順<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Ansible-Pioneerの利用手順について説明します。</div>
+</div>
+<section id="id6">
+<h3><span class="section-number">3.4.1. </span>Ansible-Pioneer作業フロー<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">以下は、Ansible-Pioneerで作業を実行するまでの流れです。</div>
+</div>
+<ul>
+<li><p><strong>作業フロー詳細と参照先</strong></p>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><strong>OS種別の登録</strong></div>
+<div class="line"><span class="menuselection">Ansible-Pioneer ▶ OS種別</span> から、作業対象のOS種別を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#ansible-pioneer-os-types"><span class="std std-ref">OS種別</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>作業対象への接続情報を登録</strong></div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ 機器一覧</span> から、作業対象への接続情報を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="ansible_common.html#ansible-common-device-list"><span class="std std-ref">機器一覧</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>オペレーション名の登録</strong></div>
+<div class="line"><span class="menuselection">基本コンソール ▶ オペレーション一覧</span> から、作業用のオペレーション名を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="../it_automation_base/basic_console.html#basic-console-operation"><span class="std std-ref">オペレーション一覧</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>Ansible Automation Controllerホスト情報を登録（必要に応じて実施）</strong></div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ Ansible Automation Controllerホスト一覧</span> から、Ansible Automation Controllerのホスト情報を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="ansible_common.html#ansible-common-ansible-automation-controller-hosts"><span class="std std-ref">Ansible Automation Platform ノード一覧</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>インターフェース情報の登録</strong></div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> から、Ansible Core、Ansible Automation Controller、Ansible Execution Agentのいずれの実行エンジンを使用するかを選択し、実行エンジンのサーバへの接続情報を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="ansible_common.html#ansible-common-interface-information"><span class="std std-ref">インターフェース情報</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>実行環境定義テンプレート管理の登録（必要に応じて実施）</strong></div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ 実行環境定義テンプレート管理</span> から、Ansible Execution Agent内にansible-builderで実行環境（コンテナ）をbuildする際の実行環境定義ファイル(execution-environment.yml)のテンプレートファイルを登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="ansible_common.html#ansible-execution-environment-definition-template-list"><span class="std std-ref">実行環境定義テンプレート管理</span></a> 」や「 <a class="reference internal" href="ansible_common.html#ansible-common-environment-definition-make"><span class="std std-ref">Ansible共通 ▶ 実行環境定義テンプレート管理 に登録するテンプレートファイルと パラメータシート「実行環境パラメータ定義」 の使用方法</span></a> 」を参照してください。</div>
+<div class="line">尚、ITAをインストールすると、pythonモジュールやansible galaxyコレクションが追加できるテンプレートファイルが登録されます。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>パラメータシート「実行環境パラメータ定義」の登録（必要に応じて実施）</strong></div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ 実行環境定義テンプレート管理</span> より登録した実行環境定義ファイル(execution-environment.yml)のテンプレートファイルに埋め込むパラメータを登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="ansible_common.html#ansible-common-environment-definition-make"><span class="std std-ref">Ansible共通 ▶ 実行環境定義テンプレート管理 に登録するテンプレートファイルと パラメータシート「実行環境パラメータ定義」 の使用方法</span></a> 」を参照してください。</div>
+<div class="line">尚、ITAをインストールすると、実行環境定義テンプレートファイル(execution-environment.yml)に埋め込むパラメータが登録された <span class="menuselection">パラメータシート「実行環境パラメータ定義」</span> が登録されます。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>実行環境管理の登録（必要に応じて実施）</strong></div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ 実行環境定義テンプレート管理</span> で登録した実行環境定義ファイル(execution-environment.yml)のテンプレートファイルと <span class="menuselection">パラメータシート「実行環境パラメータ定義」</span> の紐付を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="ansible_common.html#ansible-execution-environment-list"><span class="std std-ref">実行環境管理</span></a> 」を参照してください。</div>
+<div class="line">尚。ITAをインストールすると、 <span class="menuselection">パラメータシート「実行環境パラメータ定義」</span> と <span class="menuselection">Ansible共通 ▶ 実行環境定義テンプレート管理</span> の紐付が登録されます。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>Movementの登録</strong></div>
+<div class="line"><span class="menuselection">Ansible-Pioneer ▶ Movement一覧</span> から、作業用のMovementを登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#ansible-pioneer-movement-list"><span class="std std-ref">Movement一覧</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>対話種別の登録</strong></div>
+<div class="line"><span class="menuselection">Ansible-Pioneer ▶ 対話種別</span> から、対話種別を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#ansible-pioneer-dialog-type-list"><span class="std std-ref">対話種別</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>対話ファイルの登録</strong></div>
+<div class="line"><span class="menuselection">Ansible-Pioneer ▶ 対話ファイル素材集</span> から、対話種別とOS種別の組み合わせに対して対話ファイルを登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#ansible-pioneer-dialog-files"><span class="std std-ref">対話ファイル素材集</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>グローバル変数の登録（必要に応じて実施）</strong></div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ グローバル変数管理</span> 、<span class="menuselection">Ansible共通 ▶ グローバル変数（センシティブ）管理</span> から、対話ファイルで使用するグローバル変数を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="ansible_common.html#ansible-common-global-variable-list"><span class="std std-ref">グローバル変数管理</span></a> 」 、「 <a class="reference internal" href="ansible_common.html#ansible-common-global-variable-list-for-sensitiv"><span class="std std-ref">グローバル変数（センシティブ）管理</span></a>  」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>テンプレートファイルの登録（必要に応じて実施）</strong></div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ テンプレート管理</span> から、対話ファイルで使用するテンプレートファイルとテンプレート埋込変数を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="ansible_common.html#ansible-common-template-list"><span class="std std-ref">テンプレート管理</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>ファイル素材の登録（必要に応じて実施）</strong></div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ ファイル管理</span> から、対話ファイルで使用するファイル素材とファイル埋込変数を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="ansible_common.html#ansible-common-file-list"><span class="std std-ref">ファイル管理</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>管理対象外変数の登録（必要に応じて実施）</strong></div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ 管理対象外変数リスト</span> から、変数抜出対象の資材から抜出した変数で、 <span class="menuselection">Ansible-Pioneer ▶ 代入値自動登録</span> の <span class="menuselection">Movement名:変数名</span> に表示したくない変数を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="ansible_common.html#ansible-common-unmanaged-var-list"><span class="std std-ref">管理対象外変数リスト</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>Movementに対話ファイルを登録</strong></div>
+<div class="line"><span class="menuselection">Ansible-Pioneer ▶ Movement-対話種別紐付</span> から、登録したMovementでインクルードする対話ファイルに対応した対話種別を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#ansible-pioneer-movement-details"><span class="std std-ref">Movement-対話種別紐付</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>パラメータシートの作成</strong></div>
+<div class="line"><span class="menuselection">パラメータシート作成・定義</span> から、作業対象の設定に使用するデータを登録するためのパラメータシートを作成します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="../create_param/menu_creation.html"><span class="doc">パラメータシート作成機能</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>パラメータシートにデータを登録</strong></div>
+<div class="line">前項で作成したパラメータシートから、作業対象の設定に使用するデータを登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="../create_param/menu_creation.html"><span class="doc">パラメータシート作成機能</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>代入値自動登録設定</strong></div>
+<div class="line"><span class="menuselection">Ansible-Pioneer ▶ 代入値自動登録設定</span> から、パラメータシートに登録されているオペレーションとホスト毎の項目の設定値と、Movementの変数を紐付けます。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#ansible-pioneer-substitution-value-auto-registration-setting"><span class="std std-ref">代入値自動登録設定</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>作業実行</strong></div>
+<div class="line"><span class="menuselection">Ansible-Pioneer ▶ 作業実行</span> から、Movementとオペレーションを選択し作業の実行を行います。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#ansible-pioneer-execution"><span class="std std-ref">作業実行</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>作業状態確認</strong></div>
+<div class="line"><span class="menuselection">Ansible-Pioneer ▶ 作業状態確認</span> から、実行した作業の状態をリアルタイムで閲覧できます。また、作業の緊急停止や、実行ログ、エラーログを監視することができます。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#ansible-pioneer-check-operation-status"><span class="std std-ref">作業状態確認</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>作業履歴確認</strong></div>
+<div class="line"><span class="menuselection">Ansible-Pioneer ▶ 作業管理</span> から、実行した作業の一覧が表示され履歴が確認できます。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#ansible-pioneer-execution-list"><span class="std std-ref">作業管理</span></a> 」を参照してください。</div>
+</div>
+</li>
+</ol>
+</li>
+</ul>
+</section>
+</section>
+<section id="id7">
+<h2><span class="section-number">3.5. </span>Ansible-Pioneer メニュー操作方法説明<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本章では、Ansible-Pioneerで利用するメニューについて説明します。</div>
+</div>
+<section id="id8">
+<h3><span class="section-number">3.5.1. </span>基本コンソール<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">基本コンソールについての操作は「 <a class="reference internal" href="../it_automation_base/basic_console.html"><span class="doc">基本コンソール</span></a> 」を参照してください。</div>
+</div>
+</section>
+<section id="ansible">
+<h3><span class="section-number">3.5.2. </span>Ansible共通<a class="headerlink" href="#ansible" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Ansible共通についての操作は「 <a class="reference internal" href="ansible_common.html"><span class="doc">Ansible共通</span></a> 」を参照してください。</div>
+</div>
+</section>
+<section id="id9">
+<h3><span class="section-number">3.5.3. </span>Ansible-Pioneer<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">本節では、Ansible-Pioneerでの操作について記載します。</div>
+</div>
+<section id="os">
+<span id="ansible-pioneer-os-types"></span><h4>OS種別<a class="headerlink" href="#os" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">作業対象となる機器のOS種別のメンテナンス（閲覧/登録/更新/廃止）を行います。</div>
+</div>
+<figure class="align-default" id="id46">
+<a class="reference internal image-reference" href="../../_images/os_type_list.png"><img alt="サブメニュー画面（OS種別）" src="../../_images/os_type_list.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.37 </span><span class="caption-text">サブメニュー画面（OS種別）</span><a class="headerlink" href="#id46" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="guilabel">登録</span> ボタンより、OS種別の登録を行います。</div>
+</div>
+<figure class="align-default" id="id47">
+<a class="reference internal image-reference" href="../../_images/registration_os_type_list.gif"><img alt="登録画面（OS種別）" src="../../_images/registration_os_type_list.gif" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.38 </span><span class="caption-text">登録画面（OS種別）</span><a class="headerlink" href="#id47" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">登録画面の項目一覧は以下のとおりです。</div>
+</div>
+<table class="docutils align-left" id="id48">
+<caption><span class="caption-number">表 3.49 </span><span class="caption-text">登録画面項目一覧（OS種別）</span><a class="headerlink" href="#id48" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>入力形式</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>項番</p></td>
+<td><p>登録時に自動採番した36桁の文字列が表示されます。</p></td>
+<td><p>ー</p></td>
+<td><p>自動入力</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>OS種別名</p></td>
+<td><p>任意のOS名称を入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長255バイト</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>機種別</p></td>
+<td><p>SV</p></td>
+<td><p>サーバ機器の場合「True」を選択します。</p></td>
+<td><p>ー</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>NW</p></td>
+<td><p>ネットワーク機器の場合「True」を選択します。</p></td>
+<td><p>ー</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>ST</p></td>
+<td><p>ストレージ機器の場合「True」を選択します。</p></td>
+<td><p>ー</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>備考</p></td>
+<td><p>自由記述欄です。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>ー</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</section>
+<section id="movement">
+<span id="ansible-pioneer-movement-list"></span><h4>Movement一覧<a class="headerlink" href="#movement" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">Movement情報のメンテナンス（閲覧/登録/更新/廃止）を行います。</div>
+</div>
+<figure class="align-default" id="id49">
+<a class="reference internal image-reference" href="../../_images/movement_list_v2_52.png"><img alt="サブメニュー画面（Movement一覧）" src="../../_images/movement_list_v2_52.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.39 </span><span class="caption-text">サブメニュー画面（Movement一覧）</span><a class="headerlink" href="#id49" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="guilabel">登録</span> ボタンより、Movement情報の登録を行います。</div>
+</div>
+<figure class="align-default" id="id50">
+<a class="reference internal image-reference" href="../../_images/registration_movement_list_v2_52.gif"><img alt="登録画面（Movement一覧）" src="../../_images/registration_movement_list_v2_52.gif" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.40 </span><span class="caption-text">登録画面（Movement一覧）</span><a class="headerlink" href="#id50" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">登録画面の項目一覧は以下のとおりです。</div>
+</div>
+<table class="docutils align-default" id="id51">
+<caption><span class="caption-number">表 3.50 </span><span class="caption-text">登録画面項目一覧（Movement一覧）
+ :widths: 10 15 15 60 10 10 20
+ :align: left</span><a class="headerlink" href="#id51" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>入力方法</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="3"><p>MovementID</p></td>
+<td><p>登録時に自動採番した36桁の文字列が表示されます。</p></td>
+<td><p>ー</p></td>
+<td><p>自動入力</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>Movement名</p></td>
+<td><p>Movementの名称を入力します。</p></td>
+<td><p>○</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長255バイト</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>遅延タイマー</p></td>
+<td><p>Movementの実行が指定期間遅延した場合に <span class="menuselection">Ansible-Pioneer ▶ 作業状態確認</span> の <span class="menuselection">ステータス</span> を「実行中（遅延）」として警告表示したい場合に指定期間（1～）を入力します。（単位:分）</p>
+<p>未入力の場合は警告表示しません。</p>
+</td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>0～2,147,483,647</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="6"><p>Ansible利用情報</p></td>
+<td colspan="2"><p>ホスト指定形式</p></td>
+<td><p>IPアドレスで表現しないホストを指定したい場合に「ホスト名」を選択します。</p></td>
+<td><p>○</p></td>
+<td><p>リスト選択</p></td>
+<td><p>説明欄記載のとおり。</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible.cfg</p></td>
+<td><p>作業実行時に使用するansible.cfgをアップロードします。</p>
+<p>未アップロードの場合は、デフォルトが使用されます。</p>
+</td>
+<td><p>ー</p></td>
+<td><p>ファイル選択</p></td>
+<td><p>最大サイズ100Mバイト</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>並列実行数</p></td>
+<td><p>ansible-playbookコマンドのオプションパラメータ「--forks」を指定したい場合に値を入力します。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>1～4,294,967,296</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Ansible Execution Agent 利用情報</p></td>
+<td><p>実行環境</p></td>
+<td><p><span class="menuselection">Ansible共通 ▶ 実行環境定義</span> に登録されている <span class="menuselection">実行環境名</span> が表示されます。Ansible Execution Agent内にansibe-builderで実行環境
+（コンテナ）をbuildする際に使用するテンプレートファイルとパラメータシート「実行環境パラメータ定義」が紐付いている実行環境名を選択します。
+<span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> で「Ansible Execution Agent」を選択した場合、必須入力。</p></td>
+<td><p>ー</p></td>
+<td><p>リスト選択</p></td>
+<td><p>説明欄記載のとおり。</p></td>
+</tr>
+<tr class="row-odd"><td><p>ansible-builderパラメータ</p></td>
+<td><p>Ansible Execution Agent内にansibe-builderで実行環境をbuildする際のansibe-builderのパラメータを入力します。
+詳細については、 ansibe-builderのマニュアルを参照ください。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長4000バイト</p></td>
+</tr>
+<tr class="row-even"><td><p>Ansible Automatio Controller利用情報</p></td>
+<td><p>実行環境※2</p></td>
+<td><p>Ansible Automation Controllerに構築されている実行環境が表示されます。
+使用する実行環境を選択します。
+未選択の場合は、Ansible Automation Controllerに設定されているデフォルトの実行環境が使用されます。</p></td>
+<td><p>ー</p></td>
+<td><p>リスト選択</p></td>
+<td><p>説明欄記載のとおり。</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>備考</p></td>
+<td><p>自由記述欄です。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長4000バイト</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">※1 「 <a class="reference internal" href="ansible_common.html#ansible-common-aac-sync"><span class="std std-ref">Ansible Automation Controllerデータ同期</span></a> 」により取得したデータから選択します。</div>
+</div>
+</div>
+</li>
+</ol>
+</section>
+<section id="ansible-pioneer-dialog-type-list">
+<span id="id10"></span><h4>対話種別<a class="headerlink" href="#ansible-pioneer-dialog-type-list" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">対話種別のメンテナンス（閲覧/登録/更新/廃止）を行います。</div>
+<div class="line">Ansible-Pioneerでは、「OS種別」ごとの差異を対話ファイルごとに定義し、同一目的の対話ファイルを「対話種別」として纏めて機器差分を吸収（抽象化）します。</div>
+</div>
+<figure class="align-default" id="id52">
+<a class="reference internal image-reference" href="../../_images/dialog_type_list_v2-4.png"><img alt="サブメニュー画面（対話種別）" src="../../_images/dialog_type_list_v2-4.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.41 </span><span class="caption-text">サブメニュー画面（対話種別）</span><a class="headerlink" href="#id52" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="guilabel">登録</span> ボタンより、対話種別の登録を行います。</div>
+</div>
+<figure class="align-default" id="id53">
+<a class="reference internal image-reference" href="../../_images/registration_dialog_type_list_v2-4.gif"><img alt="登録画面（対話種別）" src="../../_images/registration_dialog_type_list_v2-4.gif" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.42 </span><span class="caption-text">登録画面（対話種別）</span><a class="headerlink" href="#id53" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">登録画面の項目一覧は以下のとおりです。</div>
+</div>
+<table class="docutils align-left" id="id54">
+<caption><span class="caption-number">表 3.51 </span><span class="caption-text">登録画面項目一覧（対話種別）</span><a class="headerlink" href="#id54" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 50.0%" />
+<col style="width: 5.0%" />
+<col style="width: 10.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>入力方法</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>項番</p></td>
+<td><p>登録時に自動採番した36桁の文字列が表示されます。</p></td>
+<td><p>ー</p></td>
+<td><p>自動入力</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>対話種別名</p></td>
+<td><p>対話種別名を入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>最大長255バイト</p></td>
+</tr>
+<tr class="row-even"><td><p>備考</p></td>
+<td><p>自由記述欄です。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長4000バイト</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</section>
+<section id="ansible-pioneer-dialog-files">
+<span id="id11"></span><h4>対話ファイル素材集<a class="headerlink" href="#ansible-pioneer-dialog-files" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">ユーザが作成した対話ファイルのメンテナンス（閲覧/登録/更新/廃止）を行います。</div>
+<div class="line">対話ファイルの記述に関しては、「 <a class="reference internal" href="#ansible-pioneer-write-dialog-file-ansible-pioneer"><span class="std std-ref">対話ファイル（Ansible-Pioneer）の記述方法</span></a> 」を参照してください。</div>
+<div class="line">対話種別とOS種別の組み合わせごとに対話ファイルを登録します。</div>
+<div class="line">１つの対話種別で複数のOSに対応させたい場合は、同じ対話種別で、OS種別それぞれについて対話ファイルを登録してください。</div>
+</div>
+<figure class="align-default" id="id55">
+<a class="reference internal image-reference" href="../../_images/dialog_list.png"><img alt="サブメニュー画面（対話ファイル素材集）" src="../../_images/dialog_list.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.43 </span><span class="caption-text">サブメニュー画面（対話ファイル素材集）</span><a class="headerlink" href="#id55" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="guilabel">登録</span> ボタンより、対話ファイル素材の登録を行います。</div>
+</div>
+<figure class="align-default" id="id56">
+<a class="reference internal image-reference" href="../../_images/registration_dialog_list.gif"><img alt="登録画面（対話ファイル素材集）" src="../../_images/registration_dialog_list.gif" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.44 </span><span class="caption-text">登録画面（対話ファイル素材集）</span><a class="headerlink" href="#id56" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">登録画面の項目一覧は以下のとおりです。</div>
+</div>
+<table class="docutils align-left" id="id57">
+<caption><span class="caption-number">表 3.52 </span><span class="caption-text">登録画面項目一覧（対話ファイル素材集）</span><a class="headerlink" href="#id57" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>入力方法</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>項番</p></td>
+<td><p>登録時に自動採番した36桁の文字列が表示されます。</p></td>
+<td><p>－</p></td>
+<td><p>自動入力</p></td>
+<td><p>－</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>対話種別名</p></td>
+<td><p><span class="menuselection">Ansible-Pioneer ▶ 対話種別</span> で登録した <span class="menuselection">対話種別</span> が表示されます。</p>
+<p>登録する対話ファイルの対話種別を選択します。</p>
+</td>
+<td><p>○</p></td>
+<td><p>リスト選択</p></td>
+<td><p>説明欄記載のとおり。</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>OS種別</p></td>
+<td><p><span class="menuselection">Ansible-Pioneer ▶ OS種別</span> で登録した <span class="menuselection">OS種別</span> が表示されます。</p>
+<p>登録する対話ファイルのOS種別を選択します。</p>
+</td>
+<td><p>○</p></td>
+<td><p>リスト選択</p></td>
+<td><p>説明欄記載のとおり。</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>対話ファイル素材</p></td>
+<td><p><span class="menuselection">対話種別</span> と <span class="menuselection">OS種別</span> に対応する対話ファイルをアップロードします。</p>
+<p>アップロードする対話ファイルは、文字コードがUTF-8のBOMなしで作成してください。</p>
+<p>対話ファイルはYAML書式に準じた記述をしてください。</p>
+</td>
+<td><p>○</p></td>
+<td><p>ファイル選択</p></td>
+<td><p>最大サイズ100Mバイト</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>ターゲット</p></td>
+<td><p>Linux</p></td>
+<td><p>Linuxで使用可能なPlaybookの場合、「＊」を選択します。</p>
+<p>未選択でも、作業実行に影響はありません。</p>
+</td>
+<td><p>－</p></td>
+<td><p>リスト選択</p></td>
+<td><p>説明欄記載のとおり。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Windows</p></td>
+<td><p>Windowsで使用可能なPlaybookの場合、「＊」を選択します。</p>
+<p>未選択でも、作業実行に影響はありません。</p>
+</td>
+<td><p>－</p></td>
+<td><p>リスト選択</p></td>
+<td><p>説明欄記載のとおり。</p></td>
+</tr>
+<tr class="row-even"><td><p>その他</p></td>
+<td><p>Linux、Windows以外の用途で使用可能なPlaybookの場合、Playbookの用途を入力します。</p></td>
+<td><p>－</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長4000バイト</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>Python要否</p></td>
+<td><p>ターゲットの機器にPythonが必要の場合、「＊」を選択します。</p>
+<p>未選択でも、作業実行に影響はありません。</p>
+</td>
+<td><p>－</p></td>
+<td><p>リスト選択</p></td>
+<td><p>説明欄記載のとおり。</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>説明</p></td>
+<td><p>Playbookについての説明を入力します。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長4000バイト</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>説明(en)</p></td>
+<td><p>Playbookについての説明を英語で入力します。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長4000バイト</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>備考</p></td>
+<td><p>自由記述欄です。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長4000バイト</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line"><strong>対話ファイル内に定義した変数を取り出すタイミング</strong></div>
+<div class="line">内部の処理で対話ファイル内に定義している変数を抽出します。抽出した変数は、「 <a class="reference internal" href="#ansible-pioneer-substitution-value-auto-registration-setting"><span class="std std-ref">代入値自動登録設定</span></a> 」で具体値の登録が可能になります。</div>
+<div class="line">抽出のタイミングはリアルタイムではないので、「 <a class="reference internal" href="#ansible-pioneer-substitution-value-auto-registration-setting"><span class="std std-ref">代入値自動登録設定</span></a> 」で変数が扱えるまでに <strong>時間がかかる</strong> 場合があります。</div>
+</div>
+</div>
+</section>
+<section id="ansible-pioneer-movement-details">
+<span id="id12"></span><h4>Movement-対話種別紐付<a class="headerlink" href="#ansible-pioneer-movement-details" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">Movementでインクルードする対話ファイルに対応した対話種別のメンテナンス（閲覧/登録/更新/廃止）を行います。</div>
+</div>
+<figure class="align-default" id="id58">
+<a class="reference internal image-reference" href="../../_images/movement_dialog_link.png"><img alt="サブメニュー画面（Movement-対話種別紐付）" src="../../_images/movement_dialog_link.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.45 </span><span class="caption-text">サブメニュー画面（Movement-対話種別紐付）</span><a class="headerlink" href="#id58" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="guilabel">登録</span> ボタンより、Movementでインクルードする対話ファイルに対応した対話種別の登録を行います。</div>
+</div>
+<figure class="align-default" id="id59">
+<a class="reference internal image-reference" href="../../_images/registration_movement_dialog_link.gif"><img alt="登録画面（Movement-対話種別紐付）" src="../../_images/registration_movement_dialog_link.gif" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.46 </span><span class="caption-text">登録画面（Movement-対話種別紐付）</span><a class="headerlink" href="#id59" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">登録画面の項目一覧は以下のとおりです。</div>
+</div>
+<table class="docutils align-left" id="id60">
+<caption><span class="caption-number">表 3.53 </span><span class="caption-text">登録画面項目一覧（Movement-対話種別紐付の場合）</span><a class="headerlink" href="#id60" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 50.0%" />
+<col style="width: 5.0%" />
+<col style="width: 10.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>対話種別</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>入力方法</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>項番</p></td>
+<td><p>登録時に自動採番した36桁の文字列が表示されます。</p></td>
+<td><p>ー</p></td>
+<td><p>自動入力</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>Movement</p></td>
+<td><div class="line-block">
+<div class="line"><span class="menuselection">Ansible-Pioneer ▶ Movement一覧</span> で登録した <span class="menuselection">Movement名</span> が表示されます。</div>
+<div class="line">Movement を選択します。</div>
+</div>
+</td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>説明欄記載のとおり。</p></td>
+</tr>
+<tr class="row-even"><td><p>対話種別</p></td>
+<td><div class="line-block">
+<div class="line"><span class="menuselection">Ansible-Pioneer ▶ 対話種別</span> で登録した <span class="menuselection">対話種別</span> が表示されます。</div>
+<div class="line">Movementでインクルードする対話ファイルに対応した対話種別を選択します。</div>
+<div class="line">作業対象毎にOS種別と対話種別に紐付く対話ファイルが実行対象となります。</div>
+</div>
+</td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>説明欄記載のとおり。</p></td>
+</tr>
+<tr class="row-odd"><td><p>インクルード順序</p></td>
+<td><div class="line-block">
+<div class="line">対話種別の実行順序（1～）を入力します。</div>
+<div class="line">入力されたインクルード順序（昇順）で対話種別に紐付く対話ファイル素材が実行されます。</div>
+</div>
+</td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>1～2,147,483,647</p></td>
+</tr>
+<tr class="row-even"><td><p>備考</p></td>
+<td><p>自由記述欄です。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長4000バイト</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</section>
+<section id="ansible-pioneer-substitution-value-auto-registration-setting">
+<span id="id13"></span><h4>代入値自動登録設定<a class="headerlink" href="#ansible-pioneer-substitution-value-auto-registration-setting" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">パラメータシートの項目の設定値とMovementの変数との紐付管理（閲覧/登録/更新/廃止）を行います。</div>
+<div class="line">登録した情報は作業実行により <span class="menuselection">Ansible-Pioneer ▶ 代入値管理</span> と <span class="menuselection">Ansible-Pioneer▶ 作業対象ホスト</span> に反映されます。</div>
+</div>
+<figure class="align-default" id="id61">
+<a class="reference internal image-reference" href="../../_images/substitution_value_auto_registration_setting1.png"><img alt="サブメニュー画面（代入値自動登録設定）" src="../../_images/substitution_value_auto_registration_setting1.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.47 </span><span class="caption-text">サブメニュー画面（代入値自動登録設定）</span><a class="headerlink" href="#id61" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="guilabel">登録</span> ボタンより、パラメータシートの項目の設定値とMovementの変数との紐付登録を行います。</div>
+</div>
+<figure class="align-default" id="id62">
+<a class="reference internal image-reference" href="../../_images/registration_substitution_value_automatic_setting1.gif"><img alt="登録画面（代入値自動登録設定）" src="../../_images/registration_substitution_value_automatic_setting1.gif" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.48 </span><span class="caption-text">登録画面（代入値自動登録設定）</span><a class="headerlink" href="#id62" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">登録画面の項目一覧は以下のとおりです。</div>
+</div>
+<table class="docutils align-left" id="id63">
+<caption><span class="caption-number">表 3.54 </span><span class="caption-text">登録画面項目一覧（代入値自動登録設定）</span><a class="headerlink" href="#id63" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>入力方法</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>項番</p></td>
+<td><p>登録時に自動採番した36桁の文字列が表示されます。</p></td>
+<td><p>ー</p></td>
+<td><p>自動入力</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>パラメータシート（From）</p></td>
+<td><p>メニューグループ:メニュー:項目</p></td>
+<td><p>パラメータシートの項目が表示されます。</p>
+<p>対象の項目を選択します。</p>
+<p>選択対象となるパラメータシートは<span class="menuselection">パラメータシート作成 ▶ パラメータシート定義・作成 ▶ 作成対象</span>で、パラメータシート（ホスト/オペレーションあり）を選択して作成したパラメータシートの項目になります。</p>
+</td>
+<td><p>○</p></td>
+<td><p>リスト選択</p></td>
+<td><p>説明欄記載のとおり。</p></td>
+</tr>
+<tr class="row-even"><td><p>代入順序</p></td>
+<td><p>パラメータシートがバンドルの場合、パラメータシートで登録している <span class="menuselection">代入順序</span> を入力します。</p></td>
+<td><p><a class="reference internal" href="#ansible-pioneer-parashi-substitution"><span class="std std-ref">※1</span></a></p></td>
+<td><p>手動入力</p></td>
+<td><p>1～2,147,483,647</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>登録方式</p></td>
+<td><p><span class="menuselection">IaC変数（To）</span> で選択した変数の具体値に設定する内容を選択します。</p>
+<ul>
+<li><div class="line-block">
+<div class="line">Value型</div>
+<div class="line">項目の設定値が <span class="menuselection">IaC変数（To）</span> で選択した変数の具体値になります。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">Key型</div>
+<div class="line">項目の名称が <span class="menuselection">IaC変数（To）</span> で選択した変数の具体値になります。</div>
+</div>
+</li>
+</ul>
+</td>
+<td><p>○</p></td>
+<td><p>リスト選択</p></td>
+<td><p>説明欄記載のとおり。</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>Movement名</p></td>
+<td><p><span class="menuselection">Ansible-Pioneer ▶ Movement一覧</span> で登録した<span class="menuselection">Movement名</span> が表示されます。</p>
+<p>Movementを選択します。</p>
+</td>
+<td><p>○</p></td>
+<td><p>リスト選択</p></td>
+<td><p>説明欄記載のとおり。</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>IaC変数（To）</p></td>
+<td><p>Movement名:変数名</p></td>
+<td><p><span class="menuselection">Ansible-Pioneer ▶ Movement-対話種別紐付</span> で登録した資材で使用している変数が表示されます。</p>
+<p><span class="menuselection">パラメータシート（From）</span> で選択した項目の具体値を紐付けたい変数を選択します。</p>
+</td>
+<td><p>○</p></td>
+<td><p>リスト選択</p></td>
+<td><p>説明欄記載のとおり。</p></td>
+</tr>
+<tr class="row-even"><td><p>代入順序</p></td>
+<td><p>複数具体値変数にする場合に入力してください。</p>
+<p>具体値の代入順序（1～）を入力します。入力値に従い昇順で代入されます。具体値が複数ない場合でも代入順序（1～）を入力します。</p>
+</td>
+<td><p><a class="reference internal" href="#ansible-pioneer-substitution"><span class="std std-ref">※2</span></a></p></td>
+<td><p>手動入力</p></td>
+<td><p>1～2,147,483,647</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>NULL連携</p></td>
+<td><p>パラメータシートの具体値がNULL（空白）の場合に<span class="menuselection">Ansible-Pioneer ▶ 代入値管理</span> にNULL（空白）の値を登録するかを選択します。</p>
+<ul>
+<li><div class="line-block">
+<div class="line">True</div>
+<div class="line">パラメータシートの値がどのような値でも <span class="menuselection">Ansible-Pioneer ▶ 代入値管理</span> に登録が行われます。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">False</div>
+<div class="line">パラメータシートに値が入力されていれば <span class="menuselection">Ansible-Pioneer ▶ 代入値管理</span> に登録が行われます。</div>
+</div>
+</li>
+</ul>
+<p>未選択の場合、<span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の<span class="menuselection">NULL連携</span> の値が適用されます。</p>
+</td>
+<td></td>
+<td><p>リスト選択</p></td>
+<td><p>説明欄記載のとおり。</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>備考</p></td>
+<td><p>自由記述欄です。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長4000バイト</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<div class="admonition tip" id="ansible-pioneer-parashi-substitution">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">※1: パラメータシート（バンドル）を使用する場合のみ必須</div>
+<div class="line">パラメータシート（バンドル）のリピート設定されている項目とMovementの変数を紐付ける場合、 <span class="menuselection">Ansible-Pioneer ▶ 代入値自動登録設定</span> でパラメータシート（From） の代入順序を入力する必要があります。</div>
+<div class="line">パラメータシート（バンドル）と代入値自動登録設定の関係を以下の図に示します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/parameter.png"><img alt="パラメータシート（バンドル）使用時の代入値自動登録設定登録方法" src="../../_images/parameter.png" style="width: 600px;" />
+</a>
+</figure>
+</div>
+<div class="admonition tip" id="ansible-pioneer-substitution">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">※2: <strong>代入順序の入力</strong></div>
+</div>
+<div class="line-block">
+<div class="line">Ansible-Pioneer では、代入順序が未入力の場合は、通常変数として扱います。</div>
+<div class="line">代入順序が入力されている場合は、複数具体値変数として扱います。複数具体値変数の場合は複数の</div>
+<div class="line">具体値が必要ない場合（具体値が 1 個でよい）でも代入順序は入力してください。</div>
+<div class="line">特定の複数具体値変数に対して代入順序が連続していなくても問題ありません。</div>
+<div class="line">連続していない場合は詰めて処理されます。</div>
+<div class="line"><br /></div>
+<div class="line">e.g.）複数具体値変数に代入順序を入力して作業実行する場合</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><span class="menuselection">Ansible-Pioneer ▶ 代入値自動登録設定</span> でパラメータシートに登録されている項目の設定値と対話ファイル内の変数を紐付けします。</div>
+</div>
+<table class="docutils align-left" id="id64">
+<caption><span class="caption-number">表 3.55 </span><span class="caption-text">パラメータシートの登録内容</span><a class="headerlink" href="#id64" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head" rowspan="2"><p><strong>ホスト名</strong></p></th>
+<th class="head" rowspan="2"><p><strong>オペレーション名</strong></p></th>
+<th class="head" colspan="4"><p><strong>パラメータ</strong></p></th>
+</tr>
+<tr class="row-even"><th class="head"><p><strong>項目1</strong></p></th>
+<th class="head"><p><strong>項目2</strong></p></th>
+<th class="head"><p><strong>項目3</strong></p></th>
+<th class="head"><p><strong>項目4</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>test-host</p></td>
+<td><p>test-ope</p></td>
+<td><p>value1</p></td>
+<td><p>value2</p></td>
+<td><p>value3</p></td>
+<td><p>value4</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-left" id="id65">
+<caption><span class="caption-number">表 3.56 </span><span class="caption-text">代入値自動登録設定の登録内容</span><a class="headerlink" href="#id65" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 36.4%" />
+<col style="width: 18.2%" />
+<col style="width: 27.3%" />
+<col style="width: 18.2%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>メニュー名</p></th>
+<th class="head"><p>項目</p></th>
+<th class="head"><p>変数名</p></th>
+<th class="head"><p>代入順序</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sample-menu</p></td>
+<td><p>項目1</p></td>
+<td><p>VAR_substitutionA</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-odd"><td><p>sample-menu</p></td>
+<td><p>項目2</p></td>
+<td><p>VAR_substitutionA</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>sample-menu</p></td>
+<td><p>項目3</p></td>
+<td><p>VAR_substitutionA</p></td>
+<td><p>20</p></td>
+</tr>
+<tr class="row-odd"><td><p>sample-menu</p></td>
+<td><p>項目1</p></td>
+<td><p>VAR_substitutionB</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>sample-menu</p></td>
+<td><p>項目2</p></td>
+<td><p>VAR_substitutionB</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>sample-menu</p></td>
+<td><p>項目3</p></td>
+<td><p>VAR_substitutionB</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sample-menu</p></td>
+<td><p>項目4</p></td>
+<td><p>VAR_substitutionB</p></td>
+<td><p>3</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">作業実行時、ホスト変数ファイル（host_vars/test-host）には、代入値自動登録設定で登録した変数が下記のように出力されます。</div>
+<div class="line"><strong>ホスト変数ファイルへの出力内容</strong></div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_substitutionA</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value2</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value3</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value1</span>
+<span class="nt">VAR_substitutionB</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value3</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value1</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value4</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value2</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonition tip" id="host">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line"><strong>ホスト変数ファイルへの出力</strong></div>
+<div class="line">代入値自動登録設定で登録した変数のみが作業実行時にホスト変数ファイルへ出力されます。</div>
+<div class="line">作業実行時に 対話ファイルで使用している変数が代入値自動登録設定に登録されていない場合、作業実行がエラーとなります。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="admonition tip" id="ansible-pioneer-file-and-templete">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line"><strong>ファイル埋込変数とテンプレート埋込変数を対話ファイルの変数に紐付して使用する例</strong></div>
+<div class="line">e.g.） ファイル埋込変数 CPF_test とテンプレート埋込変数 TPF_sample を代入値自動登録設定で対話ファイルの変数に紐付して使用する場合</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><span class="menuselection">Ansible共通 ▶ ファイル管理</span> ／ <span class="menuselection">Ansible共通 ▶ テンプレート管理</span> で下記のように登録します。</div>
+</div>
+<table class="docutils align-left" id="id66">
+<caption><span class="caption-number">表 3.57 </span><span class="caption-text">ファイル管理の登録内容</span><a class="headerlink" href="#id66" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 55.6%" />
+<col style="width: 44.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ファイル埋込変数名</p></th>
+<th class="head"><p>ファイル素材</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CPF_test</p></td>
+<td><p>test_file.txt</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-left" id="id67">
+<caption><span class="caption-number">表 3.58 </span><span class="caption-text">テンプレート管理の登録内容</span><a class="headerlink" href="#id67" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 55.6%" />
+<col style="width: 44.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>テンプレート埋込変数名</p></th>
+<th class="head"><p>テンプレート素材</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>TPF_sample</p></td>
+<td><p>sample.tpl</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">パラメータシート定義・作成</span> で「Ansible共通:ファイル管理:ファイル埋込変数名」「Ansible共通:テンプレート管理:テンプレート埋込変数名」をパラメータシートの項目としてパラメータシート作成後、パラメータシートで項目の設定値としてファイル埋込変数とテンプレート埋込変数を登録します。</div>
+</div>
+<figure class="align-default" id="id68">
+<a class="reference internal image-reference" href="../../_images/menu_create.png"><img alt="パラメータシート定義・作成画面" src="../../_images/menu_create.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.49 </span><span class="caption-text">パラメータシート定義・作成画面</span><a class="headerlink" href="#id68" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id69">
+<caption><span class="caption-number">表 3.59 </span><span class="caption-text">サンプルパラメータシートの登録内容</span><a class="headerlink" href="#id69" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head" rowspan="2"><p><strong>ホスト名</strong></p></th>
+<th class="head" rowspan="2"><p><strong>オペレーション名</strong></p></th>
+<th class="head" colspan="2"><p><strong>パラメータ</strong></p></th>
+</tr>
+<tr class="row-even"><th class="head"><p><strong>ファイル管理</strong></p></th>
+<th class="head"><p><strong>テンプレート管理</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>test-host</p></td>
+<td><p>test-ope</p></td>
+<td><p>CPF_test</p></td>
+<td><p>TPF_sample</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">Ansible-Pioneer ▶ 代入値自動登録設定</span> で2. のパラメータシートに登録した項目の設定値と対話ファイルの変数を紐付して <span class="menuselection">Ansible-Pioneer ▶ 作業実行</span> で作業実行します。</div>
+</div>
+<table class="docutils align-left" id="id70">
+<caption><span class="caption-number">表 3.60 </span><span class="caption-text">代入値自動登録設定の登録内容</span><a class="headerlink" href="#id70" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 45.5%" />
+<col style="width: 27.3%" />
+<col style="width: 27.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>メニュー名</p></th>
+<th class="head"><p>項目</p></th>
+<th class="head"><p>変数名</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>サンプルパラメータシート</p></td>
+<td><p>ファイル管理</p></td>
+<td><p>VAR_filetest</p></td>
+</tr>
+<tr class="row-odd"><td><p>サンプルパラメータシート</p></td>
+<td><p>テンプレート管理</p></td>
+<td><p>VAR_temptest</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">Ansible-Pioneer ▶ 作業状態確認</span> の <span class="guilabel">代入値確認</span> ボタンで具体値に '{{ CPF_test }}' '{{ TPF_sample }}' が反映されていることが確認できます。</div>
+</div>
+<figure class="align-default" id="id71">
+<a class="reference internal image-reference" href="../../_images/general_operations_note.png"><img alt="作業状態確認の代入値管理" src="../../_images/general_operations_note.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.50 </span><span class="caption-text">作業状態確認の代入値管理</span><a class="headerlink" href="#id71" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+</ol>
+</div>
+</section>
+<section id="ansible-pioneer-execution">
+<span id="id14"></span><h4>作業実行<a class="headerlink" href="#ansible-pioneer-execution" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">作業対象のMovementをMovement一覧から選択します。</div>
+<div class="line">作業対象のオペレーションをオペレーション一覧から選択します。</div>
+<div class="line">作業実行には、3種類の実行種別があります。実行種別に応じたボタンをクリックすることで <span class="menuselection">Ansible-Pioneer ▶ 作業状態確認</span> に遷移し、実行されます。</div>
+</div>
+<figure class="align-default" id="id72">
+<a class="reference internal image-reference" href="../../_images/execution_screen_v2_52.gif"><img alt="作業実行画面" src="../../_images/execution_screen_v2_52.gif" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.51 </span><span class="caption-text">作業実行画面</span><a class="headerlink" href="#id72" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">実行種別ついて以下に説明します。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><strong>作業実行</strong></div>
+<div class="line"><span class="guilabel">作業実行</span> ボタンをクリックすると、作業対象に対して構築作業を実行します。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>ドライラン</strong></div>
+<div class="line"><span class="guilabel">ドライラン</span> ボタンをクリックすると、実際に作業対象に対して構築作業をせず、ドライランを行うことができます。</div>
+<div class="line">ドライランを行った場合の動作は、Ansible-Playbookコマンドの--checkパラメータを指定した実行となります。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>パラメータ確認</strong></div>
+<div class="line"><span class="guilabel">パラメータ確認</span> ボタンをクリックすると、実際に作業対象に対して構築作業をせず、 <span class="menuselection">Ansible-Pioneer ▶ 代入値自動登録設定</span> に登録してある情報から作業対象のオペレーションとMovementに紐付く情報を <span class="menuselection">Ansible-Pioneer ▶ 代入値管理</span> と <span class="menuselection">Ansible-Pioneer ▶ 作業対象ホスト</span> に反映し、確認することが出来ます。</div>
+</div>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line-block">
+<div class="line"><strong>予約日時の指定</strong></div>
+</div>
+<div class="line">「予約日時」を入力することで、実行を予約することがきます。</div>
+<div class="line">「予約日時」には、未来の日時のみ入力可能です。</div>
+</div>
+</div>
+</section>
+<section id="ansible-pioneer-check-operation-status">
+<span id="id15"></span><h4>作業状態確認<a class="headerlink" href="#ansible-pioneer-check-operation-status" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">作業の実行状態を監視します。</div>
+</div>
+<figure class="align-default" id="id73">
+<a class="reference internal image-reference" href="../../_images/check_operation_status_v2_52.png"><img alt="サブメニュー画面（作業状態確認）" src="../../_images/check_operation_status_v2_52.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.52 </span><span class="caption-text">サブメニュー画面（作業状態確認）</span><a class="headerlink" href="#id73" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><strong>実行状態表示</strong></div>
+<div class="line">実行状況に応じた「ステータス」が表示されます。</div>
+<div class="line">また、実行ログ、エラーログに実行状況の詳細が表示されます。</div>
+<div class="line">「実行種別」には、作業実行の場合は「通常」、ドライランの場合は「ドライラン」、パラメータ確認の場合は「パラメータ確認」が表示されます。</div>
+<div class="line">ステータスが想定外エラーで終了した場合、エラーログにメッセージが表示されます。</div>
+<div class="line">「呼出元Conductor」には、Conductorから実行した場合に、どのConductorから実行されたかを表示します。Ansible-Pioneerから直接実行した場合は空欄になります。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>作業対象ホスト確認</strong></div>
+<div class="line"><span class="guilabel">作業対象ホスト確認</span> ボタンで <span class="menuselection">Ansible-Pioneer ▶ 作業対象ホスト</span> が表示され、作業対象のオペレーションとMovementに絞り込んだホストが表示されます。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>代入値確認</strong></div>
+<div class="line"><span class="guilabel">代入値確認</span> ボタンで <span class="menuselection">Ansible-Pioneer ▶ 代入値管理</span> が表示され、作業対象のオペレーションとMovementに絞り込んだ変数と具体値が表示されます。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>緊急停止/予約取り消し</strong></div>
+<div class="line"><span class="guilabel">緊急停止</span> ボタンで構築作業を停止させることができます。</div>
+<div class="line">また、実行前の「予約実行」の作業の場合は、 <span class="guilabel">予約取消</span> ボタンが表示されます。 <span class="guilabel">予約取消</span> ボタンで予約実行が取り消せます。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>実行ログ表示</strong></div>
+<div class="line">Ansible Automation Controllerで実行した場合、作業対象の <span class="menuselection">Ansible共通 ▶ 機器一覧</span> の <span class="menuselection">ユーザ</span> ・ <span class="menuselection">パスワード</span> ・ <span class="menuselection">ssh秘密鍵ファイル</span> ・ <span class="menuselection">パスフレーズ</span> ・ <span class="menuselection">接続タイプ</span> ・ <span class="menuselection">インスタンスグルーブ</span> の項目値でグループ化された作業対象の単位で対話ファイルが実行され、ansibleの実行ログが分割されます。</div>
+<div class="line">さらに、 <span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">オプションパラメータ</span> でジョブスライス数を指定することによりグループ化された作業対象をさらにジョブスライス数で分割しplaybookが実行され、ansibleの実行ログも分割されます。</div>
+<div class="line">実行ログが分割された場合、実行ログがTabで分割表示され、表示したい実行ログを選択する事ができます。</div>
+</div>
+<div class="line-block">
+<div class="line">実行ログのTabに表示される名称は以下の2種類があります。</div>
+<div class="line">exec.log: 全ての実行ログをまとめたログファイルです。</div>
+<div class="line">exec.log以外: 分割された実行ログファイルです。ファイル命名規則は以下になります。</div>
+<div class="line">exec_&lt;グループ番号&gt;_&lt;通番&gt;</div>
+</div>
+<table class="docutils align-left" id="id74">
+<caption><span class="caption-number">表 3.61 </span><span class="caption-text">分割された実行ログファイルの命名要素</span><a class="headerlink" href="#id74" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 28.6%" />
+<col style="width: 71.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>要素</p></th>
+<th class="head"><p>内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>グループ番号</p></td>
+<td><p>作業対象の <span class="menuselection">Ansible共通 ▶ 機器一覧</span> の <span class="menuselection">ユーザ</span> ・ <span class="menuselection">パスワード</span> ・ <span class="menuselection">ssh秘密鍵ファイル</span> ・ <span class="menuselection">パスフレーズ</span> ・ <span class="menuselection">接続タイプ</span> ・ <span class="menuselection">インスタンスグルーブ</span> の項目値でグルーブ化した 1 からの通番です。</p></td>
+</tr>
+<tr class="row-odd"><td><p>通番</p></td>
+<td><div class="line-block">
+<div class="line">ジョブスライス数の設定によりグループ内を分割した 1 からの通番です。</div>
+<div class="line">0 の場合はジョブスライス数で分割されなかったことを表します。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>ログ検索</strong></div>
+<div class="line">実行ログ、エラーログは、各ログのログ検索テキストボックスに検索したい文字列を入力することで、入力した文字列の箇所がハイライトで表示されます。</div>
+<div class="line">また、「ログ検索」のチェックボックスをチェックすると、該当する行だけが表示されます。</div>
+<div class="line">実行ログ、エラーログのリフレッシュ表示間隔と最大表示行数を、  <span class="menuselection">Ansible共通 ▶ インターフェース情報</span>  の  <span class="menuselection">状態監視周期（単位ミリ秒）</span> と <span class="menuselection">進行状態表示行数</span> で設定できます。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>投入データ</strong></div>
+<div class="line">実行したPlaybookなどをダウンロードすることができます。</div>
+<div class="line">投入データの構成は「 <a class="reference internal" href="#ansible-pioneer-the-linkage-between-the-input-data-used-during-ansible-execution-and-ita-menu"><span class="std std-ref">Ansible実行時に使用される投入データとITAメニューの紐づけ</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>結果データ</strong></div>
+<div class="line">実行ログ、エラーログなどをダウンロードすることができます。</div>
+<div class="line">結果データの構成は「 <a class="reference internal" href="#ansible-pioneer-the-linkage-between-the-output-data-used-during-ansible-execution-and-ita-menu"><span class="std std-ref">Ansible実行時に作成される結果データ</span></a> 」を参照してください。</div>
+</div>
+</li>
+</ol>
+</section>
+<section id="ansible-pioneer-execution-list">
+<span id="id16"></span><h4>作業管理<a class="headerlink" href="#ansible-pioneer-execution-list" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">作業の履歴を閲覧できます。</div>
+<div class="line">条件を指定し <span class="guilabel">フィルタ</span> ボタンをクリックすると、該当する作業の履歴を閲覧できます。</div>
+<div class="line"><span class="guilabel">詳細</span> ボタンで <span class="menuselection">Ansible-Pioneer ▶ 作業状態確認</span> に遷移し、実行状態の詳細を閲覧することができます。</div>
+</div>
+<figure class="align-default" id="id75">
+<a class="reference internal image-reference" href="../../_images/execution_list_v2_52.png"><img alt="サブメニュー画面（作業管理）" src="../../_images/execution_list_v2_52.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.53 </span><span class="caption-text">サブメニュー画面（作業管理）</span><a class="headerlink" href="#id75" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">閲覧画面の項目一覧は以下のとおりです。</div>
+</div>
+<table class="docutils align-left" id="id76">
+<caption><span class="caption-number">表 3.62 </span><span class="caption-text">閲覧画面項目一覧（作業管理）</span><a class="headerlink" href="#id76" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 62.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="3"><p>作業No.</p></td>
+<td><p>自動採番した36桁の文字列が表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>実行種別</p></td>
+<td><p>実行種別を表示します。</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>ステータス</p></td>
+<td><p>作業実行のステータスを表示します。</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>緊急停止フラグ</p></td>
+<td><p><span class="menuselection">Ansible-Pioneer ▶ 作業状態確認</span> より <span class="guilabel">緊急停止</span> ボタンで緊急停止をしているかを表示します。</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>実行エンジン</p></td>
+<td><p>作業実行した実行エンジンを表示します。</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>呼出元Conductor</p></td>
+<td><p>Conductorから実行した場合にConductor名が表示されます。</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>実行ユーザ</p></td>
+<td><p>作業実行したユーザ名が表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>登録日時</p></td>
+<td><p>作業実行でボタンをクリックした日時が表示されます。</p></td>
+</tr>
+<tr class="row-even"><td rowspan="10"><p>Movement</p></td>
+<td colspan="2"><p>ID</p></td>
+<td><p>作業実行で選択したMovementのIDが表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>名称</p></td>
+<td><p>作業実行で選択したMovementの名称が表示されます。</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>遅延タイマー</p></td>
+<td><p>作業実行で選択したMovementの遅延タイマーが表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="4"><p>Ansible利用情報</p></td>
+<td><p>ホスト指定形式</p></td>
+<td><p>作業実行で選択したMovementのホスト指定形式が表示されます。</p></td>
+</tr>
+<tr class="row-even"><td><p>WinRM接続</p></td>
+<td><p>作業実行で選択したMovementのWinRM接続が表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>ヘッダーセクション</p></td>
+<td><p>作業実行で選択したMovementのヘッダーセクションが表示されます。</p></td>
+</tr>
+<tr class="row-even"><td><p>ansible.cfg</p></td>
+<td><p>作業実行で選択したMovementのansible.cfgがアップロード出来ます。</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>Ansible Execution Agent 利用情報</p></td>
+<td><p>実行環境</p></td>
+<td><p>作業実行で選択したMovementのAnsible Execution Agentの実行環境が表示されます。</p></td>
+</tr>
+<tr class="row-even"><td><p>ansible-builderパラメータ</p></td>
+<td><p>作業実行で選択したMovementのansible-builderパラメータが表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ansible Automation Controller 利用情報</p></td>
+<td><p>実行環境</p></td>
+<td><p>作業実行で選択したMovementの実行環境が表示されます。</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>オペレーション</p></td>
+<td colspan="2"><p>No.</p></td>
+<td><p>作業実行で選択したオペレーションのIDが表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>名称</p></td>
+<td><p>作業実行で選択したオペレーションの名称が表示されます。</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>投入データ</p></td>
+<td><p>投入データ一式をzip形式でアップロード出来ます。</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>結果データ</p></td>
+<td><p>結果データ一式をzip形式でアップロード出来ます。</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>作業状況</p></td>
+<td colspan="2"><p>予約日時</p></td>
+<td><p>作業実行で予約日時を設定した場合に予約日時が表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>開始日時</p></td>
+<td><p>作業実行を開始した日時が表示されます。</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>終了日時</p></td>
+<td><p>作業実行が終了した日時が表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>収集状況</p></td>
+<td colspan="2"><p>ステータス</p></td>
+<td><p>収集機能のステータスを表示します。</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>収集ログ</p></td>
+<td><p>収集機能のログがダウンロード出来ます。</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>Conductorインスタンス番号</p></td>
+<td><p>Conductorから実行された場合にConductorインスタンス番号を表示します。</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</section>
+<section id="ansible-pioneer-target-host">
+<span id="id17"></span><h4>作業対象ホスト<a class="headerlink" href="#ansible-pioneer-target-host" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">作業実行毎の作業対象ホストを閲覧できます。</div>
+</div>
+<figure class="align-default" id="id77">
+<a class="reference internal image-reference" href="../../_images/target_host2.png"><img alt="サブメニュー画面（作業対象ホスト）" src="../../_images/target_host2.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.54 </span><span class="caption-text">サブメニュー画面（作業対象ホスト）</span><a class="headerlink" href="#id77" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">閲覧画面の項目一覧は以下のとおりです。</div>
+</div>
+<table class="docutils align-left" id="id78">
+<caption><span class="caption-number">表 3.63 </span><span class="caption-text">閲覧画面項目一覧（作業対象ホスト）</span><a class="headerlink" href="#id78" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 27.3%" />
+<col style="width: 72.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>項番</p></td>
+<td><p>作業実行時に自動採番した36桁の文字列が表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>作業No</p></td>
+<td><p>作業実行時の作業Noが表示されます。</p></td>
+</tr>
+<tr class="row-even"><td><p>オペレーション</p></td>
+<td><p>作業実行時のオペレーションが表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Movement名</p></td>
+<td><p>作業実行時のMovementが表示されます。</p></td>
+</tr>
+<tr class="row-even"><td><p>ホスト名</p></td>
+<td><p>作業実行時の対象ホストが表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>備考</p></td>
+<td><p>自由記述欄です。</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</section>
+<section id="ansible-pioneer-substitution-value-list">
+<span id="id18"></span><h4>代入値管理<a class="headerlink" href="#ansible-pioneer-substitution-value-list" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">作業実行毎の変数の具体値を閲覧できます。</div>
+</div>
+<figure class="align-default" id="id79">
+<a class="reference internal image-reference" href="../../_images/substitution_value_list2.png"><img alt="サブメニュー画面（代入値管理）" src="../../_images/substitution_value_list2.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.55 </span><span class="caption-text">サブメニュー画面（代入値管理）</span><a class="headerlink" href="#id79" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line">閲覧画面の項目一覧は以下のとおりです。</div>
+</div>
+<table class="docutils align-left" id="id80">
+<caption><span class="caption-number">表 3.64 </span><span class="caption-text">閲覧画面項目一覧（代入値管理）</span><a class="headerlink" href="#id80" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="3"><p>項番</p></td>
+<td><p>作業実行時に自動採番した36桁の文字列が表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>作業No</p></td>
+<td><p>作業実行時の作業Noが表示されます。</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>オペレーション</p></td>
+<td><p>作業実行時のオペレーションが表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>Movement名</p></td>
+<td><p>作業実行時のMovementが表示されます。</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>ホスト名</p></td>
+<td><p>作業実行時の作業対象ホストが表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>Movement名:変数名</p></td>
+<td><p>作業実行時の変数が表示されます。</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>具体値</p></td>
+<td rowspan="2"><p>文字列</p></td>
+<td><p>Sensitive設定</p></td>
+<td><p>「True」または「False」が表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>値</p></td>
+<td><p>作業実行時の変数の具体値が表示されます。</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">Sensitive設定</span> が「True」の場合</div>
+<div class="line">パラメータシートで入力した具体値は暗号化されITA上では表示されません。変数の具体値は、ansible-vaultで暗号化した内容が設定されます。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">Sensitive設定</span> が「False」の場合</div>
+<div class="line">パラメータシートで入力した具体値が表示されます。</div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ファイル</p></td>
+<td><p>作業実行の変数に紐づくファイル名が表示されます。</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>代入順序</p></td>
+<td><p>複数具体値変数の場合に、代入順序が表示されます。</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>備考</p></td>
+<td><p>自由記述欄です。</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</section>
+</section>
+</section>
+<section id="ansible-pioneer-write-dialog-file-ansible-pioneer">
+<span id="id19"></span><h2><span class="section-number">3.6. </span>対話ファイル（Ansible-Pioneer）の記述方法<a class="headerlink" href="#ansible-pioneer-write-dialog-file-ansible-pioneer" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Ansible-Pioneerでは、ITA独自モジュールをAnsibleに組込んでいます。</div>
+</div>
+<div class="line-block">
+<div class="line">本節で使用している用語について説明します。</div>
+</div>
+<table class="docutils align-left" id="id81">
+<caption><span class="caption-number">表 3.65 </span><span class="caption-text">用語説明</span><a class="headerlink" href="#id81" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 83.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>用語</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>コマンドプロンプト</p></td>
+<td><p>ターミナルから作業対象サーバーにsshで接続した場合に、コマンド入力待ちの状態を示す文字列です。</p></td>
+</tr>
+<tr class="row-odd"><td><p>標準出力</p></td>
+<td><p>作業対象サーバーにコマンド投入後、コマンドプロンプトより前に出力されるコマンドの処理結果です。</p></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-default" id="id82">
+<img alt="コマンドプロンプトと標準出力" src="../../_images/ansible_pioneer_command_prompt.png" />
+<figcaption>
+<p><span class="caption-number">図 3.56 </span><span class="caption-text">コマンドプロンプトと標準出力</span><a class="headerlink" href="#id82" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="id20">
+<h3><span class="section-number">3.6.1. </span>対話ファイルの構成<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">対話ファイルは2種類のセクションにより構成されます。</div>
+</div>
+<table class="docutils align-left" id="id83">
+<caption><span class="caption-number">表 3.66 </span><span class="caption-text">対話ファイルのセクション一覧</span><a class="headerlink" href="#id83" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>セクション名</p></th>
+<th class="head"><p>用途</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>conf</p></td>
+<td><p>timeoutパラメータによりタイムアウト値を指定します。</p>
+<p>タイムアウト値:1～3600（単位:秒）</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>exe_list</p></td>
+<td><p>4種類の対話モジュールにより作業対象への構築処理を記述します。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">対話ファイルの先頭にconfセッションのtimeoutパラメータを記述します。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">e.g.）confセッションのtimeoutパラメータの記述例</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># コメント</span>
+<span class="nt">conf</span><span class="p">:</span>
+<span class="nt">△△timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="nt">exec_list</span><span class="p">:</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="line-block">
+<div class="line">ITA 独自モジュールは、対話ファイル実行時に作業対象とsshまたはtelnet接続を行ってます。</div>
+<div class="line">必要に応じて、exec_listセッションの先頭の処理でパスワード認証をが必要です。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">e.g.）パスワード認証の記述例</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># ssh接続でパスワード入力のプロンプトを待ち合せてパスワードを投入します。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;*assword&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password&#39;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="line-block">
+<div class="line">以降に対話モジュールの説明を記述します。</div>
+</div>
+</section>
+<section id="id21">
+<h3><span class="section-number">3.6.2. </span>対話モジュール<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">対話モジュールは以下の4種類があります。</div>
+</div>
+<table class="docutils align-left" id="id84">
+<caption><span class="caption-number">表 3.67 </span><span class="caption-text">対話モジュール一覧</span><a class="headerlink" href="#id84" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>モジュール</p></th>
+<th class="head"><p>用途</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>expect</p></td>
+<td><p>作業対象ホストからのコマンドプロンプトを待受け後、コマンドを投入します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>state</p></td>
+<td><p>作業対象ホストにコマンドを投入し、コマンドプロンプトを待受け後、投入コマンドの標準出力の内容を外部Shellで解析し結果判定をします。</p></td>
+</tr>
+<tr class="row-even"><td><p>command</p></td>
+<td><p>作業対象ホストにコマンドを連続投入が可能で、投入前後に条件分岐を行うことができます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>localaction</p></td>
+<td><p>Ansible Core/Ansible Automation Controller/Ansible Execution Agentが実行される環境でコマンドを投入します。</p></td>
+</tr>
+</tbody>
+</table>
+<section id="expect">
+<h4>expectモジュール<a class="headerlink" href="#expect" title="Link to this heading">¶</a></h4>
+<section id="id22">
+<h5>概要<a class="headerlink" href="#id22" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">作業対象ホストからのコマンドプロンプトを待受け後、コマンドを投入します。</div>
+<div class="line">expectモジュールの動作概要は以下の図のとおりです。</div>
+</div>
+<figure class="align-default">
+<img alt="expectモジュールの動作概要" src="../../_images/ansible-pioneer-expect-exec.png" />
+</figure>
+<div class="line-block">
+<div class="line">①直前の処理で投入したコマンドの標準出力からexpectで指定されているコマンドプロンプトを待ち受ける。</div>
+<div class="line">②execで指定されているコマンドを投入する。</div>
+<div class="line">③②で投入したコマンドの標準出力からexpectで指定されているコマンドプロンプトを待ち受ける。</div>
+<div class="line">④execで指定されているコマンドを投入する。</div>
+</div>
+</section>
+<section id="id23">
+<h5>書式<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">expectモジュールの書式は以下のとおりです。</div>
+</div>
+<table class="docutils align-left" id="id85">
+<caption><span class="caption-number">表 3.68 </span><span class="caption-text">expectモジュールの書式</span><a class="headerlink" href="#id85" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15.4%" />
+<col style="width: 30.8%" />
+<col style="width: 7.7%" />
+<col style="width: 46.2%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>書式</p></th>
+<th class="head"><p>必須/任意</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>expect</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△expect:△パラメータ値</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+</pre></div>
+</div>
+</td>
+<td><p>必須</p></td>
+<td><p>コマンドプロンプトを記述します。正規表現で記述できます。</p>
+<p>conf-&gt;timeoutパラメータで指定された時間内にコマンドプロンプトが受取れない場合は</p>
+<p>、対話ファイルを異常終了します。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>exec</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△expect:△パラメータ値</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△exec:△パラメータ値</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+</pre></div>
+</div>
+</td>
+<td><p>必須</p></td>
+<td><p>expectで指定したコマンドプロンプトを待受け後に投入するコマンドを記述します。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id24">
+<h5>記述例<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">expectモジュールの記述例を記述します。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">e.g.）expectモジュールの記述例</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># ssh接続でパスワード入力のプロンプトを待ち合せてパスワードを投入します。</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;*assword&#39;</span>
+<span class="w">  </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password&#39;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section id="state">
+<h4>stateモジュール<a class="headerlink" href="#state" title="Link to this heading">¶</a></h4>
+<section id="id25">
+<h5>概要<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">作業対象ホストにコマンドを投入しコマンドプロンプトを待受け後、標準出力の内容を外部Shellで解析し結果判定を行います。</div>
+<div class="line">stateモジュールの動作概要は以下の図のとおりです。</div>
+</div>
+<figure class="align-default">
+<img alt="stateモジュールの動作概要" src="../../_images/ansible-pioneer-state.png" />
+</figure>
+<div class="line-block">
+<div class="line">①直前の処理で投入したコマンドの標準出力からpromptで指定されているコマンドプロンプトを待ち受ける。</div>
+<div class="line">②stateで指定されているコマンドを投入する。</div>
+<div class="line">③②で投入したコマンドの標準出力からpromptで指定されているコマンドプロンプトを待ち受ける。</div>
+<div class="line">④stdout_fileで指定されているファイルに標準出力の内容を保存する。</div>
+<div class="line">⑤parameterで指定しているワードでstdout_fileの内容をgrepする。</div>
+<div class="line">⑥直後の処理でコマンドプロンプトの待ち受けが出来るようにリターンを投入する。</div>
+</div>
+</section>
+<section id="id26">
+<h5>書式<a class="headerlink" href="#id26" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">stateモジュールの書式は以下のとおりです。</div>
+</div>
+<table class="docutils align-left" id="id86">
+<caption><span class="caption-number">表 3.69 </span><span class="caption-text">stateモジュールの書式</span><a class="headerlink" href="#id86" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15.4%" />
+<col style="width: 30.8%" />
+<col style="width: 7.7%" />
+<col style="width: 46.2%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>書式</p></th>
+<th class="head"><p>必須/任意</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>state</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△state:△パラメータ値</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+</pre></div>
+</div>
+</td>
+<td><p>必須</p></td>
+<td><p>投入するコマンドを記述します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>prompt</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△state:△パラメータ値</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△prompt:△パラメータ値</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+</pre></div>
+</div>
+</td>
+<td><p>必須</p></td>
+<td><p>コマンドプロンプトを記述します。正規表現で記述できます。</p>
+<p>conf-&gt;timeoutパラメータで指定された時間内にコマンドプロンプトが受取れない場合は、対話ファイルを異常終了します。</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>shell</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△state:△パラメータ値</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△shell:△パラメータ値</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+</pre></div>
+</div>
+</td>
+<td><p>任意</p></td>
+<td><p>ユーザが作成したshellで投入したコマンド結果を確認する場合に、
+shellファイル名を記述します。</p>
+<p>作成したshellのexitコードが0の場合は正常、他は異常と判定します。</p>
+<p>デフォルトのshellで結果を確認する場合、本パラメータは不要です。</p>
+<p>デフォルトのshellはparameter（-）で指定された文字列で標準出力の内容をgrepします。</p>
+<p>マッチする行が1行でもあれば正常とし、マッチする行がなければ異常と判定します。</p>
+<p>また、parameterを記述しなかった場合は、異常と判定します。</p>
+<p>stateに記載したコマンドの標準出力をstdout_fileで指定したファイルに退避したい目的で使用する場合、<strong>ignore_errors: yes</strong> を指定してください。</p>
+<p>ユーザ作成のshell起動時の引数について以下に説明します。</p>
+<p>ユーザ作成shell $1 $2～</p>
+<p>　　　$1: stdout_file</p>
+<p>　　　　　stdout_fileの記述が無い場合は、ITAが自動生成したファイルファイル名</p>
+<p>　　　$2～: parameterの内容</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>parameter</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△state:△パラメータ値</span>
+<span class="nt">△△△△parameter</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△△△-△&#39;パラメータ値&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△△△-△&#39;パラメータ値&#39;</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+<span class="s">&#39;</span><span class="nv"> </span><span class="s">:シングルクォーテーション</span>
+<span class="w">   </span><span class="s">条件式をシングルクォーテーション\</span>
+<span class="w">   </span><span class="s">で囲む</span>
+</pre></div>
+</div>
+</td>
+<td><p>任意</p></td>
+<td><p>stateに記載したコマンドの結果（標準出力）を検索する文字列を指定します。
+複数ある場合は検索文字列を列挙します。</p>
+<p>shellを指定している場合、ユーザが作成したshellへの起動パラメータになります。</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>stdout_file</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△state:△パラメータ値</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△stdout_file:△パラメータ値</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+</pre></div>
+</div>
+</td>
+<td><p>任意</p></td>
+<td><p>stateに記載したコマンドの結果（標準出力）を退避するファイルです。</p>
+<p>stdout_fileの指定が無かった場合、ITAが自動生成したファイルファイル名で退避します。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>success_exit</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△state:△パラメータ値</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△success_exit:△&lt;yes/no&gt;</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+</pre></div>
+</div>
+</td>
+<td><p>任意</p></td>
+<td><p>検索結果が正常の場合で、かつ以降の処理を行わずに対話ファイルを正常終了する場合に「yes」を指定します。</p>
+<p>「no」の場合、正常の場合は次の処理に進みます。</p>
+<p>デフォルトは「no」</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>ignore_errors</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△state:△パラメータ値</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△ignore_errors:△&lt;yes/no&gt;</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+</pre></div>
+</div>
+</td>
+<td><p>任意</p></td>
+<td><p>検索結果が異常でも次の処理に進む場合に「yes」を指定します。</p>
+<p>「no」の場合は、異常の場合に対話ファイルを異常終了します。</p>
+<p>デフォルトは「no」</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id27">
+<h5>記述例<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">stateモジュールの記述例を以下に記述します。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">e.g.）stateモジュールの記述例</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># hostsファイルをcatします。標準出力の内容をparameter値でgrepします。</span>
+<span class="c1"># 127.0.0.1、localhostを含む行があれば正常と判定し次の処理に進みます。</span>
+<span class="c1"># 行がなければ異常と判定し対話ファイルを異常終了します。</span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cat</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;127.0.0.1&#39;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;localhost&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
+</pre></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">e.g.）success_exitの使用例</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># hostsファイルをcatします。標準出力の内容をparameter値でgrepします。</span>
+<span class="c1"># 127.0.0.1、localhostを含む行があれば正常と判定しますが「success_exit: yes」の設定により対話ファイルを正常終了します。</span>
+<span class="c1"># 対象行がなければ異常と判定し対話ファイルを異常終了します。</span>
+
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cat</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;127.0.0.1&#39;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;localhost&#39;</span>
+<span class="w">    </span><span class="nt">success_exit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
+</pre></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">e.g.）ignore_errorsの使用例</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># hostsファイルをcatします。標準出力の内容をparameter値でgrepします。</span>
+<span class="c1"># 127.0.0.1、localhostを含む行があれば正常と判定し次の処理に進みます。</span>
+<span class="c1"># 対象行がなければ異常と判定しますが「ignore_errors: yes」の設定により次の処理に進みます。</span>
+
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cat</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span>
+<span class="w">   </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">   </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;127.0.0.1&#39;</span>
+<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;localhost&#39;</span>
+<span class="w">   </span><span class="nt">ignore_errors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">   </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
+</pre></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">e.g.）shellの使用例</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># hostsファイルをcatし、ユーザ作成のshellで標準出力の内容を判定します。</span>
+<span class="c1"># parameter値をユーザ作成のshellのパラメータで渡します。</span>
+<span class="c1"># ユーザ作成のshellが異常終了した場合、対話ファイルを異常終了します。</span>
+
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cat</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span>
+<span class="w">   </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">   </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/tmp/grep.sh&#39;</span>
+<span class="w">   </span><span class="nt">stdout_file</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/tmp/stdout.txt&#39;</span>
+<span class="w">   </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;127.0.0.1&#39;</span>
+<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;localhost&#39;</span>
+<span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">   </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
+</pre></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">e.g.) ユーザshell（/tmp/grep.sh）の例</div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nv">STDOUT</span><span class="o">=</span>/tmp/STDOUT.tmp
+<span class="nv">STDERR</span><span class="o">=</span>/tmp/STDERR.tmp
+cat<span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="nv">$2</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="nv">$3</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="w"> </span>&gt;<span class="si">${</span><span class="nv">STDOUT</span><span class="si">}</span><span class="w"> </span><span class="m">2</span>&gt;<span class="si">${</span><span class="nv">STDERR</span><span class="si">}</span>
+<span class="nv">RET</span><span class="o">=</span><span class="nv">$?</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$RET</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">   </span><span class="nv">EXIT_CODE</span><span class="o">=</span><span class="nv">$RET</span>
+<span class="k">else</span>
+<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-s<span class="w"> </span><span class="si">${</span><span class="nv">STDERR</span><span class="si">}</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">       </span><span class="nv">EXIT_CODE</span><span class="o">=</span><span class="m">1</span>
+<span class="w">   </span><span class="k">else</span>
+<span class="w">       </span><span class="nv">CNT</span><span class="o">=</span><span class="sb">`</span>cat<span class="w"> </span><span class="si">${</span><span class="nv">STDOUT</span><span class="si">}</span><span class="sb">`</span>
+<span class="w">       </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="si">${</span><span class="nv">CNT</span><span class="si">}</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">           </span><span class="nv">EXIT_CODE</span><span class="o">=</span><span class="m">1</span>
+<span class="w">       </span><span class="k">else</span>
+<span class="w">           </span><span class="nv">EXIT_CODE</span><span class="o">=</span><span class="m">0</span>
+<span class="w">       </span><span class="k">fi</span>
+<span class="w">   </span><span class="k">fi</span>
+<span class="k">fi</span>
+/bin/rm<span class="w"> </span>-rf<span class="w"> </span><span class="si">${</span><span class="nv">STDOUT</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">STDERR</span><span class="si">}</span><span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span><span class="p">&amp;</span>&gt;1
+</pre></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">e.g.）stateモジュールで作業対象ホストのファイルを、「結果データ」に保存する例</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># hostsファイルをcatします。標準出力の内容をstdout_fileで指定したファイルに保存し次の処理に進みます。</span>
+<span class="c1"># デフォルトのshellはparameterの設定がないと異常と判定します。次の処理に進める為に「ignore_errors: yes」を設定します。</span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cat</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span>
+<span class="w">   </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">   </span><span class="nt">stdout_file</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__workflowdir__</span><span class="nv"> </span><span class="s">}}/hosts&#39;</span>
+<span class="w">   </span><span class="nt">ignore_errors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">   </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section id="command">
+<h4>commandモジュール<a class="headerlink" href="#command" title="Link to this heading">¶</a></h4>
+<section id="id28">
+<h5>概要<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">作業対象ホストにコマンドの連続投入が可能で、投入前後に条件分岐を行うことができます。</div>
+<div class="line">commandモジュールの動作概要は以下の図のとおりです。</div>
+</div>
+<figure class="align-default">
+<img alt="commandモジュールの動作概要" src="../../_images/ansible_pioneer_command.png" />
+</figure>
+<div class="line-block">
+<div class="line">①直前の処理で投入したコマンドの標準出力からpromptで指定されているコマンドプロンプトを待ち受ける。</div>
+<div class="line">②{{ commands }}の具体値を投入する。</div>
+<div class="line">③②で投入したコマンドの標準出力からpromptで指定されているコマンドプロンプトを待ち受ける。</div>
+<div class="line">④registerで指定されているregister変数名に標準出力の内容を保存する。</div>
+<div class="line">⑤{{ commands }}の具体値を投入する。</div>
+<div class="line">⑥⑤で投入したコマンドの標準出力からpromptで指定されているコマンドプロンプトを待ち受ける。</div>
+<div class="line">⑦registerで指定されているregister変数名に標準出力の内容を保存する。</div>
+<div class="line">⑧直後の処理でコマンドプロンプトの待ち受けが出来るようにリターンを投入する。</div>
+</div>
+</section>
+<section id="id29">
+<h5>書式<a class="headerlink" href="#id29" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">commandモジュールの書式は以下のとおりです。</div>
+</div>
+<table class="docutils align-left" id="id87">
+<caption><span class="caption-number">表 3.70 </span><span class="caption-text">commandモジュールの書式</span><a class="headerlink" href="#id87" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15.4%" />
+<col style="width: 30.8%" />
+<col style="width: 7.7%" />
+<col style="width: 46.2%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>書式</p></th>
+<th class="head"><p>必須/任意</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>command</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△command:△パラメータ値</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+</pre></div>
+</div>
+</td>
+<td><p>必須</p></td>
+<td><p>投入するコマンドを記述します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>prompt</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△command:△パラメータ値</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△prompt:△パラメータ値</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+</pre></div>
+</div>
+</td>
+<td><p>必須</p></td>
+<td><p>コマンドプロンプトを記述します。正規表現で記述できます。</p></td>
+</tr>
+<tr class="row-even"><td><p>timeout</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△command:△パラメータ値</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△timeout:△パラメータ値</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+</pre></div>
+</div>
+</td>
+<td><p>任意</p></td>
+<td><p>commandに記載したコマンドを投入後、コマンドプロンプトを待ち合わせるタイマ値を記述します。</p>
+<p>省略した場合は、conf-&gt;timeoutを使用します。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>register</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△command:△パラメータ値</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△register:△パラメータ値</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+</pre></div>
+</div>
+</td>
+<td><p>任意</p></td>
+<td><p>commandに記載したコマンドを投入後に標準出力の情報を退避する変数「任意の文字列」を記述します。</p>
+<p>with_itemsでループしている場合は、最後のコマンド投入後の標準出力の情報が退避されます。</p>
+<p>設定した変数はcommandモジュールの条件判定（when・exec_when・failed_when）でのみ使用できます。</p>
+<p>設定した変数は、1つのみ保持できます。次にregisterで別の変数に値を退避した場合、前に退避した変数の情報は削除されます。</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>with_items</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△command:△パラメータ値</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△with_items:△</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△△△-△&#39;{{△変数名△}}&#39;</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+<span class="s">&#39;</span><span class="nv"> </span><span class="s">:シングルクォーテーション</span>
+<span class="w">   </span><span class="s">変数をシングルクォーテーションで\</span>
+<span class="w">   </span><span class="s">で囲む</span>
+</pre></div>
+</div>
+</td>
+<td><p>任意</p></td>
+<td><p>with_itemsはコマンドを連続投入する場合に使用します。</p>
+<p>with_itemsには複数具体値変数の変数名を記述します。</p>
+<p>commandモジュールの各パラメータで、この変数の値を使用する場合、{{ item.X }}（Xは0から99）で記述します。</p>
+<p>with_itemsに設定する各変数の具体値数が同じでない場合、各変数の具体値数の最大値数でループします。具体値が不足している変数の具体値は空「null」として扱います。</p>
+<p><strong>with_itemsに設定した変数を、promptとtimeoutを利用する場合、具体値数に注意が必要です。</strong></p>
+<p>prompt→command→prompt→command→prompt・・・</p>
+<p>の順で各変数の値を必要します。promptので使用する変数の具体値はcommandより<strong>1個多く必要</strong> です。
+timeoutも同様</p>
+<p>詳しくは、「<a class="reference internal" href="#ansible-pioneer-coomand-example"><span class="std std-ref">記述例</span></a>」を参照してください。</p>
+<p>prompt、timeout の変数の具体値数が不足していると、作業実行時にエラーになります。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>when</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△command:△パラメータ値</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△when:△</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△△△-△&#39;条件式&#39;</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+<span class="s">&#39;</span><span class="nv"> </span><span class="s">:シングルクォーテーション</span>
+<span class="w">   </span><span class="s">条件式をシングルクォーテーション\</span>
+<span class="w">   </span><span class="s">で囲む</span>
+</pre></div>
+</div>
+</td>
+<td><p>任意</p></td>
+<td><p>commandに記載したコマンドの投入前の条件判定です。</p>
+<p>条件にマッチしていればcommandに記載したコマンドの投入ます。</p>
+<p>条件にマッチしていなければ次の処理に進みます。</p>
+<p>条件式</p>
+<p>　変数定義判定</p>
+<p>　VAR_xx is define　　　変数が定義されている　　true</p>
+<p>　VAR_xx is undefine　　変数が未定義　　　　　　true</p>
+<ul>
+<li><div class="line-block">
+<div class="line">e.g.）変数の定義・未定義の判定の記述例</div>
+</div>
+<div class="line-block">
+<div class="line">- 'VAR_status is define'</div>
+</div>
+<div class="line-block">
+<div class="line">- 'VAR_status is undefine'</div>
+</div>
+</li>
+</ul>
+<p>変数具体値判定</p>
+<p>VAR_xxまたはregister変数　比較演算子　文字列</p>
+<p>VAR_xxまたはregister変数　比較演算子　VAR_xx</p>
+<p>VAR_xxまたはregister変数　match（正規表現文字列またはVAR_xx）</p>
+<p>VAR_xxまたはregister変数　no match（正規表現文字列またはVAR_xx）</p>
+<p>※比較演算子は「==」、「!=」、「&gt;」、「&gt;=」、「&lt;」、「&lt;=」</p>
+<p>※比較演算子の「&gt;」、「&gt;=」、「&lt;」、「&lt;=」は数値を想定しています。</p>
+<ul>
+<li><div class="line-block">
+<div class="line">e.g.）変数具体値判定の記述例</div>
+</div>
+<div class="line-block">
+<div class="line">- '{{ VAR_status }} match（active）'</div>
+</div>
+<div class="line-block">
+<div class="line">- '{{ VAR_status }} == active'</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">e.g.）正規表現判定の記述例</div>
+</div>
+<div class="line-block">
+<div class="line">- 'register変数 match（*active）'</div>
+</div>
+</li>
+</ul>
+<p>　※ <strong>activeなどの条件判定する文字列をクォーテーションで囲む必要はありません。</strong></p>
+<p>and/orによる複合条件</p>
+<p>or条件を行いたい場合、判定条件の間にORを記述します。</p>
+<ul>
+<li><div class="line-block">
+<div class="line">e.g.）orによる複合条件判定の記述例</div>
+</div>
+<div class="line-block">
+<div class="line">- '{{ VAR_status }} == 1 OR {{ VAR_status }} == 2'</div>
+</div>
+</li>
+</ul>
+<p>and条件を行いたい場合、複数行に分けて記述するとand条件になります。</p>
+<ul>
+<li><div class="line-block">
+<div class="line">e.g.）or/andによる複合条件判定の記述例</div>
+</div>
+<div class="line-block">
+<div class="line">- '{{ VAR_status }} == 1 OR {{ VAR_status }} == 2'</div>
+</div>
+<div class="line-block">
+<div class="line">- '{{ VAR_sub_status }} == 1'</div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>exec_when</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△command:△パラメータ値</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△exec_when:△</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△△△-△&#39;条件式&#39;</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+<span class="s">&#39;</span><span class="nv"> </span><span class="s">:シングルクォーテーション</span>
+<span class="w">   </span><span class="s">条件式をシングルクォーテーション\</span>
+<span class="w">   </span><span class="s">で囲む</span>
+</pre></div>
+</div>
+</td>
+<td><p>任意</p></td>
+<td><p>ループ毎の条件判定です。（continue条件）</p>
+<p>with_itemsが記述されている場合に条件判定を行います。</p>
+<p>条件にマッチしていれば該当ループのコマンドを実行します。</p>
+<p>マッチしていなければ次のループへ移ります。</p>
+<p>条件式</p>
+<p>　when:と同様の記述が行えます。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>failed_when</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△command:△パラメータ値</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△failed_when:△</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△△△-△&#39;条件式&#39;</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+<span class="s">&#39;</span><span class="nv"> </span><span class="s">:シングルクォーテーション</span>
+<span class="w">   </span><span class="s">条件式をシングルクォーテーション\</span>
+<span class="w">   </span><span class="s">で囲む</span>
+</pre></div>
+</div>
+</td>
+<td><p>任意</p></td>
+<td><p>commandに記載したコマンドの投入後（ループ毎）のstdoutの内容に対する条件判定です。</p>
+<p>with_itemsが記述されている場合に条件判定を行います。</p>
+<p>条件にマッチしていれば正常とします。</p>
+<p>マッチしていなければ異常とし、対話ファイルが異常終了します。</p>
+<p>条件式</p>
+<p>　when:と同様の記述が行えます。</p>
+<p>commandに記載したコマンドの投入後の標準出力の内容を「stdout」で記述出来ます。
+　stdout 比較演算子 文字列</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ansible-pioneer-coomand-example">
+<span id="id30"></span><h5>記述例<a class="headerlink" href="#ansible-pioneer-coomand-example" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">commandモジュールの記述例を以下に記述します。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">e.g.) commandモジュールの記述例</div>
+</div>
+<div class="line-block">
+<div class="line">commandモジュールで下記コマンドを投入する場合</div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>systemctl<span class="w"> </span>start<span class="w"> </span>httpd
+systemctl<span class="w"> </span>start<span class="w"> </span>mysql
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">対話ファイルの記述とwith_itemsで使用する変数の具体値は以下の様になります。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">対話ファイルの記述内容</div>
+</div>
+</li>
+</ul>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;systemctl</span><span class="nv">  </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}</span><span class="nv">  </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.1</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">  </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">item.2</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">item.3</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="nt">with_items</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_status_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">    </span><span class="c1"># item.0</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">   </span><span class="c1"># item.1</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_prompt_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">    </span><span class="c1"># item.2</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_timeout_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">   </span><span class="c1"># item.3</span>
+</pre></div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">with_itemsで使用する変数の具体値</div>
+</div>
+</li>
+</ul>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_status_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="nt">VAR_service_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">httpd</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
+<span class="c1"># commandで使用している変数の具体値が2個あるので</span>
+<span class="c1"># promptとtimeoutで使用している変数の具体値は3個必要になります。</span>
+<span class="nt">VAR_prompt_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">コマンドプロンプト</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">コマンドプロンプト</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">コマンドプロンプト</span>
+<span class="nt">VAR_timeout_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+</pre></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">e.g.） whenを使用した例</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+
+<span class="w">  </span><span class="c1"># VAR_hosts_makeというITA変数がホスト変数ファイルに記載（代入値自動登録でパラメータシートの項目と変数の紐付を行ってる）されている場合、</span>
+<span class="w">  </span><span class="c1"># hostsファイルをcatします。記載されていない場合は、スキップします。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cat /etc/hosts</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VAR_hosts_make is define</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
+</pre></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">e.g.） exec_whenとregisterを使用した例</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+
+<span class="w">  </span><span class="c1"># VAR_hosts_makeという変数がホスト変数ファイルに記載されている場合、hostsファイルをcatします。</span>
+<span class="w">  </span><span class="c1"># 記載されていない場合は、スキップします。</span>
+<span class="w">  </span><span class="c1"># catにより、標準出力されたhostsファイルの内容をresult_stdoutに退避します。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cat /etc/hosts</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">register</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">result_stdout</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VAR_hosts_make is define</span>
+
+<span class="w">  </span><span class="c1"># VAR_hosts_makeという変数がホスト変数ファイルに記載されている場合、</span>
+<span class="w">  </span><span class="c1"># コマンドを投入します。記載されていない場合は、スキップします。</span>
+<span class="w">  </span><span class="c1"># with_itemsの複数具体値変数に設定されている具体値数分、コマンドを投入します。</span>
+<span class="w">  </span><span class="c1"># ループ毎の条件判定として、hostsファイルに該当行「ipアドレス ホスト名」</span>
+<span class="w">  </span><span class="c1"># がない場合、コマンドを投入し、hostsファイルの最終行に「IPアドレス ホスト名」</span>
+<span class="w">  </span><span class="c1"># が追記されます。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;echo</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}</span><span class="nv">  </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.1</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">&gt;&gt;</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VAR_hosts_make is define</span>
+<span class="w">    </span><span class="nt">with_items</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_hosts_ip</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">     </span><span class="c1"># item.0</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_hosts_name</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">   </span><span class="c1"># item.1</span>
+<span class="w">    </span><span class="nt">exec_when</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">result_stdout no match({{ item.0 }} *{{ item.1 }})</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
+</pre></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">e.g.）failed_whenを使用した例</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+
+<span class="w">  </span><span class="c1"># with_itemsの複数具体値変数に設定されている具体値数分コマンドを投入します。</span>
+<span class="w">  </span><span class="c1"># サービスの自動起動を設定します。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">enable</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">with_items</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_name_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">  </span><span class="c1"># item.0</span>
+
+<span class="w">  </span><span class="c1"># with_itemsの複数具体値変数に設定されている具体値数分コマンドを投入します。</span>
+<span class="w">  </span><span class="c1"># サービスを起動します。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">start</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">with_items</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_name_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">  </span><span class="c1"># item.0</span>
+
+<span class="w">  </span><span class="c1"># with_itemsの複数具体値変数に設定されている具体値数分コマンドを投入します。</span>
+<span class="w">  </span><span class="c1"># サービスのステータスを退避（stdout）します。</span>
+<span class="w">  </span><span class="c1"># 標準出力（stdout）の内容に、item.1がある場合、正となります。</span>
+<span class="w">  </span><span class="c1"># 例えば、VAR_service_status_listの具体値をrunningと設定し、サービスが起動している場合、</span>
+<span class="w">  </span><span class="c1"># 「Active: active （running）」のrunnigが一致するので正となります。（次のループに移ります）</span>
+<span class="w">  </span><span class="c1"># そうでない場合は、異常と判断し、対話ファイルは異常終了します。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;systemctl</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">item.0</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">with_items</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_name_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">  </span><span class="c1"># item.0</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_service_status_list</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w">  </span><span class="c1"># item.1</span>
+<span class="w">    </span><span class="nt">failed_when</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stdout match({{ item.1 }})</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
+</pre></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">e.g.） whenでor/and条件を使用した例</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+
+<span class="w">  </span><span class="c1"># and/orによる複合条件の記述例です。</span>
+<span class="w">  </span><span class="c1"># or条件を行いたい場合、条件を横に記述することができます。</span>
+<span class="w">  </span><span class="c1"># and条件を行いたい場合、複数行に分けて記述するとand条件になります。</span>
+<span class="w">  </span><span class="c1"># 今回、whenを例にしていますが、exec_when、failed_whenも同様です。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">systemctl stop my_service</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_status</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">10</span><span class="nv"> </span><span class="s">OR</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_status</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">11&#39;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_sub_status</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">20</span><span class="nv"> </span><span class="s">OR</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_sub_status</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">21&#39;</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section id="localaction">
+<h4>localactionモジュール<a class="headerlink" href="#localaction" title="Link to this heading">¶</a></h4>
+<section id="id31">
+<h5>概要<a class="headerlink" href="#id31" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">Ansible Core/Ansible AutomationController/Ansible Execution Agentが実行される環境でコマンドを投入します。</div>
+</div>
+</section>
+<section id="id32">
+<h5>書式<a class="headerlink" href="#id32" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">localactionモジュールの書式は以下のとおりです。</div>
+</div>
+<table class="docutils align-left" id="id88">
+<caption><span class="caption-number">表 3.71 </span><span class="caption-text">localactionモジュールの書式</span><a class="headerlink" href="#id88" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15.4%" />
+<col style="width: 30.8%" />
+<col style="width: 7.7%" />
+<col style="width: 46.2%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>書式</p></th>
+<th class="head"><p>必須/任意</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>localaction</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△localaction:△パラメータ値</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+</pre></div>
+</div>
+</td>
+<td><p>必須</p></td>
+<td><div class="line-block">
+<div class="line">投入するコマンドを記載します。</div>
+<div class="line">confセクションのtimeoutパラメータでのタイマ監視は適用外です。</div>
+<div class="line">コマンドが完了するまで次の処理に進みません。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ignore_errors</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">△△-△localaction:△パラメータ値</span>
+<span class="l l-Scalar l-Scalar-Plain">△△△△ignore_errors:△&lt;yes/no&gt;</span>
+
+<span class="l l-Scalar l-Scalar-Plain">△:半角スペース</span>
+</pre></div>
+</div>
+</td>
+<td><p>任意</p></td>
+<td><p>コマンドの実行結果が異常でも次の処理に進む場合に「yes」を指定します。</p>
+<p>「no」の場合は、異常の場合に対話ファイルを異常終了します。</p>
+<p>デフォルトは「no」</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id33">
+<h5>記述例<a class="headerlink" href="#id33" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">localactionモジュールの記述例を以下に記述します。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">e.g.）localactionの記述例</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w">   </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="c1"># Movementで共有するディレクトリ（{{ __workflowdir__ }}）にホスト毎のディレクトリを作成する。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">localaction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdir -p 0755 {{ __workflowdir__ }}/{{ __inventory_hostname__ }}</span>
+<span class="w">    </span><span class="nt">ignore_errors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="w">  </span><span class="c1"># hostsファイルの内容をlocalactionモジュールで作成したディレクトリに退避する。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cat /etc/hosts</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">stdout_file</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__workflowdir__</span><span class="nv"> </span><span class="s">}}/{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}/hosts&#39;</span>
+<span class="w">    </span><span class="nt">ignore_errors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="id34">
+<h3><span class="section-number">3.6.3. </span>正規表現<a class="headerlink" href="#id34" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">下記のモジュール及びパラメータに記述した文字列は正規表現で評価されます。</div>
+<div class="line">- expectモジュールのexpectパラメータ</div>
+<div class="line">- stateモジュールのpromptパラメータ</div>
+<div class="line">- commandモジュールのpromptパラメータ</div>
+<div class="line">- commandモジュールのwhen/exec_when/failed_whenパラメータのmatch()</div>
+<div class="line">正規表現で記述した文字列に下記の文字が含まれている場合、エスケープ文字「\」を挿入する必要があります。</div>
+</div>
+<table class="docutils align-left" id="id89">
+<caption><span class="caption-number">表 3.72 </span><span class="caption-text">エスケープが必要な文字</span><a class="headerlink" href="#id89" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>対象文字</p></th>
+<th class="head"><p>エスケープ後</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>\</p></td>
+<td><div class="line-block">
+<div class="line">\\</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>*</p></td>
+<td><p>\*</p></td>
+</tr>
+<tr class="row-even"><td><p>.</p></td>
+<td><p>\.</p></td>
+</tr>
+<tr class="row-odd"><td><p>+</p></td>
+<td><p>\+</p></td>
+</tr>
+<tr class="row-even"><td><p>?</p></td>
+<td><p>\?</p></td>
+</tr>
+<tr class="row-odd"><td><p>|</p></td>
+<td><p>\|</p></td>
+</tr>
+<tr class="row-even"><td><p>{ }</p></td>
+<td><p>\{ \}</p></td>
+</tr>
+<tr class="row-odd"><td><p>( )</p></td>
+<td><p>\( \)</p></td>
+</tr>
+<tr class="row-even"><td><p>[ ]</p></td>
+<td><p>\[ \]</p></td>
+</tr>
+<tr class="row-odd"><td><p>^</p></td>
+<td><p>\^</p></td>
+</tr>
+<tr class="row-even"><td><p>$</p></td>
+<td><p>\$</p></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><div class="line-block">
+<div class="line">e.g.) 正しい例</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;XAMPP</span><span class="nv"> </span><span class="s">Developer</span><span class="nv"> </span><span class="s">Files</span><span class="nv"> </span><span class="s">¥[Y/n¥]</span><span class="nv"> </span><span class="s">exec_list:&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">e.g.) 誤った例</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;XAMPP</span><span class="nv"> </span><span class="s">Developer</span><span class="nv"> </span><span class="s">Files</span><span class="nv"> </span><span class="s">[Y/n]</span><span class="nv"> </span><span class="s">exec_list:&#39;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="id35">
+<h3><span class="section-number">3.6.4. </span>注意事項<a class="headerlink" href="#id35" title="Link to this heading">¶</a></h3>
+<section id="statecommand">
+<h4>stateモジュールとcommandモジュールの使用時の注意事項<a class="headerlink" href="#statecommand" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">promptパラメータに正規表で後方一致「.*」を記述した場合</div>
+<div class="line">stateモジュールとcommandモジュールは、コマンドを投入後、promptパラメータで指定されたコマンドプロンプトより前のデータを標準出力として扱います。</div>
+<div class="line">後方一致「.*」を記述すると、実行したコマンドの結果（標準出力）が空となります。</div>
+<div class="line">後方一致の正規表現は使用しないでください。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">e.g.）正規表現で後方一致の使用例</div>
+</div>
+</li>
+</ul>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &#39;saple data&#39;</span>
+<span class="w">  </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;\.\*{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="nt">stdout_file</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__workflowdir__</span><span class="nv"> </span><span class="s">}}/{{</span><span class="nv"> </span><span class="s">__inventory_hostname__</span><span class="nv"> </span><span class="s">}}/hosts&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">対話コマンドを処理する場合</div>
+<div class="line">commandとstateモジュールでは処理できません。expectモジュールで対話ファイルを作成してください。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">e.g.）対話コマンド「ssh-keygen」を処理する例</div>
+</div>
+</li>
+</ul>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># ssh-keygenを対話ファイルで処理する。</span>
+<span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># ssh接続　パスワード認証</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;assword:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+
+<span class="w">  </span><span class="c1"># ssh-keygenコマンド実行</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssh-keygen</span>
+
+<span class="w">  </span><span class="c1"># 以降がコマンドプロンプト以外のプロンプトに対する処理</span>
+<span class="w">  </span><span class="c1"># 秘密鍵ファイルのパスを設定</span>
+<span class="w">  </span><span class="c1"># expectは正規表現で評価されるので、エスケープが必要な文字にはエスケープ文字(\)を挿入する必要があります。</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;id_rsa\):&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_id_rsa_path</span><span class="nv"> </span><span class="s">}}&#39;</span>
+
+<span class="w">  </span><span class="c1"># パスフレーズを設定</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;</span><span class="nv"> </span><span class="s">passphrase\):&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_passphrase</span><span class="nv"> </span><span class="s">}}&#39;</span>
+
+<span class="w">  </span><span class="c1"># パスフレーズを確認</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;</span><span class="nv"> </span><span class="s">passphrase</span><span class="nv"> </span><span class="s">again:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_passphrase</span><span class="nv"> </span><span class="s">}}&#39;</span>
+
+<span class="w">  </span><span class="c1"># 生成された 秘密鍵ファイルを確認</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ls</span><span class="nv"> </span><span class="s">-al</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_id_rsa_path</span><span class="nv"> </span><span class="s">}}&#39;</span>
+
+<span class="w">  </span><span class="c1"># ssh接続クローズ</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="id36">
+<h4>複数具体値変数使用時の注意事項<a class="headerlink" href="#id36" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">対話ファイルで複数具体値変数が使用出来るパラメータは、commandモジュールのwith_itemsパラメータのみです。これ以外で使用した場合、作業実行時にエラーとなります。</div>
+</div>
+</section>
+<section id="id37">
+<h4>対話ファイル終了時の注意事項<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">対話ファイルの最終行に、セッションを終了するコマンド「exit」を投入するようにしてください。</div>
+<div class="line">最終行の処理が終了すると、 コマンドプロンプトを待ち合わせしないで、セッションを切断します。</div>
+<div class="line">最終行にファイルコピーなど処理に時間がかかるコマンドが記載されている場合、コマンド終了前にセッションが切断され、コマンドが異常終了してしまう場合があります。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">e.g.）対話ファイルの最終行に、セッションを終了するコマンド「exit」を投入する例</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># ssh接続　パスワード認証</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;assword:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+
+<span class="w">  </span><span class="c1"># ファイルコピー</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;cp</span><span class="nv"> </span><span class="s">-rfp</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_src_path</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_dest_path</span><span class="nv"> </span><span class="s">}}&#39;</span>
+
+<span class="w">  </span><span class="c1"># 直前のコマンド終了をコマンドプロンプトで待ち合わせ、exitコマンドを投入する記載を対話ファイルの最後に挿入</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="yaml">
+<span id="ansible-pioneer-things-to-keep-in-mind-when-writing-dialogue-files-in-yaml-format"></span><h4>対話ファイルをyaml形式で記載する際の注意事項<a class="headerlink" href="#yaml" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">対話ファイルはyaml形式のファイルとして扱います。以下のようなYAML形式に準じていない記載があると対話モジュールの登録時にエラーとなります。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">各モジュールのパラメータに変数を記載している場合でパラメータ全体をクォーテーションで囲んでいない場合。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">各パラメータを定数のみで記載している場合で、定数の終端が「<strong>:</strong>」の場合など、パラメータ全体をクォーテーションで囲んでいない場合。</div>
+</div>
+</li>
+</ul>
+<div class="line-block">
+<div class="line">各モジュールのパラメータは、パラメータ全体をクォーテーションで囲んでください。</div>
+</div>
+<figure class="align-default" id="id90">
+<a class="reference internal image-reference" href="../../_images/ansible_pioneer_yaml_syntax.png"><img alt="対話ファイルをyaml形式で記載する際の注意事項" src="../../_images/ansible_pioneer_yaml_syntax.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.57 </span><span class="caption-text">対話ファイルをyaml形式で記載する際の注意事項</span><a class="headerlink" href="#id90" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="lang">
+<h4>作業対象のログインユーザのLANGについての注意事項<a class="headerlink" href="#lang" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ログインユーザの「LANG」は、「UTF-8/euc/shift_jis」の3種類をサポートしています。</div>
+<div class="line">ログインユーザの「LANG」の設定は <span class="menuselection">Ansible共通 ▶ 機器一覧</span> の <span class="menuselection">LANG</span> より行ってください。</div>
+<div class="line">「euc/shift_jis」を設定した場合、作業対象との通信制御で使用しているpexpectモジュールのUTF-8へのデコード処理の特性で対話ファイルを正しく処理出来ない場合があります。</div>
+<div class="line">一部の全角文字（ ①②等）をUTF-8にデコード出来ません。デコード出来ない文字は??で表示されます。</div>
+<div class="line">一部の全角文字（ － 等）をexpect等のコマンドプロンプト待ちで使用した場合、UTF-8では待ち受けが正しく出来ますが、euc/shift_jisでは待ち受けがタイムアウトしてしまいます。</div>
+</div>
+</section>
+<section id="id38">
+<h4>作業対象へ投入するコマンドの終端コードについての注意事項<a class="headerlink" href="#id38" title="Link to this heading">¶</a></h4>
+<p>作業対象へ投入するコマンドの終端コードは「LF」を送信します。作業対象のコマンド終端コードが「CRLF」の場合、対話ファイルで作業対象に投入するコマンドの末尾に「r」を追加してください。</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">conf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="nt">exec_list</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;XXXXXXXX\r&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_command</span><span class="nv"> </span><span class="s">}}\r&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_state</span><span class="nv"> </span><span class="s">}}\r&#39;</span>
+<span class="w">    </span><span class="nt">prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__loginhostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_parameter1</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_parameter2</span><span class="nv"> </span><span class="s">}}&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="operating-system-command">
+<h4>Operating System Commandシーケンス<a class="headerlink" href="#operating-system-command" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">作業対象に依存しますが、作業対象から送られてくるコマンドプロンプトの直前にOperating System Commandシーケンスが付加されている場合があります。promptパラメータで指定された文字列の直前にあるエスケープシーケンスをITAが排除しています。</div>
+</div>
+</section>
+</section>
+</section>
+<section id="id39">
+<h2><span class="section-number">3.7. </span>付録<a class="headerlink" href="#id39" title="Link to this heading">¶</a></h2>
+<section id="ansibleita">
+<span id="ansible-pioneer-the-linkage-between-the-input-data-used-during-ansible-execution-and-ita-menu"></span><h3><span class="section-number">3.7.1. </span>Ansible実行時に使用される投入データとITAメニューの紐づけ<a class="headerlink" href="#ansibleita" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">ITAの各メニューより情報を抜出してAnsible実行に必要な投入データを作ります。この際、 <span class="menuselection">Ansible共通 ▶ 機器一覧</span> の <span class="menuselection">パスワード</span> や <span class="menuselection">Ansible-Pioneer ▶ 代入値管理</span> で <span class="menuselection">Sensitive設定</span> が「True」に設定されている変数の具体値は、ansible-vaultで暗号化されています。</div>
+<div class="line">「投入データ」はZIP形式で <span class="menuselection">Ansible-Pioneer ▶ 作業状態確認</span> の <span class="menuselection">投入データ</span> よりダウンロードが可能です。</div>
+<div class="line">ダウンロードした投入データを所定のディレクトリに解凍することで、Ansibleを直接実行することも可能です。</div>
+<div class="line"><br /></div>
+<div class="line">各種データとITAメニューの関係性は以下の通りです。</div>
+</div>
+<section id="id40">
+<h4>Ansible-Pioneer投入データ<a class="headerlink" href="#id40" title="Link to this heading">¶</a></h4>
+<table class="docutils align-left" id="id91">
+<caption><span class="caption-number">表 3.73 </span><span class="caption-text">Ansible-Pioneer投入データ</span><a class="headerlink" href="#id91" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15.4%" />
+<col style="width: 15.4%" />
+<col style="width: 23.1%" />
+<col style="width: 30.8%" />
+<col style="width: 15.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>メニューグループ</p></th>
+<th class="head"><p>メニュー</p></th>
+<th class="head"><p>項目</p></th>
+<th class="head"><p>ディレクトリ解凍時のパス</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ansible-Pioneer</p></td>
+<td><p>対話ファイル素材集</p></td>
+<td><p>対話ファイル</p></td>
+<td><p>/child_playbooks</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Ansible 共通</p></td>
+<td><p>テンプレート管理</p></td>
+<td><p>テンプレート素材</p></td>
+<td><p>/template_files</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Ansible 共通</p></td>
+<td><p>ファイル管理</p></td>
+<td><p>ファイル素材</p></td>
+<td><p>/copy_files</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Ansible-Pioneer</p></td>
+<td><p>代入値管理</p></td>
+<td><p>具体値（ファイル）</p></td>
+<td><p>/upload_files</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Ansible 共通</p></td>
+<td><p>グローバル変数管理</p></td>
+<td><p>変数名/具体値</p></td>
+<td><p>/host_vars</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Ansible 共通</p></td>
+<td><p>グローバル変数（センシティブ）管理</p></td>
+<td><p>変数名/具体値</p></td>
+<td><p>/host_vars</p></td>
+<td><p>※ansible-vault で暗号化</p></td>
+</tr>
+<tr class="row-even"><td><p>Ansible-Pioneer</p></td>
+<td><p>代入値管理</p></td>
+<td><p>変数名/具体値</p></td>
+<td><p>/host_vars</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Ansible-Pioneer</p></td>
+<td><p>template 管理</p></td>
+<td><p>テンプレート埋込変数</p></td>
+<td><p>/host_vars</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Ansible-Pioneer</p></td>
+<td><p>ファイル管理</p></td>
+<td><p>ファイル埋込変数</p></td>
+<td><p>/host_vars</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Ansible共通</p></td>
+<td><p>機器一覧</p></td>
+<td><div class="line-block">
+<div class="line">ログインユーザ ID</div>
+<div class="line">ログインパスワード   ITA独自 で暗号化</div>
+<div class="line">プロトコル</div>
+<div class="line">ホスト名</div>
+<div class="line">DNSホスト名</div>
+<div class="line">IPアドレス</div>
+</div>
+</td>
+<td><p>/host_vars</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Ansible共通</p></td>
+<td><p>機器一覧</p></td>
+<td><p>ssh 認証鍵ファイル</p></td>
+<td><p>/ssh_key_files</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Ansible共通</p></td>
+<td><p>インターフェース情報</p></td>
+<td><p>オプションパラメータ</p></td>
+<td><div class="line-block">
+<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Core」「Ansible Automation Controller」の場合</div>
+<div class="line">/AnsibleExecOption.txt</div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Execution Agent」の場合</div>
+<div class="line">/env/cmdline</div>
+</div>
+</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Ansible-Pioneer</p></td>
+<td><p>Movement一覧</p></td>
+<td><p>並列実行数</p></td>
+<td><div class="line-block">
+<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Core」「Ansible Automation Controller」の場合</div>
+<div class="line">/AnsibleExecOption.txt</div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Execution Agent」の場合</div>
+<div class="line">/env/cmdline</div>
+</div>
+</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Ansible共通</p></td>
+<td><p>機器一覧</p></td>
+<td><div class="line-block">
+<div class="line">ホスト名</div>
+<div class="line">DNSホスト名</div>
+<div class="line">IP アドレス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Core」「Ansible Automation Controller」の場合</div>
+<div class="line">/hosts</div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Execution Agent」の場合</div>
+<div class="line">/inventory/hosts</div>
+</div>
+</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Ansible共通</p></td>
+<td><p>機器一覧</p></td>
+<td><p>接続オプション</p></td>
+<td><p>/host_vars</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Ansible-Pioneer</p></td>
+<td><p>Movement-対話種別紐付</p></td>
+<td><div class="line-block">
+<div class="line">対話ファイル</div>
+<div class="line">インクルード順序</div>
+</div>
+</td>
+<td><p>/playbook.yml</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Ansible共通</p></td>
+<td><p>実行環境定義テンプレート管理</p></td>
+<td><p>テンプレートファイル</p></td>
+<td><p>builder_executable_files/execution-environment.yml</p></td>
+<td><p><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Execution Agent」の場合のみ</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ansible共通</p></td>
+<td><p>パラメータシート「実行環境パラメータ定義」</p></td>
+<td><p>各種アップロードファイル</p></td>
+<td><p>builder_executable_files/{{Rest API用項目名}}_アップロードファイル名</p></td>
+<td><p><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Execution Agent」の場合のみ</p></td>
+</tr>
+<tr class="row-even"><td><p>Ansible共通</p></td>
+<td><p>実行環境管理</p></td>
+<td><p>タグ名</p></td>
+<td><div class="line-block">
+<div class="line">builder_executable_files/builder.sh</div>
+<div class="line">runner_executable_files/start.sh</div>
+</div>
+</td>
+<td><p><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Execution Agent」の場合のみ</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="ansible-pioneer-the-linkage-between-the-output-data-used-during-ansible-execution-and-ita-menu">
+<span id="id41"></span><h3><span class="section-number">3.7.2. </span>Ansible実行時に作成される結果データ<a class="headerlink" href="#ansible-pioneer-the-linkage-between-the-output-data-used-during-ansible-execution-and-ita-menu" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">「投入データ」をansibleで実行した結果を「結果データ」としてZIP形式で保存します。</div>
+<div class="line">「結果データ」はZIP形式で <span class="menuselection">Ansible-Pioneer ▶ 作業状態確認</span> の <span class="menuselection">結果データ</span> よりダウンロードが可能です。</div>
+</div>
+<section id="id42">
+<h4>Ansible-Pioneer結果データに保存されるファイル一覧<a class="headerlink" href="#id42" title="Link to this heading">¶</a></h4>
+<table class="docutils align-left" id="id92">
+<caption><span class="caption-number">表 3.74 </span><span class="caption-text">Ansible-Pioneer結果データに保存されるファイル一覧</span><a class="headerlink" href="#id92" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15.4%" />
+<col style="width: 38.5%" />
+<col style="width: 15.4%" />
+<col style="width: 15.4%" />
+<col style="width: 15.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ファイル名</p></th>
+<th class="head"><p>記録内容</p></th>
+<th class="head"><p>Ansible Coreの場合</p></th>
+<th class="head"><p>Ansible Automation Controllerの場合</p></th>
+<th class="head"><p>AAnsible Execution Agentの場合</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>result.txt</p></td>
+<td><p>Ansibleの実行結果を記録</p></td>
+<td><p>〇</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>xxx.pid</p></td>
+<td><div class="line-block">
+<div class="line">Ansible-playbbokコマンドのプロセスIDを記録するファイル</div>
+<div class="line">xxx: Ansible-playbbokコマンドのプロセスID</div>
+</div>
+</td>
+<td><p>〇</p></td>
+<td></td>
+<td><p>〇</p></td>
+</tr>
+<tr class="row-even"><td><p>pioneer.xxx</p></td>
+<td><div class="line-block">
+<div class="line">PioneerモジュールのプロセスIDを記録するファイル。</div>
+<div class="line">xxx: PioneerモジュールのプロセスID</div>
+</div>
+</td>
+<td><p>〇</p></td>
+<td><p>〇</p></td>
+<td><p>〇</p></td>
+</tr>
+<tr class="row-odd"><td><p>xxx_private.log</p></td>
+<td><div class="line-block">
+<div class="line">Pioneerモジュールのログを記録するファイル。</div>
+<div class="line">xxx: 作業対象ホスト</div>
+</div>
+</td>
+<td><p>〇</p></td>
+<td><p>〇</p></td>
+<td><p>〇</p></td>
+</tr>
+<tr class="row-even"><td><p>error.log</p></td>
+<td><div class="line-block">
+<div class="line">作業実行時のエラーメッセージ出力先ファイル</div>
+<div class="line">Ansible-playbbokコマンドの標準エラー出力の出力先ファイル</div>
+<div class="line">作業実行確認のエラーログに表示される内容</div>
+</div>
+</td>
+<td><p>〇</p></td>
+<td><p>〇</p></td>
+<td><p>〇</p></td>
+</tr>
+<tr class="row-odd"><td><p>exec.log.org</p></td>
+<td><p>Ansible-playbbokコマンドの標準出力の出力先ファイル</p></td>
+<td><p>〇</p></td>
+<td><p>〇</p></td>
+<td><p>〇</p></td>
+</tr>
+<tr class="row-even"><td><p>exec.log</p></td>
+<td><div class="line-block">
+<div class="line">Aexec.log.orgを加工したファイル</div>
+<div class="line">作業実行確認の実行ログに表示される内容</div>
+</div>
+</td>
+<td><p>〇</p></td>
+<td><p>〇</p></td>
+<td><p>〇</p></td>
+</tr>
+<tr class="row-odd"><td><p>exec_&lt;作業番号&gt;_&lt;グループ番号&gt;</p></td>
+<td><div class="line-block">
+<div class="line">分割された実行ログファイル</div>
+<div class="line">ファイル名の命名規則は「 <a class="reference internal" href="ansible_legacyrole.html#ansible-legacyrole-check-operation-status"><span class="std std-ref">作業状態確認</span></a> 」の実行ログ表示を参照してください。</div>
+</div>
+</td>
+<td></td>
+<td><p>〇</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>forced.txt</p></td>
+<td><p>緊急停止をした場合の記録ファイル</p></td>
+<td><p>〇</p></td>
+<td></td>
+<td><p>〇</p></td>
+</tr>
+<tr class="row-odd"><td><p>user_files</p></td>
+<td><p>実行したplaybookでITA独自変数「__workflowdir__」にファイル出力をした場合の出力先ディレクトリ。</p></td>
+<td><p>〇</p></td>
+<td><p>〇</p></td>
+<td><p>〇</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">child_exec.log</div>
+<div class="line">child_error.log</div>
+</div>
+</td>
+<td><p>ansible-builderの実行ログ</p></td>
+<td></td>
+<td></td>
+<td><p>〇</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="ansible_legacy.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">2. </span>Ansible-Legacy</a></li>
+    <li class="next"><a href="ansible_legacyrole.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">4. </span>Ansible-LegacyRole</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.7/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

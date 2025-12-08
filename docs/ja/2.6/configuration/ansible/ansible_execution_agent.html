@@ -73,8 +73,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.6/configuration/ansible/ansible_execution_agent.html" selected>current</option>
-              <option value="../../../../ja/2.6/configuration/ansible/ansible_execution_agent.html" selected>2.6(current)</option>
+              <option value="../../../../ja/2.7/configuration/ansible/ansible_execution_agent.html">current</option>
+              <option value="../../../../ja/2.7/configuration/ansible/ansible_execution_agent.html">2.7(current)</option>
+              <option value="../../../../ja/2.6/configuration/ansible/ansible_execution_agent.html" selected>2.6</option>
               <option value="../../../../ja/2.5/configuration/ansible/ansible_execution_agent.html">2.5</option>
               <option value="../../../../ja/2.4/configuration/ansible/ansible_execution_agent.html">2.4</option>
               <option value="../../../../ja/2.3/configuration/ansible/ansible_execution_agent.html">2.3</option>
@@ -133,7 +134,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#ansible-execution-agent-system-requirements">4.3. システム要件</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#ansible-execution-agent-hardware-requirements">4.3.1. ハードウェア要件</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#os">4.3.2. OS要件</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#ansible-execution-agent-node-to-work-on">4.3.3. 作業対象機器</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#ansible-execution-agent-software-requirements">4.3.3. ソフトウェア要件</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#ansible-execution-agent-communication-requirements">4.3.4. 通信要件</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#ansible-execution-agent-other-requirements">4.3.5. その他の要件</a></li>
 </ul>
@@ -181,10 +182,7 @@
 <li><a class="reference internal" href="#ansible-execution-agent-system-requirements">4.3. システム要件</a><ul>
 <li><a class="reference internal" href="#ansible-execution-agent-hardware-requirements">4.3.1. ハードウェア要件</a></li>
 <li><a class="reference internal" href="#os">4.3.2. OS要件</a></li>
-<li><a class="reference internal" href="#ansible-execution-agent-node-to-work-on">4.3.3. 作業対象機器</a><ul>
-<li><a class="reference internal" href="#ansible-execution-agent-software-requirements">ソフトウェア要件</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#ansible-execution-agent-software-requirements">4.3.3. ソフトウェア要件</a></li>
 <li><a class="reference internal" href="#ansible-execution-agent-communication-requirements">4.3.4. 通信要件</a></li>
 <li><a class="reference internal" href="#ansible-execution-agent-other-requirements">4.3.5. その他の要件</a><ul>
 <li><a class="reference internal" href="#rhel">RHEL(サポート付きライセンス利用の場合)</a></li>
@@ -242,8 +240,8 @@
 </div>
 <section id="id3">
 <h3><span class="section-number">4.2.1. </span>構成パターン<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
-<table class="docutils align-left" id="id12">
-<caption><span class="caption-number">表 4.1 </span><span class="caption-text">システム構成パターン</span><a class="headerlink" href="#id12" title="Link to this table">¶</a></caption>
+<table class="docutils align-left" id="id11">
+<caption><span class="caption-number">表 4.1 </span><span class="caption-text">システム構成パターン</span><a class="headerlink" href="#id11" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 33.3%" />
@@ -301,7 +299,7 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#ansible-execution-agent-hardware-requirements"><span class="std std-ref">ハードウェア要件</span></a></p></li>
 <li><p><a class="reference internal" href="#ansible-execution-agent-os-requirements"><span class="std std-ref">OS要件</span></a></p></li>
-<li><p><a class="reference internal" href="#ansible-execution-agent-node-to-work-on"><span class="std std-ref">作業対象機器</span></a></p></li>
+<li><p><a class="reference internal" href="#ansible-execution-agent-software-requirements"><span class="std std-ref">ソフトウェア要件</span></a></p></li>
 <li><p><a class="reference internal" href="#ansible-execution-agent-communication-requirements"><span class="std std-ref">通信要件</span></a></p></li>
 <li><p><a class="reference internal" href="#ansible-execution-agent-other-requirements"><span class="std std-ref">その他の要件</span></a></p></li>
 </ul>
@@ -310,8 +308,8 @@
 <ul class="simple">
 <li><p>動作確認済み構成</p></li>
 </ul>
-<table class="docutils align-left" id="id13">
-<caption><span class="caption-number">表 4.2 </span><span class="caption-text">動作確認済み最小構成</span><a class="headerlink" href="#id13" title="Link to this table">¶</a></caption>
+<table class="docutils align-left" id="id12">
+<caption><span class="caption-number">表 4.2 </span><span class="caption-text">動作確認済み最小構成</span><a class="headerlink" href="#id12" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>リソース種別</p></th>
 <th class="head"><p>要求リソース</p></th>
@@ -329,8 +327,8 @@
 </tr>
 </tbody>
 </table>
-<table class="docutils align-left" id="id14">
-<caption><span class="caption-number">表 4.3 </span><span class="caption-text">動作確認済み推奨構成</span><a class="headerlink" href="#id14" title="Link to this table">¶</a></caption>
+<table class="docutils align-left" id="id13">
+<caption><span class="caption-number">表 4.3 </span><span class="caption-text">動作確認済み推奨構成</span><a class="headerlink" href="#id13" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>リソース種別</p></th>
 <th class="head"><p>要求リソース</p></th>
@@ -361,8 +359,8 @@
 <div class="line-block">
 <div class="line">動作確認済みのOSは以下です。</div>
 </div>
-<table class="docutils align-left" id="id15">
-<caption><span class="caption-number">表 4.4 </span><span class="caption-text">動作確認済みOS</span><a class="headerlink" href="#id15" title="Link to this table">¶</a></caption>
+<table class="docutils align-left" id="id14">
+<caption><span class="caption-number">表 4.4 </span><span class="caption-text">動作確認済みOS</span><a class="headerlink" href="#id14" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>OS種別</p></th>
 <th class="head"><p>バージョン</p></th>
@@ -398,15 +396,22 @@ Permissive
 </pre></div>
 </div>
 </section>
-<section id="ansible-execution-agent-node-to-work-on">
-<span id="id7"></span><h3><span class="section-number">4.3.3. </span>作業対象機器<a class="headerlink" href="#ansible-execution-agent-node-to-work-on" title="Link to this heading">¶</a></h3>
-<div class="line-block">
-<div class="line">Ansible Coreで接続する作業対象機器には下記のソフトウェアのいずれかが必要となります。</div>
-</div>
 <section id="ansible-execution-agent-software-requirements">
-<span id="id8"></span><h4>ソフトウェア要件<a class="headerlink" href="#ansible-execution-agent-software-requirements" title="Link to this heading">¶</a></h4>
-<table class="docutils align-left" id="id16">
-<caption><span class="caption-number">表 4.5 </span><span class="caption-text">ソフトウェア要件</span><a class="headerlink" href="#id16" title="Link to this table">¶</a></caption>
+<span id="id7"></span><h3><span class="section-number">4.3.3. </span>ソフトウェア要件<a class="headerlink" href="#ansible-execution-agent-software-requirements" title="Link to this heading">¶</a></h3>
+<p>以下の条件が満たされている必要があります。</p>
+<ul class="simple">
+<li><p>Python3.11がインストールされていること</p></li>
+<li><p>インストールを実行するユーザで <strong class="command">python3</strong> と <strong class="command">pip3</strong> コマンドが実行できること</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">Almalinuxでは <strong class="command">python3</strong> と <strong class="command">pip3</strong> コマンドがPython3.11に紐づいている必要があります。</div>
+</div>
+</div>
+<p>なお、インストール時には下記のansible-builderおよびansible-runnerのインストールが自動的に行われます。</p>
+<table class="docutils align-left" id="id15">
+<caption><span class="caption-number">表 4.5 </span><span class="caption-text">バージョン情報</span><a class="headerlink" href="#id15" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -441,50 +446,11 @@ Permissive
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><div class="line-block">
-<div class="line">Python</div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line">3.9 - 3.13</div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><div class="line-block">
-<div class="line">PowerShell</div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line">5.1</div>
-</div>
-</td>
-</tr>
 </tbody>
 </table>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<div class="line-block">
-<div class="line">→Python3.11以上がインストールされている必要があります。また、AlmaLinuxの場合、python3コマンドとpip3コマンドに、上記バージョンのpythonのエイリアスが紐づいていること。</div>
-<div class="line">RHELの場合、python3コマンドとpip3コマンドに、python3.9以上のエイリアスが紐づいていること。</div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">注釈</p>
-<div class="line-block">
-<div class="line">Exastro IT Automation 2.6 で使用する Ansible Core のバージョンは 2.18 です。</div>
-</div>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">危険</p>
-<div class="line-block">
-<div class="line">作業対象機器のソフトウェア要件 は Exastro IT Automation のバージョン（Ansible Coreのバージョン）によって変更される可能性があります。</div>
-<div class="line">Exastro IT Automationのバージョンを変更する際は、必ず作業対象機器のソフトウェア要件を確認してください。</div>
-</div>
-</div>
-</section>
 </section>
 <section id="ansible-execution-agent-communication-requirements">
-<span id="id9"></span><h3><span class="section-number">4.3.4. </span>通信要件<a class="headerlink" href="#ansible-execution-agent-communication-requirements" title="Link to this heading">¶</a></h3>
+<span id="id8"></span><h3><span class="section-number">4.3.4. </span>通信要件<a class="headerlink" href="#ansible-execution-agent-communication-requirements" title="Link to this heading">¶</a></h3>
 <div class="line-block">
 <div class="line">エージェントサーバから、外部NWへの通信が可能である必要があります。</div>
 </div>
@@ -498,7 +464,7 @@ Permissive
 </figure>
 </section>
 <section id="ansible-execution-agent-other-requirements">
-<span id="id10"></span><h3><span class="section-number">4.3.5. </span>その他の要件<a class="headerlink" href="#ansible-execution-agent-other-requirements" title="Link to this heading">¶</a></h3>
+<span id="id9"></span><h3><span class="section-number">4.3.5. </span>その他の要件<a class="headerlink" href="#ansible-execution-agent-other-requirements" title="Link to this heading">¶</a></h3>
 <section id="rhel">
 <span id="ansible-execution-agent-rhel-support-requirements"></span><h4>RHEL(サポート付きライセンス利用の場合)<a class="headerlink" href="#rhel" title="Link to this heading">¶</a></h4>
 <div class="line-block">
@@ -532,8 +498,8 @@ sudo<span class="w"> </span>subscription-manager<span class="w"> </span>repos<sp
 <ul class="simple">
 <li><p>動作確認済みビルドのベースイメージ</p></li>
 </ul>
-<table class="docutils align-left" id="id17">
-<caption><span class="caption-number">表 4.6 </span><span class="caption-text">動作確認済みビルドのベースイメージ</span><a class="headerlink" href="#id17" title="Link to this table">¶</a></caption>
+<table class="docutils align-left" id="id16">
+<caption><span class="caption-number">表 4.6 </span><span class="caption-text">動作確認済みビルドのベースイメージ</span><a class="headerlink" href="#id16" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>ベースイメージ種別</p></th>
 <th class="head"><p>イメージ取得先</p></th>
@@ -553,7 +519,7 @@ sudo<span class="w"> </span>subscription-manager<span class="w"> </span>repos<sp
 </table>
 </section>
 <section id="ansible-agent-linger-note">
-<span id="id11"></span><h4>ユーザーセッション切断後のプロセス維持<a class="headerlink" href="#ansible-agent-linger-note" title="Link to this heading">¶</a></h4>
+<span id="id10"></span><h4>ユーザーセッション切断後のプロセス維持<a class="headerlink" href="#ansible-agent-linger-note" title="Link to this heading">¶</a></h4>
 <div class="line-block">
 <div class="line">Ansible実行エージェントを構成したエージェントユーザーがログアウトするとプロセスが停止し、ITAの作業実行がタイムアウトします。</div>
 </div>

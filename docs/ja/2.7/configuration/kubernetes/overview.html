@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>1. 概要 &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="2. Kubernetes クラスター" href="kubernetes.html" />
+    <link rel="prev" title="Kubernetes" href="index.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/configuration/kubernetes/overview.html" selected>current</option>
+              <option value="../../../../ja/2.7/configuration/kubernetes/overview.html" selected>2.7(current)</option>
+              <option value="../../../../ja/2.6/configuration/kubernetes/overview.html">2.6</option>
+              <option value="../../../../ja/2.5/configuration/kubernetes/overview.html">2.5</option>
+              <option value="../../../../ja/2.4/configuration/kubernetes/overview.html">2.4</option>
+              <option value="../../../../ja/2.3/configuration/kubernetes/overview.html">2.3</option>
+              <option value="../../../../ja/2.2/configuration/kubernetes/overview.html">2.2</option>
+              <option value="../../../../ja/2.1/configuration/kubernetes/overview.html">2.1</option>
+              <option value="../../../../ja/2.0/configuration/kubernetes/overview.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/configuration/kubernetes/overview.html" selected>日本語</option>
+              <option value="../../../../en/2.7/configuration/kubernetes/overview.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="index.html" title="前のトピックへ">Kubernetes</a></li>
+        <li class="next"><a href="kubernetes.html" title="次のトピックへ"><span class="section-number">2. </span>Kubernetes クラスター</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">構成・構築ガイド</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Kubernetes</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. 概要</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1.1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">1.2. 特徴</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">1.3. 可用性</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id5">1.3.1. 自動復旧</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kubernetes.html">2. Kubernetes クラスター</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aks.html">3. Azure Kubernetes Service</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../docker_compose/index.html">Docker Compose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible/index.html">Ansible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OASE_agent/index.html">OASE Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform/index.html">Terraform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../client_requirements/index.html">クライアント動作要件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logging/index.html">ログ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../security/index.html">セキュリティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/index.html">マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">1. 概要</a><ul>
+<li><a class="reference internal" href="#id2">1.1. はじめに</a></li>
+<li><a class="reference internal" href="#id3">1.2. 特徴</a></li>
+<li><a class="reference internal" href="#id4">1.3. 可用性</a><ul>
+<li><a class="reference internal" href="#id5">1.3.1. 自動復旧</a><ul>
+<li><a class="reference internal" href="#probe">フロントエンド系コンテナのProbe</a></li>
+<li><a class="reference internal" href="#id6">サーバーサイドジョブ系コンテナのProbe</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">構成・構築ガイド</a></li>
+    <li><a href="index.html">Kubernetes</a></li>
+    
+    <li><span class="section-number">1. </span>概要</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="id1">
+<h1><span class="section-number">1. </span>概要<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<section id="id2">
+<h2><span class="section-number">1.1. </span>はじめに<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書では、Exastro システムをコンテナ運用管理ツールであるKubernetesに構築した際の特徴について説明します。</div>
+</div>
+</section>
+<section id="id3">
+<h2><span class="section-number">1.2. </span>特徴<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Exastro システムは複数のコンテナにより機能しています。Kubernetesによる運用管理を行うことで、より高い可用性やサービスレベルのシステム構築が実現できます。</div>
+</div>
+</section>
+<section id="id4">
+<h2><span class="section-number">1.3. </span>可用性<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<section id="id5">
+<h3><span class="section-number">1.3.1. </span>自動復旧<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Exastro システムではコンテナを自動復旧させる手段として、Kubernetesのヘルスチェック機能であるProbeを利用します。</div>
+<div class="line">Probeを設定することにより、コンテナの状態がチェックされハングアップが発生した際に自動的に再起動が行われるようになります。</div>
+</div>
+<div class="line-block">
+<div class="line">Probeは以下のフロントエンド系コンテナおよびサーバーサイドジョブ系コンテナに対して設定されています。</div>
+</div>
+<ul>
+<li><p>フロントエンド系コンテナ</p>
+<ul>
+<li><div class="line-block">
+<div class="line">platform-auth</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">platform-api</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">platform-web</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ita-api-admin</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ita-api-organization</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ita-api-ansible-execution-receiver</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ita-api-oase-receiver</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ita-web-server</div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>サーバーサイドジョブ系コンテナ</p>
+<ul>
+<li><div class="line-block">
+<div class="line">platform-job</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ita-by-conductor-regularly</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">ProbeはKubernetesの機能であるため、<a class="reference internal" href="../../installation/online/exastro/kubernetes.html"><span class="doc">Kubernetesを用いたインストール</span></a> をした場合のみ利用可能です。</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">ProbeはStartup Probe, Liveness Probe, Readiness Probeの3種類があります。</div>
+</div>
+<table class="docutils align-left" id="id7">
+<caption><span class="caption-number">表 1.1 </span><span class="caption-text">Probeの種類</span><a class="headerlink" href="#id7" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Probe</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Startup Probe</p></td>
+<td><p>Startup Probeが成功するまで、Liveness ProbeとReadiness Probeによるチェックを無効にし、アプリケーションの起動に干渉しないようにします。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Liveness Probe</p></td>
+<td><p>コンテナを再起動させるかどうかをチェックをします。</p></td>
+</tr>
+<tr class="row-even"><td><p>Readiness Probe</p></td>
+<td><p>コンテナがトラフィックを受け入れらえる状態であるかどうかをチェックします。</p></td>
+</tr>
+</tbody>
+</table>
+<section id="probe">
+<h4>フロントエンド系コンテナのProbe<a class="headerlink" href="#probe" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">フロントエンド系コンテナは自身のヘルスチェック用のエンドポイントにHTTP GETリクエストを10秒毎に行います。</div>
+<div class="line">初回起動時はStartup Probeにより30回失敗した際にコンテナが再起動され、起動後はLiveness Probeにより3回失敗した際にコンテナが再起動されます。</div>
+</div>
+<table class="docutils align-left" id="id8">
+<caption><span class="caption-number">表 1.2 </span><span class="caption-text">Startup Probeの設定値</span><a class="headerlink" href="#id8" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>httpGet.path</p></td>
+<td><p>HTTP GETリクエストによるパスを指定。</p></td>
+<td><p>（コンテナ毎のヘルスチェック用のパス）</p></td>
+</tr>
+<tr class="row-odd"><td><p>httpGet.port</p></td>
+<td><p>HTTP GETリクエストによるポートを指定。</p></td>
+<td><p>port-http</p></td>
+</tr>
+<tr class="row-even"><td><p>timeoutSeconds</p></td>
+<td><p>Probeのタイムアウトを指定（秒）。</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-odd"><td><p>periodSeconds</p></td>
+<td><p>Probeの間隔を指定（秒）。</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>successThreshold</p></td>
+<td><p>Probeが成功したと判断する最小回数を指定。</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>failureThreshold</p></td>
+<td><p>Probeが失敗したと判断する最小回数を指定。</p></td>
+<td><p>30</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-left" id="id9">
+<caption><span class="caption-number">表 1.3 </span><span class="caption-text">Liveness Probeの設定値</span><a class="headerlink" href="#id9" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>httpGet.path</p></td>
+<td><p>HTTP GETリクエストによるパスを指定。</p></td>
+<td><p>（コンテナ毎のヘルスチェック用のパス）</p></td>
+</tr>
+<tr class="row-odd"><td><p>httpGet.port</p></td>
+<td><p>HTTP GETリクエストによるポートを指定。</p></td>
+<td><p>port-http</p></td>
+</tr>
+<tr class="row-even"><td><p>timeoutSeconds</p></td>
+<td><p>Probeのタイムアウトを指定（秒）。</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-odd"><td><p>periodSeconds</p></td>
+<td><p>Probeの間隔を指定（秒）。</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>successThreshold</p></td>
+<td><p>Probeが成功したと判断する最小回数を指定。</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>failureThreshold</p></td>
+<td><p>Probeが失敗したと判断する最小回数を指定。</p></td>
+<td><p>3</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-left" id="id10">
+<caption><span class="caption-number">表 1.4 </span><span class="caption-text">Readiness Probeの設定値</span><a class="headerlink" href="#id10" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>httpGet.path</p></td>
+<td><p>HTTP GETリクエストによるパスを指定。</p></td>
+<td><p>（コンテナ毎のヘルスチェック用のパス）</p></td>
+</tr>
+<tr class="row-odd"><td><p>httpGet.port</p></td>
+<td><p>HTTP GETリクエストによるポートを指定。</p></td>
+<td><p>port-http</p></td>
+</tr>
+<tr class="row-even"><td><p>timeoutSeconds</p></td>
+<td><p>Probeのタイムアウトを指定（秒）。</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-odd"><td><p>periodSeconds</p></td>
+<td><p>Probeの間隔を指定（秒）。</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>successThreshold</p></td>
+<td><p>Probeが成功したと判断する最小回数を指定。</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>failureThreshold</p></td>
+<td><p>Probeが失敗したと判断する最小回数を指定。</p></td>
+<td><p>3</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id6">
+<h4>サーバーサイドジョブ系コンテナのProbe<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">サーバーサイドジョブ系コンテナはハングアップしていないことを示すファイルが30秒以内に更新されているかの確認を10秒間隔で行っています。</div>
+<div class="line">初回起動時はStartup Probeにより30回失敗した際にコンテナが再起動され、起動後はLiveness Probeにより3回失敗した際にコンテナが再起動されます。</div>
+</div>
+<table class="docutils align-left" id="id11">
+<caption><span class="caption-number">表 1.5 </span><span class="caption-text">Startup Probeの設定値</span><a class="headerlink" href="#id11" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>exec.command</p></td>
+<td><div class="line-block">
+<div class="line">Probeで実行するコマンドを指定。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">（ハングアップしていないことを示すファイルが30秒以内に更新されているかの確認を行うコマンド）</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>timeoutSeconds</p></td>
+<td><p>Probeのタイムアウトを指定（秒）。</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-even"><td><p>periodSeconds</p></td>
+<td><p>Probeの間隔を指定（秒）。</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>successThreshold</p></td>
+<td><p>Probeが成功したと判断する最小回数を指定。</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>failureThreshold</p></td>
+<td><p>Probeが失敗したと判断する最小回数を指定。</p></td>
+<td><p>30</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-left" id="id12">
+<caption><span class="caption-number">表 1.6 </span><span class="caption-text">Liveness Probeの設定値</span><a class="headerlink" href="#id12" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>exec.command</p></td>
+<td><div class="line-block">
+<div class="line">Probeで実行するコマンドを指定。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">（ハングアップしていないことを示すファイルが30秒以内に更新されているかの確認を行うコマンド）</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>timeoutSeconds</p></td>
+<td><p>Probeのタイムアウトを指定（秒）。</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-even"><td><p>periodSeconds</p></td>
+<td><p>Probeの間隔を指定（秒）。</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>successThreshold</p></td>
+<td><p>Probeが成功したと判断する最小回数を指定。</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>failureThreshold</p></td>
+<td><p>Probeが失敗したと判断する最小回数を指定。</p></td>
+<td><p>3</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span>Kubernetes</a></li>
+    <li class="next"><a href="kubernetes.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">2. </span>Kubernetes クラスター</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.7/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

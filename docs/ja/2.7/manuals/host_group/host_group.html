@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>1. ホストグループ機能 &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="Ansible ドライバ" href="../ansible-driver/index.html" />
+    <link rel="prev" title="ホストグループ" href="index.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/manuals/host_group/host_group.html" selected>current</option>
+              <option value="../../../../ja/2.7/manuals/host_group/host_group.html" selected>2.7(current)</option>
+              <option value="../../../../ja/2.6/manuals/host_group/host_group.html">2.6</option>
+              <option value="../../../../ja/2.5/manuals/host_group/host_group.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/host_group/host_group.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/host_group/host_group.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/host_group/host_group.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/host_group/host_group.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/host_group/host_group.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/manuals/host_group/host_group.html" selected>日本語</option>
+              <option value="../../../../en/2.7/manuals/host_group/host_group.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="index.html" title="前のトピックへ">ホストグループ</a></li>
+        <li class="next"><a href="../ansible-driver/index.html" title="次のトピックへ">Ansible ドライバ</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../it_automation_base/index.html">基本操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">ホストグループ</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. ホストグループ機能</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1.1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">1.2. ホストグループの概要と利点</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id4">1.2.1. ホストグループの概要</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id5">1.2.2. ホストグループの利点</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">1.3. ホストグループ機能の主要機能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">1.4. ホストグループ機能のメニューグループ</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id9">1.4.1. メニューグループ「ホストグループ管理」について</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#hostunit-setting">1.5. ホストグループからホスト単位へのレコード分割と各作業について</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#hostgroup-workflows-image">1.5.1. 作業内容とレコードのイメージ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#hostgroup-workflows-details">1.5.2. 作業内容の詳細について</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible-driver/index.html">Ansible ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform_driver/index.html">Terraform ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import/index.html">エクスポート・インポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cicd_for_iac/index.html">CI/CD for IaC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintenance/index.html">メンテナンス</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">1. ホストグループ機能</a><ul>
+<li><a class="reference internal" href="#id2">1.1. はじめに</a></li>
+<li><a class="reference internal" href="#id3">1.2. ホストグループの概要と利点</a><ul>
+<li><a class="reference internal" href="#id4">1.2.1. ホストグループの概要</a></li>
+<li><a class="reference internal" href="#id5">1.2.2. ホストグループの利点</a><ul>
+<li><a class="reference internal" href="#id6">1.2.2.1. ホストグループ間のパラメータの継承</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7">1.3. ホストグループ機能の主要機能</a></li>
+<li><a class="reference internal" href="#id8">1.4. ホストグループ機能のメニューグループ</a><ul>
+<li><a class="reference internal" href="#id9">1.4.1. メニューグループ「ホストグループ管理」について</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#hostunit-setting">1.5. ホストグループからホスト単位へのレコード分割と各作業について</a><ul>
+<li><a class="reference internal" href="#hostgroup-workflows-image">1.5.1. 作業内容とレコードのイメージ</a></li>
+<li><a class="reference internal" href="#hostgroup-workflows-details">1.5.2. 作業内容の詳細について</a><ul>
+<li><a class="reference internal" href="#para-create">1.5.2.1. パラメータシート作成</a></li>
+<li><a class="reference internal" href="#hostgroup-register">1.5.2.2. ホストグループの登録</a></li>
+<li><a class="reference internal" href="#hostgroup-definition">1.5.2.3. ホストグループ親子関係の定義</a></li>
+<li><a class="reference internal" href="#host-tie">1.5.2.4. ホストグループとオペレーションと作業対象ホストの紐付け</a></li>
+<li><a class="reference internal" href="#para-register">1.5.2.5. パラメータシートへの登録</a></li>
+<li><a class="reference internal" href="#hosted">1.5.2.6. ホスト化</a></li>
+<li><a class="reference internal" href="#setvalue-tie">1.5.2.7. オペレーションと作業対象ホストごとの項目の設定値を紐付け</a></li>
+<li><a class="reference internal" href="#host-reflection">1.5.2.8. オペレーションに紐付く作業対象ホストの反映</a></li>
+<li><a class="reference internal" href="#value-reflect">1.5.2.9. 代入値の反映</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">ホストグループ</a></li>
+    
+    <li><span class="section-number">1. </span>ホストグループ機能</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="host-group">
+<span id="id1"></span><h1><span class="section-number">1. </span>ホストグループ機能<a class="headerlink" href="#host-group" title="Link to this heading">¶</a></h1>
+<section id="id2">
+<h2><span class="section-number">1.1. </span>はじめに<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書は、Exastro IT Automationのホストグループの機能および操作方法について説明します。</div>
+</div>
+</section>
+<section id="id3">
+<h2><span class="section-number">1.2. </span>ホストグループの概要と利点<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<section id="id4">
+<h3><span class="section-number">1.2.1. </span>ホストグループの概要<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">ホストグループとは、ホスト群を論理的な単位（機能・役割）でまとめたグループのことを指します。</div>
+<div class="line">ホストグループの概念図は下のようになります。</div>
+</div>
+<figure class="align-left" id="id23">
+<a class="reference internal image-reference" href="../../_images/overview_base.drawio.png"><img alt="ホストグループ概要図" src="../../_images/overview_base.drawio.png" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.80 </span><span class="caption-text">ホストグループ概要図</span><a class="headerlink" href="#id23" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">上図は、以下の要素で構成されています。</div>
+</div>
+<div class="line-block">
+<div class="line">■ホストグループ</div>
+<div class="line">図中の単線枠の四角形で記載しています。all、dc1、dc3、zabbix1、zabbix3が該当します。</div>
+</div>
+<div class="line-block">
+<div class="line">■作業対象ホスト</div>
+<div class="line">対象の機器を示すホスト。</div>
+<div class="line">図中の丸角の四角形で記載。host11、host12、host31、host32が該当します。</div>
+</div>
+<div class="line-block">
+<div class="line">上位のホストグループを親ホストグループ、下位のホストグループを子ホストグループと呼び、それらは親子関係にあります。</div>
+<div class="line">更に下位となる末端のホストグループは作業対象ホストと紐付きます。</div>
+<div class="line">上図の例では、dc1から見た子ホストグループはzabbix1となり、zabbix1から見た親ホストグループはdc1となります。</div>
+</div>
+<div class="line-block">
+<div class="line">階層の数え方はホストグループ1つで1階層、1組の親子で2階層となり、頂点となるホストグループから末端のホストグループまでは最大15階層まで定義できます。</div>
+<div class="line">上図の例では、allからzabbix1まで辿ると3階層となります。</div>
+</div>
+</section>
+<section id="id5">
+<h3><span class="section-number">1.2.2. </span>ホストグループの利点<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<section id="id6">
+<h4><span class="section-number">1.2.2.1. </span>ホストグループ間のパラメータの継承<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">親ホストグループに設定したパラメータは子ホストグループに継承されます。</div>
+</div>
+<div class="line-block">
+<div class="line">下図の例では、dc1に設定したパラメータ（例えばユーザのパスワードなど）がzabbix1にも同じパラメータの設定が継承されます。</div>
+<div class="line">ただし、具体値がない場合は継承されません。</div>
+</div>
+<figure class="align-left" id="id24">
+<a class="reference internal image-reference" href="../../_images/overview_inheritance_1.drawio.png"><img alt="ホストグループ概要図(ホストグループ間のパラメータの継承1)" src="../../_images/overview_inheritance_1.drawio.png" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.81 </span><span class="caption-text">ホストグループ概要図(ホストグループ間のパラメータの継承1)</span><a class="headerlink" href="#id24" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">このように設定箇所を局所化することで、設定の付与/変更作業の簡略化ができます。</div>
+</div>
+<div class="line-block">
+<div class="line">子ホストグループを追加した場合にもパラメータの設定は自動で継承されます。</div>
+<div class="line">下図の例では、zabbixサーバを1台追加した際に、zabbix12をzabbix1に紐付けています。</div>
+<div class="line">これにより、zabbix12には、zabbix11と同じように、zabbix1の設定が継承されます。</div>
+</div>
+<figure class="align-left" id="id25">
+<a class="reference internal image-reference" href="../../_images/overview_inheritance_2.drawio.png"><img alt="ホストグループ概要図(ホストグループ間のパラメータの継承2)" src="../../_images/overview_inheritance_2.drawio.png" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.82 </span><span class="caption-text">ホストグループ概要図(ホストグループ間のパラメータの継承2)</span><a class="headerlink" href="#id25" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">子ホストグループは複数の親ホストグループに紐付けることができ、親ホストグループが複数ある場合のパラメータの継承について説明します。</div>
+<div class="line">下図の例では、zabbix11、zabbix12はzabbix1とvirtualserverに属しています。</div>
+</div>
+<figure class="align-left" id="id26">
+<a class="reference internal image-reference" href="../../_images/overview_inheritance_3.drawio.png"><img alt="ホストグループ概要図(ホストグループ間のパラメータの継承3)" src="../../_images/overview_inheritance_3.drawio.png" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.83 </span><span class="caption-text">ホストグループ概要図(ホストグループ間のパラメータの継承3)</span><a class="headerlink" href="#id26" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">ホストグループ間でパラメータが重複していた場合は最も下位のホストグループから適用されます。</div>
+<div class="line">上図の例では、dcxとzabbix1に同じパラメータを設定していた場合に、zabbix11、zabbix12に継承されるのはdcxからではなく、下位のzabbix1のパラメータとなります。</div>
+</div>
+<div class="line-block">
+<div class="line">同じ階層でパラメータが重複していた場合は優先順位が高い親ホストグループから継承されます。</div>
+<div class="line">上図の例ではvirtualserverとzabbix1に同じパラメータを設定していた場合にvirtualserverの優先順位が1で、zabbix1の優先順位が2であれば、zabbix1の優先順位が大きいため、子ホストグループに継承されるのはzabbix1のパラメータとなります。</div>
+<div class="line">優先順位の設定方法は「<a class="reference internal" href="#hostgroup-register"><span class="std std-ref">ホストグループの登録</span></a>」で説明します。</div>
+</div>
+</section>
+</section>
+</section>
+<section id="id7">
+<h2><span class="section-number">1.3. </span>ホストグループ機能の主要機能<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">ホストグループの設定管理、および、パラメータシートのホストグループ単位のレコードをホスト単位に分割する機能です。</div>
+<div class="line"><br /></div>
+<div class="line">■以下の操作により、全パラメータシートを対象に分割処理が実行されます。</div>
+<div class="line">・ホストグループ関連メニューの各メニューで、登録/更新/廃止/復活を行う。</div>
+<div class="line-block">
+<div class="line">- <span class="menuselection">ホストグループ一覧</span></div>
+<div class="line">- <span class="menuselection">ホストグループ親子紐付</span></div>
+<div class="line">- <span class="menuselection">ホスト紐付管理</span></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">■以下の操作により、該当のパラメータシートのみを対象に分割処理が実行されます。</div>
+<div class="line">・パラメータシート（ホストグループ利用）の登録/更新/廃止/復活を行う。</div>
+<div class="line">・<span class="menuselection">パラメータシート定義・作成</span> で、ホストグループ利用選択時のパラメータシートで、作成、編集、初期化を行う。</div>
+</div>
+</section>
+<section id="id8">
+<h2><span class="section-number">1.4. </span>ホストグループ機能のメニューグループ<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><span class="menuselection">ホストグループ機能</span> のメニューグループと、それに所属するメニューは以下となります。</div>
+</div>
+<table class="docutils align-left" id="id27">
+<caption><span class="caption-number">表 1.112 </span><span class="caption-text">ホストグループ機能</span><a class="headerlink" href="#id27" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">No</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">メニューグループ</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">メニュー・画面</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">説明</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">1</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ホストグループ管理</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ホストグループ一覧</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ホストグループの登録を行います。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">2</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ホストグループ管理</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ホストグループ親子紐付</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ホストグループ親子関係の紐付を行います。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">3</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ホストグループ管理</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ホスト紐付管理</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ホストグループとオペレーションと作業対象ホストの紐付けを行います。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">4</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ホストグループ管理</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ホストグループ分割対象</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ホストグループ単位からホスト単位へ分割する対象パラメータシートの情報、分割処理の状態を管理します。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<section id="id9">
+<h3><span class="section-number">1.4.1. </span>メニューグループ「ホストグループ管理」について<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line"><span class="menuselection">ホストグループ一覧</span> 、<span class="menuselection">ホストグループ親子紐付</span> 、<span class="menuselection">ホスト紐付管理</span> は、ホストグループを登録し、どのオペレーションでどのホストを作業対象とするかを定義するために必要なメニューとなります。</div>
+<div class="line">操作の詳細は「<a class="reference internal" href="#hostunit-setting"><span class="std std-ref">ホストグループからホスト単位へのレコード分割と各作業について</span></a> 」で説明します。</div>
+</div>
+</section>
+</section>
+<section id="hostunit-setting">
+<span id="id10"></span><h2><span class="section-number">1.5. </span>ホストグループからホスト単位へのレコード分割と各作業について<a class="headerlink" href="#hostunit-setting" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">各メニューを使用して、ホストグループを登録し、ホスト単位の情報を作業実行へ設定するフローは以下、表のようになります。</div>
+<div class="line">作業の詳細は各段落で説明します。</div>
+</div>
+<span id="hostgroup-workflows"></span><table class="docutils align-left" id="id11">
+<caption><span class="caption-number">表 1.113 </span><span class="caption-text">各作業の作業内容と対象メニュー</span><a class="headerlink" href="#id11" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 20.0%" />
+<col style="width: 10.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>作業内容</p></th>
+<th class="head"><p>ユーザ操作</p></th>
+<th class="head"><p>使用するメニューグループ</p></th>
+<th class="head"><p>使用するメニュー</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><a class="reference internal" href="#para-create"><span class="std std-ref">パラメータシート作成</span></a></p></td>
+<td><p>あり</p></td>
+<td><p>パラメータシート作成</p></td>
+<td><div class="line-block">
+<div class="line">パラメータシート定義・作成</div>
+</div>
+</td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><a class="reference internal" href="#hostgroup-register"><span class="std std-ref">ホストグループの登録</span></a></p></td>
+<td><p>あり</p></td>
+<td><p>ホストグループ管理</p></td>
+<td><p>ホストグループ一覧</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><a class="reference internal" href="#hostgroup-definition"><span class="std std-ref">ホストグループ親子関係の定義</span></a></p></td>
+<td><p>あり</p></td>
+<td><p>ホストグループ管理</p></td>
+<td><p>ホストグループ親子紐付</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p><a class="reference internal" href="#host-tie"><span class="std std-ref">ホストグループとオペレーションと作業対象ホストの紐付け</span></a></p></td>
+<td><p>あり</p></td>
+<td><p>ホストグループ管理</p></td>
+<td><p>ホスト紐付管理</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p><a class="reference internal" href="#para-register"><span class="std std-ref">パラメータシートへの登録</span></a></p></td>
+<td><p>あり</p></td>
+<td><p>※2</p></td>
+<td><p>「<a class="reference internal" href="#para-create"><span class="std std-ref">パラメータシート作成</span></a>」で作成したメニュー</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p><a class="reference internal" href="#hosted"><span class="std std-ref">ホスト化</span></a></p></td>
+<td><div class="line-block">
+<div class="line">なし</div>
+<div class="line">※1</div>
+</div>
+</td>
+<td><p>※2</p></td>
+<td><p>「<a class="reference internal" href="#para-create"><span class="std std-ref">パラメータシート作成</span></a>」で作成したメニュー</p></td>
+<td><p>手動での登録/更新不可。</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p><a class="reference internal" href="#setvalue-tie"><span class="std std-ref">オペレーションと作業対象ホストごとの項目の設定値を紐付け</span></a></p></td>
+<td><p>あり</p></td>
+<td><p>※2</p></td>
+<td><p>代入値自動登録設定</p></td>
+<td><div class="line-block">
+<div class="line">代入値自動登録設定については、以下を参照してください。</div>
+<div class="line">「<a class="reference internal" href="../create_param/menu_creation.html"><span class="doc">パラメータシート作成機能</span></a>」</div>
+<div class="line">「<a class="reference internal" href="../ansible-driver/index.html"><span class="doc">Ansible ドライバ</span></a>」</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p><a class="reference internal" href="#host-reflection"><span class="std std-ref">オペレーションに紐付く作業対象ホストの反映</span></a></p></td>
+<td><div class="line-block">
+<div class="line">なし</div>
+<div class="line">※1</div>
+</div>
+</td>
+<td><p>※3</p></td>
+<td><p>作業対象ホスト</p></td>
+<td><div class="line-block">
+<div class="line">作業対象ホストについては、以下を参照してください。</div>
+<div class="line">「<a class="reference internal" href="../ansible-driver/index.html"><span class="doc">Ansible ドライバ</span></a>」</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p><a class="reference internal" href="#value-reflect"><span class="std std-ref">代入値の反映</span></a></p></td>
+<td><div class="line-block">
+<div class="line">なし</div>
+<div class="line">※1</div>
+</div>
+</td>
+<td><p>※3</p></td>
+<td><p>代入値管理</p></td>
+<td><div class="line-block">
+<div class="line">代入値管理については以下を参照してください。</div>
+<div class="line">「<a class="reference internal" href="../ansible-driver/index.html"><span class="doc">Ansible ドライバ</span></a>」</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">※1 内部の処理で実行するのでユーザ操作は不要です。処理結果はメニュー画面で確認可能です。</div>
+<div class="line">※2 <span class="menuselection">パラメータシート定義・作成</span> で作成先に指定したメニューグループになります。</div>
+<div class="line">※3 <span class="menuselection">代入値自動登録設定</span> が行えるメニューグループです。各作業により、レコードのイメージは以下 <a class="reference internal" href="#hostgroup-workflows-image"><span class="std std-ref">作業内容とレコードのイメージ</span></a> を参照してください。</div>
+</div>
+</div>
+<section id="hostgroup-workflows-image">
+<span id="id12"></span><h3><span class="section-number">1.5.1. </span>作業内容とレコードのイメージ<a class="headerlink" href="#hostgroup-workflows-image" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="#hostgroup-workflows"><span class="std std-ref">各作業の作業内容と対象メニュー</span></a> のNoの作業内容の各メニューのレコードイメージです。</div>
+<div class="line">作業内容の詳細は <a class="reference internal" href="#hostgroup-workflows-details"><span class="std std-ref">作業内容の詳細について</span></a> を参照してください。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><a class="reference internal" href="#para-create"><span class="std std-ref">パラメータシート作成</span></a></div>
+</div>
+<table class="docutils align-left">
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">作業対象ホスト</div>
+<div class="line">or</div>
+<div class="line">ホストグループ</div>
+</div>
+</th>
+<th class="head"><p>オペレーション</p></th>
+<th class="head"><p>項目1</p></th>
+<th class="head"><p>項目2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>_</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>_</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference internal" href="#hostgroup-register"><span class="std std-ref">ホストグループの登録</span></a></div>
+</div>
+<table class="docutils align-left">
+<thead>
+<tr class="row-odd"><th class="head"><p>ホストグループ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>HG_1</p></td>
+</tr>
+<tr class="row-odd"><td><p>HG_2</p></td>
+</tr>
+<tr class="row-even"><td><p>hg_1a</p></td>
+</tr>
+<tr class="row-odd"><td><p>hg_1b</p></td>
+</tr>
+<tr class="row-even"><td><p>hg_2a</p></td>
+</tr>
+<tr class="row-odd"><td><p>hg_2b</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference internal" href="#hostgroup-definition"><span class="std std-ref">ホストグループ親子関係の定義</span></a></div>
+</div>
+<table class="docutils align-left">
+<thead>
+<tr class="row-odd"><th class="head"><p>親ホストグループ</p></th>
+<th class="head"><p>子ホストグループ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>HG_1</p></td>
+<td><p>hg_1a</p></td>
+</tr>
+<tr class="row-odd"><td><p>HG_1</p></td>
+<td><p>hg_1b</p></td>
+</tr>
+<tr class="row-even"><td><p>HG_2</p></td>
+<td><p>hg_2a</p></td>
+</tr>
+<tr class="row-odd"><td><p>HG_2</p></td>
+<td><p>hg_2b</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference internal" href="#host-tie"><span class="std std-ref">ホストグループとオペレーションと作業対象ホストの紐付け</span></a></div>
+</div>
+<table class="docutils align-left">
+<thead>
+<tr class="row-odd"><th class="head"><p>ホストグループ</p></th>
+<th class="head"><p>オペレーション</p></th>
+<th class="head"><p>作業対象ホスト</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>hg_1a</p></td>
+<td><p>OP1</p></td>
+<td><p>host_1a</p></td>
+</tr>
+<tr class="row-odd"><td><p>hg_1b</p></td>
+<td><p>OP1</p></td>
+<td><p>host_1b</p></td>
+</tr>
+<tr class="row-even"><td><p>hg_2a</p></td>
+<td><p>OP1</p></td>
+<td><p>host_2a</p></td>
+</tr>
+<tr class="row-odd"><td><p>hg_2b</p></td>
+<td><p>OP1</p></td>
+<td><p>host_2b</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference internal" href="#para-register"><span class="std std-ref">パラメータシートへの登録</span></a></div>
+</div>
+<table class="docutils align-left">
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">作業対象ホスト</div>
+<div class="line">or</div>
+<div class="line">ホストグループ</div>
+</div>
+</th>
+<th class="head"><p>オペレーション</p></th>
+<th class="head"><p>項目1</p></th>
+<th class="head"><p>項目2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>HG_1</p></td>
+<td><p>2023/01/01 00:00_OP1</p></td>
+<td><p>111</p></td>
+<td><p>AAA</p></td>
+</tr>
+<tr class="row-odd"><td><p>HG_2</p></td>
+<td><p>2023/01/01 00:00_OP1</p></td>
+<td><p>ー</p></td>
+<td><p>BBB</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference internal" href="#hosted"><span class="std std-ref">ホスト化</span></a></div>
+</div>
+<table class="docutils align-left">
+<thead>
+<tr class="row-odd"><th class="head"><p>作業対象ホスト</p></th>
+<th class="head"><p>オペレーション</p></th>
+<th class="head"><p>実施予定</p></th>
+<th class="head"><p>項目1</p></th>
+<th class="head"><p>項目2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>host_1a</p></td>
+<td><p>OP1</p></td>
+<td><p>2023/01/01 00:00:00</p></td>
+<td><p>111</p></td>
+<td><p>AAA</p></td>
+</tr>
+<tr class="row-odd"><td><p>host_1b</p></td>
+<td><p>OP1</p></td>
+<td><p>2023/01/01 00:00:00</p></td>
+<td><p>111</p></td>
+<td><p>AAA</p></td>
+</tr>
+<tr class="row-even"><td><p>host_2a</p></td>
+<td><p>OP1</p></td>
+<td><p>2023/01/01 00:00:00</p></td>
+<td><p>ー</p></td>
+<td><p>BBB</p></td>
+</tr>
+<tr class="row-odd"><td><p>host_2b</p></td>
+<td><p>OP1</p></td>
+<td><p>2023/01/01 00:00:00</p></td>
+<td><p>ー</p></td>
+<td><p>BBB</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference internal" href="#setvalue-tie"><span class="std std-ref">オペレーションと作業対象ホストごとの項目の設定値を紐付け</span></a></div>
+</div>
+<table class="docutils align-left">
+<thead>
+<tr class="row-odd"><th class="head"><p>メニューグループ:メニュー名:項目名</p></th>
+<th class="head"><p>Movement</p></th>
+<th class="head"><p>変数名</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>代入値自動登録用:HGパラメータ管理:項目1</p></td>
+<td><p>Movement1</p></td>
+<td><p>VAR_変数_1</p></td>
+</tr>
+<tr class="row-odd"><td><p>代入値自動登録用:HGパラメータ管理:項目2</p></td>
+<td><p>Movement2</p></td>
+<td><p>VAR_変数_2</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference internal" href="#host-reflection"><span class="std std-ref">オペレーションに紐付く作業対象ホストの反映</span></a></div>
+</div>
+<table class="docutils align-left">
+<thead>
+<tr class="row-odd"><th class="head"><p>オペレーション</p></th>
+<th class="head"><p>Movement</p></th>
+<th class="head"><p>作業対象ホスト</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>OP1</p></td>
+<td><p>Movement1</p></td>
+<td><p>host_1a</p></td>
+</tr>
+<tr class="row-odd"><td><p>OP1</p></td>
+<td><p>Movement1</p></td>
+<td><p>host_1b</p></td>
+</tr>
+<tr class="row-even"><td><p>OP1</p></td>
+<td><p>Movement2</p></td>
+<td><p>host_1a</p></td>
+</tr>
+<tr class="row-odd"><td><p>OP1</p></td>
+<td><p>Movement2</p></td>
+<td><p>host_1b</p></td>
+</tr>
+<tr class="row-even"><td><p>OP1</p></td>
+<td><p>Movement2</p></td>
+<td><p>host_2a</p></td>
+</tr>
+<tr class="row-odd"><td><p>OP1</p></td>
+<td><p>Movement2</p></td>
+<td><p>host_2b</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference internal" href="#value-reflect"><span class="std std-ref">代入値の反映</span></a></div>
+</div>
+<table class="docutils align-left">
+<thead>
+<tr class="row-odd"><th class="head"><p>オペレーション</p></th>
+<th class="head"><p>Movement</p></th>
+<th class="head"><p>作業対象 ホスト</p></th>
+<th class="head"><p>変数名</p></th>
+<th class="head"><p>具体値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2023/01/01 00:00_OP1</p></td>
+<td><p>Movement1</p></td>
+<td><p>host_1a</p></td>
+<td><p>VAR_変数 1</p></td>
+<td><p>111</p></td>
+</tr>
+<tr class="row-odd"><td><p>2023/01/01 00:00_OP1</p></td>
+<td><p>Movement1</p></td>
+<td><p>host_1b</p></td>
+<td><p>VAR_変数 1</p></td>
+<td><p>111</p></td>
+</tr>
+<tr class="row-even"><td><p>2023/01/01 00:00_OP1</p></td>
+<td><p>Movement2</p></td>
+<td><p>host_1a</p></td>
+<td><p>VAR_変数 2</p></td>
+<td><p>AAA</p></td>
+</tr>
+<tr class="row-odd"><td><p>2023/01/01 00:00_OP1</p></td>
+<td><p>Movement2</p></td>
+<td><p>host_1b</p></td>
+<td><p>VAR_変数 2</p></td>
+<td><p>AAA</p></td>
+</tr>
+<tr class="row-even"><td><p>2023/01/01 00:00_OP1</p></td>
+<td><p>Movement2</p></td>
+<td><p>host_2a</p></td>
+<td><p>VAR_変数 2</p></td>
+<td><p>BBB</p></td>
+</tr>
+<tr class="row-odd"><td><p>2023/01/01 00:00_OP1</p></td>
+<td><p>Movement2</p></td>
+<td><p>host_2b</p></td>
+<td><p>VAR_変数 2</p></td>
+<td><p>BBB</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</section>
+<section id="hostgroup-workflows-details">
+<span id="id13"></span><h3><span class="section-number">1.5.2. </span>作業内容の詳細について<a class="headerlink" href="#hostgroup-workflows-details" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line-block">
+<div class="line"><a class="reference internal" href="#hostgroup-workflows"><span class="std std-ref">各作業の作業内容と対象メニュー</span></a> に基づき、の作業内容の詳細ついて説明します。</div>
+</div>
+<div class="line">作業内容のレコードイメージは <a class="reference internal" href="#hostgroup-workflows-image"><span class="std std-ref">作業内容とレコードのイメージ</span></a> を参照してください。</div>
+</div>
+<section id="para-create">
+<span id="id14"></span><h4><span class="section-number">1.5.2.1. </span>パラメータシート作成<a class="headerlink" href="#para-create" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">パラメータシート作成機能を利用してパラメータシートメニューを作成します。</div>
+<div class="line">パラメータシート作成機能の詳細については「<a class="reference internal" href="../create_param/menu_creation.html"><span class="doc">パラメータシート作成機能</span></a>」を参照してください。</div>
+</div>
+</section>
+<section id="hostgroup-register">
+<span id="id15"></span><h4><span class="section-number">1.5.2.2. </span>ホストグループの登録<a class="headerlink" href="#hostgroup-register" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line"><span class="menuselection">ホストグループ一覧</span> メニューを使用してホストグループを登録します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/hostgroup_management_register.png"><img alt="ホストグループの登録" src="../../_images/hostgroup_management_register.png" style="width: 6.4939in; height: 4.56706in;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id28">
+<caption><span class="caption-number">表 1.114 </span><span class="caption-text">ホストグループ一覧の登録</span><a class="headerlink" href="#id28" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">項目</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">説明</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力必須</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力形式</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">制約事項</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ホストグループ名</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ホストグループの名称を入力します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">○</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">最大長255バイトです。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">優先順位</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">優先順位を入力します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">入力範囲は0～2,147,483,647です。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">優先順位を入力しない場合、同一階層のホストグループが複数ある場合、優先されるホストグループの順序は、ランダムになります。</div>
+</div>
+</div>
+</section>
+<section id="hostgroup-definition">
+<span id="id16"></span><h4><span class="section-number">1.5.2.3. </span>ホストグループ親子関係の定義<a class="headerlink" href="#hostgroup-definition" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line"><span class="menuselection">ホストグループ親子紐付</span> メニューを使用してホストグループの親子関係を定義します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/hostgroup_parent_child_link_list_register.png"><img alt="ホストグループ親子紐付" src="../../_images/hostgroup_parent_child_link_list_register.png" style="width: 6.33388in; height: 4.82042in;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id29">
+<caption><span class="caption-number">表 1.115 </span><span class="caption-text">ホストグループ親子紐付の登録</span><a class="headerlink" href="#id29" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">項目</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">説明</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力必須</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力形式</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">制約事項</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">親ホストグループ</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">親となるホストグループ名を選択します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">○</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">リスト選択</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">子ホストグループ</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ホストグループに紐付く子ホストグループ名を選択します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">○</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">リスト選択</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">親子関係がループしているホストグループがあれば、登録、更新時にエラーが表示されます。</div>
+<div class="line">下記の例では、「HG1（親）とHG2(子)」と「HG2（親）とHG3(子)」の親子関係が既に定義されているにも関わらず、更に「HG3（親）とHG1(子)」という逆の親子関係を定義しており、親子関係がループとなっています。</div>
+</div>
+</div>
+<figure class="align-default" id="id30">
+<a class="reference internal image-reference" href="../../_images/hostgroup_parent_child_link_list_error_loop.png"><img alt="一覧/更新：エラー（親子関係がループ）" src="../../_images/hostgroup_parent_child_link_list_error_loop.png" style="width: 5.22863in; height: 0.99251in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1.84 </span><span class="caption-text">一覧/更新：エラー（親子関係がループ）</span><a class="headerlink" href="#id30" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="host-tie">
+<span id="id17"></span><h4><span class="section-number">1.5.2.4. </span>ホストグループとオペレーションと作業対象ホストの紐付け<a class="headerlink" href="#host-tie" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line"><span class="menuselection">ホスト紐付管理</span> メニューを使用してホストグループとオペレーションに紐付く作業対象ホストを登録します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/host_link_list_register.png"><img alt="ホストグループ管理" src="../../_images/host_link_list_register.png" style="width: 5.92051in; height: 4.22037in;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id31">
+<caption><span class="caption-number">表 1.116 </span><span class="caption-text">ホスト紐付管理</span><a class="headerlink" href="#id31" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">項目</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">説明</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力必須</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力形式</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">制約事項</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ホストグループ名</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ホストグループを選択します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">○</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">リスト選択</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">オペレーション</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">オペレーションを選択します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">リスト選択</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">※1</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ホスト名</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">作業対象ホストを選択します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">○</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">リスト選択</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">※1  <span class="menuselection">ホスト紐付管理</span> では、 <span class="menuselection">オペレーション</span> は空登録も可能です。空登録した場合は、すべてのオペレーションで紐付が有効になります。</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">ホストグループとオペレーションと作業対象ホストを紐付けることで、下図のように、ホストグループ内で作業対象ホストの選択操作が可能となります。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">例1</div>
+<div class="line">ホストグループに所属する全てのホストを作業対象ホストとしたい場合</div>
+</div>
+</li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ホストグループ_作業対象ホスト1.png"><img alt="作業対象ホスト" src="../../_images/%E3%83%9B%E3%82%B9%E3%83%88%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97_%E4%BD%9C%E6%A5%AD%E5%AF%BE%E8%B1%A1%E3%83%9B%E3%82%B9%E3%83%881.png" style="width: 4.72721in; height: 4.6604in;" />
+</a>
+</figure>
+<ul>
+<li><div class="line-block">
+<div class="line">例2</div>
+<div class="line">一部のホストを作業対象ホストとしたい場合</div>
+</div>
+</li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ホストグループ_作業対象ホスト2.png"><img alt="作業対象ホスト" src="../../_images/%E3%83%9B%E3%82%B9%E3%83%88%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97_%E4%BD%9C%E6%A5%AD%E5%AF%BE%E8%B1%A1%E3%83%9B%E3%82%B9%E3%83%882.png" style="width: 4.72721in; height: 4.6604in;" />
+</a>
+</figure>
+<ul>
+<li><div class="line-block">
+<div class="line">例3</div>
+<div class="line">例２のパターンの組み合わせ</div>
+</div>
+</li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ホストグループ_作業対象ホスト3.png"><img alt="作業対象ホスト" src="../../_images/%E3%83%9B%E3%82%B9%E3%83%88%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97_%E4%BD%9C%E6%A5%AD%E5%AF%BE%E8%B1%A1%E3%83%9B%E3%82%B9%E3%83%883.png" style="width: 4.72721in; height: 4.6604in;" />
+</a>
+</figure>
+<ul>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">ホスト紐付管理</span> のオペレーション設定例</div>
+</div>
+</li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/hostgroup_parent_child_link_list_ex1.png"><img alt="ホストグループ親子紐付（例1）" src="../../_images/hostgroup_parent_child_link_list_ex1.png" style="width: 6.22721in; height: 4.6604in;" />
+</a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/host_link_list_ex1.png"><img alt="ホスト紐付管理（例1）" src="../../_images/host_link_list_ex1.png" style="width: 6.29388in; height: 2.78024in;" />
+</a>
+</figure>
+<div class="line-block">
+<div class="line">上記の例ではオペレーションを空登録したホストグループzabbix1、zabbix2の紐付はすべてのオペレーションで有効になります。</div>
+<div class="line">一方、オペレーション登録したホストグループzabbix3は、登録したオペレーション「OP10」でのみ有効となります。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">オペレーション「OP10」でのホストグループ紐付</div>
+</div>
+</li>
+</ul>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/overview_inheritance_ex1_op1.drawio.png"><img alt="オペレーション「OP1」でのホストグループ紐付" src="../../_images/overview_inheritance_ex1_op1.drawio.png" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+</figure>
+<ul>
+<li><div class="line-block">
+<div class="line">オペレーション「OP10」以外でのホストグループ紐付</div>
+</div>
+</li>
+</ul>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/overview_inheritance_ex1_op10.drawio.png"><img alt="オペレーション「OP1」以外でのホストグループ紐付" src="../../_images/overview_inheritance_ex1_op10.drawio.png" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+</figure>
+</section>
+<section id="para-register">
+<span id="id18"></span><h4><span class="section-number">1.5.2.5. </span>パラメータシートへの登録<a class="headerlink" href="#para-register" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">「 <a class="reference internal" href="#para-create"><span class="std std-ref">パラメータシート作成</span></a>」で作成したホストグループ用のパラメータシートメニューで、作業対象ホストまたはホストグループがもつ項目に、オペレーションごとの具体値を登録します。</div>
+<div class="line">登録後は参照/更新/廃止/復活が可能です。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/parameter_sheet_as_hostgroup_register.png"><img alt="パラメータシート(ホストグループ利用)" src="../../_images/parameter_sheet_as_hostgroup_register.png" style="width: 5.36046in; height: 4.67374in;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id32">
+<caption><span class="caption-number">表 1.117 </span><span class="caption-text">パラメータシート(ホストグループ利用)</span><a class="headerlink" href="#id32" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><div class="line-block">
+<div class="line">項目</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">説明</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力必須</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">入力形式</div>
+</div>
+</th>
+<th class="head"><div class="line-block">
+<div class="line">制約事項</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">ホスト名</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">作業対象ホストまたはホストグループを選択します。</div>
+<div class="line">接頭辞[H]が作業対象ホスト、[HG]がホストグループです。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">○</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">リスト選択</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">オペレーション名</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">オペレーションを選択します。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">○</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">リスト選択</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">基準日時</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">基準日時が表示されます。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">-</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">-</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">選択されたオペレーションの基準日時が表示されます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">実施予定日</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">実施予定日が表示されます。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">-</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">-</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">選択されたオペレーションの実施予定日が表示されます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">最終実行日時</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">最終実行日時が表示されます。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">-</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">-</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">選択されたオペレーションのオペレーションの最終実行日時が表示されます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">パラメータシートの対象項目</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">項目の具体値を入力します。「<a class="reference internal" href="#value-reflect"><span class="std std-ref">代入値の反映</span></a>」でオペレーションとMovementおよび、</div>
+<div class="line">作業対象ホストに紐付く変数の具体値として反映されます。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">※</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">※</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">※パラメータシート作成で定義した項目名、項目の設定になります。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">「<span class="menuselection">ホスト名</span> 」と「<span class="menuselection">オペレーション</span>」の組み合わせは一意で登録します。</div>
+<div class="line">同じホストでも異なるオペレーションと組み合わせれば登録が可能です。</div>
+</div>
+</section>
+<section id="hosted">
+<span id="id19"></span><h4><span class="section-number">1.5.2.6. </span>ホスト化<a class="headerlink" href="#hosted" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line-block">
+<div class="line">「 <a class="reference internal" href="#para-register"><span class="std std-ref">パラメータシートへの登録</span></a> 」で登録した情報は、内部の処理「ホストグループ分解機能」により、オペレーション毎にまとめ、更にホストグループの紐付けに従い作業対象ホスト単位まで継承が行われます。</div>
+</div>
+<div class="line">作業対象ホスト単位に継承された情報は、「 <a class="reference internal" href="#para-create"><span class="std std-ref">パラメータシート作成</span></a>」で作成したホスト用のパラメータシートメニューで参照することができます。</div>
+<div class="line">代入値自動登録用のメニューグループに所属するメニューになります。 参照のみ可能で、登録/更新/廃止/復活は不可です。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/parameter_sheet_as_hg_subst_filter_0.png"><img alt="ホスト化(代入値自動登録用メニュー)" src="../../_images/parameter_sheet_as_hg_subst_filter_0.png" style="width: 6.45389in; height: 4.55373in;" />
+</a>
+</figure>
+<div class="line-block">
+<div class="line">ホスト化の流れの例を以下で説明します。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">パラメータシートメニューへ登録した項目は以下とします。</div>
+<div class="line">（「 <a class="reference internal" href="#para-register"><span class="std std-ref">パラメータシートへの登録</span></a> 」で登録する情報）</div>
+</div>
+<table class="docutils align-left" id="id33">
+<caption><span class="caption-number">表 1.118 </span><span class="caption-text">「 <a class="reference internal" href="#para-register"><span class="std std-ref">パラメータシートへの登録</span></a>」で登録する情報</span><a class="headerlink" href="#id33" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>作業対象ホストorホストグループ</p></th>
+<th class="head"><p>オペレーション</p></th>
+<th class="head"><p>項目1</p></th>
+<th class="head"><p>項目2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>HG_1</p></td>
+<td><p>2023/01/01_00:00_OP1</p></td>
+<td><p>111</p></td>
+<td><p>AAA</p></td>
+</tr>
+<tr class="row-odd"><td><p>HG_2</p></td>
+<td><p>2023/01/01_00:00_OP1</p></td>
+<td><p>ー</p></td>
+<td><p>BBB</p></td>
+</tr>
+<tr class="row-even"><td><p>host_1a</p></td>
+<td><p>2023/01/01_00:00_OP1</p></td>
+<td><p>222</p></td>
+<td><p>ー</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">ホストグループの親子関係は以下とします。</div>
+<div class="line">（「<a class="reference internal" href="#hostgroup-definition"><span class="std std-ref">ホストグループ親子関係の定義</span></a>」で登録する情報）</div>
+</div>
+<table class="docutils align-left" id="id34">
+<caption><span class="caption-number">表 1.119 </span><span class="caption-text">ホストグループの親子関係</span><a class="headerlink" href="#id34" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>親ホストグループ</p></th>
+<th class="head"><p>子ホストグループ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>HG_1</p></td>
+<td><p>hg_1a</p></td>
+</tr>
+<tr class="row-odd"><td><p>HG_1</p></td>
+<td><p>hg_1b</p></td>
+</tr>
+<tr class="row-even"><td><p>HG_2</p></td>
+<td><p>hg_2a</p></td>
+</tr>
+<tr class="row-odd"><td><p>HG_2</p></td>
+<td><p>hg_2b</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line"><span class="menuselection">ホストグループ</span> 、<span class="menuselection">オペレーション</span> 、<span class="menuselection">作業対象ホスト</span> の紐付情報は以下とします。</div>
+<div class="line">（「<a class="reference internal" href="#host-tie"><span class="std std-ref">ホストグループとオペレーションと作業対象ホストの紐付け</span></a>」で登録する情報）</div>
+</div>
+<table class="docutils align-left" id="id35">
+<caption><span class="caption-number">表 1.120 </span><span class="caption-text">作業対象ホストの紐付情報</span><a class="headerlink" href="#id35" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ホストグループ</p></th>
+<th class="head"><p>オペレーション</p></th>
+<th class="head"><p>作業対象ホスト</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>hg_1a</p></td>
+<td><p>2023/01/01_00:00_OP1</p></td>
+<td><p>host_1a</p></td>
+</tr>
+<tr class="row-odd"><td><p>hg_1b</p></td>
+<td><p>2023/01/01_00:00_OP1</p></td>
+<td><p>host_1b</p></td>
+</tr>
+<tr class="row-even"><td><p>hg_2a</p></td>
+<td><p>2023/01/01_00:00_OP1</p></td>
+<td><p>host_2a</p></td>
+</tr>
+<tr class="row-odd"><td><p>hg_2b</p></td>
+<td><p>2023/01/01_00:00_OP1</p></td>
+<td><p>host_2b</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">（1）～（3）に情報が登録されている状態でホスト化が行われると、レコードは以下の内容となり、ホストグループに所属している作業対象ホスト単位に情報が設定されていることがわかります。</div>
+</div>
+</li>
+</ol>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/parameter_sheet_as_hg_filter.png"><img alt="ホスト化(入力用メニュー)" src="../../_images/parameter_sheet_as_hg_filter.png" style="width: 6.45389in; height: 4.55373in;" />
+</a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/parameter_sheet_as_hg_subst_filter.png"><img alt="ホスト化(代入値自動登録用メニュー)" src="../../_images/parameter_sheet_as_hg_subst_filter.png" style="width: 6.45389in; height: 4.55373in;" />
+</a>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">ホストグループと作業対象ホストで項目を登録すると、作業対象ホストの項目が優先されます。従って、host_1aに登録した「222」が適用されています。</div>
+<div class="line">作業対象ホストの項目が優先されますが、空の場合は上位から継承されます。host1_aの項目2は空だったので、親ホストグループであるHG_1の「AAA」が継承されています。</div>
+<div class="line">host_2aとhost_2bの項目1は空になっていますが、これはHG_2の項目1が空のためです。</div>
+</div>
+</div>
+</section>
+<section id="setvalue-tie">
+<span id="id20"></span><h4><span class="section-number">1.5.2.7. </span>オペレーションと作業対象ホストごとの項目の設定値を紐付け<a class="headerlink" href="#setvalue-tie" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line-block">
+<div class="line"><span class="menuselection">代入値自動登録設定</span> メニュー画面で連携対象としたメニューと項目を、Movementの変数に紐付けます。登録/更新/廃止/復活が可能です。</div>
+</div>
+<div class="line">登録した情報は内部の処理により <span class="menuselection">代入値管理</span> 」メニュー画面と「 <span class="menuselection">作業対象ホスト</span> 」メニュー画面に反映されます。</div>
+<div class="line">詳細については、「<a class="reference internal" href="#para-create"><span class="std std-ref">パラメータシート作成</span></a>」を参照してください。</div>
+</div>
+</section>
+<section id="host-reflection">
+<span id="id21"></span><h4><span class="section-number">1.5.2.8. </span>オペレーションに紐付く作業対象ホストの反映<a class="headerlink" href="#host-reflection" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">オペレーションに関連付く作業対象ホストが自動で反映されます。</div>
+<div class="line">反映結果は「 <span class="menuselection">作業対象ホスト</span> 」メニュー画面で確認できます。</div>
+<div class="line">詳細については、「<a class="reference internal" href="#para-create"><span class="std std-ref">パラメータシート作成</span></a>」を参照してください。</div>
+</div>
+</section>
+<section id="value-reflect">
+<span id="id22"></span><h4><span class="section-number">1.5.2.9. </span>代入値の反映<a class="headerlink" href="#value-reflect" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">オペレーションごとに、対象のMovement で利用されるPlaybookやテンプレートファイル内の変数に代入する具体値が自動で反映されます。</div>
+<div class="line">ここでの具体値は「 <a class="reference internal" href="#para-register"><span class="std std-ref">パラメータシートへの登録</span></a>」で入力した具体値となります。</div>
+<div class="line">反映結果は「 <span class="menuselection">代入値管理</span> 」メニュー画面で確認できます。</div>
+<div class="line">詳細については、「<a class="reference internal" href="#para-create"><span class="std std-ref">パラメータシート作成</span></a>」を参照してください。</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span>ホストグループ</a></li>
+    <li class="next"><a href="../ansible-driver/index.html" title="次のトピックへ"><span>次のトピックへ</span>Ansible ドライバ</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.7/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

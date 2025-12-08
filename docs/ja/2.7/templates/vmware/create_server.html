@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>2. VM作成 &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="3. リソース管理" href="resource_management.html" />
+    <link rel="prev" title="1. テンプレート資材" href="template_resource.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/templates/vmware/create_server.html" selected>current</option>
+              <option value="../../../../ja/2.7/templates/vmware/create_server.html" selected>2.7(current)</option>
+              <option value="../../../../ja/2.6/templates/vmware/create_server.html">2.6</option>
+              <option value="../../../../ja/2.5/templates/vmware/create_server.html">2.5</option>
+              <option value="../../../../ja/2.4/templates/vmware/create_server.html">2.4</option>
+              <option value="../../../../ja/2.3/templates/vmware/create_server.html">2.3</option>
+              <option value="../../../../ja/2.2/templates/vmware/create_server.html">2.2</option>
+              <option value="../../../../ja/2.1/templates/vmware/create_server.html">2.1</option>
+              <option value="../../../../ja/2.0/templates/vmware/create_server.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/templates/vmware/create_server.html" selected>日本語</option>
+              <option value="../../../../en/2.7/templates/vmware/create_server.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="template_resource.html" title="前のトピックへ"><span class="section-number">1. </span>テンプレート資材</a></li>
+        <li class="next"><a href="resource_management.html" title="次のトピックへ"><span class="section-number">3. </span>リソース管理</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/index.html">マニュアル</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">テンプレート</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">VMWare</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="template_resource.html">1. テンプレート資材</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2. VM作成</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">2.1. 概要</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">2.2. メニュー項目</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#create-server">2.2.1. サーバー作成</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#vcenter">2.2.2. vCenter接続情報</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#ip">2.2.3. IPアドレス</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#foldername">2.2.4. フォルダ名</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#template">2.2.5. テンプレート</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#cpu">2.2.6. CPU</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mb">2.2.7. メモリ(MB)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#gb">2.2.8. ディスク(GB)</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">2.3. 利用手順</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id7">2.3.1. VM作成作業フロー</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="resource_management.html">3. リソース管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="server_reboot.html">4. サーバー再起動</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hosts_copy.html">5. hosts配布</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deploymentGuide/index.html">1st Model 導入ガイド 第1.0版 （ITAバージョン2.5.0版）</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">2. VM作成</a><ul>
+<li><a class="reference internal" href="#id1">2.1. 概要</a></li>
+<li><a class="reference internal" href="#id2">2.2. メニュー項目</a><ul>
+<li><a class="reference internal" href="#create-server">2.2.1. サーバー作成</a></li>
+<li><a class="reference internal" href="#vcenter">2.2.2. vCenter接続情報</a></li>
+<li><a class="reference internal" href="#ip">2.2.3. IPアドレス</a></li>
+<li><a class="reference internal" href="#foldername">2.2.4. フォルダ名</a></li>
+<li><a class="reference internal" href="#template">2.2.5. テンプレート</a></li>
+<li><a class="reference internal" href="#cpu">2.2.6. CPU</a></li>
+<li><a class="reference internal" href="#mb">2.2.7. メモリ(MB)</a></li>
+<li><a class="reference internal" href="#gb">2.2.8. ディスク(GB)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">2.3. 利用手順</a><ul>
+<li><a class="reference internal" href="#id7">2.3.1. VM作成作業フロー</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">テンプレート</a></li>
+    <li><a href="index.html">VMWare</a></li>
+    
+    <li><span class="section-number">2. </span>VM作成</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="vm">
+<h1><span class="section-number">2. </span>VM作成<a class="headerlink" href="#vm" title="Link to this heading">¶</a></h1>
+<div class="line-block">
+<div class="line">本書では、VM作成の機能および操作方法について説明します。</div>
+</div>
+<section id="id1">
+<h2><span class="section-number">2.1. </span>概要<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<p>VMWareを介してVM（仮想マシン）を作成する機能です。</p>
+</section>
+<section id="id2">
+<h2><span class="section-number">2.2. </span>メニュー項目<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<section id="create-server">
+<span id="id3"></span><h3><span class="section-number">2.2.1. </span>サーバー作成<a class="headerlink" href="#create-server" title="Link to this heading">¶</a></h3>
+<p>VM作成を行うためのメニュー項目です。</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/menuCS_v2-4.png"><img alt="サーバー作成メニュー画面" src="../../_images/menuCS_v2-4.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id8">
+<caption><span class="caption-number">表 2.103 </span><span class="caption-text">メニュー項目一覧（サーバー作成）</span><a class="headerlink" href="#id8" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>入力方法</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>vCenter表示名</p></td>
+<td><p>vCenter内に作成されるVMの表示名を指定します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>IPアドレス</p></td>
+<td><p>作成するVMに配布されるIPアドレスを指定します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>フォルダ</p></td>
+<td><p>作成するVMを格納するフォルダ名を指定します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>テンプレート</p></td>
+<td><p>作成するVMのテンプレート名を指定します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>CPU</p></td>
+<td><p>作成するVMのCPU数を指定します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>メモリ(MB)</p></td>
+<td><p>作成するVMのメモリ容量をMBで指定します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-even"><td><p>ディスク(GB)</p></td>
+<td><p>作成するVMのディスク容量をGBで指定します。</p></td>
+<td><p>〇</p></td>
+<td><p>リスト選択</p></td>
+<td><p>ー</p></td>
+</tr>
+<tr class="row-odd"><td><p>申請者</p></td>
+<td><p>VM作成の申請者を入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長32バイト</p></td>
+</tr>
+<tr class="row-even"><td><p>用途</p></td>
+<td><p>作成するVMの用途を入力します。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長128バイト</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vcenter">
+<span id="vcenter-connectinfo"></span><h3><span class="section-number">2.2.2. </span>vCenter接続情報<a class="headerlink" href="#vcenter" title="Link to this heading">¶</a></h3>
+<p>vCenterに接続する情報を入力するためのメニュー項目です。</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/menuVC_v2-4.png"><img alt="vCenter接続情報メニュー画面" src="../../_images/menuVC_v2-4.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id9">
+<caption><span class="caption-number">表 2.104 </span><span class="caption-text">メニュー項目一覧（vCenter接続情報）</span><a class="headerlink" href="#id9" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>入力方法</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>vCenterホスト名</p></td>
+<td><p>vCenterに接続するホスト名を入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+<tr class="row-odd"><td><p>ユーザー名</p></td>
+<td><p>vCenterに接続するユーザー名を入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長32バイト</p></td>
+</tr>
+<tr class="row-even"><td><p>パスワード</p></td>
+<td><p>vCenterに接続するパスワードを入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>パスワード形式</p></td>
+</tr>
+<tr class="row-odd"><td><p>vCenterクラスター名</p></td>
+<td><p>vCenterに接続するvCenterのクラスター名を入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ip">
+<span id="ip-address"></span><h3><span class="section-number">2.2.3. </span>IPアドレス<a class="headerlink" href="#ip" title="Link to this heading">¶</a></h3>
+<p>vCenter内に作成されるIPアドレスを入力するためのメニュー項目です。</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/menuIP_v2-4.png"><img alt="IPアドレスメニュー画面" src="../../_images/menuIP_v2-4.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id10">
+<caption><span class="caption-number">表 2.105 </span><span class="caption-text">メニュー項目一覧（IPアドレス）</span><a class="headerlink" href="#id10" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 12.9%" />
+<col style="width: 29.0%" />
+<col style="width: 19.4%" />
+<col style="width: 19.4%" />
+<col style="width: 19.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>入力方法</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>IPアドレス</p></td>
+<td><p>作成するVMに配布されるIPアドレスを入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+<tr class="row-odd"><td><p>サブネットマスク</p></td>
+<td><p>入力するIPアドレスに関係するサブネットマスクを入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+<tr class="row-even"><td><p>デフォルトゲートウェイ</p></td>
+<td><p>入力するIPアドレスに関係するデフォルトゲートウェイを入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+<tr class="row-odd"><td><p>DNS名①</p></td>
+<td><p>入力するIPアドレスに関係する1つ目のDNS名を入力します。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+<tr class="row-even"><td><p>DNS名②</p></td>
+<td><p>入力するIPアドレスに関係する2つ目のDNS名を入力します。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="foldername">
+<span id="id4"></span><h3><span class="section-number">2.2.4. </span>フォルダ名<a class="headerlink" href="#foldername" title="Link to this heading">¶</a></h3>
+<p>vCenter内に作成されるフォルダ名を入力するためのメニュー項目です。</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/menuFN_v2-4.png"><img alt="フォルダ名メニュー画面" src="../../_images/menuFN_v2-4.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id11">
+<caption><span class="caption-number">表 2.106 </span><span class="caption-text">メニュー項目一覧（フォルダ）</span><a class="headerlink" href="#id11" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>入力方法</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>フォルダ名</p></td>
+<td><p>作成するVMを格納するフォルダ名を入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="template">
+<span id="id5"></span><h3><span class="section-number">2.2.5. </span>テンプレート<a class="headerlink" href="#template" title="Link to this heading">¶</a></h3>
+<p>vCenter内に作成されるテンプレートを入力するためのメニュー項目です。</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/menuTE_v2-4.png"><img alt="テンプレートメニュー画面" src="../../_images/menuTE_v2-4.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id12">
+<caption><span class="caption-number">表 2.107 </span><span class="caption-text">メニュー項目一覧（テンプレート）</span><a class="headerlink" href="#id12" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>入力方法</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>テンプレート名</p></td>
+<td><p>作成するVMのテンプレート名を入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+<tr class="row-odd"><td><p>ルートディスク</p></td>
+<td><p>入力するテンプレートに関係するルートディスクを入力します。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長32バイト</p></td>
+</tr>
+<tr class="row-even"><td><p>ボリュームグループ</p></td>
+<td><p>入力するテンプレートに関係するボリュームグループを入力します。</p></td>
+<td><p>ー</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長32バイト</p></td>
+</tr>
+<tr class="row-odd"><td><p>ユーザー</p></td>
+<td><p>入力するテンプレートにログインするユーザーを入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長32バイト</p></td>
+</tr>
+<tr class="row-even"><td><p>パスワード</p></td>
+<td><p>入力するテンプレートにログインするパスワードを入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>パスワード形式</p></td>
+</tr>
+<tr class="row-odd"><td><p>ssh秘密鍵ファイル</p></td>
+<td><p>入力するテンプレートにログインするためのssh秘密鍵ファイルを指定します。</p></td>
+<td><p>ー</p></td>
+<td><p>ファイル選択</p></td>
+<td><p>最大サイズ100Mバイト</p></td>
+</tr>
+<tr class="row-even"><td><p>データストア</p></td>
+<td><p>接続するvCenter内のデータストア名を入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+<tr class="row-odd"><td><p>ネットワーク名</p></td>
+<td><p>接続するvCenter内のネットワーク名を入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長64バイト</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="cpu">
+<h3><span class="section-number">2.2.6. </span>CPU<a class="headerlink" href="#cpu" title="Link to this heading">¶</a></h3>
+<p>vCenter内に作成されるVMのCPU数を入力するためのメニュー項目です。</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/menuCPU_v2-4.png"><img alt="CPUメニュー画面" src="../../_images/menuCPU_v2-4.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id13">
+<caption><span class="caption-number">表 2.108 </span><span class="caption-text">メニュー項目一覧（CPU）</span><a class="headerlink" href="#id13" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>入力方法</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CPU</p></td>
+<td><p>作成するVMのCPU数を入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長32バイト</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mb">
+<h3><span class="section-number">2.2.7. </span>メモリ(MB)<a class="headerlink" href="#mb" title="Link to this heading">¶</a></h3>
+<p>vCenter内に作成されるVMのメモリ容量を入力するためのメニュー項目です。</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/menuME_v2-4.png"><img alt="メモリメニュー画面" src="../../_images/menuME_v2-4.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id14">
+<caption><span class="caption-number">表 2.109 </span><span class="caption-text">メニュー項目一覧（メモリ(MB)）</span><a class="headerlink" href="#id14" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>入力方法</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>メモリ(MB)</p></td>
+<td><p>作成するVMのメモリ容量をMBで入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長32バイト</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="gb">
+<h3><span class="section-number">2.2.8. </span>ディスク(GB)<a class="headerlink" href="#gb" title="Link to this heading">¶</a></h3>
+<p>vCenter内に作成されるVMのディスク容量を入力するためのメニュー項目です。</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/menuDC_v2-4.png"><img alt="ディスクメニュー画面" src="../../_images/menuDC_v2-4.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id15">
+<caption><span class="caption-number">表 2.110 </span><span class="caption-text">メニュー項目一覧（ディスク(GB)）</span><a class="headerlink" href="#id15" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力必須</p></th>
+<th class="head"><p>入力方法</p></th>
+<th class="head"><p>制約事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ディスク(GB)</p></td>
+<td><p>作成するVMのディスク容量をGBで入力します。</p></td>
+<td><p>〇</p></td>
+<td><p>手動入力</p></td>
+<td><p>最大長32バイト</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id6">
+<h2><span class="section-number">2.3. </span>利用手順<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">VM作成の利用手順について説明します。</div>
+</div>
+<section id="id7">
+<h3><span class="section-number">2.3.1. </span>VM作成作業フロー<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">以下は、VM作成でサーバー作成を実行するまでの流れです。</div>
+</div>
+<ul>
+<li><p><strong>作業フロー詳細と参照先</strong></p>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><strong>オペレーション名の登録</strong></div>
+<div class="line"><span class="menuselection">基本コンソール ▶ オペレーション一覧</span> から、作業用のオペレーション名を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="../../manuals/it_automation_base/basic_console.html#basic-console-operation"><span class="std std-ref">オペレーション一覧</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>グローバル変数管理の編集</strong></div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ グローバル変数管理</span> から、対象のグローバル変数の具体値を編集します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="../../manuals/ansible-driver/ansible_common.html#ansible-common-global-variable-list"><span class="std std-ref">グローバル変数管理</span></a> 」を参照してください。</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/global_variable_list_v2-4.png"><img alt="具体値を編集する" src="../../_images/global_variable_list_v2-4.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>作業対象へのvCenter接続情報を登録</strong></div>
+<div class="line"><span class="menuselection">VM作成 ▶ vCenter接続情報</span> から、作業対象へのvCenter接続情報を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#vcenter-connectinfo"><span class="std std-ref">vCenter接続情報</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>作業対象のIPアドレスを登録</strong></div>
+<div class="line"><span class="menuselection">VM作成 ▶ IPアドレス</span> から、作業対象のIPアドレスを登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#ip-address"><span class="std std-ref">IPアドレス</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>作業対象のフォルダ名を登録</strong></div>
+<div class="line"><span class="menuselection">VM作成 ▶ フォルダ名</span> から、作業対象のフォルダ名を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#foldername"><span class="std std-ref">フォルダ名</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>作業対象のテンプレートを登録</strong></div>
+<div class="line"><span class="menuselection">VM作成 ▶ テンプレート</span> から、作業対象のテンプレートを登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#template"><span class="std std-ref">テンプレート</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>作業対象の情報を登録</strong></div>
+<div class="line"><span class="menuselection">VM作成 ▶ サーバー作成</span> から、作業対象の情報を登録します。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#create-server"><span class="std std-ref">サーバー作成</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>サーバー作成を選択</strong></div>
+<div class="line"><span class="menuselection">Condutor ▶ Condutor一覧</span> から、サーバー作成の詳細をクリックします。</div>
+<div class="line">詳細は「 <a class="reference internal" href="../../manuals/it_automation_base/conductor.html#conductor-list"><span class="std std-ref">Conductor一覧</span></a> 」を参照してください。</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/conductor_create_server_v2-4.png"><img alt="サーバー作成" src="../../_images/conductor_create_server_v2-4.png" style="width: 600px;" />
+</a>
+</figure>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>サーバー作成を実行</strong></div>
+<div class="line">サーバー作成の作業実行ボタンをクリックします。</div>
+<div class="line">詳細は「 <a class="reference internal" href="../../manuals/it_automation_base/conductor.html#conductor-editandexcute-list"><span class="std std-ref">「Conductor編集/作業実行」メニュー実行操作一覧</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><strong>サーバー作成の実行状況を確認</strong></div>
+<div class="line"><span class="menuselection">Condutor ▶ Conductor作業履歴</span> から、サーバー作成の作業状態を確認できます。</div>
+<div class="line">詳細は「 <a class="reference internal" href="../../manuals/it_automation_base/conductor.html#conductor-conductor-job-list"><span class="std std-ref">Conductor作業履歴</span></a> 」を参照してください。</div>
+</div>
+</li>
+</ol>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">Conductor作業履歴で「想定外エラー」や「異常終了」になっている場合は <span class="menuselection">VM作成</span> の各メニューや <span class="menuselection">Ansible共通 ▶ グローバル変数管理</span> に入力した情報に誤りが無いか確認してみてください。</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="template_resource.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">1. </span>テンプレート資材</a></li>
+    <li class="next"><a href="resource_management.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">3. </span>リソース管理</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.7/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

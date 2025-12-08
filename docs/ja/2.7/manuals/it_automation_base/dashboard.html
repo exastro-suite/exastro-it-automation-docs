@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>3. メインメニュー(DashBoard) &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/tabs.js?v=3030b3cb"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="4. 共通操作" href="common_operation.html" />
+    <link rel="prev" title="2. メインメニューへのアクセス" href="to_mainmenu.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/manuals/it_automation_base/dashboard.html" selected>current</option>
+              <option value="../../../../ja/2.7/manuals/it_automation_base/dashboard.html" selected>2.7(current)</option>
+              <option value="../../../../ja/2.6/manuals/it_automation_base/dashboard.html">2.6</option>
+              <option value="../../../../ja/2.5/manuals/it_automation_base/dashboard.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/it_automation_base/dashboard.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/it_automation_base/dashboard.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/it_automation_base/dashboard.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/it_automation_base/dashboard.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/it_automation_base/dashboard.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.7/manuals/it_automation_base/dashboard.html" selected>日本語</option>
+              <option value="../../../../en/2.7/manuals/it_automation_base/dashboard.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="to_mainmenu.html" title="前のトピックへ"><span class="section-number">2. </span>メインメニューへのアクセス</a></li>
+        <li class="next"><a href="common_operation.html" title="次のトピックへ"><span class="section-number">4. </span>共通操作</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">基本操作</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="general.html">1. ログイン方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="to_mainmenu.html">2. メインメニューへのアクセス</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3. メインメニュー(DashBoard)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">3.1. はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">3.2. メインメニューについて</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">3.3. Dashboardの編集、操作</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id4">3.3.1. DashBoardの編集</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="common_operation.html">4. 共通操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="management_console.html">5. 管理コンソール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basic_console.html">6. 基本コンソール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conductor.html">7. Conductor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../host_group/index.html">ホストグループ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible-driver/index.html">Ansible ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform_driver/index.html">Terraform ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import/index.html">エクスポート・インポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cicd_for_iac/index.html">CI/CD for IaC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintenance/index.html">メンテナンス</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+    <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">3. メインメニュー(DashBoard)</a><ul>
+<li><a class="reference internal" href="#id1">3.1. はじめに</a></li>
+<li><a class="reference internal" href="#id2">3.2. メインメニューについて</a></li>
+<li><a class="reference internal" href="#id3">3.3. Dashboardの編集、操作</a><ul>
+<li><a class="reference internal" href="#id4">3.3.1. DashBoardの編集</a><ul>
+<li><a class="reference internal" href="#widget">3.3.1.1. Widget追加</a></li>
+<li><a class="reference internal" href="#edit-widget">3.3.1.2. Widget編集、削除</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">基本操作</a></li>
+    
+    <li><span class="section-number">3. </span>メインメニュー(DashBoard)</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="dashboard">
+<h1><span class="section-number">3. </span>メインメニュー(DashBoard)<a class="headerlink" href="#dashboard" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2><span class="section-number">3.1. </span>はじめに<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書は、ITAのメインメニュー(Dashboard)について記載したものです。</div>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">3.2. </span>メインメニューについて<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">メインメニューにはWidgetが表示されます。</div>
+<div class="line">Widgetの内容や配置は個人でカスタマイズすることができます。</div>
+<div class="line">カスタマイズしたDashboardの構成情報は、ユーザー毎にシステム上に保存されるので、別環境からログインした場合でもカスタマイズした設定が利用できます。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">画面構成</div>
+</div>
+<div class="line-block">
+<div class="line">No.1～5のWidgetがデフォルトで表示されます。</div>
+<div class="line">No.6～9はデフォルトでは表示されません。（ <span class="guilabel">Dashboard編集</span> → <span class="guilabel">Widget追加</span> を押下することで追加できます）</div>
+</div>
+</li>
+</ol>
+<figure class="align-left" id="id6">
+<a class="reference internal image-reference" href="../../_images/dashboard_base.drawio.png"><img alt="各種Widget" src="../../_images/dashboard_base.drawio.png" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.6 </span><span class="caption-text">各種Widget</span><a class="headerlink" href="#id6" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id7">
+<caption><span class="caption-number">表 3.26 </span><span class="caption-text">Widget一覧（No.1～9）</span><a class="headerlink" href="#id7" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>Widget名</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>デフォルト</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>メニューグループ</p></td>
+<td><div class="line-block">
+<div class="line">各メニューグループのパネルが表示されます。</div>
+<div class="line">パネルを押下することで指定のメニューグループのメインメニューへ遷移できます。</div>
+<div class="line">インストールしたドライバーのみが表示されます。</div>
+<div class="line">「メニューグループ」Widgetを削除することはできません。</div>
+</div>
+</td>
+<td><p>表示</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Movement</p></td>
+<td><div class="line-block">
+<div class="line">各オーケストレーションに登録されているMovementの件数が円グラフで表示されます。</div>
+<div class="line">「SUM」列の数値またはグラフを押下することで、各ドライバの「Movement一覧」メニューへ遷移できます。</div>
+</div>
+</td>
+<td><p>表示</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>作業状況</p></td>
+<td><div class="line-block">
+<div class="line">Conductorの作業状況のステータスごとに件数が円グラフで表示されます。</div>
+<div class="line">「CON」列の数値を押下することで、「Conductor」メニューグループの「Conductor作業履歴」メニューへ遷移できます。</div>
+</div>
+</td>
+<td><p>表示</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>作業結果</p></td>
+<td><div class="line-block">
+<div class="line">Conductorの作業結果のステータスごとに件数が円グラフで表示されます。</div>
+<div class="line">「CON」列の数値を押下することで、「Conductor」メニューグループの「Conductor作業履歴」メニューへ遷移できます。</div>
+</div>
+</td>
+<td><p>表示</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>作業履歴</p></td>
+<td><div class="line-block">
+<div class="line">Conductorの作業履歴の日別の結果が棒グラフで表示されます。</div>
+<div class="line">棒グラフにカーソルを合わせて押下すると件数の詳細が表示されます。</div>
+<div class="line">「CON」列の数値を押下することで、「Conductor」メニューグループの「Conductor作業履歴」メニューへ遷移できます。</div>
+</div>
+</td>
+<td><p>表示</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>メニューセット</p></td>
+<td><p>メインメニューとは別にメニューグループのセットを作成できます。</p></td>
+<td><p>非表示</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>リンク</p></td>
+<td><p>リンクのリストを作成できます。</p></td>
+<td><p>非表示</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>予約作業確認</p></td>
+<td><div class="line-block">
+<div class="line">ステータスが「未実行（予約）」であるConductorの一覧を表示します。</div>
+<div class="line">インスタンスID 、Conductor名、オペレーション名、予約日時、予約日時までの残り時間が確認可能です。</div>
+<div class="line">インスタンスIDを押下すると、対象の作業確認画面へと遷移します。</div>
+</div>
+</td>
+<td><p>非表示</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>画像</p></td>
+<td><p>画像を貼り付けできます。</p></td>
+<td><p>非表示</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id3">
+<h2><span class="section-number">3.3. </span>Dashboardの編集、操作<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<section id="id4">
+<h3><span class="section-number">3.3.1. </span>DashBoardの編集<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">画面右上の「<span class="guilabel">DashBoard編集</span> 」ボタンを押下することで編集画面に移行します。</div>
+</div>
+<figure class="align-default" id="id8">
+<a class="reference internal image-reference" href="../../_images/dashboard_edit.drawio.png"><img alt="DashBoard編集ボタン" src="../../_images/dashboard_edit.drawio.png" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.7 </span><span class="caption-text">DashBoard編集ボタン</span><a class="headerlink" href="#id8" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">編集中は以下の操作が可能です。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">Widget追加</div>
+<div class="line">「<a class="reference internal" href="#add-widget"><span class="std std-ref">Widget追加</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">Widget編集、削除</div>
+<div class="line">「<a class="reference internal" href="#edit-widget"><span class="std std-ref">Widget編集、削除</span></a> 」を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">編集反映</div>
+<div class="line"><span class="guilabel">編集反映</span> から、Widgetの変更内容を反映します。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">リセット</div>
+<div class="line"><span class="guilabel">リセット</span> から、Widgetの変更内容をリセットすることが可能です。初期状態に戻します。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">編集取消</div>
+<div class="line"><span class="guilabel">編集取消</span> から、Widgetの変更内容を取り消すことが可能です。変更前の状態に戻します。</div>
+</div>
+</li>
+</ul>
+<section id="widget">
+<span id="add-widget"></span><h4><span class="section-number">3.3.1.1. </span>Widget追加<a class="headerlink" href="#widget" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line"><span class="guilabel"> Widget追加</span> で選択すると、Widget選択が表示されます。</div>
+<div class="line">追加したいWidgetを選択し、<span class="guilabel">適用</span> を押下すると、選択したWidgetが追加されます。</div>
+</div>
+<figure class="align-left" id="id9">
+<a class="reference internal image-reference" href="../../_images/dashboard_add_widget.gif"><img alt="Widget追加操作" src="../../_images/dashboard_add_widget.gif" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.8 </span><span class="caption-text">Widget追加操作</span><a class="headerlink" href="#id9" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">Blankについて</div>
+<div class="line">既存Widgetの上もしくは下にカーソルを合わせると、「 <span class="guilabel">＋Blank</span> 」ボタンが表示されます。</div>
+<div class="line"><span class="guilabel">＋Blank</span> 押下後、Blankが1行追加されます。</div>
+<div class="line">行内にWidgetが配置されていない場合、Blank上を選択すると、Blankが1行削除されます。</div>
+</div>
+<figure class="align-left" id="id10">
+<a class="reference internal image-reference" href="../../_images/dashboard_blank.gif"><img alt="Blankの追加、削除" src="../../_images/dashboard_blank.gif" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.9 </span><span class="caption-text">Blankの追加、削除</span><a class="headerlink" href="#id10" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">メニューセットについて</div>
+<div class="line">「メニューグループ」Widgetから「メニューセット」へ、パネルをドラッグ＆ドロップで移動させることができます。</div>
+</div>
+<figure class="align-left" id="id11">
+<a class="reference internal image-reference" href="../../_images/dashboard_edit_menuset.gif"><img alt="メニューセットパネル追加" src="../../_images/dashboard_edit_menuset.gif" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.10 </span><span class="caption-text">メニューセットパネル追加</span><a class="headerlink" href="#id11" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="edit-widget">
+<span id="id5"></span><h4><span class="section-number">3.3.1.2. </span>Widget編集、削除<a class="headerlink" href="#edit-widget" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">各Widgetの右上に表示される各種ボタンからWidgetを編集、削除することが可能です。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">：Widget編集が表示されます。各Widgetの編集項目は以下を参照してください。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">：Widgetを削除します。</div>
+</div>
+</li>
+</ul>
+<figure class="align-left" id="id12">
+<a class="reference internal image-reference" href="../../_images/dashboard_widget_edit_del.gif"><img alt="Widget編集、削除操作" src="../../_images/dashboard_widget_edit_del.gif" style="width: 6.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.11 </span><span class="caption-text">Widget編集、削除操作</span><a class="headerlink" href="#id12" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">Widget共通設定、各Widget固有設定は以下です。</div>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">共通設定</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">メニューグループ</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">Movement登録数</button><button aria-controls="panel-0-0-3" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-3" name="0-3" role="tab" tabindex="-1">Conductor作業状況</button><button aria-controls="panel-0-0-4" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-4" name="0-4" role="tab" tabindex="-1">Conductor作業結果</button><button aria-controls="panel-0-0-5" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-5" name="0-5" role="tab" tabindex="-1">Conductor作業履歴</button><button aria-controls="panel-0-0-6" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-6" name="0-6" role="tab" tabindex="-1">メニューセット</button><button aria-controls="panel-0-0-7" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-7" name="0-7" role="tab" tabindex="-1">リンクリスト</button><button aria-controls="panel-0-0-8" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-8" name="0-8" role="tab" tabindex="-1">Conductor予約作業確認</button><button aria-controls="panel-0-0-9" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-9" name="0-9" role="tab" tabindex="-1">画像</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">Widget共通の基本設定は以下です。</div>
+</div>
+<figure class="align-left" id="id13">
+<a class="reference internal image-reference" href="../../_images/dashboard_widget_setting_common.png"><img alt="Widget共通設定" src="../../_images/dashboard_widget_setting_common.png" style="width: 3.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.12 </span><span class="caption-text">Widget共通設定</span><a class="headerlink" href="#id13" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id14">
+<caption><span class="caption-number">表 3.27 </span><span class="caption-text">Widget基本設定</span><a class="headerlink" href="#id14" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力項目</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>名称</p></td>
+<td><p>Widgetの名称を変更します。</p></td>
+<td><p>手動入力</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>横 結合数</p></td>
+<td><p>横 結合数を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+<div class="line">スライドにて選択</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>縦 結合数</p></td>
+<td><p>縦 結合数を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+<div class="line">スライドにて選択</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Widget表示</p></td>
+<td><p>枠・背景の表示、非表示を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">選択</div>
+<div class="line">・表示する</div>
+<div class="line">・表示しない</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>タイトルバー</p></td>
+<td><p>枠・背景の表示、非表示を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">選択</div>
+<div class="line">・表示する</div>
+<div class="line">・表示しない</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>枠・背景</p></td>
+<td><p>枠・背景の表示、非表示を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">選択</div>
+<div class="line">・表示する</div>
+<div class="line">・表示しない</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">メニューグループ個別設定は以下です。</div>
+</div>
+<figure class="align-left" id="id15">
+<a class="reference internal image-reference" href="../../_images/dashboard_widget_setting_menugroup.png"><img alt="Widget固有設定(メニューグループ)" src="../../_images/dashboard_widget_setting_menugroup.png" style="width: 3.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.13 </span><span class="caption-text">Widget固有設定(メニューグループ)</span><a class="headerlink" href="#id15" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id16">
+<caption><span class="caption-number">表 3.28 </span><span class="caption-text">Widget固有設定(メニューグループ)</span><a class="headerlink" href="#id16" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力項目</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>1行項目数</p></td>
+<td><p>1行項目数を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+<div class="line">スライドにて選択</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>表示形式</p></td>
+<td><p>表示形式を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">選択</div>
+<div class="line">・アイコン</div>
+<div class="line">・リスト</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>メニュグループ名</p></td>
+<td><p>メニュグループ名の表示、非表示を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">選択</div>
+<div class="line">・表示する</div>
+<div class="line">・表示しない</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>ページ移動</p></td>
+<td><p>ページ移動の方法を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">選択</div>
+<div class="line">・同じタブ</div>
+<div class="line">・別タブ</div>
+<div class="line">・別ウィンドウ</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div><div aria-labelledby="tab-0-0-2" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-2" name="0-2" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">Movement登録数の個別設定は以下です。</div>
+</div>
+<figure class="align-left" id="id17">
+<a class="reference internal image-reference" href="../../_images/dashboard_widget_setting_movement.png"><img alt="Widget固有設定(Movement登録数)" src="../../_images/dashboard_widget_setting_movement.png" style="width: 3.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.14 </span><span class="caption-text">Widget固有設定(Movement登録数)</span><a class="headerlink" href="#id17" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id18">
+<caption><span class="caption-number">表 3.29 </span><span class="caption-text">Widget固有設定(Movement登録数)</span><a class="headerlink" href="#id18" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力項目</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>ページ移動</p></td>
+<td><p>ページ移動の方法を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">選択</div>
+<div class="line">・同じタブ</div>
+<div class="line">・別タブ</div>
+<div class="line">・別ウィンドウ</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div><div aria-labelledby="tab-0-0-3" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-3" name="0-3" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">Conductor作業状況の個別設定は以下です。</div>
+</div>
+<figure class="align-left" id="id19">
+<a class="reference internal image-reference" href="../../_images/dashboard_widget_setting_conductor_status.png"><img alt="Widget固有設定(Conductor作業状況)" src="../../_images/dashboard_widget_setting_conductor_status.png" style="width: 3.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.15 </span><span class="caption-text">Widget固有設定(Conductor作業状況)</span><a class="headerlink" href="#id19" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id20">
+<caption><span class="caption-number">表 3.30 </span><span class="caption-text">Widget固有設定(Conductor作業状況)</span><a class="headerlink" href="#id20" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力項目</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>ページ移動</p></td>
+<td><p>ページ移動の方法を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">選択</div>
+<div class="line">・同じタブ</div>
+<div class="line">・別タブ</div>
+<div class="line">・別ウィンドウ</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div><div aria-labelledby="tab-0-0-4" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-4" name="0-4" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">Conductor作業結果の個別設定は以下です。</div>
+</div>
+<figure class="align-left" id="id21">
+<a class="reference internal image-reference" href="../../_images/dashboard_widget_setting_conductor_result.png"><img alt="Widget固有設定(Conductor作業結果)" src="../../_images/dashboard_widget_setting_conductor_result.png" style="width: 3.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.16 </span><span class="caption-text">Widget固有設定(Conductor作業結果)</span><a class="headerlink" href="#id21" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id22">
+<caption><span class="caption-number">表 3.31 </span><span class="caption-text">Widget固有設定(Conductor作業結果)</span><a class="headerlink" href="#id22" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力項目</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>ページ移動</p></td>
+<td><p>ページ移動の方法を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">選択</div>
+<div class="line">・同じタブ</div>
+<div class="line">・別タブ</div>
+<div class="line">・別ウィンドウ</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div><div aria-labelledby="tab-0-0-5" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-5" name="0-5" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">Conductor作業履歴の個別設定は以下です。</div>
+</div>
+<figure class="align-left" id="id23">
+<a class="reference internal image-reference" href="../../_images/dashboard_widget_setting_conductor_history.png"><img alt="Widget固有設定(Conductor作業履歴)" src="../../_images/dashboard_widget_setting_conductor_history.png" style="width: 3.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.17 </span><span class="caption-text">Widget固有設定(Conductor作業履歴)</span><a class="headerlink" href="#id23" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id24">
+<caption><span class="caption-number">表 3.32 </span><span class="caption-text">Widget固有設定(Conductor作業履歴)</span><a class="headerlink" href="#id24" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力項目</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>期間</p></td>
+<td><p>期間を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+<div class="line">スライドにて選択</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>ページ移動</p></td>
+<td><p>ページ移動の方法を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">選択</div>
+<div class="line">・同じタブ</div>
+<div class="line">・別タブ</div>
+<div class="line">・別ウィンドウ</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div><div aria-labelledby="tab-0-0-6" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-6" name="0-6" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">メニューセットの個別設定は以下です。</div>
+</div>
+<figure class="align-left" id="id25">
+<a class="reference internal image-reference" href="../../_images/dashboard_widget_setting_menugroup.png"><img alt="Widget固有設定(メニューセット)" src="../../_images/dashboard_widget_setting_menugroup.png" style="width: 3.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.18 </span><span class="caption-text">Widget固有設定(メニューセット)</span><a class="headerlink" href="#id25" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id26">
+<caption><span class="caption-number">表 3.33 </span><span class="caption-text">Widget固有設定(メニューセット)</span><a class="headerlink" href="#id26" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力項目</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>1行項目数</p></td>
+<td><p>1行項目数を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+<div class="line">スライドにて選択</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>表示形式</p></td>
+<td><p>表示形式を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">選択</div>
+<div class="line">・アイコン</div>
+<div class="line">・リスト</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>メニュグループ名</p></td>
+<td><p>メニュグループ名の表示、非表示を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">選択</div>
+<div class="line">・表示する</div>
+<div class="line">・表示しない</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>ページ移動</p></td>
+<td><p>ページ移動の方法を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">選択</div>
+<div class="line">・同じタブ</div>
+<div class="line">・別タブ</div>
+<div class="line">・別ウィンドウ</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div><div aria-labelledby="tab-0-0-7" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-7" name="0-7" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">リンクリストの個別設定は以下です。</div>
+</div>
+<figure class="align-left" id="id27">
+<a class="reference internal image-reference" href="../../_images/dashboard_widget_setting_link_list.png"><img alt="Widget固有設定(リンクリスト)" src="../../_images/dashboard_widget_setting_link_list.png" style="width: 3.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.19 </span><span class="caption-text">Widget固有設定(リンクリスト)</span><a class="headerlink" href="#id27" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id28">
+<caption><span class="caption-number">表 3.34 </span><span class="caption-text">Widget固有設定(リンクリスト)</span><a class="headerlink" href="#id28" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力項目</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>1行項目数</p></td>
+<td><p>1行項目数を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+<div class="line">スライドにて選択</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>ページ移動</p></td>
+<td><p>ページ移動の方法を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">選択</div>
+<div class="line">・同じタブ</div>
+<div class="line">・別タブ</div>
+<div class="line">・別ウィンドウ</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>項目</p></td>
+<td><div class="line-block">
+<div class="line">項目を設定します。</div>
+<div class="line"><span class="guilabel">項目を追加する</span> で入力欄を追加できます。</div>
+<div class="line">表示順序の変更、項目の削除が可能です。</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+<div class="line">・名称</div>
+<div class="line">・リンクURL</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div><div aria-labelledby="tab-0-0-8" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-8" name="0-8" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">Conductor予約作業確認の個別設定は以下です。</div>
+</div>
+<figure class="align-left" id="id29">
+<a class="reference internal image-reference" href="../../_images/dashboard_widget_setting_conductor_reserve.png"><img alt="Widget固有設定(Conductor予約作業確認)" src="../../_images/dashboard_widget_setting_conductor_reserve.png" style="width: 3.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.20 </span><span class="caption-text">Widget固有設定(Conductor予約作業確認)</span><a class="headerlink" href="#id29" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id30">
+<caption><span class="caption-number">表 3.35 </span><span class="caption-text">Widget固有設定(Conductor予約作業確認)</span><a class="headerlink" href="#id30" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力項目</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>期間</p></td>
+<td><p>期間を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+<div class="line">スライドにて選択</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>ページ移動</p></td>
+<td><p>ページ移動の方法を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">選択</div>
+<div class="line">・同じタブ</div>
+<div class="line">・別タブ</div>
+<div class="line">・別ウィンドウ</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div><div aria-labelledby="tab-0-0-9" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-9" name="0-9" role="tabpanel" tabindex="0"><div class="line-block">
+<div class="line">画像の個別設定は以下です。</div>
+</div>
+<figure class="align-left" id="id31">
+<a class="reference internal image-reference" href="../../_images/dashboard_widget_setting_image.png"><img alt="Widget固有設定(画像)" src="../../_images/dashboard_widget_setting_image.png" style="width: 3.67391in; height: 3.20028in;" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3.21 </span><span class="caption-text">Widget固有設定(画像)</span><a class="headerlink" href="#id31" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id32">
+<caption><span class="caption-number">表 3.36 </span><span class="caption-text">Widget固有設定(画像)</span><a class="headerlink" href="#id32" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>入力項目</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>画像URL</p></td>
+<td><p>1画像URLを設定します。</p></td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>リンクURL</p></td>
+<td><p>リンクURLを設定します。</p></td>
+<td><div class="line-block">
+<div class="line">手動入力</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>ページ移動</p></td>
+<td><p>ページ移動の方法を変更します。</p></td>
+<td><div class="line-block">
+<div class="line">選択</div>
+<div class="line">・同じタブ</div>
+<div class="line">・別タブ</div>
+<div class="line">・別ウィンドウ</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</section>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="to_mainmenu.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">2. </span>メインメニューへのアクセス</a></li>
+    <li class="next"><a href="common_operation.html" title="次のトピックへ"><span>次のトピックへ</span><span class="section-number">4. </span>共通操作</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.7/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

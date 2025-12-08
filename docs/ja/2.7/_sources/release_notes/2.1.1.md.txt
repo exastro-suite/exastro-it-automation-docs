@@ -1,0 +1,31 @@
+# Exastro IT Automation 2.1.1
+
+リリース日: 2023年06月23日
+
+## 機能追加
+
+### IaC／テキストファイルのエディタ・コードチェック機能の追加（[#49](https://github.com/exastro-suite/exastro-it-automation/issues/49)）
+IaCや各種テキストファイルの編集・コードチェックが可能なエディタ機能を追加しました。これにより、Web画面上で直接コードの編集や構文チェックができ、作業効率と品質が向上します。インフラ構成や自動化スクリプトの管理がより直感的かつ安全に行えるようになりました。
+
+### Terraform-CLI機能のON/OFF切り替え（[#1229](https://github.com/exastro-suite/exastro-it-automation/issues/1229)）
+Terraform-CLI機能を必要に応じて有効・無効にできる設定を追加しました。これにより、運用ポリシーやセキュリティ要件に応じて柔軟に機能制御が可能となり、システムの安全性と運用性が向上します。
+
+## バグ修正
+
+### メニューエクスポート/インポート・Excel一括インポート関連の不具合修正（[#1390](https://github.com/exastro-suite/exastro-it-automation/issues/1390), [#1401](https://github.com/exastro-suite/exastro-it-automation/issues/1401), [#1385](https://github.com/exastro-suite/exastro-it-automation/issues/1385), [#1303](https://github.com/exastro-suite/exastro-it-automation/issues/1303), [#1273](https://github.com/exastro-suite/exastro-it-automation/issues/1273), [#1282](https://github.com/exastro-suite/exastro-it-automation/issues/1282), [#1283](https://github.com/exastro-suite/exastro-it-automation/issues/1283), [#1304](https://github.com/exastro-suite/exastro-it-automation/issues/1304), [#1331](https://github.com/exastro-suite/exastro-it-automation/issues/1331), [#1353](https://github.com/exastro-suite/exastro-it-automation/issues/1353), [#1230](https://github.com/exastro-suite/exastro-it-automation/issues/1230), [#1231](https://github.com/exastro-suite/exastro-it-automation/issues/1231)）
+メニューエクスポートやインポート、Excel一括インポート時に発生していたシステムエラーや、インポート後のCI/CD連携不備、ID変換失敗、ロールバック処理の未実装など、データ移行や一括操作に関する多くの不具合を修正しました。これにより、データの移行や一括登録作業がより安全かつ確実に行えるようになりました。
+
+### Ansible・Terraform・CI/CD・バックヤード関連の不具合修正（[#1376](https://github.com/exastro-suite/exastro-it-automation/issues/1376), [#1368](https://github.com/exastro-suite/exastro-it-automation/issues/1368), [#1358](https://github.com/exastro-suite/exastro-it-automation/issues/1358), [#1312](https://github.com/exastro-suite/exastro-it-automation/issues/1312), [#1313](https://github.com/exastro-suite/exastro-it-automation/issues/1313), [#1262](https://github.com/exastro-suite/exastro-it-automation/issues/1262), [#1285](https://github.com/exastro-suite/exastro-it-automation/issues/1285), [#1286](https://github.com/exastro-suite/exastro-it-automation/issues/1286), [#1275](https://github.com/exastro-suite/exastro-it-automation/issues/1275), [#1235](https://github.com/exastro-suite/exastro-it-automation/issues/1235), [#1232](https://github.com/exastro-suite/exastro-it-automation/issues/1232), [#1282](https://github.com/exastro-suite/exastro-it-automation/issues/1282), [#1283](https://github.com/exastro-suite/exastro-it-automation/issues/1283), [#1285](https://github.com/exastro-suite/exastro-it-automation/issues/1285)）
+AnsibleやTerraformの実行時エラー、CI/CD for IaCの資材更新不備、バックヤード処理の不具合、ファイル操作や変数名の制限、タイマ値設定、DBコネクションの誤削除など、さまざまな自動化・連携処理の不具合を修正しました。これにより、複雑な自動化シナリオや大規模運用でも安定した動作が期待できます。
+
+### UI・操作性・表示関連の不具合修正（[#27](https://github.com/exastro-suite/exastro-it-automation/issues/27), [#1342](https://github.com/exastro-suite/exastro-it-automation/issues/1342), [#1240](https://github.com/exastro-suite/exastro-it-automation/issues/1240), [#1381](https://github.com/exastro-suite/exastro-it-automation/issues/1381), [#1269](https://github.com/exastro-suite/exastro-it-automation/issues/1269), [#1296](https://github.com/exastro-suite/exastro-it-automation/issues/1296), [#1297](https://github.com/exastro-suite/exastro-it-automation/issues/1297), [#1305](https://github.com/exastro-suite/exastro-it-automation/issues/1305), [#1191](https://github.com/exastro-suite/exastro-it-automation/issues/1191)）
+Conductor作業確認画面の視認性向上や、ワークスペース切替時の表示崩れ、ファイルアップロードカラムの編集確認画面の不具合、ホストグループ管理の分割・紐付け・プルダウン表示の不備、比較機能のプルダウン表示、収集機能の多言語対応など、UIや操作性に関する細かな不具合を修正しました。これにより、日常的な操作のストレスが軽減され、より快適な利用体験が実現します。
+
+### その他の不具合修正・安定性向上（[#1248](https://github.com/exastro-suite/exastro-it-automation/issues/1248), [#1226](https://github.com/exastro-suite/exastro-it-automation/issues/1226), [#1223](https://github.com/exastro-suite/exastro-it-automation/issues/1223), [#1224](https://github.com/exastro-suite/exastro-it-automation/issues/1224), [#1207](https://github.com/exastro-suite/exastro-it-automation/issues/1207), [#1365](https://github.com/exastro-suite/exastro-it-automation/issues/1365)）
+v2.1.1バージョンアップ対応や、Flaskのバージョンアップ時のエラー、管理コンソールのオペレーション削除管理の例外処理、エラーログ出力の精査、GTID環境でのインポート不備など、システム全体の安定性や運用性を高める修正を行いました。
+
+## 改善
+
+### エラーメッセージ・ログ出力・運用性の改善（[#1263](https://github.com/exastro-suite/exastro-it-automation/issues/1263), [#1207](https://github.com/exastro-suite/exastro-it-automation/issues/1207)）
+エラーメッセージの内容を2系の仕様に合わせてTrue/Falseに対応し、業務エラー系のERRORレベルでのログ出力の精査・制御を行いました。これにより、運用時のトラブルシューティングや障害対応がより迅速かつ的確に行えるようになりました。
+
