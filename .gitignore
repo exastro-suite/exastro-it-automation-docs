@@ -2,6 +2,7 @@
 .talismanrc
 .gitmodules
 .docx
+.private
 docs
 _build
 /my-repo

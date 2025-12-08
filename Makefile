@@ -80,6 +80,7 @@ html-all:
 	touch $(DOCSDIR)/.nojekyll
 	version=`ls -1r "$(SOURCEDIR)/ja/" | head -n 1` ; \
 	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/index.html > $(DOCSDIR)/index.html
+	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/redirect.html > $(DOCSDIR)/redirect.html
 
 clean:
 	rm -rf $(BUILDDIR) $(DOCSDIR)/*
