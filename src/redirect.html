@@ -47,7 +47,7 @@
   }
 
   let finalRedirectPath;
-  if (isValidRedirect(redirectTo) == true) {
+  if (isValidRedirect(redirectTo)) {
     console.log('Valid redirect to:', redirectTo);
     finalRedirectPath = redirectTo;
   } else {
@@ -55,7 +55,7 @@
     finalRedirectPath = 'index.html';
   }
   
-  window.location.href = 'ja/#__version__#/' + finalRedirectPath;
+  //window.location.href = 'ja/#__version__#/' + finalRedirectPath;
 </script>
 </head>
 <body>
