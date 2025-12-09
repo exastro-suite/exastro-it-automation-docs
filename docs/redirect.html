@@ -26,34 +26,27 @@
     'templates',
   ];
   
-  // セキュリティチェック
+  // セキュリティチェック / Security Check
   function isValidRedirect(path) {
-    // 1. ホワイトリストチェック
+    // 1. ホワイトリストチェック / Whitelist Check
     if (allowedPaths.includes(path)) {
       return true;
     }
-    
-    // 2. 相対パスのみ許可（プロトコルや//で始まるものを拒否）
-    if (path.match(/^(https?:|\/\/|javascript:|data:)/i)) {
-      return false;
-    }
-    
-    // 3. パストラバーサル攻撃を防ぐ
-    if (path.includes('../') || path.includes('..\\')) {
-      return false;
-    }
-    
-    return true;
+
+    // 2. 該当なし / No Match
+    return false;
   }
 
+  let finalRedirectPath;
   if (isValidRedirect(redirectTo)) {
     console.log('Valid redirect to:', redirectTo);
+    finalRedirectPath = redirectTo;
   } else {
     console.warn('Invalid redirect path detected. Redirecting to default index.html');
-    redirectTo = 'index.html';
+    finalRedirectPath = 'index.html';
   }
   
-  window.location.href = 'ja/2.7/' + redirectTo;
+  window.location.href = 'ja/2.7/' + finalRedirectPath;
 </script>
 </head>
 <body>
