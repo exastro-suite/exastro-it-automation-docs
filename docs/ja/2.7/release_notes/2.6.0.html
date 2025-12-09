@@ -115,7 +115,7 @@
   <div id="menuButton"></div>
   
   <aside class="divInner">
-    <ul class="current">
+   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">概要</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../configuration/index.html">構成・構築ガイド</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">インストール／アップグレード</a></li>
@@ -129,53 +129,7 @@
 <li class="toctree-l2"><a class="reference internal" href="2.7.0.html">Exastro IT Automation 2.7.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.6.2.html">Exastro IT Automation 2.6.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.6.1.html">Exastro IT Automation 2.6.1</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Exastro IT Automation 2.6.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">機能追加</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#conductor-1597-2715-2760">Conductor定期作業実行のスケジュール拡張・安定性向上（#1597, #2715, #2760）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">ワークスペース作成時のエージェント権限自動払い出し（#2545）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#api-2697">ファイルAPIのバリデーション強化（#2697）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ansible-2614-2656-2724">Ansible実行エージェントのライセンス管理・通信エラー対応・子プロ復活（#2614, #2656, #2724）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">グローバル変数管理の機密情報対応（#2548）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">メニューエクスポート/インポート機能の性能向上（#2738, #2755）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#os-2595-2594-2711-2606-2763">各種OS・コンテナ・開発環境の最新化（#2595, #2594, #2711, #2606, #2763）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ui-2580-2551-2603-2653">パラメータシート・画面UI・メンテナンス機能の拡充（#2580, #2551, #2603, #2653）</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">バグ修正</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id6">定期作業のスケジュール計算が特定条件で誤る問題を修正（#2767）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id7">ファイルクリア後も履歴から過去のファイルが参照できるよう修正（#2772）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#api-2773">履歴からのファイルダウンロードAPIで発生するシステムエラーを解消（#2773）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#excel-2632">プルダウン利用メニューのExcel出力時に「内容の回復」ダイアログが出る問題を修正（#2632）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ansible-2643">Ansible資材転送時に不要な資材が送信される問題を修正（#2643）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id8">メニューインポート後に履歴ファイルが参照できなくなる不具合を修正（#2748）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id9">不要なログが出力される問題を修正（#2733）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id10">整数型カラムのフィルタ検索で少数を入力するとエラーになる問題を修正（#2735）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#oasenone-2734">OASEイベント収集設定でリクエストパラメータ値がNoneになる問題を修正（#2734）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#oasettlutc-2736">OASEのTTLインデックスでタイムゾーンがUTCでなくなる問題を修正（#2736）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#oase-2739">OASEで複数ルールを一度に判定できない問題を修正（#2739）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ansible-agent-2768">ansible-agentの名前が長すぎる場合の不具合を修正（#2768）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ansible-2777">ansible作業実行時に想定外エラーで後続作業がスキップされる問題を修正（#2777）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#movement-2652">Movement一覧を含むメニューのエクスポートができない問題を修正（#2652）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#excel-2664">複数行文字列カラムのExcel全件ダウンロード時の改行表記不正を修正（#2664）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ci-cd-for-iac-2723">CI/CD for IaCの資材紐付でファイルが空になる問題を修正（#2723）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#conductor-2725">Conductorワークフロー削除機能で配下フォルダが削除できない問題を修正（#2725）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id11">通知管理画面が外部サイト非接続環境で開けない問題を修正（#2727）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#excel-2769">英語環境でExcel一括インポート時にシステムエラーが発生する問題を修正（#2769）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id12">比較機能で項目名にクォートが含まれると比較結果に表示されない問題を修正（#2645）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#conductor-2654">Conductorノードの備考削除時に枠が消えない問題を修正（#2654）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#movementmovementidm-2757">Movement一覧のMovementIDの「Ｍ」が全角になっている誤字を修正（#2757）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#biuder-txt-2701">バージョンアップ時に不要なbiuder.txtファイルが残る問題を修正（#2701）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ansible-automation-controllerproxy-2589">Ansible Automation Controllerでproxy設定不要環境で誤ったエラーが出る問題を修正（#2589）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ansible-2754">Ansible共通エージェント管理画面で最終更新者が表示されない問題を修正（#2754）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ita-api-organizationopenapi-2793">ita-api-organizationのopenapi定義が最新化されていない問題を修正（#2793）</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id13">改善</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id14">2.6.0バージョンアップ・修正反映（#2613）</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Exastro IT Automation 2.6.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.5.4.html">Exastro IT Automation 2.5.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.5.3.html">Exastro IT Automation 2.5.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.5.2.html">Exastro IT Automation 2.5.2</a></li>
@@ -201,7 +155,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">貢献</a></li>
 </ul>
 
-    <!-- <ul>
+   <!-- <ul>
       <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
     </ul> -->
     
