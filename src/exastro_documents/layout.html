@@ -101,8 +101,12 @@
   <div id="menuButton"></div>
   
   <aside class="divInner">
-    {{ toctree( collapse=true, maxdepth=5 ) }}
-    <!-- <ul>
+   {%- if pagename.startswith('release_notes/') %}
+   {{ toctree( collapse=true, maxdepth=2 ) }}
+   {%- else %}
+   {{ toctree( collapse=true, maxdepth=5 ) }}
+   {%- endif %}
+   <!-- <ul>
       <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
     </ul> -->
     
