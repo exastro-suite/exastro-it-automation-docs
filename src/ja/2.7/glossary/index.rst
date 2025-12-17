@@ -33,7 +33,7 @@
     Conductorクラス
         Conductorの自動化フローの設計図（テンプレート）です。作業の開始から終了までの流れ、各ステップ（ノード）の処理を定義・管理します。
 
-    ConductorNode（Node）
+    ConductorNode
         Conductorクラスを構成する個々のステップ（各パーツ）のことです。開始ノード、終了ノード、実行ノード（Movement）、分岐ノードなどの種類があります。
 
     Conductorインスタンス
