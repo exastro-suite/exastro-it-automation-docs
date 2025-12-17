@@ -24,11 +24,14 @@ Glossary
     Conductor Class
         A blueprint (template) for Conductor's automation flow. It defines and manages the flow from the start to the end of work, and the processing of each step (node).
 
-    Node
+    Conductor Node (Node)
         Individual steps (components) that make up a Conductor class. There are various types including start nodes, end nodes, execution nodes (Movement), and branch nodes.
 
-    Conductor Work History (Conductor Instance)
+    Conductor Instance
+        An execution entity generated when executing a Conductor class. It operates based on the Conductor class blueprint and holds execution status and results.
+
+    Conductor Work History
         A function that manages the execution history of Conductor classes. It records the start time, end time, execution status, execution results, and error information for each execution instance.
 
-    ConductorNode Instance (Node Instance)
+    Conductor Node Instance
         The execution entity of individual steps (nodes) generated when executing a Conductor class. It performs node status management, maintains execution results, and passes control flow to the next node during work execution.
