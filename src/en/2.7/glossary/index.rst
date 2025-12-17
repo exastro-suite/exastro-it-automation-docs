@@ -24,7 +24,7 @@ Glossary
     Conductor Class
         A blueprint (template) for Conductor's automation flow. It defines and manages the flow from the start to the end of work, and the processing of each step (node).
 
-    Conductor Node (Node)
+    Conductor Node
         Individual steps (components) that make up a Conductor class. There are various types including start nodes, end nodes, execution nodes (Movement), and branch nodes.
 
     Conductor Instance
