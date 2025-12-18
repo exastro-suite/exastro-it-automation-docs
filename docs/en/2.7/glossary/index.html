@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../_static/exastro_documents.css?v=99e5f627" />
+    <link rel="stylesheet" type="text/css" href="../_static/exastro_documents.css?v=3f76e5e7" />
     <link rel="stylesheet" type="text/css" href="../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../_static/documentation_options.js?v=5929fcd5"></script>
@@ -160,11 +160,13 @@
 </dd>
 <dt id="term-Conductor-Class">Conductor Class<a class="headerlink" href="#term-Conductor-Class" title="Link to this term">¶</a></dt><dd><p>A blueprint (template) for Conductor’s automation flow. It defines and manages the flow from the start to the end of work, and the processing of each step (node).</p>
 </dd>
-<dt id="term-Node">Node<a class="headerlink" href="#term-Node" title="Link to this term">¶</a></dt><dd><p>Individual steps (components) that make up a Conductor class. There are various types including start nodes, end nodes, execution nodes (Movement), and branch nodes.</p>
+<dt id="term-Conductor-Node">Conductor Node<a class="headerlink" href="#term-Conductor-Node" title="Link to this term">¶</a></dt><dd><p>Individual steps (components) that make up a Conductor class. There are various types including start nodes, end nodes, execution nodes (Movement), and branch nodes.</p>
 </dd>
-<dt id="term-Conductor-Work-History-Conductor-Instance">Conductor Work History (Conductor Instance)<a class="headerlink" href="#term-Conductor-Work-History-Conductor-Instance" title="Link to this term">¶</a></dt><dd><p>A function that manages the execution history of Conductor classes. It records the start time, end time, execution status, execution results, and error information for each execution instance.</p>
+<dt id="term-Conductor-Instance">Conductor Instance<a class="headerlink" href="#term-Conductor-Instance" title="Link to this term">¶</a></dt><dd><p>An execution entity generated when executing a Conductor class. It operates based on the Conductor class blueprint and holds execution status and results.</p>
 </dd>
-<dt id="term-ConductorNode-Instance-Node-Instance">ConductorNode Instance (Node Instance)<a class="headerlink" href="#term-ConductorNode-Instance-Node-Instance" title="Link to this term">¶</a></dt><dd><p>The execution entity of individual steps (nodes) generated when executing a Conductor class. It performs node status management, maintains execution results, and passes control flow to the next node during work execution.</p>
+<dt id="term-Conductor-Work-History">Conductor Work History<a class="headerlink" href="#term-Conductor-Work-History" title="Link to this term">¶</a></dt><dd><p>A function that manages the execution history of Conductor classes. It records the start time, end time, execution status, execution results, and error information for each execution instance.</p>
+</dd>
+<dt id="term-Conductor-Node-Instance">Conductor Node Instance<a class="headerlink" href="#term-Conductor-Node-Instance" title="Link to this term">¶</a></dt><dd><p>The execution entity of individual steps (nodes) generated when executing a Conductor class. It performs node status management, maintains execution results, and passes control flow to the next node during work execution.</p>
 </dd>
 </dl>
 </section>
