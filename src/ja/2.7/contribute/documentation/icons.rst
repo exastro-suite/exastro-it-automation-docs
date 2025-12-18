@@ -106,6 +106,11 @@
    ,&#xe955;,\\e955,icon-mouse_left
    ,&#xe959;,\\e959,icon-mouse_right
    ,&#xe95a;,\\e95a,icon-mouse_wheel
+   ,&#xe95d;,\\e95d,icon-compare
+   ,&#xe95e;,\\e95e,icon-export
+   ,&#xe95f;,\\e95f,icon-import
+   ,&#xe960;,\\e960,icon-rule
+   ,&#xe961;,\\e961,icon-rhombus
 
 
 .. raw:: html
