@@ -401,6 +401,26 @@
  content: "\e95a"
 }
 
+.icon-compare:before {
+ content: "\e95d"
+}
+
+.icon-export:before {
+ content: "\e95e"
+}
+
+.icon-import:before {
+ content: "\e95f"
+}
+
+.icon-rule:before {
+ content: "\e960"
+}
+
+.icon-rhombus:before {
+ content: "\e961"
+}
+
 /* div, .oase-icon {
   font-family: oase-web-font;
   font-size: 1.6rem;
@@ -964,7 +984,7 @@ span.highlighted {
  padding-left: 3.0em;
 }
 
-/* 
+/*
 #sideMenu li.toctree-l4:last-child {
   padding-bottom: 0px;
 }
