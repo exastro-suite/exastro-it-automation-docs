@@ -378,7 +378,12 @@ ConductorインスタンスID
 | また、 :menuselection:`各モード --> 作業実行` から作業実行した場合は、__workflowdir__と同じパスが設定されます。
 |
 
+.. warning::
+  | Parallel branchを使用して並列実行されるMovement間では、__conductor_workflowdir__ を介したファイルの共有はできません。 
+  | __conductor_workflowdir__ によるファイル共有は、並列関係にない後続の Movementとの間でのみ可能です。
 
+
+|
 | :menuselection:`Conductor --> Conductor編集/作業実行` の :menuselection:`Status file branchノード` で参照するステータスファイルのファイルパスを下記の変数として扱えます。
 | :menuselection:`Status file branchノード` についての詳細は「 :doc:`../it_automation_base/conductor` 」を参照してください。
 
