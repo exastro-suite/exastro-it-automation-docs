@@ -528,7 +528,7 @@ Organization 追加時の作業
 
 #. | :menuselection:`アクセス --> ユーザー` より「 :ref:`platform_architecture_user` 」で作成したユーザー名をクリックしてください。
 #. | ユーザーの詳細画面に遷移されるため、:menuselection:`ロール` タブを選択し、:guilabel:`追加` ボタンをクリックしてください。
-#. | 下記表の通りにユーザー権限の追加をしてください。
+#. | 以下の通りにユーザー権限の追加をしてください。
 
    #. | リソースタイプの追加 では 「組織」 を選択し、:guilabel:`Next` ボタンをクリックしてください。
    #. | リストの項目の選択 では 「 :ref:`platform_make_organization` 」 で作成した組織 を選択し、:guilabel:`Next` ボタンをクリックしてください。
