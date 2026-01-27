@@ -25,7 +25,7 @@
 
 #. | メニューより :menuselection:`通知管理` をクリックします。
 
-   .. image:: /images/ja/manuals/platform/platform_menu.png
+   .. figure:: /images/ja/manuals/platform/platform_menu.png
       :width: 200px
       :align: left
 
@@ -34,7 +34,7 @@
 
 #. | :menuselection:`通知先ワークスペース一覧` 画面が表示されるので、通知先設定を行いたいワークスペースを選択、または :guilabel:`通知先設定` をクリックします。
 
-   .. image:: /images/ja/manuals/platform/notification/通知先ワークスペース一覧画面.png
+   .. figure:: /images/ja/manuals/platform/notification/通知先ワークスペース一覧画面.png
       :width: 600px
       :align: left
 
@@ -43,7 +43,7 @@
 
 #. | :menuselection:`通知先設定一覧` 画面が表示されるので、 :guilabel:`作成` をクリックします。
 
-   .. image:: /images/ja/manuals/platform/notification/通知先設定一覧画面.png
+   .. figure:: /images/ja/manuals/platform/notification/通知先設定一覧画面.png
       :width: 600px
       :align: left
 
@@ -73,6 +73,8 @@
             | 選択した通知方法に応じて、以下の各設定項目が表示されます。
         * - 送信設定
           - | OASEで利用できるイベント種別ごとの通知有無を選択します。
+
+
 
    |
 
@@ -161,10 +163,38 @@
           - | 一括登録を実行する際に送信されるメッセージの最大件数を指定します。
 
    |
+
    .. tip:: | 通知のテンプレートについて
       | ServiceNow (レコード登録)の通知方法を利用する場合は、テンプレートのフォーマット調整が必須です。
       | 通知のテンプレートについては、 :ref:`notification_template_common` を参照してください。
       | 設定変更、設定例については、 :ref:`notification_template_sample_servicenow_register` を参照してください。
+
+   | 
+   | 送信設定で選択可能なイベント種別とタイミングは以下の通りです。
+
+.. _notification_event_type:
+
+.. list-table:: 送信設定 - イベント種別
+   :widths: 1 3
+   :header-rows: 1
+   :align: left
+
+   * - 項目名
+     - 説明
+   * - 新規イベント（受信時）
+     - | イベントが受信された時点で通知されます。
+       | ただし、重複排除設定がある場合、同一と判断されたイベントは通知されません。
+   * - 新規イベント（統合時）
+     - | 受信したイベントが統合された際に通知されます。
+       | 複数のイベントが1つにまとめられた場合に発生します。
+   * - 新規イベント（判定前）
+     - | ルール判定対象となったイベントについて通知されます。
+   * - 既知イベント（判定時）
+     - | イベントがいずれかのルールにマッチした際に通知されます。
+   * - 既知イベント（TTL有効期限切れ）
+     - | TTL有効期限が切れたイベントについて通知されます。
+   * - 未知イベント
+     - | どのルールや条件にもマッチしなかったイベントについて通知されます。
 
 通知先設定の詳細確認
 --------------------
@@ -175,13 +205,13 @@
 
 #. | メニューより :menuselection:`通知管理` をクリックします。
 
-   .. image:: /images/ja/manuals/platform/platform_menu.png
+   .. figure:: /images/ja/manuals/platform/platform_menu.png
       :width: 200px
       :align: left
 
 #. | :menuselection:`通知先ワークスペース一覧` 画面が表示されるので、通知先設定の詳細確認を行いたいワークスペースを選択、または :guilabel:`通知先設定` をクリックします。
 
-   .. image:: /images/ja/manuals/platform/notification/通知先ワークスペース一覧画面.png
+   .. figure:: /images/ja/manuals/platform/notification/通知先ワークスペース一覧画面.png
       :width: 600px
       :align: left
 
@@ -189,14 +219,14 @@
 
 #. | :menuselection:`通知先設定一覧` 画面が表示されるので、詳細確認を行いたい通知先設定をクリックします。
 
-   .. image:: /images/ja/manuals/platform/notification/通知先設定一覧_v2-7.png
+   .. figure:: /images/ja/manuals/platform/notification/通知先設定一覧_v2-7.png
       :width: 600px
       :align: left
 
 #. | :menuselection:`通知先設定詳細` 画面が表示されます。
    | 詳細確認の他、編集、削除、通知テストが実施できます。
 
-   .. image:: /images/ja/manuals/platform/notification/通知先設定詳細画面_v2-7.png
+   .. figure:: /images/ja/manuals/platform/notification/通知先設定詳細画面_v2-7.png
       :width: 600px
       :align: left
 
@@ -217,13 +247,13 @@
 #. | Exastro システムにオーガナイゼーション管理者でログインします。
 #. | メニューより :menuselection:`通知管理` をクリックします。
 
-   .. image:: /images/ja/manuals/platform/platform_menu.png
+   .. figure:: /images/ja/manuals/platform/platform_menu.png
       :width: 200px
       :align: left
 
 #. | :menuselection:`通知先ワークスペース一覧` 画面が表示されるので、通知先設定の編集を行いたいワークスペースを選択、または :guilabel:`通知先設定` をクリックします。
 
-   .. image:: /images/ja/manuals/platform/notification/通知先ワークスペース一覧画面.png
+   .. figure:: /images/ja/manuals/platform/notification/通知先ワークスペース一覧画面.png
       :width: 600px
       :align: left
 
@@ -231,16 +261,18 @@
 
 #. | :menuselection:`通知先設定一覧` 画面が表示されるので、 :guilabel:`編集` をクリックします。
 
-   .. image:: /images/ja/manuals/platform/notification/通知先設定一覧画面_edit_v2-7.png
+   .. figure:: /images/ja/manuals/platform/notification/通知先設定一覧画面_edit_v2-7.png
       :width: 600px
       :align: left
 
 #. | :menuselection:`通知先設定編集` 画面が表示されるので、通知先の情報を編集し、 :guilabel:`登録` をクリックします。
 
-   .. image:: /images/ja/manuals/platform/notification/編集通知先設定画面_Mail_v2-7.png
+   .. figure:: /images/ja/manuals/platform/notification/編集通知先設定画面_Mail_v2-7.png
       :width: 600px
       :align: left
 
+   |
+   
    .. list-table:: 通知先設定編集
       :widths: 30 70
       :header-rows: 1
@@ -266,13 +298,13 @@
 #. | Exastro システムにオーガナイゼーション管理者でログインします。
 #. | メニューより :menuselection:`通知管理` をクリックします。
 
-   .. image:: /images/ja/manuals/platform/platform_menu.png
+   .. figure:: /images/ja/manuals/platform/platform_menu.png
       :width: 200px
       :align: left
 
 #. | :menuselection:`通知先ワークスペース一覧` 画面が表示されるので、通知先設定の編集を行いたいワークスペースを選択、または :guilabel:`通知先設定` をクリックします。
 
-   .. image:: /images/ja/manuals/platform/notification/通知先ワークスペース一覧画面.png
+   .. figure:: /images/ja/manuals/platform/notification/通知先ワークスペース一覧画面.png
       :width: 600px
       :align: left
 
@@ -280,13 +312,13 @@
 
 #. | :menuselection:`通知先設定一覧` 画面が表示されるので、 :guilabel:`削除` をクリックします。
 
-   .. image:: /images/ja/manuals/platform/notification/通知先設定一覧画面_delete_v2-7.png
+   .. figure:: /images/ja/manuals/platform/notification/通知先設定一覧画面_delete_v2-7.png
       :width: 600px
       :align: left
 
 #. | 確認メッセージが表示されるので、:kbd:`ワークスペースID/通知先ID` を入力し、 :guilabel:`はい、削除します` をクリックします。
 
-   .. image:: /images/ja/manuals/platform/notification/通知先設定削除実行確認画面.png
+   .. figure:: /images/ja/manuals/platform/notification/通知先設定削除実行確認画面.png
       :width: 600px
       :align: left
 
