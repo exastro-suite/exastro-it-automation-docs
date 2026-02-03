@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" modified="2023-06-14T07:27:04.947Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="nx74A0BKo0WQ8ZPh9JN8" version="21.3.7" type="device">
+  <diagram name="ページ1" id="nfEcKw9-6iYbInknxupI">
+    <mxGraphModel dx="1050" dy="549" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pw9xZOHRmdE0OJi-8WqL-1" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=4;strokeColor=#000099;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="40" y="150" width="240" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="pnCjOg8NUYqjeg9NoS2I-1" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#000099;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="60" y="210" width="200" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="pw9xZOHRmdE0OJi-8WqL-2" value="ワークスペースA" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#000099;" parent="1" vertex="1">
+          <mxGeometry x="80" y="155" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pw9xZOHRmdE0OJi-8WqL-3" value="メニューA" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;fillColor=none;strokeColor=#000099;fontColor=#000099;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="90" y="276" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="pw9xZOHRmdE0OJi-8WqL-4" value="ITA" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000099;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="135" y="230" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pw9xZOHRmdE0OJi-8WqL-5" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=2;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;strokeColor=#FFFFFF;fillColor=#000099;" parent="1" vertex="1">
+          <mxGeometry x="304" y="278" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="pnCjOg8NUYqjeg9NoS2I-2" value="メニューB" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;fillColor=none;strokeColor=#000099;fontColor=#000099;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="90" y="420" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="pnCjOg8NUYqjeg9NoS2I-3" value="１.データの投入、&lt;br&gt;テストを行います。" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.rectCallout;dx=30;dy=15;boundedLbl=1;fillColor=#000099;fontColor=#FFFFFF;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="80" y="25" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="pnCjOg8NUYqjeg9NoS2I-5" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=4;strokeColor=#000099;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="546" y="150" width="240" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="pnCjOg8NUYqjeg9NoS2I-6" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#000099;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="566" y="210" width="200" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="pnCjOg8NUYqjeg9NoS2I-7" value="ワークスペースB" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#000099;" parent="1" vertex="1">
+          <mxGeometry x="586" y="155" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pnCjOg8NUYqjeg9NoS2I-8" value="メニューA" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;fillColor=none;strokeColor=#000099;fontColor=#000099;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="596" y="276" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="pnCjOg8NUYqjeg9NoS2I-9" value="ITA" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000099;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="641" y="230" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pnCjOg8NUYqjeg9NoS2I-10" value="メニューB" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;fillColor=none;strokeColor=#000099;fontColor=#000099;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="596" y="420" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="pnCjOg8NUYqjeg9NoS2I-11" value="２.データを移行します。" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.rectCallout;dx=109.6;dy=25;boundedLbl=1;fillColor=#000099;fontColor=#FFFFFF;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="294" y="170" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="pnCjOg8NUYqjeg9NoS2I-12" value="３.作業の実行のみを行います。" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.rectCallout;dx=30;dy=15;boundedLbl=1;fillColor=#000099;fontColor=#FFFFFF;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="566" y="25" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="pnCjOg8NUYqjeg9NoS2I-16" value="" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.38;base=50;rotation=-180;rounded=1;strokeColor=#FF8000;fillColor=default;size=32;position=0.17;" parent="1" vertex="1">
+          <mxGeometry x="299" y="492" width="240" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="pnCjOg8NUYqjeg9NoS2I-17" value="※双方向でのデータの移行は、&lt;br style=&quot;font-size: 14px;&quot;&gt;データの不整合が発生する可能性が&lt;br style=&quot;font-size: 14px;&quot;&gt;あるため非推奨です。" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="294" y="540" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pnCjOg8NUYqjeg9NoS2I-19" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=2;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;strokeColor=#000099;fillColor=none;dashed=1;rotation=-180;" parent="1" vertex="1">
+          <mxGeometry x="304" y="417" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="pnCjOg8NUYqjeg9NoS2I-20" value="" style="shape=lineEllipse;perimeter=ellipsePerimeter;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=none;strokeWidth=11;strokeColor=#FF0000;rotation=60;" parent="1" vertex="1">
+          <mxGeometry x="370" y="412" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pnCjOg8NUYqjeg9NoS2I-21" value="※データ移行を複数行う前提の場合、データの登録・更新を行うとデータの不整合が発生する可能性があるため非推奨です。&lt;br&gt;作業の実行のみであれば影響はありません。" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0;base=84;rotation=0;rounded=1;strokeColor=#FF8000;fontSize=14;size=30;position=0.08;arcSize=50;fillColor=default;" parent="1" vertex="1">
+          <mxGeometry x="806" y="150" width="294" height="180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
