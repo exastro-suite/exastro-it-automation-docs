@@ -770,7 +770,15 @@
 <div class="line">また、 <span class="menuselection">各モード ▶ 作業実行</span> から作業実行した場合は、__workflowdir__と同じパスが設定されます。</div>
 <div class="line"><br /></div>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
 <div class="line-block">
+<div class="line">Parallel branchを使用して並列実行されるMovement間では、__conductor_workflowdir__ を介したファイルの共有はできません。</div>
+<div class="line">__conductor_workflowdir__ によるファイル共有は、並列関係にない後続の Movementとの間でのみ可能です。</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
 <div class="line"><span class="menuselection">Conductor ▶ Conductor編集/作業実行</span> の <span class="menuselection">Status file branchノード</span> で参照するステータスファイルのファイルパスを下記の変数として扱えます。</div>
 <div class="line"><span class="menuselection">Status file branchノード</span> についての詳細は「 <a class="reference internal" href="../it_automation_base/conductor.html"><span class="doc">Conductor</span></a> 」を参照してください。</div>
 </div>
