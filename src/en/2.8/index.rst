@@ -1,5 +1,5 @@
 =======================================
-Exastro IT Automation Documentation 2.7
+Exastro IT Automation Documentation 2.8
 =======================================
 
 .. raw:: html
