@@ -16,6 +16,7 @@ Exastro IT Automation Documentation 2.7
    learn/index
    manuals/index
    templates/index
+   addons/index
    reference/index
    kb/index
    glossary/index

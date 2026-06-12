@@ -84,7 +84,7 @@ OASE管理
 | OASEの通知機能を利用するために必要な作業フローは以下のとおりです。
 | 各作業の詳細は次項に記載しています。
 
-.. figure:: /images/ja/oase/oase_management/notification_template_process.png
+.. figure:: /images/ja/oase/oase_management/notification_template_process_v2-7.png
    :width: 700px
    :alt: 通知テンプレート（共通）作業フロー
 
@@ -1491,96 +1491,113 @@ EXASTRO_EVENT_COLLECTION_SETTINGで参照できる項目一覧
 通知テンプレート（共通）の設定例
 ----------------------------------
 
+設定項目（ServiceNow（レコード登録）の場合）
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+通知テンプレート（共通）で、ServiceNow (レコード登録) を通知方法として選択した場合の、TITLE、BODY について説明します。
+
+TITLEについて
+"""""""""""""
+
+| ServiceNow (レコード登録) を通知方法として選択した場合、TITLE に記載した内容は使用されません。
+
+BODYについて
+""""""""""""
+
+| ServiceNow (レコード登録) を通知方法として選択した場合、BODY にはServiceNow の REST API でレコード登録を行う際のリクエストボディの形式で記載する必要があります。
+
+- テンプレート例はあくまで一例です。実際の運用に合わせて、適宜カスタマイズしてください。
+
+- | 使用するパラメータについては、ServiceNow の 利用するアプリケーションに応じて、 マニュアルや、REST API リファレンスを参照してください。
+
+  - `ServiceNowテーブルAPIマニュアル <https://www.servicenow.com/docs/ja-JP/bundle/washingtondc-api-reference/page/integrate/inbound-rest/concept/c_TableAPI.html>`_ 参照してください
+
+  - REST APIエクスプローラー
+
+    - `https://<instance-name>.service-now.com/$restapi.do`
+
+    -  REST APIエクスプローラーの利用については、`ServiceNowのマニュアル <https://www.servicenow.com/docs/ja-JP/bundle/washingtondc-api-reference/page/integrate/inbound-rest/task/t_GetStartedAccessExplorer.html>`_ を参照してください
+
+.. tip::
+   | 埋め込むデータの中にダブルクォーテーション(")やバックスラッシュ(\\)が含まれる場合、ServiceNowに通知を行う時にエラーとなります。
+   | そのため、通知テンプレートに以下のフィルターを入れることでエラーを回避することができます。
+   
+   .. code-block:: none
+
+      {
+         "data_field": "{{ data_variable | replace('\\', '\\\\') | replace('"', '\\\"')}}"
+      }
+
 .. _notification_template_sample_servicenow_register:
 
 ServiceNow(レコード登録)の設定例
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-ServiceNow(レコード登録)を行う通知テンプレート（共通）の設定例を以下に示します。
+| ServiceNow(レコード登録)を行う通知テンプレート（共通）の設定例を以下に示します。
 
-- ServiceNowのインシデントテーブルにレコード登録を行う設定例
+ServiceNowのインシデントテーブルにレコード登録を行う設定例
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
-  | ここでは、デフォルトのテンプレートの内容から、TITLE の内容をServiceNowの short_description に、BODY に、イベントRAWデータ, エージェント の内容をServiceNowの description に設定する例を示します。
-  | イベントRAWデータ(raw_event_data), エージェント(exastro_agents) の内容は、Jinjaテンプレートのループ処理を使用して、動的に設定しています。
-
-
-  - | 1.新規イベント（受信時）のテンプレート例: New(received).j2
-
-    .. code-block:: jinja
-
-       [TITLE]
-       Event Received. {% if exastro_edit_count == 1 %}Primary Event{% else %}Consolidated Event{% endif %} ({{ exastro_edit_count }})
-
-       [BODY]
-       {
-           "short_description": "Event Received. {% if exastro_edit_count == 1 %}Primary Event{% else %}Consolidated Event{% endif %} ({{ exastro_edit_count }}) ",
-           "description": "RAW Event Data: {% for key, value in raw_event_data | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %},\n Agent: {% for key, value in exastro_agents | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %}",
-           "caller_id": "",
-           "impact": "2",
-           "urgency": "2",
-           "category": "Software",
-           "contact_type": "Phone",
-           "state": "1",
-           "subcategory": "Email",
-           "priority": "3",
-           "service": "Email Service"
-       }
+| ここでは、デフォルトのテンプレートの内容から、TITLE の内容をServiceNowの short_description に、BODY に、イベントRAWデータ, エージェント の内容をServiceNowの description に設定する例を示します。
+| イベントRAWデータ(raw_event_data), エージェント(exastro_agents) の内容は、Jinjaテンプレートのループ処理を使用して、動的に設定しています。
 
 
-  - | 1.新規イベント（受信時）の通知例
+- | 1.新規イベント（受信時）のテンプレート例: New(received).j2
 
-    .. figure:: /images/ja/oase/oase_management/snow_incident_sample_01_received.drawio.png
-      :width: 800px
-      :alt: 新規イベント（受信時）: ServiceNow(インシデント)
+.. code-block:: jinja
+
+   [TITLE]
+   Event Received. {% if exastro_edit_count == 1 %}Primary Event{% else %}Consolidated Event{% endif %} ({{ exastro_edit_count }})
+
+   [BODY]
+   {
+       "short_description": "Event Received. {% if exastro_edit_count == 1 %}Primary Event{% else %}Consolidated Event{% endif %} ({{ exastro_edit_count }}) ",
+       "description": "RAW Event Data: {% for key, value in raw_event_data | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %},\n Agent: {% for key, value in exastro_agents | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %}",
+       "caller_id": "",
+       "impact": "2",
+       "urgency": "2",
+       "category": "Software",
+       "contact_type": "Phone",
+       "state": "1",
+       "subcategory": "Email",
+       "priority": "3",
+       "service": "Email Service"
+   }
 
 
-  - | 2.新規イベント（統合時）のテンプレート例: New(consolidated).j2
+- | 1.新規イベント（受信時）の通知例
 
-    .. code-block:: jinja
+.. figure:: /images/ja/oase/oase_management/snow_incident_sample_01_received.drawio.png
+  :width: 800px
+  :alt: 新規イベント（受信時）: ServiceNow(インシデント)
 
-       [TITLE]
-       Event Consolidated by Deduplication {% if exastro_dup_notification_queue | default('0') == '1' %} (ttl expired) {% endif %}
 
-       [BODY]
-       {
-           "short_description": "Event Consolidated by Deduplication {% if exastro_dup_notification_queue | default('0') == '1' %}(ttl expired){% else %} {% endif %}",
-           "description": "RAW Event Data: {% for key, value in raw_event_data | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %},\n Agent: {% for key, value in exastro_agents | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %}",
-           "caller_id": "",
-           "impact": "2",
-           "urgency": "2",
-           "category": "Software",
-           "contact_type": "Phone",
-           "state": "1",
-           "subcategory": "Email",
-           "priority": "3",
-           "service": "Email Service"
-       }
+- | 2.新規イベント（統合時）のテンプレート例: New(consolidated).j2
 
-  - | 2.新規イベント（統合時）の通知例
+.. code-block:: jinja
 
-    .. figure:: /images/ja/oase/oase_management/snow_incident_sample_02_merged.drawio.png
-      :width: 800px
-      :alt: 新規イベント（統合時）: ServiceNow(インシデント)
+   [TITLE]
+   Event Consolidated by Deduplication {% if exastro_dup_notification_queue | default('0') == '1' %} (ttl expired) {% endif %}
 
-.. tip:: | TITLEについて
-   | ServiceNow (レコード登録) を通知方法として選択した場合、TITLE に記載した内容は使用されません。
+   [BODY]
+   {
+       "short_description": "Event Consolidated by Deduplication {% if exastro_dup_notification_queue | default('0') == '1' %}(ttl expired){% else %} {% endif %}",
+       "description": "RAW Event Data: {% for key, value in raw_event_data | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %},\n Agent: {% for key, value in exastro_agents | default({}) | items() %}\n  {{ key }}:{{ value }}{% if not loop.last %},{% endif %}{% endfor %}",
+       "caller_id": "",
+       "impact": "2",
+       "urgency": "2",
+       "category": "Software",
+       "contact_type": "Phone",
+       "state": "1",
+       "subcategory": "Email",
+       "priority": "3",
+       "service": "Email Service"
+   }
 
-.. tip:: | BODYについて
+- | 2.新規イベント（統合時）の通知例
 
-   | ServiceNow (レコード登録) を通知方法として選択した場合、BODY に記載した内容をリクエストボディとして使用します。
+.. figure:: /images/ja/oase/oase_management/snow_incident_sample_02_merged.drawio.png
+  :width: 800px
+  :alt: 新規イベント（統合時）: ServiceNow(インシデント)
 
-   | そのため、BODY には、ServiceNow の REST API でレコード登録を行う際のリクエストボディの形式で記載する必要があります。
-
-   - テンプレート例はあくまで一例です。実際の運用に合わせて、適宜カスタマイズしてください。
-
-   - 使用するパラメータについては、ServiceNow の 利用するアプリケーションに応じて、 マニュアルや、REST API リファレンスを参照してください。
-
-     - `ServiceNowテーブルAPIマニュアル <https://www.servicenow.com/docs/ja-JP/bundle/washingtondc-api-reference/page/integrate/inbound-rest/concept/c_TableAPI.html>`_ 参照してください
-
-     - REST APIエクスプローラー
-
-       - `https://<instance-name>.service-now.com/$restapi.do`
-
-       -  REST APIエクスプローラーの利用については、`ServiceNowのマニュアル <https://www.servicenow.com/docs/ja-JP/bundle/washingtondc-api-reference/page/integrate/inbound-rest/task/t_GetStartedAccessExplorer.html>`_ を参照してください
 
