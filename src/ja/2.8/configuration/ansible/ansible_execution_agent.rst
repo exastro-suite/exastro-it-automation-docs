@@ -113,6 +113,8 @@ OS要件
      - バージョン
    * - RHEL9
      - Red Hat Enterprise Linux release 9.4 (Plow)
+   * - RHEL10
+     - Red Hat Enterprise Linux release 10.1 (Coughlan)
    * - Almalinux8
      - AlmaLinux release 8.9 (Midnight Oncilla)
    * - Almalinux9
