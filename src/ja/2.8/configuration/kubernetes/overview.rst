@@ -79,14 +79,14 @@
 | フロントエンド系コンテナは自身のヘルスチェック用のエンドポイントにHTTP GETリクエストを10秒毎に行います。
 | 初回起動時はStartup Probeにより30回失敗した際にコンテナが再起動され、起動後はLiveness Probeにより3回失敗した際にコンテナが再起動されます。
 
-.. list-table:: Startup Probeの設定値
+.. list-table:: Startup Probeのパラメータ
    :widths: 30, 40, 30
    :header-rows: 1
    :align: left
 
    * - パラメータ
      - 説明
-     - 設定値
+     - デフォルト値
    * - httpGet.path
      - HTTP GETリクエストによるパスを指定。
      - （コンテナ毎のヘルスチェック用のパス）
@@ -106,14 +106,14 @@
      - Probeが失敗したと判断する最小回数を指定。
      - 30
 
-.. list-table:: Liveness Probeの設定値
+.. list-table:: Liveness Probeのパラメータ
    :widths: 30, 40, 30
    :header-rows: 1
    :align: left
 
    * - パラメータ
      - 説明
-     - 設定値
+     - デフォルト値
    * - httpGet.path
      - HTTP GETリクエストによるパスを指定。
      - （コンテナ毎のヘルスチェック用のパス）
@@ -134,14 +134,14 @@
      - 3
 
 
-.. list-table:: Readiness Probeの設定値
+.. list-table:: Readiness Probeのパラメータ
    :widths: 30, 40, 30
    :header-rows: 1
    :align: left
 
    * - パラメータ
      - 説明
-     - 設定値
+     - デフォルト値
    * - httpGet.path
      - HTTP GETリクエストによるパスを指定。
      - （コンテナ毎のヘルスチェック用のパス）
@@ -167,17 +167,17 @@
 | サーバーサイドジョブ系コンテナはハングアップしていないことを示すファイルが30秒以内に更新されているかの確認を10秒間隔で行っています。
 | 初回起動時はStartup Probeにより30回失敗した際にコンテナが再起動され、起動後はLiveness Probeにより3回失敗した際にコンテナが再起動されます。
 
-.. list-table:: Startup Probeの設定値
+.. list-table:: Startup Probeのパラメータ
    :widths: 30, 40, 30
    :header-rows: 1
    :align: left
 
    * - パラメータ
      - 説明
-     - 設定値
+     - デフォルト値
    * - exec.command
      - | Probeで実行するコマンドを指定。
-     - | （ハングアップしていないことを示すファイルが30秒以内に更新されているかの確認を行うコマンド）
+     - | （ハングアップしていないことを示すファイルが24時間以内に更新されているかの確認を行うコマンド）
    * - timeoutSeconds
      - Probeのタイムアウトを指定（秒）。
      - 30
@@ -191,17 +191,17 @@
      - Probeが失敗したと判断する最小回数を指定。
      - 30
 
-.. list-table:: Liveness Probeの設定値
+.. list-table:: Liveness Probeのパラメータ
    :widths: 30, 40, 30
    :header-rows: 1
    :align: left
 
    * - パラメータ
      - 説明
-     - 設定値
+     - デフォルト値
    * - exec.command
      - | Probeで実行するコマンドを指定。
-     - | （ハングアップしていないことを示すファイルが30秒以内に更新されているかの確認を行うコマンド）
+     - | （ハングアップしていないことを示すファイルが24時間以内に更新されているかの確認を行うコマンド）
    * - timeoutSeconds
      - Probeのタイムアウトを指定（秒）。
      - 30
