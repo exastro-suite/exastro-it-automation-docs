@@ -119,7 +119,7 @@ APIのアクセス（認証）について
    :caption: 機器一覧のレコード取得APIを呼出
 
     BASEURL="https://servername"
-    ORGANAIZATION_ID="オーガナイゼーションID"
+    ORGANIZATION_ID="オーガナイゼーションID"
     WORKSPACE_ID="ワークスペースID"
     MENU="device_list"
     USERNAME="ユーザー名"
@@ -127,16 +127,16 @@ APIのアクセス（認証）について
     BASE64_BASIC=$(echo -n "ユーザー名を設定してください:パスワードを設定してください" | base64)
 
     # 機器一覧の全レコードを取得する
-    curl -X GET -u "${USERNAME}:${PASSWORD}" "${BASEURL}/api/${ORGANAIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/filter/"
+    curl -X GET -u "${USERNAME}:${PASSWORD}" "${BASEURL}/api/${ORGANIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/filter/"
 
     # 機器一覧の全レコードを取得する
     curl -X GET \
-      "${BASEURL}/api/${ORGANAIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/filter/" \
+      "${BASEURL}/api/${ORGANIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/filter/" \
       -H "Authorization: Basic ${BASE64_BASIC}" \
 
     # 機器一覧の条件指定した、レコードを取得する（条件：廃止済みを除く）
     curl -X POST \
-      "${BASEURL}/api/${ORGANAIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/filter/" \
+      "${BASEURL}/api/${ORGANIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/filter/" \
       -H "Authorization: Basic ${BASE64_BASIC}" \
       -H "Content-Type: application/json" \
       --data-raw "{\"discard\":{\"LIST\":[\"0\"]}}"
@@ -465,7 +465,7 @@ Ansible共通 - 機器一覧
    :caption: 実行手順(サンプル)：機器一覧
 
    BASEURL="https://servername"
-   ORGANAIZATION_ID="オーガナイゼーションID"
+   ORGANIZATION_ID="オーガナイゼーションID"
    WORKSPACE_ID="ワークスペースID"
    MENU="device_list"
    USERNAME="ユーザー名"
@@ -474,7 +474,7 @@ Ansible共通 - 機器一覧
 
    # Content-Type: application/json
    curl -X POST \
-     "${BASEURL}/api/${ORGANAIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/maintenance/all/" \
+     "${BASEURL}/api/${ORGANIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/maintenance/all/" \
      -H "Authorization: Basic ${BASE64_BASIC}" \
      -H "Content-Type: application/json" \
      --data-raw "[{ \"file\": {\"ssh_private_key_file\": \"\", \"server_certificate\": \"\"}, \"parameter\": { \"authentication_method\": \"パスワード認証\", \"connection_options\": null, \"connection_type\": \"machine\", \"discard\": \"0\", \"host_dns_name\": null, \"host_name\": \"exastro-test\", \"hw_device_type\": null, \"instance_group_name\": null, \"inventory_file_additional_option\": null, \"ip_address\": \"127.0.0.1\", \"lang\": \"utf-8\", \"login_password\": \"password\", \"login_user\": \"root\", \"os_type\": null, \"passphrase\": null, \"port_no\": null, \"protocol\": \"ssh\", \"remarks\": null, \"server_certificate\": null, \"ssh_private_key_file\": null }} ]"
@@ -483,7 +483,7 @@ Ansible共通 - 機器一覧
 
    # Content-Type: Multipart/form-data
    curl -X POST \
-     "${BASEURL}/api/${ORGANAIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/maintenance/all/" \
+     "${BASEURL}/api/${ORGANIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/maintenance/all/" \
      -H "Authorization: Basic ${BASE64_BASIC}" \
      -F 'json_parameters="[ { "parameter": { "discard": "0", "managed_system_item_number": null, "hw_device_type": null, "host_name": "exastro-test", "host_dns_name": null, "ip_address": "127.0.0.1", "login_user": "root", "login_password": "asdfghjkl", "ssh_private_key_file": "ssh_key_file.pem", "authentication_method": "パスワード認証","port_no": null, "server_certificate": "certificate_file.crt", "protocol": "ssh", "os_type": null, "lang": "utf-8", "connection_options": null, "inventory_file_additional_option": null, "instance_group_name": null,"connection_type": "machine", "remarks": null,"last_update_date_time": null, "last_updated_user": null}, "type": "Register" }]"' \
      -F '0.ssh_private_key_file=@/ssh_key_file.pem' \
@@ -499,7 +499,7 @@ Ansible-Legacy - Playbook素材集
    :caption: 実行手順(サンプル)：Playbook素材集
 
    BASEURL="https://servername"
-   ORGANAIZATION_ID="オーガナイゼーションID"
+   ORGANIZATION_ID="オーガナイゼーションID"
    WORKSPACE_ID="ワークスペースID"
    MENU="playbook_files"
    USERNAME="ユーザー名"
@@ -508,14 +508,14 @@ Ansible-Legacy - Playbook素材集
 
    # Content-Type: application/json
    curl -X POST \
-     "${BASEURL}/api/${ORGANAIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/maintenance/all/" \
+     "${BASEURL}/api/${ORGANIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/maintenance/all/" \
      -H "Authorization: Basic ${BASE64_BASIC}" \
      -H "Content-Type: application/json" \
      --data-raw "[{\"file\":{\"playbook_file\":\"LSBuYW1lOiBydW4gImVjaG8iCiAgY29tbWFuZDogZWNobyB7eyBWQVJfU1RSXzEgfX0=\"},\"parameter\":{\"discard\":\"0\",\"item_no\":null,\"playbook_name\":\"echo\",\"playbook_file\":\"echo.yml\",\"remarks\":null,\"last_update_date_time\":null,\"last_updated_user\":null},\"type\":\"Register\"}]"
 
    # Content-Type: Multipart/form-data
    curl -X POST
-    "${BASEURL}/api/${ORGANAIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/maintenance/all/" \
+    "${BASEURL}/api/${ORGANIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/maintenance/all/" \
     -H "Authorization: Basic ${BASE64_BASIC}" \
     -F "json_parameters=[{\"parameter\":{\"discard\":\"0\",\"item_no\":null,\"playbook_name\":\"echo\",\"playbook_file\":\"echo.yml\",\"remarks\":null,\"last_update_date_time\":null,\"last_updated_user\":null},\"type\":\"Register\"}] " \
     -F "0.playbook_file=@echo.yml"
@@ -547,7 +547,7 @@ APIのパラメータ関連情報（Menu Info メニュー情報の取得）
      :caption: メニューの構成情報取得API
 
      BASEURL="https://servername"
-     ORGANAIZATION_ID="オーガナイゼーションID"
+     ORGANIZATION_ID="オーガナイゼーションID"
      WORKSPACE_ID="ワークスペースID"
      MENU="対象メニュー"
      USERNAME="ユーザー名"
@@ -555,7 +555,7 @@ APIのパラメータ関連情報（Menu Info メニュー情報の取得）
      BASE64_BASIC=$(echo -n "ユーザー名を設定してください:パスワードを設定してください" | base64)
 
      curl -X GET \
-       "${BASEURL}/api/${ORGANAIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/info/" \
+       "${BASEURL}/api/${ORGANIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/info/" \
        -H "Authorization: Basic ${BASE64_BASIC}" \
 
   .. code-block:: text
@@ -646,7 +646,7 @@ APIのパラメータ関連情報（Menu Info メニュー情報の取得）
      :caption: パラメータの項目取得API
 
      BASEURL="https://servername"
-     ORGANAIZATION_ID="オーガナイゼーションID"
+     ORGANIZATION_ID="オーガナイゼーションID"
      WORKSPACE_ID="ワークスペースID"
      MENU="対象メニュー"
      USERNAME="ユーザー名"
@@ -654,7 +654,7 @@ APIのパラメータ関連情報（Menu Info メニュー情報の取得）
      BASE64_BASIC=$(echo -n "ユーザー名を設定してください:パスワードを設定してください" | base64)
 
      curl -X GET \
-       "${BASEURL}/api/${ORGANAIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/column/" \
+       "${BASEURL}/api/${ORGANIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/column/" \
        -H "Authorization: Basic ${BASE64_BASIC}" \
 
 
@@ -691,7 +691,7 @@ APIのパラメータ関連情報（Menu Info メニュー情報の取得）
      :caption: プルダウン項目情報取得API
 
      BASEURL="https://servername"
-     ORGANAIZATION_ID="オーガナイゼーションID"
+     ORGANIZATION_ID="オーガナイゼーションID"
      WORKSPACE_ID="ワークスペースID"
      MENU="対象メニュー"
      USERNAME="ユーザー名"
@@ -699,7 +699,7 @@ APIのパラメータ関連情報（Menu Info メニュー情報の取得）
      BASE64_BASIC=$(echo -n "ユーザー名を設定してください:パスワードを設定してください" | base64)
 
      curl -X GET \
-       "${BASEURL}/api/${ORGANAIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/info/pulldown/" \
+       "${BASEURL}/api/${ORGANIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/${MENU}/info/pulldown/" \
        -H "Authorization: Basic ${BASE64_BASIC}" \
 
   - | 例: 「:menuselection:`機器一覧`」のレスポンス
