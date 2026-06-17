@@ -37,7 +37,21 @@
 - サーバーサイドジョブ系コンテナ
 
   - | platform-job
+  - | ita-by-ansible-execute
+  - | ita-by-ansible-legacy-role-vars-listup
+  - | ita-by-ansible-legacy-vars-listup
+  - | ita-by-ansible-pioneer-vars-listup
+  - | ita-by-ansible-towermaster-sync
+  - | ita-by-cicd-for-iac
+  - | ita-by-collector-6944585b9f
   - | ita-by-conductor-regularly
+  - | ita-by-conductor-synchronize
+  - | ita-by-hostgroup-split
+  - | ita-by-oase-conclusion
+  - | ita-by-terraform-cli-execute
+  - | ita-by-terraform-cli-vars-listup
+  - | ita-by-terraform-cloud-ep-execute
+  - | ita-by-terraform-cloud-ep-vars-listup
 
 .. warning::
   | ProbeはKubernetesの機能であるため、:doc:`Kubernetesを用いたインストール<../../installation/online/exastro/kubernetes>` をした場合のみ利用可能です。
