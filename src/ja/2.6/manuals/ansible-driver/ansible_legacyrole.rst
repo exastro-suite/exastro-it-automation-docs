@@ -379,7 +379,7 @@ Movement一覧
 #. | ユーザが作成したロールパッケージファイル（zip）のメンテナンス（閲覧/登録/更新/廃止）を行います。
    | ロールパッケージファイルは、「roles」のある階層のディレクトリをzipにて圧縮したものを登録してください。ロールパッケージディレクトリ構成などは「 :ref:`ansible_legacyrole_write_role_package_ansible_legacy_role` 」を参照してください。
 
-   .. figure:: /images/ja/ansible-legacyrole/role_packeage_management/role_package_list_v2-4.png
+   .. figure:: /images/ja/ansible-legacyrole/role_packeage_management/role_package_list_v2-8.png
       :width: 800px
       :alt: サブメニュー画面（ロールパッケージ管理）
 
@@ -387,7 +387,7 @@ Movement一覧
 
 #. | :guilabel:`登録` ボタンより、ロールパッケージの登録を行います。
 
-   .. figure:: /images/ja/ansible-legacyrole/role_packeage_management/registration_role_package_list_v2-4.gif
+   .. figure:: /images/ja/ansible-legacyrole/role_packeage_management/registration_role_package_list_v2-8.gif
       :width: 800px
       :alt: 登録画面（ロールパッケージ管理）
 
