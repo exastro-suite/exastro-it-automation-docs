@@ -367,7 +367,7 @@ Playbook素材集
    | サンプルPlaybookのPlaybook素材名は、先頭に「~[Exastro standard]」が付与されています。
    | サンプルPlaybookをMovementと紐付けることにより、利用することが出来ます。
 
-   .. figure:: /images/ja/ansible-legacy/playbook_list/playbook_list_v2-4.png
+   .. figure:: /images/ja/ansible-legacy/playbook_list/playbook_listv2-8.png
       :width: 800px
       :alt: サブメニュー画面（Playbook素材集）
 
@@ -375,7 +375,7 @@ Playbook素材集
 
 #. | :guilabel:`登録` ボタンより、Playbookの登録を行います。
 
-   .. figure:: /images/ja/ansible-legacy/playbook_list/registration_playbook_list_v2-4.gif
+   .. figure:: /images/ja/ansible-legacy/playbook_list/registration_playbook_list_v2-8.gif
       :width: 800px
       :alt: 登録画面（Playbook素材集）
 

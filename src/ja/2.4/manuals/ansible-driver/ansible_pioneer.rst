@@ -329,7 +329,7 @@ Movement一覧
 #. | 対話種別のメンテナンス（閲覧/登録/更新/廃止）を行います。
    | Ansible-Pioneerでは、「OS種別」ごとの差異を対話ファイルごとに定義し、同一目的の対話ファイルを「対話種別」として纏めて機器差分を吸収（抽象化）します。
 
-   .. figure:: /images/ja/ansible_pioneer/dialog_type_list/dialog_type_list_v2-4.png
+   .. figure:: /images/ja/ansible_pioneer/dialog_type_list/dialog_type_list_v2-8.png
       :width: 800px
       :alt: サブメニュー画面（対話種別）
 
@@ -337,7 +337,7 @@ Movement一覧
 
 #. | :guilabel:`登録` ボタンより、対話種別の登録を行います。
 
-   .. figure:: /images/ja/ansible_pioneer/dialog_type_list/registration_dialog_type_list_v2-4.gif
+   .. figure:: /images/ja/ansible_pioneer/dialog_type_list/registration_dialog_type_list_v2-8.gif
       :width: 800px
       :alt: 登録画面（対話種別）
 
