@@ -146,7 +146,8 @@ OS要件
 .. note::
    | Almalinuxでは :command:`python3` と :command:`pip3` コマンドがPython3.11に紐づいている必要があります。
 
-なお、インストール時には下記のansible-builderおよびansible-runnerのインストールが自動的に行われます。
+| なお、Ansible Execution Agentインストール時にansible-builderおよびansible-runnerを、Ansibleコミュニティ版 又はRedHatサブスクリプションライセンス利用版 から選択することが出来ます。
+| Ansibleコミュニティ版を選択した場合には下記のバージョンのansible-builderおよびansible-runnerのインストールが自動的に行われます。
 
 .. list-table:: バージョン情報
    :widths: 50 50
@@ -160,6 +161,7 @@ OS要件
    * - | ansible-runner
      - | 2.4.1
 
+| :ref:`RedHatサブスクリプションライセンス利用版<ansible_execution_agent_rhel_support_requirements>` を選択した場合はレポジトリ内の最新バージョンのansible-builderおよびansible-runnerのインストールが自動的に行われます。
 
 .. _ansible_execution_agent_communication_requirements:
 
