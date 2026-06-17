@@ -1,0 +1,17 @@
+# pv-pf-auditlog.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-auditlog
+spec:
+  claimRef:
+    name: pvc-pf-auditlog
+    namespace: exastro
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /var/log/exastro
+    type: DirectoryOrCreate
