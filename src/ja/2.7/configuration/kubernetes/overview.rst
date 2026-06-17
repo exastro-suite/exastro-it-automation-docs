@@ -37,7 +37,21 @@
 - サーバーサイドジョブ系コンテナ
 
   - | platform-job
+  - | ita-by-ansible-execute
+  - | ita-by-ansible-legacy-role-vars-listup
+  - | ita-by-ansible-legacy-vars-listup
+  - | ita-by-ansible-pioneer-vars-listup
+  - | ita-by-ansible-towermaster-sync
+  - | ita-by-cicd-for-iac
+  - | ita-by-collector-6944585b9f
   - | ita-by-conductor-regularly
+  - | ita-by-conductor-synchronize
+  - | ita-by-hostgroup-split
+  - | ita-by-oase-conclusion
+  - | ita-by-terraform-cli-execute
+  - | ita-by-terraform-cli-vars-listup
+  - | ita-by-terraform-cloud-ep-execute
+  - | ita-by-terraform-cloud-ep-vars-listup
 
 .. warning::
   | ProbeはKubernetesの機能であるため、:doc:`Kubernetesを用いたインストール<../../installation/online/exastro/kubernetes>` をした場合のみ利用可能です。
@@ -65,14 +79,14 @@
 | フロントエンド系コンテナは自身のヘルスチェック用のエンドポイントにHTTP GETリクエストを10秒毎に行います。
 | 初回起動時はStartup Probeにより30回失敗した際にコンテナが再起動され、起動後はLiveness Probeにより3回失敗した際にコンテナが再起動されます。
 
-.. list-table:: Startup Probeの設定値
+.. list-table:: Startup Probeのパラメータ
    :widths: 30, 40, 30
    :header-rows: 1
    :align: left
 
    * - パラメータ
      - 説明
-     - 設定値
+     - デフォルト値
    * - httpGet.path
      - HTTP GETリクエストによるパスを指定。
      - （コンテナ毎のヘルスチェック用のパス）
@@ -92,14 +106,14 @@
      - Probeが失敗したと判断する最小回数を指定。
      - 30
 
-.. list-table:: Liveness Probeの設定値
+.. list-table:: Liveness Probeのパラメータ
    :widths: 30, 40, 30
    :header-rows: 1
    :align: left
 
    * - パラメータ
      - 説明
-     - 設定値
+     - デフォルト値
    * - httpGet.path
      - HTTP GETリクエストによるパスを指定。
      - （コンテナ毎のヘルスチェック用のパス）
@@ -120,14 +134,14 @@
      - 3
 
 
-.. list-table:: Readiness Probeの設定値
+.. list-table:: Readiness Probeのパラメータ
    :widths: 30, 40, 30
    :header-rows: 1
    :align: left
 
    * - パラメータ
      - 説明
-     - 設定値
+     - デフォルト値
    * - httpGet.path
      - HTTP GETリクエストによるパスを指定。
      - （コンテナ毎のヘルスチェック用のパス）
@@ -150,20 +164,20 @@
 サーバーサイドジョブ系コンテナのProbe
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-| サーバーサイドジョブ系コンテナはハングアップしていないことを示すファイルが30秒以内に更新されているかの確認を10秒間隔で行っています。
+| サーバーサイドジョブ系コンテナはハングアップしていないことを示すファイルが24時間以内に更新されているかの確認を10秒間隔で行っています。
 | 初回起動時はStartup Probeにより30回失敗した際にコンテナが再起動され、起動後はLiveness Probeにより3回失敗した際にコンテナが再起動されます。
 
-.. list-table:: Startup Probeの設定値
+.. list-table:: Startup Probeのパラメータ
    :widths: 30, 40, 30
    :header-rows: 1
    :align: left
 
    * - パラメータ
      - 説明
-     - 設定値
+     - デフォルト値
    * - exec.command
      - | Probeで実行するコマンドを指定。
-     - | （ハングアップしていないことを示すファイルが30秒以内に更新されているかの確認を行うコマンド）
+     - | （ハングアップしていないことを示すファイルが24時間以内に更新されているかの確認を行うコマンド）
    * - timeoutSeconds
      - Probeのタイムアウトを指定（秒）。
      - 30
@@ -177,17 +191,17 @@
      - Probeが失敗したと判断する最小回数を指定。
      - 30
 
-.. list-table:: Liveness Probeの設定値
+.. list-table:: Liveness Probeのパラメータ
    :widths: 30, 40, 30
    :header-rows: 1
    :align: left
 
    * - パラメータ
      - 説明
-     - 設定値
+     - デフォルト値
    * - exec.command
      - | Probeで実行するコマンドを指定。
-     - | （ハングアップしていないことを示すファイルが30秒以内に更新されているかの確認を行うコマンド）
+     - | （ハングアップしていないことを示すファイルが24時間以内に更新されているかの確認を行うコマンド）
    * - timeoutSeconds
      - Probeのタイムアウトを指定（秒）。
      - 30
