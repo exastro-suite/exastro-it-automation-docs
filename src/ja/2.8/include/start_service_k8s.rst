@@ -31,10 +31,6 @@
 
    | 上記で起動した対象の Pod 数が元に戻り、次の例外を除いてすべて :kbd:`READY` になっていることを確認します。
 
-   .. note::
-      | 以下のリソースについては :kbd:`READY` が 0/(Pod数)のままとなります。
-      | - deployment.apps/ita-by-conductor-regularly
-
    .. code-block:: bash
       :caption: コマンド
 
