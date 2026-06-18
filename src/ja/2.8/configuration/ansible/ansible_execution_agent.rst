@@ -146,49 +146,27 @@ OS要件
 .. note::
    | Almalinuxでは :command:`python3` と :command:`pip3` コマンドがPython3.11に紐づいている必要があります。
 
-| なお、Ansible Execution Agentインストール時にansible-builderおよびansible-runnerを、Ansibleコミュニティ版 又はRedHatサブスクリプションライセンス利用版 から選択することが出来ます。
-| Ansibleコミュニティ版を選択した場合には下記のバージョンのansible-builderおよびansible-runnerのインストールが自動的に行われます。
+| Ansible Execution Agentの動作確認の際、以下のバージョンのAnsible-builder/Ansible-runnerを使用しております。
 
-.. list-table:: バージョン情報
-   :widths: 50 50
+.. list-table:: 動作確認済みバージョン情報
+   :widths: 50 50 60
    :header-rows: 1
    :align: left
 
    * - | ソフトウェア
-     - | バージョン
+     - | バージョン（コミュニティ版）
+     - | バージョン（RHELサポート付きライセンス版）
    * - | ansible-builder
-     - | 3.1.0
+     - | 3.1.1
+     - | 3.1.1-1.2.el9ap
    * - | ansible-runner
-     - | 2.4.1
-
-| :ref:`RedHatサブスクリプションライセンス利用版<ansible_execution_agent_rhel_support_requirements>` を選択した場合はレポジトリ内の最新バージョンのansible-builderおよびansible-runnerのインストールが自動的に行われます。
-
-.. _ansible_execution_agent_communication_requirements:
-
-通信要件
---------
-
-| エージェントサーバから、外部NWへの通信が可能である必要があります。
-
-- 接続先のITA
-- 各種インストール、及びモジュール、BaseImage取得先等（インターネットへの接続を含む）
-- 作業対象サーバ
-
-
-.. figure:: /images/ja/configuration/ansible/ansible_execution_agent_communication_requirements.drawio.png
-   :alt: Ansible Execution Agent 通信要件
-   :align: center
-
-
-.. _ansible_execution_agent_other_requirements:
-
-その他の要件
-------------
+     - | 2.4.3
+     - | 2.4.2-3.el9ap
 
 .. _ansible_execution_agent_rhel_support_requirements:
 
-RHEL(サポート付きライセンス利用の場合)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RHELサポート付きライセンス利用の場合
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 | Ansible-builder および Ansible-runner の有償版をご利用いただく際は、インストーラを実行する前に、必ずサブスクリプションの登録とリポジトリの有効化を完了させてください。
 
@@ -214,6 +192,29 @@ RHEL(サポート付きライセンス利用の場合)
       sudo subscription-manager repos --enable=rhel-9-for-x86_64-baseos-rpms
       sudo subscription-manager repos --enable=rhel-9-for-x86_64-appstream-rpms
       sudo subscription-manager repos --enable=ansible-automation-platform-2.5-for-rhel-9-x86_64-rpms
+
+
+.. _ansible_execution_agent_communication_requirements:
+
+通信要件
+--------
+
+| エージェントサーバから、外部NWへの通信が可能である必要があります。
+
+- 接続先のITA
+- 各種インストール、及びモジュール、BaseImage取得先等（インターネットへの接続を含む）
+- 作業対象サーバ
+
+
+.. figure:: /images/ja/configuration/ansible/ansible_execution_agent_communication_requirements.drawio.png
+   :alt: Ansible Execution Agent 通信要件
+   :align: center
+
+
+.. _ansible_execution_agent_other_requirements:
+
+その他の要件
+------------
 
 
 .. _ansible_execution_agent_base_images:
