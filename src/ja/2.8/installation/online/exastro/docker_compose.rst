@@ -267,6 +267,14 @@ Exastro on Docker Compose - Online
 .. note::
    | 生成された各種パラメータは、:file:`~/exastro-docker-compose/.env` に保存されています。
 
+.. tip::
+
+   Podman の場合は :file:`~/exastro-docker-compose/.env` に以下を設定してください。
+   
+   .. code-block:: shell
+   
+      HTTP_PROXY=<プロキシサーバーのアドレス>
+      HTTPS_PROXY=<プロキシサーバーのアドレス>
 
 オーガナイゼーションの作成
 ==========================

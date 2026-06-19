@@ -1098,6 +1098,14 @@ Exastro on Docker Compose - Offline
 
          podman ps
 
+.. tip::
+
+   Podman の場合は :file:`~/exastro-docker-compose/.env` に以下を設定してください。
+   
+   .. code-block:: shell
+   
+      HTTP_PROXY=<プロキシサーバーのアドレス>
+      HTTPS_PROXY=<プロキシサーバーのアドレス>
 
 ⑩カスタムイメージのビルド(必要な場合)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
