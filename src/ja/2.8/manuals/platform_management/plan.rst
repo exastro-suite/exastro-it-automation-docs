@@ -90,7 +90,7 @@
 
 .. note:: ita.organization.ansible.execution_limitについて
 
-   | オーガナイゼーションごとの同時実行数上限は、設定した内容となりますが、Exastro システム全体での最大同時実行数があるため、システム設定値で設定されている値が同時実行数上限となります。
+   | オーガナイゼーションごとの同時実行数上限は、設定した内容となりますが、Exastro システム全体での最大同時実行数があるため、システム全体の設定値が同時実行数上限となります。
    | システム全体の最大同時実行数を超えるMovement実行は、実行待ちとなります。
 
 .. note:: ita.organization.common.maintenance_records_limitについて
@@ -99,9 +99,8 @@
 
 .. tip::
 
-   | システムの上限値は、APIを利用して取得することができます。
-   | APIの利用方法については :doc:`../../reference/api/system_manager/certification` を参照してください。
-   | 取得するAPIについては :doc:`../../reference/api/system_manager/platform-api` を参照してください。
+   | システム全体の設定値は、APIを利用して取得・設定することができます。
+   | 取得・設定方法については  :ref:`systemcommonsetting` を参照してください。
 
 リソースプラン設定手順
 ----------------------
@@ -724,3 +723,146 @@
         .. note::
 
            | すべてのオーガナイゼーションの使用状況を取得する場合は、"?organization_id=${ORG_ID}" の条件を指定せずに実行してください
+
+.. _systemcommonsetting:
+
+
+付録：システム全体の設定を行う
+==============================
+
+
+項目一覧
+--------
+
+| リソースプランで設定できる項目の内、システム全体の設定が別途存在するものは以下の通りです。
+
+.. list-table:: システム全体の設定項目一覧
+   :widths: 70 30 30 120
+   :header-rows: 1
+
+   * - 項目名
+     - 既定値
+     - 最大値
+     - 説明
+   * - | ita.system.ansible.execution_limit
+     - | 25
+     - | 無し
+     - | Ansible driver の Movement同時実行数の上限値
+       | システム全体で、この設定値を超えるMovementは同時実行されず、超えたMovementは実行待ち（ステータス：未実行 のまま待機する形）となります。
+   * - | ita.system.menu_export_import.buffer_size
+     - | 10000
+     - | 無し
+     - | ITAにおけるメニュー一括エクスポート・インポート時の非同期処理中に、データベースから一度に取得するデータ量の上限値
+       | リソースプラン設定項目の ita.organization.menu_export_import.buffer_size と比較し、いずれか小さい方が使用されます。
+
+
+設定値の確認・更新
+------------------
+
+作業の前提条件
+^^^^^^^^^^^^^^
+
+| 本作業には下記のコマンドが必要となるため、事前にインストールをしてください。
+
+- 作業クライアントに必要なアプリケーション
+
+  - :kbd:`curl`
+  - :kbd:`jq`
+
+
+インストール時の設定
+^^^^^^^^^^^^^^^^^^^^
+
+| Exastro インストール時に指定した環境変数（docker-compose版では.env、Kubenetes版では :ref:`helm_option_ita-migration` ）によって設定されます。
+| 未定義の場合は既定値が使用されます。
+
+.. list-table:: システム全体の設定項目名一覧
+   :widths: 70 30 70 70
+   :header-rows: 1
+
+   * - 項目名
+     - 既定値
+     - docker-compose版
+     - Kubenetes版
+   * - | ita.system.ansible.execution_limit
+     - | 25
+     - | SYSTEM_ANSIBLE_EXECUTION_LIMIT
+     - | exastro-it-automation.ita-migration.extraEnv.SYSTEM_ANSIBLE_EXECUTION_LIMIT
+   * - | ita.system.menu_export_import.buffer_size
+     - | 10000
+     - | SYSTEM_MENU_EXPORT_IMPORT_BUFFER_SIZE
+     - | exastro-it-automation.ita-migration.extraEnv.SYSTEM_MENU_EXPORT_IMPORT_BUFFER_SIZE
+
+.. note::
+
+   | ita-migration初回処理実行時に設定されるため、ita-migration初回処理完了後（Exited (0)、Completed に遷移した後）に設定値を変更する必要がある場合は :ref:`systemcommonsetting_update` を使用してください。
+   | `.env` の更新や `helm upgrade` の実行 等を行いita-migrationを再度実行しても設定値は更新されません。
+
+
+
+設定値の確認
+^^^^^^^^^^^^
+
+| 以下のコマンドを実行して確認することができます。
+
+.. code-block:: bash
+
+ BASE64_BASIC=$(echo -n "システム管理者のユーザー名を設定してください:システム管理者のパスワードを設定してください" | base64)
+ BASE_URL=システム管理者用サイトアドレスを設定してください
+
+ curl -k -X GET \
+     -H "Content-Type: application/json" \
+     -H "Authorization: basic ${BASE64_BASIC}" \
+     -d  @- \
+     "${BASE_URL}/api/platform/settings/common" | jq '.data[] | select(.key == "ita.system.ansible.execution_limit" or .key == "ita.system.menu_export_import.buffer_size" )'
+
+
+| 出力例は下記です。
+| ※この場合は `ita.system.ansible.execution_limit`: 25、 `ita.system.menu_export_import.buffer_size`: 10000と設定されていることが確認できます。
+
+.. code-block:: json
+
+ {
+  "description": "Maximum number of movement executions for whole of IT automation",
+  "key": "ita.system.ansible.execution_limit",
+  "value": "25"
+ }
+ {
+   "description": "Maximum buffer size of menu Export/import for System default (Used for DB fetch size, file stream read size)",
+   "key": "ita.system.menu_export_import.buffer_size",
+   "value": "10000"
+ }
+
+
+.. _systemcommonsetting_update:
+
+設定値の更新
+^^^^^^^^^^^^
+
+| 以下のコマンドを実行して更新することができます。
+| ※この例は `ita.system.ansible.execution_limit` を100に変更しています。 `SETTING_DESCRIPTION` に空白が含まれる場合、ダブルクオーテーションで囲んでください。
+
+.. code-block:: bash
+
+ BASE64_BASIC=$(echo -n "システム管理者のユーザー名を設定してください:システム管理者のパスワードを設定してください" | base64)
+ BASE_URL=システム管理者用サイトアドレスを設定してください
+ SETTING_KEY=対象の設定項目名を設定してください
+ SETTING_VALUE=対象の設定項目値を設定してください
+ SETTING_DESCRIPTION="対象の設定項目に対する説明文を設定してください"
+
+ curl -k -X PUT \
+     -H "Content-Type: application/json" \
+     -H "Authorization: basic ${BASE64_BASIC}" \
+     -d  @- \
+     "${BASE_URL}/api/platform/settings/common/${SETTING_KEY}" \
+     << EOF
+ { "value": "${SETTING_VALUE}", "description": "${SETTING_DESCRIPTION}" }
+ EOF
+
+
+| 出力例は下記です。
+| ※ `SUCCESS` という返却があることを確認してください。
+
+.. code-block:: json
+
+ {"data":null,"message":"SUCCESS","result":"000-00000","ts":"2030-12-31T23:59:59.999Z"}
