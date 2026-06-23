@@ -755,6 +755,8 @@ Movement-Playbook紐付
 
          作業状態確認の代入値管理
 
+.. tip:: 
+ 代入値自動登録設定の連携対象項目については、:ref:`代入値自動登録設定の連携対象項目について <About_linkage_target_items_for_substitution_value_auto-registration_setting>` を参照してください。
 
 .. _ansible_legacy_execution:
 
