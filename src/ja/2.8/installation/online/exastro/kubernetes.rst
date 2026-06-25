@@ -1209,6 +1209,14 @@ Helm リポジトリの更新
    exastro/exastro-it-automation   1.2.0           2.0.3           A Helm chart for Exastro IT Automation. Exastro...
    exastro/exastro-platform        1.5.0           1.4.0           A Helm chart for Exastro Platform. Exastro Plat...
 
+.. warning::
+  | `exastro-platform.mongo.enabled: true` で構築を行った環境で helmリポジトリのCHART VERSIONを「1.7.3以前」から「1.7.4以後」に更新を行うと、:ref:`アップグレード実施<ita_upgrade>` で :command:`helm upgrade` を実行した際に下記エラーが発生する事象が確認されています。
+
+  .. code-block:: shell
+
+     Error: UPGRADE FAILED: cannot patch "mongo" with kind StatefulSet: StatefulSet.apps "mongo" is invalid: spec: Forbidden: updates to statefulset spec for fields other than 'replicas', 'ordinals', 'template', 'updateStrategy', 'persistentVolumeClaimRetentionPolicy' and 'minReadySeconds' are forbidden
+
+  | この場合は、一度 :command:`kubectl -n exastro delete statefulset mongo` を実行してから :command:`helm upgrade` を実行して下さい。
 
 デフォルト設定値の更新の確認
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
