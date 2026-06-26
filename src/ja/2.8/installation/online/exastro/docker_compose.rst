@@ -280,6 +280,7 @@ Exastro on Docker Compose - Online
 .. note::
    | 生成された各種パラメータは、:file:`~/exastro-docker-compose/.env` に保存されています。
 
+
 オーガナイゼーションの作成
 ==========================
 
