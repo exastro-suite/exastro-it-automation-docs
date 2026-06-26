@@ -491,7 +491,7 @@ Workspace管理
 #. | :menuselection:`Terraform Cloud/EP-->Workspace管理` では、Terraformで利用するWorkspaceについてのメンテナンス（閲覧/登録/更新/廃止）を行います。
    | また、ITAに登録したWorkspaceをTerraformへの連携（登録/更新/削除）とリソース削除（terraform destroy）を実行することができます。
 
-   .. figure:: /images/ja/terraform_cloud_ep_driver/operation_method_explanation/workspace_list_menu.png
+   .. figure:: /images/ja/terraform_cloud_ep_driver/operation_method_explanation/workspace_list_menu_v2-8.png
       :width: 800px
       :alt: サブメニュー画面（Workspace管理）
 
@@ -499,7 +499,7 @@ Workspace管理
 
 #. | :guilabel:`＋ 登録` ボタンより、Workspace情報の登録を行います。
 
-   .. figure:: /images/ja/terraform_cloud_ep_driver/operation_method_explanation/workspace_list_register.gif
+   .. figure:: /images/ja/terraform_cloud_ep_driver/operation_method_explanation/workspace_list_register_v2-8.gif
       :width: 800px
       :alt: 登録画面（Workspace管理）
 
@@ -513,7 +513,7 @@ Workspace管理
    | 『Terraformとの接続に失敗しました。インターフェース情報を確認して下さい。』
    | また、選択したOrganizationがTerraformに連携（登録）されていない場合も同様のメッセージが表示されます。
 
-   .. figure:: /images/ja/terraform_cloud_ep_driver/operation_method_explanation/workspace_list_terraform_link.gif
+   .. figure:: /images/ja/terraform_cloud_ep_driver/operation_method_explanation/workspace_list_terraform_link_v2-8.gif
       :width: 800px
       :alt: Terraform連携（Workspace管理）
 
@@ -536,6 +536,13 @@ Workspace管理
       |                                   | _organization_list`」にて\   |           |              |                 |
       |                                   | 登録したOrganization名を\    |           |              |                 |
       |                                   | 選択します。                 |           |              |                 |
+      +-----------------+--------+--------+------------------------------+-----------+--------------+-----------------+
+      | Project名                         | Projectの名前を入力\         | ー        | 手動入力     | 最大長40バイト  |
+      |                                   | します。                     |           |              |                 |
+      |                                   |                              |           |              |                 |
+      |                                   | 空欄の場合\                  |           |              |                 |
+      |                                   | 「Default Project」に\       |           |              |                 |
+      |                                   | 紐づきます。                 |           |              |                 |
       +-----------------+--------+--------+------------------------------+-----------+--------------+-----------------+
       | Workspace名                       | Workspaceの名前を入力\       | ○         | 手動入力     | 最大長90バイト  |
       |                                   | します。                     |           |              |                 |
