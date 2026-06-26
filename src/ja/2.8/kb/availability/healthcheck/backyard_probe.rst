@@ -76,8 +76,8 @@
 
    2025-06-01 10:00:00,123 INFO  Backyard job has started
    2025-06-01 10:00:07,456 INFO  Backyard job has started
-   2025-06-01 10:00:14,523 INFO  Backyard job has started
-   2025-06-01 10:00:22,889 INFO  Backyard job has started
+   2025-06-01 10:00:13,523 INFO  Backyard job has started
+   2025-06-01 10:00:21,889 INFO  Backyard job has started
    2025-06-01 10:00:28,456 INFO  Backyard job has started
    2025-06-01 10:00:34,123 INFO  Backyard job has started
 
@@ -93,9 +93,9 @@
 
    2025-06-01 10:00:00,123 INFO  Backyard job has started
    2025-06-01 10:00:07,456 INFO  Backyard job has started (差分: 7.333秒)
-   2025-06-01 10:00:14,523 INFO  Backyard job has started (差分: 7.067秒)
-   2025-06-01 10:00:22,889 INFO  Backyard job has started (差分: 8.366秒)
-   2025-06-01 10:00:28,456 INFO  Backyard job has started (差分: 5.567秒)
+   2025-06-01 10:00:13,523 INFO  Backyard job has started (差分: 6.067秒)
+   2025-06-01 10:00:21,889 INFO  Backyard job has started (差分: 8.366秒)
+   2025-06-01 10:00:28,456 INFO  Backyard job has started (差分: 6.567秒)
    2025-06-01 10:00:34,123 INFO  Backyard job has started (差分: 5.667秒)
 
 
@@ -110,7 +110,7 @@
 | 本シナリオではこれらをそれぞれ 900秒・5秒・10秒に変更します。
 | 
 | なお、``startupProbe`` は、起動後に一度でも ``/tmp/liveness`` が書き込まれたかを確認するためのProbeです。
-| そのため、今回変更する3つの ``exec.command`` の閾値・ ``periodSeconds`` ・ ``timeoutSeconds`` の3項目については、 ``livenessProbe`` と同じ値に揃えます。
+| そのため、今回変更する ``exec.command`` の閾値・ ``periodSeconds`` ・ ``timeoutSeconds`` の3項目については、 ``livenessProbe`` と同じ値に揃えます。
 | 
 | ``/tmp/liveness`` はバックヤード処理が正常に動作している間、定期的に更新されます。
 | Probeはこの最終更新時刻を参照し、最後に更新されてから 900秒以上が経過した（更新が止まっている）場合にProbe失敗と判定します。
