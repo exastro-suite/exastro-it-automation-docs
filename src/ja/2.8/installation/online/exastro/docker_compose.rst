@@ -226,6 +226,19 @@ Exastro on Docker Compose - Online
    Deploy Exastro containers now? (y/n) [default: n]:
 
 | 詳細な設定を編集する場合は、 :command:`n` もしくは :command:`no` と入力し、以降の処理をスキップします。
+
+.. tip::
+
+  Podman の場合は :file:`~/exastro-docker-compose/.env` にプロキシ設定の記載が必要です。
+
+  プロキシ設定のコメントアウトを解除し、記載されているサンプル値を、必ず環境に合わせて修正してください。
+
+  .. code-block:: shell
+   
+    # HTTP_PROXY=http://proxy.example.com:8080
+    # HTTPS_PROXY=https://proxy.example.com:8443
+
+
 | そのまま Exastro システムのコンテナ群を起動する場合は、 :command:`y` もしくは :command:`yes` と入力します。
 | Exastro システムのデプロイには数分～数十分程度の時間が掛かります。(通信環境やサーバースペックによって状況は異なります。)
 
@@ -266,15 +279,6 @@ Exastro on Docker Compose - Online
 
 .. note::
    | 生成された各種パラメータは、:file:`~/exastro-docker-compose/.env` に保存されています。
-
-.. tip::
-
-   Podman の場合は :file:`~/exastro-docker-compose/.env` に以下を設定してください。
-   
-   .. code-block:: shell
-   
-      HTTP_PROXY=<プロキシサーバーのアドレス>
-      HTTPS_PROXY=<プロキシサーバーのアドレス>
 
 オーガナイゼーションの作成
 ==========================
