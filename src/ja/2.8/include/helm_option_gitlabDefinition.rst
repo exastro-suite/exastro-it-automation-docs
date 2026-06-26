@@ -38,9 +38,5 @@
      - 必須
      - アクセエストークン(平文)
 
-.. tip:: | **GITLAB_ROOT_PASSWORD に設定できないパスワード**
- | GITLAB_ROOT_PASSWORD に弱いパスワードを設定すると、GitLab がパスワードをブロックし、起動しない場合があります。以下の条件に該当するパスワードは使用できません。 
- |   ・既知の漏えいパスワードに一致するもの
- |   ・氏名・ユーザー名・メールアドレスの一部を含むもの
- |   ・推測されやすい語句（例：gitlab、devops）を含むもの
- | 参考: `GitLab Docs - Password requirements <https://docs.gitlab.com/user/profile/user_passwords/>`_
+.. tip::
+ | GitLabでは、脆弱なパスワードは許可されません。(参考: `GitLab Docs - Password requirements <https://docs.gitlab.com/user/profile/user_passwords/>`_)
