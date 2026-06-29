@@ -37,3 +37,6 @@
      - GitLab の root 権限アカウントのアクセストークン
      - 必須
      - アクセエストークン(平文)
+
+.. tip::
+ | GitLabでは、脆弱なパスワードは許可されません。(参考: `GitLab Docs - Password requirements <https://docs.gitlab.com/user/profile/user_passwords/>`_)

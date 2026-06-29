@@ -9,10 +9,6 @@
 | 正常に起動している場合は、:kbd:`ita-migration-xxx` と :kbd:`platform-migration-xxx` が :kbd:`Completed` 、その他すべてが :kbd:`Running` となります。
 | ※正常に起動するまで数分かかる場合があります。
 
-.. note::
-   | 以下のPODについては :kbd:`READY` が 0/1のままで、メンテナンスモードを解除後に :kbd:`READY` は 1/1となります。
-   | ita-by-conductor-regularly-xxxxxxxxxx-xxxxx
-
 .. code-block:: bash
    :caption: 出力結果
 
