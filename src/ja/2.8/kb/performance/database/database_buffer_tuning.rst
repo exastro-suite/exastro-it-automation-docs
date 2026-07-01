@@ -51,7 +51,7 @@ Buffer Poolの状況確認
 
 | これらの値を確認するため、通常の運用状態で計4回、以下のコマンドを実行しました。
 
-::
+.. code-block:: 
 
    SHOW GLOBAL STATUS;
 
@@ -84,7 +84,7 @@ Buffer Poolの状況確認
 | 
 | Kubernetes環境では標準でPodのメモリ使用量を取得できないため、Metrics Serverを導入した上で、以下のコマンドを実行して確認しました。
 
-::
+.. code-block:: 
 
    kubectl top pod -n <namespace>
 
