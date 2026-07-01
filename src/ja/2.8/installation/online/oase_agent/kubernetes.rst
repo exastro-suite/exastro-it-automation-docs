@@ -44,9 +44,9 @@ OASE Agent on Kubernetes - Online
    * - アプリケーション
      - バージョン
    * - Helm
-     - v3.9.x
+     - v3.19.2
    * - kubectl
-     - 1.23
+     - 1.34.2
 
 - デプロイ環境
 

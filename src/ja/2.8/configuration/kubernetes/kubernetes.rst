@@ -29,7 +29,7 @@ Kubernetesクラスター
  * - Storage (Container image size)
    - 10GB
  * - Kubernetes
-   - 1.23 以上
+   - 1.34 以上
  * - サーバー台数
    - 1台
 
@@ -46,7 +46,7 @@ Kubernetesクラスター
  * - Storage
    - 120GB
  * - Kubernetes
-   - 1.23 以上
+   - 1.34 以上
  * - サーバー台数
    - 2台 以上
 

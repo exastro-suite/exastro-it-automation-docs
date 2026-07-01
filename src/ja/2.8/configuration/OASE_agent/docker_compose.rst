@@ -63,7 +63,7 @@ OASE Agent on Docker Compose
  * - AlmaLinux release 9.6 (Sage Margay)
    - ー
    - ー
-   - Docker version 28.3.0, build 38b7060
+   - Docker version 29.5.3, build d1c06ef
 
 .. tip::
    | RHEL 8.2 もしくは podman 4.x の初期バージョンでは、ルートレスモードで正常に名前解決ができない事象が報告されています。RHEL 8.3 以降のバージョンをご使用ください。
