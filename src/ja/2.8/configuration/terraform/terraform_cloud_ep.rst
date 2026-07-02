@@ -102,11 +102,8 @@ Terraform Cloud/EP
    * - | システム
      - | Terraformバージョン
      - | 注意事項
-   * - | Terraform Enterprise
-     - | 1.12.x
-     - |
    * - | Terraform Cloud
-     - | 1.15.x
+     - | 1.15.5
      - |
 
 
