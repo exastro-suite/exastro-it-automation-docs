@@ -8,7 +8,7 @@
    - Docker Composeバージョン
    - Dockerバージョン
  * - Red Hat Enterprise Linux release 9.5 (Plow)
-   - podman version 5.8.2-rhel
+   - podman version 5.8.2
    - Docker Compose version v2.20.3
    - ー
  * - Red Hat Enterprise Linux release 9.4 (Plow)
