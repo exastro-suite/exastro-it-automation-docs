@@ -104,30 +104,7 @@ Docker Compose
 
 | 以下は、動作確認済みのオペレーティングシステムとコンテナプラットフォームのバージョンとなります。
 
-.. list-table:: 動作確認実績
- :widths: 25, 20, 20, 20
- :header-rows: 1
-
- * - OSバージョン
-   - podmanバージョン
-   - Docker Composeバージョン
-   - Dockerバージョン
- * - Red Hat Enterprise Linux release 9.4 (Plow)
-   - podman version 4.9.4-rhel
-   - Docker Compose version v2.20.3
-   - ー
- * - Red Hat Enterprise Linux release 8.9 (Ootpa)
-   - podman version 4.9.4-rhel
-   - Docker Compose version v2.20.3
-   - ー
- * - AlmaLinux release 8.9 (Midnight Oncilla)
-   - ー
-   - ー
-   - Docker version 26.1.3, build b72abbb
- * - AlmaLinux release 9.6 (Sage Margay)
-   - ー
-   - ー
-   - Docker version 28.3.0, build 38b7060
+..  include:: ../../include/docker_compose_tested_version.rst
 
 .. tip::
    | RHEL 8.2 もしくは podman 4.x の初期バージョンでは、ルートレスモードで正常に名前解決ができない事象が報告されています。RHEL 8.3 以降のバージョンをご使用ください。

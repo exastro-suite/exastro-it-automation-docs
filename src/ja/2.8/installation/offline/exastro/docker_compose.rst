@@ -111,26 +111,7 @@ Exastro on Docker Compose - Offline
 
   以下は、動作確認済のバージョンとなります。
 
-  .. list-table:: 動作確認実績
-   :widths: 25, 20, 20, 20
-   :header-rows: 1
-
-   * - OSバージョン
-     - podmanバージョン
-     - Docker Composeバージョン
-     - Dockerバージョン
-   * - Red Hat Enterprise Linux release 9.4 (Plow)
-     - podman version 4.9.4-rhel
-     - Docker Compose version v2.20.3
-     - ー
-   * - Red Hat Enterprise Linux release 8.9 (Ootpa)
-     - podman version 4.9.4-rhel
-     - Docker Compose version v2.20.3
-     - ー
-   * - AlmaLinux release 8.9 (Midnight Oncilla)
-     - ー
-     - ー
-     - Docker version 26.1.3, build b72abbb
+  ..  include:: ../../../include/docker_compose_tested_version.rst
 
 - アプリケーション
 

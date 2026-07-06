@@ -16,39 +16,7 @@ Kubernetesクラスター
 
 | Kubernetesクラスター環境の最小要求リソースとバージョンは下記のとおりです。
 
-.. list-table:: ハードウェア要件(最小構成)
- :widths: 20, 20
- :header-rows: 1
-
- * - リソース種別
-   - 要求リソース
- * - CPU
-   - 2 Cores (3.0 GHz, x86_64)
- * - Memory
-   - 4GB
- * - Storage (Container image size)
-   - 10GB
- * - Kubernetes
-   - 1.23 以上
- * - サーバー台数
-   - 1台
-
-.. list-table:: ハードウェア要件(推奨構成)
- :widths: 20, 20
- :header-rows: 1
-
- * - リソース種別
-   - 要求リソース
- * - CPU
-   - 4 Cores (3.0 GHz, x86_64)
- * - Memory
-   - 16GB
- * - Storage
-   - 120GB
- * - Kubernetes
-   - 1.23 以上
- * - サーバー台数
-   - 2台 以上
+..  include:: ../../include/kubernetes_hardware_requirement.rst
 
 .. warning::
   | 要求リソースは Exastro IT Automation のコア機能に対する値です。同一クラスタ上に Keycloak や MariaDB などの外部ツールをデプロイする場合は、その分のリソースが別途必要となります。

@@ -37,16 +37,16 @@ OASE Agent on Kubernetes - Online
 
   | 動作確認が取れているクライアントアプリケーションのバージョンは下記のとおりです。
 
-  .. list-table:: クライアント要件
+  .. list-table:: 動作確認済バージョン
    :widths: 20, 20
    :header-rows: 1
 
    * - アプリケーション
      - バージョン
    * - Helm
-     - v3.9.x
+     - v3.19.2
    * - kubectl
-     - 1.23
+     - 1.34.2
 
 - デプロイ環境
 

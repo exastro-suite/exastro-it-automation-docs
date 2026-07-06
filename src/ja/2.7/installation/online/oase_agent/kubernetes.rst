@@ -37,7 +37,7 @@ OASE Agent on Kubernetes - Online
 
   | 動作確認が取れているクライアントアプリケーションのバージョンは下記のとおりです。
 
-  .. list-table:: クライアント要件
+  .. list-table:: 動作確認済バージョン
    :widths: 20, 20
    :header-rows: 1
 
