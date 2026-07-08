@@ -6,5 +6,6 @@ Pod配置
    :maxdepth: 1
 
 
-   pod_place
+   affinity_resource_request_limit
+
    
