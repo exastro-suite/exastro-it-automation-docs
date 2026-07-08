@@ -45,16 +45,7 @@ Exastro on Kubernetes - Offline
 
   | 動作確認が取れているクライアントアプリケーションのバージョンは下記のとおりです。
 
-  .. list-table:: クライアント要件
-   :widths: 20, 20
-   :header-rows: 1
-
-   * - アプリケーション
-     - バージョン
-   * - Helm
-     - v3.9.x
-   * - kubectl
-     - 1.23
+  ..  include::  ../../../include/kubernetes_tested_version.rst
 
 - 動作確認済みオペレーティングシステム
 
@@ -73,35 +64,7 @@ Exastro on Kubernetes - Offline
 
   | 動作確認が取れているコンテナ環境の最小要求リソースとバージョンは下記のとおりです。
 
-  .. list-table:: ハードウェア要件(最小構成)
-   :widths: 20, 20
-   :header-rows: 1
-
-   * - リソース種別
-     - 要求リソース
-   * - CPU
-     - 2 Cores (3.0 GHz, x86_64)
-   * - Memory
-     - 4GB
-   * - Storage (Container image size)
-     - 10GB
-   * - Kubernetes (Container image size)
-     - 1.23 以上
-
-  .. list-table:: ハードウェア要件(推奨構成)
-   :widths: 20, 20
-   :header-rows: 1
-
-   * - リソース種別
-     - 要求リソース
-   * - CPU
-     - 4 Cores (3.0 GHz, x86_64)
-   * - Memory
-     - 16GB
-   * - Storage (Container image size)
-     - 120GB
-   * - Kubernetes (Container image size)
-     - 1.23 以上
+  ..  include:: ../../../include/kubernetes_hardware_requirement.rst
 
   .. warning::
     | 要求リソースは Exastro IT Automation のコア機能に対する値です。同一クラスタ上に Keycloak や MariaDB などの外部ツールをデプロイする場合は、その分のリソースが別途必要となります。

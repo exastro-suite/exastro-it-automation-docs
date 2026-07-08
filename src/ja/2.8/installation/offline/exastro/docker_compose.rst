@@ -111,26 +111,7 @@ Exastro on Docker Compose - Offline
 
   以下は、動作確認済のバージョンとなります。
 
-  .. list-table:: 動作確認実績
-   :widths: 25, 20, 20, 20
-   :header-rows: 1
-
-   * - OSバージョン
-     - podmanバージョン
-     - Docker Composeバージョン
-     - Dockerバージョン
-   * - Red Hat Enterprise Linux release 9.4 (Plow)
-     - podman version 4.9.4-rhel
-     - Docker Compose version v2.20.3
-     - ー
-   * - Red Hat Enterprise Linux release 8.9 (Ootpa)
-     - podman version 4.9.4-rhel
-     - Docker Compose version v2.20.3
-     - ー
-   * - AlmaLinux release 8.9 (Midnight Oncilla)
-     - ー
-     - ー
-     - Docker version 26.1.3, build b72abbb
+  ..  include:: ../../../include/docker_compose_tested_version.rst
 
 - アプリケーション
 
@@ -978,6 +959,19 @@ Exastro on Docker Compose - Offline
 
       | 必要なパッケージなどのインストールが完了すると下記のように対話形式で設定値を投入することが可能です。
       | 詳細な設定を編集する場合は、:command:`n` もしくは :command:`no` と入力し、以降の処理をスキップします。
+
+      .. tip::
+
+        Podman の場合は :file:`~/exastro-docker-compose/.env` にプロキシ設定の記載が必要です。
+
+        プロキシ設定のコメントアウトを解除し、記載されているサンプル値を、必ず環境に合わせて修正してください。
+
+        .. code-block:: shell
+   
+          # HTTP_PROXY=http://proxy.example.com:8080
+          # HTTPS_PROXY=https://proxy.example.com:8443
+
+
       | そのまま Exastro システムのコンテナ群を起動する場合は、:command:`y` もしくは :command:`yes` と入力します。
       | Exastro システムのデプロイには数分～数十分程度の時間が掛かります。(通信環境やサーバースペックによって状況は異なります。)
 

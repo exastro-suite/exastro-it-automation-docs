@@ -3,7 +3,6 @@
 ============
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   cpu_memory/index
    pod_placement/index
