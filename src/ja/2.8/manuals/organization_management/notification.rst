@@ -51,7 +51,7 @@
 
    - 新規通知先設定画面（共通部、送信設定）
 
-     .. figure:: /images/ja/manuals/platform/notification/新規通知先設定画面_共通_v2-7.png
+     .. figure:: /images/ja/manuals/platform/notification/新規通知先設定画面_共通_v2-8.png
         :width: 600px
         :align: left
 
@@ -80,7 +80,7 @@
 
    - 通知方法がMailの時の画面
 
-     .. figure:: /images/ja/manuals/platform/notification/新規通知先設定画面_Mail_v2-7.png
+     .. figure:: /images/ja/manuals/platform/notification/新規通知先設定画面_Mail_v2-8.png
         :width: 600px
         :align: left
 
@@ -98,7 +98,7 @@
 
    - 通知方法がTeams(Workflows)の時の画面
 
-     .. figure:: /images/ja/manuals/platform/notification/新規通知先設定画面_TeamsWF_v2-7.png
+     .. figure:: /images/ja/manuals/platform/notification/新規通知先設定画面_TeamsWF_v2-8.png 
         :width: 600px
         :align: left
 
@@ -116,7 +116,7 @@
 
    - 通知方法がWebhookの時の画面
 
-     .. figure:: /images/ja/manuals/platform/notification/新規通知先設定画面_Webhook_v2-7.png
+     .. figure:: /images/ja/manuals/platform/notification/新規通知先設定画面_Webhook_v2-8.png
         :width: 600px
         :align: left
 
@@ -136,7 +136,7 @@
 
    - 通知方法がServiceNow(レコード登録)の時の画面
 
-     .. figure:: /images/ja/manuals/platform/notification/新規通知先設定画面_ServiceNow_v2-7.png
+     .. figure:: /images/ja/manuals/platform/notification/新規通知先設定画面_ServiceNow_v2-8.png
         :width: 600px
         :align: left
 
@@ -195,14 +195,14 @@
 
 #. | :menuselection:`通知先設定一覧` 画面が表示されるので、詳細確認を行いたい通知先設定をクリックします。
 
-   .. figure:: /images/ja/manuals/platform/notification/通知先設定一覧_v2-7.png
+   .. figure:: /images/ja/manuals/platform/notification/通知先設定一覧画面_edit_v2-8.png
       :width: 600px
       :align: left
 
 #. | :menuselection:`通知先設定詳細` 画面が表示されます。
    | 詳細確認の他、編集、削除、通知テストが実施できます。
 
-   .. figure:: /images/ja/manuals/platform/notification/通知先設定詳細画面_v2-7.png
+   .. figure:: /images/ja/manuals/platform/notification/通知先設定詳細画面_v2-8.png
       :width: 600px
       :align: left
 
@@ -237,13 +237,13 @@
 
 #. | :menuselection:`通知先設定一覧` 画面が表示されるので、 :guilabel:`編集` をクリックします。
 
-   .. figure:: /images/ja/manuals/platform/notification/通知先設定一覧画面_edit_v2-7.png
+   .. figure:: /images/ja/manuals/platform/notification/通知先設定一覧画面_edit_v2-8.png
       :width: 600px
       :align: left
 
 #. | :menuselection:`通知先設定編集` 画面が表示されるので、通知先の情報を編集し、 :guilabel:`登録` をクリックします。
 
-   .. figure:: /images/ja/manuals/platform/notification/編集通知先設定画面_Mail_v2-7.png
+   .. figure:: /images/ja/manuals/platform/notification/新規通知先設定画面_Mail_v2-8.png
       :width: 600px
       :align: left
 
@@ -288,7 +288,7 @@
 
 #. | :menuselection:`通知先設定一覧` 画面が表示されるので、 :guilabel:`削除` をクリックします。
 
-   .. figure:: /images/ja/manuals/platform/notification/通知先設定一覧画面_delete_v2-7.png
+   .. figure:: /images/ja/manuals/platform/notification/通知先設定一覧画面_delete_v2-8.png
       :width: 600px
       :align: left
 
@@ -300,3 +300,4 @@
 
    .. tip::
       | 一度削除した通知先設定を復元することは出来ません。
+      

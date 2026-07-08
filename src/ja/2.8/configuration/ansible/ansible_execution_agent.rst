@@ -116,9 +116,9 @@ OS要件
    * - RHEL10
      - Red Hat Enterprise Linux release 10.1 (Coughlan)
    * - Almalinux8
-     - AlmaLinux release 8.9 (Midnight Oncilla)
+     - AlmaLinux release 8.10 (Cerulean Leopard)
    * - Almalinux9
-     - AlmaLinux release 9.6 (Sage Margay)
+     - AlmaLinux release 9.7 (Moss Jungle Cat)
 
 | なお、動作確認済みのOSにおいても以下の設定が必要となります。
 

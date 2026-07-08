@@ -99,7 +99,7 @@ Ansible Core
      - | 5.1
 
 .. note::
-   | Exastro IT Automation 2.7 で使用する Ansible Core のバージョンは 2.18 です。
+   | Exastro IT Automation 2.8 で使用する Ansible Core のバージョンは 2.19 です。
 
 .. danger::
    | 作業対象機器のソフトウェア要件 は Exastro IT Automation のバージョン（Ansible Coreのバージョン）によって変更される可能性があります。
