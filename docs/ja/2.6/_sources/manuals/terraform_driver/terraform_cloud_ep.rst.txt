@@ -1215,6 +1215,8 @@ Movement-Module紐付
    | 変数のタイプがlist, setの場合に設定する必要があります。
    | 詳細及び具体例は「:ref:`terraform_common_variable_type`」の「※2 …代入順序対象」を参照してください。
 
+.. tip:: 
+ 代入値自動登録設定の連携対象項目については、:ref:`代入値自動登録設定の連携対象項目について <About_linkage_target_items_for_substitution_value_auto-registration_setting>` を参照してください。
 
 .. _terraform_cloud_ep_execution:
 

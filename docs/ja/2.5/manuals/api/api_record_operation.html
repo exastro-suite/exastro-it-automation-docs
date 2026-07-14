@@ -22,13 +22,12 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
     <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
     <script src="../../_static/translations.js?v=4755f45a"></script>
@@ -73,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.7/manuals/api/api_record_operation.html">current</option>
-              <option value="../../../../ja/2.7/manuals/api/api_record_operation.html">2.7(current)</option>
+              <option value="../../../../ja/2.8/manuals/api/api_record_operation.html">current</option>
+              <option value="../../../../ja/2.8/manuals/api/api_record_operation.html">2.8(current)</option>
+              <option value="../../../../ja/2.7/manuals/api/api_record_operation.html">2.7</option>
               <option value="../../../../ja/2.6/manuals/api/api_record_operation.html">2.6</option>
               <option value="../../../../ja/2.5/manuals/api/api_record_operation.html" selected>2.5</option>
               <option value="../../../../ja/2.4/manuals/api/api_record_operation.html">2.4</option>
@@ -388,7 +388,7 @@
 <div class="literal-block-wrapper docutils container" id="id19">
 <div class="code-block-caption"><span class="caption-number">リスト 2.57 </span><span class="caption-text">機器一覧のレコード取得APIを呼出</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://servername&quot;</span>
-<span class="w"> </span><span class="nv">ORGANAIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
+<span class="w"> </span><span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
 <span class="w"> </span><span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">&quot;ワークスペースID&quot;</span>
 <span class="w"> </span><span class="nv">MENU</span><span class="o">=</span><span class="s2">&quot;device_list&quot;</span>
 <span class="w"> </span><span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
@@ -396,16 +396,16 @@
 <span class="w"> </span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;ユーザー名を設定してください:パスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 
 <span class="w"> </span><span class="c1"># 機器一覧の全レコードを取得する</span>
-<span class="w"> </span>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANAIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/filter/&quot;</span>
+<span class="w"> </span>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/filter/&quot;</span>
 
 <span class="w"> </span><span class="c1"># 機器一覧の全レコードを取得する</span>
 <span class="w"> </span>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
-<span class="w">   </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANAIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/filter/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/filter/&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 
 <span class="w"> </span><span class="c1"># 機器一覧の条件指定した、レコードを取得する（条件：廃止済みを除く）</span>
 <span class="w"> </span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<span class="w">   </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANAIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/filter/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/filter/&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>--data-raw<span class="w"> </span><span class="s2">&quot;{\&quot;discard\&quot;:{\&quot;LIST\&quot;:[\&quot;0\&quot;]}}&quot;</span>
@@ -820,7 +820,7 @@
 <div class="literal-block-wrapper docutils container" id="id29">
 <div class="code-block-caption"><span class="caption-number">リスト 2.66 </span><span class="caption-text">実行手順(サンプル)：機器一覧</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://servername&quot;</span>
-<span class="nv">ORGANAIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
 <span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">&quot;ワークスペースID&quot;</span>
 <span class="nv">MENU</span><span class="o">=</span><span class="s2">&quot;device_list&quot;</span>
 <span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
@@ -829,7 +829,7 @@
 
 <span class="c1"># Content-Type: application/json</span>
 curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANAIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/maintenance/all/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/maintenance/all/&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--data-raw<span class="w"> </span><span class="s2">&quot;[{ \&quot;file\&quot;: {\&quot;ssh_private_key_file\&quot;: \&quot;\&quot;, \&quot;server_certificate\&quot;: \&quot;\&quot;}, \&quot;parameter\&quot;: { \&quot;authentication_method\&quot;: \&quot;パスワード認証\&quot;, \&quot;connection_options\&quot;: null, \&quot;connection_type\&quot;: \&quot;machine\&quot;, \&quot;discard\&quot;: \&quot;0\&quot;, \&quot;host_dns_name\&quot;: null, \&quot;host_name\&quot;: \&quot;exastro-test\&quot;, \&quot;hw_device_type\&quot;: null, \&quot;instance_group_name\&quot;: null, \&quot;inventory_file_additional_option\&quot;: null, \&quot;ip_address\&quot;: \&quot;127.0.0.1\&quot;, \&quot;lang\&quot;: \&quot;utf-8\&quot;, \&quot;login_password\&quot;: \&quot;password\&quot;, \&quot;login_user\&quot;: \&quot;root\&quot;, \&quot;os_type\&quot;: null, \&quot;passphrase\&quot;: null, \&quot;port_no\&quot;: null, \&quot;protocol\&quot;: \&quot;ssh\&quot;, \&quot;remarks\&quot;: null, \&quot;server_certificate\&quot;: null, \&quot;ssh_private_key_file\&quot;: null }} ]&quot;</span>
@@ -838,7 +838,7 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </spa
 
 <span class="c1"># Content-Type: Multipart/form-data</span>
 curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANAIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/maintenance/all/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/maintenance/all/&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-F<span class="w"> </span><span class="s1">&#39;json_parameters=&quot;[ { &quot;parameter&quot;: { &quot;discard&quot;: &quot;0&quot;, &quot;managed_system_item_number&quot;: null, &quot;hw_device_type&quot;: null, &quot;host_name&quot;: &quot;exastro-test&quot;, &quot;host_dns_name&quot;: null, &quot;ip_address&quot;: &quot;127.0.0.1&quot;, &quot;login_user&quot;: &quot;root&quot;, &quot;login_password&quot;: &quot;asdfghjkl&quot;, &quot;ssh_private_key_file&quot;: &quot;ssh_key_file.pem&quot;, &quot;authentication_method&quot;: &quot;パスワード認証&quot;,&quot;port_no&quot;: null, &quot;server_certificate&quot;: &quot;certificate_file.crt&quot;, &quot;protocol&quot;: &quot;ssh&quot;, &quot;os_type&quot;: null, &quot;lang&quot;: &quot;utf-8&quot;, &quot;connection_options&quot;: null, &quot;inventory_file_additional_option&quot;: null, &quot;instance_group_name&quot;: null,&quot;connection_type&quot;: &quot;machine&quot;, &quot;remarks&quot;: null,&quot;last_update_date_time&quot;: null, &quot;last_updated_user&quot;: null}, &quot;type&quot;: &quot;Register&quot; }]&quot;&#39;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-F<span class="w"> </span><span class="s1">&#39;0.ssh_private_key_file=@/ssh_key_file.pem&#39;</span><span class="w"> </span><span class="se">\</span>
@@ -852,7 +852,7 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </spa
 <div class="literal-block-wrapper docutils container" id="id30">
 <div class="code-block-caption"><span class="caption-number">リスト 2.67 </span><span class="caption-text">実行手順(サンプル)：Playbook素材集</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://servername&quot;</span>
-<span class="nv">ORGANAIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
 <span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">&quot;ワークスペースID&quot;</span>
 <span class="nv">MENU</span><span class="o">=</span><span class="s2">&quot;playbook_files&quot;</span>
 <span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
@@ -861,14 +861,14 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </spa
 
 <span class="c1"># Content-Type: application/json</span>
 curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANAIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/maintenance/all/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/maintenance/all/&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--data-raw<span class="w"> </span><span class="s2">&quot;[{\&quot;file\&quot;:{\&quot;playbook_file\&quot;:\&quot;LSBuYW1lOiBydW4gImVjaG8iCiAgY29tbWFuZDogZWNobyB7eyBWQVJfU1RSXzEgfX0=\&quot;},\&quot;parameter\&quot;:{\&quot;discard\&quot;:\&quot;0\&quot;,\&quot;item_no\&quot;:null,\&quot;playbook_name\&quot;:\&quot;echo\&quot;,\&quot;playbook_file\&quot;:\&quot;echo.yml\&quot;,\&quot;remarks\&quot;:null,\&quot;last_update_date_time\&quot;:null,\&quot;last_updated_user\&quot;:null},\&quot;type\&quot;:\&quot;Register\&quot;}]&quot;</span>
 
 <span class="c1"># Content-Type: Multipart/form-data</span>
 curl<span class="w"> </span>-X<span class="w"> </span>POST
-<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANAIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/maintenance/all/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/maintenance/all/&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w"> </span>-F<span class="w"> </span><span class="s2">&quot;json_parameters=[{\&quot;parameter\&quot;:{\&quot;discard\&quot;:\&quot;0\&quot;,\&quot;item_no\&quot;:null,\&quot;playbook_name\&quot;:\&quot;echo\&quot;,\&quot;playbook_file\&quot;:\&quot;echo.yml\&quot;,\&quot;remarks\&quot;:null,\&quot;last_update_date_time\&quot;:null,\&quot;last_updated_user\&quot;:null},\&quot;type\&quot;:\&quot;Register\&quot;}] &quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w"> </span>-F<span class="w"> </span><span class="s2">&quot;0.playbook_file=@echo.yml&quot;</span>
@@ -900,7 +900,7 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST
 <div class="literal-block-wrapper docutils container" id="id31">
 <div class="code-block-caption"><span class="caption-number">リスト 2.68 </span><span class="caption-text">メニューの構成情報取得API</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://servername&quot;</span>
-<span class="nv">ORGANAIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
 <span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">&quot;ワークスペースID&quot;</span>
 <span class="nv">MENU</span><span class="o">=</span><span class="s2">&quot;対象メニュー&quot;</span>
 <span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
@@ -908,7 +908,7 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST
 <span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;ユーザー名を設定してください:パスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 
 curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANAIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/info/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/info/&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 </pre></div>
 </div>
@@ -1050,7 +1050,7 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <div class="literal-block-wrapper docutils container" id="id34">
 <div class="code-block-caption"><span class="caption-number">リスト 2.70 </span><span class="caption-text">パラメータの項目取得API</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://servername&quot;</span>
-<span class="nv">ORGANAIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
 <span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">&quot;ワークスペースID&quot;</span>
 <span class="nv">MENU</span><span class="o">=</span><span class="s2">&quot;対象メニュー&quot;</span>
 <span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
@@ -1058,7 +1058,7 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;ユーザー名を設定してください:パスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 
 curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANAIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/column/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/column/&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 </pre></div>
 </div>
@@ -1103,7 +1103,7 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <div class="literal-block-wrapper docutils container" id="id36">
 <div class="code-block-caption"><span class="caption-number">リスト 2.72 </span><span class="caption-text">プルダウン項目情報取得API</span><a class="headerlink" href="#id36" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://servername&quot;</span>
-<span class="nv">ORGANAIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
 <span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">&quot;ワークスペースID&quot;</span>
 <span class="nv">MENU</span><span class="o">=</span><span class="s2">&quot;対象メニュー&quot;</span>
 <span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
@@ -1111,7 +1111,7 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;ユーザー名を設定してください:パスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 
 curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANAIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/info/pulldown/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/info/pulldown/&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 </pre></div>
 </div>

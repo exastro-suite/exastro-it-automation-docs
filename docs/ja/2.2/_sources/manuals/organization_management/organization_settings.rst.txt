@@ -40,12 +40,12 @@
     .. code-block:: bash
 
        BASEURL="https://severname"
-       ORGANAIZATION_ID="オーガナイゼーションID"
+       ORGANIZATION_ID="オーガナイゼーションID"
        USERNAME="ユーザー名"
        PASSWORD="パスワード"
    
        curl -u "${USERNAME}:${PASSWORD}" \
-       "${BASEURL}/api/${ORGANAIZATION_ID}/platform/setting" \
+       "${BASEURL}/api/${ORGANIZATION_ID}/platform/setting" \
        | jq ".data.token"
 
        
@@ -66,12 +66,12 @@
     .. code-block:: bash
 
        BASEURL="https://severname"
-       ORGANAIZATION_ID="オーガナイゼーションID"
+       ORGANIZATION_ID="オーガナイゼーションID"
        USERNAME="ユーザー名"
        PASSWORD="パスワード" 
 
        cat <<EOS | curl -u "${USERNAME}:${PASSWORD}" -H "Content-type: application/json" \
-       -X PATCH -d @- "${BASEURL}/api/${ORGANAIZATION_ID}/platform/setting"
+       -X PATCH -d @- "${BASEURL}/api/${ORGANIZATION_ID}/platform/setting"
        {
            "token": {
              "refresh_token_max_lifespan_enabled": true,

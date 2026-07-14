@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Affinity / Resource Request・Limit設定方法 &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="用語集" href="../../../glossary/index.html" />
+    <link rel="prev" title="Pod配置" href="index.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../ja/2.8/kb/resource_design/pod_placement/affinity_resource_request_limit.html" selected>current</option>
+              <option value="../../../../../ja/2.8/kb/resource_design/pod_placement/affinity_resource_request_limit.html" selected>2.8(current)</option>
+              <option value="../../../../../ja/2.7/kb/resource_design/pod_placement/affinity_resource_request_limit.html">2.7</option>
+              <option value="../../../../../ja/2.6/kb/resource_design/pod_placement/affinity_resource_request_limit.html">2.6</option>
+              <option value="../../../../../ja/2.5/kb/resource_design/pod_placement/affinity_resource_request_limit.html">2.5</option>
+              <option value="../../../../../ja/2.4/kb/resource_design/pod_placement/affinity_resource_request_limit.html">2.4</option>
+              <option value="../../../../../ja/2.3/kb/resource_design/pod_placement/affinity_resource_request_limit.html">2.3</option>
+              <option value="../../../../../ja/2.2/kb/resource_design/pod_placement/affinity_resource_request_limit.html">2.2</option>
+              <option value="../../../../../ja/2.1/kb/resource_design/pod_placement/affinity_resource_request_limit.html">2.1</option>
+              <option value="../../../../../ja/2.0/kb/resource_design/pod_placement/affinity_resource_request_limit.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../ja/2.8/kb/resource_design/pod_placement/affinity_resource_request_limit.html" selected>日本語</option>
+              <option value="../../../../../en/2.8/kb/resource_design/pod_placement/affinity_resource_request_limit.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="index.html" title="前のトピックへ">Pod配置</a></li>
+        <li class="next"><a href="../../../glossary/index.html" title="次のトピックへ">用語集</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+   <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../learn/index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/index.html">マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">ナレッジベース</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../performance/index.html">パフォーマンス改善</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../availability/index.html">可用性・安定稼働</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">リソース設計</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Pod配置</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Affinity / Resource Request・Limit設定方法</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id1">概要</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id2">前提</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id3">シナリオ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#resource-request-limit">Resource Request/Limit の設定方針</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#affinity">Affinity の設定方針</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id5">まとめ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">貢献</a></li>
+</ul>
+
+   <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">Affinity / Resource Request・Limit設定方法</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#id2">前提</a></li>
+<li><a class="reference internal" href="#id3">シナリオ</a><ul>
+<li><a class="reference internal" href="#cpu">CPU・メモリ使用量の取得</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#resource-request-limit">Resource Request/Limit の設定方針</a><ul>
+<li><a class="reference internal" href="#resource">Resource設定例（一部抜粋)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#affinity">Affinity の設定方針</a><ul>
+<li><a class="reference internal" href="#id4">Affinity設定例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">まとめ</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">HOME</a></li>
+    <li><a href="../../index.html">ナレッジベース</a></li>
+    <li><a href="../index.html">リソース設計</a></li>
+    <li><a href="index.html">Pod配置</a></li>
+    
+    <li>Affinity / Resource Request・Limit設定方法</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="affinity-resource-requestlimit">
+<h1>Affinity / Resource Request・Limit設定方法<a class="headerlink" href="#affinity-resource-requestlimit" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Kubernetes環境ではNodeの利用可能なメモリが不足すると、OOMKillやEvictionが発生し、サービス停止や処理遅延が発生する可能性があります。</div>
+<div class="line"><br /></div>
+<div class="line">本ドキュメントでは、ExastroITAの安定稼働およびNode障害時の可用性向上を目的として、</div>
+<div class="line">実際の利用状況からCPU・メモリ使用量を計測し、AffinityおよびResource Request/Limit を設定した事例について紹介します。</div>
+<div class="line"><br /></div>
+<div class="line">なお、本事例はOASEを中心とした運用環境であり、OASE処理に伴い処理負荷が高まるPodを中心にリソース設計を行っています。</div>
+</div>
+</section>
+<section id="id2">
+<h2>前提<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>ITA バージョン: 2.8.0</p></li>
+<li><p>Platform バージョン: 1.12.0</p></li>
+<li><p>インストール環境: Kubernetes</p></li>
+<li><p>対象環境: Kubernetes Cluster（Node1〜Node3）</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>シナリオ<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">実施した内容は以下のとおりです。</div>
+</div>
+<ul class="simple">
+<li><p>PodごとのCPU・メモリ使用実績を計測</p></li>
+<li><p>実績値ベースで Resource Request/Limit 値を設定</p></li>
+<li><p>指定したPodにAffinityルールを設定</p></li>
+</ul>
+<section id="cpu">
+<h3>CPU・メモリ使用量の取得<a class="headerlink" href="#cpu" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">PodごとのResource Request/Limit値を設定するため、まずはKubernetes環境でのCPU・メモリ使用量を取得しました。</div>
+<div class="line">Kubernetes環境では標準でPodのリソース使用量を取得できないため、Metrics Serverを導入した上で、以下のコマンドを複数日にわたって実行し、各PodのCPU・メモリ使用量を収集しました。</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kubectl</span> <span class="n">top</span> <span class="n">pod</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">namespace</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">通常運用時など、「想定される処理負荷がかかっている」状態で取得してください。</div>
+</div>
+</div>
+</section>
+</section>
+<section id="resource-request-limit">
+<h2>Resource Request/Limit の設定方針<a class="headerlink" href="#resource-request-limit" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">複数日分の実績値を取得し、OASE処理に伴い処理負荷が高いPodに対し、</div>
+<div class="line">CPUおよびメモリについてそれぞれ最大使用量を基準値として、実績値に余裕を持たせた値をRequestとして設定しました。本事例では実績の1.3倍としました。</div>
+<div class="line"><br /></div>
+<div class="line">なお、MariaDBのメモリのRequests値については、実績値に近い値を設定すると以下の問題が生じる可能性があります。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">スケジューリング時に、リソース余力の小さいNodeに配置されてしまう</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">配置後に他のPodがスケジュールされることでNodeのリソース余力が消費され、DB稼働中のメモリ使用量増加に対応できなくなる</div>
+</div>
+</li>
+</ul>
+<div class="line-block">
+<div class="line">そのため、MariaDBのメモリのRequests値は実績値の2倍程度を目安として設定し、他PodのスケジュールによるリソースNode余力の枯渇を防ぐようにし、</div>
+<div class="line">Limits値については、実績値から十分な余裕を持たせるため、CPUはデフォルト値を使用し、メモリは実績の4倍を目安に設定値としました。</div>
+</div>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../../../_images/pod_resource_limits.drawio.png"><img alt="POD稼働実績値とResource Request/Limit設定について" height="583" src="../../../_images/pod_resource_limits.drawio.png" width="1080" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 1 </span><span class="caption-text">POD稼働実績値とResource Request/Limit設定について</span><a class="headerlink" href="#id6" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">また、RequestsとLimitsの設定内容はリソース量の確保だけでなく、KubernetesのQoS Classにも影響します。</div>
+<div class="line">Nodeのメモリが不足した際、QoS ClassによってEviction（退避）対象となる優先順位が決まるため、</div>
+<div class="line">重要なPodを安定して稼働させるために以下の方針でRequest/Limitを設定しました。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">① <strong>Requests と Limits を同値で設定</strong></div>
+<div class="line">Guaranteed QoSとして扱われる。安定稼働を最優先する場合に選択する。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">② <strong>Requests と Limits に異なる値を設定、またはRequests のみ設定</strong></div>
+<div class="line">Burstable QoSとして扱われる。最低限必要なリソースを保証しつつ、Nodeに空きがある場合は追加のリソースを利用できる。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">③ <strong>未設定</strong></div>
+<div class="line">BestEffort QoSとして扱い、Node のリソース不足時には優先的にEvictionの対象となる。</div>
+</div>
+</li>
+</ul>
+<div class="line-block">
+<div class="line">Nodeのメモリが不足した場合は、一般的に BestEffort → Burstable → Guaranteed の順でEviction対象となりやすくなります。</div>
+<div class="line">本事例ではOASE処理に伴い処理負荷の高いPod(上図の②で示したPod)に <strong>②</strong> の設定を適用し、それ以外のPodはResource設定を行わない <strong>③</strong> のままとしています。</div>
+</div>
+<section id="resource">
+<h3>Resource設定例（一部抜粋)<a class="headerlink" href="#resource" title="Link to this heading">¶</a></h3>
+<p>上記の方針に基づき、Helmのvalues.yamlに、 <code class="docutils literal notranslate"><span class="pre">resources.requests</span></code> 、 <code class="docutils literal notranslate"><span class="pre">resources.limits</span></code> を設定しました。</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># MariaDB — Requests・Limits 両方設定</span>
+<span class="nt">mariadb</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8Gi&quot;</span>
+<span class="w">      </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1500m&quot;</span>
+<span class="w">    </span><span class="nt">limits</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;16Gi&quot;</span>
+<span class="w">      </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4000m&quot;</span>
+
+<span class="c1"># OASE 関連 Pod の例（Requestsのみ設定）</span>
+<span class="nt">ita-api-oase-receiver</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1792Mi&quot;</span>
+<span class="w">      </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;500m&quot;</span>
+
+<span class="nt">ita-by-oase-conclusion</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1408Mi&quot;</span>
+<span class="w">      </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;300m&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="affinity">
+<h2>Affinity の設定方針<a class="headerlink" href="#affinity" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">CPU・メモリ使用量の計測結果から、MariaDB と MongoDB はともにメモリ消費量が多いことがわかりました。</div>
+<div class="line">そのため同一Nodeに配置するとメモリ枯渇リスクが高まるため、Affinityルールを設定して分散配置することとしました。</div>
+<div class="line">また、本事例ではOASEを活用した運用が中心となっているため、処理負荷の高いPodを単一Nodeに集中させず分散配置したいとの顧客要望もありました。</div>
+<div class="line">以上を踏まえ、MariaDB・MongoDB・platform-auth・ita-api-oase-receiver・ita-by-oase-conclusion をAffinityルールの対象とし、</div>
+<div class="line">下図のように各Nodeへ分散配置するよう設定しました。なお、その他のPodについてはKubernetesの標準スケジューリングによる自動配置としています。</div>
+</div>
+<figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="../../../_images/pod_placement_normal.drawio.png"><img alt="Node1〜3へのPod分散配置構成（通常稼働時）" height="486" src="../../../_images/pod_placement_normal.drawio.png" width="1179" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 2 </span><span class="caption-text">Node1〜3へのPod分散配置構成（通常稼働時）</span><a class="headerlink" href="#id7" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line">この配置を実現するにあたり、各Podの要件に応じて以下の2種類のAffinityルールを使い分けました。</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">requiredDuringSchedulingIgnoredDuringExecution</div>
+<div class="line">必須条件。スケジューラーはルールを満たすNodeが存在しない場合、Podをスケジュールできません。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">preferredDuringSchedulingIgnoredDuringExecution</div>
+<div class="line">推奨条件。スケジューラーはルールを満たすNodeへの配置を優先しますが、条件を満たすNodeが存在しない場合でもPodをスケジュールします。</div>
+</div>
+</li>
+</ul>
+<div class="line-block">
+<div class="line">本事例では、MongoDBについてはMariaDBとの同居を避けるため requiredDuringSchedulingIgnoredDuringExecution を使用し、</div>
+<div class="line">それ以外のPodについては可用性向上を目的として分散配置を優先しつつも、Node障害時やNode数が不足している場合でもPodが起動できるよう、</div>
+<div class="line">preferredDuringSchedulingIgnoredDuringExecutionを使用しています。</div>
+</div>
+<div class="line-block">
+<div class="line">preferredDuringSchedulingIgnoredDuringExecutionを使用することで、Node3で障害が発生した場合でも、</div>
+<div class="line">Node3上のPod（ita-api-oase-receiver・ita-by-oase-conclusion）が残りのNodeへ再スケジュールされ、下図のようにサービスを継続できます。</div>
+</div>
+<figure class="align-default" id="id8">
+<a class="reference internal image-reference" href="../../../_images/affinity_node_failure.drawio.png"><img alt="Node3障害発生時のPod再スケジュールイメージ" height="486" src="../../../_images/affinity_node_failure.drawio.png" width="1179" />
+</a>
+<figcaption>
+<p><span class="caption-number">図 3 </span><span class="caption-text">Node3障害発生時のPod再スケジュールイメージ</span><a class="headerlink" href="#id8" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="id4">
+<h3>Affinity設定例<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">上記の方針に基づき、Helmのvalues.yamlに、 <code class="docutils literal notranslate"><span class="pre">podAntiAffinity</span></code> を設定しました。</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">preferredDuringSchedulingIgnoredDuringExecution</span></code> では <code class="docutils literal notranslate"><span class="pre">weight</span></code> に 1〜100 の値を指定でき、値が大きいほど優先度が高くなります。</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># MongoDB — MariaDBとの同居禁止（required）</span>
+<span class="nt">mongo</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">affinity</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">podAntiAffinity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">requiredDuringSchedulingIgnoredDuringExecution</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">labelSelector</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">matchExpressions</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app.kubernetes.io/name</span>
+<span class="w">                </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">In</span>
+<span class="w">                </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">                  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb</span>
+<span class="w">          </span><span class="nt">topologyKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.io/hostname</span>
+
+<span class="c1"># MariaDB — OASE関連 Pod・MongoDB との分散（preferred）</span>
+<span class="nt">mariadb</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">affinity</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">podAntiAffinity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">preferredDuringSchedulingIgnoredDuringExecution</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+<span class="w">          </span><span class="nt">podAffinityTerm</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">labelSelector</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">matchExpressions</span><span class="p">:</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app.kubernetes.io/name</span>
+<span class="w">                  </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">In</span>
+<span class="w">                  </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">                    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongo</span>
+<span class="w">                    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">platform-auth</span>
+<span class="w">                    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ita-api-oase-receiver</span>
+<span class="w">                    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ita-by-oase-conclusion</span>
+<span class="w">            </span><span class="nt">topologyKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.io/hostname</span>
+
+<span class="c1"># platform-auth — MariaDB・ita-api-oase-receiver との分散（preferred）</span>
+<span class="nt">platform-auth</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">affinity</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">podAntiAffinity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">preferredDuringSchedulingIgnoredDuringExecution</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">95</span>
+<span class="w">          </span><span class="nt">podAffinityTerm</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">labelSelector</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">matchExpressions</span><span class="p">:</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app.kubernetes.io/name</span>
+<span class="w">                  </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">In</span>
+<span class="w">                  </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">                    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb</span>
+<span class="w">            </span><span class="nt">topologyKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.io/hostname</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
+<span class="w">          </span><span class="nt">podAffinityTerm</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">labelSelector</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">matchExpressions</span><span class="p">:</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app.kubernetes.io/name</span>
+<span class="w">                  </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">In</span>
+<span class="w">                  </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">                    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ita-api-oase-receiver</span>
+<span class="w">            </span><span class="nt">topologyKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.io/hostname</span>
+
+<span class="c1"># ita-api-oase-receiver — MariaDB・MongoDB との分散（preferred）</span>
+<span class="nt">ita-api-oase-receiver</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">affinity</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">podAntiAffinity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">preferredDuringSchedulingIgnoredDuringExecution</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">95</span>
+<span class="w">          </span><span class="nt">podAffinityTerm</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">labelSelector</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">matchExpressions</span><span class="p">:</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app.kubernetes.io/name</span>
+<span class="w">                  </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">In</span>
+<span class="w">                  </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">                    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb</span>
+<span class="w">            </span><span class="nt">topologyKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.io/hostname</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
+<span class="w">          </span><span class="nt">podAffinityTerm</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">labelSelector</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">matchExpressions</span><span class="p">:</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app.kubernetes.io/name</span>
+<span class="w">                  </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">In</span>
+<span class="w">                  </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">                    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongo</span>
+<span class="w">            </span><span class="nt">topologyKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.io/hostname</span>
+
+<span class="c1"># ita-by-oase-conclusion — MariaDB・MongoDB との分散（preferred）</span>
+<span class="nt">ita-by-oase-conclusion</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">affinity</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">podAntiAffinity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">preferredDuringSchedulingIgnoredDuringExecution</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">95</span>
+<span class="w">          </span><span class="nt">podAffinityTerm</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">labelSelector</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">matchExpressions</span><span class="p">:</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app.kubernetes.io/name</span>
+<span class="w">                  </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">In</span>
+<span class="w">                  </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">                    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb</span>
+<span class="w">            </span><span class="nt">topologyKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.io/hostname</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">70</span>
+<span class="w">          </span><span class="nt">podAffinityTerm</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">labelSelector</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">matchExpressions</span><span class="p">:</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app.kubernetes.io/name</span>
+<span class="w">                  </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">In</span>
+<span class="w">                  </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">                    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongo</span>
+<span class="w">            </span><span class="nt">topologyKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.io/hostname</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id5">
+<h2>まとめ<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本事例では、Helmのvalues.yamlにpodAntiAffinity・resources.requests・resources.limits を設定しました。</div>
+<div class="line">これにより、安定稼働の維持およびNode障害発生時の可用性向上が期待できます。</div>
+<div class="line">最適な設定値は利用状況やデータ量の変動によって変化するため、CPU・メモリの使用状況を定期的にモニタリングし、継続的に見直しを行うことが重要です。</div>
+</div>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span>Pod配置</a></li>
+    <li class="next"><a href="../../../glossary/index.html" title="次のトピックへ"><span>次のトピックへ</span>用語集</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2026 NEC Corporation</small>
+    <small><a href="/ja/2.8/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

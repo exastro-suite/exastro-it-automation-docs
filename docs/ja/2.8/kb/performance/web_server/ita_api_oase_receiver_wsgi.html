@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>OASE大量イベント処理のためのWSGIチューニング例（ita-api-oase-receiver） &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="性能改善のためのApache・WSGIチューニング例（ita-api-organization）" href="ita_api_organization_apache_wsgi.html" />
+    <link rel="prev" title="Webサーバー" href="index.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../ja/2.8/kb/performance/web_server/ita_api_oase_receiver_wsgi.html" selected>current</option>
+              <option value="../../../../../ja/2.8/kb/performance/web_server/ita_api_oase_receiver_wsgi.html" selected>2.8(current)</option>
+              <option value="../../../../../ja/2.7/kb/performance/web_server/ita_api_oase_receiver_wsgi.html">2.7</option>
+              <option value="../../../../../ja/2.6/kb/performance/web_server/ita_api_oase_receiver_wsgi.html">2.6</option>
+              <option value="../../../../../ja/2.5/kb/performance/web_server/ita_api_oase_receiver_wsgi.html">2.5</option>
+              <option value="../../../../../ja/2.4/kb/performance/web_server/ita_api_oase_receiver_wsgi.html">2.4</option>
+              <option value="../../../../../ja/2.3/kb/performance/web_server/ita_api_oase_receiver_wsgi.html">2.3</option>
+              <option value="../../../../../ja/2.2/kb/performance/web_server/ita_api_oase_receiver_wsgi.html">2.2</option>
+              <option value="../../../../../ja/2.1/kb/performance/web_server/ita_api_oase_receiver_wsgi.html">2.1</option>
+              <option value="../../../../../ja/2.0/kb/performance/web_server/ita_api_oase_receiver_wsgi.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../ja/2.8/kb/performance/web_server/ita_api_oase_receiver_wsgi.html" selected>日本語</option>
+              <option value="../../../../../en/2.8/kb/performance/web_server/ita_api_oase_receiver_wsgi.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="index.html" title="前のトピックへ">Webサーバー</a></li>
+        <li class="next"><a href="ita_api_organization_apache_wsgi.html" title="次のトピックへ">性能改善のためのApache・WSGIチューニング例（ita-api-organization）</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+   <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../learn/index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/index.html">マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">ナレッジベース</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">パフォーマンス改善</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../database/index.html">データベース</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Webサーバー</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">OASE大量イベント処理のためのWSGIチューニング例（ita-api-oase-receiver）</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id1">概要</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id2">チューニング例</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="ita_api_organization_apache_wsgi.html">性能改善のためのApache・WSGIチューニング例（ita-api-organization）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../availability/index.html">可用性・安定稼働</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_design/index.html">リソース設計</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">貢献</a></li>
+</ul>
+
+   <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">OASE大量イベント処理のためのWSGIチューニング例（ita-api-oase-receiver）</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#id2">チューニング例</a><ul>
+<li><a class="reference internal" href="#id3">前提</a></li>
+<li><a class="reference internal" href="#id4">シナリオ</a></li>
+<li><a class="reference internal" href="#id5">設定</a></li>
+<li><a class="reference internal" href="#id6">設定パラメータ</a></li>
+<li><a class="reference internal" href="#id7">期待される効果</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">HOME</a></li>
+    <li><a href="../../index.html">ナレッジベース</a></li>
+    <li><a href="../index.html">パフォーマンス改善</a></li>
+    <li><a href="index.html">Webサーバー</a></li>
+    
+    <li>OASE大量イベント処理のためのWSGIチューニング例（ita-api-oase-receiver）</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="oasewsgi-ita-api-oase-receiver">
+<h1>OASE大量イベント処理のためのWSGIチューニング例（ita-api-oase-receiver）<a class="headerlink" href="#oasewsgi-ita-api-oase-receiver" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<p>ita-api-oase-receiverで大量のイベント処理が遅い場合、WSGIのプロセス数・スレッド数を調整することで性能改善できる場合があります。本ドキュメントでは、大量のラベル付与などのCPUバウンドな処理に対する具体的なチューニング例を紹介します。</p>
+</section>
+<section id="id2">
+<h2>チューニング例<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<section id="id3">
+<h3>前提<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><strong>ITAバージョン</strong>: 2.8.0</p></li>
+<li><p><strong>Platformバージョン</strong>: 1.12.0</p></li>
+<li><p><strong>インストール環境</strong>: kubernetes</p></li>
+<li><p><strong>システム環境</strong>: 8コアCPU</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>シナリオ<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><strong>処理対象</strong>: ita-api-oase-receiverで受け取った1リクエストにつき100件のイベント</p></li>
+<li><p><strong>ラベル付与設定</strong>: 処理対象のイベント1件あたり正規表現を用いたラベル付与設定が約1,300件</p></li>
+</ul>
+<p>このような環境では、大量の正規表現マッチング処理がCPUバウンドとなり、処理が遅くなる場合があります。</p>
+</section>
+<section id="id5">
+<h3>設定<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span># exastro.yaml
+exastro-it-automation:
+# 中略
+<span class="w"> </span> ita-api-oase-receiver:
+<span class="w"> </span>   image:
+<span class="w"> </span>     repository: &quot;docker.io/exastro/exastro-it-automation-api-oase-receiver&quot;
+<span class="w"> </span>     tag: &quot;&quot;
+<span class="w"> </span>     pullPolicy: IfNotPresent
+<span class="w"> </span>   extraEnv:
+<span class="w"> </span>     LISTEN_PORT: &quot;8000&quot;
+<span class="w"> </span>     PLATFORM_API_HOST: &quot;platform-api&quot;
+<span class="w"> </span>     PLATFORM_API_PORT: &quot;8000&quot;
+<span class="gi">+     OASE_RECEIVER_WSGI_PROCESSES: &quot;7&quot;</span>
+<span class="gi">+     OASE_RECEIVER_WSGI_THREADS: &quot;2&quot;</span>
+</pre></div>
+</div>
+<p>Exastroのデフォルト設定はプロセス数2、スレッド数8です。この設定では最大2コアまでしか使えませんが、プロセス数を7に増やすことで7コアを並列活用でき、CPUバウンドなラベル付与処理の高速化が期待できます。</p>
+</section>
+<section id="id6">
+<h3>設定パラメータ<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>デフォルト値</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">OASE_RECEIVER_WSGI_PROCESSES</span></code></p></td>
+<td><p>2</p></td>
+<td><p>7</p></td>
+<td><p>プロセス数。CPUコア数に応じて調整（目安: コア数 - 1）</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">OASE_RECEIVER_WSGI_THREADS</span></code></p></td>
+<td><p>8</p></td>
+<td><p>2</p></td>
+<td><p>プロセスあたりのスレッド数。CPUバウンドな処理では少なめに設定</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id7">
+<h3>期待される効果<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><strong>スループット向上</strong>: 複数CPUコアの並列活用により、大量のイベント処理が高速化</p></li>
+<li><p><strong>レイテンシ削減</strong>: イベント処理の完了時間が短縮</p></li>
+</ul>
+<p>実環境での効果は、チューニング前後でのイベント処理時間やCPU使用率等をご確認ください。</p>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span>Webサーバー</a></li>
+    <li class="next"><a href="ita_api_organization_apache_wsgi.html" title="次のトピックへ"><span>次のトピックへ</span>性能改善のためのApache・WSGIチューニング例（ita-api-organization）</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2026 NEC Corporation</small>
+    <small><a href="/ja/2.8/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>
