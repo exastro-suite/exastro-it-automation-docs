@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>ServiceNow UI Pageを用いたIT Automation画面の実装手順 &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="用語集" href="../../glossary/index.html" />
+    <link rel="prev" title="ServiceNow" href="index.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.8/kb/servicenow/ui_page.html">current</option>
+              <option value="../../../../ja/2.8/kb/servicenow/ui_page.html">2.8(current)</option>
+              <option value="../../../../ja/2.7/kb/servicenow/ui_page.html">2.7</option>
+              <option value="../../../../ja/2.6/kb/servicenow/ui_page.html" selected>2.6</option>
+              <option value="../../../../ja/2.5/kb/servicenow/ui_page.html">2.5</option>
+              <option value="../../../../ja/2.4/kb/servicenow/ui_page.html">2.4</option>
+              <option value="../../../../ja/2.3/kb/servicenow/ui_page.html">2.3</option>
+              <option value="../../../../ja/2.2/kb/servicenow/ui_page.html">2.2</option>
+              <option value="../../../../ja/2.1/kb/servicenow/ui_page.html">2.1</option>
+              <option value="../../../../ja/2.0/kb/servicenow/ui_page.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.6/kb/servicenow/ui_page.html" selected>日本語</option>
+              <option value="../../../../en/2.6/kb/servicenow/ui_page.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="index.html" title="前のトピックへ">ServiceNow</a></li>
+        <li class="next"><a href="../../glossary/index.html" title="次のトピックへ">用語集</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+   <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/index.html">マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ナレッジベース</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">ServiceNow</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ServiceNow UI Pageを用いたIT Automation画面の実装手順</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">はじめに</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">条件</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id3">バージョン</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id4">接続要件および事前確認事項</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">概要図</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">実装手順</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id7">①資材ダウンロード</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id8">②基本認証構成登録</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#rest-api">③スクリプト済み REST API設定</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id9">④テーブル設定</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#ui">⑤UIページ設定</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">制限事項</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+   <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">ServiceNow UI Pageを用いたIT Automation画面の実装手順</a><ul>
+<li><a class="reference internal" href="#id1">はじめに</a></li>
+<li><a class="reference internal" href="#id2">条件</a><ul>
+<li><a class="reference internal" href="#id3">バージョン</a></li>
+<li><a class="reference internal" href="#id4">接続要件および事前確認事項</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">概要図</a></li>
+<li><a class="reference internal" href="#id6">実装手順</a><ul>
+<li><a class="reference internal" href="#id7">①資材ダウンロード</a></li>
+<li><a class="reference internal" href="#id8">②基本認証構成登録</a><ul>
+<li><a class="reference internal" href="#it-automationapi">IT AutomationのAPIエンドポイントに到達可能かテスト</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rest-api">③スクリプト済み REST API設定</a></li>
+<li><a class="reference internal" href="#id9">④テーブル設定</a><ul>
+<li><a class="reference internal" href="#it-automation">IT Automationの接続情報を登録するテーブルの作成</a></li>
+<li><a class="reference internal" href="#id10">IT Automationとのファイルのやり取りで使用するテーブルの作成</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ui">⑤UIページ設定</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id11">制限事項</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">ナレッジベース</a></li>
+    <li><a href="index.html">ServiceNow</a></li>
+    
+    <li>ServiceNow UI Pageを用いたIT Automation画面の実装手順</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="servicenow-ui-pageit-automation">
+<h1>ServiceNow UI Pageを用いたIT Automation画面の実装手順<a class="headerlink" href="#servicenow-ui-pageit-automation" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2>はじめに<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書では、ServiceNow UI Pageを用いてIT Automation画面を構築し、IT Automation APIとの連携を含めた実装方法について説明します。</div>
+<div class="line">主にServiceNow PDI（個人開発者インスタンス）を前提に解説しますが、他の環境でも適用可能な内容としています。</div>
+</div>
+</section>
+<section id="id2">
+<h2>条件<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<section id="id3">
+<h3>バージョン<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<ul>
+<li><div class="line-block">
+<div class="line">IT Automationのバージョン: 2.6.2</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ServiceNowインスタンスのバージョン: Zurich</div>
+</div>
+</li>
+</ul>
+</section>
+<section id="id4">
+<h3>接続要件および事前確認事項<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<ul>
+<li><div class="line-block">
+<div class="line">ServiceNowインスタンスからIT AutomationサーバへのHTTPS通信が許可されていること</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">IT AutomationのAPIエンドポイントに到達可能であること</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">必要に応じてプロキシ設定が正しく構成されていること</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">IT Automation側で認証（Basic認証）が有効であること</div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section id="id5">
+<h2>概要図<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+<img alt="概要図" src="../../_images/ui_page_overview.png" />
+</section>
+<section id="id6">
+<h2>実装手順<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<section id="id7">
+<h3>①資材ダウンロード<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">下記より資材をダウンロードしてください。</div>
+</div>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/raw/refs/heads/2.6/knowledge_base/servicenow/ita_snow_ui_page_materials.zip">https://github.com/exastro-suite/exastro-it-automation/raw/refs/heads/2.6/knowledge_base/servicenow/ita_snow_ui_page_materials.zip</a></div>
+</div>
+</section>
+<section id="id8">
+<h3>②基本認証構成登録<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">ヘッダーメニューのAllから「<strong>System Web Services / Outbound / REST message</strong>」にアクセス</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">NEWボタンから新規作成</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>IT Automation REST Message</p></td>
+</tr>
+<tr class="row-even"><td><p>Accessible from</p></td>
+<td><p>This application scope only</p></td>
+</tr>
+<tr class="row-odd"><td><p>Endpoint</p></td>
+<td><p><a class="reference external" href="https://">https://</a></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">Authenticationの設定</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Authentication type</p></td>
+<td><p>Basic</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">Basic auth profileを追加（サーチアイコンを押下）</div>
+</div>
+<img alt="サーチアイコンの位置" src="../../_images/ui_page_rest_message_basic_auth1.png" />
+</li>
+<li><div class="line-block">
+<div class="line">新しいWindowが開くのでNEWボタンから新規作成</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>IT Automation Basic Auth</p></td>
+</tr>
+<tr class="row-even"><td><p>Username</p></td>
+<td><p>{{ <strong>IT AutomatinのログインID</strong> }}</p></td>
+</tr>
+<tr class="row-odd"><td><p>Password</p></td>
+<td><p>{{ <strong>IT Automationのログインパスワード</strong> }}</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">SubmitボタンでBasic Authを登録</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">REST Message画面に戻り、SubmitボタンでREST Messageを登録</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">一覧に戻るので、登録したIT Automation REST Messageを開く</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">インフォアイコンからOpen Recordボタンを押下</div>
+</div>
+<img alt="インフォアイコン及びOpen Recordボタンの位置" src="../../_images/ui_page_rest_message_basic_auth2.png" />
+</li>
+<li><div class="line-block">
+<div class="line">登録したBasic Authのレコードが開くので、左上のメニューからCopy sys_idで参照に必要なIDを控えておく</div>
+</div>
+<img alt="インフォアイコン及びOpen Recordボタンの位置" src="../../_images/ui_page_rest_message_basic_auth3.png" />
+</li>
+</ol>
+<section id="it-automationapi">
+<h4>IT AutomationのAPIエンドポイントに到達可能かテスト<a class="headerlink" href="#it-automationapi" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">※不要であればこの項目はスキップしてください。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">登録したIT Automation REST Messageを開く</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">HTTP Methodsに登録してあるDefault GETを開く</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">Endpointにユーザの情報を取得するエンドポイントを設定</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Endpoint</p></td>
+<td><p>{{ <strong>IT Automation URL</strong> }}/api/{{ <strong>オーガナイゼーションID</strong> }}/workspaces/{{ <strong>ワークスペースID</strong> }}/ita/user/</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">Updateボタンで更新</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ページが戻るので、再度Default GETを開く</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">Updateボタンの下にあるRelated LinksのTestを押下</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">正常ならHTTP statusが200でResponseに結果が返却される</div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<section id="rest-api">
+<h3>③スクリプト済み REST API設定<a class="headerlink" href="#rest-api" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">ヘッダーメニューのAllから「<strong>System Web Services / Scripted Web Services / Scripted REST APIs</strong>」にアクセス</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">NEWボタンから新規作成</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>IT Automation API</p></td>
+</tr>
+<tr class="row-even"><td><p>API ID</p></td>
+<td><p>it_automation</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">Securityの設定</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Default ACLs</p></td>
+<td><p>Scripted REST External Default</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">Submitボタンで登録</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">一覧に戻るので、登録したIT Automation APIを開く</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">後の項目で必要なBase API pathを控えておく</div>
+</div>
+<img alt="Base API pathの位置" src="../../_images/ui_page_scripted_rest_apis1.png" />
+</li>
+<li><div class="line-block">
+<div class="line">ResourcesのNEWボタンからリソースを新規作成</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>dispatch</p></td>
+</tr>
+<tr class="row-even"><td><p>HTTP method</p></td>
+<td><p>POST</p></td>
+</tr>
+<tr class="row-odd"><td><p>Relative path</p></td>
+<td><p>/dispatch</p></td>
+</tr>
+<tr class="row-even"><td><p>Script</p></td>
+<td><p>{{ <strong>①でダウンロードした資材から「scripted_rest_api.js」の内容を張り付ける</strong> }}</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">Submitボタンでリソースを登録</div>
+</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">scripted_rest_api.js内で、「④テーブル設定」で登録するテーブル名（Name）・列名（Column name）を指定しています。本書の指定とは別のものにした場合は下記の部分を修正してください。</div>
+<div class="line">3～6行目:</div>
+<div class="line">var configTableName = '<strong>u_it_automation_config</strong>'; ※テーブル名（IT Automation Config）</div>
+<div class="line">var tempTableName = '<strong>u_it_automation_temp_file</strong>'; ※テーブル名（IT Automation Temp File）</div>
+<div class="line">var urlColumnName = '<strong>u_it_automation_url</strong>'; ※列名（IT Automation URL）</div>
+<div class="line">var basicAuthColumnName = '<strong>u_basic_auth_sys_id</strong>'; ※列名（Basic Auth Sys ID）</div>
+</div>
+</div>
+</section>
+<section id="id9">
+<h3>④テーブル設定<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<section id="it-automation">
+<h4>IT Automationの接続情報を登録するテーブルの作成<a class="headerlink" href="#it-automation" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">ヘッダーメニューのAllから「<strong>System Definition / Tables</strong>」にアクセス</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">NEWボタンからテーブルを新規作成</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Label</p></td>
+<td><p>IT Automation Config</p></td>
+</tr>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>u_it_automation_config</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">ColumnsのInsert a new row...から必要な項目を追加（※Max lengthは適宜調整してください）</div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Column label</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Max length</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>User Name</p></td>
+<td><p>String</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-odd"><td><p>IT Automation URL</p></td>
+<td><p>String</p></td>
+<td><p>256</p></td>
+</tr>
+<tr class="row-even"><td><p>Web Assets URL</p></td>
+<td><p>String</p></td>
+<td><p>256</p></td>
+</tr>
+<tr class="row-odd"><td><p>Organization ID</p></td>
+<td><p>String</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-even"><td><p>Workspace ID</p></td>
+<td><p>String</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-odd"><td><p>Basic Auth Sys ID</p></td>
+<td><p>String</p></td>
+<td><p>32</p></td>
+</tr>
+<tr class="row-even"><td><p>Base API path</p></td>
+<td><p>String</p></td>
+<td><p>32</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">Submitボタンでテーブルを登録</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ヘッダーメニューのAllから登録した「<strong>IT Automation Config / IT Automation Configs</strong>」にアクセス</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">NEWボタンからIT Automation接続情報を新規作成</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Basic Auth Sys ID</p></td>
+<td><p>{{ <strong>①基本認証構成で設定したsys_id</strong> }}</p></td>
+</tr>
+<tr class="row-even"><td><p>Web Assets URL</p></td>
+<td><p>{{ <strong>IT AutomationのURL</strong> }} ※末尾にスラッシュは含めない</p></td>
+</tr>
+<tr class="row-odd"><td><p>IT Automation URL</p></td>
+<td><p>{{ <strong>IT AutomationのURL</strong> }} ※末尾にスラッシュは含めない</p></td>
+</tr>
+<tr class="row-even"><td><p>Base API path</p></td>
+<td><p>{{ <strong>③スクリプト済み REST API設定で設定したBase API path</strong> }}</p></td>
+</tr>
+<tr class="row-odd"><td><p>User Name</p></td>
+<td><p>{{ <strong>ServiceNowインスタンスのログインID</strong> }}</p></td>
+</tr>
+<tr class="row-even"><td><p>Organization ID</p></td>
+<td><p>{{ <strong>IT AutomationのオーガナイゼーションID</strong> }}</p></td>
+</tr>
+<tr class="row-odd"><td><p>Workspace ID</p></td>
+<td><p>{{ <strong>IT AutomationのワークスペースID</strong> }}</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">SubmitボタンでIT Automation接続情報を登録</div>
+</div>
+</li>
+</ol>
+</section>
+<section id="id10">
+<h4>IT Automationとのファイルのやり取りで使用するテーブルの作成<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">IT Automationのファイルを表示したりダウンロードした際にファイルを一時的に保存するテーブルです。</div>
+</div>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">ヘッダーメニューのAllから「<strong>System Definition / Tables</strong>」にアクセス</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">NEWボタンからテーブルを新規作成</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Label</p></td>
+<td><p>IT Automation Temp File</p></td>
+</tr>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>u_it_automation_temp_file</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">Submitボタンでテーブルを登録（列の追加は必要ありません）</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">ヘッダーメニューのAllから「<strong>System Definition / Table Rotations</strong>」にアクセス</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">NEWボタンからテーブルローテーションを新規作成（※クリアする期間などは適宜調整してください）</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>u_it_automation_temp_file</p></td>
+</tr>
+<tr class="row-even"><td><p>Type</p></td>
+<td><p>Rotation</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rotations</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Duration</p></td>
+<td><p>Days 1</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">Submitボタンでテーブルローテーションを登録</div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<section id="ui">
+<h3>⑤UIページ設定<a class="headerlink" href="#ui" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><div class="line-block">
+<div class="line">ヘッダーメニューのAllから「<strong>System UI/ UI Pages</strong>」にアクセス</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">NEWボタンからUIページを新規作成</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>IT Automation UI Page</p></td>
+</tr>
+<tr class="row-even"><td><p>HTML</p></td>
+<td><p>{{ ①でダウンロードした資材から「ui_page.html」の内容を張り付ける }}</p></td>
+</tr>
+<tr class="row-odd"><td><p>Client script</p></td>
+<td><p>{{ ①でダウンロードした資材から「ui_page.js」の内容を張り付ける }}</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">クリップアイコンを押下</div>
+</div>
+<img alt="UIページでクリップアイコンの位置" src="../../_images/ui_page_clip.png" />
+</li>
+<li><div class="line-block">
+<div class="line">①でダウンロードした資材から下記をAttachmentsに追加する</div>
+</div>
+<ul class="simple">
+<li><p>snow_patch.js</p></li>
+<li><p>snow_patch.css</p></li>
+<li><p>snow_create_menu.js</p></li>
+<li><p>snow_dashboard_widget.js</p></li>
+<li><p>snow_table_worker.js</p></li>
+<li><p>messageid_ja.js</p></li>
+</ul>
+</li>
+<li><div class="line-block">
+<div class="line">Attachmentsに追加したファイル名を右クリック「リンクのアドレスをコピー」でURLをコピーし下記の/sys_attachment.do?sys_id=********の部分を対応したファイルと入れ替える</div>
+</div>
+<div class="line-block">
+<div class="line">HTML 9～12行目:</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>createMenu: '/sys_attachment.do?sys_id=********',</p></td>
+<td><p>snow_create_menu.js</p></td>
+</tr>
+<tr class="row-even"><td><p>tableWorker: '/sys_attachment.do?sys_id=********',</p></td>
+<td><p>snow_table_worker.js</p></td>
+</tr>
+<tr class="row-odd"><td><p>widget: '/sys_attachment.do?sys_id=********',</p></td>
+<td><p>snow_dashboard_widget.js</p></td>
+</tr>
+<tr class="row-even"><td><p>ja: '/sys_attachment.do?sys_id=********'</p></td>
+<td><p>messageid_ja.js</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">HTML 17～18行目:</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>var patch = '/sys_attachment.do?sys_id=********';</p></td>
+<td><p>snow_patch.js</p></td>
+</tr>
+<tr class="row-even"><td><p>var cssSysAtt = '/sys_attachment.do?sys_id=********';</p></td>
+<td><p>snow_patch.css</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><div class="line-block">
+<div class="line">Submitボタンを押下</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">Roleの選択が出てくるので「admin」を選択</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">{{ Instance URL }}ui_page.do?sys_id={{ 作成したUI PageのSys ID }}でページを開く</div>
+</div>
+<img alt="UIページでIT Automation画面の表示" src="../../_images/ui_page_open.png" />
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">ui_page.html内で、「④テーブル設定」で登録するテーブル名（Name）・列名（Column name）を指定しています。本書の指定とは別のものにした場合は下記の部分を修正してください。</div>
+<div class="line">21行目:</div>
+<div class="line">var gr = new GlideRecord('<strong>u_it_automation_config</strong>'); ※テーブル名（IT Automation Config）</div>
+<div class="line">31～35行目:</div>
+<div class="line">itaUrl = gr.getValue('<strong>u_it_automation_url</strong>'); ※列名（IT Automation URL）</div>
+<div class="line">webAssetsUrl = gr.getValue('<strong>u_web_assets_url</strong>'); ※列名（Web Assets URL）</div>
+<div class="line">orgId = gr.getValue('<strong>u_organization_id</strong>'); ※列名（Organization ID）</div>
+<div class="line">wsId = gr.getValue('<strong>u_workspace_id</strong>'); ※列名（Workspace ID）</div>
+<div class="line">apiPath = gr.getValue('<strong>u_base_api_path</strong>'); ※列名（Base API path）</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">ヘッダーの色をServiceNowカラーに変更しています。必要なければUI Page HTMLの92～98行目を削除してください。</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">Try Itからも画面表示可能ですが、iframeでの表示になりその場合はIT Automationのヘッダーとサイドメニューが表示されません。</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id11">
+<h2>制限事項<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h2>
+<ul>
+<li><div class="line-block">
+<div class="line">ServiceNowのREST Message（sn_ws.RESTMessageV2）では、リクエストおよびレスポンスで扱えるデータサイズに制限があり、最大約10MBまでとなります。</div>
+<div class="line">この制限を超えるデータを送受信した場合、エラーの発生などにより正常に処理できない可能性があります。</div>
+<div class="line">また、ファイルの送信においては、multipart/form-dataには対応していないため、バイナリデータはBase64形式に変換して送信されます。</div>
+<div class="line">その際、データサイズは約1.3倍となるため、実際に扱えるファイルサイズはこれを考慮する必要があります。</div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span>ServiceNow</a></li>
+    <li class="next"><a href="../../glossary/index.html" title="次のトピックへ"><span>次のトピックへ</span>用語集</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

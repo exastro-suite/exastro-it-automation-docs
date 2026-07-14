@@ -27,12 +27,12 @@
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
-    <script src="../../_static/tabs.js?v=3030b3cb"></script>
     <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/tabs.js?v=3030b3cb"></script>
     <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
     <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
     <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
@@ -74,8 +74,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.7/manuals/create_param/menu_creation.html" selected>current</option>
-              <option value="../../../../ja/2.7/manuals/create_param/menu_creation.html" selected>2.7(current)</option>
+              <option value="../../../../ja/2.8/manuals/create_param/menu_creation.html">current</option>
+              <option value="../../../../ja/2.8/manuals/create_param/menu_creation.html">2.8(current)</option>
+              <option value="../../../../ja/2.7/manuals/create_param/menu_creation.html" selected>2.7</option>
               <option value="../../../../ja/2.6/manuals/create_param/menu_creation.html">2.6</option>
               <option value="../../../../ja/2.5/manuals/create_param/menu_creation.html">2.5</option>
               <option value="../../../../ja/2.4/manuals/create_param/menu_creation.html">2.4</option>
@@ -1013,6 +1014,10 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>代入値自動登録設定の連携対象項目については、<a class="reference internal" href="#about-linkage-target-items-for-substitution-value-auto-registration-setting"><span class="std std-ref">代入値自動登録設定の連携対象項目について</span></a> を参照してください。</p>
+</div>
 <table class="docutils align-left" id="id65">
 <caption><span class="caption-number">表 1.90 </span><span class="caption-text">各入力方式共通の設定項目</span><a class="headerlink" href="#id65" title="Link to this table">¶</a></caption>
 <thead>
@@ -2744,8 +2749,6 @@
 「FileUploadColumn」を選択した場合、入力したURLがリンク表示になるテキストボックスの項目になります。</p>
 <p>「HostInsideLinkTextColumn」を選択した場合、入力したURLがリンク表示になるテキストボックスの項目になります。</p>
 <p>「ParameterSheetReference」を選択した場合、作成対象「パラメータシート（オペレーションあり）」で作成したメニューの項目を選択し、データを登録した際にオペレーションが一致するデータの値が参照されます。</p>
-<p>※代入値自動登録設定の連携対象項目は「文字列(単一行)」、「文字列(複数行)」、「整数」、「小数」、「パスワード」、「リンク」になります。</p>
-<p>「日時」、「日付」、「ファイルアップロード」は連携しません。「プルダウン選択」で選ぶ項目が「日時」、「日付」の場合も連携しません。</p>
 </td>
 </tr>
 <tr class="row-even"><td><p>表示順序</p></td>
@@ -2762,6 +2765,14 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition tip" id="about-linkage-target-items-for-substitution-value-auto-registration-setting">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line"><strong>代入値自動登録設定の連携対象項目について</strong></div>
+<div class="line">Ansibleドライバでは「文字列（単一行）」、「文字列（複数行）」、「整数」、「小数」、「パスワード」、「リンク」、「ファイルアップロード」が連携されます。「日時」、「日付」、および「プルダウン選択」で「日時」、「日付」を選んだ場合は連携されません。</div>
+<div class="line">Terraformドライバでは「文字列（単一行）」、「文字列（複数行）」、「整数」、「小数」、「パスワード」、「リンク」が連携されます。「日時」、「日付」、「ファイルアップロード」、および「プルダウン選択」で「日時」、「日付」を選んだ場合は連携されません。</div>
+</div>
+</div>
 </section>
 <section id="id35">
 <h3><span class="section-number">1.7.3. </span>「一意制約(複数項目)作成情報」メニューで設定する一意制約(複数項目)を登録<a class="headerlink" href="#id35" title="Link to this heading">¶</a></h3>

@@ -27,12 +27,12 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../../_static/documentation_options.js?v=c033477b"></script>
-    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=3e58b9f8"></script>
-    <script src="../../../_static/tabs.js?v=3030b3cb"></script>
     <script src="../../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../../_static/tabs.js?v=3030b3cb"></script>
     <script src="../../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
     <script src="../../../_static/exastro_documents.js?v=ff50fb31"></script>
     <script src="../../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
@@ -74,8 +74,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../../ja/2.7/installation/online/exastro/kubernetes.html" selected>current</option>
-              <option value="../../../../../ja/2.7/installation/online/exastro/kubernetes.html" selected>2.7(current)</option>
+              <option value="../../../../../ja/2.8/installation/online/exastro/kubernetes.html">current</option>
+              <option value="../../../../../ja/2.8/installation/online/exastro/kubernetes.html">2.8(current)</option>
+              <option value="../../../../../ja/2.7/installation/online/exastro/kubernetes.html" selected>2.7</option>
               <option value="../../../../../ja/2.6/installation/online/exastro/kubernetes.html">2.6</option>
               <option value="../../../../../ja/2.5/installation/online/exastro/kubernetes.html">2.5</option>
               <option value="../../../../../ja/2.4/installation/online/exastro/kubernetes.html">2.4</option>
@@ -300,7 +301,7 @@ $(window).on('load', function () {
 <div class="line">動作確認が取れているクライアントアプリケーションのバージョンは下記のとおりです。</div>
 </div>
 <table class="docutils align-default" id="id49">
-<caption><span class="caption-number">表 1 </span><span class="caption-text">クライアント要件</span><a class="headerlink" href="#id49" title="Link to this table">¶</a></caption>
+<caption><span class="caption-number">表 1 </span><span class="caption-text">動作確認済バージョン</span><a class="headerlink" href="#id49" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -4021,13 +4022,6 @@ kubectl<span class="w"> </span>get<span class="w"> </span>po<span class="w"> </s
 <div class="line">正常に起動している場合は、<kbd class="kbd docutils literal notranslate">ita</kbd>-<kbd class="kbd docutils literal notranslate">migration</kbd>-<kbd class="kbd docutils literal notranslate">xxx</kbd> と <kbd class="kbd docutils literal notranslate">platform</kbd>-<kbd class="kbd docutils literal notranslate">migration</kbd>-<kbd class="kbd docutils literal notranslate">xxx</kbd> が <kbd class="kbd docutils literal notranslate">Completed</kbd> 、その他すべてが <kbd class="kbd docutils literal notranslate">Running</kbd> となります。</div>
 <div class="line">※正常に起動するまで数分かかる場合があります。</div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">注釈</p>
-<div class="line-block">
-<div class="line">以下のPODについては <kbd class="kbd docutils literal notranslate">READY</kbd> が 0/1のままで、メンテナンスモードを解除後に <kbd class="kbd docutils literal notranslate">READY</kbd> は 1/1となります。</div>
-<div class="line">ita-by-conductor-regularly-xxxxxxxxxx-xxxxx</div>
-</div>
-</div>
 <div class="literal-block-wrapper docutils container" id="id108">
 <div class="code-block-caption"><span class="caption-number">リスト 39 </span><span class="caption-text">出力結果</span><a class="headerlink" href="#id108" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME<span class="w">                                                      </span>READY<span class="w">   </span>STATUS<span class="w">      </span>RESTARTS<span class="w">   </span>AGE
@@ -4217,13 +4211,6 @@ kubectl<span class="w"> </span>get<span class="w"> </span>po<span class="w"> </s
 <div class="line-block">
 <div class="line">正常に起動している場合は、<kbd class="kbd docutils literal notranslate">ita</kbd>-<kbd class="kbd docutils literal notranslate">migration</kbd>-<kbd class="kbd docutils literal notranslate">xxx</kbd> と <kbd class="kbd docutils literal notranslate">platform</kbd>-<kbd class="kbd docutils literal notranslate">migration</kbd>-<kbd class="kbd docutils literal notranslate">xxx</kbd> が <kbd class="kbd docutils literal notranslate">Completed</kbd> 、その他すべてが <kbd class="kbd docutils literal notranslate">Running</kbd> となります。</div>
 <div class="line">※正常に起動するまで数分かかる場合があります。</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">注釈</p>
-<div class="line-block">
-<div class="line">以下のPODについては <kbd class="kbd docutils literal notranslate">READY</kbd> が 0/1のままで、メンテナンスモードを解除後に <kbd class="kbd docutils literal notranslate">READY</kbd> は 1/1となります。</div>
-<div class="line">ita-by-conductor-regularly-xxxxxxxxxx-xxxxx</div>
-</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id118">
 <div class="code-block-caption"><span class="caption-number">リスト 48 </span><span class="caption-text">出力結果</span><a class="headerlink" href="#id118" title="Link to this code">¶</a></div>
@@ -4434,13 +4421,6 @@ kubectl<span class="w"> </span>get<span class="w"> </span>po<span class="w"> </s
 <div class="line-block">
 <div class="line">正常に起動している場合は、<kbd class="kbd docutils literal notranslate">ita</kbd>-<kbd class="kbd docutils literal notranslate">migration</kbd>-<kbd class="kbd docutils literal notranslate">xxx</kbd> と <kbd class="kbd docutils literal notranslate">platform</kbd>-<kbd class="kbd docutils literal notranslate">migration</kbd>-<kbd class="kbd docutils literal notranslate">xxx</kbd> が <kbd class="kbd docutils literal notranslate">Completed</kbd> 、その他すべてが <kbd class="kbd docutils literal notranslate">Running</kbd> となります。</div>
 <div class="line">※正常に起動するまで数分かかる場合があります。</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">注釈</p>
-<div class="line-block">
-<div class="line">以下のPODについては <kbd class="kbd docutils literal notranslate">READY</kbd> が 0/1のままで、メンテナンスモードを解除後に <kbd class="kbd docutils literal notranslate">READY</kbd> は 1/1となります。</div>
-<div class="line">ita-by-conductor-regularly-xxxxxxxxxx-xxxxx</div>
-</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id129">
 <div class="code-block-caption"><span class="caption-number">リスト 58 </span><span class="caption-text">出力結果</span><a class="headerlink" href="#id129" title="Link to this code">¶</a></div>
@@ -5076,13 +5056,6 @@ Exastro<span class="w"> </span>install<span class="w"> </span>completion!
 <div class="line-block">
 <div class="line">上記で起動した対象の Pod 数が元に戻り、次の例外を除いてすべて <kbd class="kbd docutils literal notranslate">READY</kbd> になっていることを確認します。</div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">注釈</p>
-<div class="line-block">
-<div class="line">以下のリソースについては <kbd class="kbd docutils literal notranslate">READY</kbd> が 0/(Pod数)のままとなります。</div>
-<div class="line">- deployment.apps/ita-by-conductor-regularly</div>
-</div>
-</div>
 <div class="literal-block-wrapper docutils container" id="id157">
 <div class="code-block-caption"><span class="caption-number">リスト 85 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id157" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro
@@ -5151,13 +5124,6 @@ kubectl<span class="w"> </span>get<span class="w"> </span>po<span class="w"> </s
 <div class="line-block">
 <div class="line">正常に起動している場合は、<kbd class="kbd docutils literal notranslate">ita</kbd>-<kbd class="kbd docutils literal notranslate">migration</kbd>-<kbd class="kbd docutils literal notranslate">xxx</kbd> と <kbd class="kbd docutils literal notranslate">platform</kbd>-<kbd class="kbd docutils literal notranslate">migration</kbd>-<kbd class="kbd docutils literal notranslate">xxx</kbd> が <kbd class="kbd docutils literal notranslate">Completed</kbd> 、その他すべてが <kbd class="kbd docutils literal notranslate">Running</kbd> となります。</div>
 <div class="line">※正常に起動するまで数分かかる場合があります。</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">注釈</p>
-<div class="line-block">
-<div class="line">以下のPODについては <kbd class="kbd docutils literal notranslate">READY</kbd> が 0/1のままで、メンテナンスモードを解除後に <kbd class="kbd docutils literal notranslate">READY</kbd> は 1/1となります。</div>
-<div class="line">ita-by-conductor-regularly-xxxxxxxxxx-xxxxx</div>
-</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id160">
 <div class="code-block-caption"><span class="caption-number">リスト 88 </span><span class="caption-text">出力結果</span><a class="headerlink" href="#id160" title="Link to this code">¶</a></div>

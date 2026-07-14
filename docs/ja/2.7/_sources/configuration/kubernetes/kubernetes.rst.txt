@@ -29,7 +29,7 @@ Kubernetesクラスター
  * - Storage (Container image size)
    - 10GB
  * - Kubernetes
-   - 1.23 以上
+   - 1.26 以上
  * - サーバー台数
    - 1台
 
@@ -46,7 +46,7 @@ Kubernetesクラスター
  * - Storage
    - 120GB
  * - Kubernetes
-   - 1.23 以上
+   - 1.26 以上
  * - サーバー台数
    - 2台 以上
 
@@ -54,6 +54,9 @@ Kubernetesクラスター
   | 要求リソースは Exastro IT Automation のコア機能に対する値です。同一クラスタ上に Keycloak や MariaDB などの外部ツールをデプロイする場合は、その分のリソースが別途必要となります。
   | データベースおよびファイルの永続化のために、別途ReadWriteManyで接続可能なNFS等のストレージ領域を用意する必要があります。
   | Storage サイズには、Exastro IT Automation が使用する入出力データのファイルは含まれていないため、利用状況に応じて容量を見積もる必要があります。
+
+.. note::
+  | Exastro IT Automation 2.7.1 の Kubernetes は 1.34 以上 です。(参考: `Exastro helm Version <https://github.com/exastro-suite/exastro-helm-beta/blob/main/README.md>`_)
 
 通信要件
 --------

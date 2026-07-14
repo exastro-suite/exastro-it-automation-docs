@@ -22,13 +22,12 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
     <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
     <script src="../../_static/translations.js?v=4755f45a"></script>
@@ -73,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.7/configuration/kubernetes/kubernetes.html" selected>current</option>
-              <option value="../../../../ja/2.7/configuration/kubernetes/kubernetes.html" selected>2.7(current)</option>
+              <option value="../../../../ja/2.8/configuration/kubernetes/kubernetes.html">current</option>
+              <option value="../../../../ja/2.8/configuration/kubernetes/kubernetes.html">2.8(current)</option>
+              <option value="../../../../ja/2.7/configuration/kubernetes/kubernetes.html" selected>2.7</option>
               <option value="../../../../ja/2.6/configuration/kubernetes/kubernetes.html">2.6</option>
               <option value="../../../../ja/2.5/configuration/kubernetes/kubernetes.html">2.5</option>
               <option value="../../../../ja/2.4/configuration/kubernetes/kubernetes.html">2.4</option>
@@ -264,7 +264,7 @@
 <td><p>10GB</p></td>
 </tr>
 <tr class="row-odd"><td><p>Kubernetes</p></td>
-<td><p>1.23 以上</p></td>
+<td><p>1.26 以上</p></td>
 </tr>
 <tr class="row-even"><td><p>サーバー台数</p></td>
 <td><p>1台</p></td>
@@ -293,7 +293,7 @@
 <td><p>120GB</p></td>
 </tr>
 <tr class="row-odd"><td><p>Kubernetes</p></td>
-<td><p>1.23 以上</p></td>
+<td><p>1.26 以上</p></td>
 </tr>
 <tr class="row-even"><td><p>サーバー台数</p></td>
 <td><p>2台 以上</p></td>
@@ -306,6 +306,12 @@
 <div class="line">要求リソースは Exastro IT Automation のコア機能に対する値です。同一クラスタ上に Keycloak や MariaDB などの外部ツールをデプロイする場合は、その分のリソースが別途必要となります。</div>
 <div class="line">データベースおよびファイルの永続化のために、別途ReadWriteManyで接続可能なNFS等のストレージ領域を用意する必要があります。</div>
 <div class="line">Storage サイズには、Exastro IT Automation が使用する入出力データのファイルは含まれていないため、利用状況に応じて容量を見積もる必要があります。</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">Exastro IT Automation 2.7.1 の Kubernetes は 1.34 以上 です。(参考: <a class="reference external" href="https://github.com/exastro-suite/exastro-helm-beta/blob/main/README.md">Exastro helm Version</a>)</div>
 </div>
 </div>
 </section>
