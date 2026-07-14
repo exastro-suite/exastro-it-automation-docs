@@ -21,7 +21,7 @@ RUN apt-get install -y ca-certificates fonts-ipafont plantuml lsof \
 #     echo -e "[global]\nproxy = ${HTTP_PROXY}" > /root/.pip/pip.conf
 
 RUN set -eux && \
-    python -m pip install --proxy=$HTTP_PROXY --upgrade pip && \
+    python -m pip install --proxy=$HTTP_PROXY --upgrade "pip<24" "setuptools<82" "wheel<0.45" && \
     python -m pip install --proxy=$HTTP_PROXY sphinx sphinx-autobuild rstcheck sphinxcontrib-blockdiag sphinxcontrib-blockdiag sphinxcontrib-seqdiag sphinxcontrib-actdiag sphinxcontrib-nwdiag sphinx-copybutton sphinx-tabs sphinx-toolbox watchfiles sphinxcontrib-googleanalytics sphinxcontrib-mermaid && \
     python -m pip install --proxy=$HTTP_PROXY myst-parser doc8 rstcheck[sphinx]
 

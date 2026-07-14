@@ -1,7 +1,7 @@
 pip<24
 setuptools<82
 wheel<0.45
-sphinx<9.0
+sphinx
 sphinx-autobuild
 rstcheck
 sphinxcontrib-blockdiag

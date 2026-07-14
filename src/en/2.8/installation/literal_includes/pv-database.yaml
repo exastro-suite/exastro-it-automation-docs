@@ -1,0 +1,17 @@
+# pv-database.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-database
+spec:
+  claimRef:
+    name: pvc-mariadb
+    namespace: exastro
+  capacity:
+    storage: 20Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /var/data/exastro-suite/exastro-platform/database
+    type: DirectoryOrCreate

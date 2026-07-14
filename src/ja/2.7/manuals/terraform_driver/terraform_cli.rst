@@ -760,6 +760,8 @@ Movement-Module紐付
    | HCL設定をTrueにすることで、変数のタイプを考慮せずにパラメータシートの入力値（具体値）を1:1で設定することができます。
    | また、変数のタイプがmapの場合はTrueでしか登録できません。
 
+.. tip:: 
+ 代入値自動登録設定の連携対象項目については、:ref:`代入値自動登録設定の連携対象項目について <About_linkage_target_items_for_substitution_value_auto-registration_setting>` を参照してください。
 
 .. _terraform_cli_execution:
 
