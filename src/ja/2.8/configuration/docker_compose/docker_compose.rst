@@ -111,4 +111,19 @@ Docker Compose
    |
    | https://github.com/containers/podman/issues/10672
    | https://github.com/containers/podman/issues/12565
+   |
+   | また、podman 5.x 以降では、ルートレスモードにおいて、デフォルトのネットワークドライバーが変更されたことにより、ルートレスコンテナからホスト自身に対して通信が出来ない可能性があります。通信が失敗する場合は、下記の対応を実施してください。
+  
+   | ▼ネットワーク設定の変更
+   | :file:`~/.config/containers/containers.conf` の **default_rootless_network_cmd** の値を下記に変更
 
+   .. code-block:: shell
+   
+    # default_rootless_network_cmdを"pasta"から"slirp4netns"に変更する
+    default_rootless_network_cmd = "slirp4netns"
+   
+   | **※上記手順で改善されない場合はpodmanのバージョンを落として対応してください**
+
+   .. code-block:: shell
+
+    sudo dnf downgrade podman-4.9.4-rhel
