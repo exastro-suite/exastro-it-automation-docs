@@ -26,11 +26,15 @@ Ansible Execution Agent - Offline
 前提条件
 ========
 
-| システム要件については :ref:`構成・構築ガイド <ansible_execution_agent_system_requirements>` を参照してください。
+| 本手順はAlmaLinux 8.9／コミュニティ版のAnsible-builder、Ansible-runnerで検証しています。
+|
+| システム要件は :ref:`構成・構築ガイド <ansible_execution_agent_system_requirements>` を参照してください。
+| ※オンライン環境とオフライン環境のOSバージョンは一致させてください。
+| Ansible-builder、Ansible-runnerのソフトウェア要件については :ref:`ソフトウェア要件 <ansible_execution_agent_software_requirements>` を参照してください。
 | 有償版のAnsible-builder、Ansible-runnerを利用する場合の、サブスクリプションの登録、リポジトリ有効化については :ref:`構成・構築ガイド <ansible_execution_agent_rhel_support_requirements>` を参照してください。
 
-| 資材を収集するサーバーには docker または podman が必要です。
-| 資材を収集する環境とインストールする環境では、構築状態(OSのバージョン及びインストール済のパッケージ)を一致させる必要があります。
+.. note::
+   | 各手順で既にインストール済みのパッケージがある場合は、該当手順をスキップしてください
 
 
 全体の流れ
@@ -47,8 +51,8 @@ Ansible Execution Agent - Offline
 
 | ①RPMパッケージのダウンロード
 | ②Pythonパッケージのダウンロード
-| ③docker-composeリソースのダウンロード
-| ④Exastroリソースのダウンロード
+| ③各種パッケージのダウンロード
+| ④エージェントリソースのダウンロード
 | ⑤実行環境コンテナイメージのビルド
 
 
@@ -58,8 +62,8 @@ Ansible Execution Agent - Offline
 | ⑥環境準備（SELinux無効化、ユーザー作成等）
 | ⑦RPMパッケージのインストール
 | ⑧Pythonパッケージのインストール
-| ⑨docker-composeのインストール
-| ⑩Exastroリソースの配置
+| ⑨各種パッケージのインストール
+| ⑩エージェントリソースの配置
 | ⑪コンテナイメージのロード
 | ⑫エージェントサービスの設定と起動
 
@@ -82,10 +86,6 @@ Ansible Execution Agent - Offline
 
    mkdir offline_install_packages
    cd offline_install_packages
-
-.. warning::
-   | 資材をダウンロードするサーバとインストールするオフラインサーバのOSバージョンは一致させる必要があります。
-   | 以下の手順では、AlmaLinux/RHEL 8.9 を想定しています。
 
 Python 3.11関連RPMのダウンロード
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -168,6 +168,9 @@ podman関連RPMのダウンロード
 
 | podmanとその依存パッケージをダウンロードします。
 
+.. note::
+   | オフライン環境に既にpodmanがインストールされている場合、この手順をスキップしてください。
+
 .. code-block:: bash
    :caption: コマンド
 
@@ -178,6 +181,7 @@ podman関連RPMのダウンロード
    # podmanと依存パッケージをダウンロード
    yumdownloader --resolve podman
 
+   # 元のディレクトリに戻る   
    cd ..
 
 
@@ -250,8 +254,8 @@ root用Pythonパッケージのダウンロード
      -d ./pip_packages_user
 
 
-③docker-composeリソースのダウンロード
---------------------------------------
+③各種パッケージのダウンロード
+------------------------------
 
 | docker-composeバイナリをダウンロードします。
 
@@ -269,8 +273,8 @@ root用Pythonパッケージのダウンロード
    | プロキシ環境下でダウンロードする場合は、 ``-x ${https_proxy}`` オプションを追加してください。
 
 
-④Exastroリソースのダウンロード
--------------------------------
+④エージェントリソースのダウンロード
+------------------------------------
 
 gitの設定確認
 ^^^^^^^^^^^^^
@@ -309,165 +313,15 @@ Exastroソースコードのクローン
    # git checkout <バージョンタグまたはブランチ>
    # cd ..
 
+.. note::
+   | 特定のバージョンを使用する場合は、チェックアウトしてください。
+   | このソースコードは、手順⑩でオフライン環境に配置します。
 
-requirements.txtの配置
+
+requirements.txtの作成
 ^^^^^^^^^^^^^^^^^^^^^^
 
-| エージェントの依存関係ファイルをコピーします。
-
-.. code-block:: bash
-   :caption: コマンド
-
-   # requirements.txtの場所を確認
-   ls exastro-it-automation/ita_root/ita_api_admin/files/*/requirements.txt
-
-   # 表示されたパスを使ってコピー（UUIDは環境により異なる可能性があります）
-   cp exastro-it-automation/ita_root/ita_api_admin/files/<UUID>/requirements.txt \
-     ~/offline_install_packages/requirements.txt
-
-
-requirements.txt用Pythonパッケージのダウンロード
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-| requirements.txtに基づいて、エージェントの依存パッケージをダウンロードします。
-
-.. code-block:: bash
-   :caption: コマンド
-
-   # packagesディレクトリの作成
-   mkdir -p packages
-
-   # requirements.txtに基づいてパッケージをダウンロード
-   python3.11 -m pip download -r requirements.txt -d ./packages
-
-
-⑤実行環境コンテナイメージのビルド
-----------------------------------
-
-前提条件の確認
-^^^^^^^^^^^^^^
-
-| podmanまたはdockerが実行できる環境であることを確認します。
-
-.. code-block:: bash
-   :caption: コマンド
-
-   # podmanのインストール確認
-   podman --version
-
-   # または、dockerのインストール確認
-   # docker --version
-
-   # 未インストールの場合はインストール
-   # podmanの場合：
-   # sudo dnf install -y podman --allowerasing
-   
-   # dockerの場合：
-   # sudo dnf install -y docker
-   # sudo systemctl start docker
-   # sudo systemctl enable docker
-
-ベースイメージのダウンロード
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-| 実行環境のベースとなるコンテナイメージをダウンロードします。
-
-.. code-block:: bash
-   :caption: コマンド
-
-   # ubi9/ubi-initイメージをpull
-   podman pull registry.access.redhat.com/ubi9/ubi-init
-
-ビルド設定ファイルの作成
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-| ansible-builderでのビルドに必要な設定ファイルを作成します。
-
-.. code-block:: bash
-   :caption: コマンド
-
-   # ビルド用ディレクトリの作成
-   mkdir -p build
-   cd build
-
-   # 証明書ディレクトリの作成（必要な場合）
-   mkdir -p files/certs
-
-   # 証明書をコピー（環境に応じて調整）
-   # cp /usr/share/pki/ca-trust-source/anchors/ZscalerRootCertificate.cer files/certs/ZscalerRootCertificate.cer
-
-1. execution-environment.j2 の作成
-
-.. code-block:: bash
-   :caption: コマンド
-
-   vi execution-environment.j2
-
-.. code-block:: yaml
-   :caption: execution-environment.j2の内容例
-
-   version: 3
-   
-   build_arg_defaults:
-     ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: '--ignore-certs'
-   
-   images:
-     base_image:
-       name: "registry.access.redhat.com/ubi9/ubi-init:latest"
-   
-   dependencies:
-     ansible_core:
-       package_pip: "ansible_core"
-     ansible_runner:
-       package_pip: "ansible_runner"
-     system: "builder.txt"
-     python: "requirements.txt"
-     galaxy: "galaxy_collection_requirements.yml"
-     python_interpreter:
-       package_system: "python311"
-       python_path: "/usr/bin/python3.11"
-   
-   # --- Offline artifacts ---
-   additional_build_files:
-     - src: awscli-exe-linux-x86_64.zip
-       dest: files
-   
-   additional_build_steps:
-     prepend_base: |
-       RUN yum -y remove python3-requests || microdnf remove -y python3-requests || true
-     append_base:
-       - RUN /usr/bin/python3.11 -m pip install --upgrade pip
-       - RUN /usr/bin/python3.11 -m pip install bindep pyyaml packaging
-       - RUN $PYCMD -m pip install --no-cache-dir 'dumb-init==1.2.5'
-       - RUN update-crypto-policies --set DEFAULT:SHA1
-   
-       # AWS CLI v2 (offline)
-       - ADD _build/files/awscli-exe-linux-x86_64.zip /tmp/awscliv2.zip
-       - RUN dnf -y install unzip && dnf clean all
-       - RUN unzip /tmp/awscliv2.zip -d /tmp         && /tmp/aws/install         && rm -rf /tmp/aws /tmp/awscliv2.zip
-       - RUN aws --version
-   
-   options:
-     package_manager_path: "/usr/bin/dnf"
-     user: root
-
-2. builder.txt の作成
-
-.. code-block:: bash
-   :caption: コマンド
-
-   vi builder.txt
-
-.. code-block:: text
-   :caption: builder.txtの内容例
-
-   openssh-clients
-   sshpass
-   expect
-   git
-
-
-3. requirements.txt の作成
+| エージェントの依存パッケージを定義するrequirements.txtを作成します。
 
 .. code-block:: bash
    :caption: コマンド
@@ -475,7 +329,7 @@ requirements.txt用Pythonパッケージのダウンロード
    vi requirements.txt
 
 .. code-block:: text
-   :caption: requirements.txtの内容例
+   :caption: requirements.txtの内容
 
    ansible-builder
    ansible-runner
@@ -520,6 +374,179 @@ requirements.txt用Pythonパッケージのダウンロード
    werkzeug
    zipp ; python_version < "3.10"
 
+.. note::
+   | 上記の内容を環境に応じて調整してください。
+   | このrequirements.txtは、手順⑤のコンテナイメージビルドでも使用します。
+
+
+requirements.txt用Pythonパッケージのダウンロード
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| requirements.txtに基づいて、エージェントの依存パッケージをダウンロードします。
+
+.. note::
+   | requirements.txtに記載されているansible-runner等のパッケージと、その依存パッケージが自動的にダウンロードされます。
+
+.. code-block:: bash
+   :caption: コマンド
+
+   # packagesディレクトリの作成
+   mkdir -p packages
+
+   # requirements.txtに基づいてパッケージをダウンロード
+   python3.11 -m pip download -r requirements.txt -d ./packages
+
+
+⑤実行環境コンテナイメージのビルド
+----------------------------------
+
+前提条件の確認
+^^^^^^^^^^^^^^
+
+| オンライン環境でコンテナイメージをビルドするため、podmanまたはdockerが実行できる環境であることを確認します。
+
+.. code-block:: bash
+   :caption: コマンド
+
+   # podmanのインストール確認
+   podman --version
+
+   # または、dockerのインストール確認
+   # docker --version
+
+.. note::
+   | オンライン環境に未インストールの場合のみ、以下のインストールコマンドを実行してください。
+
+.. code-block:: bash
+   :caption: 未インストールの場合のみ実行
+
+   # podmanの場合：
+   sudo dnf install -y podman --allowerasing
+   
+   # dockerの場合：
+   sudo dnf install -y docker
+   sudo systemctl start docker
+   sudo systemctl enable docker
+
+ベースイメージのダウンロード
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| 実行環境のベースとなるコンテナイメージをダウンロードします。
+
+.. code-block:: bash
+   :caption: コマンド
+
+   # ubi9/ubi-initイメージをpull
+   podman pull registry.access.redhat.com/ubi9/ubi-init
+
+ビルド設定ファイルの作成
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+| ansible-builderでのビルドに必要な設定ファイルを作成します。
+
+.. code-block:: bash
+   :caption: コマンド
+
+   # ビルド用ディレクトリの作成
+   mkdir -p build
+   cd build
+
+   # 証明書ディレクトリの作成
+   mkdir -p files/certs
+
+   # 証明書をコピー
+   cp /usr/share/pki/ca-trust-source/anchors/ZscalerRootCertificate.cer files/certs/ZscalerRootCertificate.cer
+
+.. note::
+   | プロキシ環境や企業CA証明書を使用している場合は、証明書を配置してください。
+
+1. execution-environment.j2 の作成
+
+.. code-block:: bash
+   :caption: コマンド
+
+   vi execution-environment.j2
+
+.. code-block:: yaml
+   :caption: execution-environment.j2の内容例
+
+   version: 3
+   
+   build_arg_defaults:
+     ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: '--ignore-certs'
+   
+   images:
+     base_image:
+       name: "registry.access.redhat.com/ubi9/ubi-init:latest"
+   
+   dependencies:
+     ansible_core:
+       package_pip: "ansible_core"
+     ansible_runner:
+       package_pip: "ansible_runner"
+     system: "builder.txt"
+     python: "requirements.txt"
+     galaxy: "galaxy_collection_requirements.yml"
+     python_interpreter:
+       package_system: "python311"
+       python_path: "/usr/bin/python3.11"
+   
+   # --- Offline artifacts ---
+   # AWS CLI等の追加ツールが必要な場合は、以下のコメントを解除してください
+   #additional_build_files:
+   #  - src: awscli-exe-linux-x86_64.zip
+   #    dest: files
+   
+   additional_build_steps:
+     prepend_base: |
+       RUN yum -y remove python3-requests || microdnf remove -y python3-requests || true
+     append_base:
+       - RUN /usr/bin/python3.11 -m pip install --upgrade pip
+       - RUN /usr/bin/python3.11 -m pip install bindep pyyaml packaging
+       - RUN $PYCMD -m pip install --no-cache-dir 'dumb-init==1.2.5'
+       - RUN update-crypto-policies --set DEFAULT:SHA1
+   
+       # AWS CLI v2 (offline) - 必要な場合のみコメント解除
+       #- ADD _build/files/awscli-exe-linux-x86_64.zip /tmp/awscliv2.zip
+       #- RUN dnf -y install unzip && dnf clean all
+       #- RUN unzip /tmp/awscliv2.zip -d /tmp         && /tmp/aws/install         && rm -rf /tmp/aws /tmp/awscliv2.zip
+       #- RUN aws --version
+   
+   options:
+     package_manager_path: "/usr/bin/dnf"
+     user: root
+
+.. note::
+   | AWS CLIが必要な場合は、上記のコメント部分を解除し、以下のコマンドでダウンロードしてください。
+   
+   .. code-block:: bash
+   
+      # AWS CLIのダウンロード
+      curl -O https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
+
+2. builder.txt の作成
+
+.. code-block:: bash
+   :caption: コマンド
+
+   vi builder.txt
+
+.. code-block:: text
+   :caption: builder.txtの内容例
+
+   openssh-clients
+   sshpass
+   expect
+   git
+
+
+3. 手順④で作成したrequirements.txtをbuildディレクトリにコピー
+
+.. code-block:: bash
+   :caption: コマンド
+
+   cp ~/offline_install_packages/requirements.txt .
+
 4. galaxy_collection_requirements.yml の作成
 
 .. code-block:: bash
@@ -543,12 +570,6 @@ requirements.txt用Pythonパッケージのダウンロード
 
 .. note::
    | 上記ファイルの内容は環境に応じて調整してください。
-   | AWS CLI等の追加ツールが必要な場合は、以下のようにダウンロードして配置します。
-   
-   .. code-block:: bash
-   
-      # AWS CLIのダウンロード（必要な場合）
-      curl -O https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
 
 ansible-builderのインストール
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -570,10 +591,15 @@ ansible-builderのインストール
    :caption: コマンド
 
    # イメージのビルド
-   ansible-builder build -t ansible_execution_agent -f execution-environment.j2
+   ansible-builder build -t ＜イメージ名＞ -f execution-environment.j2
 
    # ビルド完了確認
-   podman images | grep ansible_execution_agent
+   podman images | grep ＜イメージ名＞
+
+.. note::
+   | ``-t`` オプションで指定するイメージ名は任意の名前を設定できます（例：``ansible_execution_agent`` ）。
+   | ビルドしたイメージを次の手順でエクスポートし、オフライン環境でロードします。
+   | ITA側での設定については :ref:`こちら <ansible_execution_agent_offline_image_name>` を参照してください。
 
 コンテナイメージのエクスポート
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -584,7 +610,7 @@ ansible-builderのインストール
    :caption: コマンド
 
    # イメージをtar.gzファイルにエクスポート
-   podman save -o images.tar.gz localhost/ansible_execution_agent:latest
+   podman save -o images.tar.gz localhost/＜イメージ名＞:latest
 
    # offline_install_packagesディレクトリにコピー
    cp -p images.tar.gz ../
@@ -630,21 +656,16 @@ ansible-builderのインストール
 
 | オンライン環境での作業完了後、オフライン環境にて下記の手順を実施します。
 
-.. important::
-   | オフライン環境での作業を開始する前に、Exastro IT Automation の管理画面から以下の設定を完了してください：
-   
-   - サービスアカウントユーザーの作成
-   - リフレッシュトークンの取得
-   
-   | 詳細は :doc:`サービスアカウントユーザー管理機能<../../../manuals/organization_management/service_account_users>` を参照してください。
-
 
 ⑥環境準備（SELinux無効化、ユーザー作成等）
 ------------------------------------------
 
 .. note::
-   | 以下の手順は、ユーザー名を ``almalinux`` 、ホームディレクトリを ``/home/almalinux`` として実行した例です。
+   | 以下の手順は、ユーザー名を almalinux 、ホームディレクトリを /home/almalinux として実行した例です。
    | 実際の環境に合わせて読み替えてください。
+   | 
+   | コマンドの実行ユーザーについて、特に記載がない場合は元のユーザー（almalinux等）で実行します。
+   | （exastro_userで実行） と記載がある場合は、手順⑥で作成するエージェント実行ユーザー（exastro_user）で実行してください。
 
 資材の展開
 ^^^^^^^^^^
@@ -660,10 +681,10 @@ ansible-builderのインストール
    cd offline_install_packages
 
 
-Firewallの確認
-^^^^^^^^^^^^^^
+Firewallの設定（任意）
+^^^^^^^^^^^^^^^^^^^^^^
 
-| Firewallの稼働状況を確認します。
+| 必要に応じて、Firewallの設定を行ってください。下記は無効化にする例です。
 
 .. code-block:: bash
    :caption: コマンド
@@ -671,19 +692,13 @@ Firewallの確認
    # Firewallの状態確認
    systemctl status firewalld
 
-.. note::
-   | ``Unit firewalld.service could not be found.`` が表示された場合、Firewallは動作していないため設定は不要です。
-
-| firewalldが起動している場合は、停止して無効化します。
-
-.. code-block:: bash
-   :caption: コマンド
-
    # firewalldの停止
    sudo systemctl stop firewalld
 
    # firewalldの無効化（自動起動の無効化）
    sudo systemctl disable firewalld
+
+
 
 SELinuxの無効化
 ^^^^^^^^^^^^^^^
@@ -707,10 +722,6 @@ SELinuxの無効化
 
    # 設定を反映するため再起動
    sudo reboot
-
-.. note::
-   | `setenforce 0` は再起動まで一時的にPermissive（許容モード）に変更します。
-   | 設定ファイルの編集により、再起動後は完全に無効（Disabled）になります。
 
 .. important::
    | 再起動後、再度ログインして作業を継続してください。
@@ -794,7 +805,7 @@ createrepoのインストール
 gcc関連パッケージのインストール
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-| gccと依存パッケージをローカルリポジトリ経由でインストールします。
+| 手順①でダウンロードしたgccパッケージをインストールします。
 
 .. code-block:: bash
    :caption: コマンド
@@ -852,9 +863,16 @@ podmanのインストール
 
 | podmanとその依存パッケージをインストールします。
 
+.. note::
+   | 既にインストール済みの場合（ ``podman --version`` でバージョンが表示される場合）は、この手順をスキップしてください。
+
 .. code-block:: bash
    :caption: コマンド
 
+   # インストール済み確認
+   podman --version
+
+   # 未インストールの場合のみ以下を実行
    # podman_rpmsディレクトリに移動
    cd ~/offline_install_packages/podman_rpms
 
@@ -980,7 +998,7 @@ poetryのインストールと設定
    poetry config virtualenvs.create true
 
 
-⑨docker-composeのインストール
+⑨各種パッケージのインストール
 ------------------------------
 
 | docker-composeバイナリを配置します。
@@ -1000,8 +1018,8 @@ poetryのインストールと設定
    docker-compose --version
 
 
-⑩Exastroリソースの配置
------------------------
+⑩エージェントリソースの配置
+----------------------------
 
 インストールディレクトリの作成
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1156,6 +1174,26 @@ podman.socketの起動と設定
    # イメージの確認
    podman images
 
+.. _ansible_execution_agent_offline_image_name:
+
+.. note:: 
+   **ITA でのイメージ名の設定**
+
+   ロードしたイメージ名は、ITAの「入力用 > 実行環境パラメータ定義」画面の「Image」列に設定します。
+
+   **設定例：**
+
+   ビルド時にイメージ名を ``ansible_execution_agent`` とした場合、``podman images`` コマンドではこのように表示されます。
+
+   .. code-block:: bash
+
+      podman images
+      REPOSITORY                         TAG         ...
+      localhost/ansible_execution_agent  latest      ...
+
+   ITAには以下の形式で設定します。
+
+   ``localhost/ansible_execution_agent:latest``
 
 Poetry仮想環境の構築
 ^^^^^^^^^^^^^^^^^^^^
@@ -1244,176 +1282,21 @@ Poetry仮想環境の構築
    EXECUTION_LIMIT=5
    MOVEMENT_LIMIT=1
 
-.. important::
-   | 以下の項目は実際の環境に合わせて変更してください：
-   
-   - （サービスID）：設定したSERVICE_IDの値（オーガナイゼーション名_ワークスペース名など）
-   - EXASTRO_ORGANIZATION_ID：接続先のオーガナイゼーションID
-   - EXASTRO_WORKSPACE_ID：接続先のワークスペースID
-   - EXASTRO_URL：接続先のExastro IT AutomationのURL
-   - EXASTRO_REFRESH_TOKEN：サービスアカウントユーザーのリフレッシュトークン
-
 .. _ansible_execution_agent_parameter_list_offline:
 
-.. list-table:: env内のパラメータ
-   :header-rows: 1
-   :align: left
+.. include:: ../../../include/ansible_execution_agent_parameter_list.rst
 
-   * - パラメータ名
-     - 内容
-     - デフォルト値
-     - 変更可否
-     - 追加されたバージョン
-     - 備考
-   * - IS_NON_CONTAINER_LOG
-     - ログをファイル出力する設定項目
-     - 1
-     - 不可
-     - 2.5.1
-     -
-   * - LOG_LEVEL
-     - ログを出力レベルの設定値[INFO/DEBUG]
-     - INFO
-     - 可
-     - 2.5.1
-     -
-   * - LOGGING_MAX_SIZE
-     - ログローテーションのファイルサイズ
-     - 10485760
-     - 可
-     - 2.5.1
-     - 初期状態は、コメントアウト
-   * - LOGGING_MAX_FILE
-     - ログローテーションのバックアップ数
-     - 30
-     - 可
-     - 2.5.1
-     - 初期状態は、コメントアウト
-   * - LANGUAGE
-     - 言語設定
-     - en
-     - 可
-     - 2.5.1
-     -
-   * - TZ
-     - タイムゾーン
-     - Asia/Tokyo
-     - 可
-     - 2.5.1
-     -
-   * - PYTHON_CMD
-     - 実行する仮想環境のpythonの実行コマンド
-     - <インストール先のPATH>/poetry run python3
-     - 不可
-     - 2.5.1
-     -
-   * - PYTHONPATH
-     - 実行する仮想環境のpythonの実行コマンド
-     - <インストール先のPATH>/ita_ag_ansible_execution/
-     - 可
-     - 2.5.1
-     -
-   * - APP_PATH
-     - インストール先のPATH
-     - <インストール先のPATH>
-     - 可
-     - 2.5.1
-     -
-   * - STORAGEPATH
-     - データの保存先のPATH
-     - <インストール先のPATH>/<サービスの一意な識別子>/storage
-     - 可
-     - 2.5.1
-     -
-   * - LOGPATH
-     - ログの保存先のPATH
-     - <インストール先のPATH>/<サービスの一意な識別子>/log
-     - 可
-     - 2.5.1
-     -
-   * - EXASTRO_ORGANIZATION_ID
-     - 接続先のORGANIZATION_ID
-     - <ORGANIZATION_ID>
-     - 可
-     - 2.5.1
-     -
-   * - EXASTRO_WORKSPACE_ID
-     - 接続先のWORKSPACE_ID
-     - <WORKSPACE_ID>
-     - 可
-     - 2.5.1
-     -
-   * - EXASTRO_URL
-     - 接続先のITAのURL
-     - <EXASTRO_URL>
-     - 可
-     - 2.5.1
-     -
-   * - EXASTRO_REFRESH_TOKEN
-     - 接続先のITAのEXASTRO_REFRESH_TOKEN
-     - <EXASTRO_REFRESH_TOKEN>
-     - 可
-     - 2.5.1
-     -
-   * - EXECUTION_ENVIRONMENT_NAMES
-     - | 実行する環実行環境指定できます。
-       | 空の場合、全実行環境を作業対象とします。
-       | 複数指定する場合は、「,」区切りで指定してください。
-     - 空
-     - 可
-     - 2.5.1
-     -
-   * - AGENT_NAME
-     - サービスに登録する、エージェントの識別子です。
-     - ita-ag-ansible-execution-<サービスの一意な識別子>
-     - 不可
-     - 2.5.1
-     -
-   * - USER_ID
-     - エージェントの識別子です。
-     - <サービスの一意な識別子>
-     - 不可
-     - 2.5.1
-     -
-   * - ITERATION
-     - 設定を初期化するまでの、処理の繰り返し数
-     - 10
-     - 可
-     - 2.5.1
-     -
-   * - EXECUTE_INTERVAL
-     - メインプロセス終了後のインターバル
-     - 5
-     - 可
-     - 2.5.1
-     -
-   * - EXECUTION_LIMIT
-     - エージェントが同時に処理できる作業の最大数を制御できます。
-     - 5
-     - 可
-     - 2.7.0
-     -
-   * - MOVEMENT_LIMIT
-     - エージェントが一度に取得する未実行の作業の最大数を制御できます。
-     - 1
-     - 可
-     - 2.7.0
-     -
+| ※デフォルト値列の「対話事項で入力した」という記載は、オンラインインストールの場合です。本手順では.envファイルを直接編集します。
+
+.. note::
+   | リフレッシュトークンは、Exastro IT Automation の管理画面にて取得することができます。      
+   | 詳細は :doc:`サービスアカウントユーザー管理機能<../../../manuals/organization_management/service_account_users>` を参照してください。
 
 
-パラメータの詳細
-^^^^^^^^^^^^^^^^
-| オンライン版の :ref:`ansible_execution_user_recommendation_detail` を参照してください。
-
-
-パラメータ変更による動作影響
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| オンライン版の :ref:`ansible_execution_parameter_change` を参照してください。
-
-
-MOVEMENT_LIMIT・EXECUTION_LIMITの影響
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| オンライン版の :ref:`ansible_execution_limits_impact` を参照してください。
+.. tip::
+   | パラメータの詳細については、 :ref:`ansible_execution_user_recommendation_detail` を参照してください。
+   | パラメータの変更・反映方法方法については、 :ref:`ansible_execution_parameter_change` を参照してください。
+   | MOVEMENT_LIMIT・EXECUTION_LIMITの影響については、 :ref:`ansible_execution_limits_impact` を参照してください。
 
 
 systemdサービスファイルの作成
@@ -1508,21 +1391,7 @@ systemdサービスファイルの作成
    # 設定確認
    ls -l /var/lib/systemd/linger
 
-動作確認
-^^^^^^^^
-
-| エージェントが正常に動作しているか確認します。
-
-.. code-block:: bash
-   :caption: コマンド
-
-   # サービス状態の確認
-   sudo su - exastro_user
-   systemctl --user status ita-ag-ansible-execution-${SERVICE_ID}
-
-   # ログの確認
-   tail -f /cmn/apl/exastro/${SERVICE_ID}/log/ita-ag-ansible-execution-${SERVICE_ID}.log
-
 .. tip::
-   | Exastro IT Automationの管理画面から、エージェントが登録されていることを確認してください。
-   | メニュー：Ansible共通 > エージェント管理
+   | サービスの状態を確認する方法については、 :ref:`ansible_execution_agent_service_cmd` を参照してください。
+   | サービスのログを確認する方法については、 :ref:`ansible_execution_agent_service_log` を参照してください。
+
