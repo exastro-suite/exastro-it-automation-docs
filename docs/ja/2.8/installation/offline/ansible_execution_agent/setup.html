@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Ansible Execution Agent - Offline &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="Learn" href="../../../learn/index.html" />
+    <link rel="prev" title="Ansible Execution Agent" href="index.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../ja/2.8/installation/offline/ansible_execution_agent/setup.html" selected>current</option>
+              <option value="../../../../../ja/2.8/installation/offline/ansible_execution_agent/setup.html" selected>2.8(current)</option>
+              <option value="../../../../../ja/2.7/installation/offline/ansible_execution_agent/setup.html">2.7</option>
+              <option value="../../../../../ja/2.6/installation/offline/ansible_execution_agent/setup.html">2.6</option>
+              <option value="../../../../../ja/2.5/installation/offline/ansible_execution_agent/setup.html">2.5</option>
+              <option value="../../../../../ja/2.4/installation/offline/ansible_execution_agent/setup.html">2.4</option>
+              <option value="../../../../../ja/2.3/installation/offline/ansible_execution_agent/setup.html">2.3</option>
+              <option value="../../../../../ja/2.2/installation/offline/ansible_execution_agent/setup.html">2.2</option>
+              <option value="../../../../../ja/2.1/installation/offline/ansible_execution_agent/setup.html">2.1</option>
+              <option value="../../../../../ja/2.0/installation/offline/ansible_execution_agent/setup.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../../ja/2.8/installation/offline/ansible_execution_agent/setup.html" selected>日本語</option>
+              <option value="../../../../../en/2.8/installation/offline/ansible_execution_agent/setup.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="index.html" title="前のトピックへ">Ansible Execution Agent</a></li>
+        <li class="next"><a href="../../../learn/index.html" title="次のトピックへ">Learn</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+   <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">インストール／アップグレード</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../online/index.html">オンライン</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">オフライン</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../exastro/index.html">Exastro</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Ansible Execution Agent</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Ansible Execution Agent - Offline</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#ansible-execution-agent-purpose-offline">目的</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#ansible-execution-agent-precondition-offline">前提条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id4">全体の流れ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id7">オンライン環境(インターネットに接続できる環境)での作業</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id20">資材の転送</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id21">オフライン環境(インターネットに接続できない環境)での作業</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../learn/index.html">Learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/index.html">マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">貢献</a></li>
+</ul>
+
+   <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">Ansible Execution Agent - Offline</a><ul>
+<li><a class="reference internal" href="#ansible-execution-agent-purpose-offline">目的</a></li>
+<li><a class="reference internal" href="#ansible-execution-agent-precondition-offline">前提条件</a></li>
+<li><a class="reference internal" href="#id4">全体の流れ</a><ul>
+<li><a class="reference internal" href="#id5">オンライン環境での手順</a></li>
+<li><a class="reference internal" href="#id6">オフライン環境での手順</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7">オンライン環境(インターネットに接続できる環境)での作業</a><ul>
+<li><a class="reference internal" href="#rpm">①RPMパッケージのダウンロード</a><ul>
+<li><a class="reference internal" href="#id8">作業ディレクトリの作成</a></li>
+<li><a class="reference internal" href="#python-3-11rpm">Python 3.11関連RPMのダウンロード</a></li>
+<li><a class="reference internal" href="#gccrpm">gcc関連RPMのダウンロード</a></li>
+<li><a class="reference internal" href="#id9">言語パックのダウンロード</a></li>
+<li><a class="reference internal" href="#createrepo">createrepoのダウンロード</a></li>
+<li><a class="reference internal" href="#podmanrpm">podman関連RPMのダウンロード</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#python">②Pythonパッケージのダウンロード</a><ul>
+<li><a class="reference internal" href="#python-3-11">Python 3.11のインストール</a></li>
+<li><a class="reference internal" href="#rootpython">root用Pythonパッケージのダウンロード</a></li>
+<li><a class="reference internal" href="#id10">一般ユーザー用Pythonパッケージのダウンロード</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id11">③各種パッケージのダウンロード</a></li>
+<li><a class="reference internal" href="#id12">④エージェントリソースのダウンロード</a><ul>
+<li><a class="reference internal" href="#git">gitの設定確認</a></li>
+<li><a class="reference internal" href="#exastro">Exastroソースコードのクローン</a></li>
+<li><a class="reference internal" href="#requirements-txt">requirements.txtの作成</a></li>
+<li><a class="reference internal" href="#requirements-txtpython">requirements.txt用Pythonパッケージのダウンロード</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id13">⑤実行環境コンテナイメージのビルド</a><ul>
+<li><a class="reference internal" href="#id14">前提条件の確認</a></li>
+<li><a class="reference internal" href="#id15">ベースイメージのダウンロード</a></li>
+<li><a class="reference internal" href="#id16">ビルド設定ファイルの作成</a></li>
+<li><a class="reference internal" href="#ansible-builder">ansible-builderのインストール</a></li>
+<li><a class="reference internal" href="#id17">コンテナイメージのビルド</a></li>
+<li><a class="reference internal" href="#id18">コンテナイメージのエクスポート</a></li>
+<li><a class="reference internal" href="#id19">資材のアーカイブ作成</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id20">資材の転送</a></li>
+<li><a class="reference internal" href="#id21">オフライン環境(インターネットに接続できない環境)での作業</a><ul>
+<li><a class="reference internal" href="#selinux">⑥環境準備（SELinux無効化、ユーザー作成等）</a><ul>
+<li><a class="reference internal" href="#id22">資材の展開</a></li>
+<li><a class="reference internal" href="#firewall">Firewallの設定（任意）</a></li>
+<li><a class="reference internal" href="#id23">SELinuxの無効化</a></li>
+<li><a class="reference internal" href="#id24">エージェント実行ユーザーの作成</a></li>
+<li><a class="reference internal" href="#sudoers">sudoers設定</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id25">⑦RPMパッケージのインストール</a><ul>
+<li><a class="reference internal" href="#id26">Python 3.11のインストール</a></li>
+<li><a class="reference internal" href="#id27">createrepoのインストール</a></li>
+<li><a class="reference internal" href="#gcc">gcc関連パッケージのインストール</a></li>
+<li><a class="reference internal" href="#id28">言語パックのインストール</a></li>
+<li><a class="reference internal" href="#podman">podmanのインストール</a></li>
+<li><a class="reference internal" href="#id29">ユーザーセッションの開始</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id30">⑧Pythonパッケージのインストール</a><ul>
+<li><a class="reference internal" href="#id31">root用Pythonパッケージのインストール</a></li>
+<li><a class="reference internal" href="#exastro-user">exastro_userのパスワード設定</a></li>
+<li><a class="reference internal" href="#id32">資材のコピーとexastro_userへの切り替え</a></li>
+<li><a class="reference internal" href="#id33">一般ユーザー用Pythonパッケージのインストール</a></li>
+<li><a class="reference internal" href="#poetry">poetryのインストールと設定</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id34">⑨各種パッケージのインストール</a></li>
+<li><a class="reference internal" href="#id35">⑩エージェントリソースの配置</a><ul>
+<li><a class="reference internal" href="#id36">インストールディレクトリの作成</a></li>
+<li><a class="reference internal" href="#id37">Exastroソースコードの配置</a></li>
+<li><a class="reference internal" href="#id38">エージェントディレクトリの構築</a></li>
+<li><a class="reference internal" href="#requirements-txtpackages">requirements.txtとpackagesの配置</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id39">⑪コンテナイメージのロード</a><ul>
+<li><a class="reference internal" href="#id40">exastro_userへの切り替えと環境変数設定</a></li>
+<li><a class="reference internal" href="#podman-socket">podman.socketの起動と設定</a></li>
+<li><a class="reference internal" href="#id41">コンテナイメージのロード</a></li>
+<li><a class="reference internal" href="#id42">Poetry仮想環境の構築</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id43">⑫エージェントサービスの設定と起動</a><ul>
+<li><a class="reference internal" href="#id44">サービス識別子の設定とストレージディレクトリの作成</a></li>
+<li><a class="reference internal" href="#env">.envファイルの作成</a></li>
+<li><a class="reference internal" href="#systemd">systemdサービスファイルの作成</a></li>
+<li><a class="reference internal" href="#id45">サービスファイルの配置</a></li>
+<li><a class="reference internal" href="#id46">サービスの登録と起動</a></li>
+<li><a class="reference internal" href="#id47">サービスの永続化設定</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">HOME</a></li>
+    <li><a href="../../index.html">インストール／アップグレード</a></li>
+    <li><a href="../index.html">オフライン</a></li>
+    <li><a href="index.html">Ansible Execution Agent</a></li>
+    
+    <li>Ansible Execution Agent - Offline</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="ansible-execution-agent-offline">
+<span id="id1"></span><h1>Ansible Execution Agent - Offline<a class="headerlink" href="#ansible-execution-agent-offline" title="Link to this heading">¶</a></h1>
+<section id="ansible-execution-agent-purpose-offline">
+<span id="id2"></span><h2>目的<a class="headerlink" href="#ansible-execution-agent-purpose-offline" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書では、Exastro IT Automation （以下、ITAとも記載する）においてAnsibleをPULL型で実行する際に必要となる、</div>
+<div class="line">Ansible Execution Agentを導入する手順について説明します。</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">Ansible Execution Agentを使用した作業実行、及び設定方法については、マニュアルの以下を参照してください。</div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../../manuals/ansible-driver/ansible_common.html#ansible-execution-environment-definition-template-list"><span class="std std-ref">実行環境定義テンプレート管理</span></a></p></li>
+<li><p><a class="reference internal" href="../../../manuals/ansible-driver/ansible_common.html#ansible-execution-environment-list"><span class="std std-ref">実行環境管理</span></a></p></li>
+<li><p><a class="reference internal" href="../../../manuals/ansible-driver/ansible_common.html#ansible-agent-list"><span class="std std-ref">エージェント管理</span></a></p></li>
+<li><p><a class="reference internal" href="../../../manuals/ansible-driver/ansible_common.html#ansible-common-environment-definition-make"><span class="std std-ref">Ansible共通 ▶ 実行環境定義テンプレート管理 に登録するテンプレートファイルと パラメータシート「実行環境パラメータ定義」 の使用方法</span></a></p></li>
+</ul>
+</div>
+</section>
+<section id="ansible-execution-agent-precondition-offline">
+<span id="id3"></span><h2>前提条件<a class="headerlink" href="#ansible-execution-agent-precondition-offline" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本手順はAlmaLinux 8.9／コミュニティ版のAnsible-builder、Ansible-runnerで検証しています。</div>
+<div class="line"><br /></div>
+<div class="line">システム要件は <a class="reference internal" href="../../../configuration/ansible/ansible_execution_agent.html#ansible-execution-agent-system-requirements"><span class="std std-ref">構成・構築ガイド</span></a> を参照してください。</div>
+<div class="line">※オンライン環境とオフライン環境のOSバージョンは一致させてください。</div>
+<div class="line">Ansible-builder、Ansible-runnerのソフトウェア要件については <a class="reference internal" href="../../../configuration/ansible/ansible_execution_agent.html#ansible-execution-agent-software-requirements"><span class="std std-ref">ソフトウェア要件</span></a> を参照してください。</div>
+<div class="line">有償版のAnsible-builder、Ansible-runnerを利用する場合の、サブスクリプションの登録、リポジトリ有効化については <a class="reference internal" href="../../../configuration/ansible/ansible_execution_agent.html#ansible-execution-agent-rhel-support-requirements"><span class="std std-ref">構成・構築ガイド</span></a> を参照してください。</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">各手順で既にインストール済みのパッケージがある場合は、該当手順をスキップしてください</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h2>全体の流れ<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">オンライン環境での作業完了後に、オフライン環境にてインストールを実施します。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/flowimage_ae.png"><img alt="フローイメージ" src="../../../_images/flowimage_ae.png" style="width: 800px;" />
+</a>
+</figure>
+<section id="id5">
+<h3>オンライン環境での手順<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">①RPMパッケージのダウンロード</div>
+<div class="line">②Pythonパッケージのダウンロード</div>
+<div class="line">③各種パッケージのダウンロード</div>
+<div class="line">④エージェントリソースのダウンロード</div>
+<div class="line">⑤実行環境コンテナイメージのビルド</div>
+</div>
+</section>
+<section id="id6">
+<h3>オフライン環境での手順<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">⑥環境準備（SELinux無効化、ユーザー作成等）</div>
+<div class="line">⑦RPMパッケージのインストール</div>
+<div class="line">⑧Pythonパッケージのインストール</div>
+<div class="line">⑨各種パッケージのインストール</div>
+<div class="line">⑩エージェントリソースの配置</div>
+<div class="line">⑪コンテナイメージのロード</div>
+<div class="line">⑫エージェントサービスの設定と起動</div>
+</div>
+</section>
+</section>
+<section id="id7">
+<h2>オンライン環境(インターネットに接続できる環境)での作業<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">資材の収集を行います。</div>
+</div>
+<section id="rpm">
+<h3>①RPMパッケージのダウンロード<a class="headerlink" href="#rpm" title="Link to this heading">¶</a></h3>
+<section id="id8">
+<h4>作業ディレクトリの作成<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">資材をまとめるディレクトリを作成します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id48">
+<div class="code-block-caption"><span class="caption-number">リスト 418 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id48" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>offline_install_packages
+<span class="nb">cd</span><span class="w"> </span>offline_install_packages
+</pre></div>
+</div>
+</div>
+</section>
+<section id="python-3-11rpm">
+<h4>Python 3.11関連RPMのダウンロード<a class="headerlink" href="#python-3-11rpm" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Python 3.11とその依存パッケージをダウンロードします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id49">
+<div class="code-block-caption"><span class="caption-number">リスト 419 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id49" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># yum-utilsのインストール（yumdownloaderコマンドに必要）</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>yum-utils<span class="w"> </span>-y
+
+<span class="c1"># Python 3.11用ディレクトリの作成</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>python311-rpms
+<span class="nb">cd</span><span class="w"> </span>python311-rpms
+
+<span class="c1"># Python 3.11とその依存パッケージをダウンロード</span>
+yumdownloader<span class="w"> </span>--resolve<span class="w"> </span>python3.11<span class="w"> </span>python3.11-pip<span class="w"> </span>python3.11-devel
+
+<span class="c1"># 元のディレクトリに戻る</span>
+<span class="nb">cd</span><span class="w"> </span>..
+</pre></div>
+</div>
+</div>
+</section>
+<section id="gccrpm">
+<h4>gcc関連RPMのダウンロード<a class="headerlink" href="#gccrpm" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">gccおよびコンパイルに必要なパッケージをダウンロードします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id50">
+<div class="code-block-caption"><span class="caption-number">リスト 420 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id50" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># gcc用ディレクトリの作成</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>gcc-packages
+
+<span class="c1"># gccと依存パッケージをダウンロード</span>
+dnf<span class="w"> </span>download<span class="w"> </span>--resolve<span class="w"> </span>--alldeps<span class="w"> </span>--releasever<span class="o">=</span><span class="m">8</span>.9<span class="w"> </span>--destdir<span class="o">=</span>gcc-packages<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>gcc<span class="w"> </span>gcc-c++<span class="w"> </span>make<span class="w"> </span>kernel-headers
+
+<span class="c1"># glibc関連パッケージをダウンロード</span>
+dnf<span class="w"> </span>download<span class="w"> </span>--destdir<span class="o">=</span>gcc-packages<span class="w"> </span>--releasever<span class="o">=</span><span class="m">8</span>.9<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>glibc<span class="w"> </span>glibc-common<span class="w"> </span>glibc-devel<span class="w"> </span>glibc-headers
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id9">
+<h4>言語パックのダウンロード<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">英語言語パックをダウンロードします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id51">
+<div class="code-block-caption"><span class="caption-number">リスト 421 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id51" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 言語パック用ディレクトリの作成</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>langpacks-en-packages
+
+<span class="c1"># 言語パックをダウンロード</span>
+dnf<span class="w"> </span>download<span class="w"> </span>--resolve<span class="w"> </span>--alldeps<span class="w"> </span>--destdir<span class="o">=</span>langpacks-en-packages<span class="w"> </span>langpacks-en
+</pre></div>
+</div>
+</div>
+</section>
+<section id="createrepo">
+<h4>createrepoのダウンロード<a class="headerlink" href="#createrepo" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ローカルリポジトリ作成用のcreaterepoをダウンロードします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id52">
+<div class="code-block-caption"><span class="caption-number">リスト 422 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id52" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># createrepo用ディレクトリの作成</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>createrepo
+<span class="nb">cd</span><span class="w"> </span>createrepo
+
+<span class="c1"># createrepoをダウンロード</span>
+dnf<span class="w"> </span>download<span class="w"> </span>--resolve<span class="w"> </span>createrepo
+
+<span class="c1"># 元のディレクトリに戻る</span>
+<span class="nb">cd</span><span class="w"> </span>..
+</pre></div>
+</div>
+</div>
+</section>
+<section id="podmanrpm">
+<h4>podman関連RPMのダウンロード<a class="headerlink" href="#podmanrpm" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">podmanとその依存パッケージをダウンロードします。</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">オフライン環境に既にpodmanがインストールされている場合、この手順をスキップしてください。</div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id53">
+<div class="code-block-caption"><span class="caption-number">リスト 423 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id53" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># podman用ディレクトリの作成</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>podman_rpms
+<span class="nb">cd</span><span class="w"> </span>podman_rpms
+
+<span class="c1"># podmanと依存パッケージをダウンロード</span>
+yumdownloader<span class="w"> </span>--resolve<span class="w"> </span>podman
+
+<span class="c1"># 元のディレクトリに戻る</span>
+<span class="nb">cd</span><span class="w"> </span>..
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="python">
+<h3>②Pythonパッケージのダウンロード<a class="headerlink" href="#python" title="Link to this heading">¶</a></h3>
+<section id="python-3-11">
+<h4>Python 3.11のインストール<a class="headerlink" href="#python-3-11" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ダウンロード環境にPython 3.11をインストールします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id54">
+<div class="code-block-caption"><span class="caption-number">リスト 424 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id54" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python 3.11のインストール</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>python3.11<span class="w"> </span>python3.11-pip<span class="w"> </span>python3.11-devel<span class="w"> </span>-y
+
+<span class="c1"># インストール確認</span>
+python3.11<span class="w"> </span>--version
+python3.11<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>--version
+
+<span class="c1"># pipのアップグレード</span>
+python3.11<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+</pre></div>
+</div>
+</div>
+</section>
+<section id="rootpython">
+<h4>root用Pythonパッケージのダウンロード<a class="headerlink" href="#rootpython" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">root権限で使用するPythonパッケージをダウンロードします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id55">
+<div class="code-block-caption"><span class="caption-number">リスト 425 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id55" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># root用パッケージディレクトリの作成</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>pip_packages_root
+
+<span class="c1"># keyrings.altのダウンロード</span>
+python3.11<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>download<span class="w"> </span>keyrings.alt<span class="w"> </span>-d<span class="w"> </span>./pip_packages_root
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id10">
+<h4>一般ユーザー用Pythonパッケージのダウンロード<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">一般ユーザーで使用するPythonパッケージをダウンロードします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id56">
+<div class="code-block-caption"><span class="caption-number">リスト 426 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id56" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 一般ユーザー用パッケージディレクトリの作成</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>pip_packages_user
+
+<span class="c1"># pipのダウンロード</span>
+python3.11<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>download<span class="w"> </span>pip<span class="w"> </span>-d<span class="w"> </span>./pip_packages_user
+
+<span class="c1"># requestsのダウンロード（AlmaLinux 8.9 x86_64向け）</span>
+python3.11<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>download<span class="w"> </span>requests<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--platform<span class="w"> </span>manylinux_2_28_x86_64<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--python-version<span class="w"> </span><span class="m">311</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--only-binary<span class="o">=</span>:all:<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span>./pip_packages_user
+
+<span class="c1"># poetryのダウンロード</span>
+python3.11<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>download<span class="w"> </span><span class="nv">poetry</span><span class="o">==</span><span class="m">1</span>.6.0<span class="w"> </span>-d<span class="w"> </span>./pip_packages_user
+
+<span class="c1"># cryptographyのダウンロード</span>
+python3.11<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>download<span class="w"> </span>cryptography<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--platform<span class="w"> </span>manylinux_2_28_x86_64<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--python-version<span class="w"> </span><span class="m">311</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--only-binary<span class="o">=</span>:all:<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span>./pip_packages_user
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="id11">
+<h3>③各種パッケージのダウンロード<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">docker-composeバイナリをダウンロードします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id57">
+<div class="code-block-caption"><span class="caption-number">リスト 427 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id57" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># docker-composeのダウンロード</span>
+sudo<span class="w"> </span>curl<span class="w"> </span>-L<span class="w"> </span>https://github.com/docker/compose/releases/download/v2.20.3/docker-compose-Linux-x86_64<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-o<span class="w"> </span>docker-compose
+
+<span class="c1"># 実行権限を付与</span>
+chmod<span class="w"> </span>+x<span class="w"> </span>docker-compose
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">プロキシ環境下でダウンロードする場合は、 <code class="docutils literal notranslate"><span class="pre">-x</span> <span class="pre">${https_proxy}</span></code> オプションを追加してください。</div>
+</div>
+</div>
+</section>
+<section id="id12">
+<h3>④エージェントリソースのダウンロード<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<section id="git">
+<h4>gitの設定確認<a class="headerlink" href="#git" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">gitがインストールされているか確認し、未インストールの場合はインストールします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id58">
+<div class="code-block-caption"><span class="caption-number">リスト 428 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id58" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># gitのバージョン確認</span>
+git<span class="w"> </span>--version
+
+<span class="c1"># 未インストールの場合のみ実施</span>
+<span class="c1"># sudo dnf install git -y</span>
+
+<span class="c1"># gitの設定確認</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--list
+
+<span class="c1"># 設定されていない場合は設定</span>
+<span class="c1"># git config --global user.name &quot;your_name&quot;</span>
+<span class="c1"># git config --global user.email &quot;your_email@example.com&quot;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="exastro">
+<h4>Exastroソースコードのクローン<a class="headerlink" href="#exastro" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Exastro IT Automationのソースコードをクローンします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id59">
+<div class="code-block-caption"><span class="caption-number">リスト 429 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id59" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># リポジトリのクローン</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/exastro-suite/exastro-it-automation.git
+
+<span class="c1"># 特定のバージョンをチェックアウトする場合</span>
+<span class="c1"># cd exastro-it-automation</span>
+<span class="c1"># git checkout &lt;バージョンタグまたはブランチ&gt;</span>
+<span class="c1"># cd ..</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">特定のバージョンを使用する場合は、チェックアウトしてください。</div>
+<div class="line">このソースコードは、手順⑩でオフライン環境に配置します。</div>
+</div>
+</div>
+</section>
+<section id="requirements-txt">
+<h4>requirements.txtの作成<a class="headerlink" href="#requirements-txt" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">エージェントの依存パッケージを定義するrequirements.txtを作成します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id60">
+<div class="code-block-caption"><span class="caption-number">リスト 430 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id60" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id61">
+<div class="code-block-caption"><span class="caption-number">リスト 431 </span><span class="caption-text">requirements.txtの内容</span><a class="headerlink" href="#id61" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ansible-builder
+ansible-runner
+attrs
+bindep
+certifi
+charset-normalizer
+click
+clickclick
+colorama ; platform_system == &quot;Windows&quot;
+connexion[swagger-ui,uvicorn]
+distro
+flask
+idna
+importlib-metadata ; python_version &lt; &quot;3.10&quot;
+inflection
+itsdangerous
+jinja2
+jsonschema-specifications
+jsonschema
+lockfile
+markupsafe
+packaging
+parsley
+pbr
+pexpect
+pip
+ptyprocess
+pycryptodome
+python-daemon
+python-dotenv
+pytz
+pyyaml
+referencing
+requests-toolbelt
+requests
+rpds-py
+setuptools
+six
+swagger-ui-bundle
+urllib3
+werkzeug
+zipp ; python_version &lt; &quot;3.10&quot;
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">上記の内容を環境に応じて調整してください。</div>
+<div class="line">このrequirements.txtは、手順⑤のコンテナイメージビルドでも使用します。</div>
+</div>
+</div>
+</section>
+<section id="requirements-txtpython">
+<h4>requirements.txt用Pythonパッケージのダウンロード<a class="headerlink" href="#requirements-txtpython" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">requirements.txtに基づいて、エージェントの依存パッケージをダウンロードします。</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">requirements.txtに記載されているansible-runner等のパッケージと、その依存パッケージが自動的にダウンロードされます。</div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id62">
+<div class="code-block-caption"><span class="caption-number">リスト 432 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id62" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># packagesディレクトリの作成</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>packages
+
+<span class="c1"># requirements.txtに基づいてパッケージをダウンロード</span>
+python3.11<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>download<span class="w"> </span>-r<span class="w"> </span>requirements.txt<span class="w"> </span>-d<span class="w"> </span>./packages
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="id13">
+<h3>⑤実行環境コンテナイメージのビルド<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<section id="id14">
+<h4>前提条件の確認<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">オンライン環境でコンテナイメージをビルドするため、podmanまたはdockerが実行できる環境であることを確認します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id63">
+<div class="code-block-caption"><span class="caption-number">リスト 433 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id63" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># podmanのインストール確認</span>
+podman<span class="w"> </span>--version
+
+<span class="c1"># または、dockerのインストール確認</span>
+<span class="c1"># docker --version</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">オンライン環境に未インストールの場合のみ、以下のインストールコマンドを実行してください。</div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id64">
+<div class="code-block-caption"><span class="caption-number">リスト 434 </span><span class="caption-text">未インストールの場合のみ実行</span><a class="headerlink" href="#id64" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># podmanの場合：</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>podman<span class="w"> </span>--allowerasing
+
+<span class="c1"># dockerの場合：</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>docker
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>docker
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>docker
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id15">
+<h4>ベースイメージのダウンロード<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">実行環境のベースとなるコンテナイメージをダウンロードします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id65">
+<div class="code-block-caption"><span class="caption-number">リスト 435 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id65" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ubi9/ubi-initイメージをpull</span>
+podman<span class="w"> </span>pull<span class="w"> </span>registry.access.redhat.com/ubi9/ubi-init
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id16">
+<h4>ビルド設定ファイルの作成<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ansible-builderでのビルドに必要な設定ファイルを作成します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id66">
+<div class="code-block-caption"><span class="caption-number">リスト 436 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id66" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ビルド用ディレクトリの作成</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>build
+<span class="nb">cd</span><span class="w"> </span>build
+
+<span class="c1"># 証明書ディレクトリの作成</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>files/certs
+
+<span class="c1"># 証明書をコピー</span>
+cp<span class="w"> </span>/usr/share/pki/ca-trust-source/anchors/ZscalerRootCertificate.cer<span class="w"> </span>files/certs/ZscalerRootCertificate.cer
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">プロキシ環境や企業CA証明書を使用している場合は、証明書を配置してください。</div>
+</div>
+</div>
+<ol class="arabic simple">
+<li><p>execution-environment.j2 の作成</p></li>
+</ol>
+<div class="literal-block-wrapper docutils container" id="id67">
+<div class="code-block-caption"><span class="caption-number">リスト 437 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id67" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>execution-environment.j2
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id68">
+<div class="code-block-caption"><span class="caption-number">リスト 438 </span><span class="caption-text">execution-environment.j2の内容例</span><a class="headerlink" href="#id68" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+
+<span class="nt">build_arg_defaults</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;--ignore-certs&#39;</span>
+
+<span class="nt">images</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">base_image</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;registry.access.redhat.com/ubi9/ubi-init:latest&quot;</span>
+
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ansible_core</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ansible_core&quot;</span>
+<span class="w">  </span><span class="nt">ansible_runner</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ansible_runner&quot;</span>
+<span class="w">  </span><span class="nt">system</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;builder.txt&quot;</span>
+<span class="w">  </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;requirements.txt&quot;</span>
+<span class="w">  </span><span class="nt">galaxy</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;galaxy_collection_requirements.yml&quot;</span>
+<span class="w">  </span><span class="nt">python_interpreter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python311&quot;</span>
+<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/python3.11&quot;</span>
+
+<span class="c1"># --- Offline artifacts ---</span>
+<span class="c1"># AWS CLI等の追加ツールが必要な場合は、以下のコメントを解除してください</span>
+<span class="c1">#additional_build_files:</span>
+<span class="c1">#  - src: awscli-exe-linux-x86_64.zip</span>
+<span class="c1">#    dest: files</span>
+
+<span class="nt">additional_build_steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">prepend_base</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">RUN yum -y remove python3-requests || microdnf remove -y python3-requests || true</span>
+<span class="w">  </span><span class="nt">append_base</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RUN /usr/bin/python3.11 -m pip install --upgrade pip</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RUN /usr/bin/python3.11 -m pip install bindep pyyaml packaging</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RUN $PYCMD -m pip install --no-cache-dir &#39;dumb-init==1.2.5&#39;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RUN update-crypto-policies --set DEFAULT:SHA1</span>
+
+<span class="w">    </span><span class="c1"># AWS CLI v2 (offline) - 必要な場合のみコメント解除</span>
+<span class="w">    </span><span class="c1">#- ADD _build/files/awscli-exe-linux-x86_64.zip /tmp/awscliv2.zip</span>
+<span class="w">    </span><span class="c1">#- RUN dnf -y install unzip &amp;&amp; dnf clean all</span>
+<span class="w">    </span><span class="c1">#- RUN unzip /tmp/awscliv2.zip -d /tmp         &amp;&amp; /tmp/aws/install         &amp;&amp; rm -rf /tmp/aws /tmp/awscliv2.zip</span>
+<span class="w">    </span><span class="c1">#- RUN aws --version</span>
+
+<span class="nt">options</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">package_manager_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/dnf&quot;</span>
+<span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">AWS CLIが必要な場合は、上記のコメント部分を解除し、以下のコマンドでダウンロードしてください。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># AWS CLIのダウンロード</span>
+curl<span class="w"> </span>-O<span class="w"> </span>https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
+</pre></div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>builder.txt の作成</p></li>
+</ol>
+<div class="literal-block-wrapper docutils container" id="id69">
+<div class="code-block-caption"><span class="caption-number">リスト 439 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id69" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>builder.txt
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id70">
+<div class="code-block-caption"><span class="caption-number">リスト 440 </span><span class="caption-text">builder.txtの内容例</span><a class="headerlink" href="#id70" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>openssh-clients
+sshpass
+expect
+git
+</pre></div>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>手順④で作成したrequirements.txtをbuildディレクトリにコピー</p></li>
+</ol>
+<div class="literal-block-wrapper docutils container" id="id71">
+<div class="code-block-caption"><span class="caption-number">リスト 441 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id71" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>~/offline_install_packages/requirements.txt<span class="w"> </span>.
+</pre></div>
+</div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>galaxy_collection_requirements.yml の作成</p></li>
+</ol>
+<div class="literal-block-wrapper docutils container" id="id72">
+<div class="code-block-caption"><span class="caption-number">リスト 442 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id72" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>galaxy_collection_requirements.yml
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id73">
+<div class="code-block-caption"><span class="caption-number">リスト 443 </span><span class="caption-text">galaxy_collection_requirements.ymlの内容例</span><a class="headerlink" href="#id73" title="Link to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">collections</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">amazon.aws</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">community.aws</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.azcollection</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vmware.vmware</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cisco.ios</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">f5networks.f5_bigip</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">community.general</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">oracle.oci</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">google.cloud</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">上記ファイルの内容は環境に応じて調整してください。</div>
+</div>
+</div>
+</section>
+<section id="ansible-builder">
+<h4>ansible-builderのインストール<a class="headerlink" href="#ansible-builder" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ansible-builderをインストールします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id74">
+<div class="code-block-caption"><span class="caption-number">リスト 444 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id74" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ansible-builderのインストール</span>
+python3.11<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>ansible-builder<span class="o">==</span><span class="m">3</span>.1.0
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id17">
+<h4>コンテナイメージのビルド<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">実行環境コンテナイメージをビルドします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id75">
+<div class="code-block-caption"><span class="caption-number">リスト 445 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id75" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># イメージのビルド</span>
+ansible-builder<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>＜イメージ名＞<span class="w"> </span>-f<span class="w"> </span>execution-environment.j2
+
+<span class="c1"># ビルド完了確認</span>
+podman<span class="w"> </span>images<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>＜イメージ名＞
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">-t</span></code> オプションで指定するイメージ名は任意の名前を設定できます（例：<code class="docutils literal notranslate"><span class="pre">ansible_execution_agent</span></code> ）。</div>
+<div class="line">ビルドしたイメージを次の手順でエクスポートし、オフライン環境でロードします。</div>
+<div class="line">ITA側での設定については <a class="reference internal" href="#ansible-execution-agent-offline-image-name"><span class="std std-ref">こちら</span></a> を参照してください。</div>
+</div>
+</div>
+</section>
+<section id="id18">
+<h4>コンテナイメージのエクスポート<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ビルドしたイメージをtar形式でエクスポートします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id76">
+<div class="code-block-caption"><span class="caption-number">リスト 446 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id76" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># イメージをtar.gzファイルにエクスポート</span>
+podman<span class="w"> </span>save<span class="w"> </span>-o<span class="w"> </span>images.tar.gz<span class="w"> </span>localhost/＜イメージ名＞:latest
+
+<span class="c1"># offline_install_packagesディレクトリにコピー</span>
+cp<span class="w"> </span>-p<span class="w"> </span>images.tar.gz<span class="w"> </span>../
+
+<span class="c1"># 元のディレクトリに戻る</span>
+<span class="nb">cd</span><span class="w"> </span>~/offline_install_packages
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id19">
+<h4>資材のアーカイブ作成<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">収集した全ての資材を1つのアーカイブファイルにまとめます。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id77">
+<div class="code-block-caption"><span class="caption-number">リスト 447 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id77" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 親ディレクトリに移動</span>
+<span class="nb">cd</span><span class="w"> </span>~
+
+<span class="c1"># 資材をtar.gzで圧縮</span>
+tar<span class="w"> </span>cvfz<span class="w"> </span>offline_install_packages.tar.gz<span class="w"> </span>offline_install_packages
+
+<span class="c1"># アーカイブファイルのサイズ確認</span>
+ls<span class="w"> </span>-lh<span class="w"> </span>offline_install_packages.tar.gz
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="id20">
+<h2>資材の転送<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">オンライン環境で作成した offline_install_packages.tar.gz をFTP、SCP、SFTP、記憶媒体等でオフライン環境に転送します。</div>
+<div class="line">転送先はオフライン環境の作業ユーザーのホームディレクトリ（例：/home/almalinux/）を推奨します。</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">アーカイブには以下の資材が含まれています：</div>
+</div>
+<ul class="simple">
+<li><p>Python 3.11およびgcc等のRPMパッケージ</p></li>
+<li><p>root用およびユーザー用Pythonパッケージ</p></li>
+<li><p>docker-composeバイナリ</p></li>
+<li><p>Exastroソースコード</p></li>
+<li><p>実行環境コンテナイメージ</p></li>
+</ul>
+</div>
+</section>
+<section id="id21">
+<h2>オフライン環境(インターネットに接続できない環境)での作業<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">オンライン環境での作業完了後、オフライン環境にて下記の手順を実施します。</div>
+</div>
+<section id="selinux">
+<h3>⑥環境準備（SELinux無効化、ユーザー作成等）<a class="headerlink" href="#selinux" title="Link to this heading">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">以下の手順は、ユーザー名を almalinux 、ホームディレクトリを /home/almalinux として実行した例です。</div>
+<div class="line">実際の環境に合わせて読み替えてください。</div>
+<div class="line"><br /></div>
+<div class="line">コマンドの実行ユーザーについて、特に記載がない場合は元のユーザー（almalinux等）で実行します。</div>
+<div class="line">（exastro_userで実行） と記載がある場合は、手順⑥で作成するエージェント実行ユーザー（exastro_user）で実行してください。</div>
+</div>
+</div>
+<section id="id22">
+<h4>資材の展開<a class="headerlink" href="#id22" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">オンライン環境から転送した資材を展開します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id78">
+<div class="code-block-caption"><span class="caption-number">リスト 448 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id78" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 資材の展開</span>
+tar<span class="w"> </span>xvfz<span class="w"> </span>offline_install_packages.tar.gz
+
+<span class="nb">cd</span><span class="w"> </span>offline_install_packages
+</pre></div>
+</div>
+</div>
+</section>
+<section id="firewall">
+<h4>Firewallの設定（任意）<a class="headerlink" href="#firewall" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">必要に応じて、Firewallの設定を行ってください。下記は無効化にする例です。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id79">
+<div class="code-block-caption"><span class="caption-number">リスト 449 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id79" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Firewallの状態確認</span>
+systemctl<span class="w"> </span>status<span class="w"> </span>firewalld
+
+<span class="c1"># firewalldの停止</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>firewalld
+
+<span class="c1"># firewalldの無効化（自動起動の無効化）</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>firewalld
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id23">
+<h4>SELinuxの無効化<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">SELinuxを無効化します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id80">
+<div class="code-block-caption"><span class="caption-number">リスト 450 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id80" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 現在の状態確認</span>
+getenforce
+
+<span class="c1"># SELinuxがEnforcingの場合、一時的にPermissiveに変更</span>
+sudo<span class="w"> </span>setenforce<span class="w"> </span><span class="m">0</span>
+
+<span class="c1"># 再度確認（Permissiveになっていることを確認）</span>
+getenforce
+
+<span class="c1"># 恒久的に無効化（設定ファイルの編集）</span>
+sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/SELINUX=enforcing/SELINUX=disabled/&#39;</span><span class="w"> </span>/etc/selinux/config
+
+<span class="c1"># 設定を反映するため再起動</span>
+sudo<span class="w"> </span>reboot
+</pre></div>
+</div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<div class="line-block">
+<div class="line">再起動後、再度ログインして作業を継続してください。</div>
+</div>
+</div>
+</section>
+<section id="id24">
+<h4>エージェント実行ユーザーの作成<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">エージェント実行用のグループとユーザーを作成します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id81">
+<div class="code-block-caption"><span class="caption-number">リスト 451 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id81" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># グループの作成（GID: 6000）</span>
+sudo<span class="w"> </span>groupadd<span class="w"> </span>-g<span class="w"> </span><span class="m">6000</span><span class="w"> </span>exastro_user
+
+<span class="c1"># ユーザーの作成（UID: 6000）</span>
+sudo<span class="w"> </span>useradd<span class="w"> </span>-g<span class="w"> </span><span class="m">6000</span><span class="w"> </span>-u<span class="w"> </span><span class="m">6000</span><span class="w"> </span>exastro_user
+</pre></div>
+</div>
+</div>
+</section>
+<section id="sudoers">
+<h4>sudoers設定<a class="headerlink" href="#sudoers" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">exastro_userにsudo権限を付与します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id82">
+<div class="code-block-caption"><span class="caption-number">リスト 452 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id82" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># sudoers設定ファイルの作成</span>
+sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo &quot;exastro_user ALL = (root) NOPASSWD: ALL&quot; &gt; /etc/sudoers.d/exastro_user&#39;</span>
+
+<span class="c1"># 権限の確認</span>
+sudo<span class="w"> </span>cat<span class="w"> </span>/etc/sudoers.d/exastro_user
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="id25">
+<h3>⑦RPMパッケージのインストール<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h3>
+<section id="id26">
+<h4>Python 3.11のインストール<a class="headerlink" href="#id26" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Python 3.11とその依存パッケージをインストールします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id83">
+<div class="code-block-caption"><span class="caption-number">リスト 453 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id83" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># python311-rpmsディレクトリに移動</span>
+<span class="nb">cd</span><span class="w"> </span>~/offline_install_packages/python311-rpms
+
+<span class="c1"># RPMパッケージのインストール</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>localinstall<span class="w"> </span>*.rpm<span class="w"> </span>-y
+
+<span class="c1"># インストール確認</span>
+python3.11<span class="w"> </span>--version
+python3.11<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>--version
+
+<span class="c1"># 元のディレクトリに戻る</span>
+<span class="nb">cd</span><span class="w"> </span>~/offline_install_packages
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id27">
+<h4>createrepoのインストール<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ローカルリポジトリ作成用のcreatereopoをインストールします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id84">
+<div class="code-block-caption"><span class="caption-number">リスト 454 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id84" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># createrepoディレクトリに移動</span>
+<span class="nb">cd</span><span class="w"> </span>~/offline_install_packages/createrepo
+
+<span class="c1"># drpmを先にインストール</span>
+sudo<span class="w"> </span>rpm<span class="w"> </span>-ivh<span class="w"> </span>drpm-0.4.1-3.el8.x86_64.rpm
+
+<span class="c1"># createrepoをインストール</span>
+sudo<span class="w"> </span>rpm<span class="w"> </span>-Uvh<span class="w"> </span>createrepo*.rpm
+
+<span class="c1"># 元のディレクトリに戻る</span>
+<span class="nb">cd</span><span class="w"> </span>~/offline_install_packages
+</pre></div>
+</div>
+</div>
+</section>
+<section id="gcc">
+<h4>gcc関連パッケージのインストール<a class="headerlink" href="#gcc" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">手順①でダウンロードしたgccパッケージをインストールします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id85">
+<div class="code-block-caption"><span class="caption-number">リスト 455 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id85" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ローカルリポジトリ設定ファイルの作成</span>
+sudo<span class="w"> </span>tee<span class="w"> </span>/etc/yum.repos.d/local.repo<span class="w"> </span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
+<span class="s">[local]</span>
+<span class="s">name=Local RPMs</span>
+<span class="s">baseurl=file:///home/almalinux/offline_install_packages/gcc-packages</span>
+<span class="s">enabled=1</span>
+<span class="s">gpgcheck=0</span>
+<span class="s">EOF</span>
+
+<span class="c1"># gcc-packagesディレクトリに移動</span>
+<span class="nb">cd</span><span class="w"> </span>~/offline_install_packages/gcc-packages
+
+<span class="c1"># リポジトリメタデータの作成</span>
+sudo<span class="w"> </span>createrepo<span class="w"> </span>.
+
+<span class="c1"># yumキャッシュのクリアと再作成</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>clean<span class="w"> </span>all
+sudo<span class="w"> </span>yum<span class="w"> </span>makecache
+
+<span class="c1"># gccと依存パッケージのインストール</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>gcc<span class="w"> </span>glibc-devel<span class="w"> </span>kernel-headers<span class="w"> </span>--disablerepo<span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="w"> </span>--enablerepo<span class="o">=</span><span class="nb">local</span>
+
+<span class="c1"># リポジトリ設定ファイルの削除</span>
+sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/etc/yum.repos.d/local.repo
+dnf<span class="w"> </span>clean<span class="w"> </span>all
+
+<span class="c1"># 元のディレクトリに戻る</span>
+<span class="nb">cd</span><span class="w"> </span>~/offline_install_packages
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id28">
+<h4>言語パックのインストール<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">英語言語パックをインストールします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id86">
+<div class="code-block-caption"><span class="caption-number">リスト 456 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id86" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># langpacks-en-packagesディレクトリに移動</span>
+<span class="nb">cd</span><span class="w"> </span>~/offline_install_packages/langpacks-en-packages
+
+<span class="c1"># 言語パックのインストール</span>
+sudo<span class="w"> </span>rpm<span class="w"> </span>-ivh<span class="w"> </span>*
+
+<span class="c1"># 元のディレクトリに戻る</span>
+<span class="nb">cd</span><span class="w"> </span>~/offline_install_packages
+</pre></div>
+</div>
+</div>
+</section>
+<section id="podman">
+<h4>podmanのインストール<a class="headerlink" href="#podman" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">podmanとその依存パッケージをインストールします。</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">既にインストール済みの場合（ <code class="docutils literal notranslate"><span class="pre">podman</span> <span class="pre">--version</span></code> でバージョンが表示される場合）は、この手順をスキップしてください。</div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id87">
+<div class="code-block-caption"><span class="caption-number">リスト 457 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id87" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># インストール済み確認</span>
+podman<span class="w"> </span>--version
+
+<span class="c1"># 未インストールの場合のみ以下を実行</span>
+<span class="c1"># podman_rpmsディレクトリに移動</span>
+<span class="nb">cd</span><span class="w"> </span>~/offline_install_packages/podman_rpms
+
+<span class="c1"># podmanのインストール</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>localinstall<span class="w"> </span>*.rpm<span class="w"> </span>-y
+
+<span class="c1"># インストール確認</span>
+podman<span class="w"> </span>--version
+
+<span class="c1"># 元のディレクトリに戻る</span>
+<span class="nb">cd</span><span class="w"> </span>~/offline_install_packages
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id29">
+<h4>ユーザーセッションの開始<a class="headerlink" href="#id29" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">exastro_userのsystemdユーザーセッションを開始します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id88">
+<div class="code-block-caption"><span class="caption-number">リスト 458 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id88" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ユーザーセッションの開始</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>user@6000
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="id30">
+<h3>⑧Pythonパッケージのインストール<a class="headerlink" href="#id30" title="Link to this heading">¶</a></h3>
+<section id="id31">
+<h4>root用Pythonパッケージのインストール<a class="headerlink" href="#id31" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">root権限で使用するPythonパッケージをインストールします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id89">
+<div class="code-block-caption"><span class="caption-number">リスト 459 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id89" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># pip_packages_rootディレクトリに移動</span>
+<span class="nb">cd</span><span class="w"> </span>~/offline_install_packages/pip_packages_root
+
+<span class="c1"># keyrings.altのインストール</span>
+sudo<span class="w"> </span>python3.11<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>*.whl
+
+<span class="c1"># インストール確認</span>
+python3.11<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import keyrings.alt; print(&#39;OK&#39;)&quot;</span>
+
+<span class="c1"># 元のディレクトリに戻る</span>
+<span class="nb">cd</span><span class="w"> </span>~/offline_install_packages
+</pre></div>
+</div>
+</div>
+</section>
+<section id="exastro-user">
+<h4>exastro_userのパスワード設定<a class="headerlink" href="#exastro-user" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">exastro_userのパスワードを設定します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id90">
+<div class="code-block-caption"><span class="caption-number">リスト 460 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id90" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># パスワードの設定</span>
+sudo<span class="w"> </span>passwd<span class="w"> </span>exastro_user
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">プロンプトに従ってパスワードを2回入力してください。</div>
+</div>
+</div>
+</section>
+<section id="id32">
+<h4>資材のコピーとexastro_userへの切り替え<a class="headerlink" href="#id32" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">必要な資材をコピーして、exastro_userに切り替えます。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id91">
+<div class="code-block-caption"><span class="caption-number">リスト 461 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id91" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 元のユーザーから資材をコピー</span>
+sudo<span class="w"> </span>cp<span class="w"> </span>-rp<span class="w"> </span>~/offline_install_packages/pip_packages_user<span class="w"> </span>/home/exastro_user/.
+sudo<span class="w"> </span>cp<span class="w"> </span>-rp<span class="w"> </span>~/offline_install_packages/packages<span class="w"> </span>/home/exastro_user/.
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>exastro_user:exastro_user<span class="w"> </span>/home/exastro_user/pip_packages_user
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>exastro_user:exastro_user<span class="w"> </span>/home/exastro_user/packages
+
+<span class="c1"># 元のユーザーのホームディレクトリに実行権限を付与</span>
+sudo<span class="w"> </span>chmod<span class="w"> </span>o+x<span class="w"> </span>/home/almalinux
+
+<span class="c1"># offline_install_packagesに読み取り権限を付与</span>
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span>o+rX<span class="w"> </span>/home/almalinux/offline_install_packages
+
+<span class="c1"># exastro_userに切り替え</span>
+su<span class="w"> </span>-<span class="w"> </span>exastro_user
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id33">
+<h4>一般ユーザー用Pythonパッケージのインストール<a class="headerlink" href="#id33" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">exastro_userでPythonパッケージをインストールします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id92">
+<div class="code-block-caption"><span class="caption-number">リスト 462 </span><span class="caption-text">コマンド（exastro_userで実行）</span><a class="headerlink" href="#id92" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># pip_packages_userディレクトリに移動</span>
+<span class="nb">cd</span><span class="w"> </span>~/pip_packages_user
+
+<span class="c1"># pipをアップグレード</span>
+pip3<span class="w"> </span>install<span class="w"> </span>pip-*.whl<span class="w"> </span>--upgrade
+
+<span class="c1"># 残りのパッケージをインストール</span>
+python3.11<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>*.whl<span class="w"> </span>--user<span class="w"> </span>--no-cache-dir
+</pre></div>
+</div>
+</div>
+</section>
+<section id="poetry">
+<h4>poetryのインストールと設定<a class="headerlink" href="#poetry" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">poetryをインストールして設定します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id93">
+<div class="code-block-caption"><span class="caption-number">リスト 463 </span><span class="caption-text">コマンド（exastro_userで実行）</span><a class="headerlink" href="#id93" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># poetryと依存パッケージをインストール</span>
+python3.11<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>poetry-1.6.0-py3-none-any.whl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>poetry_core-1.7.0-py3-none-any.whl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>poetry_plugin_export-1.6.0-py3-none-any.whl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--user<span class="w"> </span>--no-cache-dir
+
+<span class="c1"># poetryの設定</span>
+poetry<span class="w"> </span>config<span class="w"> </span>virtualenvs.in-project<span class="w"> </span><span class="nb">true</span>
+poetry<span class="w"> </span>config<span class="w"> </span>virtualenvs.create<span class="w"> </span><span class="nb">true</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="id34">
+<h3>⑨各種パッケージのインストール<a class="headerlink" href="#id34" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">docker-composeバイナリを配置します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id94">
+<div class="code-block-caption"><span class="caption-number">リスト 464 </span><span class="caption-text">コマンド（元のユーザーに戻って実行）</span><a class="headerlink" href="#id94" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># exastro_userから抜ける</span>
+<span class="nb">exit</span>
+
+<span class="c1"># docker-composeを配置</span>
+sudo<span class="w"> </span>cp<span class="w"> </span>-p<span class="w"> </span>~/offline_install_packages/docker-compose<span class="w"> </span>/usr/local/bin/
+sudo<span class="w"> </span>chown<span class="w"> </span>root:root<span class="w"> </span>/usr/local/bin/docker-compose
+sudo<span class="w"> </span>chmod<span class="w"> </span>a+x<span class="w"> </span>/usr/local/bin/docker-compose
+
+<span class="c1"># インストール確認</span>
+docker-compose<span class="w"> </span>--version
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id35">
+<h3>⑩エージェントリソースの配置<a class="headerlink" href="#id35" title="Link to this heading">¶</a></h3>
+<section id="id36">
+<h4>インストールディレクトリの作成<a class="headerlink" href="#id36" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">エージェントをインストールするディレクトリを作成します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id95">
+<div class="code-block-caption"><span class="caption-number">リスト 465 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id95" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># インストールディレクトリの作成</span>
+sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/cmn/apl/exastro
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">0777</span><span class="w"> </span>/cmn/apl
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id37">
+<h4>Exastroソースコードの配置<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Exastroのソースコードをインストールディレクトリにコピーします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id96">
+<div class="code-block-caption"><span class="caption-number">リスト 466 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id96" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ソースコードのコピー</span>
+sudo<span class="w"> </span>cp<span class="w"> </span>-rp<span class="w"> </span>~/offline_install_packages/exastro-it-automation<span class="w"> </span>/cmn/apl/exastro/.
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>exastro_user:exastro_user<span class="w"> </span>/cmn/apl/exastro/exastro-it-automation
+
+<span class="c1"># コンテナイメージのコピー</span>
+sudo<span class="w"> </span>cp<span class="w"> </span>-rp<span class="w"> </span>~/offline_install_packages/images.tar.gz<span class="w"> </span>/cmn/apl/exastro/.
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>exastro_user:exastro_user<span class="w"> </span>/cmn/apl/exastro/images.tar.gz
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id38">
+<h4>エージェントディレクトリの構築<a class="headerlink" href="#id38" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">エージェント用のディレクトリ構造を構築します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id97">
+<div class="code-block-caption"><span class="caption-number">リスト 467 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id97" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 作業ディレクトリに移動</span>
+<span class="nb">cd</span><span class="w"> </span>/cmn/apl/exastro
+
+<span class="c1"># ディレクトリの作成</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>ita_ag_ansible_execution/common_libs
+
+<span class="c1"># 必要なファイルをコピー</span>
+cp<span class="w"> </span>-rfa<span class="w"> </span>exastro-it-automation/ita_root/ita_ag_ansible_execution/*<span class="w"> </span>ita_ag_ansible_execution/
+cp<span class="w"> </span>-rfa<span class="w"> </span>exastro-it-automation/ita_root/messages<span class="w"> </span>ita_ag_ansible_execution/
+cp<span class="w"> </span>-rfa<span class="w"> </span>exastro-it-automation/ita_root/agent/<span class="w"> </span>ita_ag_ansible_execution/
+cp<span class="w"> </span>-rfa<span class="w"> </span>exastro-it-automation/ita_root/common_libs/common<span class="w"> </span>ita_ag_ansible_execution/common_libs/
+cp<span class="w"> </span>-rfa<span class="w"> </span>exastro-it-automation/ita_root/common_libs/ag<span class="w"> </span>ita_ag_ansible_execution/common_libs/
+cp<span class="w"> </span>-rfa<span class="w"> </span>exastro-it-automation/ita_root/common_libs/ansible_driver<span class="w"> </span>ita_ag_ansible_execution/common_libs/
+cp<span class="w"> </span>-rfa<span class="w"> </span>exastro-it-automation/ita_root/common_libs/ansible_execution<span class="w"> </span>ita_ag_ansible_execution/common_libs/
+
+<span class="c1"># 実行権限の付与</span>
+sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">0755</span><span class="w"> </span>ita_ag_ansible_execution/agent/agent_init.py
+sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">0755</span><span class="w"> </span>ita_ag_ansible_execution/agent/agent_child_init.py
+sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">0755</span><span class="w"> </span>ita_ag_ansible_execution
+</pre></div>
+</div>
+</div>
+</section>
+<section id="requirements-txtpackages">
+<h4>requirements.txtとpackagesの配置<a class="headerlink" href="#requirements-txtpackages" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">依存パッケージ情報を配置します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id98">
+<div class="code-block-caption"><span class="caption-number">リスト 468 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id98" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># requirements.txtのコピー</span>
+sudo<span class="w"> </span>cp<span class="w"> </span>-rp<span class="w"> </span>/home/almalinux/offline_install_packages/requirements.txt<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>/cmn/apl/exastro/ita_ag_ansible_execution/.
+
+<span class="c1"># pyproject.tomlのコピー</span>
+sudo<span class="w"> </span>cp<span class="w"> </span>-rp<span class="w"> </span>/home/almalinux/offline_install_packages/exastro-it-automation/ita_root/ita_ag_ansible_execution/pyproject.toml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>/cmn/apl/exastro/ita_ag_ansible_execution/.
+
+<span class="c1"># poetry.lockのコピー</span>
+sudo<span class="w"> </span>cp<span class="w"> </span>-rp<span class="w"> </span>/home/almalinux/offline_install_packages/exastro-it-automation/ita_root/ita_ag_ansible_execution/poetry.lock<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>/cmn/apl/exastro/ita_ag_ansible_execution/.
+
+<span class="c1"># 所有者の変更</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>exastro_user:exastro_user<span class="w"> </span>/cmn/apl/exastro/ita_ag_ansible_execution/requirements.txt
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>exastro_user:exastro_user<span class="w"> </span>/cmn/apl/exastro/ita_ag_ansible_execution/pyproject.toml
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>exastro_user:exastro_user<span class="w"> </span>/cmn/apl/exastro/ita_ag_ansible_execution/poetry.lock
+
+<span class="c1"># packagesのコピー</span>
+sudo<span class="w"> </span>cp<span class="w"> </span>-rp<span class="w"> </span>/home/almalinux/offline_install_packages/packages<span class="w"> </span>/cmn/apl/exastro/ita_ag_ansible_execution/.
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>exastro_user:exastro_user<span class="w"> </span>/cmn/apl/exastro/ita_ag_ansible_execution/packages
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="id39">
+<h3>⑪コンテナイメージのロード<a class="headerlink" href="#id39" title="Link to this heading">¶</a></h3>
+<section id="id40">
+<h4>exastro_userへの切り替えと環境変数設定<a class="headerlink" href="#id40" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">exastro_userに切り替えて、必要な環境変数を設定します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id99">
+<div class="code-block-caption"><span class="caption-number">リスト 469 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id99" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># exastro_userに切り替え</span>
+sudo<span class="w"> </span>su<span class="w"> </span>-<span class="w"> </span>exastro_user
+
+<span class="c1"># XDG_RUNTIME_DIRの設定</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">XDG_RUNTIME_DIR</span><span class="o">=</span>/run/user/6000
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export XDG_RUNTIME_DIR=</span><span class="si">${</span><span class="nv">XDG_RUNTIME_DIR</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/.bashrc
+
+<span class="c1"># BUILDAH_ISOLATIONの設定</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export BUILDAH_ISOLATION=chroot&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/.bashrc
+</pre></div>
+</div>
+</div>
+</section>
+<section id="podman-socket">
+<h4>podman.socketの起動と設定<a class="headerlink" href="#podman-socket" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">podmanのソケットを起動して設定します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id100">
+<div class="code-block-caption"><span class="caption-number">リスト 470 </span><span class="caption-text">コマンド（exastro_userで実行）</span><a class="headerlink" href="#id100" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># systemdユーザーセッションディレクトリの作成</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>~/.config/systemd/user
+
+<span class="c1"># podman.socketの有効化と起動</span>
+systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>podman.socket
+
+<span class="c1"># 状態確認</span>
+systemctl<span class="w"> </span>--user<span class="w"> </span>status<span class="w"> </span>podman.socket<span class="w"> </span>--no-pager
+
+<span class="c1"># ソケットの所有者変更</span>
+podman<span class="w"> </span>unshare<span class="w"> </span>chown<span class="w"> </span><span class="m">6000</span>:6000<span class="w"> </span>/run/user/6000/podman/podman.sock
+
+<span class="c1"># DOCKER_HOSTの設定</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">DOCKER_HOST</span><span class="o">=</span>unix:///run/user/6000/podman/podman.sock
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export DOCKER_HOST=</span><span class="si">${</span><span class="nv">DOCKER_HOST</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/.bashrc
+
+<span class="c1"># docker-composeのエイリアス設定</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;alias docker-compose=&#39;podman unshare docker-compose&#39;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/.bashrc
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id41">
+<h4>コンテナイメージのロード<a class="headerlink" href="#id41" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">ビルド済みのコンテナイメージをpodmanにロードします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id101">
+<div class="code-block-caption"><span class="caption-number">リスト 471 </span><span class="caption-text">コマンド（exastro_userで実行）</span><a class="headerlink" href="#id101" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># イメージのロード</span>
+<span class="nb">cd</span><span class="w"> </span>/cmn/apl/exastro
+podman<span class="w"> </span>load<span class="w"> </span>-i<span class="w"> </span>images.tar.gz
+
+<span class="c1"># イメージの確認</span>
+podman<span class="w"> </span>images
+</pre></div>
+</div>
+</div>
+<div class="admonition note" id="ansible-execution-agent-offline-image-name">
+<p class="admonition-title">注釈</p>
+<p><strong>ITA でのイメージ名の設定</strong></p>
+<p>ロードしたイメージ名は、ITAの「入力用 &gt; 実行環境パラメータ定義」画面の「Image」列に設定します。</p>
+<p><strong>設定例：</strong></p>
+<p>ビルド時にイメージ名を <code class="docutils literal notranslate"><span class="pre">ansible_execution_agent</span></code> とした場合、<code class="docutils literal notranslate"><span class="pre">podman</span> <span class="pre">images</span></code> コマンドではこのように表示されます。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>podman<span class="w"> </span>images
+REPOSITORY<span class="w">                         </span>TAG<span class="w">         </span>...
+localhost/ansible_execution_agent<span class="w">  </span>latest<span class="w">      </span>...
+</pre></div>
+</div>
+<p>ITAには以下の形式で設定します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">localhost/ansible_execution_agent:latest</span></code></p>
+</div>
+</section>
+<section id="id42">
+<h4>Poetry仮想環境の構築<a class="headerlink" href="#id42" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">poetryで仮想環境を構築し、依存パッケージをインストールします。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id102">
+<div class="code-block-caption"><span class="caption-number">リスト 472 </span><span class="caption-text">コマンド（exastro_userで実行）</span><a class="headerlink" href="#id102" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># エージェントディレクトリに移動</span>
+<span class="nb">cd</span><span class="w"> </span>/cmn/apl/exastro/ita_ag_ansible_execution
+
+<span class="c1"># poetryで環境構築</span>
+poetry<span class="w"> </span>install<span class="w"> </span>--no-root<span class="w"> </span>--no-interaction
+
+<span class="c1"># 仮想環境の有効化</span>
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+
+<span class="c1"># オフラインパッケージからインストール</span>
+pip<span class="w"> </span>install<span class="w"> </span>--no-index<span class="w"> </span>--find-links<span class="o">=</span>./packages<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="id43">
+<h3>⑫エージェントサービスの設定と起動<a class="headerlink" href="#id43" title="Link to this heading">¶</a></h3>
+<section id="id44">
+<h4>サービス識別子の設定とストレージディレクトリの作成<a class="headerlink" href="#id44" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">サービスの一意な識別子を設定し、エージェントのデータ保存用ディレクトリを作成します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id103">
+<div class="code-block-caption"><span class="caption-number">リスト 473 </span><span class="caption-text">コマンド（exastro_userで実行）</span><a class="headerlink" href="#id103" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># exastro_userから一時的に抜ける</span>
+<span class="nb">exit</span>
+
+<span class="c1"># サービス識別子を環境変数に設定（任意の文字列）</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">SERVICE_ID</span><span class="o">=</span>（オーガナイゼーション名）_（ワークスペース名）
+
+<span class="c1"># ストレージディレクトリの作成</span>
+sudo<span class="w"> </span>mkdir<span class="w"> </span>-m<span class="w"> </span><span class="m">755</span><span class="w"> </span>-p<span class="w"> </span>/cmn/apl/exastro/<span class="si">${</span><span class="nv">SERVICE_ID</span><span class="si">}</span>/storage
+
+<span class="c1"># 所有者の変更</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>exastro_user:exastro_user<span class="w"> </span>/cmn/apl/exastro/<span class="si">${</span><span class="nv">SERVICE_ID</span><span class="si">}</span>
+
+<span class="c1"># exastro_userに再度切り替え</span>
+sudo<span class="w"> </span>su<span class="w"> </span>-<span class="w"> </span>exastro_user
+
+<span class="c1"># 環境変数の再設定</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">SERVICE_ID</span><span class="o">=</span>（オーガナイゼーション名）_（ワークスペース名）
+</pre></div>
+</div>
+</div>
+</section>
+<section id="env">
+<h4>.envファイルの作成<a class="headerlink" href="#env" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">エージェントの設定ファイル（.env）を作成します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id104">
+<div class="code-block-caption"><span class="caption-number">リスト 474 </span><span class="caption-text">コマンド（exastro_userで実行）</span><a class="headerlink" href="#id104" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>/cmn/apl/exastro/<span class="si">${</span><span class="nv">SERVICE_ID</span><span class="si">}</span>/.env
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id105">
+<div class="code-block-caption"><span class="caption-number">リスト 475 </span><span class="caption-text">.envファイルの内容例</span><a class="headerlink" href="#id105" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">IS_NON_CONTAINER_LOG</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">LOG_LEVEL</span><span class="o">=</span>INFO
+<span class="c1">#LOGGING_MAX_SIZE=10485760</span>
+<span class="c1">#LOGGING_MAX_FILE=30</span>
+<span class="nv">LANGUAGE</span><span class="o">=</span>ja
+<span class="nv">TZ</span><span class="o">=</span>Asia/Tokyo
+<span class="nv">PYTHON_CMD</span><span class="o">=</span>/cmn/apl/exastro/ita_ag_ansible_execution/.venv/bin/python
+<span class="nv">PYTHONPATH</span><span class="o">=</span>/cmn/apl/exastro/ita_ag_ansible_execution/
+<span class="nv">APP_PATH</span><span class="o">=</span>/cmn/apl/exastro/ita_ag_ansible_execution
+<span class="nv">STORAGEPATH</span><span class="o">=</span>/cmn/apl/exastro/（サービスID）/storage
+<span class="nv">LOGPATH</span><span class="o">=</span>/cmn/apl/exastro/（サービスID）/log
+<span class="nv">EXASTRO_ORGANIZATION_ID</span><span class="o">=</span>&lt;your_organization_id&gt;
+<span class="nv">EXASTRO_WORKSPACE_ID</span><span class="o">=</span>&lt;your_workspace_id&gt;
+<span class="nv">EXASTRO_URL</span><span class="o">=</span>&lt;your_exastro_url&gt;
+<span class="nv">EXASTRO_REFRESH_TOKEN</span><span class="o">=</span>&lt;your_refresh_token&gt;
+<span class="nv">EXECUTION_ENVIRONMENT_NAMES</span><span class="o">=</span>
+<span class="nv">AGENT_NAME</span><span class="o">=</span>ita-ag-ansible-execution-（サービスID）
+<span class="nv">USER_ID</span><span class="o">=</span>（サービスID）
+<span class="nv">ITERATION</span><span class="o">=</span><span class="m">10</span>
+<span class="nv">EXECUTE_INTERVAL</span><span class="o">=</span><span class="m">5</span>
+<span class="nv">EXECUTION_LIMIT</span><span class="o">=</span><span class="m">5</span>
+<span class="nv">MOVEMENT_LIMIT</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+</div>
+<span id="ansible-execution-agent-parameter-list-offline"></span><table class="docutils align-left" id="id106">
+<caption><span class="caption-number">表 55 </span><span class="caption-text">env内のパラメータ</span><a class="headerlink" href="#id106" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ名</p></th>
+<th class="head"><p>内容</p></th>
+<th class="head"><p>デフォルト値</p></th>
+<th class="head"><p>変更可否</p></th>
+<th class="head"><p>追加されたバージョン</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>IS_NON_CONTAINER_LOG</p></td>
+<td><p>ログをファイル出力する設定項目</p></td>
+<td><p>1</p></td>
+<td><p>不可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>LOG_LEVEL</p></td>
+<td><p>ログを出力レベルの設定値[INFO/DEBUG]</p></td>
+<td><p>INFO</p></td>
+<td><p>可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>LOGGING_MAX_SIZE</p></td>
+<td><p>ログローテーションのファイルサイズ</p></td>
+<td><p>10485760</p></td>
+<td><p>可</p></td>
+<td><p>2.5.1</p></td>
+<td><p>初期状態は、コメントアウト</p></td>
+</tr>
+<tr class="row-odd"><td><p>LOGGING_MAX_FILE</p></td>
+<td><p>ログローテーションのバックアップ数</p></td>
+<td><p>30</p></td>
+<td><p>可</p></td>
+<td><p>2.5.1</p></td>
+<td><p>初期状態は、コメントアウト</p></td>
+</tr>
+<tr class="row-even"><td><p>LANGUAGE</p></td>
+<td><p>言語設定</p></td>
+<td><p>en</p></td>
+<td><p>可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>TZ</p></td>
+<td><p>タイムゾーン</p></td>
+<td><p>Asia/Tokyo</p></td>
+<td><p>可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>PYTHON_CMD</p></td>
+<td><p>実行する仮想環境のpythonの実行コマンド</p></td>
+<td><p>&lt;インストールした環境のPATH&gt;/poetry run python3</p></td>
+<td><p>不可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>PYTHONPATH</p></td>
+<td><p>実行する仮想環境のpythonの実行コマンド</p></td>
+<td><p>&lt;対話事項で入力したインストール先&gt;/ita_ag_ansible_execution/</p></td>
+<td><p>可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>APP_PATH</p></td>
+<td><p>インストール先のPATH</p></td>
+<td><p>&lt;対話事項で入力したインストール先&gt;</p></td>
+<td><p>可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>STORAGEPATH</p></td>
+<td><p>データの保存先のPATH</p></td>
+<td><p>&lt;対話事項で入力した保存先&gt;/&lt;サービスの一意な識別子:yyyyMMddHHmmssfff or 対話で指定した文字列&gt;/storage</p></td>
+<td><p>可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>LOGPATH</p></td>
+<td><p>ログの保存先のPATH</p></td>
+<td><p>&lt;対話事項で入力した保存先&gt;/&lt;サービスの一意な識別子:yyyyMMddHHmmssfff or 対話で指定した文字列&gt;/log</p></td>
+<td><p>可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>EXASTRO_ORGANIZATION_ID</p></td>
+<td><p>接続先のORGANIZATION_ID</p></td>
+<td><p>&lt;対話事項で入力したORGANIZATION_ID&gt;</p></td>
+<td><p>可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>EXASTRO_WORKSPACE_ID</p></td>
+<td><p>接続先のWORKSPACE_ID</p></td>
+<td><p>&lt;対話事項で入力したWORKSPACE_ID&gt;</p></td>
+<td><p>可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>EXASTRO_URL</p></td>
+<td><p>接続先のITAのURL</p></td>
+<td><p>&lt;対話事項で入力したURL&gt;</p></td>
+<td><p>可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>EXASTRO_REFRESH_TOKEN</p></td>
+<td><p>接続先のITAのEXASTRO_REFRESH_TOKEN</p></td>
+<td><p>&lt;対話事項で入力したEXASTRO_REFRESH_TOKEN&gt;</p></td>
+<td><p>可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>EXECUTION_ENVIRONMENT_NAMES</p></td>
+<td><div class="line-block">
+<div class="line">実行する環実行環境指定できます。</div>
+<div class="line">空の場合、全実行環境を作業対象とします。</div>
+<div class="line">複数指定する場合は、「,」区切りで指定してください。</div>
+</div>
+</td>
+<td><p>空</p></td>
+<td><p>可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AGENT_NAME</p></td>
+<td><p>サービスに登録する、エージェントの識別子です。</p></td>
+<td><p>ita-ag-ansible-execution-&lt;サービスの一意な識別子:yyyyMMddHHmmssfff or 対話で指定した文字列&gt;</p></td>
+<td><p>不可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>USER_ID</p></td>
+<td><p>エージェントの識別子です。</p></td>
+<td><p>&lt;サービスの一意な識別子:yyyyMMddHHmmssfff or 対話で指定した文字列&gt;</p></td>
+<td><p>不可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ITERATION</p></td>
+<td><p>設定を初期化するまでの、処理の繰り返し数</p></td>
+<td><p>10</p></td>
+<td><p>可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>EXECUTE_INTERVAL</p></td>
+<td><p>メインプロセス終了後のインターバル</p></td>
+<td><p>5</p></td>
+<td><p>可</p></td>
+<td><p>2.5.1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>EXECUTION_LIMIT</p></td>
+<td><p>エージェントが同時に処理できる作業の最大数を制御できます。</p></td>
+<td><p>5</p></td>
+<td><p>可</p></td>
+<td><p>2.7.0</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>MOVEMENT_LIMIT</p></td>
+<td><p>エージェントが一度に取得する未実行の作業の最大数を制御できます。</p></td>
+<td><p>1</p></td>
+<td><p>可</p></td>
+<td><p>2.7.0</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">※デフォルト値列の「対話事項で入力した」という記載は、オンラインインストールの場合です。本手順では.envファイルを直接編集します。</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">リフレッシュトークンは、Exastro IT Automation の管理画面にて取得することができます。</div>
+<div class="line">詳細は <a class="reference internal" href="../../../manuals/organization_management/service_account_users.html"><span class="doc">サービスアカウントユーザー管理機能</span></a> を参照してください。</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">パラメータの詳細については、 <a class="reference internal" href="../../online/ansible_execution_agent/setup.html#ansible-execution-user-recommendation-detail"><span class="std std-ref">パラメータの詳細</span></a> を参照してください。</div>
+<div class="line">パラメータの変更・反映方法方法については、 <a class="reference internal" href="../../online/ansible_execution_agent/setup.html#ansible-execution-parameter-change"><span class="std std-ref">パラメータの変更・反映方法方法について</span></a> を参照してください。</div>
+<div class="line">MOVEMENT_LIMIT・EXECUTION_LIMITの影響については、 <a class="reference internal" href="../../online/ansible_execution_agent/setup.html#ansible-execution-limits-impact"><span class="std std-ref">MOVEMENT_LIMIT・EXECUTION_LIMITの影響</span></a> を参照してください。</div>
+</div>
+</div>
+</section>
+<section id="systemd">
+<h4>systemdサービスファイルの作成<a class="headerlink" href="#systemd" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">systemdのサービスファイルを作成します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id107">
+<div class="code-block-caption"><span class="caption-number">リスト 476 </span><span class="caption-text">コマンド（exastro_userで実行）</span><a class="headerlink" href="#id107" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>/cmn/apl/exastro/<span class="si">${</span><span class="nv">SERVICE_ID</span><span class="si">}</span>/ita-ag-ansible-execution-<span class="si">${</span><span class="nv">SERVICE_ID</span><span class="si">}</span>.service
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id108">
+<div class="code-block-caption"><span class="caption-number">リスト 477 </span><span class="caption-text">サービスファイルの内容例</span><a class="headerlink" href="#id108" title="Link to this code">¶</a></div>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[Unit]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">Ansible Execution agent for Exastro IT Automation (（サービスID）)</span>
+
+<span class="k">[Service]</span>
+<span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/cmn/apl/exastro/ita_ag_ansible_execution/</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/cmn/apl/exastro/ita_ag_ansible_execution/agent/entrypoint.sh /cmn/apl/exastro/（サービスID）/.env /cmn/apl/exastro/ita_ag_ansible_execution/ /cmn/apl/exastro/（サービスID）/storage &quot;/home/exastro_user/.local/bin/poetry run python3&quot;</span>
+<span class="na">ExecReload</span><span class="o">=</span><span class="s">/bin/kill -HUP $MAINPID</span>
+<span class="na">ExecStop</span><span class="o">=</span><span class="s">/bin/kill $MAINPID</span>
+<span class="na">Restart</span><span class="o">=</span><span class="s">always</span>
+
+<span class="k">[Install]</span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">default.target</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id45">
+<h4>サービスファイルの配置<a class="headerlink" href="#id45" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">サービスファイルをsystemdのユーザーディレクトリに配置します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id109">
+<div class="code-block-caption"><span class="caption-number">リスト 478 </span><span class="caption-text">コマンド（exastro_userで実行）</span><a class="headerlink" href="#id109" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># systemdユーザーディレクトリの作成</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>~/.config/systemd/user
+
+<span class="c1"># サービスファイルのコピー</span>
+cp<span class="w"> </span>-p<span class="w"> </span>/cmn/apl/exastro/<span class="si">${</span><span class="nv">SERVICE_ID</span><span class="si">}</span>/ita-ag-ansible-execution-<span class="si">${</span><span class="nv">SERVICE_ID</span><span class="si">}</span>.service<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>~/.config/systemd/user/
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id46">
+<h4>サービスの登録と起動<a class="headerlink" href="#id46" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">エージェントサービスを登録して起動します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id110">
+<div class="code-block-caption"><span class="caption-number">リスト 479 </span><span class="caption-text">コマンド（exastro_userで実行）</span><a class="headerlink" href="#id110" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># systemdの設定再読み込み</span>
+systemctl<span class="w"> </span>--user<span class="w"> </span>daemon-reload
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">Failed</span> <span class="pre">to</span> <span class="pre">connect</span> <span class="pre">to</span> <span class="pre">bus</span></code> エラーが表示された場合は、以下を実行してください：</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 別ターミナルで実行</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>user@6000
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id111">
+<div class="code-block-caption"><span class="caption-number">リスト 480 </span><span class="caption-text">コマンド（exastro_userで実行）</span><a class="headerlink" href="#id111" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># サービスの有効化</span>
+systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>ita-ag-ansible-execution-<span class="si">${</span><span class="nv">SERVICE_ID</span><span class="si">}</span>
+
+<span class="c1"># サービスの起動</span>
+systemctl<span class="w"> </span>--user<span class="w"> </span>start<span class="w"> </span>ita-ag-ansible-execution-<span class="si">${</span><span class="nv">SERVICE_ID</span><span class="si">}</span>
+
+<span class="c1"># 状態確認</span>
+systemctl<span class="w"> </span>--user<span class="w"> </span>status<span class="w"> </span>ita-ag-ansible-execution-<span class="si">${</span><span class="nv">SERVICE_ID</span><span class="si">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id47">
+<h4>サービスの永続化設定<a class="headerlink" href="#id47" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">システム再起動後もサービスが自動起動するように設定します。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id112">
+<div class="code-block-caption"><span class="caption-number">リスト 481 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id112" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># exastro_userから抜ける</span>
+<span class="nb">exit</span>
+
+<span class="c1"># loginctl enable-lingerの設定</span>
+sudo<span class="w"> </span>loginctl<span class="w"> </span>enable-linger<span class="w"> </span>exastro_user
+
+<span class="c1"># 設定確認</span>
+ls<span class="w"> </span>-l<span class="w"> </span>/var/lib/systemd/linger
+</pre></div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">サービスの状態を確認する方法については、 <a class="reference internal" href="../../online/ansible_execution_agent/setup.html#ansible-execution-agent-service-cmd"><span class="std std-ref">サービスの手動での操作、確認方法</span></a> を参照してください。</div>
+<div class="line">サービスのログを確認する方法については、 <a class="reference internal" href="../../online/ansible_execution_agent/setup.html#ansible-execution-agent-service-log"><span class="std std-ref">サービスのログ確認方法</span></a> を参照してください。</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="index.html" title="前のトピックへ"><span>前のトピックへ</span>Ansible Execution Agent</a></li>
+    <li class="next"><a href="../../../learn/index.html" title="次のトピックへ"><span>次のトピックへ</span>Learn</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2026 NEC Corporation</small>
+    <small><a href="/ja/2.8/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>

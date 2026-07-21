@@ -389,6 +389,23 @@
 <div class="line"><br /></div>
 <div class="line"><a class="reference external" href="https://github.com/containers/podman/issues/10672">https://github.com/containers/podman/issues/10672</a></div>
 <div class="line"><a class="reference external" href="https://github.com/containers/podman/issues/12565">https://github.com/containers/podman/issues/12565</a></div>
+<div class="line"><br /></div>
+<div class="line">また、podman 5.x 以降では、ルートレスモードにおいて、デフォルトのネットワークドライバーが変更されたことにより、ルートレスコンテナからホスト自身に対して通信が出来ない事象が報告されています。</div>
+<div class="line">Ansible作業実行でホスト自身に通信する必要がある場合等、必要に応じて下記対応をご検討ください。</div>
+</div>
+<div class="line-block">
+<div class="line">▼ネットワーク設定の変更</div>
+<div class="line"><code class="file docutils literal notranslate"><span class="pre">~/.config/containers/containers.conf</span></code> の <strong>default_rootless_network_cmd</strong> の値を下記に変更</div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># default_rootless_network_cmdを&quot;pasta&quot;から&quot;slirp4netns&quot;に変更する</span>
+<span class="nv">default_rootless_network_cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;slirp4netns&quot;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">▼podmanのダウングレード</div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>downgrade<span class="w"> </span>podman-4.9.4-rhel
+</pre></div>
 </div>
 </div>
 </section>
