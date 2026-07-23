@@ -142,7 +142,7 @@ OS要件
 
 以下の条件が満たされている必要があります。
 
-- Python3.11がインストールされていること
+- Python3.11 または Python3.12 がインストールされていること
 - インストールを実行するユーザで :command:`python3` と :command:`pip3` コマンドが実行できること
 
 .. note::
@@ -151,19 +151,24 @@ OS要件
 | Ansible Execution Agentの動作確認の際、以下のバージョンのAnsible-builder/Ansible-runnerを使用しております。
 
 .. list-table:: 動作確認済みバージョン情報
-   :widths: 50 50 60
+   :widths: 30 30 40 40
    :header-rows: 1
    :align: left
 
    * - | ソフトウェア
      - | バージョン（コミュニティ版）
-     - | バージョン（RHELサポート付きライセンス版）
+     - | バージョン（RHELサポート付きライセンス版 RHEL9）
+     - | バージョン（RHELサポート付きライセンス版 RHEL10）
    * - | ansible-builder
      - | 3.1.1
      - | 3.1.1-1.2.el9ap
+     - | 3.1.1-2.el10ap (AAP 2.6)
+       | 3.1.1-3.el10ap (AAP 2.7)
+       | 3.1.1-3.1.el10ap (AAP 2.7)
    * - | ansible-runner
      - | 2.4.3
      - | 2.4.2-3.el9ap
+     - | 2.4.2-2.el10ap
 
 .. _ansible_execution_agent_rhel_support_requirements:
 
@@ -180,13 +185,27 @@ RHELサポート付きライセンス利用の場合
 
 - 利用するリポジトリ
 
+  RHEL9の場合:
+
   .. code-block:: bash
 
       rhel-9-for-x86_64-baseos-rpms
       rhel-9-for-x86_64-appstream-rpms
       ansible-automation-platform-2.5-for-rhel-9-x86_64-rpms
 
+  RHEL10の場合:
+
+  .. code-block:: bash
+
+      rhel-10-for-x86_64-baseos-rpms
+      rhel-10-for-x86_64-appstream-rpms
+      ansible-automation-platform-2.6-for-rhel-10-x86_64-rpms
+      または
+      ansible-automation-platform-2.7-for-rhel-10-x86_64-rpms
+
 - 有効化されているリポジトリの確認、リポジトリの有効化
+
+  RHEL9の場合:
 
   .. code-block:: bash
 
@@ -194,6 +213,17 @@ RHELサポート付きライセンス利用の場合
       sudo subscription-manager repos --enable=rhel-9-for-x86_64-baseos-rpms
       sudo subscription-manager repos --enable=rhel-9-for-x86_64-appstream-rpms
       sudo subscription-manager repos --enable=ansible-automation-platform-2.5-for-rhel-9-x86_64-rpms
+
+  RHEL10の場合:
+
+  .. code-block:: bash
+
+      sudo subscription-manager repos --list-enabled
+      sudo subscription-manager repos --enable=rhel-10-for-x86_64-baseos-rpms
+      sudo subscription-manager repos --enable=rhel-10-for-x86_64-appstream-rpms
+      sudo subscription-manager repos --enable=ansible-automation-platform-2.6-for-rhel-10-x86_64-rpms
+      # または AAP 2.7 を使用する場合
+      sudo subscription-manager repos --enable=ansible-automation-platform-2.7-for-rhel-10-x86_64-rpms
 
 
 .. _ansible_execution_agent_communication_requirements:
