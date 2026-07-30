@@ -232,12 +232,12 @@
 <div class="line">以下のサンプルはBasic認証を使用して、Workspace一覧取得APIを呼出しています。</div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
-<span class="nv">ORGANAIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
 <span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
 <span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
 
 <span class="c1"># Workspace一覧取得APIの呼び出し</span>
-curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANAIZATION_ID</span><span class="si">}</span><span class="s2">/platform/workspaces&quot;</span>
+curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/platform/workspaces&quot;</span>
 </pre></div>
 </div>
 </section>
@@ -289,18 +289,18 @@ curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</s
 </li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
-<span class="nv">ORGANAIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
 <span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
 <span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
 
 <span class="c1"># refresh_token払出</span>
 curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;client_id=_</span><span class="si">${</span><span class="nv">ORGANAIZATION_ID</span><span class="si">}</span><span class="s2">-api&quot;</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s2">&quot;client_id=_</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">-api&quot;</span><span class="w"> </span><span class="se">\</span>
 -d<span class="w"> </span><span class="s2">&quot;grant_type=password&quot;</span><span class="w"> </span><span class="se">\</span>
 -d<span class="w"> </span><span class="s2">&quot;scope=openid+offline_access&quot;</span><span class="w"> </span><span class="se">\</span>
 -d<span class="w"> </span><span class="s2">&quot;username=</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 -d<span class="w"> </span><span class="s2">&quot;password=</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/auth/realms/</span><span class="si">${</span><span class="nv">ORGANAIZATION_ID</span><span class="si">}</span><span class="s2">/protocol/openid-connect/token&quot;</span>
+<span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/auth/realms/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/protocol/openid-connect/token&quot;</span>
 </pre></div>
 </div>
 <ul>
@@ -356,7 +356,7 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </spa
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
 <span class="nv">REFRESH_TOKEN</span><span class="o">=</span><span class="s2">&quot;eyJhbGci...&quot;</span><span class="w"> </span><span class="c1"># 事前準備手順で払い出したrefresh_token</span>
-<span class="nv">ORGANAIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
 <span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">&quot;ワークスペースID&quot;</span>
 
 <span class="c1"># access_token払出</span>
@@ -371,7 +371,7 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </spa
 
 <span class="c1"># オペレーションの一覧（全件）取得APIの呼び出し</span>
 curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANAIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/operation_list/filter/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/operation_list/filter/&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="si">${</span><span class="nv">ACCESS_TOKEN</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 </pre></div>
 </div>

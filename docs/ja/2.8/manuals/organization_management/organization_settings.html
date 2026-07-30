@@ -259,12 +259,12 @@
 <ul>
 <li><p>コマンド</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
-<span class="nv">ORGANAIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
 <span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
 <span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
 
 curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANAIZATION_ID</span><span class="si">}</span><span class="s2">/platform/setting&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/platform/setting&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s2">&quot;.data.token&quot;</span>
 </pre></div>
 </div>
@@ -284,12 +284,12 @@ curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</s
 <ul>
 <li><p>コマンド</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
-<span class="nv">ORGANAIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
 <span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
 <span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
 
 cat<span class="w"> </span><span class="s">&lt;&lt;EOS | curl -u &quot;${USERNAME}:${PASSWORD}&quot; -H &quot;Content-type: application/json&quot; \</span>
-<span class="s">-X PATCH -d @- &quot;${BASEURL}/api/${ORGANAIZATION_ID}/platform/setting&quot;</span>
+<span class="s">-X PATCH -d @- &quot;${BASEURL}/api/${ORGANIZATION_ID}/platform/setting&quot;</span>
 <span class="s">{</span>
 <span class="s">    &quot;token&quot;: {</span>
 <span class="s">      &quot;refresh_token_max_lifespan_enabled&quot;: true,</span>

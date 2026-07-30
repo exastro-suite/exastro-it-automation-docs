@@ -382,6 +382,13 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">RHEL OSの場合、インストーラスクリプトでPodmanをインストールする際に、最新バージョンの(システムに予めインストールされている場合はそのバージョンの)Podmanが使用されます。</div>
+<div class="line">動作確認済みのバージョンよりも新しいバージョンが使用されることで、Podmanのバージョン差異に起因する事象が発生することがあります。</div>
+</div>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <div class="line-block">
@@ -389,8 +396,12 @@
 <div class="line"><br /></div>
 <div class="line"><a class="reference external" href="https://github.com/containers/podman/issues/10672">https://github.com/containers/podman/issues/10672</a></div>
 <div class="line"><a class="reference external" href="https://github.com/containers/podman/issues/12565">https://github.com/containers/podman/issues/12565</a></div>
-<div class="line"><br /></div>
-<div class="line">また、podman 5.x 以降では、ルートレスモードにおいて、デフォルトのネットワークドライバーが変更されたことにより、ルートレスコンテナからホスト自身に対して通信が出来ない事象が報告されています。</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">podman 5.x 以降では、ルートレスモードにおいて、デフォルトのネットワークドライバーが変更されたことにより、ルートレスコンテナからホスト自身に対して通信が出来ない事象が報告されています。</div>
 <div class="line">Ansible作業実行でホスト自身に通信する必要がある場合等、必要に応じて下記対応をご検討ください。</div>
 </div>
 <div class="line-block">
