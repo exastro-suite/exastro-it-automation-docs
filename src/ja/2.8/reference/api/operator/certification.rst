@@ -35,12 +35,12 @@ Basic認証
 .. code-block:: bash
 
     BASEURL="https://severname"
-    ORGANAIZATION_ID="オーガナイゼーションID"
+    ORGANIZATION_ID="オーガナイゼーションID"
     USERNAME="ユーザー名"
     PASSWORD="パスワード"
 
     # Workspace一覧取得APIの呼び出し
-    curl -u "${USERNAME}:${PASSWORD}" "${BASEURL}/api/${ORGANAIZATION_ID}/platform/workspaces"
+    curl -u "${USERNAME}:${PASSWORD}" "${BASEURL}/api/${ORGANIZATION_ID}/platform/workspaces"
 
 
 
@@ -80,18 +80,18 @@ Bearer認証
 .. code-block:: bash
 
     BASEURL="https://severname"
-    ORGANAIZATION_ID="オーガナイゼーションID"
+    ORGANIZATION_ID="オーガナイゼーションID"
     USERNAME="ユーザー名"
     PASSWORD="パスワード"
 
     # refresh_token払出
     curl -X POST \
-    -d "client_id=_${ORGANAIZATION_ID}-api" \
+    -d "client_id=_${ORGANIZATION_ID}-api" \
     -d "grant_type=password" \
     -d "scope=openid+offline_access" \
     -d "username=${USERNAME}" \
     -d "password=${PASSWORD}" \
-    "${BASEURL}/auth/realms/${ORGANAIZATION_ID}/protocol/openid-connect/token"
+    "${BASEURL}/auth/realms/${ORGANIZATION_ID}/protocol/openid-connect/token"
 
 - | 二要素認証を設定しているユーザの場合
 
@@ -140,7 +140,7 @@ Bearer認証
 
   BASEURL="https://severname"
   REFRESH_TOKEN="eyJhbGci..." # 事前準備手順で払い出したrefresh_token
-  ORGANAIZATION_ID="オーガナイゼーションID"
+  ORGANIZATION_ID="オーガナイゼーションID"
   WORKSPACE_ID="ワークスペースID"
 
   # access_token払出
@@ -155,5 +155,5 @@ Bearer認証
 
   # オペレーションの一覧（全件）取得APIの呼び出し
   curl -X GET \
-    "${BASEURL}/api/${ORGANAIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/operation_list/filter/" \
+    "${BASEURL}/api/${ORGANIZATION_ID}/workspaces/${WORKSPACE_ID}/ita/menu/operation_list/filter/" \
     -H "Authorization: Bearer ${ACCESS_TOKEN}" \
