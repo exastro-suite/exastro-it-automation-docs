@@ -814,7 +814,7 @@ Movement-対話種別紐付
 
          作業状態確認の代入値管理
 
-.. tip:: 
+.. tip::
  代入値自動登録設定の連携対象項目については、:ref:`代入値自動登録設定の連携対象項目について <About_linkage_target_items_for_substitution_value_auto-registration_setting>` を参照してください。
 
 .. _ansible_pioneer_execution:
@@ -900,6 +900,8 @@ Movement-対話種別紐付
       * - 通番
         - | ジョブスライス数の設定によりグループ内を分割した 1 からの通番です。
           | 0 の場合はジョブスライス数で分割されなかったことを表します。
+
+   ..  include:: ../../include/aap_cloud_exec_log.rst
 
 #. | **ログ検索**
    | 実行ログ、エラーログは、各ログのログ検索テキストボックスに検索したい文字列を入力することで、入力した文字列の箇所がハイライトで表示されます。

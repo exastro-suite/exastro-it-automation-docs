@@ -565,6 +565,10 @@ GitLab 連携設定
 
 .. _installation_kubernetes_proxy_settings:
 
+
+..  include:: ../../../include/aap_cloud_gitlab.rst
+
+
 Proxy設定
 ---------
 

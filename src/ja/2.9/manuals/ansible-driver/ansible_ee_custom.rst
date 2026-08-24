@@ -47,17 +47,17 @@ Ansible作業時のビルドにカスタマイズ工程を追加する例
 
 .. code-block:: console
    :caption: コマンド（環境変数を確認）
- 
+
    [user01@ita-sv ~]$ cat ~/exastro-docker-compose/.env | grep ANSIBLE
    ANSIBLE_AGENT_IMAGE=exastro-ansible-agent-custom
    ANSIBLE_AGENT_IMAGE_TAG=devel
    # ANSIBLE_AGENT_BASE_IMAGE=exastro/exastro-it-automation-by-ansible-agent
    # ANSIBLE_AGENT_BASE_IMAGE_TAG=
- 
+
 | 項目がコメントアウトされている場合は、既定値としてそれぞれ
 
 .. code-block:: console
- 
+
  ANSIBLE_AGENT_IMAGE=my-exastro-ansible-agent
  ANSIBLE_AGENT_IMAGE_TAG=[[ ITAのバージョン ]]
  ANSIBLE_AGENT_BASE_IMAGE=exastro/exastro-it-automation-by-ansible-agent
@@ -74,10 +74,10 @@ Ansible作業時のビルドにカスタマイズ工程を追加する例
 
 .. code-block:: console
    :caption: コマンド（既存のイメージを削除）
- 
+
    [user01@ita-sv ~]$ docker images | grep [[ここにANSIBLE_AGENT_IMAGEを代入]]
    [[ANSIBLE_AGENT_IMAGE]]                      [[ANSIBLE_AGENT_IMAGE_TAG]]    18493d96333g   12 hours ago   953MB
- 
+
    [user01@ita-sv ~]$ docker rmi -f 18493d96333g
 
 
@@ -104,20 +104,20 @@ Ansible作業時のビルドにカスタマイズ工程を追加する例
    # /usr/local/lib/python3.11/site-packages/ansible_collections
    Collection                               Version
    ---------------------------------------- -------
-   amazon.aws                               9.5.0  , ansible.netcommon                        7.2.0  , ansible.posix                            1.6.2  , ansible.utils                            5.1.2  , ansible.windows                          2.8.0  , arista.eos                               10.1.1 , awx.awx                                  24.6.1 , 
-   azure.azcollection                       3.3.1  , check_point.mgmt                         6.4.0  , chocolatey.chocolatey                    1.5.3  , cisco.aci                                2.11.0 , cisco.asa                                6.1.0  , cisco.dnac                               6.31.3 , cisco.intersight                         2.1.0  , 
-   cisco.ios                                9.2.0  , cisco.iosxr                              10.3.1 , cisco.ise                                2.10.0 , cisco.meraki                             2.21.1 , cisco.mso                                2.10.0 , cisco.nxos                               9.4.0  , cisco.ucs                                1.16.0 , 
-   cloud.common                             4.1.0  , cloudscale_ch.cloud                      2.4.1  , community.aws                            9.3.0  , community.ciscosmb                       1.0.10 , community.crypto                         2.26.1 , community.digitalocean                   1.27.0 , community.dns                            3.2.4  , 
-   community.docker                         4.6.0  , community.general                        10.7.0 , community.grafana                        2.2.0  , community.hashi_vault                    6.2.0  , community.hrobot                         2.3.0  , community.library_inventory_filtering_v1 1.1.1  , community.libvirt                        1.3.1  , 
-   community.mongodb                        1.7.9  , community.mysql                          3.13.0 , community.network                        5.1.0  , community.okd                            4.0.1  , community.postgresql                     3.14.1 , community.proxysql                       1.6.0  , community.rabbitmq                       1.4.0  , 
-   community.routeros                       3.6.0  , community.sap_libs                       1.4.2  , community.sops                           2.0.5  , community.vmware                         5.6.0  , community.windows                        2.4.0  , community.zabbix                         3.3.0  , containers.podman                        1.16.3 , 
-   cyberark.conjur                          1.3.3  , cyberark.pas                             1.0.35 , dellemc.enterprise_sonic                 2.5.1  , dellemc.openmanage                       9.12.0 , dellemc.powerflex                        2.6.0  , dellemc.unity                            2.0.0  , f5networks.f5_modules                    1.35.0 , 
-   fortinet.fortimanager                    2.9.1  , fortinet.fortios                         2.4.0  , google.cloud                             1.5.3  , grafana.grafana                          5.7.0  , hetzner.hcloud                           4.3.0  , hitachivantara.vspone_block              3.4.1  , ibm.qradar                               4.0.0  , 
-   ibm.spectrum_virtualize                  2.0.0  , ibm.storage_virtualize                   2.7.3  , ieisystem.inmanage                       3.0.0  , infinidat.infinibox                      1.4.5  , infoblox.nios_modules                    1.8.0  , inspur.ispim                             2.2.3  , junipernetworks.junos                    9.1.0  , 
-   kaytus.ksmanage                          2.0.0  , kubernetes.core                          5.3.0  , kubevirt.core                            2.2.2  , lowlydba.sqlserver                       2.6.1  , microsoft.ad                             1.9.0  , microsoft.iis                            1.0.2  , netapp.cloudmanager                      21.24.0, 
-   netapp.ontap                             22.14.0, netapp.storagegrid                       21.14.0, netapp_eseries.santricity                1.4.1  , netbox.netbox                            3.21.0 , ngine_io.cloudstack                      2.5.0  , openstack.cloud                          2.4.1  , ovirt.ovirt                              3.2.0  , 
-   purestorage.flasharray                   1.34.1 , purestorage.flashblade                   1.20.0 , sensu.sensu_go                           1.14.0 , splunk.es                                4.0.0  , telekom_mms.icinga_director              2.2.2  , theforeman.foreman                       4.2.0  , vmware.vmware                            1.11.0 , 
-   vmware.vmware_rest                       4.7.0  , vultr.cloud                              1.13.0 , vyos.vyos                                5.0.0  , wti.remote                               1.0.10 
+   amazon.aws                               9.5.0  , ansible.netcommon                        7.2.0  , ansible.posix                            1.6.2  , ansible.utils                            5.1.2  , ansible.windows                          2.8.0  , arista.eos                               10.1.1 , awx.awx                                  24.6.1 ,
+   azure.azcollection                       3.3.1  , check_point.mgmt                         6.4.0  , chocolatey.chocolatey                    1.5.3  , cisco.aci                                2.11.0 , cisco.asa                                6.1.0  , cisco.dnac                               6.31.3 , cisco.intersight                         2.1.0  ,
+   cisco.ios                                9.2.0  , cisco.iosxr                              10.3.1 , cisco.ise                                2.10.0 , cisco.meraki                             2.21.1 , cisco.mso                                2.10.0 , cisco.nxos                               9.4.0  , cisco.ucs                                1.16.0 ,
+   cloud.common                             4.1.0  , cloudscale_ch.cloud                      2.4.1  , community.aws                            9.3.0  , community.ciscosmb                       1.0.10 , community.crypto                         2.26.1 , community.digitalocean                   1.27.0 , community.dns                            3.2.4  ,
+   community.docker                         4.6.0  , community.general                        10.7.0 , community.grafana                        2.2.0  , community.hashi_vault                    6.2.0  , community.hrobot                         2.3.0  , community.library_inventory_filtering_v1 1.1.1  , community.libvirt                        1.3.1  ,
+   community.mongodb                        1.7.9  , community.mysql                          3.13.0 , community.network                        5.1.0  , community.okd                            4.0.1  , community.postgresql                     3.14.1 , community.proxysql                       1.6.0  , community.rabbitmq                       1.4.0  ,
+   community.routeros                       3.6.0  , community.sap_libs                       1.4.2  , community.sops                           2.0.5  , community.vmware                         5.6.0  , community.windows                        2.4.0  , community.zabbix                         3.3.0  , containers.podman                        1.16.3 ,
+   cyberark.conjur                          1.3.3  , cyberark.pas                             1.0.35 , dellemc.enterprise_sonic                 2.5.1  , dellemc.openmanage                       9.12.0 , dellemc.powerflex                        2.6.0  , dellemc.unity                            2.0.0  , f5networks.f5_modules                    1.35.0 ,
+   fortinet.fortimanager                    2.9.1  , fortinet.fortios                         2.4.0  , google.cloud                             1.5.3  , grafana.grafana                          5.7.0  , hetzner.hcloud                           4.3.0  , hitachivantara.vspone_block              3.4.1  , ibm.qradar                               4.0.0  ,
+   ibm.spectrum_virtualize                  2.0.0  , ibm.storage_virtualize                   2.7.3  , ieisystem.inmanage                       3.0.0  , infinidat.infinibox                      1.4.5  , infoblox.nios_modules                    1.8.0  , inspur.ispim                             2.2.3  , junipernetworks.junos                    9.1.0  ,
+   kaytus.ksmanage                          2.0.0  , kubernetes.core                          5.3.0  , kubevirt.core                            2.2.2  , lowlydba.sqlserver                       2.6.1  , microsoft.ad                             1.9.0  , microsoft.iis                            1.0.2  , netapp.cloudmanager                      21.24.0,
+   netapp.ontap                             22.14.0, netapp.storagegrid                       21.14.0, netapp_eseries.santricity                1.4.1  , netbox.netbox                            3.21.0 , ngine_io.cloudstack                      2.5.0  , openstack.cloud                          2.4.1  , ovirt.ovirt                              3.2.0  ,
+   purestorage.flasharray                   1.34.1 , purestorage.flashblade                   1.20.0 , sensu.sensu_go                           1.14.0 , splunk.es                                4.0.0  , telekom_mms.icinga_director              2.2.2  , theforeman.foreman                       4.2.0  , vmware.vmware                            1.11.0 ,
+   vmware.vmware_rest                       4.7.0  , vultr.cloud                              1.13.0 , vyos.vyos                                5.0.0  , wti.remote                               1.0.10
 
 | 「 :file:`~/exastro-docker-compose/ita_by_ansible_execute/templates/work/Dockerfile` 」を下記のように編集します。
 | なお、:command:`ansible-galaxy collection install` の直後に実施している :command:`pip3.11 install` については、コレクションに必要なライブラリを指定してください。
@@ -125,15 +125,15 @@ Ansible作業時のビルドにカスタマイズ工程を追加する例
 
 .. code-block:: diff
    :caption: ~/exastro-docker-compose/ita_by_ansible_execute/templates/work/Dockerfile
- 
+
    ARG ANSIBLE_AGENT_BASE_IMAGE
    ARG ANSIBLE_AGENT_BASE_IMAGE_TAG
 
    FROM ${ANSIBLE_AGENT_BASE_IMAGE}:${ANSIBLE_AGENT_BASE_IMAGE_TAG}
 
    + RUN ansible-galaxy collection install [[ここにインストールしたいコレクション名を代入]] \
-   + && pip3.11 install [[ここにコレクションに必要なライブラリを代入]] 
-   
+   + && pip3.11 install [[ここにコレクションに必要なライブラリを代入]]
+
    ## Add module command bellow, if you need to use extend ansible module.
 
    # Example:
@@ -152,8 +152,8 @@ Ansible作業時のビルドにカスタマイズ工程を追加する例
    FROM ${ANSIBLE_AGENT_BASE_IMAGE}:${ANSIBLE_AGENT_BASE_IMAGE_TAG}
 
    + RUN ansible-galaxy collection install --ignore-certs [[ここにインストールしたいコレクション名を代入]] \
-   + && pip3.11 install [[ここにコレクションに必要なライブラリを代入]] 
-   
+   + && pip3.11 install [[ここにコレクションに必要なライブラリを代入]]
+
    ## Add module command bellow, if you need to use extend ansible module.
 
    # Example:
@@ -165,7 +165,7 @@ Ansible作業時のビルドにカスタマイズ工程を追加する例
 | なお、Ansible作業実行時に下記のようなエラーが発生した場合はビルドに失敗しています。
 
 .. code-block:: text
- 
+
    Service ita_ansible_agent  Building\nThe command \'/bin/sh -c ansible-galaxy collection install [[インストールしたいコレクション名]]\' returned a non-zero code: 1\n'
 
 
@@ -195,7 +195,7 @@ Ansible作業時のビルドにカスタマイズ工程を追加する例
 
    + RUN mkdir -p /home/app_user/.ansible/plugins/modules
    + COPY my_module.py /home/app_user/.ansible/plugins/modules/
-   
+
    ## Add module command bellow, if you need to use extend ansible module.
 
    # Example:
@@ -221,7 +221,7 @@ Ansible作業時にカスタマイズを施したイメージを使用する例
 
    [user01@ita-sv ~]$ docker images | grep exastro-ansible-agent-custom
    exastro-ansible-agent-custom                      devel    18493d96333g   12 hours ago   953MB
- 
+
 | なお、Kubenetesではタグ名が「latest」又は「none」であるとローカルイメージを使用しないため、
 | Kubenetesで使用する場合はこの時点でタグ名を「latest」又は「none」以外としておくことを推奨します。
 | （参考：https://kubernetes.io/docs/concepts/containers/images/#imagepullpolicy-defaulting）
@@ -233,11 +233,11 @@ Ansible作業時にカスタマイズを施したイメージを使用する例
    exastro-ansible-agent-custom                     <none>    18493d96333g   12 hours ago   953MB
 
    [user01@ita-sv ~]$ docker tag 18493d96333g exastro-ansible-agent-custom:devel
-  
+
    [user01@ita-sv ~]$ docker images | grep exastro-ansible-agent-custom
    exastro-ansible-agent-custom                      devel    18493d96333g   12 hours ago   953MB
- 
- 
+
+
 | 下記コマンドを実行してイメージを出力します。
 | コマンドには「18493d96333g」等のイメージIDではなく、「exastro-ansible-agent-custom:devel」といったイメージ名とタグ名を使用してください。
 
@@ -245,8 +245,8 @@ Ansible作業時にカスタマイズを施したイメージを使用する例
    :caption: コマンド例（イメージを出力）
 
    [user01@ita-sv ~]$ docker save exastro-ansible-agent-custom:devel | gzip -c > /tmp/custom-docker-image.tar.gz
-  
- 
+
+
 
 カスタマイズを施したイメージの投入
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -262,7 +262,7 @@ docker-compose版
    :caption: コマンド例（イメージを投入）
 
    [user01@ita-sv-02 ~]$ docker load < /tmp/custom-docker-image.tar.gz
-  
+
 
 | その後、イメージが正常に投入されていることを確認します。
 
@@ -271,14 +271,14 @@ docker-compose版
 
    [user01@ita-sv-02 ~]$ docker images | grep exastro-ansible-agent-custom
    exastro-ansible-agent-custom                      devel    18493d96333g   12 hours ago   953MB
- 
+
 
 | イメージの確認後、Ansible-CoreでのAnsible作業時に対象のイメージを使用するように環境変数を設定します。
 | 「 :file:`~/exastro-docker-compose/.env` 」の「 ``ANSIBLE_AGENT_IMAGE`` 」「 ``ANSIBLE_AGENT_IMAGE_TAG`` 」の値を編集します。
 
 .. code-block:: diff
    :caption: /exastro-docker-compose/.env
-  
+
    ...
    #### Local Repository for the Ansible Agent container
    - # ANSIBLE_AGENT_IMAGE=my-exastro-ansible-agent
@@ -293,10 +293,10 @@ docker-compose版
 
 .. code-block:: console
    :caption: コマンド（編集を反映）
- 
+
    [user01@ita-sv-02 ~]$ cd ~/exastro-docker-compose
    [user01@ita-sv-02 ~]$ sh setup.sh install
- 
+
    ...
    Regenerate .env file? (y/n) [default: n]: n
    ...
@@ -316,14 +316,14 @@ Kubenetes版
    :caption: コマンド例（イメージを投入）
 
    [user01@ita-node01 ~]$ ctr images -n k8s.io import /tmp/custom-docker-image.tar.gz
-  
+
 
 | イメージの投入後、Ansible-CoreでのAnsible作業時に対象のイメージを使用するように環境変数を設定します。
 | values.yaml の「 ``exastro-it-automation.ita-by-ansible-execute.extraEnv.ANSIBLE_AGENT_IMAGE`` 」及び「 ``exastro-it-automation.ita-by-ansible-execute.extraEnv.ANSIBLE_AGENT_IMAGE_TAG`` 」の値を編集します。
 
 .. code-block:: diff
    :caption: values.yaml
-  
+
    exastro-it-automation:
    ...
      ita-by-ansible-execute:
@@ -339,7 +339,7 @@ Kubenetes版
 
 .. code-block:: console
    :caption: コマンド（編集を反映）
- 
+
    $ helm upgrade exastro exastro/exastro --install --namespace exastro --create-namespace --values values.yaml
 
    $ kubectl rollout restart deploy/ita-by-ansible-execute -n exastro
@@ -374,19 +374,19 @@ ITAでの実行環境定義登録
    | テンプレート名                              | azure_ee_template                                                                      | 今回の説明では「azure_ee_template」を使用しますが、\                                     |
    |                                             |                                                                                        | 変更した場合は必要に応じて読み替えてください。                                           |
    +---------------------------------------------+----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-   | テンプレートファイル                        | 下記内容を登録します。                                                                 | 将来的に、必要となる `ansible_core` のバージョンは変更となる可能性があります。           | 
+   | テンプレートファイル                        | 下記内容を登録します。                                                                 | 将来的に、必要となる `ansible_core` のバージョンは変更となる可能性があります。           |
    |                                             |                                                                                        |                                                                                          |
-   |                                             | .. code-block:: yaml+jinja                                                             | その結果、必要となる `Python` のバージョンが変更となり、\                                | 
-   |                                             |                                                                                        | `python_interpreter` の値も変更となる可能性があります。                                  | 
+   |                                             | .. code-block:: yaml+jinja                                                             | その結果、必要となる `Python` のバージョンが変更となり、\                                |
+   |                                             |                                                                                        | `python_interpreter` の値も変更となる可能性があります。                                  |
    |                                             |                                                                                        |                                                                                          |
-   |                                             |   version: 3                                                                           |                                                                                          | 
+   |                                             |   version: 3                                                                           |                                                                                          |
    |                                             |                                                                                        |                                                                                          |
    |                                             |   build_arg_defaults:                                                                  |                                                                                          |
-   |                                             |     ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: '--ignore-certs'                               |                                                                                          | 
+   |                                             |     ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: '--ignore-certs'                               |                                                                                          |
    |                                             |                                                                                        |                                                                                          |
    |                                             |   images:                                                                              |                                                                                          |
    |                                             |     base_image:                                                                        |                                                                                          |
-   |                                             |       name: {{ image }}                                                                |                                                                                          | 
+   |                                             |       name: {{ image }}                                                                |                                                                                          |
    |                                             |                                                                                        |                                                                                          |
    |                                             |   dependencies:                                                                        |                                                                                          |
    |                                             |     ansible_core:                                                                      |                                                                                          |
@@ -401,15 +401,15 @@ ITAでの実行環境定義登録
    |                                             |   {% endif %}                                                                          |                                                                                          |
    |                                             |     python_interpreter:                                                                |                                                                                          |
    |                                             |       package_system: "python3.11"                                                     |                                                                                          |
-   |                                             |       python_path: "/usr/bin/python3.11"                                               |                                                                                          | 
+   |                                             |       python_path: "/usr/bin/python3.11"                                               |                                                                                          |
    |                                             |                                                                                        |                                                                                          |
    |                                             |   additional_build_steps:                                                              |                                                                                          |
    |                                             |     append_base:                                                                       |                                                                                          |
-   |                                             |       - RUN /usr/bin/python3.11 -m pip install --upgrade pip                           |                                                                                          | 
+   |                                             |       - RUN /usr/bin/python3.11 -m pip install --upgrade pip                           |                                                                                          |
    |                                             |                                                                                        |                                                                                          |
    |                                             |   options:                                                                             |                                                                                          |
    |                                             |     package_manager_path: {{ package_manager_path }}                                   |                                                                                          |
-   |                                             |     user: root                                                                         |                                                                                          |  
+   |                                             |     user: root                                                                         |                                                                                          |
    |                                             |                                                                                        |                                                                                          |
    +---------------------------------------------+----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
 
@@ -518,7 +518,7 @@ Ansible Execution Agentでの事前準備
    :caption: コマンド（registry.redhat.ioでの認証）
 
    [userA@aea ~]$ podman login registry.redhat.io
-   
+
     Username: [[RedHatアカウントのユーザ名]]
     Password: [[RedHatアカウントのパスワード]]
     Login Succeeded!
@@ -536,49 +536,49 @@ ITAでの実行環境定義登録
    +---------------------------------------------+----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
    | 項目名                                      | 設定値                                                                     | 備考                                                                                     |
    +=============================================+============================================================================+==========================================================================================+
-   | execution_environment_name                  | azure_ee                                                                   | 今回の説明では「azure_ee」を使用しますが、変更した場合は必要に応じて読み替えてください。 | 
+   | execution_environment_name                  | azure_ee                                                                   | 今回の説明では「azure_ee」を使用しますが、変更した場合は必要に応じて読み替えてください。 |
    |                                             |                                                                            |                                                                                          |
    +---------------------------------------------+----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-   | image                                       | registry.redhat.io/ansible-automation-platform-24/ee-minimal-rhel9:latest  | ー                                                                                       | 
+   | image                                       | registry.redhat.io/ansible-automation-platform-24/ee-minimal-rhel9:latest  | ー                                                                                       |
    |                                             |                                                                            |                                                                                          |
    +---------------------------------------------+----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-   | ansible_core                                | ansible_core==2.16.0                                                       | 将来的に、必要となる `ansible_core` のバージョンは変更となる可能性があります。           | 
+   | ansible_core                                | ansible_core==2.16.0                                                       | 将来的に、必要となる `ansible_core` のバージョンは変更となる可能性があります。           |
    |                                             |                                                                            |                                                                                          |
    +---------------------------------------------+----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-   | ansible_runner                              | ansible_runner                                                             | ー                                                                                       |  
+   | ansible_runner                              | ansible_runner                                                             | ー                                                                                       |
    |                                             |                                                                            |                                                                                          |
    +---------------------------------------------+----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-   | bindep_file                                 | 下記内容を登録します。                                                     | ー                                                                                       | 
+   | bindep_file                                 | 下記内容を登録します。                                                     | ー                                                                                       |
    |                                             |                                                                            |                                                                                          |
-   |                                             | .. code-block:: text                                                       |                                                                                          | 
+   |                                             | .. code-block:: text                                                       |                                                                                          |
    |                                             |                                                                            |                                                                                          |
-   |                                             |   systemd-devel                                                            |                                                                                          | 
-   |                                             |   gcc                                                                      |                                                                                          | 
-   |                                             |   python3.11-devel                                                         |                                                                                          |  
-   |                                             |                                                                            |                                                                                          |
-   +---------------------------------------------+----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-   | python_requirements_file                    | 下記内容を登録します。                                                     | ー                                                                                       | 
-   |                                             |                                                                            |                                                                                          |
-   |                                             | .. code-block:: text                                                       |                                                                                          | 
-   |                                             |                                                                            |                                                                                          |
-   |                                             |   pywinrm                                                                  |                                                                                          | 
-   |                                             |   setuptools                                                               |                                                                                          | 
-   |                                             |   pexpect                                                                  |                                                                                          | 
-   |                                             |   boto3                                                                    |                                                                                          | 
-   |                                             |   paramiko                                                                 |                                                                                          | 
-   |                                             |   boto                                                                     |                                                                                          | 
-   |                                             |   certifi                                                                  |                                                                                          | 
+   |                                             |   systemd-devel                                                            |                                                                                          |
+   |                                             |   gcc                                                                      |                                                                                          |
+   |                                             |   python3.11-devel                                                         |                                                                                          |
    |                                             |                                                                            |                                                                                          |
    +---------------------------------------------+----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-   | galaxy_requirements_file                    | 下記内容を登録します。                                                     | ー                                                                                       | 
+   | python_requirements_file                    | 下記内容を登録します。                                                     | ー                                                                                       |
    |                                             |                                                                            |                                                                                          |
-   |                                             | .. code-block:: yaml                                                       |                                                                                          | 
+   |                                             | .. code-block:: text                                                       |                                                                                          |
    |                                             |                                                                            |                                                                                          |
-   |                                             |   collections:                                                             |                                                                                          | 
-   |                                             |    - azure.azcollection                                                    |                                                                                          | 
+   |                                             |   pywinrm                                                                  |                                                                                          |
+   |                                             |   setuptools                                                               |                                                                                          |
+   |                                             |   pexpect                                                                  |                                                                                          |
+   |                                             |   boto3                                                                    |                                                                                          |
+   |                                             |   paramiko                                                                 |                                                                                          |
+   |                                             |   boto                                                                     |                                                                                          |
+   |                                             |   certifi                                                                  |                                                                                          |
    |                                             |                                                                            |                                                                                          |
    +---------------------------------------------+----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-   | package_manager_path                        | /usr/bin/microdnf                                                          | ー                                                                                       | 
+   | galaxy_requirements_file                    | 下記内容を登録します。                                                     | ー                                                                                       |
+   |                                             |                                                                            |                                                                                          |
+   |                                             | .. code-block:: yaml                                                       |                                                                                          |
+   |                                             |                                                                            |                                                                                          |
+   |                                             |   collections:                                                             |                                                                                          |
+   |                                             |    - azure.azcollection                                                    |                                                                                          |
+   |                                             |                                                                            |                                                                                          |
+   +---------------------------------------------+----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+   | package_manager_path                        | /usr/bin/microdnf                                                          | ー                                                                                       |
    |                                             |                                                                            |                                                                                          |
    +---------------------------------------------+----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
 
@@ -595,19 +595,19 @@ ITAでの実行環境定義登録
    | テンプレート名                              | azure_ee_template                                                                      | 今回の説明では「azure_ee_template」を使用しますが、\                                     |
    |                                             |                                                                                        | 変更した場合は必要に応じて読み替えてください。                                           |
    +---------------------------------------------+----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-   | テンプレートファイル                        | 下記内容を登録します。                                                                 | 将来的に、必要となる `ansible_core` のバージョンは変更となる可能性があります。           | 
+   | テンプレートファイル                        | 下記内容を登録します。                                                                 | 将来的に、必要となる `ansible_core` のバージョンは変更となる可能性があります。           |
    |                                             |                                                                                        |                                                                                          |
-   |                                             | .. code-block:: yaml+jinja                                                             | その結果、必要となる `Python` のバージョンが変更となり、\                                | 
-   |                                             |                                                                                        | `python_interpreter` の値も変更となる可能性があります。                                  | 
+   |                                             | .. code-block:: yaml+jinja                                                             | その結果、必要となる `Python` のバージョンが変更となり、\                                |
+   |                                             |                                                                                        | `python_interpreter` の値も変更となる可能性があります。                                  |
    |                                             |                                                                                        |                                                                                          |
-   |                                             |   version: 3                                                                           |                                                                                          | 
+   |                                             |   version: 3                                                                           |                                                                                          |
    |                                             |                                                                                        |                                                                                          |
    |                                             |   build_arg_defaults:                                                                  |                                                                                          |
-   |                                             |     ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: '--ignore-certs'                               |                                                                                          | 
+   |                                             |     ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: '--ignore-certs'                               |                                                                                          |
    |                                             |                                                                                        |                                                                                          |
    |                                             |   images:                                                                              |                                                                                          |
    |                                             |     base_image:                                                                        |                                                                                          |
-   |                                             |       name: {{ image }}                                                                |                                                                                          | 
+   |                                             |       name: {{ image }}                                                                |                                                                                          |
    |                                             |                                                                                        |                                                                                          |
    |                                             |   dependencies:                                                                        |                                                                                          |
    |                                             |     ansible_core:                                                                      |                                                                                          |
@@ -622,15 +622,15 @@ ITAでの実行環境定義登録
    |                                             |   {% endif %}                                                                          |                                                                                          |
    |                                             |     python_interpreter:                                                                |                                                                                          |
    |                                             |       package_system: "python3.11"                                                     |                                                                                          |
-   |                                             |       python_path: "/usr/bin/python3.11"                                               |                                                                                          | 
+   |                                             |       python_path: "/usr/bin/python3.11"                                               |                                                                                          |
    |                                             |                                                                                        |                                                                                          |
    |                                             |   additional_build_steps:                                                              |                                                                                          |
    |                                             |     append_base:                                                                       |                                                                                          |
-   |                                             |       - RUN /usr/bin/python3.11 -m pip install --upgrade pip                           |                                                                                          | 
+   |                                             |       - RUN /usr/bin/python3.11 -m pip install --upgrade pip                           |                                                                                          |
    |                                             |                                                                                        |                                                                                          |
    |                                             |   options:                                                                             |                                                                                          |
    |                                             |     package_manager_path: {{ package_manager_path }}                                   |                                                                                          |
-   |                                             |     user: root                                                                         |                                                                                          |  
+   |                                             |     user: root                                                                         |                                                                                          |
    |                                             |                                                                                        |                                                                                          |
    +---------------------------------------------+----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
 
@@ -653,10 +653,10 @@ ITAでの実行環境定義登録
    | タグ名                      | azure_ee_image                          | ー                                                                                |
    |                             |                                         |                                                                                   |
    +-----------------------------+-----------------------------------------+-----------------------------------------------------------------------------------+
-   | 実行環境定義名              | 実行環境パラメータ定義/azure_ee         |  :menuselection:`入力用 --> 実行環境パラメータ定義` のexecution_environment_name  |  
+   | 実行環境定義名              | 実行環境パラメータ定義/azure_ee         |  :menuselection:`入力用 --> 実行環境パラメータ定義` のexecution_environment_name  |
    |                             |                                         |                                                                                   |
    +-----------------------------+-----------------------------------------+-----------------------------------------------------------------------------------+
-   | テンプレート名              | azure_ee_template                       |  :menuselection:`Ansible共通 --> 実行環境定義テンプレート管理` のテンプレート名   | 
+   | テンプレート名              | azure_ee_template                       |  :menuselection:`Ansible共通 --> 実行環境定義テンプレート管理` のテンプレート名   |
    |                             |                                         |                                                                                   |
    +-----------------------------+-----------------------------------------+-----------------------------------------------------------------------------------+
 
@@ -754,12 +754,12 @@ ITAでの実行環境定義登録
    | テンプレート名                              | my_module_ubi9_template                                                                     | 今回の説明では「my_module_ubi9_template」を使用しますが、\                               |
    |                                             |                                                                                             | 変更した場合は必要に応じて読み替えてください。                                           |
    +---------------------------------------------+---------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-   | テンプレートファイル                        | 下記内容を登録します。                                                                      | 自作モジュールのファイルパスが異なる場合は、\                                            | 
+   | テンプレートファイル                        | 下記内容を登録します。                                                                      | 自作モジュールのファイルパスが異なる場合は、\                                            |
    |                                             |                                                                                             | :menuselection:`additional_build_files --> src` 及び \                                   |
-   |                                             | .. code-block:: yaml+jinja                                                                  | :menuselection:`additional_build_steps --> append_base --> COPY` の値を \                | 
+   |                                             | .. code-block:: yaml+jinja                                                                  | :menuselection:`additional_build_steps --> append_base --> COPY` の値を \                |
    |                                             |   :emphasize-lines: 25-27,31                                                                | 変更してください。                                                                       |
-   |                                             |                                                                                             |                                                                                          | 
-   |                                             |   version: 3                                                                                |                                                                                          | 
+   |                                             |                                                                                             |                                                                                          |
+   |                                             |   version: 3                                                                                |                                                                                          |
    |                                             |                                                                                             |                                                                                          |
    |                                             |   build_arg_defaults:                                                                       |                                                                                          |
    |                                             |     ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: '--ignore-certs'                                    |                                                                                          |
@@ -817,10 +817,10 @@ ITAでの実行環境定義登録
    | タグ名                      | my_module_ubi9_image                                                             | ー                                                                                |
    |                             |                                                                                  |                                                                                   |
    +-----------------------------+----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
-   | 実行環境定義名              | 実行環境パラメータ定義/~[Exastro standard] default (no galaxy collection)        |  初期データとして用意されているものを使用します。                                 |  
+   | 実行環境定義名              | 実行環境パラメータ定義/~[Exastro standard] default (no galaxy collection)        |  初期データとして用意されているものを使用します。                                 |
    |                             |                                                                                  |                                                                                   |
    +-----------------------------+----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
-   | テンプレート名              | my_module_ubi9_template                                                          |  :menuselection:`Ansible共通 --> 実行環境定義テンプレート管理` のテンプレート名   | 
+   | テンプレート名              | my_module_ubi9_template                                                          |  :menuselection:`Ansible共通 --> 実行環境定義テンプレート管理` のテンプレート名   |
    |                             |                                                                                  |                                                                                   |
    +-----------------------------+----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 
@@ -887,6 +887,11 @@ ITAでの実行環境定義登録
 Ansible Automation Platformでのカスタマイズ例
 =============================================
 
+.. note::
+   | 本手順は、実行エンジンで、「Ansible Automation Controller」を選択していた際と同様に、「Ansible Automation Platform (Cloud)」を選択した場合も使用可能です。
+   | Ansible Automation Platform (Cloud)では、ITA作業用ディレクトリへのファイル配置が不要となります。
+   | 実行エンジン（リソース連携方式の違い）は、実行環境の指定には影響しません。
+
 コレクションを使用する例（無償版ベースイメージ）
 ------------------------------------------------
 
@@ -916,7 +921,7 @@ ansible-builderのインストール
 | （下記の4ファイルは特定の同一ディレクトリに格納することを推奨します）
 
 - | execution-environment.yml
-  
+
   - ansible-builderの定義ファイル
 
 .. code-block:: yaml
@@ -953,12 +958,12 @@ ansible-builderのインストール
 
 
 - | galaxy-requirements.yml
-  
+
   - インストールしたいansible-galaxy コレクションリストを記載するファイル
 
 .. code-block:: yaml
    :caption: galaxy-requirements.yml
-   
+
    collections:
      - azure.azcollection
 
@@ -1017,7 +1022,7 @@ ansible-builderの実行
    :caption: コマンド（ControlNodeで実施）
 
    [root@control-node ~]# podman images
-   
+
    --表示例--
    REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE
    localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB
@@ -1042,7 +1047,7 @@ ControlNodeのawxユーザ用にカスタムイメージをコピー
     ...
     Writing manifest to image destination
     [awx@control-node ~]$ podman images
-     
+
     --表示例--
     REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE
     localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB
@@ -1061,7 +1066,7 @@ ExecutionNodeのawxユーザ用にカスタムイメージをコピー
     ...
     Writing manifest to image destination
     [awx@execution-node ~]$ podman images
-     
+
     --表示例--
     REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE
     localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB
@@ -1075,9 +1080,9 @@ AAPに実行環境を登録
 .. figure:: /images/ja/ansible-ee/aap-env-3.png
    :width: 800px
    :alt: 実行環境/新規実行環境の作成
-   
+
    実行環境/新規実行環境の作成
-   
+
 
 ITAに実行環境を登録
 ^^^^^^^^^^^^^^^^^^^
@@ -1170,7 +1175,7 @@ ansible-builderのインストール
 | （下記の4ファイルは特定の同一ディレクトリに格納することを推奨します）
 
 - | execution-environment.yml
-  
+
   - ansible-builderの定義ファイル
 
 .. code-block:: yaml
@@ -1207,12 +1212,12 @@ ansible-builderのインストール
 
 
 - | galaxy-requirements.yml
-  
+
   - インストールしたいansible-galaxy コレクションリストを記載するファイル
 
 .. code-block:: yaml
    :caption: galaxy-requirements.yml
-   
+
    collections:
      - azure.azcollection
 
@@ -1253,7 +1258,7 @@ ansible-builderの実行
    :caption: コマンド（ControlNodeで実施）
 
    [root@control-node ~]# podman login registry.redhat.io
-   
+
     Username: [[RedHatアカウントのユーザ名]]
     Password: [[RedHatアカウントのパスワード]]
     Login Succeeded!
@@ -1282,7 +1287,7 @@ ansible-builderの実行
    :caption: コマンド（ControlNodeで実施）
 
    [root@control-node ~]# podman images
-   
+
    --表示例--
    REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE
    localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB
@@ -1307,7 +1312,7 @@ ControlNodeのawxユーザ用にカスタムイメージをコピー
     ...
     Writing manifest to image destination
     [awx@control-node ~]$ podman images
-     
+
     --表示例--
     REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE
     localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB
@@ -1326,7 +1331,7 @@ ExecutionNodeのawxユーザ用にカスタムイメージをコピー
     ...
     Writing manifest to image destination
     [awx@execution-node ~]$ podman images
-     
+
     --表示例--
     REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE
     localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB
@@ -1340,9 +1345,9 @@ AAPに実行環境を登録
 .. figure:: /images/ja/ansible-ee/aap-env.png
    :width: 800px
    :alt: 実行環境/新規実行環境の作成
-   
+
    実行環境/新規実行環境の作成
-   
+
 
 ITAに実行環境を登録
 ^^^^^^^^^^^^^^^^^^^
@@ -1448,13 +1453,13 @@ ansible-builderのインストール
 | :menuselection:`コレクションを使用する例` で作成した :file:`execution-environment.yml` に対して同様に追加することで応用することも可能です。
 
 - | execution-environment.yml
-  
+
   - ansible-builderの定義ファイル
 
 .. code-block:: yaml
    :emphasize-lines: 21-23,27
    :caption: execution-environment.yml
-   
+
    version: 3
 
    build_arg_defaults:
@@ -1478,7 +1483,7 @@ ansible-builderのインストール
    additional_build_files:
      - src: /tmp/ansible_module/my_module.py
        dest: configs
-    
+
    additional_build_steps:
      append_base:
        - COPY _build/configs/my_module.py /usr/share/ansible/plugins/modules/
@@ -1543,7 +1548,7 @@ ansible-builderの実行
    :caption: コマンド（ControlNodeで実施）
 
    [root@control-node ~]# podman images
-   
+
    --表示例--
    REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE
    localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB
@@ -1570,7 +1575,7 @@ ControlNodeのawxユーザ用にカスタムイメージをコピー
     ...
     Writing manifest to image destination
     [awx@control-node ~]$ podman images
-     
+
     --表示例--
     REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE
     localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB
@@ -1589,7 +1594,7 @@ ExecutionNodeのawxユーザ用にカスタムイメージをコピー
     ...
     Writing manifest to image destination
     [awx@execution-node ~]$ podman images
-     
+
     --表示例--
     REPOSITORY                                                          TAG         IMAGE ID      CREATED             SIZE
     localhost/[[タグ名]]                                                latest      fb7a51d88886  About a minute ago  1.99 GB
@@ -1603,9 +1608,9 @@ AAPに実行環境を登録
 .. figure:: /images/ja/ansible-ee/aap-env-2.png
    :width: 800px
    :alt: 実行環境/新規実行環境の作成
-   
+
    実行環境/新規実行環境の作成
-   
+
 
 ITAに実行環境を登録
 ^^^^^^^^^^^^^^^^^^^

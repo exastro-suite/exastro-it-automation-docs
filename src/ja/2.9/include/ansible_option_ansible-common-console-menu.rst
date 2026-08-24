@@ -47,6 +47,9 @@
    * - 11
      - 共通変数利用リスト (※1)
      - :menuselection:`Ansible共通 --> グローバル変数管理` ・ :menuselection:`Ansible共通 --> グローバル変数（センシティブ）管理` ・ :menuselection:`Ansible共通 --> ファイル管理` ・ :menuselection:`Ansible共通 --> テンプレート管理` に登録されている変数が、どの素材( :menuselection:`Ansible-Legacy --> Playbook素材集` ・ :menuselection:`Ansible-Pioneer --> 対話ファイル素材集` ・ :menuselection:`Ansible-LegacyRole --> ロールパッケージ管理` )で使用しているかを閲覧できます。
+   * - 12
+     - Ansible Automation Platform (Cloud)連携用資材
+     - 実行エンジンで、Ansible Automation Platform (Cloud)を指定した場合の作業実行時に使用する内部処理用メニューです。リソースの自動登録・管理を行います。
 
 
 
