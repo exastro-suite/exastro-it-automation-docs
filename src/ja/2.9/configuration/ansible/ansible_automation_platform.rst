@@ -438,8 +438,8 @@ Playbook連携
    :align: center
 
    * - 設定項目
-     - Ansible Automation Platform 2.x
-     - Ansible Automation Platform(Managed Cloud版)
+     - Ansible Automation Controller
+     - Ansible Automation Platform (Cloud)
    * - ITA作業用ディレクトリの準備
      - 〇
      - ×

@@ -5,7 +5,7 @@
 はじめに
 ========
 
-| Exastro IT Automation（以下、ITAとも記載する）で対応しているAnsibleの実行環境種類は、「Ansible Core」「Ansible Automation Platform (AAP)」「Ansible Automation Platform (Cloud)」「Ansible Execution Agent」となります。
+| Exastro IT Automation（以下、ITAとも記載する）で対応しているAnsibleの実行エンジンは、「Ansible Core」「Ansible Automation Controller」「Ansible Automation Platform (Cloud)」「Ansible Execution Agent」となります。
 | Ansible実行エンジンの特徴は次の通りとなります。
 
 .. list-table:: Ansible実行エンジンの特徴
@@ -18,7 +18,7 @@
    * - | **Ansible Core**
      - | **シンプルで軽量:** エージェントレスで、導入コストが低い。
        | 詳細は :ref:`ansible_overview_ansible_core` 参照
-   * - | **Ansible Automation Platform (AAP)**
+   * - | **Ansible Automation Controller**
      - | **ユーザー使用のAAP活用:** 既にお使いのRed hat Ansible Automation Platform 環境と連携できる。
        | 詳細は :ref:`ansible_overview_aap` 参照
    * - | **Ansible Automation Platform (Cloud)**
@@ -57,8 +57,8 @@
 
 .. _ansible_execution_engine_features:
 
-Ansible実行環境ごとの特徴
-=========================
+Ansible実行エンジンごとの特徴
+===================================
 
 .. _ansible_overview_ansible_core:
 
