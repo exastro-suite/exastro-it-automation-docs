@@ -1801,7 +1801,7 @@ Ansible Automation Platform ノード一覧
    | 　・ネットワーク回線の状態
    | 　・通信経路の途中にあるネットワーク機器による、セキュリティチェックやフィルタリング
    |
-   | このような場合には、:ref:`access_token_lifespan_change` を確認し、必要に応じて生存期間の変更を実施してください。
+   | このような場合には、:ref:`access_token_lifespan_change` を確認し、必要に応じて有効期間の変更を実施してください。
 
 
 .. _ansible_common_template_list:

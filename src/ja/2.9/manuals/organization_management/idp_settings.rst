@@ -61,7 +61,7 @@ IdP設定方法
 
 #. | パネルより :menuselection:`OpenID Connect v1.0` をクリックします。
 
-   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_select_provider.png
+   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_select_provider_v2-9.png
       :width: 600px
       :align: left
 
@@ -70,15 +70,16 @@ IdP設定方法
 
 #. | 事前に準備した情報の入力ならびに、エリアス・表示名・クライアント認証を入力・選択して、 :guilabel:`追加` ボタンをクリックします。
 
-   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_regist_provider.png
+   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_regist_provider_v2-9.png
       :width: 600px
       :align: left
 
 #. | メタデータの情報で各種情報が設定されますので、 :guilabel:`保存` ボタンをクリックします。
 
-   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_save_provider.png
+   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_save_provider_v2-9.png
       :width: 600px
       :align: left
+
 
 アイデンティティー・プロバイダー設定一覧
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -93,7 +94,7 @@ IdP設定方法
 
 #. | 登録済みの設定がある場合は、一覧表示されます。
 
-   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_providers_list.png
+   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_providers_list_v2-9.png
       :width: 600px
       :align: left
 
@@ -108,13 +109,13 @@ IdP設定方法
       :width: 200px
       :align: left
 
-#. |  :guilabel:`Add Provider` をクリックし、該当のサービスを選択して追加します。
+#. |  :guilabel:`プロバイダーの追加` をクリックし、該当のサービスを選択して追加します。
 
-   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_add_provider.png
+   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_add_provider_v2-9.png
       :width: 600px
       :align: left
 
-   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_select_add_provider.png
+   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_select_add_provider_v2-9.png
       :width: 600px
       :align: left
 
@@ -131,7 +132,7 @@ IdP設定方法
 
 #. | 一覧から編集対象のプロバイダーを選択して編集します。
 
-   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_select_edit_provider.png
+   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_select_edit_provider_v2-9.png
       :width: 600px
       :align: left
 
@@ -146,15 +147,15 @@ IdP設定方法
       :width: 200px
       :align: left
 
-#. | 一覧から削除対象の設定の :guilabel:`...` をクリックし、表示された :guilabel:`Delete` ボタンをクリックします。
+#. | 一覧から削除対象の設定の :guilabel:`...` をクリックし、表示された :guilabel:`削除` ボタンをクリックします。
 
-   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_select_delete_provider.png
+   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_select_delete_provider_v2-9.png
       :width: 600px
       :align: left
 
-#. | 表示された確認メッセージの :guilabel:`Delete` ボタンをクリックします。
+#. | 表示された確認メッセージの :guilabel:`削除` ボタンをクリックします。
 
-   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_delete_provider.png
+   .. figure:: /images/ja/manuals/platform/idp_settings/idp_settings_delete_provider_v2-9.png
       :width: 600px
       :align: left
 
