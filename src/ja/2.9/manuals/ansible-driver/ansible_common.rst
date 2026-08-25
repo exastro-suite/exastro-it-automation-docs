@@ -9,7 +9,7 @@ Ansible共通
 Ansible driver概要
 ==================
 
-| 本章では、Ansible Core、Ansible Automation Controller、Ansible Execution AgentおよびAnsible driverについて説明します。
+| 本章では、Ansible Core、Ansible Automation Controller、Ansible Automation Platform(Cloud)、Ansible Execution AgentおよびAnsible driverについて説明します。
 
 Ansible Coreについて
 --------------------
@@ -28,6 +28,16 @@ Ansible Automation Controllerについて
 | Ansible Automation Controllerの詳細情報については、Ansible Automation Controller公式マニュアルを参照してください。
 | ITAで対応可能なAnsible Automation Controllerのバージョンは、 :doc:`../../configuration/ansible/ansible_automation_platform` を参照してください。
 | 最新のバージョンに対応した記法は使えないことがありますので、ご注意ください。
+
+Ansible Automation Platform(Cloud)について
+-------------------------------------------
+
+| 上記の、Ansible Automation Controllerと同様ですが、こちらは、Red Hat Ansible Automation Platform (Managed Service)版に対応しています。
+| ITA固有の資材連携にSSHを必要としません。
+|  構成や固有の資材の連携については「:ref:`ansible_overview_aap_cloud` 」を参照してください。
+| Ansible Automation Platformの詳細情報については、サービス提供元（Red Hat社または各クラウドベンダー）の最新マニュアルを参照してください。
+| ITAで対応可能なAnsible Automation Platformのバージョンは、 :doc:`../../configuration/ansible/ansible_automation_platform` を参照してください。
+
 
 Ansible Execution Agentについて
 -------------------------------
@@ -386,7 +396,7 @@ ConductorインスタンスID
 |
 
 .. warning::
-  | Parallel branchを使用して並列実行されるMovement間では、__conductor_workflowdir__ を介したファイルの共有はできません。 
+  | Parallel branchを使用して並列実行されるMovement間では、__conductor_workflowdir__ を介したファイルの共有はできません。
   | __conductor_workflowdir__ によるファイル共有は、並列関係にない後続の Movementとの間でのみ可能です。
 
 
@@ -1105,6 +1115,7 @@ Ansible共通メニュー構成
       |                                   | + | Ansible Core                                              |           |              |                                                       |
       |                                   | + | Ansible Automation Controller                             |           |              |                                                       |
       |                                   | + | Ansible Execution Agent                                   |           |              |                                                       |
+      |                                   | + | Ansible Automation Platform(Cloud)                        |           |              |                                                       |
       |                                   |                                                               |           |              |                                                       |
       +-----------------+--------+--------+---------------------------------------------------------------+-----------+--------------+-------------------------------------------------------+
       | Ansible \       | 代表ホスト      | AnsibleAutomationPlatformのバージョンにより異なります。       | ー        | リスト選択   | :menuselection:`実行エンジン` が\                     |
@@ -1116,6 +1127,12 @@ Ansible共通メニュー構成
       |                 |                 | ITAと通信するAnsible Automation Controllerを選択します。      |           |              |                                                       |
       |                 |                 |                                                               |           |              |                                                       |
       |                 |                 | + | AnsibleAutomationPlatform 2.5の場合                       |           |              |                                                       |
+      |                 |                 |                                                               |           |              |                                                       |
+      |                 |                 | :menuselection:`Ansible\                                      |           |              |                                                       |
+      |                 |                 | 共通 --> Ansible Automation Platform ノード一覧` より\        |           |              |                                                       |
+      |                 |                 | ITAと通信するPlatform Gatewayを選択します。                   |           |              |                                                       |
+      |                 |                 |                                                               |           |              |                                                       |
+      |                 |                 | + | AnsibleAutomationPlatform(Cloud)の場合                    |           |              |                                                       |
       |                 |                 |                                                               |           |              |                                                       |
       |                 |                 | :menuselection:`Ansible\                                      |           |              |                                                       |
       |                 |                 | 共通 --> Ansible Automation Platform ノード一覧` より\        |           |              |                                                       |
@@ -1475,6 +1492,89 @@ Ansible Automation Platform ノード一覧
          | 備考                                                | 自由記述欄です。                                           | ー       | 手動入力        | 最大長400バイト                          |
          |                                                     |                                                            |          |                 |                                          |
          +-----------------------------------------------------+------------------------------------------------------------+----------+-----------------+------------------------------------------+
+
+
+   .. tab:: Ansible Automation Platform(Cloud)
+
+
+      .. table:: 登録画面項目一覧（Ansible Automation Platform ノード一覧）
+         :align: left
+
+         +-----------------------------------------------------+------------------------------------------------------------+----------+-----------------+------------------------------------------+
+         | 項目                                                | 説明                                                       | 入力必須 | 入力方法        | 制約事項・備考                           |
+         +=====================================================+============================================================+==========+=================+==========================================+
+         | 項番                                                | 登録時に自動採番した36桁の文字列が表示されます。           | ー       | 自動入力        | ー                                       |
+         |                                                     |                                                            |          |                 |                                          |
+         +-----------------------------------------------------+------------------------------------------------------------+----------+-----------------+------------------------------------------+
+         | ホスト                                              | Ansible Automation Platformの                              | ○        | 手動入力        | 最大長255バイト                          |
+         |                                                     | Platform Gateway/Execution Node(Hybrid Node)のホスト名\    |          |                 |                                          |
+         |                                                     | (またはIPアドレス)を入力します。                           |          |                 |                                          |
+         |                                                     |                                                            |          |                 |                                          |
+         +-----------------------------------------------------+------------------------------------------------------------+----------+-----------------+------------------------------------------+
+         | 認証方式                                            | Execution Node(Hybrid Node)へファイル転送(scp)で\          | ー       | リスト選択      | Platform Gatewayはこの設定値を\          |
+         |                                                     | 接続する際の認証方式を選択します。                         |          |                 | 使用しません。                           |
+         |                                                     |                                                            |          |                 |                                          |
+         |                                                     | + | パスワード認証                                         |          |                 |                                          |
+         |                                                     |   | パスワードの入力が必須です。                           |          |                 |                                          |
+         |                                                     |                                                            |          |                 |                                          |
+         |                                                     | + | 鍵認証（パスフレーズなし）                             |          |                 |                                          |
+         |                                                     |   | ssh秘密鍵ファイル(id_rsa)のアップロードが必須です。    |          |                 |                                          |
+         |                                                     |                                                            |          |                 |                                          |
+         |                                                     | + | 鍵認証（パスフレーズあり）                             |          |                 |                                          |
+         |                                                     |   | ssh秘密鍵ファイル(id_rsa)のアップロードと\             |          |                 |                                          |
+         |                                                     |     パスフレーズの入力が必須です。                         |          |                 |                                          |
+         |                                                     |                                                            |          |                 |                                          |
+         +-----------------------------------------------------+------------------------------------------------------------+----------+-----------------+------------------------------------------+
+         | ユーザ                                              | Execution Node(Hybrid Node)へファイル転送(scp)で\          | ー       | 手動入力        | 最大長255バイト                          |
+         |                                                     | 接続する際のログインユーザを入力します。                   |          |                 |                                          |
+         |                                                     |                                                            |          |                 | Platform Gatewayはこの設定値を\          |
+         |                                                     | Ansible Automation Platformインストール時に生成される\     |          |                 | 使用しません。                           |
+         |                                                     | awxユーザを入力することを推奨します。                      |          |                 |                                          |
+         |                                                     |                                                            |          |                 |                                          |
+         +-----------------------------------------------------+------------------------------------------------------------+----------+-----------------+------------------------------------------+
+         | パスワード                                          | Execution Node(Hybrid Node)へファイル転送(scp)で\          | ー       | 手動入力        | 最大長400バイト                          |
+         |                                                     | 接続する際のログインパスワードを入力します。               |          |                 |                                          |
+         |                                                     |                                                            |          |                 | Platform Gatewayはこの設定値を\          |
+         |                                                     | 認証方式でパスワード認証を選択した場合、必須入力です。     |          |                 | 使用しません。                           |
+         |                                                     |                                                            |          |                 |                                          |
+         |                                                     | Ansible Automation Platformインストール時に生成される\     |          |                 |                                          |
+         |                                                     | awxユーザに設定したパスワードを入力することを推奨します。  |          |                 |                                          |
+         |                                                     |                                                            |          |                 |                                          |
+         +--------------------------+--------------------------+------------------------------------------------------------+----------+-----------------+------------------------------------------+
+         | ssh鍵認証情報            | ssh秘密鍵ファイル        | Execution Node(Hybrid Node)へファイル転送(scp)で\          | ー       | ファイル選択    | 最大サイズ100Mバイト                     |
+         |                          |                          | 接続する際の秘密鍵ファイルを入力します。                   |          |                 |                                          |
+         |                          |                          |                                                            |          |                 | Platform Gatewayはこの設定値を\          |
+         |                          |                          | アップロードしたファイルは暗号化されて保存されます。       |          |                 | 使用しません。                           |
+         |                          |                          |                                                            |          |                 |                                          |
+         |                          |                          | 登録後はダウンロード不可となります。                       |          |                 |                                          |
+         |                          |                          |                                                            |          |                 |                                          |
+         |                          +--------------------------+------------------------------------------------------------+----------+-----------------+------------------------------------------+
+         |                          | パスフレーズ             | ssh秘密鍵ファイルにパスフレーズが設定されている場合、\     | ー       | 手動入力        | 最大長255バイト                          |
+         |                          |                          | パスフレーズを入力します                                   |          |                 |                                          |
+         |                          |                          |                                                            |          |                 | Platform Gatewayはこの設定値を\          |
+         |                          |                          |                                                            |          |                 | 使用しません。                           |
+         |                          |                          |                                                            |          |                 |                                          |
+         +--------------------------+--------------------------+------------------------------------------------------------+----------+-----------------+------------------------------------------+
+         | ポート                                              | Execution Node(Hybrid Node)にファイル転送(scp)で\          | ー       | 手動入力        | 数値                                     |
+         |                                                     | 接続する際のポート番号を指定することができます。           |          |                 |                                          |
+         |                                                     |                                                            |          |                 | Platform Gatewayはこの設定値を\          |
+         |                                                     | デフォルトは22が使用されます。                             |          |                 | 使用しません。                           |
+         |                                                     |                                                            |          |                 |                                          |
+         +-----------------------------------------------------+------------------------------------------------------------+----------+-----------------+------------------------------------------+
+         | Execution node                                      | 対象ノードの種類に応じて選択します。                       | ー       | リスト選択      | ー                                       |
+         |                                                     |                                                            |          |                 |                                          |
+         |                                                     | + | Platform Gatewayの場合は「False」を選択します。        |          |                 |                                          |
+         |                                                     |                                                            |          |                 |                                          |
+         |                                                     | + | Execution Node(Hybrid Node)の場合は「True」を\         |          |                 |                                          |
+         |                                                     |     選択します。                                           |          |                 |                                          |
+         |                                                     |                                                            |          |                 |                                          |
+         +-----------------------------------------------------+------------------------------------------------------------+----------+-----------------+------------------------------------------+
+         | 備考                                                | 自由記述欄です。                                           | ー       | 手動入力        | 最大長400バイト                          |
+         |                                                     |                                                            |          |                 |                                          |
+         +-----------------------------------------------------+------------------------------------------------------------+----------+-----------------+------------------------------------------+
+
+.. note::
+   | 「:menuselection:`Ansible共通 --> インターフェース情報`」 の 「:menuselection:`実行エンジン`」 で「Ansible Automation Platform (Cloud)」を選択している場合、ホスト以外の入力は不要です。
 
 
 .. _ansible_common_global_variable_list:
@@ -2171,6 +2271,139 @@ Ansible Automation Platform ノード一覧
         - ー
         - 手動入力
         - 最大長4000バイト
+
+
+
+.. _ansible_common_aap_cloud_link_assets:
+
+Ansible Automation Platform (Cloud)連携用資材
+-----------------------------------------------
+
+#. | Ansible Automation Platform (Cloud)方式での作業実行時に使用する内部処理用メニューです。
+   | リソースの自動登録・管理を行います。
+
+.. warning::
+   | 本メニューは内部処理により自動的にレコードが登録・更新されます。
+   | 手動での編集は推奨されません。
+
+.. note::
+   | デフォルトでは非表示となっています。
+   | 使用する場合は、:ref:`role_menu_link` を参照し、ロール・メニュー紐付で有効化してください。
+
+.. figure:: /images/ja/ansible_common/aap_cloud_link_assets/aap_cloud_link_assets_list.drawio.png
+   :width: 800px
+   :alt: サブメニュー画面（AAP(Cloud)連携用資材）
+
+   サブメニュー画面（AAP(Cloud)連携用資材）
+
+登録画面項目一覧
+^^^^^^^^^^^^^^^^
+
+.. list-table:: 登録画面項目一覧（AAP(Cloud)連携用資材）
+   :align: left
+   :header-rows: 1
+
+   * - 項目
+     - 説明
+     - 入力必須
+     - 入力方法
+     - 制約事項
+   * - 項番
+     - 登録時に自動採番されたUUIDが表示されます。
+     - ○
+     - 自動入力
+     - ー
+   * - 資材名
+     - 作業実行番号に対応した資材名が自動生成されます。
+     - ○
+     - 自動入力
+     - ー
+   * - 説明
+     - 説明記述欄です。
+     - ー
+     - 最大長255バイト
+     - ー
+   * - 説明(en)
+     - 説明記述欄です。
+     - ー
+     - 最大長255バイト
+     - ー
+   * - 備考
+     - 自由記述欄です。
+     - ー
+     - 手動入力
+     - 最大長4000バイト
+
+APIエンドポイント
+^^^^^^^^^^^^^^^^^
+
+| Ansible Automation Platform (Cloud)の資材方式では、以下のAPIエンドポイントを使用してリソースの取得と結果の送信を行います。
+
+.. list-table:: APIエンドポイント一覧
+   :widths: 10 50 40
+   :header-rows: 1
+   :align: left
+
+   * - メソッド
+     - エンドポイント
+     - 用途
+   * - GET
+     - /api/{organization_id}/workspaces/{workspace_id}/aap/{execution_no}/populated_data
+     - ITA独自資材の取得
+   * - POST
+     - /api/{organization_id}/workspaces/{workspace_id}/aap/{execution_no}/result_data
+     - 結果ファイルの送信
+
+.. note::
+   | これらのAPIエンドポイントへのアクセスには、実行エージェントと同等の権限が必要です。
+
+
+.. _operational_flow_of_ansible_automation_platform_cloud_approach:
+
+Ansible Automation Platform (Cloud)の資材連携方式の動作フロー
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| Ansible Automation Platform (Cloud)の資材連携方式では、以下の手順でリソース連携が行われます。
+
+.. figure:: /images/ja/ansible_common/aap_cloud_link_assets/aapcloud_file_link.drawio.png
+   :width: 800px
+   :alt: Ansible Automation Platform (Cloud)の資材連携方式の動作フロー
+
+   Ansible Automation Platform (Cloud)の資材連携方式の動作フロー
+
+1. **作業実行指示**
+
+   | ITAからAAP Platform Gatewayに対して、REST API経由でAAP上でのリソースの作成・作業実行を指示します。
+
+2. **投入データ取得**
+
+   | AAP Execution Node上のPlaybookから、ITA APIに対してGETリクエストを実行します。
+
+   - | EE（Execution Environment）上でlocalhostから実施されます。
+   - | ITA独自資材（投入データ）がzipファイルとして取得・展開されます。
+
+3. **Playbook実行**
+
+   | AAP Execution Node上でPlaybookが実行されます。
+   | 取得した投入データを使用して、Managed Nodeに対する作業を実行します。
+
+4. **結果データ送信**
+
+   | Playbook実行完了後、AAP Execution Nodeから ITA APIに対してPOSTリクエストを実行します（⑨）。
+
+   - | EE（Execution Environment）上でlocalhostから実施されます。
+   - | ITA上で管理する資材、結果ファイル（Conductorディレクトリ等）がzipファイルとして送信されます。
+
+5. **作業結果確認**
+
+   | ITAで作業実行結果を確認します。
+
+
+.. note::
+   | Ansible Automation Platform (Cloud)の資材連携方式では、従来のSSH/SCP方式と異なり、AAPからITAへのpull型通信となります。
+   | ネットワーク要件については、:doc:`../../configuration/ansible/ansible_automation_platform` を参照してください。
+   | APIでサービスアカウントを使用します、サービスアカウントについては、:ref:`service_account_settings` を参照してください。
+
 
 付録
 ====

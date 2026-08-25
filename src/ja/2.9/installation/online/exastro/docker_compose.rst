@@ -93,6 +93,9 @@ Exastro on Docker Compose - Online
    | HTTPSを利用する場合には、 LoadBalancer または、リバースプロキシを利用する必要があります。
    | LoadBalancer または、リバースプロキシを利用する場合は、別途準備をする必要があります。
 
+..  include:: ../../../include/aap_cloud_gitlab.rst
+
+
 .. _install_docker_compose:
 
 インストール (自動)
@@ -234,7 +237,7 @@ Exastro on Docker Compose - Online
   プロキシ設定のコメントアウトを解除し、記載されているサンプル値を、必ず環境に合わせて修正してください。
 
   .. code-block:: shell
-   
+
     # HTTP_PROXY=http://proxy.example.com:8080
     # HTTPS_PROXY=https://proxy.example.com:8443
 

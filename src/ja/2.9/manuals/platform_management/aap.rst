@@ -5,7 +5,7 @@ Ansible Automation Platform 連携
 目的
 ====
 
-| 本書では、システム管理者がオーガナイゼーションに所属するユーザーに対して、Ansible Core、Ansible Automation Controller、Ansible Execution Agentの利用を制御するための方法について紹介します。
+| 本書では、システム管理者がオーガナイゼーションに所属するユーザーに対して、Ansible Core、Ansible Automation Controller、Ansible Execution Agent、Ansible Automation Platform (Cloud)の利用を制御するための方法について紹介します。
 
 
 Ansible Automation Controller の登録
@@ -131,10 +131,11 @@ Ansible Automation Controller の登録
             }
 
          .. tip:: | execution_engine_listについての補足
-                  | execution_engine_listには、以下の3個の実行エンジンが記載できます。
+                  | execution_engine_listには、以下の4個の実行エンジンが記載できます。
                   | ・Ansible Core
                   | ・Ansible Automation Controller
                   | ・Ansible Execution Agent
+                  | ・Ansible Automation Platform (Cloud)
                   | 記載した実行エンジンが利用可能となります。
                   | 上記JSONの例では、Ansible Automation ControllerとAnsible Execution Agentが利用可能になります。
 
@@ -160,6 +161,66 @@ Ansible Automation Controller の登録
              | ・ Ansible Automation Controller の場合
              | Ansible Automation Controller の awx ユーザーから作業対象ホストに ssh 接続しています。
              | awx ユーザーの公開鍵ファイルをログイン先ユーザーの authorized_keys にコピーして下さい。ブラウザより Ansible Automation Controller にログインし、「設定」→「ジョブ」→「分離されたジョブに公開するパス」に「/var/lib/awx/.ssh/」を設定します。
+
+         .. note::
+             | Ansible Automation Platform (Cloud) を指定する場合、認証方式・ユーザー・パスワード・SSH鍵関連のパラメータは不要です。
+
+         .. raw:: html
+
+           </details>
+
+
+         .. raw:: html
+
+           <details>
+             <summary>Ansible Automation Platform (Cloud)の設定例(表示・非表示)</summary>
+
+         | Ansible Automation Platform (Cloud)を使用する場合の設定例を以下に記載します。
+
+         .. code-block:: json
+
+            {
+              "input_limit_setting": true,
+              "execution_engine_list": [
+                "Ansible Automation Platform (Cloud)"
+              ],
+              "initial_data": {
+                "ansible_automation_controller_host_list": [
+                  {
+                    "parameter": {
+                      "host": "platform-gateway.example.com",
+                      "authentication_method": null,
+                      "user": null,
+                      "password": null,
+                      "ssh_private_key_file": null,
+                      "passphrase": null,
+                      "ansible_automation_controller_port": null,
+                      "execution_node": "False",
+                      "remarks": "Platform Gateway for Ansible Automation Platform (Cloud)"
+                    }
+                  }
+                ],
+                "interface_info_ansible": {
+                  "parameter": {
+                    "execution_engine": "Ansible Automation Platform (Cloud)",
+                    "representative_server": "platform-gateway.example.com",
+                    "ansible_automation_controller_protocol": "https",
+                    "ansible_automation_controller_port": "443",
+                    "organization_name": null,
+                    "authentication_token": "<your aap token>",
+                    "delete_runtime_data": "True",
+                    "proxy_address": null,
+                    "proxy_port": null
+                  }
+                }
+              }
+            }
+
+         .. tip::
+             | Ansible Automation Platform (Cloud)の特徴:
+             | ・authentication_method、user、password、ssh_private_key_file、passphraseをnullに設定
+             | ・ITA作業用ディレクトリへのSSH接続が不要
+             | ・Execution NodeからPlatform GatewayおよびITA APIへのアウトバウンド通信のみ許可
 
          .. raw:: html
 

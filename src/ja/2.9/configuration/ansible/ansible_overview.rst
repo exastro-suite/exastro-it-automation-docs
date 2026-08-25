@@ -5,7 +5,7 @@
 はじめに
 ========
 
-| Exastro IT Automation（以下、ITAとも記載する）で対応しているAnsibleの実行環境種類は、「Ansible Core」「Ansible Automation Platform (AAP)」「Ansible Execution Agent」となります。
+| Exastro IT Automation（以下、ITAとも記載する）で対応しているAnsibleの実行エンジンは、「Ansible Core」「Ansible Automation Controller」「Ansible Automation Platform (Cloud)」「Ansible Execution Agent」となります。
 | Ansible実行エンジンの特徴は次の通りとなります。
 
 .. list-table:: Ansible実行エンジンの特徴
@@ -18,13 +18,22 @@
    * - | **Ansible Core**
      - | **シンプルで軽量:** エージェントレスで、導入コストが低い。
        | 詳細は :ref:`ansible_overview_ansible_core` 参照
-   * - | **Ansible Automation Platform (AAP)**
+   * - | **Ansible Automation Controller**
      - | **ユーザー使用のAAP活用:** 既にお使いのRed hat Ansible Automation Platform 環境と連携できる。
        | 詳細は :ref:`ansible_overview_aap` 参照
+   * - | **Ansible Automation Platform (Cloud)**
+     - | **IaC方式による資材連携:** ITA固有の資材の連携について、ITAから実行ノードに対するSSH接続不要で、実行ノードからITAにAPI経由で資材連携が可能。
+       | **AAP 2.5以上対応:** AAP 2.5以上、またはRed Hat Ansible Automation Platform (Managed Service)版と連携できる。
+       | 詳細は :ref:`ansible_overview_aap_cloud` 参照
    * - | **Ansible Execution Agent**
      - | **実行ノードとの調和性:** ITA本体と、実行ノード(クローズド環境)に配置されたAnsibleEngineとの連携による自動化機能。
        | **動的なAnsible実行環境の構築:** Ansible BuilderとAnsible Runnerを使った動的なAnsible作業実行環境の生成ができる。
        | 詳細は :ref:`ansible_overview_ansible_excecution_agent` 参照
+
+.. note::
+   - | 連携先システムであるAAPには、自社で構築・運用する Self-Managed版 と、クラウドで提供される Managed Service版 の2つの形態があります。
+   - | Red Hat Ansible Automation Platform (Managed Service)版を導入・利用する際は、事前にサービス提供元（Red Hat社または各クラウドベンダー）の最新マニュアルにて通信要件をご確認ください。
+     | その要件に基づき、各ネットワーク（オンプレミス環境や他VPC等）との接続性、ネットワーク構成(ファイアウォール、DNS設定など)を設計・構築してください。
 
 構成イメージ
 ============
@@ -37,12 +46,19 @@
    :alt: Red Hat Ansible Automation Platform 構成イメージ
    :align: center
 
+.. figure:: /images/ja/configuration/ansible/ansible_overview_aap_cloud_diagram.drawio.png
+   :alt: Red Hat Ansible Automation Platform (Cloud) 構成イメージ
+   :align: center
+
 .. figure:: /images/ja/configuration/ansible/ansible_overview_ansible_execution_agent_diagram.drawio.png
    :alt: Ansible Execution Agent 構成イメージ
    :align: center
 
-Ansible実行環境ごとの特徴
-=========================
+
+.. _ansible_execution_engine_features:
+
+Ansible実行エンジンごとの特徴
+===================================
 
 .. _ansible_overview_ansible_core:
 
@@ -68,6 +84,39 @@ Ansible Automation Platform (AAP)
 .. note::
 
    | ご利用中のAAPとの連携で、資源を無駄なくご利用したい場合に適しております。
+
+.. _ansible_overview_aap_cloud:
+
+Ansible Automation Platform (Cloud)
+-----------------------------------
+
+| Ansible Automation Platform (Cloud) は、AAP 2.5以上、またはRed Hat Ansible Automation Platform (Managed Service)とも連携するための実行エンジンです。 :doc:`構成・構築ガイドはこちら<./ansible_automation_platform>`
+| 従来のITA固有の資材連携について、ITAから実行ノードへ通信を行うSSH方式とは異なり、実行ノードからのITAに通信を行うIaC (Infrastructure as Code) 方式による資材連携を採用しています。
+| IaC (Infrastructure as Code) 方式における資材連携では、Execution Environment (EE) のローカルアクションを利用し、API経由でITAとの間で資材の同期・連携を行います。
+
+**主な特徴:**
+
+- **SSH接続不要:** ITAからAAPへのSSH接続が不要となり、ネットワーク構成がシンプルになります。
+- **API経由の資材連携:** AAPの実行ノードからITA APIを呼び出して資材を取得するpull型の通信方式です。
+- **セキュアな通信:** 実行ノードからPlatform Gatewayへの通信のみを許可する構成が可能です。
+
+**資材連携方式の違い:**
+
+Ansible Automation Controller:
+  ITA固有の資材に関して、ITAからAAPにSSH/SCPで資材をpush転送し、AAPの作業用ディレクトリに配置します。
+
+Ansible Automation Platform (Cloud):
+  AAPの実行ノードからITA APIにアクセスし、必要な資材を取得します。実行完了後、結果データもAPI経由でITAに送信します。
+
+.. note::
+
+   | AAP 2.5以上の環境、またはクラウド環境でのAAP利用に適しております。
+   | SSH接続が制限される環境でも利用可能です。
+   | 資材連携では以下のサービスアカウントが使用されます。
+
+   - aap_service_account_user_<organization_id>_<workspace_id>
+
+   | サービスアカウントについては、:ref:`service_account_settings` を参照してください。
 
 .. _ansible_overview_ansible_excecution_agent:
 
