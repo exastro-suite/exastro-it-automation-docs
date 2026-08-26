@@ -135,6 +135,20 @@ ITAが提供するメニューの共通部分の画面説明、および操作�
 
                .. warning::
                   アップロード禁止拡張子の許可を増やすと、セキュリティホールになる可能性があります。
+            
+            #. | 次の拡張子の場合(または拡張子が無い場合)のみ :guilabel:`` が表示され、押下するとファイルの内容を確認できます。
+
+               .. list-table:: 
+                  :widths: 5 20
+                  :header-rows: 1
+                  :align: left
+
+                  * - ファイルの種類
+                    - 拡張子
+                  * - 画像
+                    - gif, jpe, jpg, jpeg, png, svg, webp, bmp, ico, avif
+                  * - テキスト
+                    - txt, yaml, yml, json, hc, hcl, tf, sentinel, py, j2, css, html, htm, js
 
 
 - | **表示フィルタ**
