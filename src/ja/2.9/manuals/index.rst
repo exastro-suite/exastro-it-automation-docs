@@ -29,6 +29,7 @@
    terraform_driver/index
    export_import/index
    cicd_for_iac/index
+   ai_assistant/index
    oase/index
    api/index
    maintenance/index

@@ -141,6 +141,10 @@ Organization (オーガナイゼーション)
             |                                  |                        |                        |                                                                                                 |
             |                                  |                        |                        | :doc:`../cicd_for_iac/index`                                                                    |
             +                                  +                        +------------------------+-------------------------------------------------------------------------------------------------+
+            |                                  |                        | Exastro AI Assistant   | ドライバの詳細については、各ドキュメントを参照してください。                                    |
+            |                                  |                        |                        |                                                                                                 |
+            |                                  |                        |                        | :doc:`../ai_assistant/index`                                                                    |
+            +                                  +                        +------------------------+-------------------------------------------------------------------------------------------------+
             |                                  |                        | Exastro OASE           | Exastro OASEをインストールするためにはMongoDBが必要です。\                                      |
             |                                  |                        |                        | MongoDBに接続するための設定を入力する必要があります。                                           |
             |                                  |                        |                        |                                                                                                 |
@@ -235,10 +239,11 @@ Organization (オーガナイゼーション)
               - 可
               - | 各ドライバに対応した以下のkeyに対してtrue/falseを指定し、ワークスペース作成時にインストールされるかどうかを設定。省略可。
                 | :program:`ci_cd`: CI/CD for IaC
+                | :program:`ai_assistant`: Exastro AI Assistant
                 | :program:`oase`: Exastro OASE
                 | :program:`terraform_cloud_ep`: Terraform Cloud/EP driver
                 | :program:`terraform_cli`: Terraform CLI driver
-                | 例：:program:`"optionsIta": {"drivers": {"ci_cd": true, "oase": true, "terraform_cli": false, "terraform_cloud_ep": true}}`
+                | 例：:program:`"optionsIta": {"drivers": {"ci_cd": true, "ai_assistant": true, "oase": true, "terraform_cli": false, "terraform_cloud_ep": true}}`
             * - optionsIta.services.document_store.name
               - | optionsIta.driversのExastro OASEを有効にした際に必要なパラメータです。
                 | 値は"mongodb"固定です。
@@ -303,7 +308,8 @@ Organization (オーガナイゼーション)
               "terraform_cloud_ep": true,
               "terraform_cli": true,
               "ci_cd": true,
-              "oase": true
+              "oase": true,
+              "ai_assistant": true
             },
             "services": {
               "document_store": {
@@ -344,7 +350,7 @@ Organization (オーガナイゼーション)
 
       #. | 任意のオーガナイゼーションを押下することにより、 オーガナイゼーション詳細が表示され、オーガナイゼーションの詳細情報を確認できます。
 
-         .. figure:: /images/ja/manuals/platform/organization/オーガナイゼーション詳細_v2-4.png
+         .. figure:: /images/ja/manuals/platform/organization/オーガナイゼーション詳細_v2-9.png
             :width: 600px
             :align: left
             :class: with-border-thin
@@ -459,7 +465,7 @@ Organization (オーガナイゼーション)
 
       #. | オーガナイゼーション名を変更することができます。
 
-         .. figure:: /images/ja/manuals/platform/organization/orgname_edit_v2-5.png
+         .. figure:: /images/ja/manuals/platform/organization/orgname_edit_v2-9.png
             :width: 600px
             :align: left
             :class: with-border-thin
@@ -471,7 +477,7 @@ Organization (オーガナイゼーション)
          | 削除したいドライバをOFFにすることで、アンインストールするドライバを追加することができます。
          | 内容に間違いがなければ、 :guilabel:`登録` ボタンを押下します。
 
-         .. figure:: /images/ja/manuals/platform/organization/org_edit_driver_v2-5.png
+         .. figure:: /images/ja/manuals/platform/organization/org_edit_driver_v2-9.png
             :width: 600px
             :align: left
             :class: with-border-thin
@@ -498,14 +504,14 @@ Organization (オーガナイゼーション)
       #. | オーガナイゼーションに紐づけるリソースプランが行に追加されます。
          | 内容に間違いがなければ、 :guilabel:`登録` ボタンを押下します。
 
-         .. figure:: /images/ja/manuals/platform/organization/オーガナイゼーション編集_登録_v2-5.png
+         .. figure:: /images/ja/manuals/platform/organization/オーガナイゼーション編集_登録_v2-9.png
             :width: 600px
             :align: left
             :class: with-border-thin
 
       #. | 紐づいているリソースプランが不要になった場合は、 :guilabel:`解除` ボタンを押下して、オーガナイゼーションとリソースプランの紐づけを解除することができます。
 
-         .. figure:: /images/ja/manuals/platform/organization/オーガナイゼーション編集_リソースプラン解除_v2-5.png
+         .. figure:: /images/ja/manuals/platform/organization/オーガナイゼーション編集_リソースプラン解除_v2-9.png
             :width: 600px
             :align: left
             :class: with-border-thin
@@ -520,7 +526,7 @@ Organization (オーガナイゼーション)
       #. | 紐づけが解除されるリソースプランの行がグレーアウトされます。
          | 内容に間違いがなければ、 :guilabel:`登録` ボタンを押下します。
 
-         .. figure:: /images/ja/manuals/platform/organization/オーガナイゼーション編集_リソースプラン解除登録_v2-5.png
+         .. figure:: /images/ja/manuals/platform/organization/オーガナイゼーション編集_リソースプラン解除登録_v2-9.png
             :width: 600px
             :align: left
             :class: with-border-thin
@@ -556,7 +562,7 @@ Organization (オーガナイゼーション)
           - | オーガナイゼーションが使用できる状態を有効・無効で選択します。
           - 不可
           - :kbd:`true`
-        * - optionsIta.driver
+        * - optionsIta.drivers
           - | インストール・アンインストールするドライバを指定します。※
           - | 可
           - :kbd:`true or false`
@@ -600,10 +606,12 @@ Organization (オーガナイゼーション)
                "terraform_cloud_ep": true,
                "terraform_cli": true,
                "ci_cd": true,
-               "oase": true
+               "oase": true,
+               "ai_assistant": true
              }
            }
          }
+         EOF
 
      - | 設定済みオーガナイゼーションリソースプランの確認
 

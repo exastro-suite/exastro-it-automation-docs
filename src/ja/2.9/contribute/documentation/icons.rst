@@ -111,6 +111,8 @@
    ,&#xe95f;,\\e95f,icon-import
    ,&#xe960;,\\e960,icon-rule
    ,&#xe961;,\\e961,icon-rhombus
+   ,&#xe962;,\\e962,icon-send
+   ,&#xe963;,\\e963,icon-stick
 
 
 .. raw:: html
