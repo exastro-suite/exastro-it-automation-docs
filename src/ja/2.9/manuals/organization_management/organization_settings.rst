@@ -119,6 +119,7 @@
            | true: 有効期限あり
            | false: 有効期限なし
            | デフォルト: true
+           | ※ ``false`` （有効期限なし）を利用する場合は、あわせてシステム管理者によるKeycloakの設定が必要です。設定手順は :ref:`offline_session_idle_change` を参照してください。
       * - refresh_token_max_lifespan_days
         -  | refresh_tokenの有効日数
            | ※refresh_token_max_lifespan_enabled=trueの場合のみ必須

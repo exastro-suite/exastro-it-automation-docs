@@ -224,3 +224,43 @@ SSOセッション・アイドル/SSOセッション最大の変更
       :width: 600px
       :align: left
       :class: with-border-thin
+
+
+.. _offline_session_idle_change:
+
+オフラインセッション・アイドルの変更
+-----------------------------------------------
+
+| オーガナイゼーション設定で ``refresh_token_max_lifespan_enabled`` を ``false`` （有効期限なし）に設定する場合は、
+| あわせてオフラインセッション・アイドルの設定が必要です。
+
+#. | Offline session settings画面の表示
+
+   | 上述の `レルム（オーガナイゼーション）選択` で目的のレルムを選択し、メニューから :menuselection:`レルムの設定` を選択します。
+   | :menuselection:`レルム設定` 画面が表示されるので、 :menuselection:`セッション` を選択し、:menuselection:`Offline session settings` 画面を表示します。
+
+   .. figure:: /images/ja/manuals/platform/keycloak_console/keycloak_console_realm_offline_session_v2-9.png
+      :width: 600px
+      :align: left
+      :class: with-border-thin
+
+#. | オフラインセッション・アイドルの変更
+
+   | 「オフラインセッション・アイドル」の初期値には ``999999999`` 秒が設定されているため、365日に変更してください。
+   | 画面を下にスクロールし、:guilabel:`保存` ボタンを押下してオフラインセッションの変更を保存します。
+
+   .. figure:: /images/ja/manuals/platform/keycloak_console/keycloak_console_realm_offline_session_edit_v2-9.png
+      :width: 600px
+      :align: left
+      :class: with-border-thin
+
+
+
+   .. figure:: /images/ja/manuals/platform/keycloak_console/keycloak_console_realm_sessions_save_v2-9.png
+      :width: 600px
+      :align: left
+      :class: with-border-thin
+
+
+   .. note::
+      | 有効期限は無制限であっても、設定した期間（365日）未使用のrefresh_tokenは自動的に無効化されます。
