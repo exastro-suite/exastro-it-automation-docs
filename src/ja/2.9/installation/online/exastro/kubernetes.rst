@@ -326,18 +326,7 @@ Helm リポジトリの登録
              :caption: exastro.yaml
              :language: yaml
 
-      4.  データベースコンテナの無効化
-
-          | データベースコンテナが起動しないように設定します。
-
-          .. include:: ../../../include/helm_option_databaseDefinition.rst
-
-          .. literalinclude:: ../../literal_includes/exastro_database_disabled.yaml
-             :diff: ../../literal_includes/exastro.yaml
-             :caption: exastro.yaml
-             :language: yaml
-
-      5.  MongoDBコンテナの無効化
+      4.  MongoDBコンテナの無効化
 
           | MongoDBコンテナが起動しないように設定します。(OASEを利用しない場合も設定必要)
 
@@ -368,30 +357,7 @@ Helm リポジトリの登録
 
       .. _configuration_database_container:
 
-      1. | データベースコンテナの設定
-
-         | データベースコンテナの root パスワードを設定します。
-         | また、データベースのデータを永続化するために利用するストレージを指定します。
-
-         .. include:: ../../../include/helm_option_databaseDefinition.rst
-
-         .. tabs::
-
-           .. tab:: Storage Class 利用
-
-              .. literalinclude:: ../../literal_includes/exastro_database_storage_class.yaml
-                 :diff: ../../literal_includes/exastro.yaml
-                 :caption: exastro.yaml
-                 :language: yaml
-
-           .. tab:: hostPath 利用
-
-              .. literalinclude:: ../../literal_includes/exastro_database_hostpath.yaml
-                 :diff: ../../literal_includes/exastro.yaml
-                 :caption: exastro.yaml
-                 :language: yaml
-
-      2.  | Exastro IT Automation 用データベースの設定
+      1.  | Exastro IT Automation 用データベースの設定
 
           | Exastro IT Automation コンテナがデータベースに接続できるようにするために、:ref:`DATABASE_SETUP` で作成した root アカウントのパスワードを設定します。
 
@@ -402,7 +368,7 @@ Helm リポジトリの登録
              :caption: exastro.yaml
              :language: yaml
 
-      3.  | Exastro 共通基盤用データベースの設定
+      2.  | Exastro 共通基盤用データベースの設定
 
           | Exastro 共通基盤のコンテナがデータベースに接続できるようにするために、「1.  データベースコンテナの設定」で作成した root アカウントのパスワードを設定します。
 
@@ -413,7 +379,7 @@ Helm リポジトリの登録
              :caption: exastro.yaml
              :language: yaml
 
-      4.  OASE用データベースの設定
+      3.  OASE用データベースの設定
 
           | OASE用データベースの接続情報を設定します。
 
@@ -430,7 +396,7 @@ Helm リポジトリの登録
              :caption: exastro.yaml
              :language: yaml
 
-      5.  MongoDBコンテナの設定
+      4.  MongoDBコンテナの設定
 
           | データベースのデータを永続化するために利用するストレージを指定します
 
@@ -448,7 +414,7 @@ Helm リポジトリの登録
                   :caption: exastro.yaml
                   :language: yaml
 
-      6.  データベースコンテナのProbe設定
+      5.  データベースコンテナのProbe設定
 
           | データベースコンテナおよびMongoDBコンテナのLivenessProbe, ReadinessProbeはデフォルトで以下の設定値が適用されています。
 

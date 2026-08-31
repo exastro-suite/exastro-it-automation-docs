@@ -35,7 +35,7 @@
    * - global.itaDatabaseDefinition.config.DB_DATABASE
      - Database Name Used for the Exastro IT Automation Database
      - Enabled (When Using an External Database)
-     - "platform"
+     - "ITA_DB"
    * - global.itaDatabaseDefinition.secret.DB_ADMIN_USER
      - Database Username with Administrative Privileges for Exastro IT Automation Database
      - Required

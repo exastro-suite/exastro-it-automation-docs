@@ -35,7 +35,7 @@
    * - global.itaDatabaseDefinition.config.DB_DATABASE
      - Exastro IT Automation 用データベースで利用するデータベース名
      - 可 (外部データベース利用時)
-     - "platform"
+     - "ITA_DB"
    * - global.itaDatabaseDefinition.secret.DB_ADMIN_USER
      - Exastro IT Automation 用データベースで利用する管理権限を持つDBユーザ名
      - 必須

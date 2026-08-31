@@ -6,8 +6,8 @@
         for (var i = 0; i < $("table.filter-table").length; i++) {
           $("[id^='ft-data-" + i + "-2-r']").removeAttr("checked");
           $("[id^='select-all-" + i + "-2']").removeAttr("checked");
-          $("[id^='ft-data-" + i + "-2-r'][value^='可']").prop('checked', true);
-          $("[id^='ft-data-" + i + "-2-r'][value*='必須']").prop('checked', true);
+          $("[id^='ft-data-" + i + "-2-r'][value^='Enabled']").prop('checked', true);
+          $("[id^='ft-data-" + i + "-2-r'][value*='Required']").prop('checked', true);
           tFilterGo(i);
         }
       },200);
@@ -383,16 +383,7 @@ Database link
              :caption: exastro.yaml
              :language: yaml
 
-      4.  Deactivating database containers
-
-          | Configure the database container so it does not start.
-
-          .. include:: ../../../include/helm_option_databaseDefinition.rst
-
-          .. literalinclude:: ../../literal_includes/exastro_database_disabled.yaml
-             :diff: ../../literal_includes/exastro.yaml
-             :caption: exastro.yaml
-             :language: yaml
+      4.  Deactivating MongoDB database containers
 
           | Configure the MongoDB database container so it does not start.(Not required if not using OASE)
 
@@ -423,31 +414,7 @@ Database link
 
       .. _configuration_database_container:
 
-      1. | Configure Database container
-
-          | Configure password for the Database container's root.
-          | Then specify the using storage so the data can be persisted.
-
-          .. include:: ../../../include/helm_option_databaseDefinition.rst
-
-          .. tabs::
-
-            .. tab:: Using Storage Class
-
-              .. literalinclude:: ../../literal_includes/exastro_database_storage_class.yaml
-                 :diff: ../../literal_includes/exastro.yaml
-                 :caption: exastro.yaml
-                 :language: yaml
-
-            .. tab:: Using hostPath
-
-              .. literalinclude:: ../../literal_includes/exastro_database_hostpath.yaml
-                 :diff: ../../literal_includes/exastro.yaml
-                 :caption: exastro.yaml
-                 :language: yaml
-
-
-      2.  | Configure Exastro IT Automation database
+      1. | Configure Exastro IT Automation database
 
           | Configure the root acount password created in the :ref:`DATABASE_SETUP` section in order to make the database accessible from the Exastro IT Automation container.
 
@@ -458,7 +425,7 @@ Database link
              :caption: exastro.yaml
              :language: yaml
 
-      3.  | Configure Exastro platform database
+      2.  | Configure Exastro platform database
 
           | Configure the root account password created in "1. Configure Database container" in order to make the database accessible from the Exastro Platform container.
 
@@ -469,7 +436,7 @@ Database link
              :caption: exastro.yaml
              :language: yaml
 
-      4.  Configure OASE database
+      3.  Configure OASE database
 
           | Configure connection information to the OASE database.
 
@@ -486,7 +453,7 @@ Database link
              :caption: exastro.yaml
              :language: yaml
 
-      5.  Configure MongoDB container.
+      4.  Configure MongoDB container.
 
           | Specify storage for persisting database data.
 
@@ -504,7 +471,7 @@ Database link
                   :caption: exastro.yaml
                   :language: yaml
 
-      6.  Configure Database container's Probe.
+      5.  Configure Database container's Probe.
 
           | The database container or MongoDB container's LivenessProbe and ReadinessProbe has the following values applied by default.
 

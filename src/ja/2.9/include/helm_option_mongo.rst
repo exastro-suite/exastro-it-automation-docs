@@ -58,16 +58,16 @@
    * - exastro-platform.mongo.resources.requests.memory
      - メモリ要求
      - 可
-     - "256Mi"
+     - 設定なし
    * - exastro-platform.mongo.resources.requests.cpu
      - CPU要求
      - 可
-     - "1m"
+     - 設定なし
    * - exastro-platform.mongo.resources.limits.memory
      - メモリ上限
      - 可
-     - "2Gi"
+     - 設定なし
    * - exastro-platform.mongo.resources.limits.cpu
      - CPU上限
      - 可
-     - "4"
+     - 設定なし
