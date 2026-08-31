@@ -24,11 +24,12 @@
    * - global.gitlabDefinition.config.GITLAB_HOST
      - Hostname or FQDN for GitLab Endpoint
      - Enabled
-     - gitlab
+     - | :program:`""` (default): Do not use GitLab integration
+       | :program:`"gitlab"`: When using containers
    * - global.gitlabDefinition.config.GITLAB_PORT
      - Port Number of GitLab Endpoint
      - Enabled
-     - 80
+     - 8080
    * - global.gitlabDefinition.secret.GITLAB_ROOT_PASSWORD
      - User Password for GitLab Root Privileged Account
      - Required

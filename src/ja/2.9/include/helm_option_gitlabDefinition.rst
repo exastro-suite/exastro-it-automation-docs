@@ -24,11 +24,12 @@
    * - global.gitlabDefinition.config.GITLAB_HOST
      - GitLab エンドポイントへのホスト名、もしくは、FQDN
      - 可
-     - gitlab
+     - | :program:`""` (デフォルト): GitLab連携を使用しない
+       | :program:`"gitlab"`: コンテナ使用時
    * - global.gitlabDefinition.config.GITLAB_PORT
      - GitLab エンドポイントのポート番号
      - 可
-     - 80
+     - 8080
    * - global.gitlabDefinition.secret.GITLAB_ROOT_PASSWORD
      - GitLab の root 権限アカウントのユーザーパスワード
      - 必須

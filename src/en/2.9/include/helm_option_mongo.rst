@@ -58,16 +58,16 @@
    * - exastro-platform.mongo.resources.requests.memory
      - Memory request
      - Enabled
-     - "256Mi"
+     - None
    * - exastro-platform.mongo.resources.requests.cpu
      - CPU request
      - Enabled
-     - "1m"
+     - None
    * - exastro-platform.mongo.resources.limits.memory
      - Memory upper limit
      - Enabled
-     - "2Gi"
+     - None
    * - exastro-platform.mongo.resources.limits.cpu
      - CPU upper limit
      - Enabled
-     - "4"
+     - None
