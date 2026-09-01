@@ -797,7 +797,7 @@ Movement-Playbook紐付
 
 | 作業の実行状態を監視します。
 
-.. figure:: /images/ja/ansible-legacy/check_work_status/check_operation_status_v2_5.png
+.. figure:: /images/ja/ansible-legacy/check_work_status/check_operation_status_v2_9.png
    :width: 800px
    :alt: サブメニュー画面（作業状態確認）
 
@@ -858,6 +858,12 @@ Movement-Playbook紐付
 #. | **結果データ**
    | 実行ログ、エラーログなどをダウンロードすることができます。
    | 結果データの構成は「 :ref:`ansible_legacy_the_linkage_between_the_output_data_used_during_ansible_execution_and_ita_menu` 」を参照してください。
+
+#. | **収集状況**
+   | 収集機能のステータスと収集ログが表示されます。
+   | 「ステータス」には、収集機能の実行状況に応じて「収集済み」「収集済み（通知あり）」「対象外」「収集エラー」のいずれかが表示されます。
+   | 「収集ログ」に表示されるログファイル名のリンクから、収集機能のログをダウンロードすることができます。
+   | 収集機能およびステータスの詳細については「 :ref:`about_collect_status` 」を参照してください。
 
 .. _ansible_legacy_execution_list:
 
