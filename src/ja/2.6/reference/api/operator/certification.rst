@@ -104,13 +104,13 @@ Bearer認証
 
   # refresh_token払出
   curl -X POST \
-  -d "client_id=_platform-api" \
+  -d "client_id=_${ORGANIZATION_ID}-api" \
   -d "grant_type=password" \
   -d "scope=openid+offline_access" \
   -d "username=${USERNAME}" \
   -d "password=${PASSWORD}" \
   -d "totp=${ONETIME_PASSWORD}" \
-  "${BASEURL}/auth/realms/master/protocol/openid-connect/token"
+  "${BASEURL}/auth/realms/${ORGANIZATION_ID}/protocol/openid-connect/token"
 
 - | 実行結果
 
@@ -146,10 +146,10 @@ Bearer認証
   # access_token払出
   ACCESS_TOKEN=$(\
       curl -X POST \
-      -d "client_id=_platform-api" \
+      -d "client_id=_${ORGANIZATION_ID}-api" \
       -d "grant_type=refresh_token" \
       -d "refresh_token=${REFRESH_TOKEN}" \
-      "${BASEURL}/auth/realms/master/protocol/openid-connect/token" \
+      "${BASEURL}/auth/realms/${ORGANIZATION_ID}/protocol/openid-connect/token" \
       | jq -r ".access_token" \
   )
 
