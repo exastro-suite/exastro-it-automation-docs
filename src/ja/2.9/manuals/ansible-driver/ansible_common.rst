@@ -2109,7 +2109,7 @@ Ansible Automation Platform ノード一覧
         - 手動入力
         - 最大長4000バイト
 
-.. note:: | **実行環境定義ファイルのPythonをpython3.11に変更する場合の注意事項**
+.. note:: | **実行環境定義ファイルのPythonをpython3.11に変更し、ローカル実行する場合の注意事項**
    | テンプレートファイルのPythonをpython3.11に更新する場合は、:menuselection:`Ansible共通 --> 機器一覧` に登録されている
    | ローカル実行用の機器「localhost」の :menuselection:`インベントリファイル追加オプション` の ``ansible_python_interpreter`` の値も、
    | ``/usr/bin/python3`` から ``/usr/bin/python3.11`` へ合わせて更新してください。
