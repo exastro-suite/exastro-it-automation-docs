@@ -64,7 +64,7 @@ Ansible-Legacy メニュー構成
      - MovementでインクルードするPlaybookを管理します。
    * - 4
      - 代入値自動登録設定
-     - パラメータシートに登録されているオぺレーションとホスト毎の項目値を紐付けるMovementと変数を管理します。
+     - パラメータシートに登録されているオペレーションとホスト毎の項目値を紐付けるMovementと変数を管理します。
    * - 5
      - 作業実行
      - 作業実行するMovementとオペレーションを選択し実行を指示します。
@@ -821,7 +821,7 @@ Movement-Playbook紐付
    | また、実行前の「予約実行」の作業の場合は、 :guilabel:`予約取消` ボタンが表示されます。 :guilabel:`予約取消` ボタンで予約実行が取り消せます。
 
 #. | **実行ログ表示**
-   | Ansible Automation Controllerで実行した場合、作業対象の :menuselection:`Ansible共通 --> 機器一覧` の :menuselection:`ユーザ` ・ :menuselection:`パスワード` ・ :menuselection:`ssh秘密鍵ファイル` ・ :menuselection:`パスフレーズ` ・ :menuselection:`接続タイプ` ・ :menuselection:`インスタンスグルーブ` の項目値でグループ化された作業対象の単位でPlaybookが実行され、ansibleの実行ログが分割されます。
+   | Ansible Automation Controllerで実行した場合、作業対象の :menuselection:`Ansible共通 --> 機器一覧` の :menuselection:`ユーザ` ・ :menuselection:`パスワード` ・ :menuselection:`ssh秘密鍵ファイル` ・ :menuselection:`パスフレーズ` ・ :menuselection:`接続タイプ` ・ :menuselection:`インスタンスグループ` の項目値でグループ化された作業対象の単位でPlaybookが実行され、ansibleの実行ログが分割されます。
    | さらに、 :menuselection:`Ansible共通 --> インターフェース情報` か :menuselection:`Ansible-Legacy --> Movement一覧` の :menuselection:`オプションパラメータ` でジョブスライス数を指定することによりグループ化された作業対象をさらにジョブスライス数で分割しplaybookが実行され、ansibleの実行ログも分割されます。
    | 実行ログが分割された場合、実行ログがTabで分割表示され、表示したい実行ログを選択する事ができます。
 
@@ -838,7 +838,7 @@ Movement-Playbook紐付
       * - 要素
         - 内容
       * - グループ番号
-        - 作業対象の :menuselection:`Ansible共通 --> 機器一覧` の :menuselection:`ユーザ` ・ :menuselection:`パスワード` ・ :menuselection:`ssh秘密鍵ファイル` ・ :menuselection:`パスフレーズ` ・ :menuselection:`接続タイプ` ・ :menuselection:`インスタンスグルーブ` の項目値でグルーブ化した 1 からの通番です。
+        - 作業対象の :menuselection:`Ansible共通 --> 機器一覧` の :menuselection:`ユーザ` ・ :menuselection:`パスワード` ・ :menuselection:`ssh秘密鍵ファイル` ・ :menuselection:`パスフレーズ` ・ :menuselection:`接続タイプ` ・ :menuselection:`インスタンスグループ` の項目値でグループ化した 1 からの通番です。
       * - 通番
         - | ジョブスライス数の設定によりグループ内を分割した 1 からの通番です。
           | 0 の場合はジョブスライス数で分割されなかったことを表します。
@@ -1054,7 +1054,7 @@ Playbook（Ansible-Legacy）の記述
 ================================
 
 | 「 :ref:`ansible_legacy_playbook_file_list` 」でアップロードされたPlaybookは、ITAで生成するマスターPlaybookよりinclude形式で実行されます。
-| ITAで作成するマスターPlaybookはへッダーセクションとtasksセクションで構成されます。
+| ITAで作成するマスターPlaybookはヘッダーセクションとtasksセクションで構成されます。
 
 ヘッダーセクション
 ------------------
