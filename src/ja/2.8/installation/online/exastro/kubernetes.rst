@@ -91,7 +91,7 @@ Helm リポジトリの登録
 
    </details>
 
-| 以降の手順では、この :file:`exastro.yaml` に対してインストールに必要なパラメータを設定してきいます。
+| 以降の手順では、この :file:`exastro.yaml` に対してインストールに必要なパラメータを設定していきます。
 
 .. _service_setting:
 

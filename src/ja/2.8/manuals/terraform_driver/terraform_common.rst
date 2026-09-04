@@ -20,9 +20,9 @@ Terraformについて
 | また、Terraform CloudおよびTerraform EnterpriseではPolicy as Codeによるアクセスポリシーをコード化して管理することが可能です。
 | Terraformの詳細情報については、Terraformの製品マニュアルを参照してください。
 
-Terrform driverについて
+Terraform driverについて
 --------------------------------
-| Terraform driverはITAの機能として、Teraformへの実行および実行ログの取得を行うことができます。
+| Terraform driverはITAの機能として、Terraformへの実行および実行ログの取得を行うことができます。
 | 作業の実行（Plan /Apply）に利用するModuleファイルや、PolicyCheckを行うためのPolicyファイルをITA上で部品化し、再利用できるよう管理することができます。
 | また、Terraform driverは、Module中の変数を画面から設定することができます。
 | 詳細は「:ref:`terraform_common_variable_handling`」を参照してください。

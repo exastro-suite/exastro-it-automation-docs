@@ -784,7 +784,7 @@ Python 3.11のインストール
 createrepoのインストール
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-| ローカルリポジトリ作成用のcreatereopoをインストールします。
+| ローカルリポジトリ作成用のcreaterepoをインストールします。
 
 .. code-block:: bash
    :caption: コマンド
@@ -1295,7 +1295,7 @@ Poetry仮想環境の構築
 
 .. tip::
    | パラメータの詳細については、 :ref:`ansible_execution_user_recommendation_detail` を参照してください。
-   | パラメータの変更・反映方法方法については、 :ref:`ansible_execution_parameter_change` を参照してください。
+   | パラメータの変更・反映方法については、 :ref:`ansible_execution_parameter_change` を参照してください。
    | MOVEMENT_LIMIT・EXECUTION_LIMITの影響については、 :ref:`ansible_execution_limits_impact` を参照してください。
 
 
