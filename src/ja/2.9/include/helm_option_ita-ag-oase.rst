@@ -47,7 +47,7 @@
      - OASE エージェント のログレベル
      - 可
      - INFO
-   * - ita-ag-oase.eagents.xtraEnv.AGENT_NAME
+   * - ita-ag-oase.agents.extraEnv.AGENT_NAME
      - 起動する OASEエージェントの名前
      - 可
      - oase-agent

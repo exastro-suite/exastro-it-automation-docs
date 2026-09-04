@@ -10,7 +10,7 @@
      - 変更
      - デフォルト値・選択可能な設定値
    * - exastro-platform.mariadb.livenessProbe.exec.command
-     - livenessProbee実行時に行うコマンド
+     - livenessProbe実行時に行うコマンド
      - 不可
      - healthcheck.sh --su-mysql --connect --innodb_initialized
    * - exastro-platform.mariadb.livenessProbe.initialDelaySeconds

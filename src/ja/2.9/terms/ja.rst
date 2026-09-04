@@ -20,7 +20,7 @@ Copyright © NEC Corporation 2019-2026. All rights reserved.
 
 - | Active Directory、Azure、Azure Kubernetes Service、Azure Files、Microsoft Teamsは、米国Microsoft Corporationの米国およびその他の国における登録商標または商標です。
 - | AlmaLinuxは、The AlmaLinux OS Foundationの米国およびその他の国における登録商標または商標です。
-- | Ansible、Ansible Automation Controller、Ansible Automation Pratform、AnsibleTower、KeyCloak、Red Hat、Red Hat Universal Base Image(UBI)は、Red Hat, Inc.の米国およびその他の国における登録商標または商標です。
+- | Ansible、Ansible Automation Controller、Ansible Automation Platform、AnsibleTower、KeyCloak、Red Hat、Red Hat Universal Base Image(UBI)は、Red Hat, Inc.の米国およびその他の国における登録商標または商標です。
 - | Apache、Apache Tomcat、Tomcatは、Apache Software Foundationの米国およびその他の国における登録商標または商標です。
 - | Docker Hubは、Docker Inc.の米国およびその他の国における登録商標または商標です。
 - | Gitは、Software Freedom Conservancy, Inc.の米国およびその他の国における登録商標または商標です。
@@ -40,5 +40,5 @@ Copyright © NEC Corporation 2019-2026. All rights reserved.
 | その他、本書に記載のシステム名、会社名、製品名は、各社の登録商標もしくは商標です。
 | なお、® マーク、TM マークは本書に明記しておりません。
 | ※本書では「Exastro IT Automation」を「ITA」とも記載します。
-| ※「Ansible Tower」はAnsible Automation Pratform2.0以降で「Ansible Automation Controller」に名称が変更になりました。
+| ※「Ansible Tower」はAnsible Automation Platform2.0以降で「Ansible Automation Controller」に名称が変更になりました。
 | 　本書での「Ansible Automation Controller」の記載は、「Ansible Tower」も含めた記載となっています。
