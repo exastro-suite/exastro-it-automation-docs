@@ -103,7 +103,7 @@ Terraform Cloud/EP
      - | Terraformバージョン
      - | 注意事項
    * - | Terraform Cloud
-     - | 1.15.5
+     - | 1.15.8
      - |
 
 

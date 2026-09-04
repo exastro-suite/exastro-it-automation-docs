@@ -15,14 +15,6 @@
    - podman version 4.9.4-rhel
    - Docker Compose version v2.20.3
    - ー
- * - Red Hat Enterprise Linux release 8.9 (Ootpa)
-   - podman version 4.9.4-rhel
-   - Docker Compose version v2.20.3
-   - ー
- * - AlmaLinux release 8.9 (Midnight Oncilla)
-   - ー
-   - ー
-   - Docker version 26.1.3, build b72abbb
  * - AlmaLinux release 9.6 (Sage Margay)
    - ー
    - ー
