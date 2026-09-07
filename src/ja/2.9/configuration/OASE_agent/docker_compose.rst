@@ -48,6 +48,10 @@ OASE Agent on Docker Compose
    - podmanバージョン
    - Docker Composeバージョン
    - Dockerバージョン
+ * - Red Hat Enterprise Linux 10.0 (Coughlan)
+   - podman version 5.8.2
+   - Docker Compose version v2.20.3
+   - ー
  * - Red Hat Enterprise Linux release 9.5 (Plow)
    - podman version 5.8.2
    - Docker Compose version v2.20.3
@@ -56,14 +60,6 @@ OASE Agent on Docker Compose
    - podman version 4.9.4-rhel
    - Docker Compose version v2.20.3
    - ー
- * - Red Hat Enterprise Linux release 8.9 (Ootpa)
-   - podman version 4.9.4-rhel
-   - Docker Compose version v2.20.3
-   - ー
- * - AlmaLinux release 8.9 (Midnight Oncilla)
-   - ー
-   - ー
-   - Docker version 26.1.3, build b72abbb
  * - AlmaLinux release 9.6 (Sage Margay)
    - ー
    - ー
