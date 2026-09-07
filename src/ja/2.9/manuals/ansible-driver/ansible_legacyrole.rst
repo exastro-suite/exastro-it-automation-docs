@@ -67,7 +67,7 @@ Ansible-LegacyRole メニュー構成
      - 多段変数が繰返配列で構成されている場合の最大繰返配列数を管理します。
    * - 5
      - 代入値自動登録設定
-     - パラメータシートに登録されているオぺレーションとホスト毎の項目値を紐付けるMovementと変数を管理します。
+     - パラメータシートに登録されているオペレーションとホスト毎の項目値を紐付けるMovementと変数を管理します。
    * - 6
      - 作業実行
      - 作業実行するMovementとオペレーションを選択し実行を指示します。
@@ -1165,7 +1165,7 @@ Movement-ロール紐付
    | また、実行前の「予約実行」の作業の場合は、 :guilabel:`予約取消` ボタンが表示されます。 :guilabel:`予約取消` ボタンで予約実行が取り消せます。
 
 #. | **実行ログ表示**
-   | Ansible Automation Controllerで実行した場合、作業対象の :menuselection:`Ansible共通 --> 機器一覧` の :menuselection:`ユーザ` ・ :menuselection:`パスワード` ・ :menuselection:`ssh秘密鍵ファイル` ・ :menuselection:`パスフレーズ` ・ :menuselection:`接続タイプ` ・ :menuselection:`インスタンスグルーブ` の項目値でグループ化された作業対象の単位でPlaybookが実行され、ansibleの実行ログが分割されます。
+   | Ansible Automation Controllerで実行した場合、作業対象の :menuselection:`Ansible共通 --> 機器一覧` の :menuselection:`ユーザ` ・ :menuselection:`パスワード` ・ :menuselection:`ssh秘密鍵ファイル` ・ :menuselection:`パスフレーズ` ・ :menuselection:`接続タイプ` ・ :menuselection:`インスタンスグループ` の項目値でグループ化された作業対象の単位でPlaybookが実行され、ansibleの実行ログが分割されます。
    | さらに、 :menuselection:`Ansible共通 --> インターフェース情報` か :menuselection:`Ansible-LegacyRole --> Movement一覧` の :menuselection:`オプションパラメータ` でジョブスライス数を指定することによりグループ化された作業対象をさらにジョブスライス数で分割しplaybookが実行され、ansibleの実行ログも分割されます。
    | 実行ログが分割された場合、実行ログがTabで分割表示され、表示したい実行ログを選択する事ができます。
 
@@ -1182,7 +1182,7 @@ Movement-ロール紐付
       * - 要素
         - 内容
       * - グループ番号
-        - 作業対象の :menuselection:`Ansible共通 --> 機器一覧` の :menuselection:`ユーザ` ・ :menuselection:`パスワード` ・ :menuselection:`ssh秘密鍵ファイル` ・ :menuselection:`パスフレーズ` ・ :menuselection:`接続タイプ` ・ :menuselection:`インスタンスグルーブ` の項目値でグルーブ化した 1 からの通番です。
+        - 作業対象の :menuselection:`Ansible共通 --> 機器一覧` の :menuselection:`ユーザ` ・ :menuselection:`パスワード` ・ :menuselection:`ssh秘密鍵ファイル` ・ :menuselection:`パスフレーズ` ・ :menuselection:`接続タイプ` ・ :menuselection:`インスタンスグループ` の項目値でグループ化した 1 からの通番です。
       * - 通番
         - | ジョブスライス数の設定によりグループ内を分割した 1 からの通番です。
           | 0 の場合はジョブスライス数で分割されなかったことを表します。
@@ -1541,9 +1541,9 @@ Movement-ロール紐付
 マスターPlaybook
 ~~~~~~~~~~~~~~~~
 
-| ITAで作成するマスターPlaybookはへッダーセクションとrolesセクションで構成されます。
+| ITAで作成するマスターPlaybookはヘッダーセクションとrolesセクションで構成されます。
 
-#. | へッダーセクション
+#. | ヘッダーセクション
    | ヘッダーセクションは、デフォルト値が決まっていますが、 :menuselection:`Ansible-LegacyRole --> Movement一覧` の :menuselection:`ヘッダーセクション` で変更することが出来ます。
 
    | ▼ヘッダーセクションのデフォルト値
@@ -1957,7 +1957,7 @@ Ansible-LegacyRole 結果データに保存されるファイル一覧
      - 記録内容
      - Ansible Coreの場合
      - Ansible Automation Controllerの場合
-     - AAnsible Execution Agentの場合
+     - Ansible Execution Agentの場合
    * - result.txt
      - Ansibleの実行結果を記録
      - 〇

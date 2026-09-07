@@ -88,3 +88,32 @@
       | 実行環境定義テンプレート管理で使用するテンプレートファイルと実行環境パラメータ定義で使用するパラメータシートの関連図
 
 
+.. note:: | **実行環境定義ファイルのPythonをpython3.11に変更し、ローカル実行する場合の注意事項**
+   | テンプレートファイルのPythonをpython3.11に更新する場合は、:menuselection:`Ansible共通 --> 機器一覧` に登録されている
+   | ローカル実行用の機器「localhost」の :menuselection:`インベントリファイル追加オプション` の ``ansible_python_interpreter`` の値も、
+   | ``/usr/bin/python3`` から ``/usr/bin/python3.11`` へ合わせて更新してください。
+
+   e.g.) テンプレートファイルで「python3.11」を指定した場合
+
+   .. code-block:: yaml
+
+      # 実行環境定義テンプレート管理に登録するテンプレートファイルの記述例（一部抜粋）
+      # （記載省略）
+      dependencies:
+        # （記載省略）
+        python_interpreter:
+          package_system: "python3.11"
+          python_path: "/usr/bin/python3.11"
+
+      additional_build_steps:
+        append_base:
+          - RUN /usr/bin/python3.11 -m pip install --upgrade pip
+
+      # （記載省略）
+
+   .. code-block:: yaml
+
+      # 機器一覧の機器「localhost」のインベントリファイル追加オプションの記述例
+      ansible_python_interpreter: /usr/bin/python3.11
+      ansible_connection: local
+

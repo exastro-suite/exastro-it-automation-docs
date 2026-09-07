@@ -153,7 +153,7 @@ MS Teams Webhookを取得
 
 2. 通知するAPIの名前を入力して「作成」を押下する
 
-3. | 各オペレーションで通知先が違う場合それそれのMS Teams Webhookを取得する
+3. | 各オペレーションで通知先が違う場合それぞれのMS Teams Webhookを取得する
 
    .. figure:: /images/ja/templates/deploymentGuide/system_build_and_update_guide/AWS_admin/ms_teams_webhook.png
       :width: 4.72721in

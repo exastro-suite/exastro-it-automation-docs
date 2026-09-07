@@ -1463,7 +1463,7 @@ GitLab 連携設定
 
 ⑬kubesprayのインストール
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-| kubenetesクラスタの構築で使用するファイルはNginxコンテナを介して提供します。
+| Kubernetesクラスタの構築で使用するファイルはNginxコンテナを介して提供します。
 | /tmp/workに展開するoffline-filesとnginxコンテナの/usr/share/nginx/html/downloadをマウントします。
 | 以下の手順をAnsible実行サーバで実施します。
 
@@ -1716,10 +1716,10 @@ kubespray及びExastroのインストール時にエラーが発生した場合�
    #podが削除されたことを確認します
    kubectl get pods -n exastro
    #永続ボリュームが削除されたことを確認します
-   kibectl get pv
+   kubectl get pv
 
 
-| kubenetesの削除を行います。kubespyayのインストール時にエラーが発生した場合は以下の手順のみ実行します。
+| Kubernetesの削除を行います。kubesprayのインストール時にエラーが発生した場合は以下の手順のみ実行します。
 | 完了するまでに数十分程度の時間がかかります。(通信環境やサーバースペックによって状況は異なります。)
 | 使用するreset.ymlはgit cloneで取得したkubesprayに含まれているため、作成する必要はありません。
 | 完了後、Kubesparayを実行してKubernetesクラスター環境へKubernetesをインストールする手順から再実行します。

@@ -9,40 +9,6 @@
 		}
 	},
  "runArgs": ["--env-file",".devcontainer/.env"],
-	"settings": {
-		"terminal.integrated.profiles.linux": {
-			"bash": {
-				"path": "/bin/bash"
-			}
-		},
-		"terminal.integrated.defaultProfile.linux": "bash",
-  "[rst]": {
-   "editor.fontFamily": "'Illusion N', 'BIZ UDGothic','BIZ UDゴシック','MS ゴシック'"
-  },
-  "[restructuredtext]": {
-   "editor.fontFamily": "'Illusion N', 'BIZ UDGothic','BIZ UDゴシック','MS ゴシック'"
-  },
-  "restructuredtext.linter.doc8.extraArgs": [
-   "--config",
-   "${workspaceFolder}/doc8.ini"
-  ],
- },
-	"extensions": [
-		"MS-CEINTL.vscode-language-pack-ja",
-		"ms-python.python",
-		"donjayamanne.githistory",
-		"eamodio.gitlens",
-		"mhutchie.git-graph",
-		"lextudio.restructuredtext",
-		"lextudio.restructuredtext-pack",
-		"trond-snekvik.simple-rst",
-		"ms-vscode.live-server",
-		"searKing.preview-vscode",
-		"hediet.vscode-drawio",
-		"nopeslide.vscode-drawio-plugin-mermaid",
-  		"l13rary.l13-diff",
-		"swyddfa.esbonio",
-	],
 	"customizations": {
 		"vscode": {
    "settings": {
@@ -62,25 +28,34 @@
      "--config",
      "${workspaceFolder}/doc8.ini"
     ],
+    "claudeCode.environmentVariables": [
+      { "name": "CLAUDE_CODE_USE_BEDROCK", "value": "1" },
+      { "name": "AWS_REGION", "value": "ap-northeast-1" },
+      { "name": "AWS_SDK_LOAD_CONFIG", "value": "1" },
+      { "name": "AWS_CA_BUNDLE", "value": "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem" },
+      { "name": "REQUESTS_CA_BUNDLE", "value": "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem" },
+      { "name": "NODE_EXTRA_CA_CERTS", "value": "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem" }
+    ]
+    },
+    "extensions": [
+     "MS-CEINTL.vscode-language-pack-ja",
+     "ms-python.python",
+     "donjayamanne.githistory",
+     "eamodio.gitlens",
+     "mhutchie.git-graph",
+     "lextudio.restructuredtext",
+     "lextudio.restructuredtext-pack",
+     "trond-snekvik.simple-rst",
+     "ms-vscode.live-server",
+     "searKing.preview-vscode",
+     "hediet.vscode-drawio",
+     "nopeslide.vscode-drawio-plugin-mermaid",
+     "l13rary.l13-diff",
+     "swyddfa.esbonio",
+     "anthropic.claude-code"
+    ],
    },
-   "extensions": [
-    "MS-CEINTL.vscode-language-pack-ja",
-    "ms-python.python",
-    "donjayamanne.githistory",
-    "eamodio.gitlens",
-    "mhutchie.git-graph",
-    "lextudio.restructuredtext",
-    "lextudio.restructuredtext-pack",
-    "trond-snekvik.simple-rst",
-    "ms-vscode.live-server",
-    "searKing.preview-vscode",
-    "hediet.vscode-drawio",
-    "nopeslide.vscode-drawio-plugin-mermaid",
-    "l13rary.l13-diff",
-    "swyddfa.esbonio",
-   ],
   },
- },
 	"onCreateCommand": "/workspace/init.sh",
 	"postAttachCommand": "/workspace/start-autobuild.sh",
 	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
@@ -91,6 +66,8 @@
 		"source=${localEnv:HOME}/.netrc,target=/home/sphinx/.netrc,type=bind",
 		"source=/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem,target=/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem,type=bind",
 		"source=/usr/share/pki/ca-trust-source/anchors/UserRootCertificate.crt,target=/etc/ssl/certs/ca-certificates.crt,type=bind",
+  "source=${localEnv:HOME}/.aws,target=/home/sphinx/.aws,type=bind",
+  "source=${localEnv:HOME}/.claude,target=/home/sphinx/.claude,type=bind"
 ],
 	"workspaceFolder": "/workspace",
 	"containerEnv": {
@@ -102,7 +79,11 @@
 		"no_proxy": "localhost,127.0.0.1",
 		"SSL_CERT_FILE": "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem",
 		"REQUESTS_CA_BUNDLE": "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem",
-		"NODE_EXTRA_CA_CERTS": "/etc/ssl/certs/ca-certificates.crt",
   "NODE_TLS_REJECT_UNAUTHORIZED": "1",
+   "NODE_EXTRA_CA_CERTS": "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem",
+  "AWS_CA_BUNDLE": "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem"
 	},
+ "remoteEnv": { "PATH": "${containerEnv:PATH}:/home/sphinx/.local/bin" },
+ "initializeCommand": ".devcontainer/initializeCommand.sh",
+ "postCreateCommand": "/workspace/.devcontainer/setupClaudeCode.sh"
 }
