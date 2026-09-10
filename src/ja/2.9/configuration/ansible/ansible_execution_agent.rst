@@ -192,6 +192,220 @@ OS要件
 
 .. _ansible_execution_agent_rhel_support_requirements:
 
+インストールパッケージ一覧
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| 以下は、Exastro IT Automation に Ansible Execution Agent を導入するために必要なパッケージ一覧となります。
+| オフライン環境でのインストール場合、各パッケージのインストールが必要となります。
+| 詳細については :doc:`Ansible Execution Agent - Offline<../../installation/offline/ansible_execution_agent/setup>` を参照してください。
+
+
+    - 各種パッケージ一覧
+
+
+    .. list-table:: Red Hat Enterprize Linux
+       :widths: 14 79 7 7
+       :header-rows: 1
+       :align: left
+
+       * - パッケージ名
+         - 説明
+         - RHEL 9
+         - RHEL 10
+       * - yum-utils
+         - dnf download / yumdownloaderコマンド実行パッケージ
+         - 〇
+         - 〇
+       * - createrepo
+         - ローカルリポジトリ（オフライン作業時に必要）
+         - 〇
+         - 〇
+       * - gcc
+         - C コンパイラ
+         - 〇
+         - 〇
+       * - gcc-c++
+         - C++ コンパイラ
+         - 〇
+         - 〇
+       * - make
+         - ビルド制御ツール
+         - 〇
+         - 〇
+       * - kernel-headers	
+         - カーネルヘッダーファイル
+         - 〇
+         - 〇
+       * - glibc	
+         - glibcライブラリ本体
+         - 〇
+         - 〇
+       * - glibc-common	
+         - glibcの共通ファイル 
+         - 〇
+         - 〇
+       * - glibc-headers	
+         - glibcヘッダー
+         - 〇
+         - 〇
+       * - glibc-devel	
+         - glibc標準ヘッダー
+         - 〇
+         - 〇
+       * - langpacks-en		
+         - 英語ロケール
+         - 〇
+         - 〇
+       * - python3.11
+         - Python 3.11 実行環境
+         - 〇
+         - 
+       * - python3.11-pip
+         - Pythonパッケージ管理
+         - 〇
+         - 
+       * - pthon3.11-devel	
+         - Python開発ヘッダー（ビルド用）
+         - 〇
+         - 
+       * - python3.12
+         - Python 3.12 実行環境
+         - 
+         - 〇
+       * - python3.12-pip
+         - Pythonパッケージ管理
+         - 
+         - 〇
+       * - python3.12-devel	
+         - Python開発ヘッダー（ビルド用）
+         - 
+         - 〇
+       * - keyrings.alt	
+         - root用Pythonパッケージ
+         - 〇
+         - 〇
+       * - pip
+         - pipアップグレード 
+         - 〇
+         - 〇
+       * - requests	
+         - Exastro ITA との REST API 通信
+         - 〇
+         - 〇
+       * - poetry (version1.6.0)
+         - Python依存関係管理
+         - 〇
+         - 〇
+       * - cryptography	
+         - 暗号化ライブラリ 
+         - 〇
+         - 〇
+       * - git	
+         - ソースコード管理、バージョン管理
+         - 〇
+         - 〇
+       * - dokcer-compose	
+         - コンテナオーケストレーション（v2.20.3推奨）
+         - 〇
+         - 〇
+       * - ansible-builder
+         - コンテナイメージビルドツール
+         - 〇
+         - 〇
+       * - ansible-runner
+         - ansible実行環境
+         - 〇
+         - 〇
+
+    .. list-table:: AlmaLinux
+       :widths: 11 64 9
+       :header-rows: 1
+       :align: left
+
+       * - パッケージ名
+         - 説明
+         - AlmaLinux 9
+       * - yum-utils
+         - yumdownloaderコマンド実行パッケージ
+         - 〇
+       * - createrepo
+         - ローカルリポジトリ（オフライン作業時に必要）
+         - 〇
+       * - gcc
+         - C コンパイラ
+         - 〇
+       * - gcc-c++
+         - C++ コンパイラ
+         - 〇
+       * - make
+         - ビルド制御ツール
+         - 〇
+       * - kernel-headers	
+         - カーネルヘッダーファイル
+         - 〇
+       * - glibc	
+         - glibcライブラリ本体
+         - 〇
+       * - glibc-common	
+         - glibcの共通ファイル 
+         - 〇
+       * - glibc-headers	
+         - glibcヘッダー
+         - 〇
+       * - glibc-devel	
+         - glibc標準ヘッダー
+         - 〇
+       * - langpacks-en		
+         - 英語ロケール
+         - 〇
+       * - python3.11
+         - Python 3.11 実行環境
+         - 〇
+       * - python3.11-pip
+         - Pythonパッケージ管理
+         - 〇
+       * - python3.11-devel	
+         - Python開発ヘッダー（ビルド用）
+         - 〇
+       * - python3.12
+         - Python 3.12 実行環境
+         - 
+       * - python3.12-pip
+         - Pythonパッケージ管理
+         - 
+       * - python3.12-devel	
+         - Python開発ヘッダー（ビルド用）
+         - 
+       * - keyrings.alt	
+         - root用Pythonパッケージ
+         - 〇
+       * - pip
+         - pipアップグレード 
+         - 〇
+       * - requests	
+         - Exastro ITA との REST API 通信
+         - 〇
+       * - poetry (version1.6.0)
+         - Python依存関係管理
+         - 〇
+       * - cryptography	
+         - 暗号化ライブラリ 
+         - 〇
+       * - git	
+         - ソースコード管理、バージョン管理
+         - 〇
+       * - docker-compose
+         - コンテナオーケストレーション（v2.20.3推奨）
+         - 〇
+       * - ansible-builder
+         - コンテナイメージビルドツール
+         - 〇
+       * - ansible-runner
+         - ansible実行環境
+         - 〇
+
+    **※ansible-builder/ansible-runnerのバージョンについては、** :ref:`動作確認済みバージョン情報（RHEL9/RHEL10/Almalinux9） <ansible_execution_agent_software_requirements>` **を参照してください**。
+
 RHELサポート付きライセンス利用の場合
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
