@@ -301,6 +301,18 @@ Exastro on Docker Compose - Offline
 
 .. tabs::
 
+   .. group-tab:: podman
+
+      シェルスクリプトを実行しコンテナイメージをダウンロードします。	引数にはITAのバージョンを指定します。
+      完了するまでに数十分程度の時間がかかります。(通信環境やサーバースペックによって状況は異なります。)
+
+      .. code-block:: shell
+         :caption: コマンド
+
+         sudo chmod a+x save.sh
+         sh ./save.sh x.x.x
+
+
    .. group-tab:: docker
 
       ユーザがグループに追加されていない場合、パーミッションエラーとなることがあります。
@@ -330,23 +342,43 @@ Exastro on Docker Compose - Offline
          sh ./save.sh x.x.x
 
 
-   .. group-tab:: podman
-
-      シェルスクリプトを実行しコンテナイメージをダウンロードします。	引数にはITAのバージョンを指定します。
-      完了するまでに数十分程度の時間がかかります。(通信環境やサーバースペックによって状況は異なります。)
-
-      .. code-block:: shell
-         :caption: コマンド
-
-         sudo chmod a+x save.sh
-         sh ./save.sh x.x.x
-
 ②RPMパッケージのダウンロード
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |	パッケージをダウンロードします。
 
 .. tabs::
+
+   .. group-tab:: podman
+
+
+      | ダウンロード先ディレクトリを/tmp/podman-repo、インストール先ディレクトリを/tmp/podman-installrootとしています。
+
+      .. code-block:: shell
+         :caption: コマンド
+
+         #現在のOSのバージョンを確認します
+         cat /etc/os-release
+         #--releasever=x.xは上記で得られたバージョンを指定します
+         sudo dnf install -y --downloadonly --downloaddir=/tmp/podman-repo --installroot=/tmp/podman-installroot --releasever=x.x container-selinux git podman podman-docker
+
+
+      | createrepoをインストールします。
+
+      .. code-block:: shell
+         :caption: コマンド
+
+         sudo dnf install -y createrepo
+
+
+      | ローカルリポジトリを作成します。
+      |	オフライン環境ではインターネット上のリポジトリサーバーを参照できないため、dnfによるパッケージのインストールができません。
+      |	ローカルリポジトリにパッケージを追加することで、dnfによるパッケージインストールが可能となります。
+
+      .. code-block:: shell
+         :caption: コマンド
+
+         sudo createrepo /tmp/podman-repo
 
    .. group-tab:: docker
 
@@ -379,38 +411,6 @@ Exastro on Docker Compose - Offline
          :caption: コマンド
 
          sudo createrepo /tmp/docker-repo
-
-
-   .. group-tab:: podman
-
-
-      | ダウンロード先ディレクトリを/tmp/podman-repo、インストール先ディレクトリを/tmp/podman-installrootとしています。
-
-      .. code-block:: shell
-         :caption: コマンド
-
-         #現在のOSのバージョンを確認します
-         cat /etc/os-release
-         #--releasever=x.xは上記で得られたバージョンを指定します
-         sudo dnf install -y --downloadonly --downloaddir=/tmp/podman-repo --installroot=/tmp/podman-installroot --releasever=x.x container-selinux git podman podman-docker
-
-
-      | createrepoをインストールします。
-
-      .. code-block:: shell
-         :caption: コマンド
-
-         sudo dnf install -y createrepo
-
-
-      | ローカルリポジトリを作成します。
-      |	オフライン環境ではインターネット上のリポジトリサーバーを参照できないため、dnfによるパッケージのインストールができません。
-      |	ローカルリポジトリにパッケージを追加することで、dnfによるパッケージインストールが可能となります。
-
-      .. code-block:: shell
-         :caption: コマンド
-
-         sudo createrepo /tmp/podman-repo
 
 
 ③docker-composeリソースのダウンロード
@@ -463,6 +463,39 @@ Exastro on Docker Compose - Offline
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. tabs::
+
+   .. group-tab:: podman
+
+      | ローカルリポジトリの設定ファイルを作成します。
+
+      .. code-block:: shell
+         :caption: コマンド
+
+         sudo touch /etc/yum.repos.d/podman-repo.repo
+
+
+      |	作成した設定ファイルに下記の情報を記載します。(※file: の後ろのスラッシュは3つ)
+
+      .. code-block:: shell
+         :caption: コマンド
+
+         sudo vi /etc/yum.repos.d/podman-repo.repo
+
+         [podman-repo]
+         name=RedHat-$releaserver - podman
+         baseurl=file:///tmp/podman-repo
+         enabled=1
+         gpgcheck=0
+         gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+
+      | パッケージをインストールします。
+
+      .. code-block:: shell
+         :caption: コマンド
+
+         sudo dnf -y --disablerepo=\* --enablerepo=podman-repo install container-selinux git podman podman-docker
+
 
    .. group-tab:: docker
 
@@ -539,37 +572,6 @@ Exastro on Docker Compose - Offline
 
 
 
-   .. group-tab:: podman
-
-      | ローカルリポジトリの設定ファイルを作成します。
-
-      .. code-block:: shell
-         :caption: コマンド
-
-         sudo touch /etc/yum.repos.d/podman-repo.repo
-
-
-      |	作成した設定ファイルに下記の情報を記載します。(※file: の後ろのスラッシュは3つ)
-
-      .. code-block:: shell
-         :caption: コマンド
-
-         sudo vi /etc/yum.repos.d/podman-repo.repo
-
-         [podman-repo]
-         name=RedHat-$releaserver - podman
-         baseurl=file:///tmp/podman-repo
-         enabled=1
-         gpgcheck=0
-         gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
-
-
-      | パッケージをインストールします。
-
-      .. code-block:: shell
-         :caption: コマンド
-
-         sudo dnf -y --disablerepo=\* --enablerepo=podman-repo install container-selinux git podman podman-docker
 
 
 ⑥コンテナイメージのアップロード
@@ -656,17 +658,6 @@ Exastro on Docker Compose - Offline
 
 .. tabs::
 
-   .. group-tab:: docker
-
-      | コンテナイメージを実行します。	引数にはsave.sh実行時に指定したITAのバージョンを指定します。
-
-      .. code-block:: shell
-         :caption: コマンド
-
-         sudo chmod a+x load.sh
-         sh ./load.sh x.x.x
-
-
    .. group-tab:: podman
 
       | コンテナイメージを実行します。	引数にはsave.sh実行時に指定したITAのバージョンを指定します。
@@ -677,6 +668,18 @@ Exastro on Docker Compose - Offline
          sudo systemctl start podman
          sudo chmod a+x load.sh
          sh ./load.sh x.x.x
+
+
+   .. group-tab:: docker
+
+      | コンテナイメージを実行します。	引数にはsave.sh実行時に指定したITAのバージョンを指定します。
+
+      .. code-block:: shell
+         :caption: コマンド
+
+         sudo chmod a+x load.sh
+         sh ./load.sh x.x.x
+
 
 
 ⑦docker-composeリソースのインストール
@@ -707,6 +710,198 @@ Exastro on Docker Compose - Offline
 
 
 .. tabs::
+
+   .. group-tab:: podman
+
+      | SELinuxの動作モードをSELINUX=permissiveに書き替えます。
+
+
+      .. code-block:: shell
+         :linenos:
+         :caption: コマンド
+
+         sudo vi /etc/selinux/config
+
+      .. code-block:: shell
+         :caption: /etc/selinux/config記載例
+
+         # This file controls the state of SELinux on the system.
+         # SELINUX= can take one of these three values:
+         #     enforcing - SELinux security policy is enforced.
+         #     permissive - SELinux prints warnings instead of enforcing.
+         #     disabled - No SELinux policy is loaded.
+         # See also:
+         # https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-selinux/#getting-started-with-selinux-selinux-states-and-modes
+         #
+         # NOTE: In earlier Fedora kernel builds, SELINUX=disabled would also
+         # fully disable SELinux during boot. If you need a system with SELinux
+         # fully disabled instead of SELinux running with no policy loaded, you
+         # need to pass selinux=0 to the kernel command line. You can use grubby
+         # to persistently set the bootloader to boot with selinux=0:
+         #
+         #    grubby --update-kernel ALL --args selinux=0
+         #
+         # To revert back to SELinux enabled:
+         #
+         #    grubby --update-kernel ALL --remove-args selinux
+         #
+         SELINUX=permissive
+         # SELINUXTYPE= can take one of these three values:
+         #     targeted - Targeted processes are protected,
+         #     minimum - Modification of targeted policy. Only selected processes are protected.
+         #     mls - Multi Level Security protection.
+         SELINUXTYPE=targeted
+
+      .. code-block:: shell
+         :caption: コマンド
+
+         sudo reboot
+         #再度オフライン環境に接続します。
+
+
+      | Exastro ServiceのパッケージとExastro source fileのインストールを行います。
+
+      .. code-block:: shell
+         :caption: コマンド
+
+         cd ~/exastro-docker-compose && sh ./setup.sh install
+
+
+      | 必要なパッケージなどのインストールが完了すると下記のように対話形式で設定値を投入することが可能です。
+      | 詳細な設定を編集する場合は、:command:`n` もしくは :command:`no` と入力し、以降の処理をスキップします。
+
+      .. tip::
+
+        Podman の場合は :file:`~/exastro-docker-compose/.env` にプロキシ設定の記載が必要です。
+
+        プロキシ設定のコメントアウトを解除し、記載されているサンプル値を、必ず環境に合わせて修正してください。
+
+        .. code-block:: shell
+   
+          # HTTP_PROXY=http://proxy.example.com:8080
+          # HTTPS_PROXY=https://proxy.example.com:8443
+
+
+      | そのまま Exastro システムのコンテナ群を起動する場合は、:command:`y` もしくは :command:`yes` と入力します。
+      | Exastro システムのデプロイには数分～数十分程度の時間が掛かります。(通信環境やサーバースペックによって状況は異なります。)
+
+
+      .. code-block:: shell
+         :caption: OASE コンテナデプロイ要否の確認
+
+         Deploy OASE container URL? (y/n) [default: y]:
+
+      .. code-block:: shell
+         :caption: Gitlab コンテナデプロイ要否の確認
+
+         Deploy Gitlab containser? (y/n) [default: n]:
+
+      .. code-block:: shell
+         :caption: パスワードとトークンの自動作成の確認
+
+         Generate all password and token automatically? (y/n) [default: y]:
+
+      .. tabs::
+
+         .. group-tab:: https暗号化通信
+
+            .. code-block:: shell
+               :caption: Exastro サービスのURL
+
+               #ポート番号は、OSがRed Hat Enterprise Linuxの場合は30080、それ以外は80を指定してください。
+               Input the Exastro service URL: https://ita.example.com:30080
+
+            .. code-block:: shell
+               :caption:  Exastro 管理用サービスのURL
+
+               #ポート番号は、OSがRed Hat Enterprise Linuxの場合は30081、それ以外は81を指定してください。
+               Input the Exastro management URL: https://ita.example.com:30081
+
+            .. code-block:: shell
+               :caption:  自己署名のSSL/TLS証明書生成の有無 (上記の「Exastro サービスのURL/Exastro 管理用サービスのURL」がhttpsの場合)
+
+               Generate self-signed SSL certificate? (y/n) [default: y]:
+
+            .. code-block:: shell
+               :caption:  サーバ証明書/秘密鍵ファイルパス (上記の「自己署名のSSL/TLS証明書生成の有無」でnの場合)
+
+               #certificate file pathは サーバー証明書のファイルパスを、private-key file pathは 秘密鍵ファイルのファイルパスを指定してください。
+               Input path to your SSL certificate file.
+               certificate file path:
+               private-key file path:
+
+         .. group-tab:: http通信
+
+            .. code-block:: shell
+               :caption: Exastro サービスのURL
+
+               #ポート番号は、OSがRed Hat Enterprise Linuxの場合は30080、それ以外は80を指定してください。
+               Input the Exastro service URL: http://ita.example.com:30080
+
+            .. code-block:: shell
+               :caption:  Exastro 管理用サービスのURL
+
+               #ポート番号は、OSがRed Hat Enterprise Linuxの場合は30081、それ以外は81を指定してください。
+               Input the Exastro management URL: http://ita.example.com:30081
+
+      .. code-block:: shell
+         :caption: GitLab コンテナデプロイ要否の確認(Gitlab コンテナをデプロイする場合は入力が必要です。)
+
+         #ポート番号は40080を指定してください。
+         Input the external URL of Gitlab container  [default: (nothing)]:
+
+      .. code-block:: shell
+         :caption: 設定ファイルの生成の確認
+
+         System parametes are bellow.
+
+         System administrator password:    ********
+         Database password:                ********
+         OASE deployment                   true
+         MongoDB password                  ********
+         Service URL:                      http://ita.example.com:30080
+         Manegement URL:                   http://ita.example.com:30081
+         Docker GID:                       1000
+         Docker Socket path:               /run/user/1000/podman/podman.sock
+         GitLab deployment:                false
+
+         Generate .env file with these settings? (y/n) [default: n]
+
+
+      | サーバーを再起動します。
+
+      .. code-block:: shell
+         :caption: コマンド
+
+         sudo reboot
+
+
+      .. code-block:: shell
+         :caption: コマンド
+
+         cd ~/exastro-docker-compose && sh ./setup.sh install
+
+
+      .. code-block:: shell
+         :caption: .env再作成の確認
+
+         #何も入力せずにEnterを押下します。
+         Regenerate .env file? (y/n) [default: n]:
+
+      .. code-block:: shell
+         :caption: Exastroコンテナのデプロイ確認
+
+         #yを入力します。
+         Deploy Exastro containers now? (y/n) [default: n]:
+
+
+      | コンテナのSTATUSがUPになっていることを確認します。
+
+      .. code-block:: shell
+         :caption: コマンド
+
+         podman ps
+
 
    .. group-tab:: docker
 
@@ -901,196 +1096,6 @@ Exastro on Docker Compose - Offline
 
 
 
-   .. group-tab:: podman
-
-      | SELinuxの動作モードをSELINUX=permissiveに書き替えます。
-
-
-      .. code-block:: shell
-         :linenos:
-         :caption: コマンド
-
-         sudo vi /etc/selinux/config
-
-      .. code-block:: shell
-         :caption: /etc/selinux/config記載例
-
-         # This file controls the state of SELinux on the system.
-         # SELINUX= can take one of these three values:
-         #     enforcing - SELinux security policy is enforced.
-         #     permissive - SELinux prints warnings instead of enforcing.
-         #     disabled - No SELinux policy is loaded.
-         # See also:
-         # https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-selinux/#getting-started-with-selinux-selinux-states-and-modes
-         #
-         # NOTE: In earlier Fedora kernel builds, SELINUX=disabled would also
-         # fully disable SELinux during boot. If you need a system with SELinux
-         # fully disabled instead of SELinux running with no policy loaded, you
-         # need to pass selinux=0 to the kernel command line. You can use grubby
-         # to persistently set the bootloader to boot with selinux=0:
-         #
-         #    grubby --update-kernel ALL --args selinux=0
-         #
-         # To revert back to SELinux enabled:
-         #
-         #    grubby --update-kernel ALL --remove-args selinux
-         #
-         SELINUX=permissive
-         # SELINUXTYPE= can take one of these three values:
-         #     targeted - Targeted processes are protected,
-         #     minimum - Modification of targeted policy. Only selected processes are protected.
-         #     mls - Multi Level Security protection.
-         SELINUXTYPE=targeted
-
-      .. code-block:: shell
-         :caption: コマンド
-
-         sudo reboot
-         #再度オフライン環境に接続します。
-
-
-      | Exastro ServiceのパッケージとExastro source fileのインストールを行います。
-
-      .. code-block:: shell
-         :caption: コマンド
-
-         cd ~/exastro-docker-compose && sh ./setup.sh install
-
-
-      | 必要なパッケージなどのインストールが完了すると下記のように対話形式で設定値を投入することが可能です。
-      | 詳細な設定を編集する場合は、:command:`n` もしくは :command:`no` と入力し、以降の処理をスキップします。
-
-      .. tip::
-
-        Podman の場合は :file:`~/exastro-docker-compose/.env` にプロキシ設定の記載が必要です。
-
-        プロキシ設定のコメントアウトを解除し、記載されているサンプル値を、必ず環境に合わせて修正してください。
-
-        .. code-block:: shell
-   
-          # HTTP_PROXY=http://proxy.example.com:8080
-          # HTTPS_PROXY=https://proxy.example.com:8443
-
-
-      | そのまま Exastro システムのコンテナ群を起動する場合は、:command:`y` もしくは :command:`yes` と入力します。
-      | Exastro システムのデプロイには数分～数十分程度の時間が掛かります。(通信環境やサーバースペックによって状況は異なります。)
-
-
-      .. code-block:: shell
-         :caption: OASE コンテナデプロイ要否の確認
-
-         Deploy OASE container URL? (y/n) [default: y]:
-
-      .. code-block:: shell
-         :caption: Gitlab コンテナデプロイ要否の確認
-
-         Deploy Gitlab containser? (y/n) [default: n]:
-
-      .. code-block:: shell
-         :caption: パスワードとトークンの自動作成の確認
-
-         Generate all password and token automatically? (y/n) [default: y]:
-
-      .. tabs::
-
-         .. group-tab:: https暗号化通信
-
-            .. code-block:: shell
-               :caption: Exastro サービスのURL
-
-               #ポート番号は、OSがRed Hat Enterprise Linuxの場合は30080、それ以外は80を指定してください。
-               Input the Exastro service URL: https://ita.example.com:30080
-
-            .. code-block:: shell
-               :caption:  Exastro 管理用サービスのURL
-
-               #ポート番号は、OSがRed Hat Enterprise Linuxの場合は30081、それ以外は81を指定してください。
-               Input the Exastro management URL: https://ita.example.com:30081
-
-            .. code-block:: shell
-               :caption:  自己署名のSSL/TLS証明書生成の有無 (上記の「Exastro サービスのURL/Exastro 管理用サービスのURL」がhttpsの場合)
-
-               Generate self-signed SSL certificate? (y/n) [default: y]:
-
-            .. code-block:: shell
-               :caption:  サーバ証明書/秘密鍵ファイルパス (上記の「自己署名のSSL/TLS証明書生成の有無」でnの場合)
-
-               #certificate file pathは サーバー証明書のファイルパスを、private-key file pathは 秘密鍵ファイルのファイルパスを指定してください。
-               Input path to your SSL certificate file.
-               certificate file path:
-               private-key file path:
-
-         .. group-tab:: http通信
-
-            .. code-block:: shell
-               :caption: Exastro サービスのURL
-
-               #ポート番号は、OSがRed Hat Enterprise Linuxの場合は30080、それ以外は80を指定してください。
-               Input the Exastro service URL: http://ita.example.com:30080
-
-            .. code-block:: shell
-               :caption:  Exastro 管理用サービスのURL
-
-               #ポート番号は、OSがRed Hat Enterprise Linuxの場合は30081、それ以外は81を指定してください。
-               Input the Exastro management URL: http://ita.example.com:30081
-
-      .. code-block:: shell
-         :caption: GitLab コンテナデプロイ要否の確認(Gitlab コンテナをデプロイする場合は入力が必要です。)
-
-         #ポート番号は40080を指定してください。
-         Input the external URL of Gitlab container  [default: (nothing)]:
-
-      .. code-block:: shell
-         :caption: 設定ファイルの生成の確認
-
-         System parametes are bellow.
-
-         System administrator password:    ********
-         Database password:                ********
-         OASE deployment                   true
-         MongoDB password                  ********
-         Service URL:                      http://ita.example.com:30080
-         Manegement URL:                   http://ita.example.com:30081
-         Docker GID:                       1000
-         Docker Socket path:               /run/user/1000/podman/podman.sock
-         GitLab deployment:                false
-
-         Generate .env file with these settings? (y/n) [default: n]
-
-
-      | サーバーを再起動します。
-
-      .. code-block:: shell
-         :caption: コマンド
-
-         sudo reboot
-
-
-      .. code-block:: shell
-         :caption: コマンド
-
-         cd ~/exastro-docker-compose && sh ./setup.sh install
-
-
-      .. code-block:: shell
-         :caption: .env再作成の確認
-
-         #何も入力せずにEnterを押下します。
-         Regenerate .env file? (y/n) [default: n]:
-
-      .. code-block:: shell
-         :caption: Exastroコンテナのデプロイ確認
-
-         #yを入力します。
-         Deploy Exastro containers now? (y/n) [default: n]:
-
-
-      | コンテナのSTATUSがUPになっていることを確認します。
-
-      .. code-block:: shell
-         :caption: コマンド
-
-         podman ps
 
 
 ⑩カスタムイメージのビルド(必要な場合)
@@ -1102,6 +1107,76 @@ Exastro on Docker Compose - Offline
 
 
 .. tabs::
+
+   .. group-tab:: podman
+
+      | 該当するカスタム化を施したイメージが存在していることを確認します。
+      |
+      | ・ 現在の設定値を確認します。
+
+      .. code-block:: shell
+         :caption: 設定値確認用コマンド(オフライン環境)
+
+         cat ~/exastro-docker-compose/.env | grep -E "ANSIBLE_AGENT_IMAGE|ANSIBLE_AGENT_IMAGE_TAG"
+
+      | 　 ANSIBLE_AGENT_IMAGE：「レポジトリ名称」の指定
+      | 　 ANSIBLE_AGENT_IMAGE_TAG：「タグ」の指定  となります。
+      | 　 (コメントアウトされている場合は既定値が使用されます)
+
+      .. code-block:: shell
+         :caption: 設定値確認結果出力例(オフライン環境)
+
+         ANSIBLE_AGENT_IMAGE=my-exastro-ansible-agent-custom
+         ANSIBLE_AGENT_IMAGE_TAG=2.5.3
+
+      | ・ 上記で指定されたイメージが存在していることを確認します。
+
+      .. code-block:: shell
+         :caption: イメージ確認用コマンド(オフライン環境)
+
+         podman images <ANSIBLE_AGENT_IMAGEの値>:<ANSIBLE_AGENT_IMAGE_TAGの値>
+
+      .. code-block:: shell
+         :caption: イメージ確認結果出力例(オフライン環境)
+
+         REPOSITORY                        TAG       IMAGE ID       CREATED       SIZE
+         my-exastro-ansible-agent-custom   2.5.3     c73215585c2f   4 weeks ago   962MB
+
+      |
+      | 表示されない場合は、該当するカスタム化を施したイメージをビルドする必要があります。
+
+      .. code-block:: shell
+         :caption: ビルド用コマンド例(オフライン環境)
+
+         cd {カスタム用のdocker-compose.yamlが存在するディレクトリ}
+         podman compose build
+
+      | 別途、オンライン環境から転送することも可能です。
+
+      .. code-block:: shell
+         :caption: イメージエクスポート用コマンド例(オンライン環境)
+
+         podman save <ANSIBLE_AGENT_IMAGEの値>:<ANSIBLE_AGENT_IMAGE_TAGの値> | gzip -c > 2.5.3/my-exastro-ansible-agent-custom.tar.gz
+
+      .. code-block:: shell
+         :caption: イメージインポート用コマンド例(オフライン環境)
+
+         podman load  < 2.5.3/my-exastro-ansible-agent-custom.tar.gz
+
+      | 該当するカスタム化を施したイメージが表示されることを確認します。
+
+      .. code-block:: shell
+         :caption: イメージ確認用コマンド(オフライン環境)
+
+         podman images <ANSIBLE_AGENT_IMAGEの値>:<ANSIBLE_AGENT_IMAGE_TAGの値>
+
+
+      .. code-block:: shell
+         :caption: イメージ確認結果出力例(オフライン環境)
+
+         REPOSITORY                        TAG       IMAGE ID       CREATED       SIZE
+         my-exastro-ansible-agent-custom   2.5.3     c73215585c2f   4 weeks ago   962MB
+
 
    .. group-tab:: docker
 
@@ -1174,74 +1249,6 @@ Exastro on Docker Compose - Offline
          my-exastro-ansible-agent-custom   2.5.3     c73215585c2f   4 weeks ago   962MB
 
 
-   .. group-tab:: podman
-
-      | 該当するカスタム化を施したイメージが存在していることを確認します。
-      |
-      | ・ 現在の設定値を確認します。
-
-      .. code-block:: shell
-         :caption: 設定値確認用コマンド(オフライン環境)
-
-         cat ~/exastro-docker-compose/.env | grep -E "ANSIBLE_AGENT_IMAGE|ANSIBLE_AGENT_IMAGE_TAG"
-
-      | 　 ANSIBLE_AGENT_IMAGE：「レポジトリ名称」の指定
-      | 　 ANSIBLE_AGENT_IMAGE_TAG：「タグ」の指定  となります。
-      | 　 (コメントアウトされている場合は既定値が使用されます)
-
-      .. code-block:: shell
-         :caption: 設定値確認結果出力例(オフライン環境)
-
-         ANSIBLE_AGENT_IMAGE=my-exastro-ansible-agent-custom
-         ANSIBLE_AGENT_IMAGE_TAG=2.5.3
-
-      | ・ 上記で指定されたイメージが存在していることを確認します。
-
-      .. code-block:: shell
-         :caption: イメージ確認用コマンド(オフライン環境)
-
-         podman images <ANSIBLE_AGENT_IMAGEの値>:<ANSIBLE_AGENT_IMAGE_TAGの値>
-
-      .. code-block:: shell
-         :caption: イメージ確認結果出力例(オフライン環境)
-
-         REPOSITORY                        TAG       IMAGE ID       CREATED       SIZE
-         my-exastro-ansible-agent-custom   2.5.3     c73215585c2f   4 weeks ago   962MB
-
-      |
-      | 表示されない場合は、該当するカスタム化を施したイメージをビルドする必要があります。
-
-      .. code-block:: shell
-         :caption: ビルド用コマンド例(オフライン環境)
-
-         cd {カスタム用のdocker-compose.yamlが存在するディレクトリ}
-         podman compose build
-
-      | 別途、オンライン環境から転送することも可能です。
-
-      .. code-block:: shell
-         :caption: イメージエクスポート用コマンド例(オンライン環境)
-
-         podman save <ANSIBLE_AGENT_IMAGEの値>:<ANSIBLE_AGENT_IMAGE_TAGの値> | gzip -c > 2.5.3/my-exastro-ansible-agent-custom.tar.gz
-
-      .. code-block:: shell
-         :caption: イメージインポート用コマンド例(オフライン環境)
-
-         podman load  < 2.5.3/my-exastro-ansible-agent-custom.tar.gz
-
-      | 該当するカスタム化を施したイメージが表示されることを確認します。
-
-      .. code-block:: shell
-         :caption: イメージ確認用コマンド(オフライン環境)
-
-         podman images <ANSIBLE_AGENT_IMAGEの値>:<ANSIBLE_AGENT_IMAGE_TAGの値>
-
-
-      .. code-block:: shell
-         :caption: イメージ確認結果出力例(オフライン環境)
-
-         REPOSITORY                        TAG       IMAGE ID       CREATED       SIZE
-         my-exastro-ansible-agent-custom   2.5.3     c73215585c2f   4 weeks ago   962MB
 
 
 ログイン

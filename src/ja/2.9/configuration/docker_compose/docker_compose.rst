@@ -98,6 +98,121 @@ Docker Compose
    - インターネット
    - 443/tcp
 
+RPMパッケージ一覧
+-----------------
+
+| 以下は、Exastro IT Automation を Docker もしくは Podman 環境にインストールする際に必要なRPMパッケージ一覧となります。
+| オフライン環境でのインストールの場合、各パッケージのインストールが必要となります。
+| 詳細については :doc:`Exastro on Docker Compose - Offline<../../installation/offline/exastro/docker_compose>` を参照してください。
+
+.. tabs::
+
+
+   .. group-tab:: podman
+
+      .. list-table:: Red Hat Enterprise Linux
+         :widths: 11 79 7 7 7
+         :header-rows: 1
+
+         * - パッケージ名
+           - 説明
+           - RHEL8
+           - RHEL9
+           - RHEL10
+         * - podman
+           - podmanエンジン
+           - 〇
+           - 〇
+           - 〇
+         * - podman-docker
+           - Docker互換コマンドパッケージ
+           - 〇
+           - 〇
+           - 〇
+         * - git
+           - ソースコード管理、バージョン管理
+           - 〇
+           - 〇
+           - 〇
+         * - container-selinux
+           - コンテナ実行時のSELinuxポリシー
+           - 〇
+           - 〇
+           - 〇
+         * - createrepo
+           - ローカルリポジトリ（オフライン作業時に必要）
+           - 〇
+           - 〇
+           - 〇
+
+
+      .. list-table:: AlmaLinux
+         :widths: 10 75 8 8
+         :header-rows: 1
+         
+         * - パッケージ名
+           - 説明
+           - AlmaLinux 8
+           - AlmaLinux 9
+         * - podman
+           - podmanエンジン
+           - 〇
+           - 〇
+         * - podman-docker
+           - Docker互換コマンドパッケージ
+           - 〇
+           - 〇
+         * - git
+           - ソースコード管理、バージョン管理
+           - 〇
+           - 〇
+         * - container-selinux
+           - コンテナ実行時のSELinuxポリシー
+           - 〇
+           - 〇
+         * - createrepo
+           - ローカルリポジトリ（オフライン作業時に必要）
+           - 〇
+           - 〇
+
+
+   .. group-tab:: docker
+
+      .. list-table:: AlmaLinux
+         :widths: 10 75 8 8
+         :header-rows: 1
+         :align: left
+
+         * - パッケージ名
+           - 説明
+           - AlmaLinux 8
+           - AlmaLinux 9
+         * - docker-ce
+           - Dockerエンジン
+           - 〇
+           - 〇
+         * - docker-ce-cli
+           - Dockerコマンドラインインターフェース
+           - 〇
+           - 〇
+         * - containerd.io
+           - Dockerのコンテナランタイム
+           - 〇
+           - 〇
+         * - git
+           - ソースコード管理、バージョン管理
+           - 〇
+           - 〇
+         * - container-selinux
+           - コンテナ実行時のSELinuxポリシー
+           - 〇
+           - 〇
+         * - createrepo
+           - ローカルリポジトリ（オフライン作業時に必要）
+           - 〇
+           - 〇
+
+
 
 動作確認済み実績
 ================
