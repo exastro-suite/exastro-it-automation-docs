@@ -150,7 +150,7 @@ Organization (オーガナイゼーション)
             |                                  |                        |                        | 利用しない場合はチェックを外し、Python接続文字列を入力します。                                  |
             |                                  |                        |                        |                                                                                                 |
             |                                  |                        |                        | ・ Python接続文字列 : 利用するMongoDBのPython接続文字列を入力します。\                          |
-            |                                  |                        |                        | MondoDBのアカウントがrootロールまたは同等の権限がない場合こちらを入力します。                   |
+            |                                  |                        |                        | MongoDBのアカウントがrootロールまたは同等の権限がない場合こちらを入力します。                   |
             |                                  |                        |                        |                                                                                                 |
             |                                  |                        |                        | 例: mongodb://username:password@hostname:27017/                                                 |
             |                                  |                        |                        |                                                                                                 |

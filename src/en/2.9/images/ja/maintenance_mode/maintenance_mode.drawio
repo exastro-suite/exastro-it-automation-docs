@@ -1,0 +1,108 @@
+<mxfile host="app.diagrams.net" modified="2024-04-03T06:41:05.473Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="cgAemtzWGEXZj6JRpkpt" version="23.1.1" type="device" pages="2">
+  <diagram name="v2.3" id="pLwuU0Cgxc-i643YzpNt">
+    <mxGraphModel dx="1434" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-x50tg_j3JNRtB4fAs5Y-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" parent="1" source="-x50tg_j3JNRtB4fAs5Y-2" target="-x50tg_j3JNRtB4fAs5Y-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-x50tg_j3JNRtB4fAs5Y-2" value="「BACKYARD_EXECUTE_STOP」&lt;br&gt;を1(有効)にする" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="220" y="273" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-x50tg_j3JNRtB4fAs5Y-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" parent="1" source="-x50tg_j3JNRtB4fAs5Y-3" target="-x50tg_j3JNRtB4fAs5Y-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-x50tg_j3JNRtB4fAs5Y-3" value="「DATA_UPDATE_STOP」&lt;br&gt;を1(有効)にする" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="220" y="483" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-x50tg_j3JNRtB4fAs5Y-4" value="「BACKYARD_EXECUTE_STOP」&lt;br&gt;「DATA_UPDATE_STOP」&lt;br&gt;を0(無効)にする" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="220" y="693" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-x50tg_j3JNRtB4fAs5Y-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" parent="1" source="-x50tg_j3JNRtB4fAs5Y-5" target="-x50tg_j3JNRtB4fAs5Y-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-x50tg_j3JNRtB4fAs5Y-5" value="・データベースのバックアップ&lt;br&gt;・バージョンアップ&lt;br&gt;などの作業を実施する" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="220" y="588" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-x50tg_j3JNRtB4fAs5Y-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=2;" parent="1" source="-x50tg_j3JNRtB4fAs5Y-7" target="-x50tg_j3JNRtB4fAs5Y-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-x50tg_j3JNRtB4fAs5Y-7" value="「バックヤード起動状態一括取得」を利用し、&lt;br&gt;ステータス「実行中」の処理がなくなるまで待機する" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;perimeterSpacing=0;spacing=4;spacingLeft=0;spacingRight=0;spacingBottom=0;spacingTop=0;" parent="1" vertex="1">
+          <mxGeometry x="220" y="378" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-x50tg_j3JNRtB4fAs5Y-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=2;" parent="1" source="-x50tg_j3JNRtB4fAs5Y-21" target="-x50tg_j3JNRtB4fAs5Y-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-x50tg_j3JNRtB4fAs5Y-21" value="「BACKYARD_EXECUTE_STOP」&lt;br&gt;「DATA_UPDATE_STOP」&lt;br&gt;が0(無効)の状態(デフォルト)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="220" y="160" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-x50tg_j3JNRtB4fAs5Y-29" value="通常の利用状態" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout;verticalAlign=middle;spacingBottom=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="520" y="110" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="-x50tg_j3JNRtB4fAs5Y-31" value="これ以降は、新たに登録された&lt;br&gt;バックヤード処理は実行されなくなる" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout;verticalAlign=middle;spacingBottom=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="520" y="210" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="-x50tg_j3JNRtB4fAs5Y-32" value="これ以降は、各メニューからの&lt;br&gt;データの登録・更新ができなくなる" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout;verticalAlign=middle;spacingBottom=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="520" y="420" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="-x50tg_j3JNRtB4fAs5Y-33" value="通常の利用状態" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout;verticalAlign=middle;spacingBottom=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="520" y="640" width="160" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="34dh29cWkY1lYNcydftD" name="v2.4">
+    <mxGraphModel dx="1434" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CZUQ2q2IQ_zfiI9SorEa-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="CZUQ2q2IQ_zfiI9SorEa-2" target="CZUQ2q2IQ_zfiI9SorEa-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CZUQ2q2IQ_zfiI9SorEa-2" value="「サーバーサイドジョブ停止」&lt;br&gt;をONにする" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="130" y="223" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CZUQ2q2IQ_zfiI9SorEa-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="CZUQ2q2IQ_zfiI9SorEa-4" target="CZUQ2q2IQ_zfiI9SorEa-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CZUQ2q2IQ_zfiI9SorEa-4" value="「読み取り専用モード」&lt;br&gt;をONにする" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="130" y="433" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CZUQ2q2IQ_zfiI9SorEa-5" value="「サーバーサイドジョブ停止」&lt;br&gt;「読み取り専用モード」&lt;br&gt;をOFFにする" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="130" y="643" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CZUQ2q2IQ_zfiI9SorEa-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="CZUQ2q2IQ_zfiI9SorEa-7" target="CZUQ2q2IQ_zfiI9SorEa-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CZUQ2q2IQ_zfiI9SorEa-7" value="・データベースのバックアップ&lt;br&gt;・バージョンアップ&lt;br&gt;などの作業を実施する" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="130" y="538" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CZUQ2q2IQ_zfiI9SorEa-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=2;" edge="1" parent="1" source="CZUQ2q2IQ_zfiI9SorEa-9" target="CZUQ2q2IQ_zfiI9SorEa-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CZUQ2q2IQ_zfiI9SorEa-9" value="「バックヤード起動状態一括取得」を利用し、&lt;br&gt;ステータス「実行中」の処理がなくなるまで待機する" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;perimeterSpacing=0;spacing=4;spacingLeft=0;spacingRight=0;spacingBottom=0;spacingTop=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="328" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CZUQ2q2IQ_zfiI9SorEa-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=2;" edge="1" parent="1" source="CZUQ2q2IQ_zfiI9SorEa-11" target="CZUQ2q2IQ_zfiI9SorEa-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CZUQ2q2IQ_zfiI9SorEa-11" value="「サーバーサイドジョブ停止」&lt;br&gt;「読み取り専用モード」&lt;br&gt;がOFFの状態(デフォルト)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="130" y="110" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CZUQ2q2IQ_zfiI9SorEa-12" value="通常の利用状態" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout;verticalAlign=middle;spacingBottom=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="430" y="60" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="CZUQ2q2IQ_zfiI9SorEa-13" value="これ以降は、新たに登録された&lt;br&gt;バックヤード処理は実行されなくなる" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout;verticalAlign=middle;spacingBottom=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="430" y="160" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="CZUQ2q2IQ_zfiI9SorEa-14" value="これ以降は、各メニューからの&lt;br&gt;データの登録・更新ができなくなる" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout;verticalAlign=middle;spacingBottom=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="430" y="370" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="CZUQ2q2IQ_zfiI9SorEa-15" value="通常の利用状態" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout;verticalAlign=middle;spacingBottom=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="430" y="590" width="160" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
