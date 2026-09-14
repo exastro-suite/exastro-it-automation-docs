@@ -1,0 +1,62 @@
+# Exastro IT Automation 2.8.0
+
+リリース日: 2026年06月11日
+
+## 機能追加
+
+### グルーピング（期間延長なし）機能の実装（[#2895](https://github.com/exastro-suite/exastro-it-automation/issues/2895), [#2901](https://github.com/exastro-suite/exastro-it-automation/issues/2901)）
+OASEにおいて、イベント発生時に期間を延長せずに、固定期間内でグルーピングを行う新機能を実装しました。従来のグルーピング機能では新しいイベントが発生するたびに、グルーピング期間が延長されていましたが、本機能により、固定値の期間内でのイベント集約を選択することも可能になりました。
+
+この「グルーピング（期間延長なし）」の場合、最初のイベントのTTL範囲内で集約するか、もしくは対象期間の指定が可能です。
+
+
+### Terraform Cloud連携のProject単位連携機能（[#2878](https://github.com/exastro-suite/exastro-it-automation/issues/2878)）
+Terraform Cloudとの連携において、従来のWorkspace単位に加えて、Project単位での連携機能を追加しました。これにより、複数のWorkspaceをまとめて管理できるProjectレベルでの統合が可能となり、大規模なインフラストラクチャのコード管理がより効率的に行えます。組織全体のリソース管理を一元化し、より高度なガバナンスとコンプライアンス対応が実現できます。
+
+
+### backyardコンテナへの汎用的な死活監視の導入（[#2932](https://github.com/exastro-suite/exastro-it-automation/issues/2932), [#2930](https://github.com/exastro-suite/exastro-it-automation/issues/2930)）
+Helmチャートにおいて、backyardコンテナに対する汎用的な死活監視機能を実装しました。この機能により、バックグラウンドで動作する各種処理プロセスの健全性を自動的に監視し、異常が発生した際には迅速に検知して適切な対応を行うことができます。システムの可用性向上とダウンタイムの最小化に貢献し、より堅牢な運用環境を実現します。
+
+
+### OASE重複排除機能の統合通知タイミング変更（[#2937](https://github.com/exastro-suite/exastro-it-automation/issues/2937)）
+OASEの重複排除機能において、統合通知のタイミングを「全イベント収集後」から「最初のイベント受信時」に変更しました。従来は冗長グループ内のすべての収集先からイベントが揃うまで通知が遅延していましたが、本改善により最初のイベント受信時点で即座に通知が送信されます。これにより、一部の収集先でイベント遅延や欠落が発生した場合でも、迅速な通知が可能になります。後続のイベントは引き続き重複排除により統合されます。
+
+
+
+## 機能改善・性能改善
+
+### イベント履歴APIからのGroupId取得機能の追加（[#2978](https://github.com/exastro-suite/exastro-it-automation/issues/2978)）
+OASEのイベント履歴取得APIにおいて、GroupId（グループ識別子）を取得できる機能を追加しました。これにより、グルーピングされたイベントの関連性をAPI経由で取得でき、外部システムとの連携や独自の監視ダッシュボードの構築がより容易になります。イベントの集約状況を詳細に分析することが可能です。
+
+### Ansible-Coreのバージョンアップ対応（[#2972](https://github.com/exastro-suite/exastro-it-automation/issues/2972)）
+Ansible共通のインターフェース情報で「実行エンジン：Ansible Core」を選択した場合に使用される ansible-core のバージョンを、2.18系から2.19系へ更新しました。本対応は、ansible-core 2.18 のEOL対応、および Python 3.11 環境への対応を目的としたものです。
+
+### Ansible実行エージェント関連（[#2887](https://github.com/exastro-suite/exastro-it-automation/issues/2887), [#2921](https://github.com/exastro-suite/exastro-it-automation/issues/2921)）
+Red Hat Enterprise Linux 10（RHEL 10）に対応。また、サービスIDにハイフンが使えるようになりました。
+
+### トレーシング情報を追加（[#2940](https://github.com/exastro-suite/exastro-it-automation/issues/2940), [#2919](https://github.com/exastro-suite/exastro-it-automation/issues/2919)）
+ログ出力において、より詳細に処理を追跡できる改善を行いました。
+複数リクエストが入り乱れるログの中でリクエスト単位での処理の紐づけが可能になり、各処理段階での状態を出力することで、システム動作の透明性が向上し、問題発生時の原因究明が容易になります。また、処理のボトルネックを特定してパフォーマンス改善に活用することも可能です。
+
+
+### ServiceNow連携機能の機能強化（[#2964](https://github.com/exastro-suite/exastro-it-automation/issues/2964), [#2998](https://github.com/exastro-suite/exastro-it-automation/issues/2998), [#2952](https://github.com/exastro-suite/exastro-it-automation/issues/2952)）
+ServiceNowへの送信機能について、マルチスレッド化（複数の通知を並列して送信）によるスループットの向上、再送（リトライ）機能やバッチ送信時のエラーハンドリング改善によって、到達率の向上がなされました。
+
+
+### 大量データへの対応（[#2820](https://github.com/exastro-suite/exastro-it-automation/issues/2820), [#2875](https://github.com/exastro-suite/exastro-it-automation/issues/2875), [#2885](https://github.com/exastro-suite/exastro-it-automation/issues/2885), [#2888](https://github.com/exastro-suite/exastro-it-automation/issues/2888), [#2926](https://github.com/exastro-suite/exastro-it-automation/issues/2926), [#2931](https://github.com/exastro-suite/exastro-it-automation/issues/2931), [#2934](https://github.com/exastro-suite/exastro-it-automation/issues/2934), [#2936](https://github.com/exastro-suite/exastro-it-automation/issues/2936), [#2939](https://github.com/exastro-suite/exastro-it-automation/issues/2939), [#2941](https://github.com/exastro-suite/exastro-it-automation/issues/2941), [#2947](https://github.com/exastro-suite/exastro-it-automation/issues/2947), [#2948](https://github.com/exastro-suite/exastro-it-automation/issues/2948), [#2986](https://github.com/exastro-suite/exastro-it-automation/issues/2986), [#2996](https://github.com/exastro-suite/exastro-it-automation/issues/2996), [#3004](https://github.com/exastro-suite/exastro-it-automation/issues/3004), [#3005](https://github.com/exastro-suite/exastro-it-automation/issues/3005), [#3006](https://github.com/exastro-suite/exastro-it-automation/issues/3006)）
+大量リクエストや大量データが蓄積された環境に対応するため、処理速度の向上および処理時間の削減、パラメータチューニング機能、並列処理により起こる競合の削減、必要最低限のログ出力、DBのサイズ拡張などの対応を行いました。
+
+
+### ストレージ操作における読み書き処理の失敗問題への改善（[#2899](https://github.com/exastro-suite/exastro-it-automation/issues/2899), [#2966](https://github.com/exastro-suite/exastro-it-automation/issues/2966)）
+ファイルシステムやオブジェクトストレージへのアクセス時に、キャッシュやネットワークエラー、リソース競合が発生したなどの理由により、正しい状態を参照できない問題に対して、リトライ処理やキャッシュ更新を行う処理追加の対処を行いました。
+
+
+### Ansible実行エージェントの対障害性強化（[#2977](https://github.com/exastro-suite/exastro-it-automation/issues/2977)）
+Ansible実行エージェントにおいて、一時的な障害に対する耐性を強化しました。適切なリトライ処理とエラーハンドリングを実装することで、より堅牢な自動化環境を実現します。
+
+
+
+## バグ修正
+
+### 各種バグ対応（[#2872](https://github.com/exastro-suite/exastro-it-automation/issues/2872), [#2876](https://github.com/exastro-suite/exastro-it-automation/issues/2876), [#2883](https://github.com/exastro-suite/exastro-it-automation/issues/2883), [#2880](https://github.com/exastro-suite/exastro-it-automation/issues/2880), [#2884](https://github.com/exastro-suite/exastro-it-automation/issues/2884), [#2886](https://github.com/exastro-suite/exastro-it-automation/issues/2886), [#2902](https://github.com/exastro-suite/exastro-it-automation/issues/2902), [#2906](https://github.com/exastro-suite/exastro-it-automation/issues/2906), [#2917](https://github.com/exastro-suite/exastro-it-automation/issues/2917), [#2920](https://github.com/exastro-suite/exastro-it-automation/issues/2920), [#2933](https://github.com/exastro-suite/exastro-it-automation/issues/2933), [#2935](https://github.com/exastro-suite/exastro-it-automation/issues/2935), [#2949](https://github.com/exastro-suite/exastro-it-automation/issues/2949), [#2951](https://github.com/exastro-suite/exastro-it-automation/issues/2951), [#2954](https://github.com/exastro-suite/exastro-it-automation/issues/2954), [#2905](https://github.com/exastro-suite/exastro-it-automation/issues/2905), [#2967](https://github.com/exastro-suite/exastro-it-automation/issues/2967), [#2973](https://github.com/exastro-suite/exastro-it-automation/issues/2973), [#2974](https://github.com/exastro-suite/exastro-it-automation/issues/2974), [#2984](https://github.com/exastro-suite/exastro-it-automation/issues/2984), [#2992](https://github.com/exastro-suite/exastro-it-automation/issues/2992), [#2994](https://github.com/exastro-suite/exastro-it-automation/issues/2994), [#2995](https://github.com/exastro-suite/exastro-it-automation/issues/2995), [#3013](https://github.com/exastro-suite/exastro-it-automation/issues/3013)）
+ユーザからの問い合わせ等での指摘事項、試験時に見つかったバグ、大量データの処理時に見つかった問題点などに対処し、動作の安定性を向上させました。

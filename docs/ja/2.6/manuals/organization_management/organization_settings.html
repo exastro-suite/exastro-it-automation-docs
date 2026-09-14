@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/manuals/organization_management/organization_settings.html">current</option>
-              <option value="../../../../ja/2.8/manuals/organization_management/organization_settings.html">2.8(current)</option>
+              <option value="../../../../ja/2.9/manuals/organization_management/organization_settings.html">current</option>
+              <option value="../../../../ja/2.9/manuals/organization_management/organization_settings.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/manuals/organization_management/organization_settings.html">2.8</option>
               <option value="../../../../ja/2.7/manuals/organization_management/organization_settings.html">2.7</option>
               <option value="../../../../ja/2.6/manuals/organization_management/organization_settings.html" selected>2.6</option>
               <option value="../../../../ja/2.5/manuals/organization_management/organization_settings.html">2.5</option>
@@ -258,22 +259,22 @@
 <li><p>設定確認</p>
 <ul>
 <li><p>コマンド</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
-<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
-<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
-<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://severname"</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">"オーガナイゼーションID"</span>
+<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">"ユーザー名"</span>
+<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">"パスワード"</span>
 
-curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/platform/setting&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s2">&quot;.data.token&quot;</span>
+curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/platform/setting"</span><span class="w"> </span><span class="se">\</span>
+<span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s2">".data.token"</span>
 </pre></div>
 </div>
 </li>
 <li><p>実行結果</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
-<span class="w"> </span><span class="s2">&quot;access_token_lifespan_minutes&quot;</span>:<span class="w"> </span><span class="m">2880</span>,
-<span class="w"> </span><span class="s2">&quot;refresh_token_max_lifespan_days&quot;</span>:<span class="w"> </span><span class="m">365</span>,
-<span class="w"> </span><span class="s2">&quot;refresh_token_max_lifespan_enabled&quot;</span>:<span class="w"> </span><span class="nb">true</span>
+<span class="w"> </span><span class="s2">"access_token_lifespan_minutes"</span>:<span class="w"> </span><span class="m">2880</span>,
+<span class="w"> </span><span class="s2">"refresh_token_max_lifespan_days"</span>:<span class="w"> </span><span class="m">365</span>,
+<span class="w"> </span><span class="s2">"refresh_token_max_lifespan_enabled"</span>:<span class="w"> </span><span class="nb">true</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -283,18 +284,18 @@ curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</s
 <li><p>設定変更</p>
 <ul>
 <li><p>コマンド</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
-<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
-<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
-<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://severname"</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">"オーガナイゼーションID"</span>
+<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">"ユーザー名"</span>
+<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">"パスワード"</span>
 
-cat<span class="w"> </span><span class="s">&lt;&lt;EOS | curl -u &quot;${USERNAME}:${PASSWORD}&quot; -H &quot;Content-type: application/json&quot; \</span>
-<span class="s">-X PATCH -d @- &quot;${BASEURL}/api/${ORGANIZATION_ID}/platform/setting&quot;</span>
+cat<span class="w"> </span><span class="s">&lt;&lt;EOS | curl -u "${USERNAME}:${PASSWORD}" -H "Content-type: application/json" \</span>
+<span class="s">-X PATCH -d @- "${BASEURL}/api/${ORGANIZATION_ID}/platform/setting"</span>
 <span class="s">{</span>
-<span class="s">    &quot;token&quot;: {</span>
-<span class="s">      &quot;refresh_token_max_lifespan_enabled&quot;: true,</span>
-<span class="s">      &quot;refresh_token_max_lifespan_days&quot;: 365,</span>
-<span class="s">      &quot;access_token_lifespan_minutes&quot;: 2880</span>
+<span class="s">    "token": {</span>
+<span class="s">      "refresh_token_max_lifespan_enabled": true,</span>
+<span class="s">      "refresh_token_max_lifespan_days": 365,</span>
+<span class="s">      "access_token_lifespan_minutes": 2880</span>
 <span class="s">    }</span>
 <span class="s">}</span>
 <span class="s">EOS</span>
@@ -303,10 +304,10 @@ cat<span class="w"> </span><span class="s">&lt;&lt;EOS | curl -u &quot;${USERNAM
 </li>
 <li><p>実行結果（成功時）</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
-<span class="s2">&quot;data&quot;</span>:<span class="w"> </span>null,
-<span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span>,
-<span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;000-00000&quot;</span>,
-<span class="s2">&quot;ts&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-01-24T05:12:16.382Z&quot;</span>
+<span class="s2">"data"</span>:<span class="w"> </span>null,
+<span class="s2">"message"</span>:<span class="w"> </span><span class="s2">"SUCCESS"</span>,
+<span class="s2">"result"</span>:<span class="w"> </span><span class="s2">"000-00000"</span>,
+<span class="s2">"ts"</span>:<span class="w"> </span><span class="s2">"2023-01-24T05:12:16.382Z"</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -383,7 +384,7 @@ cat<span class="w"> </span><span class="s">&lt;&lt;EOS | curl -u &quot;${USERNAM
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

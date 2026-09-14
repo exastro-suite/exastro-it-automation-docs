@@ -325,8 +325,8 @@ Ansible Automation Controller の登録
                   | 上記コマンドの例では、Ansible Automation ControllerとAnsible Execution Agentが利用可能になります。
 
 
-Ansible Automation Contoller 連携の確認
----------------------------------------
+Ansible Automation Controller 連携の確認
+----------------------------------------
 
 #. オーガナイゼーション作成結果を確認します。
 

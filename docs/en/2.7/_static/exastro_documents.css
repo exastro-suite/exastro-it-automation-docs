@@ -421,6 +421,14 @@
  content: "\e961"
 }
 
+.icon-send:before{
+ content: "\e962"
+}
+
+.icon-stick:before{
+ content: "\e963"
+}
+
 /* div, .oase-icon {
   font-family: oase-web-font;
   font-size: 1.6rem;

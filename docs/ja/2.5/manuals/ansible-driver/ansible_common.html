@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/manuals/ansible-driver/ansible_common.html">current</option>
-              <option value="../../../../ja/2.8/manuals/ansible-driver/ansible_common.html">2.8(current)</option>
+              <option value="../../../../ja/2.9/manuals/ansible-driver/ansible_common.html">current</option>
+              <option value="../../../../ja/2.9/manuals/ansible-driver/ansible_common.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/manuals/ansible-driver/ansible_common.html">2.8</option>
               <option value="../../../../ja/2.7/manuals/ansible-driver/ansible_common.html">2.7</option>
               <option value="../../../../ja/2.6/manuals/ansible-driver/ansible_common.html">2.6</option>
               <option value="../../../../ja/2.5/manuals/ansible-driver/ansible_common.html" selected>2.5</option>
@@ -409,7 +410,7 @@
 <span class="c1"># Playbook内での記述例</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Create user</span>
 <span class="w">  </span><span class="nt">user</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"{{</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">}}"</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -431,8 +432,8 @@
 <span class="c1"># Playbook内での記述例</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Create user</span>
 <span class="w">  </span><span class="nt">user</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">item</span><span class="nv"> </span><span class="s">}}&quot;</span>
-<span class="w">  </span><span class="nt">with_items</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">users</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"{{</span><span class="nv"> </span><span class="s">item</span><span class="nv"> </span><span class="s">}}"</span>
+<span class="w">  </span><span class="nt">with_items</span><span class="p">:</span><span class="w"> </span><span class="s">"{{</span><span class="nv"> </span><span class="s">users</span><span class="nv"> </span><span class="s">}}"</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -457,8 +458,8 @@
 <span class="c1"># Playbook内での記述例</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Create user</span>
 <span class="w">  </span><span class="nt">user</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">item.name</span><span class="nv"> </span><span class="s">}}&quot;</span>
-<span class="w">  </span><span class="nt">with_items</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">users</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"{{</span><span class="nv"> </span><span class="s">item.name</span><span class="nv"> </span><span class="s">}}"</span>
+<span class="w">  </span><span class="nt">with_items</span><span class="p">:</span><span class="w"> </span><span class="s">"{{</span><span class="nv"> </span><span class="s">users</span><span class="nv"> </span><span class="s">}}"</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -1628,10 +1629,10 @@
 </pre></div>
 </div>
 <p>各パラメータ値を変数で記述することも出来ます。</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">ansible_become_password</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{△vvv△}}&#39;</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">ansible_become_password</span><span class="p">:</span><span class="w"> </span><span class="s">'{{△vvv△}}'</span>
 
 <span class="l l-Scalar l-Scalar-Plain">△：半角スペース</span>
-<span class="s">&#39;:シングル・ダブルコーテーションで必ず囲んで下さい。</span>
+<span class="s">':シングル・ダブルコーテーションで必ず囲んで下さい。</span>
 </pre></div>
 </div>
 <p>パラメータ値を変数で記述する場合の詳細は、「 <a class="reference internal" href="#ansible-common-option-var-listup"><span class="std std-ref">インベントリファイル追加オプションとヘッダセクションのパラメータ値で変数抜出の対象となる変数の種類と書式</span></a> 」を参照してください 。</p>
@@ -2335,7 +2336,7 @@
 <div class="line-block">
 <div class="line"><strong>Playbookの記述</strong></div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">copy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src=&#39;{{ CPF_hosts }}&#39; dest=/etc/hosts</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">copy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src='{{ CPF_hosts }}' dest=/etc/hosts</span>
 </pre></div>
 </div>
 </li>
@@ -2429,16 +2430,16 @@
 <span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
 <span class="nt">exec_list</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># 対象機器へのログインパスワード認証</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">'password:'</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">'{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}'</span>
 <span class="w">  </span><span class="c1"># 作業対象側よりscpコマンドでAAC側に配置されているファイルを作業対象にファイル転送</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__dnshostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;scp</span><span class="nv"> </span><span class="s">-o</span><span class="nv"> </span><span class="s">StrictHostKeyChecking=no</span><span class="nv"> </span><span class="s">-o</span><span class="nv"> </span><span class="s">UserKnownHostsFile=/dev/null</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_scp_user</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">VAR_aac_host</span><span class="nv"> </span><span class="s">}}:{{</span><span class="nv"> </span><span class="s">CPF_hosts</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">'{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__dnshostname__</span><span class="nv"> </span><span class="s">}}'</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">'scp</span><span class="nv"> </span><span class="s">-o</span><span class="nv"> </span><span class="s">StrictHostKeyChecking=no</span><span class="nv"> </span><span class="s">-o</span><span class="nv"> </span><span class="s">UserKnownHostsFile=/dev/null</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_scp_user</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">VAR_aac_host</span><span class="nv"> </span><span class="s">}}:{{</span><span class="nv"> </span><span class="s">CPF_hosts</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">/etc/hosts'</span>
 <span class="w">  </span><span class="c1"># scpコマンドのパスワードログイン認証(AAC側)</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_scp_user_password</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">'password:'</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">'{{</span><span class="nv"> </span><span class="s">VAR_scp_user_password</span><span class="nv"> </span><span class="s">}}'</span>
 <span class="w">  </span><span class="c1"># 対話ファイル終了</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__dnshostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">'{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__dnshostname__</span><span class="nv"> </span><span class="s">}}'</span>
 <span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 </pre></div>
 </div>
@@ -2713,7 +2714,7 @@
 <div class="line-block">
 <div class="line"><strong>Playbookの記述</strong></div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src=&#39;{{ TPF_hosts }}&#39; dest=/etc/hosts</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src='{{ TPF_hosts }}' dest=/etc/hosts</span>
 </pre></div>
 </div>
 </li>
@@ -2768,16 +2769,16 @@
 <span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
 <span class="nt">exec_list</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># 対象機器へのログインパスワード認証</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">'password:'</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">'{{</span><span class="nv"> </span><span class="s">__loginpassword__</span><span class="nv"> </span><span class="s">}}'</span>
 <span class="w">  </span><span class="c1"># 作業対象側よりscpコマンドでAAC側に配置されているファイルを作業対象にファイル転送</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__dnshostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;scp</span><span class="nv"> </span><span class="s">-o</span><span class="nv"> </span><span class="s">StrictHostKeyChecking=no</span><span class="nv"> </span><span class="s">-o</span><span class="nv"> </span><span class="s">UserKnownHostsFile=/dev/null</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_scp_user</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">VAR_aac_host</span><span class="nv"> </span><span class="s">}}:{{</span><span class="nv"> </span><span class="s">TPF_hosts</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">/etc/hosts&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">'{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__dnshostname__</span><span class="nv"> </span><span class="s">}}'</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">'scp</span><span class="nv"> </span><span class="s">-o</span><span class="nv"> </span><span class="s">StrictHostKeyChecking=no</span><span class="nv"> </span><span class="s">-o</span><span class="nv"> </span><span class="s">UserKnownHostsFile=/dev/null</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">VAR_scp_user</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">VAR_aac_host</span><span class="nv"> </span><span class="s">}}:{{</span><span class="nv"> </span><span class="s">TPF_hosts</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">/etc/hosts'</span>
 <span class="w">  </span><span class="c1"># scpコマンドのパスワードログイン認証(AAC側)</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;password:&#39;</span>
-<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">VAR_scp_user_password</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">'password:'</span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">'{{</span><span class="nv"> </span><span class="s">VAR_scp_user_password</span><span class="nv"> </span><span class="s">}}'</span>
 <span class="w">  </span><span class="c1"># 対話ファイル終了</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__dnshostname__</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">expect</span><span class="p">:</span><span class="w"> </span><span class="s">'{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}@{{</span><span class="nv"> </span><span class="s">__dnshostname__</span><span class="nv"> </span><span class="s">}}'</span>
 <span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exit</span>
 </pre></div>
 </div>
@@ -3985,7 +3986,7 @@ ITA Ver2.5.1では、以下の2個のベースイメージについて動作確�
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.5/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

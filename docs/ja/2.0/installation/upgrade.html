@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../ja/2.8/installation/upgrade.html">current</option>
-              <option value="../../../ja/2.8/installation/upgrade.html">2.8(current)</option>
+              <option value="../../../ja/2.9/installation/upgrade.html">current</option>
+              <option value="../../../ja/2.9/installation/upgrade.html">2.9(current)</option>
+              <option value="../../../ja/2.8/installation/upgrade.html">2.8</option>
               <option value="../../../ja/2.7/installation/upgrade.html">2.7</option>
               <option value="../../../ja/2.6/installation/upgrade.html">2.6</option>
               <option value="../../../ja/2.5/installation/upgrade.html">2.5</option>
@@ -317,14 +318,14 @@
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>exastro-platform:
 <span class="w"> </span> platform-api:
 <span class="w"> </span>   image:
-<span class="w"> </span>     repository: &quot;exastro/exastro-platform-api&quot;
-<span class="w"> </span>      tag: &quot;&quot;
+<span class="w"> </span>     repository: "exastro/exastro-platform-api"
+<span class="w"> </span>      tag: ""
 
 <span class="w"> </span> platform-auth:
 <span class="gi">+    extraEnv:</span>
 <span class="gi">+      # Please set the URL to access</span>
-<span class="gi">+      EXTERNAL_URL: &quot;&quot;</span>
-<span class="gi">+      EXTERNAL_URL_MNG: &quot;&quot;</span>
+<span class="gi">+      EXTERNAL_URL: ""</span>
+<span class="gi">+      EXTERNAL_URL_MNG: ""</span>
 <span class="w"> </span>   ingress:
 <span class="w"> </span>     enabled: true
 <span class="w"> </span>     hosts:
@@ -346,14 +347,14 @@
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>exastro-platform:
 <span class="w"> </span> platform-api:
 <span class="w"> </span>   image:
-<span class="w"> </span>     repository: &quot;exastro/exastro-platform-api&quot;
-<span class="w"> </span>      tag: &quot;&quot;
+<span class="w"> </span>     repository: "exastro/exastro-platform-api"
+<span class="w"> </span>      tag: ""
 
 <span class="w"> </span> platform-auth:
 <span class="gi">+    extraEnv:</span>
 <span class="gi">+      # Please set the URL to access</span>
-<span class="gi">+      EXTERNAL_URL: &quot;&quot;</span>
-<span class="gi">+      EXTERNAL_URL_MNG: &quot;&quot;</span>
+<span class="gi">+      EXTERNAL_URL: ""</span>
+<span class="gi">+      EXTERNAL_URL_MNG: ""</span>
 <span class="w"> </span>   ingress:
 <span class="w"> </span>     enabled: true
 <span class="w"> </span>     hosts:
@@ -375,12 +376,12 @@
 </div>
 <div class="literal-block-wrapper docutils container" id="id21">
 <div class="code-block-caption"><span class="caption-number">リスト 2.9 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">RS_AE</span><span class="o">=</span><span class="sb">`</span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>ita-by-ansible-execute<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{@.spec.replicas}{&quot;\n&quot;}&#39;</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="sb">`</span>
-<span class="nv">RS_ALRV</span><span class="o">=</span><span class="sb">`</span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>ita-by-ansible-legacy-role-vars-listup<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{@.spec.replicas}{&quot;\n&quot;}&#39;</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="sb">`</span>
-<span class="nv">RS_ATS</span><span class="o">=</span><span class="sb">`</span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>ita-by-ansible-towermaster-sync<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{@.spec.replicas}{&quot;\n&quot;}&#39;</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="sb">`</span>
-<span class="nv">RS_CS</span><span class="o">=</span><span class="sb">`</span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>ita-by-conductor-synchronize<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{@.spec.replicas}{&quot;\n&quot;}&#39;</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="sb">`</span>
-<span class="nv">RS_MC</span><span class="o">=</span><span class="sb">`</span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>ita-by-menu-create<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{@.spec.replicas}{&quot;\n&quot;}&#39;</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="sb">`</span>
-<span class="nv">RS_PA</span><span class="o">=</span><span class="sb">`</span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>platform-auth<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{@.spec.replicas}{&quot;\n&quot;}&#39;</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="sb">`</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">RS_AE</span><span class="o">=</span><span class="sb">`</span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>ita-by-ansible-execute<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{@.spec.replicas}{"\n"}'</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="sb">`</span>
+<span class="nv">RS_ALRV</span><span class="o">=</span><span class="sb">`</span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>ita-by-ansible-legacy-role-vars-listup<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{@.spec.replicas}{"\n"}'</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="sb">`</span>
+<span class="nv">RS_ATS</span><span class="o">=</span><span class="sb">`</span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>ita-by-ansible-towermaster-sync<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{@.spec.replicas}{"\n"}'</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="sb">`</span>
+<span class="nv">RS_CS</span><span class="o">=</span><span class="sb">`</span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>ita-by-conductor-synchronize<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{@.spec.replicas}{"\n"}'</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="sb">`</span>
+<span class="nv">RS_MC</span><span class="o">=</span><span class="sb">`</span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>ita-by-menu-create<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{@.spec.replicas}{"\n"}'</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="sb">`</span>
+<span class="nv">RS_PA</span><span class="o">=</span><span class="sb">`</span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>platform-auth<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{@.spec.replicas}{"\n"}'</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="sb">`</span>
 </pre></div>
 </div>
 </div>
@@ -467,19 +468,19 @@ TEST<span class="w"> </span>SUITE:<span class="w"> </span>None
 NOTES:
 Exastro<span class="w"> </span>install<span class="w"> </span>completion!
 
-<span class="m">1</span>.<span class="w"> </span>Execute<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="nb">command</span><span class="w"> </span>and<span class="w"> </span><span class="nb">wait</span><span class="w"> </span><span class="k">until</span><span class="w"> </span>the<span class="w"> </span>pod<span class="w"> </span>becomes<span class="w"> </span><span class="s2">&quot;Running&quot;</span><span class="w"> </span>or<span class="w"> </span><span class="s2">&quot;Completed&quot;</span>:
+<span class="m">1</span>.<span class="w"> </span>Execute<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="nb">command</span><span class="w"> </span>and<span class="w"> </span><span class="nb">wait</span><span class="w"> </span><span class="k">until</span><span class="w"> </span>the<span class="w"> </span>pod<span class="w"> </span>becomes<span class="w"> </span><span class="s2">"Running"</span><span class="w"> </span>or<span class="w"> </span><span class="s2">"Completed"</span>:
 
-<span class="w">  </span><span class="c1"># NOTE: You can also append &quot;-w&quot; to the command or wait until the state changes with &quot;watch command&quot;</span>
+<span class="w">  </span><span class="c1"># NOTE: You can also append "-w" to the command or wait until the state changes with "watch command"</span>
 
 <span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--namespace<span class="w"> </span>exastro
 
 <span class="m">2</span>.<span class="w"> </span>Get<span class="w"> </span>the<span class="w"> </span>ENCRYPT_KEY<span class="w"> </span>by<span class="w"> </span>running<span class="w"> </span>these<span class="w"> </span>commands:
 
 <span class="w">  </span><span class="c1"># Exastro IT Automation ENCRYPT_KEY</span>
-<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>ita-secret-ita-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ENCRYPT_KEY}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>ita-secret-ita-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.ENCRYPT_KEY}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 
 <span class="w">  </span><span class="c1"># Exastro Platform ENCRYPT_KEY</span>
-<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>platform-secret-pf-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ENCRYPT_KEY}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>platform-secret-pf-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.ENCRYPT_KEY}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 
 <span class="w">  </span>!!!<span class="w"> </span>Please<span class="w"> </span>save<span class="w"> </span>the<span class="w"> </span>output<span class="w"> </span>ENCRYPT_KEY<span class="w"> </span>carefully.<span class="w"> </span>!!!
 
@@ -614,7 +615,7 @@ keycloak-7dd65794c7-w5wpg<span class="w">                                 </span
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.0/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

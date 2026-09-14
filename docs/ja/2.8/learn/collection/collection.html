@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/learn/collection/collection.html" selected>current</option>
-              <option value="../../../../ja/2.8/learn/collection/collection.html" selected>2.8(current)</option>
+              <option value="../../../../ja/2.9/learn/collection/collection.html">current</option>
+              <option value="../../../../ja/2.9/learn/collection/collection.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/learn/collection/collection.html" selected>2.8</option>
               <option value="../../../../ja/2.7/learn/collection/collection.html">2.7</option>
               <option value="../../../../ja/2.6/learn/collection/collection.html">2.6</option>
               <option value="../../../../ja/2.5/learn/collection/collection.html">2.5</option>
@@ -238,15 +239,15 @@
 <div class="code-block-caption"><span class="caption-number">リスト 539 </span><span class="caption-text">system_collection.yml</span><a class="headerlink" href="#id22" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>name:<span class="w"> </span><span class="nb">set</span><span class="w"> </span>variable
 <span class="w">  </span>set_fact:
-<span class="w">    </span>test:<span class="w"> </span><span class="s2">&quot;{{ VAR_hostname }}&quot;</span>
+<span class="w">    </span>test:<span class="w"> </span><span class="s2">"{{ VAR_hostname }}"</span>
 
 -<span class="w"> </span>name:<span class="w"> </span>make<span class="w"> </span>yaml<span class="w"> </span>file
 <span class="w">  </span>blockinfile:
 <span class="w">    </span>create:<span class="w"> </span>yes
 <span class="w">    </span>mode:<span class="w"> </span><span class="m">644</span>
 <span class="w">    </span>insertbefore:<span class="w"> </span>EOF
-<span class="w">    </span>marker:<span class="w"> </span><span class="s2">&quot;&quot;</span>
-<span class="w">    </span>dest:<span class="w"> </span><span class="s2">&quot;/tmp/system.yml&quot;</span>
+<span class="w">    </span>marker:<span class="w"> </span><span class="s2">""</span>
+<span class="w">    </span>dest:<span class="w"> </span><span class="s2">"/tmp/system.yml"</span>
 <span class="w">    </span>content:<span class="w"> </span><span class="p">|</span>
 <span class="w">      </span>ansible_architecture<span class="w">              </span>:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_architecture<span class="w"> </span><span class="o">}}</span>
 <span class="w">      </span>ansible_bios_version<span class="w">              </span>:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_bios_version<span class="w"> </span><span class="o">}}</span>
@@ -268,8 +269,8 @@
 
 -<span class="w"> </span>name:<span class="w"> </span>Copy<span class="w"> </span>the<span class="w"> </span>make<span class="w"> </span>yaml<span class="w"> </span>file<span class="w"> </span>to<span class="w"> </span><span class="nb">local</span>
 <span class="w">  </span>fetch:
-<span class="w">    </span>src:<span class="w"> </span><span class="s2">&quot;/tmp/system.yml&quot;</span>
-<span class="w">    </span>dest:<span class="w"> </span><span class="s2">&quot;{{ __parameter_dir__ }}/{{ inventory_hostname }}/&quot;</span>
+<span class="w">    </span>src:<span class="w"> </span><span class="s2">"/tmp/system.yml"</span>
+<span class="w">    </span>dest:<span class="w"> </span><span class="s2">"{{ __parameter_dir__ }}/{{ inventory_hostname }}/"</span>
 <span class="w">    </span>flat:<span class="w"> </span>yes
 </pre></div>
 </div>
@@ -780,7 +781,7 @@
 <div class="literal-block-wrapper docutils container" id="id30">
 <div class="code-block-caption"><span class="caption-number">リスト 540 </span><span class="caption-text">ヘッダーセクション</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>hosts:<span class="w"> </span>all
-<span class="w">  </span>remote_user:<span class="w"> </span><span class="s2">&quot;{{ __loginuser__ }}&quot;</span>
+<span class="w">  </span>remote_user:<span class="w"> </span><span class="s2">"{{ __loginuser__ }}"</span>
 <span class="w">  </span>gather_facts:<span class="w"> </span>yes
 <span class="w">  </span>become:<span class="w"> </span>yes
 </pre></div>
@@ -797,15 +798,15 @@
 <div class="code-block-caption"><span class="caption-number">リスト 541 </span><span class="caption-text">system_collection.yml</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>name:<span class="w"> </span><span class="nb">set</span><span class="w"> </span>variable
 <span class="w">  </span>set_fact:
-<span class="w">    </span>test:<span class="w"> </span><span class="s2">&quot;{{ VAR_hostname }}&quot;</span>
+<span class="w">    </span>test:<span class="w"> </span><span class="s2">"{{ VAR_hostname }}"</span>
 
 -<span class="w"> </span>name:<span class="w"> </span>make<span class="w"> </span>yaml<span class="w"> </span>file
 <span class="w">  </span>blockinfile:
 <span class="w">    </span>create:<span class="w"> </span>yes
 <span class="w">    </span>mode:<span class="w"> </span><span class="m">644</span>
 <span class="w">    </span>insertbefore:<span class="w"> </span>EOF
-<span class="w">    </span>marker:<span class="w"> </span><span class="s2">&quot;&quot;</span>
-<span class="w">    </span>dest:<span class="w"> </span><span class="s2">&quot;/tmp/system.yml&quot;</span>
+<span class="w">    </span>marker:<span class="w"> </span><span class="s2">""</span>
+<span class="w">    </span>dest:<span class="w"> </span><span class="s2">"/tmp/system.yml"</span>
 <span class="w">    </span>content:<span class="w"> </span><span class="p">|</span>
 <span class="w">      </span>ansible_architecture<span class="w">              </span>:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_architecture<span class="w"> </span><span class="o">}}</span>
 <span class="w">      </span>ansible_bios_version<span class="w">              </span>:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>ansible_bios_version<span class="w"> </span><span class="o">}}</span>
@@ -827,8 +828,8 @@
 
 -<span class="w"> </span>name:<span class="w"> </span>Copy<span class="w"> </span>the<span class="w"> </span>make<span class="w"> </span>yaml<span class="w"> </span>file<span class="w"> </span>to<span class="w"> </span><span class="nb">local</span>
 <span class="w">  </span>fetch:
-<span class="w">    </span>src:<span class="w"> </span><span class="s2">&quot;/tmp/system.yml&quot;</span>
-<span class="w">    </span>dest:<span class="w"> </span><span class="s2">&quot;{{ __parameter_dir__ }}/{{ inventory_hostname }}/&quot;</span>
+<span class="w">    </span>src:<span class="w"> </span><span class="s2">"/tmp/system.yml"</span>
+<span class="w">    </span>dest:<span class="w"> </span><span class="s2">"{{ __parameter_dir__ }}/{{ inventory_hostname }}/"</span>
 <span class="w">    </span>flat:<span class="w"> </span>yes
 </pre></div>
 </div>

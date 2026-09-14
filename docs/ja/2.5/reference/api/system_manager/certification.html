@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../../ja/2.8/reference/api/system_manager/certification.html">current</option>
-              <option value="../../../../../ja/2.8/reference/api/system_manager/certification.html">2.8(current)</option>
+              <option value="../../../../../ja/2.9/reference/api/system_manager/certification.html">current</option>
+              <option value="../../../../../ja/2.9/reference/api/system_manager/certification.html">2.9(current)</option>
+              <option value="../../../../../ja/2.8/reference/api/system_manager/certification.html">2.8</option>
               <option value="../../../../../ja/2.7/reference/api/system_manager/certification.html">2.7</option>
               <option value="../../../../../ja/2.6/reference/api/system_manager/certification.html">2.6</option>
               <option value="../../../../../ja/2.5/reference/api/system_manager/certification.html" selected>2.5</option>
@@ -233,12 +234,12 @@
 <div class="line-block">
 <div class="line">以下のサンプルはBasic認証を使用して、オーガナイゼーション一覧取得APIを呼出しています。</div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
-<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
-<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://severname"</span>
+<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">"ユーザー名"</span>
+<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">"パスワード"</span>
 
 <span class="c1"># オーガナイゼーション一覧取得APIの呼び出し</span>
-curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/platform/organizations&quot;</span>
+curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/platform/organizations"</span>
 </pre></div>
 </div>
 </section>
@@ -289,18 +290,18 @@ curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</s
 </div>
 </li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
-<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
-<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://severname"</span>
+<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">"ユーザー名"</span>
+<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">"パスワード"</span>
 
 <span class="c1"># refresh_token払出</span>
 curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;client_id=_platform-api&quot;</span><span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;grant_type=password&quot;</span><span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;scope=openid+offline_access&quot;</span><span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;username=</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;password=</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/auth/realms/master/protocol/openid-connect/token&quot;</span>
+-d<span class="w"> </span><span class="s2">"client_id=_platform-api"</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s2">"grant_type=password"</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s2">"scope=openid+offline_access"</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s2">"username=</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s2">"password=</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/auth/realms/master/protocol/openid-connect/token"</span>
 </pre></div>
 </div>
 <ul>
@@ -309,20 +310,20 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </spa
 </div>
 </li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
-<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
-<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
-<span class="nv">ONETIME_PASSWORD</span><span class="o">=</span><span class="s2">&quot;ワンタイムパスワード&quot;</span><span class="w">　</span><span class="c1"># Google Authenticator等で取得したワンタイムパスワード</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://severname"</span>
+<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">"ユーザー名"</span>
+<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">"パスワード"</span>
+<span class="nv">ONETIME_PASSWORD</span><span class="o">=</span><span class="s2">"ワンタイムパスワード"</span><span class="w">　</span><span class="c1"># Google Authenticator等で取得したワンタイムパスワード</span>
 
 <span class="c1"># refresh_token払出</span>
 curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;client_id=_platform-api&quot;</span><span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;grant_type=password&quot;</span><span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;scope=openid+offline_access&quot;</span><span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;username=</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;password=</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;totp=</span><span class="si">${</span><span class="nv">ONETIME_PASSWORD</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/auth/realms/master/protocol/openid-connect/token&quot;</span>
+-d<span class="w"> </span><span class="s2">"client_id=_platform-api"</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s2">"grant_type=password"</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s2">"scope=openid+offline_access"</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s2">"username=</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s2">"password=</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s2">"totp=</span><span class="si">${</span><span class="nv">ONETIME_PASSWORD</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/auth/realms/master/protocol/openid-connect/token"</span>
 </pre></div>
 </div>
 <ul>
@@ -336,15 +337,15 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </spa
 <div class="line">※この実行結果以外で後からrefresh_tokenを再度表示することは出来ないので、発行したrefresh_tokenは大切に保管してください。</div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
-<span class="w">  </span><span class="s2">&quot;access_token&quot;</span>:<span class="w"> </span><span class="s2">&quot;eyJhbGci...&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;expires_in&quot;</span>:<span class="w"> </span><span class="m">172800</span>,
-<span class="w">  </span><span class="s2">&quot;refresh_expires_in&quot;</span>:<span class="w"> </span><span class="m">31536000</span>,
-<span class="w">  </span><span class="s2">&quot;refresh_token&quot;</span>:<span class="w"> </span><span class="s2">&quot;eyJhbGci...&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;token_type&quot;</span>:<span class="w"> </span><span class="s2">&quot;Bearer&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;id_token&quot;</span>:<span class="w"> </span><span class="s2">&quot;eyJhbGci...&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;not-before-policy&quot;</span>:<span class="w"> </span><span class="m">0</span>,
-<span class="w">  </span><span class="s2">&quot;session_state&quot;</span>:<span class="w"> </span><span class="s2">&quot;XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;scope&quot;</span>:<span class="w"> </span><span class="s2">&quot;openid email profile offline_access&quot;</span>
+<span class="w">  </span><span class="s2">"access_token"</span>:<span class="w"> </span><span class="s2">"eyJhbGci..."</span>,
+<span class="w">  </span><span class="s2">"expires_in"</span>:<span class="w"> </span><span class="m">172800</span>,
+<span class="w">  </span><span class="s2">"refresh_expires_in"</span>:<span class="w"> </span><span class="m">31536000</span>,
+<span class="w">  </span><span class="s2">"refresh_token"</span>:<span class="w"> </span><span class="s2">"eyJhbGci..."</span>,
+<span class="w">  </span><span class="s2">"token_type"</span>:<span class="w"> </span><span class="s2">"Bearer"</span>,
+<span class="w">  </span><span class="s2">"id_token"</span>:<span class="w"> </span><span class="s2">"eyJhbGci..."</span>,
+<span class="w">  </span><span class="s2">"not-before-policy"</span>:<span class="w"> </span><span class="m">0</span>,
+<span class="w">  </span><span class="s2">"session_state"</span>:<span class="w"> </span><span class="s2">"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"</span>,
+<span class="w">  </span><span class="s2">"scope"</span>:<span class="w"> </span><span class="s2">"openid email profile offline_access"</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -354,21 +355,21 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </spa
 <div class="line-block">
 <div class="line">以下のサンプルはBearer認証を使用して、オーガナイゼーション一覧取得APIを呼出しています。</div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
-<span class="nv">REFRESH_TOKEN</span><span class="o">=</span><span class="s2">&quot;eyJhbGci...&quot;</span><span class="w"> </span><span class="c1"># 事前準備手順で払い出したrefresh_token</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://severname"</span>
+<span class="nv">REFRESH_TOKEN</span><span class="o">=</span><span class="s2">"eyJhbGci..."</span><span class="w"> </span><span class="c1"># 事前準備手順で払い出したrefresh_token</span>
 
 <span class="c1"># access_token払出</span>
 <span class="nv">ACCESS_TOKEN</span><span class="o">=</span><span class="k">$(</span><span class="se">\</span>
 <span class="w">    </span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-d<span class="w"> </span><span class="s2">&quot;client_id=_platform-api&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-d<span class="w"> </span><span class="s2">&quot;grant_type=refresh_token&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-d<span class="w"> </span><span class="s2">&quot;refresh_token=</span><span class="si">${</span><span class="nv">REFRESH_TOKEN</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/auth/realms/master/protocol/openid-connect/token&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;.access_token&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-d<span class="w"> </span><span class="s2">"client_id=_platform-api"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-d<span class="w"> </span><span class="s2">"grant_type=refresh_token"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-d<span class="w"> </span><span class="s2">"refresh_token=</span><span class="si">${</span><span class="nv">REFRESH_TOKEN</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/auth/realms/master/protocol/openid-connect/token"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s2">".access_token"</span><span class="w"> </span><span class="se">\</span>
 <span class="k">)</span>
 
 <span class="c1"># オーガナイゼーション一覧取得APIの呼び出し</span>
-curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="si">${</span><span class="nv">ACCESS_TOKEN</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/platform/organizations&quot;</span>
+curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="si">${</span><span class="nv">ACCESS_TOKEN</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/platform/organizations"</span>
 </pre></div>
 </div>
 </section>
@@ -383,12 +384,12 @@ curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Aut
 </div>
 </li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
-<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
-<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://severname"</span>
+<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">"ユーザー名"</span>
+<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">"パスワード"</span>
 
-curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/platform/users/_current/refresh_tokens&quot;</span>
+curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/platform/users/_current/refresh_tokens"</span>
 </pre></div>
 </div>
 <ul>
@@ -397,11 +398,11 @@ curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</s
 </div>
 </li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
-<span class="nv">ACCESS_TOKEN</span><span class="o">=</span><span class="s2">&quot;eyJhbGci...&quot;</span><span class="w"> </span><span class="c1"># 前述の手順で払い出したaccess_token</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://severname"</span>
+<span class="nv">ACCESS_TOKEN</span><span class="o">=</span><span class="s2">"eyJhbGci..."</span><span class="w"> </span><span class="c1"># 前述の手順で払い出したaccess_token</span>
 
-curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="si">${</span><span class="nv">ACCESS_TOKEN</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/platform/users/_current/refresh_tokens&quot;</span>
+curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="si">${</span><span class="nv">ACCESS_TOKEN</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/platform/users/_current/refresh_tokens"</span>
 </pre></div>
 </div>
 <ul>
@@ -411,23 +412,23 @@ curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Aut
 </li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
-<span class="w">  </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">  </span><span class="s2">"data"</span>:<span class="w"> </span><span class="o">[</span>
 <span class="w">    </span><span class="o">{</span>
-<span class="w">      </span><span class="s2">&quot;expire_timestamp&quot;</span>:<span class="w"> </span><span class="s2">&quot;2024-01-24T03:57:09.000Z&quot;</span>,
-<span class="w">      </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;XXXXXXXX-XXXX-XXXXXXXXXXXXXXXXXXXXXX&quot;</span>,
-<span class="w">      </span><span class="s2">&quot;lastaccess_timestamp&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-01-24T03:57:09.000Z&quot;</span>,
-<span class="w">      </span><span class="s2">&quot;start_timestamp&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-01-24T03:57:09.000Z&quot;</span>
+<span class="w">      </span><span class="s2">"expire_timestamp"</span>:<span class="w"> </span><span class="s2">"2024-01-24T03:57:09.000Z"</span>,
+<span class="w">      </span><span class="s2">"id"</span>:<span class="w"> </span><span class="s2">"XXXXXXXX-XXXX-XXXXXXXXXXXXXXXXXXXXXX"</span>,
+<span class="w">      </span><span class="s2">"lastaccess_timestamp"</span>:<span class="w"> </span><span class="s2">"2023-01-24T03:57:09.000Z"</span>,
+<span class="w">      </span><span class="s2">"start_timestamp"</span>:<span class="w"> </span><span class="s2">"2023-01-24T03:57:09.000Z"</span>
 <span class="w">    </span><span class="o">}</span>,
 <span class="w">    </span><span class="o">{</span>
-<span class="w">      </span><span class="s2">&quot;expire_timestamp&quot;</span>:<span class="w"> </span><span class="s2">&quot;2024-01-24T02:38:21.000Z&quot;</span>,
-<span class="w">      </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;XXXXXXXX-XXXX-XXXXXXXXXXXXXXXXXXXXXX&quot;</span>,
-<span class="w">      </span><span class="s2">&quot;lastaccess_timestamp&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-01-24T02:38:21.000Z&quot;</span>,
-<span class="w">      </span><span class="s2">&quot;start_timestamp&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-01-24T02:38:21.000Z&quot;</span>
+<span class="w">      </span><span class="s2">"expire_timestamp"</span>:<span class="w"> </span><span class="s2">"2024-01-24T02:38:21.000Z"</span>,
+<span class="w">      </span><span class="s2">"id"</span>:<span class="w"> </span><span class="s2">"XXXXXXXX-XXXX-XXXXXXXXXXXXXXXXXXXXXX"</span>,
+<span class="w">      </span><span class="s2">"lastaccess_timestamp"</span>:<span class="w"> </span><span class="s2">"2023-01-24T02:38:21.000Z"</span>,
+<span class="w">      </span><span class="s2">"start_timestamp"</span>:<span class="w"> </span><span class="s2">"2023-01-24T02:38:21.000Z"</span>
 <span class="w">    </span><span class="o">}</span>
 <span class="w">  </span><span class="o">]</span>,
-<span class="w">  </span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;000-00000&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;ts&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-01-24T03:57:25.377Z&quot;</span>
+<span class="w">  </span><span class="s2">"message"</span>:<span class="w"> </span><span class="s2">"SUCCESS"</span>,
+<span class="w">  </span><span class="s2">"result"</span>:<span class="w"> </span><span class="s2">"000-00000"</span>,
+<span class="w">  </span><span class="s2">"ts"</span>:<span class="w"> </span><span class="s2">"2023-01-24T03:57:25.377Z"</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -475,12 +476,12 @@ curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Aut
 </div>
 </li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
-<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
-<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://severname"</span>
+<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">"ユーザー名"</span>
+<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">"パスワード"</span>
 
-curl<span class="w"> </span>-X<span class="w"> </span>DELETE<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/platform/users/_current/refresh_tokens&quot;</span>
+curl<span class="w"> </span>-X<span class="w"> </span>DELETE<span class="w"> </span>-u<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/platform/users/_current/refresh_tokens"</span>
 </pre></div>
 </div>
 <ul>
@@ -489,11 +490,11 @@ curl<span class="w"> </span>-X<span class="w"> </span>DELETE<span class="w"> </s
 </div>
 </li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
-<span class="nv">ACCESS_TOKEN</span><span class="o">=</span><span class="s2">&quot;eyJhbGci...&quot;</span><span class="w"> </span><span class="c1"># 前述の手順で払い出したaccess_token</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://severname"</span>
+<span class="nv">ACCESS_TOKEN</span><span class="o">=</span><span class="s2">"eyJhbGci..."</span><span class="w"> </span><span class="c1"># 前述の手順で払い出したaccess_token</span>
 
-curl<span class="w"> </span>-X<span class="w"> </span>DELETE<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="si">${</span><span class="nv">ACCESS_TOKEN</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/platform/users/_current/refresh_tokens&quot;</span>
+curl<span class="w"> </span>-X<span class="w"> </span>DELETE<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="si">${</span><span class="nv">ACCESS_TOKEN</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/platform/users/_current/refresh_tokens"</span>
 </pre></div>
 </div>
 <ul>
@@ -503,10 +504,10 @@ curl<span class="w"> </span>-X<span class="w"> </span>DELETE<span class="w"> </s
 </li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
-<span class="w">  </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span>null,
-<span class="w">  </span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;000-00000&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;ts&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-01-24T08:47:27.318Z&quot;</span>
+<span class="w">  </span><span class="s2">"data"</span>:<span class="w"> </span>null,
+<span class="w">  </span><span class="s2">"message"</span>:<span class="w"> </span><span class="s2">"SUCCESS"</span>,
+<span class="w">  </span><span class="s2">"result"</span>:<span class="w"> </span><span class="s2">"000-00000"</span>,
+<span class="w">  </span><span class="s2">"ts"</span>:<span class="w"> </span><span class="s2">"2023-01-24T08:47:27.318Z"</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -655,7 +656,7 @@ curl<span class="w"> </span>-X<span class="w"> </span>DELETE<span class="w"> </s
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.5/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

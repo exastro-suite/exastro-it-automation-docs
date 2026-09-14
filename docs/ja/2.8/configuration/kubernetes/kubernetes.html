@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/configuration/kubernetes/kubernetes.html" selected>current</option>
-              <option value="../../../../ja/2.8/configuration/kubernetes/kubernetes.html" selected>2.8(current)</option>
+              <option value="../../../../ja/2.9/configuration/kubernetes/kubernetes.html">current</option>
+              <option value="../../../../ja/2.9/configuration/kubernetes/kubernetes.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/configuration/kubernetes/kubernetes.html" selected>2.8</option>
               <option value="../../../../ja/2.7/configuration/kubernetes/kubernetes.html">2.7</option>
               <option value="../../../../ja/2.6/configuration/kubernetes/kubernetes.html">2.6</option>
               <option value="../../../../ja/2.5/configuration/kubernetes/kubernetes.html">2.5</option>
@@ -732,7 +733,7 @@ SELINUXTYPE=targeted
 </div>
 <div class="literal-block-wrapper docutils container" id="id39">
 <div class="code-block-caption"><span class="caption-number">リスト 2.25 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id39" title="Link to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory/k8s_cluster/hosts.yml<span class="w"> </span>--become<span class="w"> </span>--become-user<span class="o">=</span>root<span class="w"> </span>cluster.yml<span class="w"> </span>--private-key<span class="o">=</span>~/.ssh/id_rsa<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;download_retries=10&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>~/kubespray_<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d%H%M<span class="k">)</span>.log
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory/k8s_cluster/hosts.yml<span class="w"> </span>--become<span class="w"> </span>--become-user<span class="o">=</span>root<span class="w"> </span>cluster.yml<span class="w"> </span>--private-key<span class="o">=</span>~/.ssh/id_rsa<span class="w"> </span>-e<span class="w"> </span><span class="s2">"download_retries=10"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>~/kubespray_<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d%H%M<span class="k">)</span>.log
 </pre></div>
 </div>
 </div>

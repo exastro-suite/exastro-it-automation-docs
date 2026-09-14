@@ -1,0 +1,28 @@
+# Exastro IT Automation 2.3.0
+
+リリース日: 2024年02月09日
+
+## 機能追加
+
+### Organizationへのドライバ追加機能（[#1793](https://github.com/exastro-suite/exastro-it-automation/issues/1793)）
+Organizationに対して、後からドライバを追加できる新機能を実装しました。これにより、運用中のOrganizationにも柔軟に新しい自動化ドライバを導入でき、拡張性と運用効率が大幅に向上します。
+
+### OASE機能の追加（[#1411](https://github.com/exastro-suite/exastro-it-automation/issues/1411)）
+OASE（自律型運用自動化エンジン）機能を新たに追加しました。これにより、イベント駆動型の自動化や、外部システムとの連携による高度な運用自動化が実現します。エージェント情報の暗号化対応（[#1913](https://github.com/exastro-suite/exastro-it-automation/issues/1913)）も含まれています。
+
+## バグ修正
+
+### メニューエクスポート/インポート・パラメータシート・Excel出力関連の不具合修正（[#2064](https://github.com/exastro-suite/exastro-it-automation/issues/2064), [#2020](https://github.com/exastro-suite/exastro-it-automation/issues/2020), [#2038](https://github.com/exastro-suite/exastro-it-automation/issues/2038), [#1779](https://github.com/exastro-suite/exastro-it-automation/issues/1779), [#1967](https://github.com/exastro-suite/exastro-it-automation/issues/1967), [#1996](https://github.com/exastro-suite/exastro-it-automation/issues/1996), [#2051](https://github.com/exastro-suite/exastro-it-automation/issues/2051), [#2055](https://github.com/exastro-suite/exastro-it-automation/issues/2055), [#2053](https://github.com/exastro-suite/exastro-it-automation/issues/2053), [#2039](https://github.com/exastro-suite/exastro-it-automation/issues/2039), [#1691](https://github.com/exastro-suite/exastro-it-automation/issues/1691), [#1681](https://github.com/exastro-suite/exastro-it-automation/issues/1681), [#1647](https://github.com/exastro-suite/exastro-it-automation/issues/1647), [#1644](https://github.com/exastro-suite/exastro-it-automation/issues/1644), [#1635](https://github.com/exastro-suite/exastro-it-automation/issues/1635), [#1632](https://github.com/exastro-suite/exastro-it-automation/issues/1632), [#1624](https://github.com/exastro-suite/exastro-it-automation/issues/1624)]）
+親子関係のあるメニューグループのインポート時のシステムエラーや、パラメータシートの初期化・編集時の値消失、Excel出力時のシステムエラーや表示崩れ、パンくずリストの文字被り、カラムグループとカラム名の重複による表示不具合、プルダウン選択項目の未選択対応、履歴ダウンロードやフィルタ条件出力の不備など、多数のデータ連携・表示・出力に関する不具合を修正しました。
+
+### バックヤード・API・パフォーマンス・プロセス管理関連の不具合修正（[#2069](https://github.com/exastro-suite/exastro-it-automation/issues/2069), [#2048](https://github.com/exastro-suite/exastro-it-automation/issues/2048), [#2007](https://github.com/exastro-suite/exastro-it-automation/issues/2007), [#2010](https://github.com/exastro-suite/exastro-it-automation/issues/2010), [#1813](https://github.com/exastro-suite/exastro-it-automation/issues/1813), [#1591](https://github.com/exastro-suite/exastro-it-automation/issues/1591), [#1574](https://github.com/exastro-suite/exastro-it-automation/issues/1574), [#1707](https://github.com/exastro-suite/exastro-it-automation/issues/1707), [#1698](https://github.com/exastro-suite/exastro-it-automation/issues/1698)]）
+バックヤード状態取得APIの返却値見直しや、パラメータシート編集時の初期化不備、メニューインポート中の他バックヤードログ出力、ワークスペース削除時のプロセスKILL方法改善、作業管理や状態確認メニューのパフォーマンス改善、ita-by-ansible-legacy-vars-listupの性能改善、バージョンアップ対応、Poetryによるライブラリ管理など、運用基盤やパフォーマンス・安定性に関わる不具合を修正しました。
+
+### UI・多言語・エラーメッセージ・暗号化・その他の不具合修正（[#2061](https://github.com/exastro-suite/exastro-it-automation/issues/2061), [#2051](https://github.com/exastro-suite/exastro-it-automation/issues/2051), [#1907](https://github.com/exastro-suite/exastro-it-automation/issues/1907), [#1925](https://github.com/exastro-suite/exastro-it-automation/issues/1925), [#1893](https://github.com/exastro-suite/exastro-it-automation/issues/1893), [#1913](https://github.com/exastro-suite/exastro-it-automation/issues/1913), [#1865](https://github.com/exastro-suite/exastro-it-automation/issues/1865), [#1866](https://github.com/exastro-suite/exastro-it-automation/issues/1866), [#1664](https://github.com/exastro-suite/exastro-it-automation/issues/1664), [#1660](https://github.com/exastro-suite/exastro-it-automation/issues/1660), [#1598](https://github.com/exastro-suite/exastro-it-automation/issues/1598)]）
+言語切替時の表示不備や、テーブル見出しの英語化、javascript読み込み改善、編集時やバリデーションエラーのメッセージ改善、エージェント情報の暗号化、datetime import方法の統一、Conductor予約実行やバリデーションエラー、Ansible作業管理の履歴表示不備、Movement一覧の初期表示内容不備、非推奨include利用の将来的な不具合対応など、UIや多言語・エラーメッセージ・セキュリティに関する多くの不具合を修正しました。
+
+## 改善
+
+### MySQL GPGキー有効期限切れ対応・セキュリティ強化（[#2053](https://github.com/exastro-suite/exastro-it-automation/issues/2053), [#1411](https://github.com/exastro-suite/exastro-it-automation/issues/1411)]）
+MySQLのGPGキー有効期限切れへの対応や、OASE機能のエージェント情報暗号化など、システム全体のセキュリティ強化を実施しました。これにより、運用の安全性と信頼性が向上しています。
+

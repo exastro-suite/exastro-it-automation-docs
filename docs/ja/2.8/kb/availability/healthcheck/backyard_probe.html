@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../../ja/2.8/kb/availability/healthcheck/backyard_probe.html" selected>current</option>
-              <option value="../../../../../ja/2.8/kb/availability/healthcheck/backyard_probe.html" selected>2.8(current)</option>
+              <option value="../../../../../ja/2.9/kb/availability/healthcheck/backyard_probe.html">current</option>
+              <option value="../../../../../ja/2.9/kb/availability/healthcheck/backyard_probe.html">2.9(current)</option>
+              <option value="../../../../../ja/2.8/kb/availability/healthcheck/backyard_probe.html" selected>2.8</option>
               <option value="../../../../../ja/2.7/kb/availability/healthcheck/backyard_probe.html">2.7</option>
               <option value="../../../../../ja/2.6/kb/availability/healthcheck/backyard_probe.html">2.6</option>
               <option value="../../../../../ja/2.5/kb/availability/healthcheck/backyard_probe.html">2.5</option>
@@ -261,7 +262,7 @@
 </pre></div>
 </div>
 <p><strong>2. ログから Backyard job has started のタイムスタンプを取得する</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>logs<span class="w"> </span>&lt;pod名&gt;<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;Backyard job has started&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>logs<span class="w"> </span>&lt;pod名&gt;<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">"Backyard job has started"</span>
 </pre></div>
 </div>
 <p>実行例（出力イメージ）:</p>
@@ -322,8 +323,8 @@
 <span class="w"> </span>   command:
 <span class="w"> </span>     - sh
 <span class="w"> </span>     - -c
-<span class="gd">-     - test &quot;$(cat /tmp/liveness 2&gt;/dev/null || echo 0)&quot; -gt &quot;$(($(date +%s) - 86400))&quot;</span>
-<span class="gi">+     - test &quot;$(cat /tmp/liveness 2&gt;/dev/null || echo 0)&quot; -gt &quot;$(($(date +%s) - 900))&quot;</span>
+<span class="gd">-     - test "$(cat /tmp/liveness 2&gt;/dev/null || echo 0)" -gt "$(($(date +%s) - 86400))"</span>
+<span class="gi">+     - test "$(cat /tmp/liveness 2&gt;/dev/null || echo 0)" -gt "$(($(date +%s) - 900))"</span>
 <span class="gd">- timeoutSeconds: 30</span>
 <span class="gi">+ timeoutSeconds: 10</span>
 <span class="gd">- periodSeconds: 10</span>
@@ -336,8 +337,8 @@ livenessProbe:
 <span class="w"> </span>   command:
 <span class="w"> </span>     - sh
 <span class="w"> </span>     - -c
-<span class="gd">-     - test &quot;$(cat /tmp/liveness 2&gt;/dev/null || echo 0)&quot; -gt &quot;$(($(date +%s) - 86400))&quot;</span>
-<span class="gi">+     - test &quot;$(cat /tmp/liveness 2&gt;/dev/null || echo 0)&quot; -gt &quot;$(($(date +%s) - 900))&quot;</span>
+<span class="gd">-     - test "$(cat /tmp/liveness 2&gt;/dev/null || echo 0)" -gt "$(($(date +%s) - 86400))"</span>
+<span class="gi">+     - test "$(cat /tmp/liveness 2&gt;/dev/null || echo 0)" -gt "$(($(date +%s) - 900))"</span>
 <span class="gd">- timeoutSeconds: 30</span>
 <span class="gi">+ timeoutSeconds: 10</span>
 <span class="gd">- periodSeconds: 10</span>

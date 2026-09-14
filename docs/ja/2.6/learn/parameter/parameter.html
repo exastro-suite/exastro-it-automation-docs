@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/learn/parameter/parameter.html">current</option>
-              <option value="../../../../ja/2.8/learn/parameter/parameter.html">2.8(current)</option>
+              <option value="../../../../ja/2.9/learn/parameter/parameter.html">current</option>
+              <option value="../../../../ja/2.9/learn/parameter/parameter.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/learn/parameter/parameter.html">2.8</option>
               <option value="../../../../ja/2.7/learn/parameter/parameter.html">2.7</option>
               <option value="../../../../ja/2.6/learn/parameter/parameter.html" selected>2.6</option>
               <option value="../../../../ja/2.5/learn/parameter/parameter.html">2.5</option>
@@ -387,10 +388,10 @@
 <div class="code-block-caption"><span class="caption-number">リスト 478 </span><span class="caption-text">System_group_add.yml</span><a class="headerlink" href="#id33" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>name:<span class="w"> </span>Add<span class="w"> </span>group
 <span class="w">  </span>group:
-<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item }}&quot;</span>
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">"{{ item }}"</span>
 <span class="w">    </span>state:<span class="w"> </span>present
 <span class="w">  </span>with_items:
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ ITA_DFLT_Groups }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ ITA_DFLT_Groups }}"</span>
 </pre></div>
 </div>
 </div>
@@ -398,12 +399,12 @@
 <div class="code-block-caption"><span class="caption-number">リスト 479 </span><span class="caption-text">System_user_add.yml</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>name:<span class="w"> </span>Add<span class="w"> </span>user
 <span class="w">  </span>user:
-<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
-<span class="w">    </span>group:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">"{{ item.0 }}"</span>
+<span class="w">    </span>group:<span class="w"> </span><span class="s2">"{{ item.1 }}"</span>
 <span class="w">    </span>state:<span class="w"> </span>present
 <span class="w">  </span>with_together:
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ ITA_DFLT_User_Names }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ ITA_DFLT_User_Group_Names }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ ITA_DFLT_User_Names }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ ITA_DFLT_User_Group_Names }}"</span>
 </pre></div>
 </div>
 </div>
@@ -678,7 +679,7 @@
 <div class="literal-block-wrapper docutils container" id="id40">
 <div class="code-block-caption"><span class="caption-number">リスト 480 </span><span class="caption-text">ヘッダーセクション</span><a class="headerlink" href="#id40" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>hosts:<span class="w"> </span>all
-<span class="w">  </span>remote_user:<span class="w"> </span><span class="s2">&quot;{{ __loginuser__ }}&quot;</span>
+<span class="w">  </span>remote_user:<span class="w"> </span><span class="s2">"{{ __loginuser__ }}"</span>
 <span class="w">  </span>gather_facts:<span class="w"> </span>no
 <span class="w">  </span>become:<span class="w"> </span>yes
 </pre></div>
@@ -701,10 +702,10 @@
 <div class="code-block-caption"><span class="caption-number">リスト 481 </span><span class="caption-text">System_group_add.yml</span><a class="headerlink" href="#id41" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>name:<span class="w"> </span>Add<span class="w"> </span>group
 <span class="w">  </span>group:
-<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item }}&quot;</span>
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">"{{ item }}"</span>
 <span class="w">    </span>state:<span class="w"> </span>present
 <span class="w">  </span>with_items:
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ ITA_DFLT_Groups }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ ITA_DFLT_Groups }}"</span>
 </pre></div>
 </div>
 </div>
@@ -712,12 +713,12 @@
 <div class="code-block-caption"><span class="caption-number">リスト 482 </span><span class="caption-text">System_user_add.yml</span><a class="headerlink" href="#id42" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>name:<span class="w"> </span>Add<span class="w"> </span>user
 <span class="w">  </span>user:
-<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
-<span class="w">    </span>group:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">"{{ item.0 }}"</span>
+<span class="w">    </span>group:<span class="w"> </span><span class="s2">"{{ item.1 }}"</span>
 <span class="w">    </span>state:<span class="w"> </span>present
 <span class="w">  </span>with_together:
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ ITA_DFLT_User_Names }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ ITA_DFLT_User_Group_Names }}&quot;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ ITA_DFLT_User_Names }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ ITA_DFLT_User_Group_Names }}"</span>
 </pre></div>
 </div>
 </div>
@@ -1194,7 +1195,7 @@
 <div class="literal-block-wrapper docutils container" id="id51">
 <div class="code-block-caption"><span class="caption-number">リスト 483 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id51" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># グループ一覧の取得</span>
-cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;test01|test02&quot;</span>
+cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"test01|test02"</span>
 </pre></div>
 </div>
 </div>
@@ -1210,7 +1211,7 @@ cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"
 <div class="literal-block-wrapper docutils container" id="id53">
 <div class="code-block-caption"><span class="caption-number">リスト 485 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id53" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ユーザー一覧の取得</span>
-cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;test&quot;</span>
+cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"test"</span>
 </pre></div>
 </div>
 </div>
@@ -1246,7 +1247,7 @@ cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w
 <div class="literal-block-wrapper docutils container" id="id55">
 <div class="code-block-caption"><span class="caption-number">リスト 487 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id55" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># グループ一覧の取得</span>
-cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;test01|test02&quot;</span>
+cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"test01|test02"</span>
 </pre></div>
 </div>
 </div>
@@ -1263,7 +1264,7 @@ test02
 <div class="literal-block-wrapper docutils container" id="id57">
 <div class="code-block-caption"><span class="caption-number">リスト 489 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id57" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ユーザー一覧の取得</span>
-cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;test&quot;</span>
+cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"test"</span>
 </pre></div>
 </div>
 </div>
@@ -1723,7 +1724,7 @@ testuser04
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

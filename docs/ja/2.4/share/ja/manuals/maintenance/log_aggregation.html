@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../../../_static/documentation_options.js?v=c033477b"></script>
@@ -70,8 +70,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../../../ja/2.8/share/ja/manuals/maintenance/log_aggregation.html">current</option>
-              <option value="../../../../../../ja/2.8/share/ja/manuals/maintenance/log_aggregation.html">2.8(current)</option>
+              <option value="../../../../../../ja/2.9/share/ja/manuals/maintenance/log_aggregation.html">current</option>
+              <option value="../../../../../../ja/2.9/share/ja/manuals/maintenance/log_aggregation.html">2.9(current)</option>
+              <option value="../../../../../../ja/2.8/share/ja/manuals/maintenance/log_aggregation.html">2.8</option>
               <option value="../../../../../../ja/2.7/share/ja/manuals/maintenance/log_aggregation.html">2.7</option>
               <option value="../../../../../../ja/2.6/share/ja/manuals/maintenance/log_aggregation.html">2.6</option>
               <option value="../../../../../../ja/2.5/share/ja/manuals/maintenance/log_aggregation.html">2.5</option>
@@ -242,11 +243,11 @@
 <span class="linenos"> 4</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pvc-exastro-logs</span>
 <span class="linenos"> 5</span><span class="nt">spec</span><span class="p">:</span>
 <span class="linenos"> 6</span><span class="w">  </span><span class="nt">accessModes</span><span class="p">:</span>
-<span class="linenos"> 7</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;ReadWriteMany&quot;</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"ReadWriteMany"</span>
 <span class="linenos"> 8</span><span class="w">  </span><span class="nt">resources</span><span class="p">:</span>
 <span class="linenos"> 9</span><span class="w">    </span><span class="nt">requests</span><span class="p">:</span>
-<span class="linenos">10</span><span class="w">      </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10Gi&quot;</span>
-<span class="linenos">11</span><span class="w">  </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">10</span><span class="w">      </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">"10Gi"</span>
+<span class="linenos">11</span><span class="w">  </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">12</span><span class="w">  </span><span class="c1"># volumeName: pv-exastro-logs</span>
 <span class="linenos">13</span><span class="nn">---</span>
 <span class="linenos">14</span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
@@ -259,7 +260,7 @@
 <span class="linenos">21</span><span class="w">  </span><span class="nt">accessModes</span><span class="p">:</span>
 <span class="linenos">22</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteMany</span>
 <span class="linenos">23</span><span class="w">  </span><span class="nt">persistentVolumeReclaimPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Retain</span>
-<span class="linenos">24</span><span class="w">  </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">24</span><span class="w">  </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">25</span><span class="w">  </span><span class="nt">nfs</span><span class="p">:</span>
 <span class="linenos">26</span><span class="w">    </span><span class="nt">server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.172.1</span>
 <span class="linenos">27</span><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/PersistentVolume/ha-conf-k8s/exastro-logs</span>
@@ -305,18 +306,18 @@ helm<span class="w"> </span>repo<span class="w"> </span>update
 <span class="linenos">  2</span><span class="gi">+++ /home/runner/work/exastro-it-automation-docs/exastro-it-automation-docs/workspace/src/share/ja/manuals/maintenance/literal_includes/fluentbit-values.yaml</span>
 <span class="linenos">  3</span><span class="gu">@@ -298,9 +298,12 @@</span>
 <span class="linenos">  4</span><span class="w"> </span>
-<span class="linenos">  5</span><span class="w"> </span>priorityClassName: &quot;&quot;
+<span class="linenos">  5</span><span class="w"> </span>priorityClassName: ""
 <span class="linenos">  6</span><span class="w"> </span>
 <span class="linenos">  7</span><span class="gd">-env: []</span>
 <span class="linenos">  8</span><span class="gi">+# env: []</span>
 <span class="linenos">  9</span><span class="w"> </span>#  - name: FOO
-<span class="linenos"> 10</span><span class="w"> </span>#    value: &quot;bar&quot;
+<span class="linenos"> 10</span><span class="w"> </span>#    value: "bar"
 <span class="linenos"> 11</span><span class="gi">+env:</span>
 <span class="linenos"> 12</span><span class="gi">+  - name: TZ</span>
-<span class="linenos"> 13</span><span class="gi">+    value: &quot;Asia/Tokyo&quot;</span>
+<span class="linenos"> 13</span><span class="gi">+    value: "Asia/Tokyo"</span>
 <span class="linenos"> 14</span><span class="w"> </span>
-<span class="linenos"> 15</span><span class="w"> </span># The envWithTpl array below has the same usage as &quot;env&quot;, but is using the tpl function to support templatable string.
-<span class="linenos"> 16</span><span class="w"> </span># This can be useful when you want to pass dynamic values to the Chart using the helm argument &quot;--set &lt;variable&gt;=&lt;value&gt;&quot;
+<span class="linenos"> 15</span><span class="w"> </span># The envWithTpl array below has the same usage as "env", but is using the tpl function to support templatable string.
+<span class="linenos"> 16</span><span class="w"> </span># This can be useful when you want to pass dynamic values to the Chart using the helm argument "--set &lt;variable&gt;=&lt;value&gt;"
 <span class="linenos"> 17</span><span class="gu">@@ -329,9 +332,14 @@</span>
 <span class="linenos"> 18</span><span class="w"> </span>#     name: tcp
 <span class="linenos"> 19</span><span class="w"> </span>#     nodePort: 30517
@@ -345,7 +346,7 @@ helm<span class="w"> </span>repo<span class="w"> </span>update
 <span class="linenos"> 42</span><span class="gi">+  record_date.lua: |</span>
 <span class="linenos"> 43</span><span class="gi">+    function record_date(tag, timestamp, record)</span>
 <span class="linenos"> 44</span><span class="gi">+            new_record = record</span>
-<span class="linenos"> 45</span><span class="gi">+            new_record[&quot;record_date&quot;] = os.date(&quot;%Y%m%d&quot;,timestamp)</span>
+<span class="linenos"> 45</span><span class="gi">+            new_record["record_date"] = os.date("%Y%m%d",timestamp)</span>
 <span class="linenos"> 46</span><span class="gi">+            return 1, timestamp, new_record</span>
 <span class="linenos"> 47</span><span class="gi">+    end  </span>
 <span class="linenos"> 48</span><span class="w"> </span>
@@ -562,25 +563,25 @@ fluent-bit<span class="w">   </span><span class="m">3</span><span class="w">    
 </div>
 <div class="literal-block-wrapper docutils container" id="id19">
 <div class="code-block-caption"><span class="caption-text">集約したログファイルの内容</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;2024/03/01 16:40:09.098836 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:09 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:09 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;2024/03/01 16:40:10.666816 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:10 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:10 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;2024/03/01 16:40:12.326828 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;2024/03/01 16:40:12.807144 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\&quot; 200 135&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;2024/03/01 16:40:12.836383 INFO (dumm) /app/controllers/internal_common_service_controller.py(153) ### func:internal_settings_system_config_list&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/settings/common HTTP/1.1\&quot; 200 223 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/settings/common HTTP/1.1\&quot; 200 223&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;2024/03/01 16:40:12.858139 INFO (dumm) /app/controllers/internal_plan_service_controller.py(62) ### func:limits_get&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/limits HTTP/1.1\&quot; 200 239 \&quot;-\&quot; \&quot;python-requests/2.31.0\&quot;&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \&quot;GET /internal-api/platform/limits HTTP/1.1\&quot; 200 239&quot;}
-{&quot;stream&quot;:&quot;stdout&quot;,&quot;logtag&quot;:&quot;F&quot;,&quot;record_date&quot;:&quot;20240301&quot;,&quot;log&quot;:&quot;2024/03/01 16:40:15.921191 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting&quot;}
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{"stream":"stdout","logtag":"F","record_date":"20240301","log":"2024/03/01 16:40:09.098836 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting"}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"192.168.172.2 - - [01/Mar/2024:16:40:09 +0900] \"GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\" 200 135 \"-\" \"python-requests/2.31.0\""}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"192.168.172.2 - - [01/Mar/2024:16:40:09 +0900] \"GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\" 200 135"}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"2024/03/01 16:40:10.666816 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting"}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"192.168.172.2 - - [01/Mar/2024:16:40:10 +0900] \"GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\" 200 135 \"-\" \"python-requests/2.31.0\""}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"192.168.172.2 - - [01/Mar/2024:16:40:10 +0900] \"GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\" 200 135"}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"2024/03/01 16:40:12.326828 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting"}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \"GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\" 200 135 \"-\" \"python-requests/2.31.0\""}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \"GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\" 200 135"}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"2024/03/01 16:40:12.807144 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting"}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \"GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\" 200 135 \"-\" \"python-requests/2.31.0\""}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \"GET /internal-api/platform/maintenance-mode-setting HTTP/1.1\" 200 135"}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"2024/03/01 16:40:12.836383 INFO (dumm) /app/controllers/internal_common_service_controller.py(153) ### func:internal_settings_system_config_list"}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \"GET /internal-api/platform/settings/common HTTP/1.1\" 200 223 \"-\" \"python-requests/2.31.0\""}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \"GET /internal-api/platform/settings/common HTTP/1.1\" 200 223"}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"2024/03/01 16:40:12.858139 INFO (dumm) /app/controllers/internal_plan_service_controller.py(62) ### func:limits_get"}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \"GET /internal-api/platform/limits HTTP/1.1\" 200 239 \"-\" \"python-requests/2.31.0\""}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"192.168.172.2 - - [01/Mar/2024:16:40:12 +0900] \"GET /internal-api/platform/limits HTTP/1.1\" 200 239"}
+{"stream":"stdout","logtag":"F","record_date":"20240301","log":"2024/03/01 16:40:15.921191 INFO (dumm) /app/controllers/internal_maintenance_mode_setting_controller.py(37) ### func:internal_get_maintenance_mode_setting"}
 </pre></div>
 </div>
 </div>
@@ -617,7 +618,7 @@ fluent-bit<span class="w">   </span><span class="m">3</span><span class="w">    
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.4/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

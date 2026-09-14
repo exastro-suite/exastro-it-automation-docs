@@ -69,7 +69,7 @@ Ansible作業時のビルドにカスタマイズ工程を追加する例
 既存のイメージを削除
 ^^^^^^^^^^^^^^^^^^^^
 
-| Ansible-CoreでのAnsible作業を一度でも実施してしている場合は、既にイメージが作成されているため予め「 :command:`docker rmi` 」を実施しイメージを削除します。
+| Ansible-CoreでのAnsible作業を一度でも実施している場合は、既にイメージが作成されているため予め「 :command:`docker rmi` 」を実施しイメージを削除します。
 
 
 .. code-block:: console

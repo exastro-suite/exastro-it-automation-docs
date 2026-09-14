@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/manuals/oase/oase_management.html">current</option>
-              <option value="../../../../ja/2.8/manuals/oase/oase_management.html">2.8(current)</option>
+              <option value="../../../../ja/2.9/manuals/oase/oase_management.html">current</option>
+              <option value="../../../../ja/2.9/manuals/oase/oase_management.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/manuals/oase/oase_management.html">2.8</option>
               <option value="../../../../ja/2.7/manuals/oase/oase_management.html" selected>2.7</option>
               <option value="../../../../ja/2.6/manuals/oase/oase_management.html">2.6</option>
               <option value="../../../../ja/2.5/manuals/oase/oase_management.html">2.5</option>
@@ -1261,59 +1262,59 @@
 <div class="line">Azure RESET-API <a class="reference external" href="https://learn.microsoft.com/ja-jp/rest/api/monitor/metrics/list?view=rest-monitor-2023-10-01&amp;tabs=HTTP">Get Metric for data</a> のSample Responseの一部を利用して説明します。</div>
 </div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span><span class="w">  </span><span class="nt">&quot;cost&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">598</span><span class="p">,</span>
-<span class="linenos"> 3</span><span class="w">  </span><span class="nt">&quot;timespan&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-04-20T09:00:00Z/2021-04-20T14:00:00Z&quot;</span><span class="p">,</span>
-<span class="linenos"> 4</span><span class="w">  </span><span class="nt">&quot;interval&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PT1H&quot;</span><span class="p">,</span>
-<span class="linenos"> 5</span><span class="w">  </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos"> 2</span><span class="w">  </span><span class="nt">"cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">598</span><span class="p">,</span>
+<span class="linenos"> 3</span><span class="w">  </span><span class="nt">"timespan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-04-20T09:00:00Z/2021-04-20T14:00:00Z"</span><span class="p">,</span>
+<span class="linenos"> 4</span><span class="w">  </span><span class="nt">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT1H"</span><span class="p">,</span>
+<span class="linenos"> 5</span><span class="w">  </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="linenos"> 6</span><span class="w">    </span><span class="p">{</span>
-<span class="linenos"> 7</span><span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/subscriptions/1f3･･･c38/･･･/metrics/BlobCount&quot;</span><span class="p">,</span>
-<span class="linenos"> 8</span><span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Insights/metrics&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">10</span><span class="w">        </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BlobCount&quot;</span><span class="p">,</span>
-<span class="linenos">11</span><span class="w">        </span><span class="nt">&quot;localizedValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Blob Count&quot;</span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/subscriptions/1f3･･･c38/･･･/metrics/BlobCount"</span><span class="p">,</span>
+<span class="linenos"> 8</span><span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Microsoft.Insights/metrics"</span><span class="p">,</span>
+<span class="linenos"> 9</span><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">10</span><span class="w">        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BlobCount"</span><span class="p">,</span>
+<span class="linenos">11</span><span class="w">        </span><span class="nt">"localizedValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Blob Count"</span>
 <span class="linenos">12</span><span class="w">      </span><span class="p">},</span>
-<span class="linenos">13</span><span class="w">      </span><span class="nt">&quot;displayDescription&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The number of blob objects stored in the storage account.&quot;</span><span class="p">,</span>
-<span class="linenos">14</span><span class="w">      </span><span class="nt">&quot;unit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Count&quot;</span><span class="p">,</span>
-<span class="linenos">15</span><span class="w">      </span><span class="nt">&quot;timeseries&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos">13</span><span class="w">      </span><span class="nt">"displayDescription"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The number of blob objects stored in the storage account."</span><span class="p">,</span>
+<span class="linenos">14</span><span class="w">      </span><span class="nt">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Count"</span><span class="p">,</span>
+<span class="linenos">15</span><span class="w">      </span><span class="nt">"timeseries"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="linenos">16</span><span class="w">        </span><span class="p">{</span>
-<span class="linenos">17</span><span class="w">          </span><span class="nt">&quot;metadatavalues&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos">17</span><span class="w">          </span><span class="nt">"metadatavalues"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="linenos">18</span><span class="w">            </span><span class="p">{</span>
-<span class="linenos">19</span><span class="w">              </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">20</span><span class="w">                </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tier&quot;</span><span class="p">,</span>
-<span class="linenos">21</span><span class="w">                </span><span class="nt">&quot;localizedValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tier&quot;</span>
+<span class="linenos">19</span><span class="w">              </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">20</span><span class="w">                </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tier"</span><span class="p">,</span>
+<span class="linenos">21</span><span class="w">                </span><span class="nt">"localizedValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tier"</span>
 <span class="linenos">22</span><span class="w">              </span><span class="p">},</span>
-<span class="linenos">23</span><span class="w">              </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hot&quot;</span>
+<span class="linenos">23</span><span class="w">              </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hot"</span>
 <span class="linenos">24</span><span class="w">            </span><span class="p">}</span>
 <span class="linenos">25</span><span class="w">          </span><span class="p">]</span>
 <span class="linenos">26</span><span class="w">        </span><span class="p">},</span>
 <span class="linenos">27</span><span class="w">        </span><span class="p">{</span>
-<span class="linenos">28</span><span class="w">          </span><span class="nt">&quot;metadatavalues&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos">28</span><span class="w">          </span><span class="nt">"metadatavalues"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="linenos">29</span><span class="w">            </span><span class="p">{</span>
-<span class="linenos">30</span><span class="w">              </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">31</span><span class="w">                </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tier&quot;</span><span class="p">,</span>
-<span class="linenos">32</span><span class="w">                </span><span class="nt">&quot;localizedValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tier&quot;</span>
+<span class="linenos">30</span><span class="w">              </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">31</span><span class="w">                </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tier"</span><span class="p">,</span>
+<span class="linenos">32</span><span class="w">                </span><span class="nt">"localizedValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tier"</span>
 <span class="linenos">33</span><span class="w">              </span><span class="p">},</span>
-<span class="linenos">34</span><span class="w">              </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Standard&quot;</span>
+<span class="linenos">34</span><span class="w">              </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard"</span>
 <span class="linenos">35</span><span class="w">            </span><span class="p">}</span>
 <span class="linenos">36</span><span class="w">          </span><span class="p">]</span>
 <span class="linenos">37</span><span class="w">        </span><span class="p">},</span>
 <span class="linenos">38</span><span class="w">        </span><span class="p">{</span>
-<span class="linenos">39</span><span class="w">          </span><span class="nt">&quot;metadatavalues&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos">39</span><span class="w">          </span><span class="nt">"metadatavalues"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="linenos">40</span><span class="w">            </span><span class="p">{</span>
-<span class="linenos">41</span><span class="w">              </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">42</span><span class="w">                </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tier&quot;</span><span class="p">,</span>
-<span class="linenos">43</span><span class="w">                </span><span class="nt">&quot;localizedValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tier&quot;</span>
+<span class="linenos">41</span><span class="w">              </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">42</span><span class="w">                </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tier"</span><span class="p">,</span>
+<span class="linenos">43</span><span class="w">                </span><span class="nt">"localizedValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tier"</span>
 <span class="linenos">44</span><span class="w">              </span><span class="p">},</span>
-<span class="linenos">45</span><span class="w">              </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cool&quot;</span>
+<span class="linenos">45</span><span class="w">              </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cool"</span>
 <span class="linenos">46</span><span class="w">            </span><span class="p">}</span>
 <span class="linenos">47</span><span class="w">          </span><span class="p">]</span>
 <span class="linenos">48</span><span class="w">        </span><span class="p">}</span>
 <span class="linenos">49</span><span class="w">      </span><span class="p">],</span>
-<span class="linenos">50</span><span class="w">      </span><span class="nt">&quot;errorCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Success&quot;</span>
+<span class="linenos">50</span><span class="w">      </span><span class="nt">"errorCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Success"</span>
 <span class="linenos">51</span><span class="w">    </span><span class="p">}</span>
 <span class="linenos">52</span><span class="w">  </span><span class="p">],</span>
-<span class="linenos">53</span><span class="w">  </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;microsoft.storage/storageaccounts/blobservices&quot;</span><span class="p">,</span>
-<span class="linenos">54</span><span class="w">  </span><span class="nt">&quot;resourceregion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;westus2&quot;</span>
+<span class="linenos">53</span><span class="w">  </span><span class="nt">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"microsoft.storage/storageaccounts/blobservices"</span><span class="p">,</span>
+<span class="linenos">54</span><span class="w">  </span><span class="nt">"resourceregion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"westus2"</span>
 <span class="linenos">55</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -1342,15 +1343,15 @@
 </div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
 <span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/subscriptions/1f3･･･c38/･･･/metrics/BlobCount&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Insights/metrics&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BlobCount&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;localizedValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Blob Count&quot;</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/subscriptions/1f3･･･c38/･･･/metrics/BlobCount"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Microsoft.Insights/metrics"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BlobCount"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"localizedValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Blob Count"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;displayDescription&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The number of blob objects stored in the storage account.&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;//&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;･･･Sample Responseの14行～49行まで省略･･･&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;errorCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Success&quot;</span>
+<span class="w">    </span><span class="nt">"displayDescription"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The number of blob objects stored in the storage account."</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"//"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"･･･Sample Responseの14行～49行まで省略･･･"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"errorCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Success"</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">]</span>
 </pre></div>
@@ -1372,8 +1373,8 @@
 </div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
 <span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BlobCount&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;localizedValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Blob Count&quot;</span>
+<span class="w">    </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BlobCount"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"localizedValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Blob Count"</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">]</span>
 </pre></div>
@@ -1395,20 +1396,20 @@
 <div class="line">（コード中の <strong class="program">&quot;//&quot; : &quot;xx行の metadatavalues.name&quot;</strong>  はコメントです。実際の結果には含まれません。）</div>
 </div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
-<span class="w">  </span><span class="nt">&quot;//&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;19行の metadatavalues.name&quot;</span>
+<span class="w">  </span><span class="nt">"//"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"19行の metadatavalues.name"</span>
 <span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tier&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;localizedValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tier&quot;</span>
+<span class="w">    </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tier"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"localizedValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tier"</span>
 <span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;//&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;30行の metadatavalues.name&quot;</span>
+<span class="w">  </span><span class="nt">"//"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"30行の metadatavalues.name"</span>
 <span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tier&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;localizedValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tier&quot;</span>
+<span class="w">    </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tier"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"localizedValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tier"</span>
 <span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;//&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;41行の metadatavalues.name&quot;</span>
+<span class="w">  </span><span class="nt">"//"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"41行の metadatavalues.name"</span>
 <span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tier&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;localizedValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tier&quot;</span>
+<span class="w">    </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tier"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"localizedValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tier"</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">]</span>
 </pre></div>
@@ -1460,29 +1461,29 @@
 </div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">[</span>
 <span class="linenos"> 2</span><span class="w">  </span><span class="p">{</span>
-<span class="linenos"> 3</span><span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/subscriptions/1f3･･･c38/･･･/metrics/BlobCount&quot;</span><span class="p">,</span>
-<span class="linenos"> 4</span><span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Insights/metrics&quot;</span><span class="p">,</span>
-<span class="linenos"> 5</span><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BlobCount&quot;</span><span class="p">,</span>
-<span class="linenos"> 7</span><span class="w">      </span><span class="nt">&quot;localizedValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Blob Count&quot;</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/subscriptions/1f3･･･c38/･･･/metrics/BlobCount"</span><span class="p">,</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Microsoft.Insights/metrics"</span><span class="p">,</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 6</span><span class="w">      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BlobCount"</span><span class="p">,</span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="nt">"localizedValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Blob Count"</span>
 <span class="linenos"> 8</span><span class="w">    </span><span class="p">},</span>
-<span class="linenos"> 9</span><span class="w">    </span><span class="nt">&quot;displayDescription&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The number of blob objects stored in the storage account.&quot;</span><span class="p">,</span>
-<span class="linenos">10</span><span class="w">    </span><span class="nt">&quot;unit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Count&quot;</span><span class="p">,</span>
-<span class="linenos">11</span><span class="w">    </span><span class="nt">&quot;timeseries&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nt">"displayDescription"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The number of blob objects stored in the storage account."</span><span class="p">,</span>
+<span class="linenos">10</span><span class="w">    </span><span class="nt">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Count"</span><span class="p">,</span>
+<span class="linenos">11</span><span class="w">    </span><span class="nt">"timeseries"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="linenos">12</span><span class="w">      </span><span class="p">{</span>
-<span class="linenos">13</span><span class="w">        </span><span class="nt">&quot;metadatavalues&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos">13</span><span class="w">        </span><span class="nt">"metadatavalues"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="linenos">14</span><span class="w">          </span><span class="p">{</span>
-<span class="linenos">15</span><span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">16</span><span class="w">              </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tier&quot;</span><span class="p">,</span>
-<span class="linenos">17</span><span class="w">              </span><span class="nt">&quot;localizedValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tier&quot;</span>
+<span class="linenos">15</span><span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">16</span><span class="w">              </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tier"</span><span class="p">,</span>
+<span class="linenos">17</span><span class="w">              </span><span class="nt">"localizedValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tier"</span>
 <span class="linenos">18</span><span class="w">            </span><span class="p">},</span>
-<span class="linenos">19</span><span class="w">            </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hot&quot;</span>
+<span class="linenos">19</span><span class="w">            </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hot"</span>
 <span class="linenos">20</span><span class="w">          </span><span class="p">}</span>
 <span class="linenos">21</span><span class="w">        </span><span class="p">]</span>
 <span class="linenos">22</span><span class="w">      </span><span class="p">},</span>
-<span class="linenos">23</span><span class="w">      </span><span class="nt">&quot;//&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;･･･（metadatavaluesの繰り返しなので省略）･･･&quot;</span>
+<span class="linenos">23</span><span class="w">      </span><span class="nt">"//"</span><span class="p">:</span><span class="w"> </span><span class="s2">"･･･（metadatavaluesの繰り返しなので省略）･･･"</span>
 <span class="linenos">24</span><span class="w">    </span><span class="p">],</span>
-<span class="linenos">25</span><span class="w">    </span><span class="nt">&quot;errorCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Success&quot;</span>
+<span class="linenos">25</span><span class="w">    </span><span class="nt">"errorCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Success"</span>
 <span class="linenos">26</span><span class="w">  </span><span class="p">}</span>
 <span class="linenos">27</span><span class="p">]</span>
 </pre></div>
@@ -1583,8 +1584,8 @@
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
 --url<span class="w"> </span>http://&lt;ZabbixのIP<span class="w"> </span>Address<span class="w"> </span>か<span class="w"> </span>Domain&gt;/zabbix/api_jsonrpc.php<span class="w"> </span><span class="se">\</span>
---header<span class="w"> </span><span class="s1">&#39;content-type: application/json-rpc&#39;</span><span class="w"> </span><span class="se">\</span>
---data<span class="w"> </span><span class="s2">&quot;{\&quot;jsonrpc\&quot;: \&quot;2.0\&quot;,\&quot;method\&quot;: \&quot;problem.get\&quot;,\&quot;id\&quot;: 1,\&quot;params\&quot;: {},\&quot;auth\&quot;: \&quot;&lt;Zabbix APIトークン&gt;&quot;</span><span class="o">}</span><span class="s2">&quot;</span>
+--header<span class="w"> </span><span class="s1">'content-type: application/json-rpc'</span><span class="w"> </span><span class="se">\</span>
+--data<span class="w"> </span><span class="s2">"{\"jsonrpc\": \"2.0\",\"method\": \"problem.get\",\"id\": 1,\"params\": {},\"auth\": \"&lt;Zabbix APIトークン&gt;"</span><span class="o">}</span><span class="s2">"</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -1594,29 +1595,29 @@
 <div class="line">上記cURLコマンドで、下記の様なレスポンスが返却されます。</div>
 </div>
 <div class="highlight-json notranslate" id="oase-agent-zabbix-responss"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span><span class="w">   </span><span class="nt">&quot;jsonrpc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
-<span class="linenos"> 3</span><span class="w">   </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos"> 2</span><span class="w">   </span><span class="nt">"jsonrpc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span>
+<span class="linenos"> 3</span><span class="w">   </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="linenos"> 4</span><span class="w">       </span><span class="p">{</span>
-<span class="linenos"> 5</span><span class="w">           </span><span class="nt">&quot;eventid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;89&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span><span class="w">           </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
-<span class="linenos"> 7</span><span class="w">           </span><span class="nt">&quot;object&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
-<span class="linenos"> 8</span><span class="w">           </span><span class="nt">&quot;objectid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;16046&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span><span class="w">           </span><span class="nt">&quot;clock&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1709636653&quot;</span><span class="p">,</span>
-<span class="linenos">10</span><span class="w">           </span><span class="nt">&quot;ns&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;906955445&quot;</span><span class="p">,</span>
-<span class="linenos">11</span><span class="w">           </span><span class="nt">&quot;r_eventid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
-<span class="linenos">12</span><span class="w">           </span><span class="nt">&quot;r_clock&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
-<span class="linenos">13</span><span class="w">           </span><span class="nt">&quot;r_ns&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
-<span class="linenos">14</span><span class="w">           </span><span class="nt">&quot;correlationid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
-<span class="linenos">15</span><span class="w">           </span><span class="nt">&quot;userid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
-<span class="linenos">16</span><span class="w">           </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;High CPU utilization (over 90% for 5m)&quot;</span><span class="p">,</span>
-<span class="linenos">17</span><span class="w">           </span><span class="nt">&quot;acknowledged&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
-<span class="linenos">18</span><span class="w">           </span><span class="nt">&quot;severity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
-<span class="linenos">19</span><span class="w">           </span><span class="nt">&quot;opdata&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Current utilization: 100 %&quot;</span><span class="p">,</span>
-<span class="linenos">20</span><span class="w">           </span><span class="nt">&quot;suppressed&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
-<span class="linenos">21</span><span class="w">           </span><span class="nt">&quot;urls&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="linenos"> 5</span><span class="w">           </span><span class="nt">"eventid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"89"</span><span class="p">,</span>
+<span class="linenos"> 6</span><span class="w">           </span><span class="nt">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+<span class="linenos"> 7</span><span class="w">           </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+<span class="linenos"> 8</span><span class="w">           </span><span class="nt">"objectid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16046"</span><span class="p">,</span>
+<span class="linenos"> 9</span><span class="w">           </span><span class="nt">"clock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1709636653"</span><span class="p">,</span>
+<span class="linenos">10</span><span class="w">           </span><span class="nt">"ns"</span><span class="p">:</span><span class="w"> </span><span class="s2">"906955445"</span><span class="p">,</span>
+<span class="linenos">11</span><span class="w">           </span><span class="nt">"r_eventid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+<span class="linenos">12</span><span class="w">           </span><span class="nt">"r_clock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+<span class="linenos">13</span><span class="w">           </span><span class="nt">"r_ns"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+<span class="linenos">14</span><span class="w">           </span><span class="nt">"correlationid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+<span class="linenos">15</span><span class="w">           </span><span class="nt">"userid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+<span class="linenos">16</span><span class="w">           </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"High CPU utilization (over 90% for 5m)"</span><span class="p">,</span>
+<span class="linenos">17</span><span class="w">           </span><span class="nt">"acknowledged"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+<span class="linenos">18</span><span class="w">           </span><span class="nt">"severity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span>
+<span class="linenos">19</span><span class="w">           </span><span class="nt">"opdata"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Current utilization: 100 %"</span><span class="p">,</span>
+<span class="linenos">20</span><span class="w">           </span><span class="nt">"suppressed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+<span class="linenos">21</span><span class="w">           </span><span class="nt">"urls"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
 <span class="linenos">22</span><span class="w">       </span><span class="p">}</span>
 <span class="linenos">23</span><span class="w">   </span><span class="p">],</span>
-<span class="linenos">24</span><span class="w">   </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="linenos">24</span><span class="w">   </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
 <span class="linenos">25</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -1666,20 +1667,20 @@
 </td>
 </tr>
 <tr class="row-even"><td><p>リクエストヘッダー</p></td>
-<td><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;content-type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;application/json-rpc&quot;</span><span class="w"> </span><span class="p">}</span>
+<td><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"> </span><span class="nt">"content-type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json-rpc"</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>パラメータ</p></td>
 <td><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;jsonrpc&quot;</span><span class="p">:</span><span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="s2">&quot;problem.get&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;params&quot;</span><span class="p">:{</span>
-<span class="w">      </span><span class="nt">&quot;time_from&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{ EXASTRO_LAST_FETCHED_TIMESTAMP }}&quot;</span>
+<span class="w">  </span><span class="nt">"jsonrpc"</span><span class="p">:</span><span class="s2">"2.0"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"method"</span><span class="p">:</span><span class="s2">"problem.get"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"params"</span><span class="p">:{</span>
+<span class="w">      </span><span class="nt">"time_from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{ EXASTRO_LAST_FETCHED_TIMESTAMP }}"</span>
 <span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;auth&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;Zabbix APIトークン&gt;&quot;</span>
+<span class="w">  </span><span class="nt">"auth"</span><span class="p">:</span><span class="s2">"&lt;Zabbix APIトークン&gt;"</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1756,17 +1757,17 @@
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
 --url<span class="w"> </span>http://&lt;ZabbixのIP<span class="w"> </span>Address<span class="w"> </span>か<span class="w"> </span>Domain&gt;/zabbix/api_jsonrpc.php<span class="w"> </span><span class="se">\</span>
---header<span class="w"> </span><span class="s2">&quot;Content-Type: application/json-rpc&quot;</span><span class="w"> </span><span class="se">\</span>
---data<span class="w"> </span><span class="s2">&quot;{\&quot;auth\&quot;:null,\&quot;method\&quot;:\&quot;user.login\&quot;,\&quot;id\&quot;:1,\&quot;params\&quot;:{\&quot;user\&quot;:\&quot;&lt;ユーザー名&gt;\&quot;,\&quot;password\&quot;:\&quot;&lt;パスワード&gt;\&quot;},\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;}&quot;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s2">"Content-Type: application/json-rpc"</span><span class="w"> </span><span class="se">\</span>
+--data<span class="w"> </span><span class="s2">"{\"auth\":null,\"method\":\"user.login\",\"id\":1,\"params\":{\"user\":\"&lt;ユーザー名&gt;\",\"password\":\"&lt;パスワード&gt;\"},\"jsonrpc\":\"2.0\"}"</span><span class="w"> </span><span class="se">\</span>
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line">上記cURLコマンドで、下記の様なレスポンスが返却されます。</div>
 </div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">{</span>
-<span class="linenos">2</span><span class="w">    </span><span class="nt">&quot;jsonrpc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
-<span class="linenos">3</span><span class="w">     </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;Zabbix APIトークン&gt;&quot;</span><span class="p">,</span>
-<span class="linenos">4</span><span class="w">     </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">"jsonrpc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span>
+<span class="linenos">3</span><span class="w">     </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;Zabbix APIトークン&gt;"</span><span class="p">,</span>
+<span class="linenos">4</span><span class="w">     </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
 <span class="linenos">5</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -1797,9 +1798,9 @@
 <div class="line">下記は、<em class="dfn">Grafana</em> から、アラート（alerts）を取得するcURLコマンドの例です。</div>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
---url<span class="w"> </span><span class="s1">&#39;http://&lt;GrafanaのIP addres か Domain&gt;:3000/api/prometheus/grafana/api/v1/alerts&#39;</span><span class="w"> </span><span class="se">\</span>
---header<span class="w"> </span><span class="s1">&#39;authorization: Bearer &lt;認証トークン&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
---header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span>
+--url<span class="w"> </span><span class="s1">'http://&lt;GrafanaのIP addres か Domain&gt;:3000/api/prometheus/grafana/api/v1/alerts'</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">'authorization: Bearer &lt;認証トークン&gt;'</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">'Content-Type: application/json'</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -1809,20 +1810,20 @@
 <div class="line">上記cURLコマンドで、下記の様なレスポンスが返却されます。</div>
 </div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos"> 3</span><span class="w">        </span><span class="nt">&quot;alerts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 3</span><span class="w">        </span><span class="nt">"alerts"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="linenos"> 4</span><span class="w">            </span><span class="p">{</span>
-<span class="linenos"> 5</span><span class="w">                </span><span class="nt">&quot;activeAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2018-07-04T20:27:12.60602144+02:00&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span><span class="w">                </span><span class="nt">&quot;annotations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
-<span class="linenos"> 7</span><span class="w">                </span><span class="nt">&quot;labels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos"> 8</span><span class="w">                    </span><span class="nt">&quot;alertname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my-alert&quot;</span>
+<span class="linenos"> 5</span><span class="w">                </span><span class="nt">"activeAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-07-04T20:27:12.60602144+02:00"</span><span class="p">,</span>
+<span class="linenos"> 6</span><span class="w">                </span><span class="nt">"annotations"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="linenos"> 7</span><span class="w">                </span><span class="nt">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 8</span><span class="w">                    </span><span class="nt">"alertname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-alert"</span>
 <span class="linenos"> 9</span><span class="w">                </span><span class="p">},</span>
-<span class="linenos">10</span><span class="w">                </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;firing&quot;</span><span class="p">,</span>
-<span class="linenos">11</span><span class="w">                </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1e+00&quot;</span>
+<span class="linenos">10</span><span class="w">                </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"firing"</span><span class="p">,</span>
+<span class="linenos">11</span><span class="w">                </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1e+00"</span>
 <span class="linenos">12</span><span class="w">            </span><span class="p">}</span>
 <span class="linenos">13</span><span class="w">        </span><span class="p">]</span>
 <span class="linenos">14</span><span class="w">    </span><span class="p">},</span>
-<span class="linenos">15</span><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span>
+<span class="linenos">15</span><span class="w">    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span>
 <span class="linenos">16</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -1872,7 +1873,7 @@
 </td>
 </tr>
 <tr class="row-even"><td><p>リクエストヘッダー</p></td>
-<td><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;Content-Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;application/json&quot;</span><span class="w"> </span><span class="p">}</span>
+<td><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"> </span><span class="nt">"Content-Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 </td>
@@ -2027,12 +2028,12 @@
 <div class="line">以下は前回取得されたイベントデータの例です。</div>
 </div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;eventid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;clock&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1704817434&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;object&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;objectid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10001&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span>
+<span class="w">    </span><span class="nt">"eventid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"clock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1704817434"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"objectid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10001"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -2040,13 +2041,13 @@
 <div class="line">このデータから clock 項目を取得し、Zabbix APIの event.get メソッドのパラメータとして設定する例を以下に示します。</div>
 </div>
 <div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="x">{</span>
-<span class="x">    &quot;jsonrpc&quot;: &quot;2.0&quot;,</span>
-<span class="x">    &quot;method&quot;: &quot;event.get&quot;,</span>
-<span class="x">    &quot;params&quot;: {</span>
-<span class="x">        &quot;output&quot;: &quot;extend&quot;,</span>
-<span class="x">        &quot;time_from&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">EXASTRO_LAST_FETCHED_EVENT.clock</span> <span class="cp">}}</span><span class="x">&quot;,</span>
+<span class="x">    "jsonrpc": "2.0",</span>
+<span class="x">    "method": "event.get",</span>
+<span class="x">    "params": {</span>
+<span class="x">        "output": "extend",</span>
+<span class="x">        "time_from": "</span><span class="cp">{{</span> <span class="nv">EXASTRO_LAST_FETCHED_EVENT.clock</span> <span class="cp">}}</span><span class="x">",</span>
 <span class="x">    },</span>
-<span class="x">    &quot;id&quot;: 1</span>
+<span class="x">    "id": 1</span>
 <span class="x">}</span>
 </pre></div>
 </div>
@@ -2142,8 +2143,8 @@
 </a>
 </figure>
 <div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="x">{</span>
-<span class="x">    &quot;Content-Type&quot;: &quot;application/json&quot;,</span>
-<span class="x">    &quot;Authorization&quot;: &quot;Bearer </span><span class="cp">{{</span> <span class="nv">EXASTRO_EVENT_COLLECTION_SETTING.AUTH_TOKEN</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    "Content-Type": "application/json",</span>
+<span class="x">    "Authorization": "Bearer </span><span class="cp">{{</span> <span class="nv">EXASTRO_EVENT_COLLECTION_SETTING.AUTH_TOKEN</span> <span class="cp">}}</span><span class="x">"</span>
 <span class="x">}</span>
 </pre></div>
 </div>
@@ -2162,10 +2163,10 @@
 </a>
 </figure>
 <div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="x">{</span>
-<span class="x">  &quot;discard&quot;: { &quot;NORMAL&quot;: &quot;0&quot; },</span>
-<span class="x">  &quot;last_update_date_time&quot;: {</span>
-<span class="x">    &quot;RANGE&quot;: {</span>
-<span class="x">      &quot;START&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">EXASTRO_CURRENT_TIME</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">  "discard": { "NORMAL": "0" },</span>
+<span class="x">  "last_update_date_time": {</span>
+<span class="x">    "RANGE": {</span>
+<span class="x">      "START": "</span><span class="cp">{{</span> <span class="nv">EXASTRO_CURRENT_TIME</span> <span class="cp">}}</span><span class="x">"</span>
 <span class="x">    }</span>
 <span class="x">  }</span>
 <span class="x">}</span>
@@ -2179,10 +2180,10 @@
 </a>
 </figure>
 <div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="x">{</span>
-<span class="x">  &quot;discard&quot;: { &quot;NORMAL&quot;: &quot;0&quot; },</span>
-<span class="x">  &quot;last_update_date_time&quot;: {</span>
-<span class="x">    &quot;RANGE&quot;: {</span>
-<span class="x">      &quot;START&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">EXASTRO_LAST_FETCHED_YY_MM_DD</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">  "discard": { "NORMAL": "0" },</span>
+<span class="x">  "last_update_date_time": {</span>
+<span class="x">    "RANGE": {</span>
+<span class="x">      "START": "</span><span class="cp">{{</span> <span class="nv">EXASTRO_LAST_FETCHED_YY_MM_DD</span> <span class="cp">}}</span><span class="x">"</span>
 <span class="x">    }</span>
 <span class="x">  }</span>
 <span class="x">}</span>
@@ -2202,18 +2203,18 @@
 </a>
 </figure>
 <div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="x">{</span>
-<span class="x">    &quot;jsonrpc&quot;: &quot;2.0&quot;,</span>
-<span class="x">    &quot;method&quot;: &quot;problem.get&quot;,</span>
-<span class="x">    &quot;params&quot;: {</span>
-<span class="x">        &quot;output&quot;: &quot;extend&quot;,</span>
+<span class="x">    "jsonrpc": "2.0",</span>
+<span class="x">    "method": "problem.get",</span>
+<span class="x">    "params": {</span>
+<span class="x">        "output": "extend",</span>
 <span class="x">        </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">EXASTRO_LAST_FETCHED_EVENT_IS_EXIST</span> <span class="cp">%}</span>
-<span class="x">          &quot;eventid_from&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">EXASTRO_LAST_FETCHED_EVENT.eventid</span><span class="o">|</span><span class="nf">int</span> <span class="o">+</span> <span class="m">1</span> <span class="cp">}}</span><span class="x">&quot;,</span>
+<span class="x">          "eventid_from": "</span><span class="cp">{{</span> <span class="nv">EXASTRO_LAST_FETCHED_EVENT.eventid</span><span class="o">|</span><span class="nf">int</span> <span class="o">+</span> <span class="m">1</span> <span class="cp">}}</span><span class="x">",</span>
 <span class="x">        </span><span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
-<span class="x">          &quot;time_from&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">EXASTRO_LAST_FETCHED_TIMESTAMP</span> <span class="cp">}}</span><span class="x">&quot;,</span>
+<span class="x">          "time_from": "</span><span class="cp">{{</span> <span class="nv">EXASTRO_LAST_FETCHED_TIMESTAMP</span> <span class="cp">}}</span><span class="x">",</span>
 <span class="x">        </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 <span class="x">    },</span>
-<span class="x">    &quot;auth&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">EXASTRO_EVENT_COLLECTION_SETTING.AUTH_TOKEN</span> <span class="cp">}}</span><span class="x">&quot;,</span>
-<span class="x">    &quot;id&quot;: 1</span>
+<span class="x">    "auth": "</span><span class="cp">{{</span> <span class="nv">EXASTRO_EVENT_COLLECTION_SETTING.AUTH_TOKEN</span> <span class="cp">}}</span><span class="x">",</span>
+<span class="x">    "id": 1</span>
 <span class="x">}</span>
 </pre></div>
 </div>
@@ -2261,7 +2262,7 @@
 <div class="line">そのため、通知テンプレートに以下のフィルターを入れることでエラーを回避することができます。</div>
 </div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
-   &quot;data_field&quot;: &quot;{{ data_variable | replace(&#39;\\&#39;, &#39;\\\\&#39;) | replace(&#39;&quot;&#39;, &#39;\\\&quot;&#39;)}}&quot;
+   "data_field": "{{ data_variable | replace('\\', '\\\\') | replace('"', '\\\"')}}"
 }
 </pre></div>
 </div>
@@ -2290,17 +2291,17 @@
 
 <span class="x">[BODY]</span>
 <span class="x">{</span>
-<span class="x">    &quot;short_description&quot;: &quot;Event Received. </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">exastro_edit_count</span> <span class="o">==</span> <span class="m">1</span> <span class="cp">%}</span><span class="x">Primary Event</span><span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x">Consolidated Event</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"> (</span><span class="cp">{{</span> <span class="nv">exastro_edit_count</span> <span class="cp">}}</span><span class="x">) &quot;,</span>
-<span class="x">    &quot;description&quot;: &quot;RAW Event Data: </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">key</span><span class="o">,</span> <span class="nv">value</span> <span class="k">in</span> <span class="nv">raw_event_data</span> <span class="o">|</span> <span class="nf">default</span><span class="o">({})</span> <span class="o">|</span> <span class="nf">items</span><span class="o">()</span> <span class="cp">%}</span><span class="x">\n  </span><span class="cp">{{</span> <span class="nv">key</span> <span class="cp">}}</span><span class="x">:</span><span class="cp">{{</span> <span class="nv">value</span> <span class="cp">}}{%</span> <span class="k">if</span> <span class="k">not</span> <span class="nb">loop</span><span class="nv">.last</span> <span class="cp">%}</span><span class="x">,</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x">,\n Agent: </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">key</span><span class="o">,</span> <span class="nv">value</span> <span class="k">in</span> <span class="nv">exastro_agents</span> <span class="o">|</span> <span class="nf">default</span><span class="o">({})</span> <span class="o">|</span> <span class="nf">items</span><span class="o">()</span> <span class="cp">%}</span><span class="x">\n  </span><span class="cp">{{</span> <span class="nv">key</span> <span class="cp">}}</span><span class="x">:</span><span class="cp">{{</span> <span class="nv">value</span> <span class="cp">}}{%</span> <span class="k">if</span> <span class="k">not</span> <span class="nb">loop</span><span class="nv">.last</span> <span class="cp">%}</span><span class="x">,</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x">&quot;,</span>
-<span class="x">    &quot;caller_id&quot;: &quot;&quot;,</span>
-<span class="x">    &quot;impact&quot;: &quot;2&quot;,</span>
-<span class="x">    &quot;urgency&quot;: &quot;2&quot;,</span>
-<span class="x">    &quot;category&quot;: &quot;Software&quot;,</span>
-<span class="x">    &quot;contact_type&quot;: &quot;Phone&quot;,</span>
-<span class="x">    &quot;state&quot;: &quot;1&quot;,</span>
-<span class="x">    &quot;subcategory&quot;: &quot;Email&quot;,</span>
-<span class="x">    &quot;priority&quot;: &quot;3&quot;,</span>
-<span class="x">    &quot;service&quot;: &quot;Email Service&quot;</span>
+<span class="x">    "short_description": "Event Received. </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">exastro_edit_count</span> <span class="o">==</span> <span class="m">1</span> <span class="cp">%}</span><span class="x">Primary Event</span><span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x">Consolidated Event</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"> (</span><span class="cp">{{</span> <span class="nv">exastro_edit_count</span> <span class="cp">}}</span><span class="x">) ",</span>
+<span class="x">    "description": "RAW Event Data: </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">key</span><span class="o">,</span> <span class="nv">value</span> <span class="k">in</span> <span class="nv">raw_event_data</span> <span class="o">|</span> <span class="nf">default</span><span class="o">({})</span> <span class="o">|</span> <span class="nf">items</span><span class="o">()</span> <span class="cp">%}</span><span class="x">\n  </span><span class="cp">{{</span> <span class="nv">key</span> <span class="cp">}}</span><span class="x">:</span><span class="cp">{{</span> <span class="nv">value</span> <span class="cp">}}{%</span> <span class="k">if</span> <span class="k">not</span> <span class="nb">loop</span><span class="nv">.last</span> <span class="cp">%}</span><span class="x">,</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x">,\n Agent: </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">key</span><span class="o">,</span> <span class="nv">value</span> <span class="k">in</span> <span class="nv">exastro_agents</span> <span class="o">|</span> <span class="nf">default</span><span class="o">({})</span> <span class="o">|</span> <span class="nf">items</span><span class="o">()</span> <span class="cp">%}</span><span class="x">\n  </span><span class="cp">{{</span> <span class="nv">key</span> <span class="cp">}}</span><span class="x">:</span><span class="cp">{{</span> <span class="nv">value</span> <span class="cp">}}{%</span> <span class="k">if</span> <span class="k">not</span> <span class="nb">loop</span><span class="nv">.last</span> <span class="cp">%}</span><span class="x">,</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x">",</span>
+<span class="x">    "caller_id": "",</span>
+<span class="x">    "impact": "2",</span>
+<span class="x">    "urgency": "2",</span>
+<span class="x">    "category": "Software",</span>
+<span class="x">    "contact_type": "Phone",</span>
+<span class="x">    "state": "1",</span>
+<span class="x">    "subcategory": "Email",</span>
+<span class="x">    "priority": "3",</span>
+<span class="x">    "service": "Email Service"</span>
 <span class="x">}</span>
 </pre></div>
 </div>
@@ -2321,21 +2322,21 @@
 </li>
 </ul>
 <div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="x">[TITLE]</span>
-<span class="x">Event Consolidated by Deduplication </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">exastro_dup_notification_queue</span> <span class="o">|</span> <span class="nf">default</span><span class="o">(</span><span class="s1">&#39;0&#39;</span><span class="o">)</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span> <span class="cp">%}</span><span class="x"> (ttl expired) </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="x">Event Consolidated by Deduplication </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">exastro_dup_notification_queue</span> <span class="o">|</span> <span class="nf">default</span><span class="o">(</span><span class="s1">'0'</span><span class="o">)</span> <span class="o">==</span> <span class="s1">'1'</span> <span class="cp">%}</span><span class="x"> (ttl expired) </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 
 <span class="x">[BODY]</span>
 <span class="x">{</span>
-<span class="x">    &quot;short_description&quot;: &quot;Event Consolidated by Deduplication </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">exastro_dup_notification_queue</span> <span class="o">|</span> <span class="nf">default</span><span class="o">(</span><span class="s1">&#39;0&#39;</span><span class="o">)</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span> <span class="cp">%}</span><span class="x">(ttl expired)</span><span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x"> </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x">&quot;,</span>
-<span class="x">    &quot;description&quot;: &quot;RAW Event Data: </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">key</span><span class="o">,</span> <span class="nv">value</span> <span class="k">in</span> <span class="nv">raw_event_data</span> <span class="o">|</span> <span class="nf">default</span><span class="o">({})</span> <span class="o">|</span> <span class="nf">items</span><span class="o">()</span> <span class="cp">%}</span><span class="x">\n  </span><span class="cp">{{</span> <span class="nv">key</span> <span class="cp">}}</span><span class="x">:</span><span class="cp">{{</span> <span class="nv">value</span> <span class="cp">}}{%</span> <span class="k">if</span> <span class="k">not</span> <span class="nb">loop</span><span class="nv">.last</span> <span class="cp">%}</span><span class="x">,</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x">,\n Agent: </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">key</span><span class="o">,</span> <span class="nv">value</span> <span class="k">in</span> <span class="nv">exastro_agents</span> <span class="o">|</span> <span class="nf">default</span><span class="o">({})</span> <span class="o">|</span> <span class="nf">items</span><span class="o">()</span> <span class="cp">%}</span><span class="x">\n  </span><span class="cp">{{</span> <span class="nv">key</span> <span class="cp">}}</span><span class="x">:</span><span class="cp">{{</span> <span class="nv">value</span> <span class="cp">}}{%</span> <span class="k">if</span> <span class="k">not</span> <span class="nb">loop</span><span class="nv">.last</span> <span class="cp">%}</span><span class="x">,</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x">&quot;,</span>
-<span class="x">    &quot;caller_id&quot;: &quot;&quot;,</span>
-<span class="x">    &quot;impact&quot;: &quot;2&quot;,</span>
-<span class="x">    &quot;urgency&quot;: &quot;2&quot;,</span>
-<span class="x">    &quot;category&quot;: &quot;Software&quot;,</span>
-<span class="x">    &quot;contact_type&quot;: &quot;Phone&quot;,</span>
-<span class="x">    &quot;state&quot;: &quot;1&quot;,</span>
-<span class="x">    &quot;subcategory&quot;: &quot;Email&quot;,</span>
-<span class="x">    &quot;priority&quot;: &quot;3&quot;,</span>
-<span class="x">    &quot;service&quot;: &quot;Email Service&quot;</span>
+<span class="x">    "short_description": "Event Consolidated by Deduplication </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">exastro_dup_notification_queue</span> <span class="o">|</span> <span class="nf">default</span><span class="o">(</span><span class="s1">'0'</span><span class="o">)</span> <span class="o">==</span> <span class="s1">'1'</span> <span class="cp">%}</span><span class="x">(ttl expired)</span><span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x"> </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x">",</span>
+<span class="x">    "description": "RAW Event Data: </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">key</span><span class="o">,</span> <span class="nv">value</span> <span class="k">in</span> <span class="nv">raw_event_data</span> <span class="o">|</span> <span class="nf">default</span><span class="o">({})</span> <span class="o">|</span> <span class="nf">items</span><span class="o">()</span> <span class="cp">%}</span><span class="x">\n  </span><span class="cp">{{</span> <span class="nv">key</span> <span class="cp">}}</span><span class="x">:</span><span class="cp">{{</span> <span class="nv">value</span> <span class="cp">}}{%</span> <span class="k">if</span> <span class="k">not</span> <span class="nb">loop</span><span class="nv">.last</span> <span class="cp">%}</span><span class="x">,</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x">,\n Agent: </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">key</span><span class="o">,</span> <span class="nv">value</span> <span class="k">in</span> <span class="nv">exastro_agents</span> <span class="o">|</span> <span class="nf">default</span><span class="o">({})</span> <span class="o">|</span> <span class="nf">items</span><span class="o">()</span> <span class="cp">%}</span><span class="x">\n  </span><span class="cp">{{</span> <span class="nv">key</span> <span class="cp">}}</span><span class="x">:</span><span class="cp">{{</span> <span class="nv">value</span> <span class="cp">}}{%</span> <span class="k">if</span> <span class="k">not</span> <span class="nb">loop</span><span class="nv">.last</span> <span class="cp">%}</span><span class="x">,</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x">",</span>
+<span class="x">    "caller_id": "",</span>
+<span class="x">    "impact": "2",</span>
+<span class="x">    "urgency": "2",</span>
+<span class="x">    "category": "Software",</span>
+<span class="x">    "contact_type": "Phone",</span>
+<span class="x">    "state": "1",</span>
+<span class="x">    "subcategory": "Email",</span>
+<span class="x">    "priority": "3",</span>
+<span class="x">    "service": "Email Service"</span>
 <span class="x">}</span>
 </pre></div>
 </div>
@@ -2377,7 +2378,7 @@
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.7/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

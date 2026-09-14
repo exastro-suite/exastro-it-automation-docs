@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/manuals/terraform_driver/terraform_common.html">current</option>
-              <option value="../../../../ja/2.8/manuals/terraform_driver/terraform_common.html">2.8(current)</option>
+              <option value="../../../../ja/2.9/manuals/terraform_driver/terraform_common.html">current</option>
+              <option value="../../../../ja/2.9/manuals/terraform_driver/terraform_common.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/manuals/terraform_driver/terraform_common.html">2.8</option>
               <option value="../../../../ja/2.7/manuals/terraform_driver/terraform_common.html">2.7</option>
               <option value="../../../../ja/2.6/manuals/terraform_driver/terraform_common.html">2.6</option>
               <option value="../../../../ja/2.5/manuals/terraform_driver/terraform_common.html">2.5</option>
@@ -482,7 +483,7 @@
 <li><div class="line-block">
 <div class="line">tfファイルと登録値</div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>variable<span class="w"> </span><span class="s2">&quot;VAR_hoge&quot;</span><span class="w"> </span><span class="o">{</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>variable<span class="w"> </span><span class="s2">"VAR_hoge"</span><span class="w"> </span><span class="o">{</span>
 <span class="w">    </span><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>object<span class="o">({</span>
 <span class="w">      </span><span class="nv">NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>string,
 <span class="w">      </span><span class="nv">IP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>string
@@ -534,8 +535,8 @@
 <div class="line">Terraformに送信される値</div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
-<span class="w">    </span><span class="nv">NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my_machine&quot;</span>
-<span class="w">    </span><span class="nv">IP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;192.168.100.1&quot;</span>
+<span class="w">    </span><span class="nv">NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"my_machine"</span>
+<span class="w">    </span><span class="nv">IP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"192.168.100.1"</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -556,9 +557,9 @@
 <li><div class="line-block">
 <div class="line">tfファイルと登録値</div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>variable<span class="w"> </span><span class="s2">&quot;VAR_hoge&quot;</span><span class="w"> </span><span class="o">{</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>variable<span class="w"> </span><span class="s2">"VAR_hoge"</span><span class="w"> </span><span class="o">{</span>
 <span class="w">    </span><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>tuple<span class="o">([</span>string,number<span class="o">])</span>
-<span class="w">    </span><span class="nv">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;abc&quot;</span>,2023<span class="o">]</span>
+<span class="w">    </span><span class="nv">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s2">"abc"</span>,2023<span class="o">]</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -601,7 +602,7 @@
 <li><div class="line-block">
 <div class="line">Terraformに送信される値</div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="s2">&quot;def&quot;</span>,<span class="w"> </span><span class="m">2024</span><span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="s2">"def"</span>,<span class="w"> </span><span class="m">2024</span><span class="o">]</span>
 </pre></div>
 </div>
 </li>
@@ -621,11 +622,11 @@
 <li><div class="line-block">
 <div class="line">tfファイルと登録値</div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>variable<span class="w"> </span><span class="s2">&quot;VAR_hoge&quot;</span><span class="o">{</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>variable<span class="w"> </span><span class="s2">"VAR_hoge"</span><span class="o">{</span>
 <span class="w">    </span><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>list<span class="o">(</span>set<span class="o">(</span>string<span class="o">))</span>
 <span class="w">    </span><span class="nv">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>
-<span class="w">      </span><span class="o">[</span><span class="s2">&quot;aaa&quot;</span>,<span class="s2">&quot;bbb&quot;</span><span class="o">]</span>
-<span class="w">      </span><span class="o">[</span><span class="s2">&quot;ccc&quot;</span>,<span class="s2">&quot;ddd&quot;</span><span class="o">]</span>
+<span class="w">      </span><span class="o">[</span><span class="s2">"aaa"</span>,<span class="s2">"bbb"</span><span class="o">]</span>
+<span class="w">      </span><span class="o">[</span><span class="s2">"ccc"</span>,<span class="s2">"ddd"</span><span class="o">]</span>
 <span class="w">    </span><span class="o">]</span>
 <span class="o">}</span>
 </pre></div>
@@ -682,8 +683,8 @@
 <div class="line">Terraformに送信される値</div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>
-<span class="w">   </span><span class="o">[</span><span class="s2">&quot;あああ&quot;</span>,<span class="w"> </span><span class="s2">&quot;いいい&quot;</span><span class="o">]</span>,
-<span class="w">   </span><span class="o">[</span><span class="s2">&quot;ううう&quot;</span>,<span class="w"> </span><span class="s2">&quot;えええ&quot;</span><span class="o">]</span>
+<span class="w">   </span><span class="o">[</span><span class="s2">"あああ"</span>,<span class="w"> </span><span class="s2">"いいい"</span><span class="o">]</span>,
+<span class="w">   </span><span class="o">[</span><span class="s2">"ううう"</span>,<span class="w"> </span><span class="s2">"えええ"</span><span class="o">]</span>
 <span class="o">]</span>
 </pre></div>
 </div>
@@ -709,7 +710,7 @@
 <li><div class="line-block">
 <div class="line">tfファイルと登録値</div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>variable<span class="w"> </span><span class="s2">&quot;VAR_hoge&quot;</span><span class="w"> </span><span class="o">{</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>variable<span class="w"> </span><span class="s2">"VAR_hoge"</span><span class="w"> </span><span class="o">{</span>
 <span class="w">   </span><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>list<span class="o">(</span>string<span class="o">)</span>
 <span class="o">}</span>
 </pre></div>
@@ -753,7 +754,7 @@
 <li><div class="line-block">
 <div class="line">Terraformに送信される値</div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="s2">&quot;あいう&quot;</span>,<span class="s2">&quot;かきく&quot;</span><span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="s2">"あいう"</span>,<span class="s2">"かきく"</span><span class="o">]</span>
 </pre></div>
 </div>
 </li>
@@ -773,7 +774,7 @@
 <li><div class="line-block">
 <div class="line">tfファイルと登録値</div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>variable<span class="w"> </span><span class="s2">&quot;VAR_hoge&quot;</span><span class="w"> </span><span class="o">{</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>variable<span class="w"> </span><span class="s2">"VAR_hoge"</span><span class="w"> </span><span class="o">{</span>
 <span class="w">   </span><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>object<span class="o">({</span>
 <span class="w">      </span><span class="nv">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>set<span class="o">(</span>number<span class="o">)</span>
 <span class="w">   </span><span class="o">})</span>
@@ -1037,7 +1038,7 @@
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.4/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

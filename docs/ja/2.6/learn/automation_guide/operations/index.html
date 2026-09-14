@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../../_static/documentation_options.js?v=c033477b"></script>
@@ -32,6 +32,8 @@
     <script src="../../../_static/copybutton.js?v=3e58b9f8"></script>
     <script src="../../../_static/translations.js?v=4755f45a"></script>
     <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.12.1/dist/mermaid.esm.min.mjs";
+
+
 
 
 
@@ -426,8 +428,9 @@ window.runMermaid = runMermaid;</script>
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../../ja/2.8/learn/automation_guide/operations/index.html">current</option>
-              <option value="../../../../../ja/2.8/learn/automation_guide/operations/index.html">2.8(current)</option>
+              <option value="../../../../../ja/2.9/learn/automation_guide/operations/index.html">current</option>
+              <option value="../../../../../ja/2.9/learn/automation_guide/operations/index.html">2.9(current)</option>
+              <option value="../../../../../ja/2.8/learn/automation_guide/operations/index.html">2.8</option>
               <option value="../../../../../ja/2.7/learn/automation_guide/operations/index.html">2.7</option>
               <option value="../../../../../ja/2.6/learn/automation_guide/operations/index.html" selected>2.6</option>
               <option value="../../../../../ja/2.5/learn/automation_guide/operations/index.html">2.5</option>
@@ -707,20 +710,20 @@ window.runMermaid = runMermaid;</script>
 <div class="literal-block-wrapper docutils container" id="id25">
 <div class="code-block-caption"><span class="caption-text">開発段階テストの例</span><a class="headerlink" href="#id25" title="Link to this code">¶</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">development_tests</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;構文チェック&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"構文チェック"</span>
 <span class="w">    </span><span class="nt">tasks</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ansible-playbook --syntax-check</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ansible-lint playbook.yml</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yamllint playbook.yml</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;静的解析&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"静的解析"</span>
 <span class="w">    </span><span class="nt">tasks</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">security_scan</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playbook.yml</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">dependency_check</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requirements.yml</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">best_practice_check</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playbook.yml</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;単体テスト&quot;</span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;test_vm&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"単体テスト"</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">"test_vm"</span>
 <span class="w">    </span><span class="nt">tasks</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run_playbook</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playbook.yml</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">verify_results</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test_cases.yml</span>
@@ -731,20 +734,20 @@ window.runMermaid = runMermaid;</script>
 <div class="literal-block-wrapper docutils container" id="id26">
 <div class="code-block-caption"><span class="caption-text">統合テストの例</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">integration_tests</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Movement結合テスト&quot;</span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;integration&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Movement結合テスト"</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">"integration"</span>
 <span class="w">    </span><span class="nt">test_scenarios</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scenario</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;正常系フルシナリオ&quot;</span>
-<span class="w">        </span><span class="nt">movements</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;setup&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;configure&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;deploy&quot;</span><span class="p p-Indicator">]</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scenario</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;異常系リカバリシナリオ&quot;</span>
-<span class="w">        </span><span class="nt">inject_failures</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;network_error&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;disk_full&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scenario</span><span class="p">:</span><span class="w"> </span><span class="s">"正常系フルシナリオ"</span>
+<span class="w">        </span><span class="nt">movements</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"setup"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"configure"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"deploy"</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scenario</span><span class="p">:</span><span class="w"> </span><span class="s">"異常系リカバリシナリオ"</span>
+<span class="w">        </span><span class="nt">inject_failures</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"network_error"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"disk_full"</span><span class="p p-Indicator">]</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Conductor結合テスト&quot;</span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;integration&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Conductor結合テスト"</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">"integration"</span>
 <span class="w">    </span><span class="nt">test_workflows</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">workflow</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;full_deployment&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">workflow</span><span class="p">:</span><span class="w"> </span><span class="s">"full_deployment"</span>
 <span class="w">        </span><span class="nt">parallel_execution</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">workflow</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;rollback_scenario&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">workflow</span><span class="p">:</span><span class="w"> </span><span class="s">"rollback_scenario"</span>
 <span class="w">        </span><span class="nt">failure_simulation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
 </div>
@@ -753,22 +756,22 @@ window.runMermaid = runMermaid;</script>
 <div class="literal-block-wrapper docutils container" id="id27">
 <div class="code-block-caption"><span class="caption-text">本番準備テストの例</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">production_readiness_tests</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;性能テスト&quot;</span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;performance&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"性能テスト"</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">"performance"</span>
 <span class="w">    </span><span class="nt">metrics</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">execution_time</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;</span><span class="nv"> </span><span class="s">30min&quot;</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">resource_usage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;</span><span class="nv"> </span><span class="s">80%&quot;</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">success_rate</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&gt;</span><span class="nv"> </span><span class="s">99%&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">execution_time</span><span class="p">:</span><span class="w"> </span><span class="s">"&lt;</span><span class="nv"> </span><span class="s">30min"</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">resource_usage</span><span class="p">:</span><span class="w"> </span><span class="s">"&lt;</span><span class="nv"> </span><span class="s">80%"</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">success_rate</span><span class="p">:</span><span class="w"> </span><span class="s">"&gt;</span><span class="nv"> </span><span class="s">99%"</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;障害耐性テスト&quot;</span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;chaos&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"障害耐性テスト"</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">"chaos"</span>
 <span class="w">    </span><span class="nt">chaos_tests</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">network_partition</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">high_cpu_load</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">memory_exhaustion</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;セキュリティテスト&quot;</span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;security&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"セキュリティテスト"</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">"security"</span>
 <span class="w">    </span><span class="nt">security_tests</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vulnerability_scan</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">penetration_test</span>
@@ -874,20 +877,20 @@ window.runMermaid = runMermaid;</script>
 <div class="literal-block-wrapper docutils container" id="id30">
 <div class="code-block-caption"><span class="caption-text">アラート設定例</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">alert_rules</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;自動化失敗率高&quot;</span>
-<span class="w">    </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;failure_rate</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">10%</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">1hour&quot;</span>
-<span class="w">    </span><span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;warning&quot;</span>
-<span class="w">    </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;automation_team&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"自動化失敗率高"</span>
+<span class="w">    </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="s">"failure_rate</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">10%</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">1hour"</span>
+<span class="w">    </span><span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="s">"warning"</span>
+<span class="w">    </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"automation_team"</span><span class="p p-Indicator">]</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;システム応答なし&quot;</span>
-<span class="w">    </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;system_unavailable</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">5min&quot;</span>
-<span class="w">    </span><span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;critical&quot;</span>
-<span class="w">    </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;platform_team&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;manager&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"システム応答なし"</span>
+<span class="w">    </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="s">"system_unavailable</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">5min"</span>
+<span class="w">    </span><span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="s">"critical"</span>
+<span class="w">    </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"platform_team"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"manager"</span><span class="p p-Indicator">]</span>
 <span class="w">    </span><span class="nt">escalation</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">delay</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;15min&quot;</span>
-<span class="w">        </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;on_call_engineer&quot;</span><span class="p p-Indicator">]</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">delay</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;30min&quot;</span>
-<span class="w">        </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;management&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">delay</span><span class="p">:</span><span class="w"> </span><span class="s">"15min"</span>
+<span class="w">        </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"on_call_engineer"</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">delay</span><span class="p">:</span><span class="w"> </span><span class="s">"30min"</span>
+<span class="w">        </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"management"</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
 </div>
@@ -1019,21 +1022,21 @@ window.runMermaid = runMermaid;</script>
 <div class="code-block-caption"><span class="caption-text">バックアップ戦略例</span><a class="headerlink" href="#id32" title="Link to this code">¶</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">backup_strategy</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">configuration_data</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">frequency</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;daily&quot;</span>
-<span class="w">    </span><span class="nt">retention</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;30days&quot;</span>
-<span class="w">    </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;remote_storage&quot;</span>
+<span class="w">    </span><span class="nt">frequency</span><span class="p">:</span><span class="w"> </span><span class="s">"daily"</span>
+<span class="w">    </span><span class="nt">retention</span><span class="p">:</span><span class="w"> </span><span class="s">"30days"</span>
+<span class="w">    </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="s">"remote_storage"</span>
 <span class="w">    </span><span class="nt">encryption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 
 <span class="w">  </span><span class="nt">playbook_repository</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">frequency</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;real_time&quot;</span>
-<span class="w">    </span><span class="nt">retention</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;unlimited&quot;</span>
-<span class="w">    </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;primary_git&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;backup_git&quot;</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">verification</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;automated_restore_test&quot;</span>
+<span class="w">    </span><span class="nt">frequency</span><span class="p">:</span><span class="w"> </span><span class="s">"real_time"</span>
+<span class="w">    </span><span class="nt">retention</span><span class="p">:</span><span class="w"> </span><span class="s">"unlimited"</span>
+<span class="w">    </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"primary_git"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"backup_git"</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">verification</span><span class="p">:</span><span class="w"> </span><span class="s">"automated_restore_test"</span>
 
 <span class="w">  </span><span class="nt">execution_history</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">frequency</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;daily&quot;</span>
-<span class="w">    </span><span class="nt">retention</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1year&quot;</span>
-<span class="w">    </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;archive_storage&quot;</span>
+<span class="w">    </span><span class="nt">frequency</span><span class="p">:</span><span class="w"> </span><span class="s">"daily"</span>
+<span class="w">    </span><span class="nt">retention</span><span class="p">:</span><span class="w"> </span><span class="s">"1year"</span>
+<span class="w">    </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="s">"archive_storage"</span>
 <span class="w">    </span><span class="nt">compression</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
 </div>
@@ -1042,25 +1045,25 @@ window.runMermaid = runMermaid;</script>
 <div class="literal-block-wrapper docutils container" id="id33">
 <div class="code-block-caption"><span class="caption-text">災害復旧手順例</span><a class="headerlink" href="#id33" title="Link to this code">¶</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">disaster_recovery</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">rto</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4hours&quot;</span><span class="w">  </span><span class="c1"># Recovery Time Objective</span>
-<span class="w">  </span><span class="nt">rpo</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1hour&quot;</span><span class="w">   </span><span class="c1"># Recovery Point Objective</span>
+<span class="w">  </span><span class="nt">rto</span><span class="p">:</span><span class="w"> </span><span class="s">"4hours"</span><span class="w">  </span><span class="c1"># Recovery Time Objective</span>
+<span class="w">  </span><span class="nt">rpo</span><span class="p">:</span><span class="w"> </span><span class="s">"1hour"</span><span class="w">   </span><span class="c1"># Recovery Point Objective</span>
 
 <span class="w">  </span><span class="nt">procedures</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;障害状況の確認&quot;</span>
-<span class="w">      </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform_team&quot;</span>
-<span class="w">      </span><span class="nt">max_time</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;30min&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">"障害状況の確認"</span>
+<span class="w">      </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">"platform_team"</span>
+<span class="w">      </span><span class="nt">max_time</span><span class="p">:</span><span class="w"> </span><span class="s">"30min"</span>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;バックアップからの復旧&quot;</span>
-<span class="w">      </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform_team&quot;</span>
-<span class="w">      </span><span class="nt">max_time</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2hours&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">"バックアップからの復旧"</span>
+<span class="w">      </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">"platform_team"</span>
+<span class="w">      </span><span class="nt">max_time</span><span class="p">:</span><span class="w"> </span><span class="s">"2hours"</span>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;動作確認とテスト&quot;</span>
-<span class="w">      </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;automation_team&quot;</span>
-<span class="w">      </span><span class="nt">max_time</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1hour&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">"動作確認とテスト"</span>
+<span class="w">      </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">"automation_team"</span>
+<span class="w">      </span><span class="nt">max_time</span><span class="p">:</span><span class="w"> </span><span class="s">"1hour"</span>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;サービス再開&quot;</span>
-<span class="w">      </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;service_owner&quot;</span>
-<span class="w">      </span><span class="nt">max_time</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;30min&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">"サービス再開"</span>
+<span class="w">      </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">"service_owner"</span>
+<span class="w">      </span><span class="nt">max_time</span><span class="p">:</span><span class="w"> </span><span class="s">"30min"</span>
 </pre></div>
 </div>
 </div>
@@ -1162,7 +1165,7 @@ window.runMermaid = runMermaid;</script>
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
