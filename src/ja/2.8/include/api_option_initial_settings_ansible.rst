@@ -68,7 +68,7 @@
        | 上記のいずれかを指定。
    * - initial_data.parameter.representative_server
      - | 代表ホスト
-       | :menuselection:`Ansible Automation Controller ホスト一覧` に登録されいるホストの一覧より、 Exastro IT Automation と通信する Ansible Automation Controller のホストを選択します。
+       | :menuselection:`Ansible Automation Controller ホスト一覧` に登録されているホストの一覧より、 Exastro IT Automation と通信する Ansible Automation Controller のホストを選択します。
        | ※ 実行エンジンが Ansible Automation Controller の場合に入力必須
      - Ansible Automation Controller ホスト
    * - initial_data.parameter.ansible_automation_controller_protocol
