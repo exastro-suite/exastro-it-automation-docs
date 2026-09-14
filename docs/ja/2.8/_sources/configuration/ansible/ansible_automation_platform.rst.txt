@@ -302,7 +302,7 @@ Playbook連携
    :alt: ITAとAnsible Automation Platform2.xのPlaybook連携図
    :width: 600px
 
-   ITAとAnsible Automatio Platform2.x間のPlaybook連携図
+   ITAとAnsible Automation Platform2.x間のPlaybook連携図
 
 
 初期設定
@@ -573,7 +573,7 @@ Organization 追加時の作業
 インスタンスを組み込む
 ----------------------
 
-| インスタンスであるAnsible Execution Environment (以下、Ansible ee とも表記) を組み込んてください。
+| インスタンスであるAnsible Execution Environment (以下、Ansible ee とも表記) を組み込んでください。
 
 
 インスタンスグループ作成

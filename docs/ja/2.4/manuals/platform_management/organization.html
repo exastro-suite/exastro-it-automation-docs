@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -74,8 +74,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/manuals/platform_management/organization.html">current</option>
-              <option value="../../../../ja/2.8/manuals/platform_management/organization.html">2.8(current)</option>
+              <option value="../../../../ja/2.9/manuals/platform_management/organization.html">current</option>
+              <option value="../../../../ja/2.9/manuals/platform_management/organization.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/manuals/platform_management/organization.html">2.8</option>
               <option value="../../../../ja/2.7/manuals/platform_management/organization.html">2.7</option>
               <option value="../../../../ja/2.6/manuals/platform_management/organization.html">2.6</option>
               <option value="../../../../ja/2.5/manuals/platform_management/organization.html">2.5</option>
@@ -563,54 +564,54 @@
 <div class="line">また、Exastro Platform の管理用 URL 情報を <kbd class="kbd docutils literal notranslate">BASE_URL</kbd> に設定する必要があります。</div>
 <div class="line">例えば、 <a class="reference internal" href="../../installation/online/exastro/kubernetes.html#ingress-setting"><span class="std std-ref">サービス公開の設定 (Ingress の設定)</span></a> をした場合は下記のようになります。</div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;KEYCLOAK_USER:KEYCLOAK_PASSWORD&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"KEYCLOAK_USER:KEYCLOAK_PASSWORD"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 <span class="nv">BASE_URL</span><span class="o">=</span>http://exastro-suite-mng.example.local
 
-curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/platform/organizations&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;accept: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
-<span class="s1">  &quot;id&quot;: &quot;org001&quot;,</span>
-<span class="s1">  &quot;name&quot;: &quot;org001-name&quot;,</span>
-<span class="s1">  &quot;organization_managers&quot;: [</span>
+curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">'POST'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/platform/organizations"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'accept: application/json'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'Content-Type: application/json'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">  "id": "org001",</span>
+<span class="s1">  "name": "org001-name",</span>
+<span class="s1">  "organization_managers": [</span>
 <span class="s1">    {</span>
-<span class="s1">      &quot;username&quot;: &quot;admin&quot;,</span>
-<span class="s1">      &quot;email&quot;: &quot;admin@example.com&quot;,</span>
-<span class="s1">      &quot;firstName&quot;: &quot;admin&quot;,</span>
-<span class="s1">      &quot;lastName&quot;: &quot;admin&quot;,</span>
-<span class="s1">      &quot;credentials&quot;: [</span>
+<span class="s1">      "username": "admin",</span>
+<span class="s1">      "email": "admin@example.com",</span>
+<span class="s1">      "firstName": "admin",</span>
+<span class="s1">      "lastName": "admin",</span>
+<span class="s1">      "credentials": [</span>
 <span class="s1">        {</span>
-<span class="s1">          &quot;type&quot;: &quot;password&quot;,</span>
-<span class="s1">          &quot;value&quot;: &quot;password&quot;,</span>
-<span class="s1">          &quot;temporary&quot;: true</span>
+<span class="s1">          "type": "password",</span>
+<span class="s1">          "value": "password",</span>
+<span class="s1">          "temporary": true</span>
 <span class="s1">        }</span>
 <span class="s1">      ],</span>
-<span class="s1">      &quot;requiredActions&quot;: [</span>
-<span class="s1">        &quot;UPDATE_PROFILE&quot;</span>
+<span class="s1">      "requiredActions": [</span>
+<span class="s1">        "UPDATE_PROFILE"</span>
 <span class="s1">      ],</span>
-<span class="s1">      &quot;enabled&quot;: true</span>
+<span class="s1">      "enabled": true</span>
 <span class="s1">    }</span>
 <span class="s1">  ],</span>
-<span class="s1">  &quot;plan&quot;: {},</span>
-<span class="s1">  &quot;options&quot;: {},</span>
-<span class="s1">  &quot;optionsIta&quot;: {</span>
-<span class="s1">    &quot;drivers&quot;: {</span>
-<span class="s1">      &quot;terraform_cloud_ep&quot;: true,</span>
-<span class="s1">      &quot;terraform_cli&quot;: true,</span>
-<span class="s1">      &quot;ci_cd&quot;: true,</span>
-<span class="s1">      &quot;oase&quot;: true</span>
+<span class="s1">  "plan": {},</span>
+<span class="s1">  "options": {},</span>
+<span class="s1">  "optionsIta": {</span>
+<span class="s1">    "drivers": {</span>
+<span class="s1">      "terraform_cloud_ep": true,</span>
+<span class="s1">      "terraform_cli": true,</span>
+<span class="s1">      "ci_cd": true,</span>
+<span class="s1">      "oase": true</span>
 <span class="s1">    },</span>
-<span class="s1">    &quot;services&quot;: {</span>
-<span class="s1">      &quot;document_store&quot;: {</span>
-<span class="s1">        &quot;name&quot;: &quot;mongodb&quot;,</span>
-<span class="s1">        &quot;owner&quot;: false,</span>
-<span class="s1">        &quot;connection_string&quot;: &quot;mongodb://username:password@hostname:27017/&quot;</span>
+<span class="s1">    "services": {</span>
+<span class="s1">      "document_store": {</span>
+<span class="s1">        "name": "mongodb",</span>
+<span class="s1">        "owner": false,</span>
+<span class="s1">        "connection_string": "mongodb://username:password@hostname:27017/"</span>
 <span class="s1">      }</span>
 <span class="s1">    }</span>
 <span class="s1">  }</span>
-<span class="s1">}&#39;</span>
+<span class="s1">}'</span>
 </pre></div>
 </div>
 </div></div>
@@ -649,14 +650,14 @@ curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;POST
 </div><div aria-labelledby="tab-1-UmVzdCBBUEkg44Gr44KI44KL5a6f6KGM" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-UmVzdCBBUEkg44Gr44KI44KL5a6f6KGM" name="UmVzdCBBUEkg44Gr44KI44KL5a6f6KGM" role="tabpanel" tabindex="0"><div class="line-block">
 <div class="line">cURL を使って Rest API を利用する場合は、以下の様なコマンドを実行してください。</div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;システム管理者のユーザー名を設定してください:システム管理者のパスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"システム管理者のユーザー名を設定してください:システム管理者のパスワードを設定してください"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 <span class="nv">BASE_URL</span><span class="o">=</span>システム管理者用サイトアドレスを設定してください
 
 curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-d<span class="w">  </span>@-<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/platform/organizations&quot;</span>
+<span class="w">  </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/platform/organizations"</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -958,26 +959,26 @@ curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>
 </tr>
 </tbody>
 </table>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;システム管理者のユーザー名を設定してください:システム管理者のパスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"システム管理者のユーザー名を設定してください:システム管理者のパスワードを設定してください"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 <span class="nv">BASE_URL</span><span class="o">=</span>システム管理者用サイトアドレスを設定してください
 <span class="nv">ORG_ID</span><span class="o">=</span>取得するorganization<span class="w"> </span>idを設定してください
 
 
-curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;PUT&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span><span class="s1">'PUT'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-d<span class="w">  </span>@-<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/platform/organizations/</span><span class="si">${</span><span class="nv">ORG_ID</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/platform/organizations/</span><span class="si">${</span><span class="nv">ORG_ID</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>&lt;&lt;<span class="w"> </span>EOF
 <span class="o">{</span>
-<span class="w">  </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;name of org1&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;enabled&quot;</span>:<span class="w"> </span>true,
-<span class="w">  </span><span class="s2">&quot;optionsIta&quot;</span>:<span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="s2">&quot;drivers&quot;</span>:<span class="w"> </span><span class="o">{</span>
-<span class="w">      </span><span class="s2">&quot;terraform_cloud_ep&quot;</span>:<span class="w"> </span>true,
-<span class="w">      </span><span class="s2">&quot;terraform_cli&quot;</span>:<span class="w"> </span>true,
-<span class="w">      </span><span class="s2">&quot;ci_cd&quot;</span>:<span class="w"> </span>true,
-<span class="w">      </span><span class="s2">&quot;oase&quot;</span>:<span class="w"> </span><span class="nb">true</span>
+<span class="w">  </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"name of org1"</span>,
+<span class="w">  </span><span class="s2">"enabled"</span>:<span class="w"> </span>true,
+<span class="w">  </span><span class="s2">"optionsIta"</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="s2">"drivers"</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">"terraform_cloud_ep"</span>:<span class="w"> </span>true,
+<span class="w">      </span><span class="s2">"terraform_cli"</span>:<span class="w"> </span>true,
+<span class="w">      </span><span class="s2">"ci_cd"</span>:<span class="w"> </span>true,
+<span class="w">      </span><span class="s2">"oase"</span>:<span class="w"> </span><span class="nb">true</span>
 <span class="w">    </span><span class="o">}</span>
 <span class="w">  </span><span class="o">}</span>
 <span class="o">}</span>
@@ -989,15 +990,15 @@ curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>
 </div>
 </li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;システム管理者のユーザー名を設定してください:システム管理者のパスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"システム管理者のユーザー名を設定してください:システム管理者のパスワードを設定してください"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 <span class="nv">BASE_URL</span><span class="o">=</span>システム管理者用サイトアドレスを設定してください
 <span class="nv">ORG_ID</span><span class="o">=</span>取得するorganization<span class="w"> </span>idを設定してください
 
 curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-H<span class="w"> </span><span class="s2">"Authorization: basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-d<span class="w">  </span>@-<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/platform/</span><span class="si">${</span><span class="nv">ORG_ID</span><span class="si">}</span><span class="s2">/plans&quot;</span>
+<span class="w">    </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/platform/</span><span class="si">${</span><span class="nv">ORG_ID</span><span class="si">}</span><span class="s2">/plans"</span>
 </pre></div>
 </div>
 <ul>
@@ -1006,19 +1007,19 @@ curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>
 </div>
 </li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;システム管理者のユーザー名を設定してください:システム管理者のパスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"システム管理者のユーザー名を設定してください:システム管理者のパスワードを設定してください"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 <span class="nv">BASE_URL</span><span class="o">=</span>システム管理者用サイトアドレスを設定してください
 <span class="nv">ORG_ID</span><span class="o">=</span>リソースプランを設定するorganization<span class="w"> </span>idを設定してください
 
 curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-H<span class="w"> </span><span class="s2">"Authorization: basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-d<span class="w">  </span>@-<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/platform/</span><span class="si">${</span><span class="nv">ORG_ID</span><span class="si">}</span><span class="s2">/plans&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/platform/</span><span class="si">${</span><span class="nv">ORG_ID</span><span class="si">}</span><span class="s2">/plans"</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="s">&lt;&lt; EOF</span>
 <span class="s">{</span>
-<span class="s">    &quot;id&quot;: &quot;plan-standard&quot;,</span>
-<span class="s">    &quot;start_datetime&quot;: &quot;2022-12-01 00:00:00&quot;</span>
+<span class="s">    "id": "plan-standard",</span>
+<span class="s">    "start_datetime": "2022-12-01 00:00:00"</span>
 <span class="s">}</span>
 <span class="s">EOF</span>
 </pre></div>
@@ -1029,15 +1030,15 @@ curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>
 </div>
 </li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;システム管理者のユーザー名を設定してください:システム管理者のパスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"システム管理者のユーザー名を設定してください:システム管理者のパスワードを設定してください"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 <span class="nv">BASE_URL</span><span class="o">=</span>システム管理者用サイトアドレスを設定してください
 <span class="nv">ORG_ID</span><span class="o">=</span>リソースプラン解除するorganization<span class="w"> </span>idを設定してください
 <span class="nv">START_DATETIME</span><span class="o">=</span>リソースプラン解除する開始日時を設定してください<span class="o">(</span>yyyy-mm-dd<span class="w"> </span>hh:mm:ss形式<span class="o">)</span>
 
 curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>DELETE<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/platform/</span><span class="si">${</span><span class="nv">ORG_ID</span><span class="si">}</span><span class="s2">/plans/`echo </span><span class="si">${</span><span class="nv">START_DATETIME</span><span class="si">}</span><span class="s2"> | sed &#39;s/ /%20/g;s/:/%3A/g&#39;`&quot;</span>
+<span class="w">    </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-H<span class="w"> </span><span class="s2">"Authorization: basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/platform/</span><span class="si">${</span><span class="nv">ORG_ID</span><span class="si">}</span><span class="s2">/plans/`echo </span><span class="si">${</span><span class="nv">START_DATETIME</span><span class="si">}</span><span class="s2"> | sed 's/ /%20/g;s/:/%3A/g'`"</span>
 </pre></div>
 </div>
 </div></div>
@@ -1078,13 +1079,13 @@ curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>
 </div><div aria-labelledby="tab-3-UmVzdCBBUEkg44Gr44KI44KL5a6f6KGM" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-UmVzdCBBUEkg44Gr44KI44KL5a6f6KGM" name="UmVzdCBBUEkg44Gr44KI44KL5a6f6KGM" role="tabpanel" tabindex="0"><div class="line-block">
 <div class="line">cURL を使って Rest API を利用する場合は、以下の様なコマンドを実行してください。</div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;システム管理者のユーザー名を設定してください:システム管理者のパスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"システム管理者のユーザー名を設定してください:システム管理者のパスワードを設定してください"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 <span class="nv">BASE_URL</span><span class="o">=</span>システム管理者用サイトアドレスを設定してください
 <span class="nv">ORGANIZATION_ID</span><span class="o">=</span>削除するorganization<span class="w"> </span>idを設定してください
 
 curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>DELETE<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/platform/organizations/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/platform/organizations/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">"</span>
 </pre></div>
 </div>
 </div></div>
@@ -1181,7 +1182,7 @@ curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.4/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

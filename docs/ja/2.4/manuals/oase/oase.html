@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/manuals/oase/oase.html">current</option>
-              <option value="../../../../ja/2.8/manuals/oase/oase.html">2.8(current)</option>
+              <option value="../../../../ja/2.9/manuals/oase/oase.html">current</option>
+              <option value="../../../../ja/2.9/manuals/oase/oase.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/manuals/oase/oase.html">2.8</option>
               <option value="../../../../ja/2.7/manuals/oase/oase.html">2.7</option>
               <option value="../../../../ja/2.6/manuals/oase/oase.html">2.6</option>
               <option value="../../../../ja/2.5/manuals/oase/oase.html">2.5</option>
@@ -1754,23 +1755,23 @@
 <div class="literal-block-wrapper docutils container" id="id26">
 <div class="code-block-caption"><span class="caption-number">リスト 3.13 </span><span class="caption-text">メールサーバからの受信データサンプル</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>{
-<span class="linenos"> 2</span>        &quot;event&quot;: [{
-<span class="linenos"> 3</span>            &quot;message_id&quot;: &quot;&lt;20231004071711.06338770D0A0@ita-oase-mailserver.localdomain&gt;&quot;,
-<span class="linenos"> 4</span>            &quot;envelope_from&quot;: &quot;root@ita-oase-mailserver.localdomain&quot;,
-<span class="linenos"> 5</span>            &quot;envelope_to&quot;: &quot;user1@localhost&quot;,
-<span class="linenos"> 6</span>            &quot;header_from&quot;: &quot;&lt;root@ita-oase-mailserver.localdomain&gt;&quot;,
-<span class="linenos"> 7</span>            &quot;header_to&quot;: &quot;user1@localhost&quot;,
-<span class="linenos"> 8</span>            &quot;mailaddr_from&quot;: &quot;root &lt;root@ita-oase-mailserver.localdomain&gt;&quot;,
-<span class="linenos"> 9</span>            &quot;mailaddr_to&quot;: &quot;user1@localhost&quot;,
-<span class="linenos">10</span>            &quot;date&quot;: &quot;2023-10-04 16:17:10&quot;,
-<span class="linenos">11</span>            &quot;lastchange&quot;: 1696403830.0,
-<span class="linenos">12</span>            &quot;subject&quot;: &quot;test mail&quot;,
-<span class="linenos">13</span>            &quot;body&quot;: &quot;sample\r\n&quot;
-<span class="linenos">14</span>            &quot;_exastro_event_collection_settings_id&quot;: &quot;d0c9a70c-a1c0-4c7b-9e96-82e602ebc55e&quot;,
-<span class="linenos">15</span>            &quot;_exastro_fetched_time&quot;: 1696406510,
-<span class="linenos">16</span>            &quot;_exastro_end_time&quot;: 1696406810,
-<span class="linenos">17</span>            &quot;_exastro_type&quot;: &quot;event&quot;
-<span class="linenos">18</span>            &quot;_exastro_event_collection_settings_name&quot;: &quot;agent01&quot;
+<span class="linenos"> 2</span>        "event": [{
+<span class="linenos"> 3</span>            "message_id": "&lt;20231004071711.06338770D0A0@ita-oase-mailserver.localdomain&gt;",
+<span class="linenos"> 4</span>            "envelope_from": "root@ita-oase-mailserver.localdomain",
+<span class="linenos"> 5</span>            "envelope_to": "user1@localhost",
+<span class="linenos"> 6</span>            "header_from": "&lt;root@ita-oase-mailserver.localdomain&gt;",
+<span class="linenos"> 7</span>            "header_to": "user1@localhost",
+<span class="linenos"> 8</span>            "mailaddr_from": "root &lt;root@ita-oase-mailserver.localdomain&gt;",
+<span class="linenos"> 9</span>            "mailaddr_to": "user1@localhost",
+<span class="linenos">10</span>            "date": "2023-10-04 16:17:10",
+<span class="linenos">11</span>            "lastchange": 1696403830.0,
+<span class="linenos">12</span>            "subject": "test mail",
+<span class="linenos">13</span>            "body": "sample\r\n"
+<span class="linenos">14</span>            "_exastro_event_collection_settings_id": "d0c9a70c-a1c0-4c7b-9e96-82e602ebc55e",
+<span class="linenos">15</span>            "_exastro_fetched_time": 1696406510,
+<span class="linenos">16</span>            "_exastro_end_time": 1696406810,
+<span class="linenos">17</span>            "_exastro_type": "event"
+<span class="linenos">18</span>            "_exastro_event_collection_settings_name": "agent01"
 <span class="linenos">19</span>        }]
 <span class="linenos">20</span>}
 </pre></div>
@@ -1811,7 +1812,7 @@
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.4/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

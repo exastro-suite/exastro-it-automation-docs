@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/manuals/ansible-driver/ansible_ee_custom.html" selected>current</option>
-              <option value="../../../../ja/2.8/manuals/ansible-driver/ansible_ee_custom.html" selected>2.8(current)</option>
+              <option value="../../../../ja/2.9/manuals/ansible-driver/ansible_ee_custom.html">current</option>
+              <option value="../../../../ja/2.9/manuals/ansible-driver/ansible_ee_custom.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/manuals/ansible-driver/ansible_ee_custom.html" selected>2.8</option>
               <option value="../../../../ja/2.7/manuals/ansible-driver/ansible_ee_custom.html">2.7</option>
               <option value="../../../../ja/2.6/manuals/ansible-driver/ansible_ee_custom.html">2.6</option>
               <option value="../../../../ja/2.5/manuals/ansible-driver/ansible_ee_custom.html">2.5</option>
@@ -384,7 +385,7 @@
 <section id="id5">
 <h4>既存のイメージを削除<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h4>
 <div class="line-block">
-<div class="line">Ansible-CoreでのAnsible作業を一度でも実施してしている場合は、既にイメージが作成されているため予め「 <strong class="command">docker rmi</strong> 」を実施しイメージを削除します。</div>
+<div class="line">Ansible-CoreでのAnsible作業を一度でも実施している場合は、既にイメージが作成されているため予め「 <strong class="command">docker rmi</strong> 」を実施しイメージを削除します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id44">
 <div class="code-block-caption"><span class="caption-number">リスト 6.2 </span><span class="caption-text">コマンド（既存のイメージを削除）</span><a class="headerlink" href="#id44" title="Link to this code">¶</a></div>
@@ -488,7 +489,7 @@ FROM ${ANSIBLE_AGENT_BASE_IMAGE}:${ANSIBLE_AGENT_BASE_IMAGE_TAG}
 <div class="line-block">
 <div class="line">なお、Ansible作業実行時に下記のようなエラーが発生した場合はビルドに失敗しています。</div>
 </div>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Service ita_ansible_agent  Building\nThe command \&#39;/bin/sh -c ansible-galaxy collection install [[インストールしたいコレクション名]]\&#39; returned a non-zero code: 1\n&#39;
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Service ita_ansible_agent  Building\nThe command \'/bin/sh -c ansible-galaxy collection install [[インストールしたいコレクション名]]\' returned a non-zero code: 1\n'
 </pre></div>
 </div>
 </section>
@@ -664,10 +665,10 @@ FROM ${ANSIBLE_AGENT_BASE_IMAGE}:${ANSIBLE_AGENT_BASE_IMAGE_TAG}
 <span class="w"> </span> ita-by-ansible-execute:
 <span class="w"> </span>   extraEnv:
 <span class="w"> </span>     ...
-<span class="gd">-     ANSIBLE_AGENT_IMAGE: &quot;docker.io/exastro/exastro-it-automation-by-ansible-agent&quot;</span>
-<span class="gi">+     ANSIBLE_AGENT_IMAGE: &quot;exastro-ansible-agent-custom&quot;</span>
-<span class="gd">-     ANSIBLE_AGENT_IMAGE_TAG: &quot;&quot;</span>
-<span class="gi">+     ANSIBLE_AGENT_IMAGE_TAG: &quot;devel&quot;</span>
+<span class="gd">-     ANSIBLE_AGENT_IMAGE: "docker.io/exastro/exastro-it-automation-by-ansible-agent"</span>
+<span class="gi">+     ANSIBLE_AGENT_IMAGE: "exastro-ansible-agent-custom"</span>
+<span class="gd">-     ANSIBLE_AGENT_IMAGE_TAG: ""</span>
+<span class="gi">+     ANSIBLE_AGENT_IMAGE_TAG: "devel"</span>
 ...
 </pre></div>
 </div>
@@ -735,7 +736,7 @@ FROM ${ANSIBLE_AGENT_BASE_IMAGE}:${ANSIBLE_AGENT_BASE_IMAGE_TAG}
 <div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 
 <span class="nt">build_arg_defaults</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;--ignore-certs&#39;</span>
+<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">'--ignore-certs'</span>
 
 <span class="nt">images</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">base_image</span><span class="p">:</span>
@@ -748,13 +749,13 @@ FROM ${ANSIBLE_AGENT_BASE_IMAGE}:${ANSIBLE_AGENT_BASE_IMAGE_TAG}
 <span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">ansible_runner</span> <span class="cp">}}</span>
 <span class="w">  </span><span class="nt">system</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">bindep_file</span> <span class="cp">}}</span>
 <span class="w">  </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">python_requirements_file</span> <span class="cp">}}</span>
-<span class="cp">{%</span> <span class="k">if</span> <span class="nv">galaxy_requirements_file</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">if</span> <span class="nv">galaxy_requirements_file</span> <span class="o">==</span> <span class="s2">""</span> <span class="cp">%}</span>
 <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
 <span class="w">  </span><span class="nt">galaxy</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">galaxy_requirements_file</span> <span class="cp">}}</span>
 <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 <span class="w">  </span><span class="nt">python_interpreter</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python3.11&quot;</span>
-<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/python3.11&quot;</span>
+<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">"python3.11"</span>
+<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">"/usr/bin/python3.11"</span>
 
 <span class="nt">additional_build_steps</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">append_base</span><span class="p">:</span>
@@ -1024,7 +1025,7 @@ certifi
 <div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 
 <span class="nt">build_arg_defaults</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;--ignore-certs&#39;</span>
+<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">'--ignore-certs'</span>
 
 <span class="nt">images</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">base_image</span><span class="p">:</span>
@@ -1037,13 +1038,13 @@ certifi
 <span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">ansible_runner</span> <span class="cp">}}</span>
 <span class="w">  </span><span class="nt">system</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">bindep_file</span> <span class="cp">}}</span>
 <span class="w">  </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">python_requirements_file</span> <span class="cp">}}</span>
-<span class="cp">{%</span> <span class="k">if</span> <span class="nv">galaxy_requirements_file</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">if</span> <span class="nv">galaxy_requirements_file</span> <span class="o">==</span> <span class="s2">""</span> <span class="cp">%}</span>
 <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
 <span class="w">  </span><span class="nt">galaxy</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">galaxy_requirements_file</span> <span class="cp">}}</span>
 <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 <span class="w">  </span><span class="nt">python_interpreter</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python3.11&quot;</span>
-<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/python3.11&quot;</span>
+<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">"python3.11"</span>
+<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">"/usr/bin/python3.11"</span>
 
 <span class="nt">additional_build_steps</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">append_base</span><span class="p">:</span>
@@ -1239,7 +1240,7 @@ certifi
 <div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 
 <span class="nt">build_arg_defaults</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;--ignore-certs&#39;</span>
+<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">'--ignore-certs'</span>
 
 <span class="nt">images</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">base_image</span><span class="p">:</span>
@@ -1252,13 +1253,13 @@ certifi
 <span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">ansible_runner</span> <span class="cp">}}</span>
 <span class="w">  </span><span class="nt">system</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">bindep_file</span> <span class="cp">}}</span>
 <span class="w">  </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">python_requirements_file</span> <span class="cp">}}</span>
-<span class="cp">{%</span> <span class="k">if</span> <span class="nv">galaxy_requirements_file</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">if</span> <span class="nv">galaxy_requirements_file</span> <span class="o">==</span> <span class="s2">""</span> <span class="cp">%}</span>
 <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
 <span class="w">  </span><span class="nt">galaxy</span><span class="p">:</span><span class="w"> </span><span class="cp">{{</span> <span class="nv">galaxy_requirements_file</span> <span class="cp">}}</span>
 <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 <span class="w">  </span><span class="nt">python_interpreter</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python39&quot;</span>
-<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/python3.9&quot;</span>
+<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">"python39"</span>
+<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">"/usr/bin/python3.9"</span>
 
 <span class="hll"><span class="nt">additional_build_files</span><span class="p">:</span>
 </span><span class="hll"><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/ansible_module/my_module.py</span>
@@ -1450,7 +1451,7 @@ certifi
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 
 <span class="nt">build_arg_defaults</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;--ignore-certs&#39;</span>
+<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">'--ignore-certs'</span>
 
 <span class="nt">images</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">base_image</span><span class="p">:</span>
@@ -1465,8 +1466,8 @@ certifi
 <span class="w">  </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python-requirements.txt</span>
 <span class="w">  </span><span class="nt">galaxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">galaxy-requirements.yml</span>
 <span class="w">  </span><span class="nt">python_interpreter</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python3.11&quot;</span>
-<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/python3.11&quot;</span>
+<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">"python3.11"</span>
+<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">"/usr/bin/python3.11"</span>
 
 <span class="nt">additional_build_steps</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">append_base</span><span class="p">:</span>
@@ -1758,7 +1759,7 @@ expect
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 
 <span class="nt">build_arg_defaults</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;--ignore-certs&#39;</span>
+<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">'--ignore-certs'</span>
 
 <span class="nt">images</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">base_image</span><span class="p">:</span>
@@ -1773,8 +1774,8 @@ expect
 <span class="w">  </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python-requirements.txt</span>
 <span class="w">  </span><span class="nt">galaxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">galaxy-requirements.yml</span>
 <span class="w">  </span><span class="nt">python_interpreter</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python3.11&quot;</span>
-<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/python3.11&quot;</span>
+<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">"python3.11"</span>
+<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">"/usr/bin/python3.11"</span>
 
 <span class="nt">additional_build_steps</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">append_base</span><span class="p">:</span>
@@ -2098,7 +2099,7 @@ python3.11-devel
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 
 <span class="nt">build_arg_defaults</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;--ignore-certs&#39;</span>
+<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">'--ignore-certs'</span>
 
 <span class="nt">images</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">base_image</span><span class="p">:</span>
@@ -2112,8 +2113,8 @@ python3.11-devel
 <span class="w">  </span><span class="nt">system</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bindep.txt</span>
 <span class="w">  </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python-requirements.txt</span>
 <span class="w">  </span><span class="nt">python_interpreter</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python39&quot;</span>
-<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/python3.9&quot;</span>
+<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">"python39"</span>
+<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">"/usr/bin/python3.9"</span>
 
 <span class="hll"><span class="nt">additional_build_files</span><span class="p">:</span>
 </span><span class="hll"><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/ansible_module/my_module.py</span>

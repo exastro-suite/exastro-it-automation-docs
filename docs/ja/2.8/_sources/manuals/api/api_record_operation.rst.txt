@@ -1126,7 +1126,7 @@ response body
 
      {
          "data" : {
-         "conductor_instance_id" : "conductord作業実行時に採番されたID"
+         "conductor_instance_id" : "Conductor作業実行時に採番されたID"
          }	,
          "message" : "SUCCESS",
          "result"  : "000-00000",

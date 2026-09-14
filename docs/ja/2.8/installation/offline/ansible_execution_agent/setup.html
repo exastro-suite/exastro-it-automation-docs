@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../../ja/2.8/installation/offline/ansible_execution_agent/setup.html" selected>current</option>
-              <option value="../../../../../ja/2.8/installation/offline/ansible_execution_agent/setup.html" selected>2.8(current)</option>
+              <option value="../../../../../ja/2.9/installation/offline/ansible_execution_agent/setup.html">current</option>
+              <option value="../../../../../ja/2.9/installation/offline/ansible_execution_agent/setup.html">2.9(current)</option>
+              <option value="../../../../../ja/2.8/installation/offline/ansible_execution_agent/setup.html" selected>2.8</option>
               <option value="../../../../../ja/2.7/installation/offline/ansible_execution_agent/setup.html">2.7</option>
               <option value="../../../../../ja/2.6/installation/offline/ansible_execution_agent/setup.html">2.6</option>
               <option value="../../../../../ja/2.5/installation/offline/ansible_execution_agent/setup.html">2.5</option>
@@ -592,8 +593,8 @@ git<span class="w"> </span>--version
 git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--list
 
 <span class="c1"># 設定されていない場合は設定</span>
-<span class="c1"># git config --global user.name &quot;your_name&quot;</span>
-<span class="c1"># git config --global user.email &quot;your_email@example.com&quot;</span>
+<span class="c1"># git config --global user.name "your_name"</span>
+<span class="c1"># git config --global user.email "your_email@example.com"</span>
 </pre></div>
 </div>
 </div>
@@ -644,12 +645,12 @@ certifi
 charset-normalizer
 click
 clickclick
-colorama ; platform_system == &quot;Windows&quot;
+colorama ; platform_system == "Windows"
 connexion[swagger-ui,uvicorn]
 distro
 flask
 idna
-importlib-metadata ; python_version &lt; &quot;3.10&quot;
+importlib-metadata ; python_version &lt; "3.10"
 inflection
 itsdangerous
 jinja2
@@ -677,7 +678,7 @@ six
 swagger-ui-bundle
 urllib3
 werkzeug
-zipp ; python_version &lt; &quot;3.10&quot;
+zipp ; python_version &lt; "3.10"
 </pre></div>
 </div>
 </div>
@@ -800,23 +801,23 @@ cp<span class="w"> </span>/usr/share/pki/ca-trust-source/anchors/ZscalerRootCert
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 
 <span class="nt">build_arg_defaults</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;--ignore-certs&#39;</span>
+<span class="w">  </span><span class="nt">ANSIBLE_GALAXY_CLI_COLLECTION_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">'--ignore-certs'</span>
 
 <span class="nt">images</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">base_image</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;registry.access.redhat.com/ubi9/ubi-init:latest&quot;</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"registry.access.redhat.com/ubi9/ubi-init:latest"</span>
 
 <span class="nt">dependencies</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ansible_core</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ansible_core&quot;</span>
+<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="s">"ansible_core"</span>
 <span class="w">  </span><span class="nt">ansible_runner</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ansible_runner&quot;</span>
-<span class="w">  </span><span class="nt">system</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;builder.txt&quot;</span>
-<span class="w">  </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;requirements.txt&quot;</span>
-<span class="w">  </span><span class="nt">galaxy</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;galaxy_collection_requirements.yml&quot;</span>
+<span class="w">    </span><span class="nt">package_pip</span><span class="p">:</span><span class="w"> </span><span class="s">"ansible_runner"</span>
+<span class="w">  </span><span class="nt">system</span><span class="p">:</span><span class="w"> </span><span class="s">"builder.txt"</span>
+<span class="w">  </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="s">"requirements.txt"</span>
+<span class="w">  </span><span class="nt">galaxy</span><span class="p">:</span><span class="w"> </span><span class="s">"galaxy_collection_requirements.yml"</span>
 <span class="w">  </span><span class="nt">python_interpreter</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python311&quot;</span>
-<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/python3.11&quot;</span>
+<span class="w">    </span><span class="nt">package_system</span><span class="p">:</span><span class="w"> </span><span class="s">"python311"</span>
+<span class="w">    </span><span class="nt">python_path</span><span class="p">:</span><span class="w"> </span><span class="s">"/usr/bin/python3.11"</span>
 
 <span class="c1"># --- Offline artifacts ---</span>
 <span class="c1"># AWS CLI等の追加ツールが必要な場合は、以下のコメントを解除してください</span>
@@ -830,7 +831,7 @@ cp<span class="w"> </span>/usr/share/pki/ca-trust-source/anchors/ZscalerRootCert
 <span class="w">  </span><span class="nt">append_base</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RUN /usr/bin/python3.11 -m pip install --upgrade pip</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RUN /usr/bin/python3.11 -m pip install bindep pyyaml packaging</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RUN $PYCMD -m pip install --no-cache-dir &#39;dumb-init==1.2.5&#39;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RUN $PYCMD -m pip install --no-cache-dir 'dumb-init==1.2.5'</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RUN update-crypto-policies --set DEFAULT:SHA1</span>
 
 <span class="w">    </span><span class="c1"># AWS CLI v2 (offline) - 必要な場合のみコメント解除</span>
@@ -840,7 +841,7 @@ cp<span class="w"> </span>/usr/share/pki/ca-trust-source/anchors/ZscalerRootCert
 <span class="w">    </span><span class="c1">#- RUN aws --version</span>
 
 <span class="nt">options</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">package_manager_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/dnf&quot;</span>
+<span class="w">  </span><span class="nt">package_manager_path</span><span class="p">:</span><span class="w"> </span><span class="s">"/usr/bin/dnf"</span>
 <span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
 </pre></div>
 </div>
@@ -1078,7 +1079,7 @@ sudo<span class="w"> </span>setenforce<span class="w"> </span><span class="m">0<
 getenforce
 
 <span class="c1"># 恒久的に無効化（設定ファイルの編集）</span>
-sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/SELINUX=enforcing/SELINUX=disabled/&#39;</span><span class="w"> </span>/etc/selinux/config
+sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/SELINUX=enforcing/SELINUX=disabled/'</span><span class="w"> </span>/etc/selinux/config
 
 <span class="c1"># 設定を反映するため再起動</span>
 sudo<span class="w"> </span>reboot
@@ -1116,7 +1117,7 @@ sudo<span class="w"> </span>useradd<span class="w"> </span>-g<span class="w"> </
 <div class="literal-block-wrapper docutils container" id="id82">
 <div class="code-block-caption"><span class="caption-number">リスト 452 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id82" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># sudoers設定ファイルの作成</span>
-sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo &quot;exastro_user ALL = (root) NOPASSWD: ALL&quot; &gt; /etc/sudoers.d/exastro_user&#39;</span>
+sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'echo "exastro_user ALL = (root) NOPASSWD: ALL" &gt; /etc/sudoers.d/exastro_user'</span>
 
 <span class="c1"># 権限の確認</span>
 sudo<span class="w"> </span>cat<span class="w"> </span>/etc/sudoers.d/exastro_user
@@ -1153,7 +1154,7 @@ python3.11<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> 
 <section id="id27">
 <h4>createrepoのインストール<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h4>
 <div class="line-block">
-<div class="line">ローカルリポジトリ作成用のcreatereopoをインストールします。</div>
+<div class="line">ローカルリポジトリ作成用のcreaterepoをインストールします。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id84">
 <div class="code-block-caption"><span class="caption-number">リスト 454 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id84" title="Link to this code">¶</a></div>
@@ -1199,7 +1200,7 @@ sudo<span class="w"> </span>yum<span class="w"> </span>clean<span class="w"> </s
 sudo<span class="w"> </span>yum<span class="w"> </span>makecache
 
 <span class="c1"># gccと依存パッケージのインストール</span>
-sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>gcc<span class="w"> </span>glibc-devel<span class="w"> </span>kernel-headers<span class="w"> </span>--disablerepo<span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="w"> </span>--enablerepo<span class="o">=</span><span class="nb">local</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>gcc<span class="w"> </span>glibc-devel<span class="w"> </span>kernel-headers<span class="w"> </span>--disablerepo<span class="o">=</span><span class="s1">'*'</span><span class="w"> </span>--enablerepo<span class="o">=</span><span class="nb">local</span>
 
 <span class="c1"># リポジトリ設定ファイルの削除</span>
 sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/etc/yum.repos.d/local.repo
@@ -1292,7 +1293,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 sudo<span class="w"> </span>python3.11<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>*.whl
 
 <span class="c1"># インストール確認</span>
-python3.11<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import keyrings.alt; print(&#39;OK&#39;)&quot;</span>
+python3.11<span class="w"> </span>-c<span class="w"> </span><span class="s2">"import keyrings.alt; print('OK')"</span>
 
 <span class="c1"># 元のディレクトリに戻る</span>
 <span class="nb">cd</span><span class="w"> </span>~/offline_install_packages
@@ -1516,10 +1517,10 @@ sudo<span class="w"> </span>su<span class="w"> </span>-<span class="w"> </span>e
 
 <span class="c1"># XDG_RUNTIME_DIRの設定</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">XDG_RUNTIME_DIR</span><span class="o">=</span>/run/user/6000
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export XDG_RUNTIME_DIR=</span><span class="si">${</span><span class="nv">XDG_RUNTIME_DIR</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/.bashrc
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"export XDG_RUNTIME_DIR=</span><span class="si">${</span><span class="nv">XDG_RUNTIME_DIR</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/.bashrc
 
 <span class="c1"># BUILDAH_ISOLATIONの設定</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export BUILDAH_ISOLATION=chroot&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/.bashrc
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"export BUILDAH_ISOLATION=chroot"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/.bashrc
 </pre></div>
 </div>
 </div>
@@ -1545,10 +1546,10 @@ podman<span class="w"> </span>unshare<span class="w"> </span>chown<span class="w
 
 <span class="c1"># DOCKER_HOSTの設定</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">DOCKER_HOST</span><span class="o">=</span>unix:///run/user/6000/podman/podman.sock
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export DOCKER_HOST=</span><span class="si">${</span><span class="nv">DOCKER_HOST</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/.bashrc
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"export DOCKER_HOST=</span><span class="si">${</span><span class="nv">DOCKER_HOST</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/.bashrc
 
 <span class="c1"># docker-composeのエイリアス設定</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;alias docker-compose=&#39;podman unshare docker-compose&#39;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/.bashrc
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"alias docker-compose='podman unshare docker-compose'"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/.bashrc
 </pre></div>
 </div>
 </div>
@@ -1862,7 +1863,7 @@ sudo<span class="w"> </span>su<span class="w"> </span>-<span class="w"> </span>e
 <p class="admonition-title">Tip</p>
 <div class="line-block">
 <div class="line">パラメータの詳細については、 <a class="reference internal" href="../../online/ansible_execution_agent/setup.html#ansible-execution-user-recommendation-detail"><span class="std std-ref">パラメータの詳細</span></a> を参照してください。</div>
-<div class="line">パラメータの変更・反映方法方法については、 <a class="reference internal" href="../../online/ansible_execution_agent/setup.html#ansible-execution-parameter-change"><span class="std std-ref">パラメータの変更・反映方法方法について</span></a> を参照してください。</div>
+<div class="line">パラメータの変更・反映方法については、 <a class="reference internal" href="../../online/ansible_execution_agent/setup.html#ansible-execution-parameter-change"><span class="std std-ref">パラメータの変更・反映方法について</span></a> を参照してください。</div>
 <div class="line">MOVEMENT_LIMIT・EXECUTION_LIMITの影響については、 <a class="reference internal" href="../../online/ansible_execution_agent/setup.html#ansible-execution-limits-impact"><span class="std std-ref">MOVEMENT_LIMIT・EXECUTION_LIMITの影響</span></a> を参照してください。</div>
 </div>
 </div>
@@ -1885,7 +1886,7 @@ sudo<span class="w"> </span>su<span class="w"> </span>-<span class="w"> </span>e
 
 <span class="k">[Service]</span>
 <span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/cmn/apl/exastro/ita_ag_ansible_execution/</span>
-<span class="na">ExecStart</span><span class="o">=</span><span class="s">/cmn/apl/exastro/ita_ag_ansible_execution/agent/entrypoint.sh /cmn/apl/exastro/（サービスID）/.env /cmn/apl/exastro/ita_ag_ansible_execution/ /cmn/apl/exastro/（サービスID）/storage &quot;/home/exastro_user/.local/bin/poetry run python3&quot;</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/cmn/apl/exastro/ita_ag_ansible_execution/agent/entrypoint.sh /cmn/apl/exastro/（サービスID）/.env /cmn/apl/exastro/ita_ag_ansible_execution/ /cmn/apl/exastro/（サービスID）/storage "/home/exastro_user/.local/bin/poetry run python3"</span>
 <span class="na">ExecReload</span><span class="o">=</span><span class="s">/bin/kill -HUP $MAINPID</span>
 <span class="na">ExecStop</span><span class="o">=</span><span class="s">/bin/kill $MAINPID</span>
 <span class="na">Restart</span><span class="o">=</span><span class="s">always</span>

@@ -62,7 +62,7 @@
    * - ita-by-ansible-legacy-vars-listup
      - Ansible-Legacy変数刈取
    * - ita-by-ansible-pioneer-vars-listup
-     - Ansible-Pionner変数刈取
+     - Ansible-Pioneer変数刈取
    * - ita-by-ansible-towermaster-sync
      - Ansible Automation controller同期
    * - ita-by-cicd-for-iac

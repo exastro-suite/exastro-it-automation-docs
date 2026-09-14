@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/manuals/it_automation_base/conductor.html" selected>current</option>
-              <option value="../../../../ja/2.8/manuals/it_automation_base/conductor.html" selected>2.8(current)</option>
+              <option value="../../../../ja/2.9/manuals/it_automation_base/conductor.html">current</option>
+              <option value="../../../../ja/2.9/manuals/it_automation_base/conductor.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/manuals/it_automation_base/conductor.html" selected>2.8</option>
               <option value="../../../../ja/2.7/manuals/it_automation_base/conductor.html">2.7</option>
               <option value="../../../../ja/2.6/manuals/it_automation_base/conductor.html">2.6</option>
               <option value="../../../../ja/2.5/manuals/it_automation_base/conductor.html">2.5</option>
@@ -402,7 +403,7 @@
 </li>
 <li><div class="line-block">
 <div class="line">「Conductor call」で実行した作業フローについては、それぞれ個別に共有ディレクトリパスを持ちます。</div>
-<div class="line">（作業フローを跨いでいるMovemetについては、共有の対象外となります。）</div>
+<div class="line">（作業フローを跨いでいるMovementについては、共有の対象外となります。）</div>
 </div>
 </li>
 </ul>
@@ -1870,7 +1871,7 @@ callの実行結果による条件分岐を設定します。</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>作業実行 Conductor</p></td>
-<td><p>選択したしたConductorが表示されます。</p></td>
+<td><p>選択したConductorが表示されます。</p></td>
 <td><p>-</p></td>
 <td><p>自動入力</p></td>
 <td></td>
@@ -2003,7 +2004,7 @@ callの実行結果による条件分岐を設定します。</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>停止解除</p></td>
-<td><p>「Couductor pause」Nodeの三角アイコンをクリックすることで解除します。</p></td>
+<td><p>「Conductor pause」Nodeの三角アイコンをクリックすることで解除します。</p></td>
 <td><p>-</p></td>
 <td><p>ボタン</p></td>
 <td></td>
@@ -2553,19 +2554,19 @@ ductorインスタンスID:__CONDUCTOR_INSTANCE_ID__,
 <h5><span class="section-number">7.6.1.2.1. </span>通知ログの構造<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
  <span class="p">{</span>
-     <span class="s2">&quot;conductor_status_id&quot;</span><span class="p">:</span> <span class="s2">&quot;XXX&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;exec_time&quot;</span><span class="p">:</span> <span class="s2">&quot;YYYY/MM/dd HH:ii:ss&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">[</span>
+     <span class="s2">"conductor_status_id"</span><span class="p">:</span> <span class="s2">"XXX"</span><span class="p">,</span>
+     <span class="s2">"exec_time"</span><span class="p">:</span> <span class="s2">"YYYY/MM/dd HH:ii:ss"</span><span class="p">,</span>
+     <span class="s2">"result"</span><span class="p">:</span> <span class="p">[</span>
          <span class="p">{</span>
-             <span class="s2">&quot;notice_name&quot;</span><span class="p">:</span> <span class="s2">&quot;XXX&quot;</span><span class="p">,</span>
-             <span class="s2">&quot;notice_info&quot;</span><span class="p">:</span> <span class="p">[</span>
+             <span class="s2">"notice_name"</span><span class="p">:</span> <span class="s2">"XXX"</span><span class="p">,</span>
+             <span class="s2">"notice_info"</span><span class="p">:</span> <span class="p">[</span>
                  <span class="n">XXX</span>
              <span class="p">],</span>
-             <span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="s2">&quot;XXX&quot;</span><span class="p">,</span>
-             <span class="s2">&quot;response.headers&quot;</span><span class="p">:</span> <span class="p">{</span>
-                   <span class="s2">&quot;XXX&quot;</span><span class="p">:</span> <span class="s2">&quot;XXX&quot;</span>
+             <span class="s2">"status_code"</span><span class="p">:</span> <span class="s2">"XXX"</span><span class="p">,</span>
+             <span class="s2">"response.headers"</span><span class="p">:</span> <span class="p">{</span>
+                   <span class="s2">"XXX"</span><span class="p">:</span> <span class="s2">"XXX"</span>
                <span class="p">},</span>
-             <span class="s2">&quot;response.text&quot;</span><span class="p">:</span> <span class="s2">&quot;XXX&quot;</span>
+             <span class="s2">"response.text"</span><span class="p">:</span> <span class="s2">"XXX"</span>
          <span class="p">}</span>
      <span class="p">]</span>
   <span class="p">}</span>
@@ -2577,27 +2578,27 @@ ductorインスタンスID:__CONDUCTOR_INSTANCE_ID__,
 <h5><span class="section-number">7.6.1.2.2. </span>例) 通知実行ログ(正常)<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
     <span class="p">{</span>
-        <span class="s2">&quot;conductor_status_id&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;exec_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2023/07/05 16:29:50&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">"conductor_status_id"</span><span class="p">:</span> <span class="s2">"3"</span><span class="p">,</span>
+        <span class="s2">"exec_time"</span><span class="p">:</span> <span class="s2">"2023/07/05 16:29:50"</span><span class="p">,</span>
+        <span class="s2">"result"</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;notice_name&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;notice_info&quot;</span><span class="p">:</span> <span class="p">[</span>
-                    <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;4&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;5&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;6&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;7&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;8&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;9&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;10&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;11&quot;</span>
+                <span class="s2">"notice_name"</span><span class="p">:</span> <span class="s2">"test"</span><span class="p">,</span>
+                <span class="s2">"notice_info"</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">"3"</span><span class="p">,</span>
+                    <span class="s2">"4"</span><span class="p">,</span>
+                    <span class="s2">"5"</span><span class="p">,</span>
+                    <span class="s2">"6"</span><span class="p">,</span>
+                    <span class="s2">"7"</span><span class="p">,</span>
+                    <span class="s2">"8"</span><span class="p">,</span>
+                    <span class="s2">"9"</span><span class="p">,</span>
+                    <span class="s2">"10"</span><span class="p">,</span>
+                    <span class="s2">"11"</span>
                 <span class="p">],</span>
-                <span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
-                <span class="s2">&quot;response.headers&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="s2">&quot;XXX&quot;</span><span class="p">:</span> <span class="s2">&quot;XXX&quot;</span>
+                <span class="s2">"status_code"</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+                <span class="s2">"response.headers"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">"XXX"</span><span class="p">:</span> <span class="s2">"XXX"</span>
                 <span class="p">},</span>
-                <span class="s2">&quot;response.text&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
+                <span class="s2">"response.text"</span><span class="p">:</span> <span class="s2">"1"</span>
             <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">}</span>
@@ -2609,21 +2610,21 @@ ductorインスタンスID:__CONDUCTOR_INSTANCE_ID__,
 <h5><span class="section-number">7.6.1.2.3. </span>例) 通知実行ログ(異常)<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
     <span class="p">{</span>
-        <span class="s2">&quot;conductor_status_id&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;exec_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2023/07/05 19:46:06&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">"conductor_status_id"</span><span class="p">:</span> <span class="s2">"3"</span><span class="p">,</span>
+        <span class="s2">"exec_time"</span><span class="p">:</span> <span class="s2">"2023/07/05 19:46:06"</span><span class="p">,</span>
+        <span class="s2">"result"</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;notice_name&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;notice_info&quot;</span><span class="p">:</span> <span class="p">[</span>
-                    <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;6&quot;</span>
+                <span class="s2">"notice_name"</span><span class="p">:</span> <span class="s2">"test"</span><span class="p">,</span>
+                <span class="s2">"notice_info"</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">"3"</span><span class="p">,</span>
+                    <span class="s2">"6"</span>
                 <span class="p">],</span>
-                <span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
-                <span class="s2">&quot;response.headers&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="s2">&quot;XXX&quot;</span><span class="p">:</span> <span class="s2">&quot;XXX&quot;</span>
+                <span class="s2">"status_code"</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+                <span class="s2">"response.headers"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">"XXX"</span><span class="p">:</span> <span class="s2">"XXX"</span>
                 <span class="p">},</span>
-                <span class="s2">&quot;response.text&quot;</span><span class="p">:</span> <span class="s2">&quot;Invalid webhook URL&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;err_type&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTPError&quot;</span>
+                <span class="s2">"response.text"</span><span class="p">:</span> <span class="s2">"Invalid webhook URL"</span><span class="p">,</span>
+                <span class="s2">"err_type"</span><span class="p">:</span> <span class="s2">"HTTPError"</span>
             <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">}</span>

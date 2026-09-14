@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/manuals/maintenance/monitoring.html">current</option>
-              <option value="../../../../ja/2.8/manuals/maintenance/monitoring.html">2.8(current)</option>
+              <option value="../../../../ja/2.9/manuals/maintenance/monitoring.html">current</option>
+              <option value="../../../../ja/2.9/manuals/maintenance/monitoring.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/manuals/maintenance/monitoring.html">2.8</option>
               <option value="../../../../ja/2.7/manuals/maintenance/monitoring.html">2.7</option>
               <option value="../../../../ja/2.6/manuals/maintenance/monitoring.html" selected>2.6</option>
               <option value="../../../../ja/2.5/manuals/maintenance/monitoring.html">2.5</option>
@@ -348,7 +349,7 @@ helm<span class="w"> </span>repo<span class="w"> </span>update
 <span class="linenos"> 4</span><span class="w"> </span>
 <span class="linenos"> 5</span><span class="w"> </span>    ## Note that since version 6.0 the variable ZBX_SERVER_PORT is not supported anymore. Instead, add a colon (:) followed by the port number to the end of ZBX_SERVER_HOST value.
 <span class="linenos"> 6</span><span class="w"> </span>    - name: ZBX_SERVER_HOST
-<span class="linenos"> 7</span><span class="gd">-      value: &quot;127.0.0.1&quot;</span>
+<span class="linenos"> 7</span><span class="gd">-      value: "127.0.0.1"</span>
 <span class="linenos"> 8</span><span class="gi">+      value: {ZABBIXサーバーの接続先}</span>
 <span class="linenos"> 9</span><span class="w"> </span>    ## The variable is used to specify debug level. By default, value is 3
 <span class="linenos">10</span><span class="w"> </span>    - name: ZBX_DEBUGLEVEL
@@ -767,15 +768,15 @@ zabbix-proxy-d8cb67dfc-88ns9<span class="w">                       </span><span 
 <div class="literal-block-wrapper docutils container" id="id34">
 <div class="code-block-caption"><span class="caption-number">リスト 5.61 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">(</span><span class="se">\</span>
-<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{range .items[*]}{@.metadata.name}{&quot;\n&quot;}&#39;</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>sts<span class="w">  </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{range .items[*]}{@.metadata.name}{&quot;\n&quot;}&#39;</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>ds<span class="w">  </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{range .items[*]}{@.metadata.name}{&quot;\n&quot;}&#39;</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>cj<span class="w">  </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{range .items[*]}{@.metadata.name}{&quot;\n&quot;}&#39;</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
-<span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;/^$/d&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-e<span class="w"> </span><span class="s1">&#39;/^ita-web-server/d&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-e<span class="w"> </span><span class="s1">&#39;/^platform-web/d&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-e<span class="w"> </span><span class="s1">&#39;s|^|^exastro-suite\\.exastro\\.|&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-e<span class="w"> </span><span class="s1">&#39;s|$|\\..*\\.log$|&#39;</span>
+<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .items[*]}{@.metadata.name}{"\n"}'</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>sts<span class="w">  </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .items[*]}{@.metadata.name}{"\n"}'</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>ds<span class="w">  </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .items[*]}{@.metadata.name}{"\n"}'</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>cj<span class="w">  </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .items[*]}{@.metadata.name}{"\n"}'</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+<span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">'/^$/d'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-e<span class="w"> </span><span class="s1">'/^ita-web-server/d'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-e<span class="w"> </span><span class="s1">'/^platform-web/d'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-e<span class="w"> </span><span class="s1">'s|^|^exastro-suite\\.exastro\\.|'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-e<span class="w"> </span><span class="s1">'s|$|\\..*\\.log$|'</span>
 </pre></div>
 </div>
 </div>
@@ -1090,7 +1091,7 @@ zabbix-proxy-d8cb67dfc-88ns9<span class="w">                       </span><span 
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.6/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

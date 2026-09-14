@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../../ja/2.8/kb/performance/web_server/ita_api_oase_receiver_wsgi.html" selected>current</option>
-              <option value="../../../../../ja/2.8/kb/performance/web_server/ita_api_oase_receiver_wsgi.html" selected>2.8(current)</option>
+              <option value="../../../../../ja/2.9/kb/performance/web_server/ita_api_oase_receiver_wsgi.html">current</option>
+              <option value="../../../../../ja/2.9/kb/performance/web_server/ita_api_oase_receiver_wsgi.html">2.9(current)</option>
+              <option value="../../../../../ja/2.8/kb/performance/web_server/ita_api_oase_receiver_wsgi.html" selected>2.8</option>
               <option value="../../../../../ja/2.7/kb/performance/web_server/ita_api_oase_receiver_wsgi.html">2.7</option>
               <option value="../../../../../ja/2.6/kb/performance/web_server/ita_api_oase_receiver_wsgi.html">2.6</option>
               <option value="../../../../../ja/2.5/kb/performance/web_server/ita_api_oase_receiver_wsgi.html">2.5</option>
@@ -224,15 +225,15 @@ exastro-it-automation:
 # 中略
 <span class="w"> </span> ita-api-oase-receiver:
 <span class="w"> </span>   image:
-<span class="w"> </span>     repository: &quot;docker.io/exastro/exastro-it-automation-api-oase-receiver&quot;
-<span class="w"> </span>     tag: &quot;&quot;
+<span class="w"> </span>     repository: "docker.io/exastro/exastro-it-automation-api-oase-receiver"
+<span class="w"> </span>     tag: ""
 <span class="w"> </span>     pullPolicy: IfNotPresent
 <span class="w"> </span>   extraEnv:
-<span class="w"> </span>     LISTEN_PORT: &quot;8000&quot;
-<span class="w"> </span>     PLATFORM_API_HOST: &quot;platform-api&quot;
-<span class="w"> </span>     PLATFORM_API_PORT: &quot;8000&quot;
-<span class="gi">+     OASE_RECEIVER_WSGI_PROCESSES: &quot;7&quot;</span>
-<span class="gi">+     OASE_RECEIVER_WSGI_THREADS: &quot;2&quot;</span>
+<span class="w"> </span>     LISTEN_PORT: "8000"
+<span class="w"> </span>     PLATFORM_API_HOST: "platform-api"
+<span class="w"> </span>     PLATFORM_API_PORT: "8000"
+<span class="gi">+     OASE_RECEIVER_WSGI_PROCESSES: "7"</span>
+<span class="gi">+     OASE_RECEIVER_WSGI_THREADS: "2"</span>
 </pre></div>
 </div>
 <p>Exastroのデフォルト設定はプロセス数2、スレッド数8です。この設定では最大2コアまでしか使えませんが、プロセス数を7に増やすことで7コアを並列活用でき、CPUバウンドなラベル付与処理の高速化が期待できます。</p>

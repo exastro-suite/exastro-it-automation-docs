@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -70,8 +70,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/learn/terraform/terraform.html">current</option>
-              <option value="../../../../ja/2.8/learn/terraform/terraform.html">2.8(current)</option>
+              <option value="../../../../ja/2.9/learn/terraform/terraform.html">current</option>
+              <option value="../../../../ja/2.9/learn/terraform/terraform.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/learn/terraform/terraform.html">2.8</option>
               <option value="../../../../ja/2.7/learn/terraform/terraform.html">2.7</option>
               <option value="../../../../ja/2.6/learn/terraform/terraform.html">2.6</option>
               <option value="../../../../ja/2.5/learn/terraform/terraform.html" selected>2.5</option>
@@ -319,7 +320,7 @@
 </div>
 <div class="literal-block-wrapper docutils container" id="id14">
 <div class="code-block-caption"><span class="caption-text">main.tf</span><a class="headerlink" href="#id14" title="Link to this code">¶</a></div>
-<div class="highlight-hcl notranslate"><div class="highlight"><pre><span></span><span class="kr">provider</span><span class="w"> </span><span class="nv">&quot;azurerm&quot;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight-hcl notranslate"><div class="highlight"><pre><span></span><span class="kr">provider</span><span class="w"> </span><span class="nv">"azurerm"</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nb">features</span><span class="w"> </span><span class="p">{}</span>
 <span class="w">  </span><span class="na">subscription_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.subscription_id</span>
 <span class="w">  </span><span class="na">client_id</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nv">var.client_id</span>
@@ -327,72 +328,72 @@
 <span class="w">  </span><span class="na">tenant_id</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nv">var.tenant_id</span>
 <span class="p">}</span>
 
-<span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;azurerm_resource_group&quot;</span><span class="w"> </span><span class="nv">&quot;hogehoge&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="kr">resource</span><span class="w"> </span><span class="nc">"azurerm_resource_group"</span><span class="w"> </span><span class="nv">"hogehoge"</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.resource_group_name</span>
 <span class="w">  </span><span class="na">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.location</span>
 <span class="p">}</span>
 
-<span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;azurerm_resource_group&quot;</span><span class="w"> </span><span class="nv">&quot;hogehoge&quot;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;terraform-ita-test99&quot;</span>
+<span class="kr">resource</span><span class="w"> </span><span class="nc">"azurerm_resource_group"</span><span class="w"> </span><span class="nv">"hogehoge"</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"terraform-ita-test99"</span>
 <span class="w">  </span><span class="na">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.location</span>
 <span class="p">}</span>
 
 <span class="cm">/*</span>
-<span class="cm">resource &quot;azurerm_network_security_group&quot; &quot;hogehoge&quot; {</span>
+<span class="cm">resource "azurerm_network_security_group" "hogehoge" {</span>
 <span class="cm">    name =var.security_group</span>
 <span class="cm">    location = azurerm_resource_group.hogehoge.location</span>
 <span class="cm">    resource_group_name = azurerm_resource_group.hogehoge.name</span>
 
 <span class="cm">    security_rule {</span>
-<span class="cm">        name                       = &quot;SSH&quot;</span>
+<span class="cm">        name                       = "SSH"</span>
 <span class="cm">        priority                   = 1001</span>
-<span class="cm">        direction                  = &quot;Inbound&quot;</span>
-<span class="cm">        access                     = &quot;Allow&quot;</span>
-<span class="cm">        protocol                   = &quot;Tcp&quot;</span>
-<span class="cm">        source_port_range          = &quot;*&quot;</span>
-<span class="cm">        destination_port_range     = &quot;22&quot;</span>
-<span class="cm">        source_address_prefix      = &quot;*&quot;</span>
-<span class="cm">        destination_address_prefix = &quot;*&quot;</span>
+<span class="cm">        direction                  = "Inbound"</span>
+<span class="cm">        access                     = "Allow"</span>
+<span class="cm">        protocol                   = "Tcp"</span>
+<span class="cm">        source_port_range          = "*"</span>
+<span class="cm">        destination_port_range     = "22"</span>
+<span class="cm">        source_address_prefix      = "*"</span>
+<span class="cm">        destination_address_prefix = "*"</span>
 <span class="cm">    }</span>
 <span class="cm">    security_rule {</span>
-<span class="cm">        name                       = &quot;HTTP&quot;</span>
+<span class="cm">        name                       = "HTTP"</span>
 <span class="cm">        priority                   = 1002</span>
-<span class="cm">        direction                  = &quot;Inbound&quot;</span>
-<span class="cm">        access                     = &quot;Allow&quot;</span>
-<span class="cm">        protocol                   = &quot;Tcp&quot;</span>
-<span class="cm">        source_port_range          = &quot;*&quot;</span>
-<span class="cm">        destination_port_range     = &quot;80&quot;</span>
-<span class="cm">        source_address_prefix      = &quot;*&quot;</span>
-<span class="cm">        destination_address_prefix = &quot;*&quot;</span>
+<span class="cm">        direction                  = "Inbound"</span>
+<span class="cm">        access                     = "Allow"</span>
+<span class="cm">        protocol                   = "Tcp"</span>
+<span class="cm">        source_port_range          = "*"</span>
+<span class="cm">        destination_port_range     = "80"</span>
+<span class="cm">        source_address_prefix      = "*"</span>
+<span class="cm">        destination_address_prefix = "*"</span>
 <span class="cm">    }</span>
 <span class="cm">}</span>
 
-<span class="cm">resource &quot;azurerm_virtual_network&quot; &quot;hogehoge&quot; {</span>
+<span class="cm">resource "azurerm_virtual_network" "hogehoge" {</span>
 <span class="cm">  name = var.Vnet_name</span>
 <span class="cm">  address_space = [var.Vnet_address_space]</span>
 <span class="cm">  location = azurerm_resource_group.hogehoge.location</span>
 <span class="cm">  resource_group_name = azurerm_resource_group.hogehoge.name</span>
 <span class="cm">}</span>
 
-<span class="cm">resource &quot;azurerm_subnet&quot; &quot;hogehoge&quot; {</span>
+<span class="cm">resource "azurerm_subnet" "hogehoge" {</span>
 <span class="cm">    name                 = var.subnet_name</span>
 <span class="cm">    resource_group_name  = azurerm_resource_group.hogehoge.name</span>
 <span class="cm">    virtual_network_name = azurerm_virtual_network.hogehoge.name</span>
 <span class="cm">    address_prefixes     = [var.address_prefixes]</span>
 <span class="cm">}</span>
 
-<span class="cm">resource &quot;azurerm_public_ip&quot; &quot;hogehoge&quot; {</span>
+<span class="cm">resource "azurerm_public_ip" "hogehoge" {</span>
 <span class="cm">  count                 = var.VM_count</span>
-<span class="cm">  name                  = &quot;${var.public_ip_name}-${count.index}&quot;</span>
+<span class="cm">  name                  = "${var.public_ip_name}-${count.index}"</span>
 <span class="cm">  location              = azurerm_resource_group.hogehoge.location</span>
 <span class="cm">  resource_group_name   = azurerm_resource_group.hogehoge.name</span>
 <span class="cm">  allocation_method     = var.allocation_method</span>
-<span class="cm">  domain_name_label     = &quot;${var.domain_name_label}-${count.index}&quot;</span>
+<span class="cm">  domain_name_label     = "${var.domain_name_label}-${count.index}"</span>
 <span class="cm">}</span>
 
-<span class="cm">resource &quot;azurerm_network_interface&quot; &quot;hogehoge&quot; {</span>
+<span class="cm">resource "azurerm_network_interface" "hogehoge" {</span>
 <span class="cm">    count               = var.VM_count</span>
-<span class="cm">    name                = &quot;${var.network_interface_name}-${count.index}&quot;</span>
+<span class="cm">    name                = "${var.network_interface_name}-${count.index}"</span>
 <span class="cm">    location            = azurerm_resource_group.hogehoge.location</span>
 <span class="cm">    resource_group_name = azurerm_resource_group.hogehoge.name</span>
 
@@ -404,15 +405,15 @@
 <span class="cm">    }</span>
 <span class="cm">}</span>
 
-<span class="cm">resource &quot;azurerm_network_interface_security_group_association&quot; &quot;hogehoge&quot; {</span>
+<span class="cm">resource "azurerm_network_interface_security_group_association" "hogehoge" {</span>
 <span class="cm">  count = var.VM_count</span>
 <span class="cm">  network_interface_id      = azurerm_network_interface.hogehoge[count.index].id</span>
 <span class="cm">  network_security_group_id = azurerm_network_security_group.hogehoge.id</span>
 <span class="cm">}</span>
 
-<span class="cm">resource &quot;azurerm_linux_virtual_machine&quot; &quot;hogehoge&quot; {</span>
+<span class="cm">resource "azurerm_linux_virtual_machine" "hogehoge" {</span>
 <span class="cm">  count                 = var.VM_count</span>
-<span class="cm">  name                  = &quot;${var.VM_name}-${count.index}&quot;</span>
+<span class="cm">  name                  = "${var.VM_name}-${count.index}"</span>
 <span class="cm">  resource_group_name   = azurerm_resource_group.hogehoge.name</span>
 <span class="cm">  location              = azurerm_resource_group.hogehoge.location</span>
 <span class="cm">  size                  = var.VM_size</span>
@@ -425,7 +426,7 @@
 <span class="cm">  }</span>
 
 <span class="cm">  os_disk {</span>
-<span class="cm">    name                 = &quot;${var.os_disk_name}-${count.index}&quot;</span>
+<span class="cm">    name                 = "${var.os_disk_name}-${count.index}"</span>
 <span class="cm">    caching              = var.caching</span>
 <span class="cm">    storage_account_type = var.storage_account_type</span>
 <span class="cm">  }</span>
@@ -443,35 +444,35 @@
 </div>
 <div class="literal-block-wrapper docutils container" id="id15">
 <div class="code-block-caption"><span class="caption-text">variables.tf</span><a class="headerlink" href="#id15" title="Link to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>variable<span class="w"> </span><span class="s2">&quot;subscription_id&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;tenant_id&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;client_id&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;client_secret&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;resource_group_name&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;location&quot;</span><span class="w"> </span><span class="o">{}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>variable<span class="w"> </span><span class="s2">"subscription_id"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"tenant_id"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"client_id"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"client_secret"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"resource_group_name"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"location"</span><span class="w"> </span><span class="o">{}</span>
 /*
-variable<span class="w"> </span><span class="s2">&quot;security_group&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;Vnet_name&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;Vnet_address_space&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;subnet_name&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;address_prefixes&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;public_ip_name&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;allocation_method&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;domain_name_label&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;network_interface_name&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;NIC_name&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;VM_name&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;VM_size&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;publisher&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;offer&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;sku&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;source_image_version&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;admin_username&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;ssh_public_key&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;os_disk_name&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;caching&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;storage_account_type&quot;</span><span class="w"> </span><span class="o">{}</span>
-variable<span class="w"> </span><span class="s2">&quot;VM_count&quot;</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"security_group"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"Vnet_name"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"Vnet_address_space"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"subnet_name"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"address_prefixes"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"public_ip_name"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"allocation_method"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"domain_name_label"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"network_interface_name"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"NIC_name"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"VM_name"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"VM_size"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"publisher"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"offer"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"sku"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"source_image_version"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"admin_username"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"ssh_public_key"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"os_disk_name"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"caching"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"storage_account_type"</span><span class="w"> </span><span class="o">{}</span>
+variable<span class="w"> </span><span class="s2">"VM_count"</span><span class="w"> </span><span class="o">{}</span>
 */
 </pre></div>
 </div>
@@ -890,7 +891,7 @@ variable<span class="w"> </span><span class="s2">&quot;VM_count&quot;</span><spa
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.5/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

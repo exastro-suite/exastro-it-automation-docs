@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../../ja/2.8/reference/api/operator/certification.html">current</option>
-              <option value="../../../../../ja/2.8/reference/api/operator/certification.html">2.8(current)</option>
+              <option value="../../../../../ja/2.9/reference/api/operator/certification.html">current</option>
+              <option value="../../../../../ja/2.9/reference/api/operator/certification.html">2.9(current)</option>
+              <option value="../../../../../ja/2.8/reference/api/operator/certification.html">2.8</option>
               <option value="../../../../../ja/2.7/reference/api/operator/certification.html">2.7</option>
               <option value="../../../../../ja/2.6/reference/api/operator/certification.html">2.6</option>
               <option value="../../../../../ja/2.5/reference/api/operator/certification.html">2.5</option>
@@ -224,13 +225,13 @@
 <div class="line-block">
 <div class="line">以下のサンプルはBasic認証を使用して、Workspace一覧取得APIを呼出しています。</div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
-<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
-<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
-<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://severname"</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">"オーガナイゼーションID"</span>
+<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">"ユーザー名"</span>
+<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">"パスワード"</span>
 
 <span class="c1"># Workspace一覧取得APIの呼び出し</span>
-curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/platform/workspaces&quot;</span>
+curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/platform/workspaces"</span>
 </pre></div>
 </div>
 </section>
@@ -281,19 +282,19 @@ curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</s
 </div>
 </li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://severname&quot;</span>
-<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
-<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
-<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://severname"</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">"オーガナイゼーションID"</span>
+<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">"ユーザー名"</span>
+<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">"パスワード"</span>
 
 <span class="c1"># refresh_token払出</span>
 curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;client_id=_</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">-api&quot;</span><span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;grant_type=password&quot;</span><span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;scope=openid+offline_access&quot;</span><span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;username=</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s2">&quot;password=</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/auth/realms/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/protocol/openid-connect/token&quot;</span>
+-d<span class="w"> </span><span class="s2">"client_id=_</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">-api"</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s2">"grant_type=password"</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s2">"scope=openid+offline_access"</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s2">"username=</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s2">"password=</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/auth/realms/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/protocol/openid-connect/token"</span>
 </pre></div>
 </div>
 </section>
@@ -323,7 +324,7 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </spa
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.1/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

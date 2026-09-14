@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
@@ -73,8 +73,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../../en/2.8/installation/offline/exastro/docker_compose.html">current</option>
-              <option value="../../../../../en/2.8/installation/offline/exastro/docker_compose.html">2.8(current)</option>
+              <option value="../../../../../en/2.9/installation/offline/exastro/docker_compose.html">current</option>
+              <option value="../../../../../en/2.9/installation/offline/exastro/docker_compose.html">2.9(current)</option>
+              <option value="../../../../../en/2.8/installation/offline/exastro/docker_compose.html">2.8</option>
               <option value="../../../../../en/2.7/installation/offline/exastro/docker_compose.html">2.7</option>
               <option value="../../../../../en/2.6/installation/offline/exastro/docker_compose.html">2.6</option>
               <option value="../../../../../en/2.5/installation/offline/exastro/docker_compose.html" selected>2.5</option>
@@ -541,17 +542,17 @@ $(window).on('load', function () {
 
 <span class="nv">ITA_VERSION</span><span class="o">=</span><span class="nv">$1</span>
 <span class="nb">declare</span><span class="w"> </span>-A<span class="w"> </span><span class="nv">PF_VERSION</span><span class="o">=(</span>
-<span class="w">  </span><span class="o">[</span><span class="s2">&quot;x.x.x&quot;</span><span class="o">]=</span><span class="s2">&quot;x.x.x&quot;</span>
+<span class="w">  </span><span class="o">[</span><span class="s2">"x.x.x"</span><span class="o">]=</span><span class="s2">"x.x.x"</span>
 <span class="o">)</span>
 <span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
 <span class="w">  </span>mkdir<span class="w"> </span><span class="nv">$ITA_VERSION</span>
 <span class="k">fi</span>
 
-readarray<span class="w"> </span>-t<span class="w"> </span>image_list<span class="w"> </span>&lt;<span class="w"> </span><span class="s2">&quot;./image.list&quot;</span>
+readarray<span class="w"> </span>-t<span class="w"> </span>image_list<span class="w"> </span>&lt;<span class="w"> </span><span class="s2">"./image.list"</span>
 <span class="k">for</span><span class="w"> </span>image<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">image_list</span><span class="p">[@]</span><span class="si">}</span>
 <span class="k">do</span>
-<span class="w">  </span><span class="nv">image_fullname</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">image</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;s/#__ITA_VERSION__#/</span><span class="si">${</span><span class="nv">ITA_VERSION</span><span class="si">}</span><span class="s2">/&quot;</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;s/#__PF_VERSION__#/</span><span class="si">${</span><span class="nv">PF_VERSION</span><span class="p">[</span><span class="nv">$ITA_VERSION</span><span class="p">]</span><span class="si">}</span><span class="s2">/&quot;</span><span class="k">)</span>
-<span class="w">  </span><span class="nv">image_name</span><span class="o">=</span><span class="k">$(</span>basename<span class="w"> </span><span class="si">${</span><span class="nv">image_fullname</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;s/:/-/&quot;</span><span class="k">)</span>
+<span class="w">  </span><span class="nv">image_fullname</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">image</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s2">"s/#__ITA_VERSION__#/</span><span class="si">${</span><span class="nv">ITA_VERSION</span><span class="si">}</span><span class="s2">/"</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">"s/#__PF_VERSION__#/</span><span class="si">${</span><span class="nv">PF_VERSION</span><span class="p">[</span><span class="nv">$ITA_VERSION</span><span class="p">]</span><span class="si">}</span><span class="s2">/"</span><span class="k">)</span>
+<span class="w">  </span><span class="nv">image_name</span><span class="o">=</span><span class="k">$(</span>basename<span class="w"> </span><span class="si">${</span><span class="nv">image_fullname</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s2">"s/:/-/"</span><span class="k">)</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-e<span class="w"> </span><span class="si">${</span><span class="nv">ITA_VERSION</span><span class="si">}</span>/<span class="si">${</span><span class="nv">image_name</span><span class="si">}</span>.tar.gz<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
 <span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$image_fullname</span><span class="w"> </span><span class="nv">$image_name</span>
 <span class="w">    </span>docker<span class="w"> </span>pull<span class="w"> </span><span class="si">${</span><span class="nv">image_fullname</span><span class="si">}</span>
@@ -814,8 +815,8 @@ curl<span class="w"> </span>-OL<span class="w"> </span>https://github.com/exastr
 </div>
 <div class="literal-block-wrapper docutils container" id="id27">
 <div class="code-block-caption"><span class="caption-number">Listing 206 </span><span class="caption-text">Message example</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>No<span class="w"> </span>available<span class="w"> </span>modular<span class="w"> </span>metadata<span class="w"> </span><span class="k">for</span><span class="w"> </span>modular<span class="w"> </span>package<span class="w"> </span><span class="s1">&#39;perl-Mozilla-CA-20160104-7.module_el8.5.0+2812+ed912d05.noarch&#39;</span>,<span class="w"> </span>it<span class="w"> </span>cannot<span class="w"> </span>be<span class="w"> </span>installed<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>system
-No<span class="w"> </span>available<span class="w"> </span>modular<span class="w"> </span>metadata<span class="w"> </span><span class="k">for</span><span class="w"> </span>modular<span class="w"> </span>package<span class="w"> </span><span class="s1">&#39;perl-Net-SSLeay-1.88-2.module_el8.6.0+2811+fe6c84b0.x86_64&#39;</span>,<span class="w"> </span>it<span class="w"> </span>cannot<span class="w"> </span>be<span class="w"> </span>installed<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>system
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>No<span class="w"> </span>available<span class="w"> </span>modular<span class="w"> </span>metadata<span class="w"> </span><span class="k">for</span><span class="w"> </span>modular<span class="w"> </span>package<span class="w"> </span><span class="s1">'perl-Mozilla-CA-20160104-7.module_el8.5.0+2812+ed912d05.noarch'</span>,<span class="w"> </span>it<span class="w"> </span>cannot<span class="w"> </span>be<span class="w"> </span>installed<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>system
+No<span class="w"> </span>available<span class="w"> </span>modular<span class="w"> </span>metadata<span class="w"> </span><span class="k">for</span><span class="w"> </span>modular<span class="w"> </span>package<span class="w"> </span><span class="s1">'perl-Net-SSLeay-1.88-2.module_el8.6.0+2811+fe6c84b0.x86_64'</span>,<span class="w"> </span>it<span class="w"> </span>cannot<span class="w"> </span>be<span class="w"> </span>installed<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>system
 Error:<span class="w"> </span>No<span class="w"> </span>available<span class="w"> </span>modular<span class="w"> </span>metadata<span class="w"> </span><span class="k">for</span><span class="w"> </span>modular<span class="w"> </span>package
 </pre></div>
 </div>
@@ -824,7 +825,7 @@ Error:<span class="w"> </span>No<span class="w"> </span>available<span class="w"
 <div class="code-block-caption"><span class="caption-number">Listing 207 </span><span class="caption-text">Check all the dispalyed modules and install all of them.</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#If the target is perl-Mozilla-CA or perl-Net-SSLeay</span>
 <span class="nb">cd</span><span class="w"> </span>/tmp/docker-repo
-ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;perl-Mozilla-CA|perl-Net-SSLeay&quot;</span>
+ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"perl-Mozilla-CA|perl-Net-SSLeay"</span>
 sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>--disablerepo<span class="o">=</span><span class="se">\*</span><span class="w"> </span>--enablerepo<span class="o">=</span>docker-repo<span class="w"> </span>perl-Mozilla-CA-20160104-7.module_el8.5.0+2812+ed912d05.noarch.rmp<span class="w"> </span>perl-Net-SSLeay-1.88-2.module_el8.6.0+2811+fe6c84b0.x86_64.rpm
 </pre></div>
 </div>
@@ -906,14 +907,14 @@ sudo<span class="w">  </span>reboot
 <div class="code-block-caption"><span class="caption-number">Listing 214 </span><span class="caption-text">Copy and paste the code below and rewrite the version</span><a class="headerlink" href="#id35" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">ITA_VERSION</span><span class="o">=</span><span class="nv">$1</span>
 <span class="nb">declare</span><span class="w"> </span>-A<span class="w"> </span><span class="nv">PF_VERSION</span><span class="o">=(</span>
-<span class="w">  </span><span class="o">[</span><span class="s2">&quot;x.x.x&quot;</span><span class="o">]=</span><span class="s2">&quot;x.x.x&quot;</span>
+<span class="w">  </span><span class="o">[</span><span class="s2">"x.x.x"</span><span class="o">]=</span><span class="s2">"x.x.x"</span>
 <span class="o">)</span>
 
-readarray<span class="w"> </span>-t<span class="w"> </span>image_list<span class="w"> </span>&lt;<span class="w"> </span><span class="s2">&quot;./image.list&quot;</span>
+readarray<span class="w"> </span>-t<span class="w"> </span>image_list<span class="w"> </span>&lt;<span class="w"> </span><span class="s2">"./image.list"</span>
 <span class="k">for</span><span class="w"> </span>image<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">image_list</span><span class="p">[@]</span><span class="si">}</span>
 <span class="k">do</span>
-<span class="w">  </span><span class="nv">image_fullname</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">image</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;s/#__ITA_VERSION__#/</span><span class="si">${</span><span class="nv">ITA_VERSION</span><span class="si">}</span><span class="s2">/&quot;</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;s/#__PF_VERSION__#/</span><span class="si">${</span><span class="nv">PF_VERSION</span><span class="p">[</span><span class="nv">$ITA_VERSION</span><span class="p">]</span><span class="si">}</span><span class="s2">/&quot;</span><span class="k">)</span>
-<span class="w">  </span><span class="nv">image_name</span><span class="o">=</span><span class="k">$(</span>basename<span class="w"> </span><span class="si">${</span><span class="nv">image_fullname</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;s/:/-/&quot;</span><span class="k">)</span>
+<span class="w">  </span><span class="nv">image_fullname</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">image</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s2">"s/#__ITA_VERSION__#/</span><span class="si">${</span><span class="nv">ITA_VERSION</span><span class="si">}</span><span class="s2">/"</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">"s/#__PF_VERSION__#/</span><span class="si">${</span><span class="nv">PF_VERSION</span><span class="p">[</span><span class="nv">$ITA_VERSION</span><span class="p">]</span><span class="si">}</span><span class="s2">/"</span><span class="k">)</span>
+<span class="w">  </span><span class="nv">image_name</span><span class="o">=</span><span class="k">$(</span>basename<span class="w"> </span><span class="si">${</span><span class="nv">image_fullname</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s2">"s/:/-/"</span><span class="k">)</span>
 <span class="w">  </span>docker<span class="w"> </span>load<span class="w"> </span>&lt;<span class="w"> </span><span class="si">${</span><span class="nv">ITA_VERSION</span><span class="si">}</span>/<span class="si">${</span><span class="nv">image_name</span><span class="si">}</span>.tar.gz
 <span class="k">done</span>
 
@@ -1075,7 +1076,7 @@ sudo<span class="w"> </span>mv<span class="w"> </span>exastro-docker-compose-mai
 </div>
 <div class="literal-block-wrapper docutils container" id="id45">
 <div class="code-block-caption"><span class="caption-number">Listing 224 </span><span class="caption-text">Command</span><a class="headerlink" href="#id45" title="Link to this code">¶</a></div>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/sudo dnf config-manager/#sudo dnf config-manager/&#39;</span><span class="w"> </span>setup.sh
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/sudo dnf config-manager/#sudo dnf config-manager/'</span><span class="w"> </span>setup.sh
 </pre></div>
 </div>
 </div>
@@ -1135,7 +1136,7 @@ Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> 
 </div>
 <div class="literal-block-wrapper docutils container" id="id53">
 <div class="code-block-caption"><span class="caption-number">Listing 232 </span><span class="caption-text">Server certificate/Secret key file path (If Self-signed SSL/TSL certificate generation is set to “n”)</span><a class="headerlink" href="#id53" title="Link to this code">¶</a></div>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Specify the server certificate file path for the certificate file path and the secret key file&#39;s file path for the private-key file path.</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Specify the server certificate file path for the certificate file path and the secret key file's file path for the private-key file path.</span>
 Input<span class="w"> </span>path<span class="w"> </span>to<span class="w"> </span>your<span class="w"> </span>SSL<span class="w"> </span>certificate<span class="w"> </span>file.
 certificate<span class="w"> </span>file<span class="w"> </span>path:
 private-key<span class="w"> </span>file<span class="w"> </span>path:
@@ -1323,7 +1324,7 @@ Input<span class="w"> </span>the<span class="w"> </span>Exastro<span class="w"> 
 </div>
 <div class="literal-block-wrapper docutils container" id="id73">
 <div class="code-block-caption"><span class="caption-number">Listing 252 </span><span class="caption-text">Server certificate/Secret key file path (If Self-signed SSL/TSL certificate generation is set to “n”)</span><a class="headerlink" href="#id73" title="Link to this code">¶</a></div>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Specify the server certificate file path for the certificate file path and the secret key file&#39;s file path for the private-key file path.</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Specify the server certificate file path for the certificate file path and the secret key file's file path for the private-key file path.</span>
 Input<span class="w"> </span>path<span class="w"> </span>to<span class="w"> </span>your<span class="w"> </span>SSL<span class="w"> </span>certificate<span class="w"> </span>file.
 certificate<span class="w"> </span>file<span class="w"> </span>path:
 private-key<span class="w"> </span>file<span class="w"> </span>path:
@@ -1473,7 +1474,7 @@ GitLab<span class="w"> </span>deployment:<span class="w">                </span>
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/en/2.5/terms/en.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

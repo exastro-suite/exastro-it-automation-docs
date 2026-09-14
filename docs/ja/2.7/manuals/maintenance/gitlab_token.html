@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/manuals/maintenance/gitlab_token.html">current</option>
-              <option value="../../../../ja/2.8/manuals/maintenance/gitlab_token.html">2.8(current)</option>
+              <option value="../../../../ja/2.9/manuals/maintenance/gitlab_token.html">current</option>
+              <option value="../../../../ja/2.9/manuals/maintenance/gitlab_token.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/manuals/maintenance/gitlab_token.html">2.8</option>
               <option value="../../../../ja/2.7/manuals/maintenance/gitlab_token.html" selected>2.7</option>
               <option value="../../../../ja/2.6/manuals/maintenance/gitlab_token.html">2.6</option>
               <option value="../../../../ja/2.5/manuals/maintenance/gitlab_token.html">2.5</option>
@@ -447,14 +448,14 @@
 </li>
 </ul>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">root@gitlab:/#</span>
-<span class="go"> gitlab-rails runner &quot;token = User.find_by_username(&#39;root&#39;).personal_access_tokens.create(scopes: [&#39;api&#39;,&#39;sudo&#39;,&#39;write_repository&#39;], name: &#39;&lt;&lt;ここにルートトークンの名称を代入&gt;&gt;&#39;, expires_at: 365.days.from_now); token_str = SecureRandom.hex(10); p token_str; token.set_token(token_str); token.save!&quot;</span>
+<span class="go"> gitlab-rails runner "token = User.find_by_username('root').personal_access_tokens.create(scopes: ['api','sudo','write_repository'], name: '&lt;&lt;ここにルートトークンの名称を代入&gt;&gt;', expires_at: 365.days.from_now); token_str = SecureRandom.hex(10); p token_str; token.set_token(token_str); token.save!"</span>
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line">20桁の文字列のみが出力されれば成功しています。</div>
 <div class="line">※成功した場合、表示された20桁の文字列がルートトークンです。</div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&quot;81453fa40820de8a4ad6&quot;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">"81453fa40820de8a4ad6"</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -529,8 +530,8 @@
 <span class="w"> </span>     ...
 <span class="w"> </span>   secret:
 <span class="w"> </span>     ...
-<span class="gd">-      GITLAB_ROOT_TOKEN: &quot;glpat-oldoldoldoldoldoldol&quot;</span>
-<span class="gi">+      GITLAB_ROOT_TOKEN: &quot;glpat-RRRRRRRRRRRRRRRRRRRR&quot;</span>
+<span class="gd">-      GITLAB_ROOT_TOKEN: "glpat-oldoldoldoldoldoldol"</span>
+<span class="gi">+      GITLAB_ROOT_TOKEN: "glpat-RRRRRRRRRRRRRRRRRRRR"</span>
 ...
 </pre></div>
 </div>
@@ -577,7 +578,7 @@
 <div class="line">対象のORGANIZATION_IDを持つレコードのGITLAB_USER・GITLAB_TOKENの値を確認します。</div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[none]&gt; use ita_db;</span>
-<span class="go">[ita_db]&gt; select PRIMARY_KEY,ORGANIZATION_ID,GITLAB_USER,GITLAB_TOKEN,DISUSE_FLAG,LAST_UPDATE_TIMESTAMP from `t_comn_organization_db_info` where DISUSE_FLAG = &quot;0&quot;;</span>
+<span class="go">[ita_db]&gt; select PRIMARY_KEY,ORGANIZATION_ID,GITLAB_USER,GITLAB_TOKEN,DISUSE_FLAG,LAST_UPDATE_TIMESTAMP from `t_comn_organization_db_info` where DISUSE_FLAG = "0";</span>
 
 <span class="go">+--------------------------------------+-----------------+----------------------------------------------+----------------------------+-------------+----------------------------+</span>
 <span class="go">| PRIMARY_KEY                          | ORGANIZATION_ID | GITLAB_USER                                  | GITLAB_TOKEN               | DISUSE_FLAG | LAST_UPDATE_TIMESTAMP      |</span>
@@ -741,14 +742,14 @@
 </li>
 </ul>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">root@gitlab:/#</span>
-<span class="go"> gitlab-rails runner &quot;token = User.find_by_username(&#39;&lt;&lt;ここにGITLAB_USERを代入&gt;&gt;&#39;).personal_access_tokens.create(scopes: [&#39;api&#39;], name: &#39;&lt;&lt;ここにパーソナルアクセストークンの名称を代入&gt;&gt;&#39;, expires_at: 365.days.from_now); token_str = SecureRandom.hex(10); p token_str; token.set_token(token_str); token.save!&quot;</span>
+<span class="go"> gitlab-rails runner "token = User.find_by_username('&lt;&lt;ここにGITLAB_USERを代入&gt;&gt;').personal_access_tokens.create(scopes: ['api'], name: '&lt;&lt;ここにパーソナルアクセストークンの名称を代入&gt;&gt;', expires_at: 365.days.from_now); token_str = SecureRandom.hex(10); p token_str; token.set_token(token_str); token.save!"</span>
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line">20桁の文字列のみが出力されれば成功しています。</div>
 <div class="line">※成功した場合、表示された20桁の文字列がパーソナルアクセストークンです。</div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&quot;81453fa40820de8a4ad6&quot;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">"81453fa40820de8a4ad6"</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -776,7 +777,7 @@
 <div class="line">対象のORGANIZATION_IDを持つレコードのGITLAB_USERの値を確認します。</div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[none]&gt; use ita_db;</span>
-<span class="go">[ita_db]&gt; select PRIMARY_KEY,ORGANIZATION_ID,GITLAB_USER,GITLAB_TOKEN,DISUSE_FLAG,LAST_UPDATE_TIMESTAMP from `t_comn_organization_db_info` where DISUSE_FLAG = &quot;0&quot;;</span>
+<span class="go">[ita_db]&gt; select PRIMARY_KEY,ORGANIZATION_ID,GITLAB_USER,GITLAB_TOKEN,DISUSE_FLAG,LAST_UPDATE_TIMESTAMP from `t_comn_organization_db_info` where DISUSE_FLAG = "0";</span>
 
 <span class="go">+--------------------------------------+-----------------+----------------------------------------------+----------------------------+-------------+----------------------------+</span>
 <span class="go">| PRIMARY_KEY                          | ORGANIZATION_ID | GITLAB_USER                                  | GITLAB_TOKEN               | DISUSE_FLAG | LAST_UPDATE_TIMESTAMP      |</span>
@@ -807,7 +808,7 @@
 </div>
 </li>
 </ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[ita_db]&gt; update `t_comn_organization_db_info` set GITLAB_TOKEN = &quot;&lt;&lt;ここにパーソナルアクセストークンを代入&gt;&gt;&quot; where ORGANIZATION_ID = &quot;&lt;&lt;ここにORGANIZATION_IDを代入&gt;&gt;&quot; and GITLAB_USER = &quot;&lt;&lt;ここにGITLAB_USERを代入&gt;&gt;&quot; and DISUSE_FLAG = &quot;0&quot;;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[ita_db]&gt; update `t_comn_organization_db_info` set GITLAB_TOKEN = "&lt;&lt;ここにパーソナルアクセストークンを代入&gt;&gt;" where ORGANIZATION_ID = "&lt;&lt;ここにORGANIZATION_IDを代入&gt;&gt;" and GITLAB_USER = "&lt;&lt;ここにGITLAB_USERを代入&gt;&gt;" and DISUSE_FLAG = "0";</span>
 
 <span class="go">Query OK, 1 row affected (0.006 sec)</span>
 <span class="go">Rows matched: 1  Changed: 1  Warnings: 0</span>
@@ -822,7 +823,7 @@
 <div class="line-block">
 <div class="line">対象のORGANIZATION_IDを持つレコードのGITLAB_TOKENの値のみが変更されていることを確認してください。</div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[ita_db]&gt; select PRIMARY_KEY,ORGANIZATION_ID,GITLAB_USER,GITLAB_TOKEN,DISUSE_FLAG,LAST_UPDATE_TIMESTAMP from `t_comn_organization_db_info` where DISUSE_FLAG = &quot;0&quot;;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[ita_db]&gt; select PRIMARY_KEY,ORGANIZATION_ID,GITLAB_USER,GITLAB_TOKEN,DISUSE_FLAG,LAST_UPDATE_TIMESTAMP from `t_comn_organization_db_info` where DISUSE_FLAG = "0";</span>
 
 <span class="go">+--------------------------------------+-----------------+----------------------------------------------+----------------------------+-------------+----------------------------+</span>
 <span class="go">| PRIMARY_KEY                          | ORGANIZATION_ID | GITLAB_USER                                  | GITLAB_TOKEN               | DISUSE_FLAG | LAST_UPDATE_TIMESTAMP      |</span>
@@ -864,7 +865,7 @@
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.7/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/learn/ansible_legacy/Legacy_answer1.html">current</option>
-              <option value="../../../../ja/2.8/learn/ansible_legacy/Legacy_answer1.html">2.8(current)</option>
+              <option value="../../../../ja/2.9/learn/ansible_legacy/Legacy_answer1.html">current</option>
+              <option value="../../../../ja/2.9/learn/ansible_legacy/Legacy_answer1.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/learn/ansible_legacy/Legacy_answer1.html">2.8</option>
               <option value="../../../../ja/2.7/learn/ansible_legacy/Legacy_answer1.html">2.7</option>
               <option value="../../../../ja/2.6/learn/ansible_legacy/Legacy_answer1.html">2.6</option>
               <option value="../../../../ja/2.5/learn/ansible_legacy/Legacy_answer1.html">2.5</option>
@@ -288,23 +289,23 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>---
 -<span class="w"> </span>name:<span class="w"> </span>create/update<span class="w"> </span>group
 <span class="w">  </span>group:
-<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
-<span class="w">    </span>gid:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">"{{ item.0 }}"</span>
+<span class="w">    </span>gid:<span class="w"> </span><span class="s2">"{{ item.1 }}"</span>
 <span class="w">  </span>with_together:
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_name }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_id }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_action }}&quot;</span>
-<span class="w">  </span>when:<span class="w"> </span>item.2<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;present&#39;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ group_name }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ group_id }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ group_action }}"</span>
+<span class="w">  </span>when:<span class="w"> </span>item.2<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'present'</span>
 
 -<span class="w"> </span>name:<span class="w"> </span>create/update<span class="w"> </span>group
 <span class="w">  </span>group:
-<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
-<span class="w">    </span>gid:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">"{{ item.0 }}"</span>
+<span class="w">    </span>gid:<span class="w"> </span><span class="s2">"{{ item.1 }}"</span>
 <span class="w">  </span>with_together:
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_name }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_id }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_action }}&quot;</span>
-<span class="w">  </span>when:<span class="w"> </span>item.2<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;absent&#39;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ group_name }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ group_id }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ group_action }}"</span>
+<span class="w">  </span>when:<span class="w"> </span>item.2<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'absent'</span>
 </pre></div>
 </div>
 </div>
@@ -493,53 +494,53 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>---
 -<span class="w"> </span>name:<span class="w"> </span>create<span class="w"> </span>user
 <span class="w">  </span>user:
-<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
-<span class="w">    </span>uid:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
-<span class="w">    </span>group:<span class="w"> </span><span class="s2">&quot;{{ item.2 }}&quot;</span>
-<span class="w">    </span>comment:<span class="w"> </span><span class="s2">&quot;{{ item.3 }}&quot;</span>
-<span class="w">    </span>home:<span class="w"> </span><span class="s2">&quot;{{ item.4 }}&quot;</span>
-<span class="w">    </span>shell:<span class="w"> </span><span class="s2">&quot;{{ item.5 }}&quot;</span>
-<span class="w">    </span>password:<span class="w"> </span><span class="s2">&quot;{{ item.6 | password_hash(&#39;sha512&#39;) }}&quot;</span>
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">"{{ item.0 }}"</span>
+<span class="w">    </span>uid:<span class="w"> </span><span class="s2">"{{ item.1 }}"</span>
+<span class="w">    </span>group:<span class="w"> </span><span class="s2">"{{ item.2 }}"</span>
+<span class="w">    </span>comment:<span class="w"> </span><span class="s2">"{{ item.3 }}"</span>
+<span class="w">    </span>home:<span class="w"> </span><span class="s2">"{{ item.4 }}"</span>
+<span class="w">    </span>shell:<span class="w"> </span><span class="s2">"{{ item.5 }}"</span>
+<span class="w">    </span>password:<span class="w"> </span><span class="s2">"{{ item.6 | password_hash('sha512') }}"</span>
 <span class="w">  </span>with_together:
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_name }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_id }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ comment }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ home_dir }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ login_shell }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ password }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_action }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ password_apply }}&quot;</span>
-<span class="w">  </span>when:<span class="w"> </span>item.7<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;present&#39;</span><span class="w"> </span>and<span class="w"> </span>password_apply
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ user_name }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ user_id }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ group }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ comment }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ home_dir }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ login_shell }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ password }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ user_action }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ password_apply }}"</span>
+<span class="w">  </span>when:<span class="w"> </span>item.7<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'present'</span><span class="w"> </span>and<span class="w"> </span>password_apply
 
 -<span class="w"> </span>name:<span class="w"> </span>create<span class="w"> </span>user
 <span class="w">  </span>user:
-<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
-<span class="w">    </span>uid:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
-<span class="w">    </span>group:<span class="w"> </span><span class="s2">&quot;{{ item.2 }}&quot;</span>
-<span class="w">    </span>comment:<span class="w"> </span><span class="s2">&quot;{{ item.3 }}&quot;</span>
-<span class="w">    </span>home:<span class="w"> </span><span class="s2">&quot;{{ item.4 }}&quot;</span>
-<span class="w">    </span>shell:<span class="w"> </span><span class="s2">&quot;{{ item.5 }}&quot;</span>
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">"{{ item.0 }}"</span>
+<span class="w">    </span>uid:<span class="w"> </span><span class="s2">"{{ item.1 }}"</span>
+<span class="w">    </span>group:<span class="w"> </span><span class="s2">"{{ item.2 }}"</span>
+<span class="w">    </span>comment:<span class="w"> </span><span class="s2">"{{ item.3 }}"</span>
+<span class="w">    </span>home:<span class="w"> </span><span class="s2">"{{ item.4 }}"</span>
+<span class="w">    </span>shell:<span class="w"> </span><span class="s2">"{{ item.5 }}"</span>
 <span class="w">  </span>with_together:
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_name }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_id }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ comment }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ home_dir }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ login_shell }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_action }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ password_apply }}&quot;</span>
-<span class="w">  </span>when:<span class="w"> </span>item.6<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;present&#39;</span><span class="w"> </span>and<span class="w"> </span>not<span class="w"> </span>password_apply
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ user_name }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ user_id }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ group }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ comment }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ home_dir }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ login_shell }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ user_action }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ password_apply }}"</span>
+<span class="w">  </span>when:<span class="w"> </span>item.6<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'present'</span><span class="w"> </span>and<span class="w"> </span>not<span class="w"> </span>password_apply
 
 -<span class="w"> </span>name:<span class="w"> </span>delete<span class="w"> </span>user
 <span class="w">  </span>user:
 <span class="w">    </span>state:<span class="w"> </span>absent
-<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
-<span class="w">    </span>remove:<span class="w"> </span><span class="s1">&#39;yes&#39;</span>
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">"{{ item.0 }}"</span>
+<span class="w">    </span>remove:<span class="w"> </span><span class="s1">'yes'</span>
 <span class="w">  </span>with_together:
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_name }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_action }}&quot;</span>
-<span class="w">  </span>when:<span class="w"> </span>item.1<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;absent&#39;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ user_name }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ user_action }}"</span>
+<span class="w">  </span>when:<span class="w"> </span>item.1<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'absent'</span>
 </pre></div>
 </div>
 </div>
@@ -935,7 +936,7 @@
 <div class="literal-block-wrapper docutils container" id="id31">
 <div class="code-block-caption"><span class="caption-number">リスト 430 </span><span class="caption-text">ヘッダーセクション</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>hosts:<span class="w"> </span>all
-<span class="w">  </span>remote_user:<span class="w"> </span><span class="s2">&quot;{{ __loginuser__ }}&quot;</span>
+<span class="w">  </span>remote_user:<span class="w"> </span><span class="s2">"{{ __loginuser__ }}"</span>
 <span class="w">  </span>gather_facts:<span class="w"> </span>no
 <span class="w">  </span>become:<span class="w"> </span>yes
 </pre></div>
@@ -952,23 +953,23 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>---
 -<span class="w"> </span>name:<span class="w"> </span>create/update<span class="w"> </span>group
 <span class="w">  </span>group:
-<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
-<span class="w">    </span>gid:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">"{{ item.0 }}"</span>
+<span class="w">    </span>gid:<span class="w"> </span><span class="s2">"{{ item.1 }}"</span>
 <span class="w">  </span>with_together:
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_name }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_id }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_action }}&quot;</span>
-<span class="w">  </span>when:<span class="w"> </span>item.2<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;present&#39;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ group_name }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ group_id }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ group_action }}"</span>
+<span class="w">  </span>when:<span class="w"> </span>item.2<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'present'</span>
 
 -<span class="w"> </span>name:<span class="w"> </span>create/update<span class="w"> </span>group
 <span class="w">  </span>group:
-<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
-<span class="w">    </span>gid:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">"{{ item.0 }}"</span>
+<span class="w">    </span>gid:<span class="w"> </span><span class="s2">"{{ item.1 }}"</span>
 <span class="w">  </span>with_together:
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_name }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_id }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group_action }}&quot;</span>
-<span class="w">  </span>when:<span class="w"> </span>item.2<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;absent&#39;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ group_name }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ group_id }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ group_action }}"</span>
+<span class="w">  </span>when:<span class="w"> </span>item.2<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'absent'</span>
 </pre></div>
 </div>
 </div>
@@ -977,53 +978,53 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>---
 -<span class="w"> </span>name:<span class="w"> </span>create<span class="w"> </span>user
 <span class="w">  </span>user:
-<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
-<span class="w">    </span>uid:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
-<span class="w">    </span>group:<span class="w"> </span><span class="s2">&quot;{{ item.2 }}&quot;</span>
-<span class="w">    </span>comment:<span class="w"> </span><span class="s2">&quot;{{ item.3 }}&quot;</span>
-<span class="w">    </span>home:<span class="w"> </span><span class="s2">&quot;{{ item.4 }}&quot;</span>
-<span class="w">    </span>shell:<span class="w"> </span><span class="s2">&quot;{{ item.5 }}&quot;</span>
-<span class="w">    </span>password:<span class="w"> </span><span class="s2">&quot;{{ item.6 | password_hash(&#39;sha512&#39;) }}&quot;</span>
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">"{{ item.0 }}"</span>
+<span class="w">    </span>uid:<span class="w"> </span><span class="s2">"{{ item.1 }}"</span>
+<span class="w">    </span>group:<span class="w"> </span><span class="s2">"{{ item.2 }}"</span>
+<span class="w">    </span>comment:<span class="w"> </span><span class="s2">"{{ item.3 }}"</span>
+<span class="w">    </span>home:<span class="w"> </span><span class="s2">"{{ item.4 }}"</span>
+<span class="w">    </span>shell:<span class="w"> </span><span class="s2">"{{ item.5 }}"</span>
+<span class="w">    </span>password:<span class="w"> </span><span class="s2">"{{ item.6 | password_hash('sha512') }}"</span>
 <span class="w">  </span>with_together:
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_name }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_id }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ comment }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ home_dir }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ login_shell }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ password }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_action }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ password_apply }}&quot;</span>
-<span class="w">  </span>when:<span class="w"> </span>item.7<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;present&#39;</span><span class="w"> </span>and<span class="w"> </span>password_apply
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ user_name }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ user_id }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ group }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ comment }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ home_dir }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ login_shell }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ password }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ user_action }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ password_apply }}"</span>
+<span class="w">  </span>when:<span class="w"> </span>item.7<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'present'</span><span class="w"> </span>and<span class="w"> </span>password_apply
 
 -<span class="w"> </span>name:<span class="w"> </span>create<span class="w"> </span>user
 <span class="w">  </span>user:
-<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
-<span class="w">    </span>uid:<span class="w"> </span><span class="s2">&quot;{{ item.1 }}&quot;</span>
-<span class="w">    </span>group:<span class="w"> </span><span class="s2">&quot;{{ item.2 }}&quot;</span>
-<span class="w">    </span>comment:<span class="w"> </span><span class="s2">&quot;{{ item.3 }}&quot;</span>
-<span class="w">    </span>home:<span class="w"> </span><span class="s2">&quot;{{ item.4 }}&quot;</span>
-<span class="w">    </span>shell:<span class="w"> </span><span class="s2">&quot;{{ item.5 }}&quot;</span>
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">"{{ item.0 }}"</span>
+<span class="w">    </span>uid:<span class="w"> </span><span class="s2">"{{ item.1 }}"</span>
+<span class="w">    </span>group:<span class="w"> </span><span class="s2">"{{ item.2 }}"</span>
+<span class="w">    </span>comment:<span class="w"> </span><span class="s2">"{{ item.3 }}"</span>
+<span class="w">    </span>home:<span class="w"> </span><span class="s2">"{{ item.4 }}"</span>
+<span class="w">    </span>shell:<span class="w"> </span><span class="s2">"{{ item.5 }}"</span>
 <span class="w">  </span>with_together:
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_name }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_id }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ group }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ comment }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ home_dir }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ login_shell }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_action }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ password_apply }}&quot;</span>
-<span class="w">  </span>when:<span class="w"> </span>item.6<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;present&#39;</span><span class="w"> </span>and<span class="w"> </span>not<span class="w"> </span>password_apply
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ user_name }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ user_id }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ group }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ comment }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ home_dir }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ login_shell }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ user_action }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ password_apply }}"</span>
+<span class="w">  </span>when:<span class="w"> </span>item.6<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'present'</span><span class="w"> </span>and<span class="w"> </span>not<span class="w"> </span>password_apply
 
 -<span class="w"> </span>name:<span class="w"> </span>delete<span class="w"> </span>user
 <span class="w">  </span>user:
 <span class="w">    </span>state:<span class="w"> </span>absent
-<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;{{ item.0 }}&quot;</span>
-<span class="w">    </span>remove:<span class="w"> </span><span class="s1">&#39;yes&#39;</span>
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">"{{ item.0 }}"</span>
+<span class="w">    </span>remove:<span class="w"> </span><span class="s1">'yes'</span>
 <span class="w">  </span>with_together:
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_name }}&quot;</span>
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;{{ user_action }}&quot;</span>
-<span class="w">  </span>when:<span class="w"> </span>item.1<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;absent&#39;</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ user_name }}"</span>
+<span class="w">    </span>-<span class="w"> </span><span class="s2">"{{ user_action }}"</span>
+<span class="w">  </span>when:<span class="w"> </span>item.1<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'absent'</span>
 </pre></div>
 </div>
 </div>
@@ -1812,7 +1813,7 @@
 <div class="literal-block-wrapper docutils container" id="id42">
 <div class="code-block-caption"><span class="caption-number">リスト 433 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id42" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># グループ一覧の取得</span>
-cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;www|app&quot;</span>
+cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"www|app"</span>
 </pre></div>
 </div>
 </div>
@@ -1828,7 +1829,7 @@ cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"
 <div class="literal-block-wrapper docutils container" id="id44">
 <div class="code-block-caption"><span class="caption-number">リスト 435 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id44" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ユーザー一覧の取得</span>
-cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;www|app&quot;</span>
+cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"www|app"</span>
 </pre></div>
 </div>
 </div>
@@ -1864,7 +1865,7 @@ cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w
 <div class="literal-block-wrapper docutils container" id="id46">
 <div class="code-block-caption"><span class="caption-number">リスト 437 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id46" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># グループ一覧の取得</span>
-cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;app|www&quot;</span>
+cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"app|www"</span>
 </pre></div>
 </div>
 </div>
@@ -1881,7 +1882,7 @@ app:x:10002:
 <div class="literal-block-wrapper docutils container" id="id48">
 <div class="code-block-caption"><span class="caption-number">リスト 439 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id48" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ユーザー一覧の取得</span>
-cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;app|www&quot;</span>
+cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"app|www"</span>
 </pre></div>
 </div>
 </div>
@@ -2053,7 +2054,7 @@ appuser02:x:20002:10002:Application<span class="w"> </span>server<span class="w"
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.4/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

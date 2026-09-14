@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/learn/ansible_legacy_role/answer1.html">current</option>
-              <option value="../../../../ja/2.8/learn/ansible_legacy_role/answer1.html">2.8(current)</option>
+              <option value="../../../../ja/2.9/learn/ansible_legacy_role/answer1.html">current</option>
+              <option value="../../../../ja/2.9/learn/ansible_legacy_role/answer1.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/learn/ansible_legacy_role/answer1.html">2.8</option>
               <option value="../../../../ja/2.7/learn/ansible_legacy_role/answer1.html">2.7</option>
               <option value="../../../../ja/2.6/learn/ansible_legacy_role/answer1.html">2.6</option>
               <option value="../../../../ja/2.5/learn/ansible_legacy_role/answer1.html">2.5</option>
@@ -858,7 +859,7 @@
 <div class="literal-block-wrapper docutils container" id="id34">
 <div class="code-block-caption"><span class="caption-number">リスト 5.1 </span><span class="caption-text">ヘッダーセクション</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>hosts:<span class="w"> </span>all
-<span class="w">  </span>remote_user:<span class="w"> </span><span class="s2">&quot;{{ __loginuser__ }}&quot;</span>
+<span class="w">  </span>remote_user:<span class="w"> </span><span class="s2">"{{ __loginuser__ }}"</span>
 <span class="w">  </span>gather_facts:<span class="w"> </span>no
 <span class="w">  </span>become:<span class="w"> </span>yes
 </pre></div>
@@ -920,10 +921,10 @@
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># VAR_RH_group に対して、変数のセットが繰り返し、かつ、セット数が不定</span>
 <span class="nt">VAR_RH_group</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">present</span>
-<span class="w">  </span><span class="nt">group_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1100&#39;</span>
+<span class="w">  </span><span class="nt">group_id</span><span class="p">:</span><span class="w"> </span><span class="s">'1100'</span>
 <span class="w">  </span><span class="nt">group_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">testgroup</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">present</span>
-<span class="w">  </span><span class="nt">group_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1101&#39;</span>
+<span class="w">  </span><span class="nt">group_id</span><span class="p">:</span><span class="w"> </span><span class="s">'1101'</span>
 <span class="w">  </span><span class="nt">group_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">testgroup2</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">absent</span>
 <span class="w">  </span><span class="nt">group_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">testgroup3</span>
@@ -937,20 +938,20 @@
 <span class="nt">VAR_RH_user</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">present</span>
 <span class="w">  </span><span class="nt">comment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">create testuser</span>
-<span class="w">  </span><span class="nt">group_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1100&#39;</span>
+<span class="w">  </span><span class="nt">group_id</span><span class="p">:</span><span class="w"> </span><span class="s">'1100'</span>
 <span class="w">  </span><span class="nt">home_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/home/testuser</span>
 <span class="w">  </span><span class="nt">login_shell</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/bin/bash</span>
 <span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p@ssw0rd123</span>
 <span class="w">  </span><span class="nt">password_apply</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">  </span><span class="nt">user_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1100&#39;</span>
+<span class="w">  </span><span class="nt">user_id</span><span class="p">:</span><span class="w"> </span><span class="s">'1100'</span>
 <span class="w">  </span><span class="nt">user_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">testuser</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">present</span>
 <span class="w">  </span><span class="nt">comment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">update testuser2</span>
-<span class="w">  </span><span class="nt">group_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1101&#39;</span>
+<span class="w">  </span><span class="nt">group_id</span><span class="p">:</span><span class="w"> </span><span class="s">'1101'</span>
 <span class="w">  </span><span class="nt">home_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/home/testuser2</span>
 <span class="w">  </span><span class="nt">login_shell</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/bin/bash</span>
 <span class="w">  </span><span class="nt">password_apply</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="w">  </span><span class="nt">user_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1102&#39;</span>
+<span class="w">  </span><span class="nt">user_id</span><span class="p">:</span><span class="w"> </span><span class="s">'1102'</span>
 <span class="w">  </span><span class="nt">user_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">testuser2</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">absent</span>
 <span class="w">  </span><span class="nt">user_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">testuser99</span>
@@ -1703,7 +1704,7 @@
 <div class="literal-block-wrapper docutils container" id="id45">
 <div class="code-block-caption"><span class="caption-number">リスト 5.4 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id45" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># グループ一覧の取得</span>
-cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;app|www&quot;</span>
+cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"app|www"</span>
 </pre></div>
 </div>
 </div>
@@ -1719,7 +1720,7 @@ cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"
 <div class="literal-block-wrapper docutils container" id="id47">
 <div class="code-block-caption"><span class="caption-number">リスト 5.6 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id47" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ユーザー一覧の取得</span>
-cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;app|www&quot;</span>
+cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"app|www"</span>
 </pre></div>
 </div>
 </div>
@@ -1755,7 +1756,7 @@ cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w
 <div class="literal-block-wrapper docutils container" id="id49">
 <div class="code-block-caption"><span class="caption-number">リスト 5.8 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id49" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># グループ一覧の取得</span>
-cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;app|www&quot;</span>
+cat<span class="w"> </span>/etc/group<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"app|www"</span>
 </pre></div>
 </div>
 </div>
@@ -1772,7 +1773,7 @@ app:x:10002:
 <div class="literal-block-wrapper docutils container" id="id51">
 <div class="code-block-caption"><span class="caption-number">リスト 5.10 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id51" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ユーザー一覧の取得</span>
-cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;app|www&quot;</span>
+cat<span class="w"> </span>/etc/passwd<span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"app|www"</span>
 </pre></div>
 </div>
 </div>
@@ -1944,7 +1945,7 @@ appuser02:x:20002:10002:Application<span class="w"> </span>server<span class="w"
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.4/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

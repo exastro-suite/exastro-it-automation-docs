@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../_static/documentation_options.js?v=5929fcd5"></script>
@@ -69,8 +69,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../en/2.8/include/stop_service_k8s_agent.html" selected>current</option>
-              <option value="../../../en/2.8/include/stop_service_k8s_agent.html" selected>2.8(current)</option>
+              <option value="../../../en/2.9/include/stop_service_k8s_agent.html">current</option>
+              <option value="../../../en/2.9/include/stop_service_k8s_agent.html">2.9(current)</option>
+              <option value="../../../en/2.8/include/stop_service_k8s_agent.html" selected>2.8</option>
               <option value="../../../en/2.7/include/stop_service_k8s_agent.html">2.7</option>
               <option value="../../../en/2.6/include/stop_service_k8s_agent.html">2.6</option>
               <option value="../../../en/2.5/include/stop_service_k8s_agent.html">2.5</option>
@@ -155,7 +156,7 @@
 </div>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">Command</span><a class="headerlink" href="#id1" title="Link to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">RS_AG</span><span class="o">=</span><span class="sb">`</span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>ita-ag-oase<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{@.spec.replicas}{&quot;\n&quot;}&#39;</span><span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="sb">`</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">RS_AG</span><span class="o">=</span><span class="sb">`</span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>ita-ag-oase<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{@.spec.replicas}{"\n"}'</span><span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="sb">`</span>
 </pre></div>
 </div>
 </div>

@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -74,8 +74,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/manuals/platform_management/aap.html">current</option>
-              <option value="../../../../ja/2.8/manuals/platform_management/aap.html">2.8(current)</option>
+              <option value="../../../../ja/2.9/manuals/platform_management/aap.html">current</option>
+              <option value="../../../../ja/2.9/manuals/platform_management/aap.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/manuals/platform_management/aap.html">2.8</option>
               <option value="../../../../ja/2.7/manuals/platform_management/aap.html">2.7</option>
               <option value="../../../../ja/2.6/manuals/platform_management/aap.html">2.6</option>
               <option value="../../../../ja/2.5/manuals/platform_management/aap.html">2.5</option>
@@ -299,39 +300,39 @@ vi<span class="w"> </span>./exastro-platform/tools/initial-settings-ansible.json
 </div>
 <details>
   <summary>initial-settings-ansible.sample.json</summary><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;input_limit_setting&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;execution_engine_list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="s2">&quot;Ansible Automation Controller&quot;</span>
+<span class="w">  </span><span class="nt">"input_limit_setting"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"execution_engine_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">"Ansible Automation Controller"</span>
 <span class="w">  </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;initial_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;ansible_automation_controller_host_list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="nt">"initial_data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"ansible_automation_controller_host_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;ssh_private_key_file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUJsd0FBQUFkemMyZ3RjbgpOaEFBQUFBd0VBQVFBQUFZRUF0V0ZvVVA5ZkZSRlhUTTV0U2s4cmU1dTVEVjNqclF3VVd5d2swMkwrZ0tkNElsOFQ4TnBkCk40Z3ZGVkMxM1VueGNxc1pxVWdEWk41NnphSnMrdThQcTBlVjl2R0dkWmZDcU11OHRrbzh5WUw2MGQ2VUVoVXFOVVJkb1UKSEJ3bngzbjZidlNWMVE0em56V0JBNVBqOFl3SENiL0swVGFEMndvMkRkbFhqTXhhTlpXTXlpRFVMbE1pSk02VFdCU0lYMwo2emE5ZnI2cGFmak5Vc0hBTk9YSTdGbUFQcC9Jcy80TmtJVkhZN2M1UkJkUTUvNWgrTCtxRmlVazhKbE9vcFdnMjJOWWlXCkpKUGM0U09iTWxtRUY1OEdMdloxZTlCS0FvaXEvdWIvVmlhZG9hRFlyTzlEM0U3UW1NTldWMjNNMnMyN2tnS0ZKcFJJSUMKbmllZlJyaTdkOVhEYldoclBFY1FlRUMyZnNrRzVyY3Q0RFhrQUtVVCtSTkdwMll6bWZqSHlHNkRPWkJIa1RCNnJ5OVF3SgpRaFpFTjEvM3k2K0Q1V1BpbWlxeVFBNmtXdnZYZUtHWkhzZEhLdG5QaGZra1EyUWlteFgyWFRHaGZwdjRSUkUzZWNGUmxRClQvenRLeWg5enIzWmd4UU1nWHgwdEJ5V2dZSUJwZVZHa1dFTTVkeTNBQUFGa1BlMkRlYjN0ZzNtQUFBQUIzTnphQzF5YzIKRUFBQUdCQUxWaGFGRC9YeFVSVjB6T2JVcFBLM3VidVExZDQ2ME1GRnNzSk5OaS9vQ25lQ0pmRS9EYVhUZUlMeFZRdGQxSgo4WEtyR2FsSUEyVGVlczJpYlBydkQ2dEhsZmJ4aG5XWHdxakx2TFpLUE1tQyt0SGVsQklWS2pWRVhhRkJ3Y0o4ZDUrbTcwCmxkVU9NNTgxZ1FPVDQvR01Cd20veXRFMmc5c0tOZzNaVjR6TVdqV1ZqTW9nMUM1VElpVE9rMWdVaUY5K3Mydlg2K3FXbjQKelZMQndEVGx5T3haZ0Q2ZnlMUCtEWkNGUjJPM09VUVhVT2YrWWZpL3FoWWxKUENaVHFLVm9OdGpXSWxpU1QzT0VqbXpKWgpoQmVmQmk3MmRYdlFTZ0tJcXY3bS8xWW1uYUdnMkt6dlE5eE8wSmpEVmxkdHpOck51NUlDaFNhVVNDQXA0bm4wYTR1M2ZWCncyMW9henhIRUhoQXRuN0pCdWEzTGVBMTVBQ2xFL2tUUnFkbU01bjR4OGh1Z3ptUVI1RXdlcTh2VU1DVUlXUkRkZjk4dXYKZytWajRwb3Fza0FPcEZyNzEzaWhtUjdIUnlyWno0WDVKRU5rSXBzVjlsMHhvWDZiK0VVUk4zbkJVWlVFLzg3U3NvZmM2OQoyWU1VRElGOGRMUWNsb0dDQWFYbFJwRmhET1hjdHdBQUFBTUJBQUVBQUFHQkFMRHVJTzBKL3YwMUdqeXhETWswNjB5N2ZjCnM5TUErb3ZkNmw5QkpEK2RFVUM4c3poZWNuaTFEVlJtQjdoN3dpR2lYcUk3RU9yMGpoQVZmQVBxQ1ZQR3F1L09tVGRyOFUKMSswQ09NWjFLbEREdE5tdVRqQkpkdy9ZN2FDVTNXWlROZm1GeE51QzdKbUsrUWFKWk4yRWZTZVRjWVlNYXViL2JtUWc1RwpXZkhka1kyOW9VVzJ1bU9wOHArRzV4SS9qVHZpQXpHS3dmWG5FaUkxKzc0anQzZndTVzFkUEExKzVFUDRVZmphRUdwUlQzCnpaTlFnTTgrWDdNVWJyRklTdjJzQ0VWSU54cGJDSE9iQkRZcTdodUljeDdKUVEvcW5EMVJGdFhBa3d4M1ZkMFF4elZUTDUKZXF6ci9jc3h6S3l1M08yVE5weWVodE1SWVB6M2dXZ2xieFI1SStObWl1VGlTQWFHa1o2OXJqblY0bVNmL25xUnJwUWRpeAozS1E1bUZldVNUUFdEdXZQNFdWNlJybzBPajRjalZnNTlGNHVWM05xQmpvMFpXYmt1QnhZeDRBK2hsZjcwMmdMLzVMZTBPCllTc1dFS0U5aFhueHZ5b0NBUTBCLy9meDFnaHkxY2xQWi9JR3FpWDYwUEQrY0FmTnFWNmt6aFo5WmZmQmVOZ2x3NThRQUEKQU1FQTBqbVF4VVc2WW9ZRnovUFg5aXgrNEd3VXh4WWFTdlVYRDJHZGt4cGtkYS9EV3lKUlJFd1FjTzhPQTdhWUFhV0hxSwp1T1ZCWVJlY3h0Z01SbzUreUNpZjVoNE9HNzVyVEtSQ0NRLy9Td2hyS25iQjFoOVJ0Q2dWNjlSd0tMSUhxcXo0dGQ0V20wCkw0NmFtditjd0ZrVVdxOFRtdzNkR1NlV3AydURQcjVxSjVGWDlEdmZRWUNKSEVkNThnN2lESXdzMUd3VExKaTJ3L0J1QlEKbzB2MUw4dGo0eG1MTUxpcW1zdDZLRHM3cHBlOGpJYTgycHVTSUJ1ZWJ5Y3pKdXljcmNBQUFBd1FEbU5SV25qcisxWmJSdgpPRjJVT2hGQ2I2UVlpQkFsTzVuWVZQUnQ2amhMWmdvMjlkUVUwUmRnYzNObmtOdzY1ZFpQbnZVMTlaamkzcFBlRnVQczJQCnEyaDg1aFNCK3VRR3JodEovRGM2MU1ZS2k5cjkxQmtvd0ZHSDR3YW9mSUsyYmF1V2VFMGg3UFFmajhrSzZVbndLbnpPSTcKc1o2anJTZStxaHQwMzkxUzhTb2F1bkhnMXNsOTRYS092bG1RQUpQMHNuS2VMcGIyalZIR0ZTR0JRdG1GQUh2aXV6Zm5nUgpGc3hrd2ROSU1ERGxLNmxVMnFhbkppL0NBM0VOQldDLzhBQUFEQkFNbXoyUkVEbllkSjM0N2prWWFDNzNHdGtjWDZDN0NxCjZ6cGRXQkZ6Zjd0NkhJbzJMdUlPenVFa2IxV0VjOFZibTBHbTA1YkZ4YnFEYjF2OWpJRmErTG9qTHVOUmFoSEZHVFRRUDYKTk9DMzA2SDd2TWgwMStNUVJNaERKYW9GRlRRVy9uSVBIQldwcDVJNzFVN0FNa0d6cXJoWVU5dlVNSXBNS2taQUQyYWF3dwpreUp6eFZzTFhUQXhrT3BVU3lWZmJsZVBKZXJpVmIydmVXbm5RUmRnRm02empSeXpSTXlYODFkaldzelNDTVZUeWI2YW9GCjdBYjZPZzlib0lnRmVQU1FBQUFCTnpjR2hwYm5oQU1qWmxNR05pWkRrM05UZGxBUUlEQkFVRwotLS0tLUVORCBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0K&quot;</span>
+<span class="w">        </span><span class="nt">"file"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"ssh_private_key_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUJsd0FBQUFkemMyZ3RjbgpOaEFBQUFBd0VBQVFBQUFZRUF0V0ZvVVA5ZkZSRlhUTTV0U2s4cmU1dTVEVjNqclF3VVd5d2swMkwrZ0tkNElsOFQ4TnBkCk40Z3ZGVkMxM1VueGNxc1pxVWdEWk41NnphSnMrdThQcTBlVjl2R0dkWmZDcU11OHRrbzh5WUw2MGQ2VUVoVXFOVVJkb1UKSEJ3bngzbjZidlNWMVE0em56V0JBNVBqOFl3SENiL0swVGFEMndvMkRkbFhqTXhhTlpXTXlpRFVMbE1pSk02VFdCU0lYMwo2emE5ZnI2cGFmak5Vc0hBTk9YSTdGbUFQcC9Jcy80TmtJVkhZN2M1UkJkUTUvNWgrTCtxRmlVazhKbE9vcFdnMjJOWWlXCkpKUGM0U09iTWxtRUY1OEdMdloxZTlCS0FvaXEvdWIvVmlhZG9hRFlyTzlEM0U3UW1NTldWMjNNMnMyN2tnS0ZKcFJJSUMKbmllZlJyaTdkOVhEYldoclBFY1FlRUMyZnNrRzVyY3Q0RFhrQUtVVCtSTkdwMll6bWZqSHlHNkRPWkJIa1RCNnJ5OVF3SgpRaFpFTjEvM3k2K0Q1V1BpbWlxeVFBNmtXdnZYZUtHWkhzZEhLdG5QaGZra1EyUWlteFgyWFRHaGZwdjRSUkUzZWNGUmxRClQvenRLeWg5enIzWmd4UU1nWHgwdEJ5V2dZSUJwZVZHa1dFTTVkeTNBQUFGa1BlMkRlYjN0ZzNtQUFBQUIzTnphQzF5YzIKRUFBQUdCQUxWaGFGRC9YeFVSVjB6T2JVcFBLM3VidVExZDQ2ME1GRnNzSk5OaS9vQ25lQ0pmRS9EYVhUZUlMeFZRdGQxSgo4WEtyR2FsSUEyVGVlczJpYlBydkQ2dEhsZmJ4aG5XWHdxakx2TFpLUE1tQyt0SGVsQklWS2pWRVhhRkJ3Y0o4ZDUrbTcwCmxkVU9NNTgxZ1FPVDQvR01Cd20veXRFMmc5c0tOZzNaVjR6TVdqV1ZqTW9nMUM1VElpVE9rMWdVaUY5K3Mydlg2K3FXbjQKelZMQndEVGx5T3haZ0Q2ZnlMUCtEWkNGUjJPM09VUVhVT2YrWWZpL3FoWWxKUENaVHFLVm9OdGpXSWxpU1QzT0VqbXpKWgpoQmVmQmk3MmRYdlFTZ0tJcXY3bS8xWW1uYUdnMkt6dlE5eE8wSmpEVmxkdHpOck51NUlDaFNhVVNDQXA0bm4wYTR1M2ZWCncyMW9henhIRUhoQXRuN0pCdWEzTGVBMTVBQ2xFL2tUUnFkbU01bjR4OGh1Z3ptUVI1RXdlcTh2VU1DVUlXUkRkZjk4dXYKZytWajRwb3Fza0FPcEZyNzEzaWhtUjdIUnlyWno0WDVKRU5rSXBzVjlsMHhvWDZiK0VVUk4zbkJVWlVFLzg3U3NvZmM2OQoyWU1VRElGOGRMUWNsb0dDQWFYbFJwRmhET1hjdHdBQUFBTUJBQUVBQUFHQkFMRHVJTzBKL3YwMUdqeXhETWswNjB5N2ZjCnM5TUErb3ZkNmw5QkpEK2RFVUM4c3poZWNuaTFEVlJtQjdoN3dpR2lYcUk3RU9yMGpoQVZmQVBxQ1ZQR3F1L09tVGRyOFUKMSswQ09NWjFLbEREdE5tdVRqQkpkdy9ZN2FDVTNXWlROZm1GeE51QzdKbUsrUWFKWk4yRWZTZVRjWVlNYXViL2JtUWc1RwpXZkhka1kyOW9VVzJ1bU9wOHArRzV4SS9qVHZpQXpHS3dmWG5FaUkxKzc0anQzZndTVzFkUEExKzVFUDRVZmphRUdwUlQzCnpaTlFnTTgrWDdNVWJyRklTdjJzQ0VWSU54cGJDSE9iQkRZcTdodUljeDdKUVEvcW5EMVJGdFhBa3d4M1ZkMFF4elZUTDUKZXF6ci9jc3h6S3l1M08yVE5weWVodE1SWVB6M2dXZ2xieFI1SStObWl1VGlTQWFHa1o2OXJqblY0bVNmL25xUnJwUWRpeAozS1E1bUZldVNUUFdEdXZQNFdWNlJybzBPajRjalZnNTlGNHVWM05xQmpvMFpXYmt1QnhZeDRBK2hsZjcwMmdMLzVMZTBPCllTc1dFS0U5aFhueHZ5b0NBUTBCLy9meDFnaHkxY2xQWi9JR3FpWDYwUEQrY0FmTnFWNmt6aFo5WmZmQmVOZ2x3NThRQUEKQU1FQTBqbVF4VVc2WW9ZRnovUFg5aXgrNEd3VXh4WWFTdlVYRDJHZGt4cGtkYS9EV3lKUlJFd1FjTzhPQTdhWUFhV0hxSwp1T1ZCWVJlY3h0Z01SbzUreUNpZjVoNE9HNzVyVEtSQ0NRLy9Td2hyS25iQjFoOVJ0Q2dWNjlSd0tMSUhxcXo0dGQ0V20wCkw0NmFtditjd0ZrVVdxOFRtdzNkR1NlV3AydURQcjVxSjVGWDlEdmZRWUNKSEVkNThnN2lESXdzMUd3VExKaTJ3L0J1QlEKbzB2MUw4dGo0eG1MTUxpcW1zdDZLRHM3cHBlOGpJYTgycHVTSUJ1ZWJ5Y3pKdXljcmNBQUFBd1FEbU5SV25qcisxWmJSdgpPRjJVT2hGQ2I2UVlpQkFsTzVuWVZQUnQ2amhMWmdvMjlkUVUwUmRnYzNObmtOdzY1ZFpQbnZVMTlaamkzcFBlRnVQczJQCnEyaDg1aFNCK3VRR3JodEovRGM2MU1ZS2k5cjkxQmtvd0ZHSDR3YW9mSUsyYmF1V2VFMGg3UFFmajhrSzZVbndLbnpPSTcKc1o2anJTZStxaHQwMzkxUzhTb2F1bkhnMXNsOTRYS092bG1RQUpQMHNuS2VMcGIyalZIR0ZTR0JRdG1GQUh2aXV6Zm5nUgpGc3hrd2ROSU1ERGxLNmxVMnFhbkppL0NBM0VOQldDLzhBQUFEQkFNbXoyUkVEbllkSjM0N2prWWFDNzNHdGtjWDZDN0NxCjZ6cGRXQkZ6Zjd0NkhJbzJMdUlPenVFa2IxV0VjOFZibTBHbTA1YkZ4YnFEYjF2OWpJRmErTG9qTHVOUmFoSEZHVFRRUDYKTk9DMzA2SDd2TWgwMStNUVJNaERKYW9GRlRRVy9uSVBIQldwcDVJNzFVN0FNa0d6cXJoWVU5dlVNSXBNS2taQUQyYWF3dwpreUp6eFZzTFhUQXhrT3BVU3lWZmJsZVBKZXJpVmIydmVXbm5RUmRnRm02empSeXpSTXlYODFkaldzelNDTVZUeWI2YW9GCjdBYjZPZzlib0lnRmVQU1FBQUFCTnpjR2hwYm5oQU1qWmxNR05pWkRrM05UZGxBUUlEQkFVRwotLS0tLUVORCBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0K"</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;aap.example.com&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;authentication_method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;鍵認証(パスフレーズなし)&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;awx&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;ssh_private_key_file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;aap_id_rsa&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;passphrase&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;isolated_tower&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;remarks&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">        </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aap.example.com"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"authentication_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"鍵認証(パスフレーズなし)"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"awx"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"ssh_private_key_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aap_id_rsa"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"passphrase"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"isolated_tower"</span><span class="p">:</span><span class="w"> </span><span class="s2">"False"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"remarks"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">      </span><span class="p">}</span>
 <span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;interface_info_ansible&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;execution_engine&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ansible Automation Controller&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;representative_server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;aap.example.com&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;ansible_automation_controller_protocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;ansible_automation_controller_port&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;443&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;organization_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;authentication_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LwWw3dwoHGx19ZhP1YQZU0JdZzobFv&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;delete_runtime_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;True&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;proxy_address&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;proxy_port&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">    </span><span class="nt">"interface_info_ansible"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"execution_engine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ansible Automation Controller"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"representative_server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aap.example.com"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"ansible_automation_controller_protocol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"ansible_automation_controller_port"</span><span class="p">:</span><span class="w"> </span><span class="s2">"443"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"organization_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"authentication_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LwWw3dwoHGx19ZhP1YQZU0JdZzobFv"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"delete_runtime_data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"True"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"proxy_address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"proxy_port"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
 <span class="w">      </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
@@ -579,10 +580,10 @@ Create<span class="w"> </span>an<span class="w"> </span>organization,<span class
 &lt;<span class="w"> </span>Content-Type:<span class="w"> </span>application/json
 &lt;
 <span class="o">{</span>
-<span class="w">  </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span>null,
-<span class="w">  </span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;000-00000&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;ts&quot;</span>:<span class="w"> </span><span class="s2">&quot;2022-08-18T01:49:17.251Z&quot;</span>
+<span class="w">  </span><span class="s2">"data"</span>:<span class="w"> </span>null,
+<span class="w">  </span><span class="s2">"message"</span>:<span class="w"> </span><span class="s2">"SUCCESS"</span>,
+<span class="w">  </span><span class="s2">"result"</span>:<span class="w"> </span><span class="s2">"000-00000"</span>,
+<span class="w">  </span><span class="s2">"ts"</span>:<span class="w"> </span><span class="s2">"2022-08-18T01:49:17.251Z"</span>
 <span class="o">}</span>
 *<span class="w"> </span>Connection<span class="w"> </span><span class="c1">#0 to host platform-auth left intact</span>
 </pre></div>
@@ -603,10 +604,10 @@ Create<span class="w"> </span>an<span class="w"> </span>organization,<span class
 <span class="o">{</span><span class="w"> </span><span class="o">[</span><span class="m">252</span><span class="w"> </span>bytes<span class="w"> </span>data<span class="o">]</span>
 *<span class="w"> </span>Closing<span class="w"> </span>connection<span class="w"> </span><span class="m">0</span>
 <span class="o">{</span>
-<span class="w">  </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span>null,
-<span class="w">  </span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;エラーメッセージ,</span>
-<span class="s2">  &quot;</span>result<span class="s2">&quot;: &quot;</span>エラーコード<span class="s2">&quot;,</span>
-<span class="s2">  &quot;</span>ts<span class="s2">&quot;: &quot;</span><span class="m">2022</span>-08-18T05:29:35.643Z<span class="s2">&quot;</span>
+<span class="w">  </span><span class="s2">"data"</span>:<span class="w"> </span>null,
+<span class="w">  </span><span class="s2">"message"</span>:<span class="w"> </span><span class="s2">"エラーメッセージ,</span>
+<span class="s2">  "</span>result<span class="s2">": "</span>エラーコード<span class="s2">",</span>
+<span class="s2">  "</span>ts<span class="s2">": "</span><span class="m">2022</span>-08-18T05:29:35.643Z<span class="s2">"</span>
 <span class="s2">}</span>
 </pre></div>
 </div>
@@ -846,52 +847,52 @@ Create<span class="w"> </span>an<span class="w"> </span>organization,<span class
 </details><div class="literal-block-wrapper docutils container" id="id16">
 <div class="code-block-caption"><span class="caption-number">リスト 3.41 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id16" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">ORG_ID</span><span class="o">=</span>org001
-<span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;KEYCLOAK_USER:KEYCLOAK_PASSWORD&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
+<span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"KEYCLOAK_USER:KEYCLOAK_PASSWORD"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 <span class="nv">BASE_URL</span><span class="o">=</span>http://exastro-suite-mng.example.local
 
-curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;http://</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/ita/</span><span class="si">${</span><span class="nv">ORG_ID</span><span class="si">}</span><span class="s2">/initial-settings/ansible/&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;accept: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
-<span class="s1">        &quot;input_limit_setting&quot;: true,</span>
-<span class="s1">        &quot;execution_engine_list&quot;: [</span>
-<span class="s1">          &quot;Ansible Automation Controller&quot;</span>
+curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">'POST'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">"http://</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/ita/</span><span class="si">${</span><span class="nv">ORG_ID</span><span class="si">}</span><span class="s2">/initial-settings/ansible/"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'accept: application/json'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'Content-Type: application/json'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">        "input_limit_setting": true,</span>
+<span class="s1">        "execution_engine_list": [</span>
+<span class="s1">          "Ansible Automation Controller"</span>
 <span class="s1">        ],</span>
-<span class="s1">        &quot;initial_data&quot;: {</span>
-<span class="s1">          &quot;ansible_automation_controller_host_list&quot;: [</span>
+<span class="s1">        "initial_data": {</span>
+<span class="s1">          "ansible_automation_controller_host_list": [</span>
 <span class="s1">            {</span>
-<span class="s1">              &quot;file&quot;: {</span>
-<span class="s1">                &quot;ssh_private_key_file&quot;: &quot;LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUJsd0FBQUFkemMyZ3RjbgpOaEFBQUFBd0VBQVFBQUFZRUF0V0ZvVVA5ZkZSRlhUTTV0U2s4cmU1dTVEVjNqclF3VVd5d2swMkwrZ0tkNElsOFQ4TnBkCk40Z3ZGVkMxM1VueGNxc1pxVWdEWk41NnphSnMrdThQcTBlVjl2R0dkWmZDcU11OHRrbzh5WUw2MGQ2VUVoVXFOVVJkb1UKSEJ3bngzbjZidlNWMVE0em56V0JBNVBqOFl3SENiL0swVGFEMndvMkRkbFhqTXhhTlpXTXlpRFVMbE1pSk02VFdCU0lYMwo2emE5ZnI2cGFmak5Vc0hBTk9YSTdGbUFQcC9Jcy80TmtJVkhZN2M1UkJkUTUvNWgrTCtxRmlVazhKbE9vcFdnMjJOWWlXCkpKUGM0U09iTWxtRUY1OEdMdloxZTlCS0FvaXEvdWIvVmlhZG9hRFlyTzlEM0U3UW1NTldWMjNNMnMyN2tnS0ZKcFJJSUMKbmllZlJyaTdkOVhEYldoclBFY1FlRUMyZnNrRzVyY3Q0RFhrQUtVVCtSTkdwMll6bWZqSHlHNkRPWkJIa1RCNnJ5OVF3SgpRaFpFTjEvM3k2K0Q1V1BpbWlxeVFBNmtXdnZYZUtHWkhzZEhLdG5QaGZra1EyUWlteFgyWFRHaGZwdjRSUkUzZWNGUmxRClQvenRLeWg5enIzWmd4UU1nWHgwdEJ5V2dZSUJwZVZHa1dFTTVkeTNBQUFGa1BlMkRlYjN0ZzNtQUFBQUIzTnphQzF5YzIKRUFBQUdCQUxWaGFGRC9YeFVSVjB6T2JVcFBLM3VidVExZDQ2ME1GRnNzSk5OaS9vQ25lQ0pmRS9EYVhUZUlMeFZRdGQxSgo4WEtyR2FsSUEyVGVlczJpYlBydkQ2dEhsZmJ4aG5XWHdxakx2TFpLUE1tQyt0SGVsQklWS2pWRVhhRkJ3Y0o4ZDUrbTcwCmxkVU9NNTgxZ1FPVDQvR01Cd20veXRFMmc5c0tOZzNaVjR6TVdqV1ZqTW9nMUM1VElpVE9rMWdVaUY5K3Mydlg2K3FXbjQKelZMQndEVGx5T3haZ0Q2ZnlMUCtEWkNGUjJPM09VUVhVT2YrWWZpL3FoWWxKUENaVHFLVm9OdGpXSWxpU1QzT0VqbXpKWgpoQmVmQmk3MmRYdlFTZ0tJcXY3bS8xWW1uYUdnMkt6dlE5eE8wSmpEVmxkdHpOck51NUlDaFNhVVNDQXA0bm4wYTR1M2ZWCncyMW9henhIRUhoQXRuN0pCdWEzTGVBMTVBQ2xFL2tUUnFkbU01bjR4OGh1Z3ptUVI1RXdlcTh2VU1DVUlXUkRkZjk4dXYKZytWajRwb3Fza0FPcEZyNzEzaWhtUjdIUnlyWno0WDVKRU5rSXBzVjlsMHhvWDZiK0VVUk4zbkJVWlVFLzg3U3NvZmM2OQoyWU1VRElGOGRMUWNsb0dDQWFYbFJwRmhET1hjdHdBQUFBTUJBQUVBQUFHQkFMRHVJTzBKL3YwMUdqeXhETWswNjB5N2ZjCnM5TUErb3ZkNmw5QkpEK2RFVUM4c3poZWNuaTFEVlJtQjdoN3dpR2lYcUk3RU9yMGpoQVZmQVBxQ1ZQR3F1L09tVGRyOFUKMSswQ09NWjFLbEREdE5tdVRqQkpkdy9ZN2FDVTNXWlROZm1GeE51QzdKbUsrUWFKWk4yRWZTZVRjWVlNYXViL2JtUWc1RwpXZkhka1kyOW9VVzJ1bU9wOHArRzV4SS9qVHZpQXpHS3dmWG5FaUkxKzc0anQzZndTVzFkUEExKzVFUDRVZmphRUdwUlQzCnpaTlFnTTgrWDdNVWJyRklTdjJzQ0VWSU54cGJDSE9iQkRZcTdodUljeDdKUVEvcW5EMVJGdFhBa3d4M1ZkMFF4elZUTDUKZXF6ci9jc3h6S3l1M08yVE5weWVodE1SWVB6M2dXZ2xieFI1SStObWl1VGlTQWFHa1o2OXJqblY0bVNmL25xUnJwUWRpeAozS1E1bUZldVNUUFdEdXZQNFdWNlJybzBPajRjalZnNTlGNHVWM05xQmpvMFpXYmt1QnhZeDRBK2hsZjcwMmdMLzVMZTBPCllTc1dFS0U5aFhueHZ5b0NBUTBCLy9meDFnaHkxY2xQWi9JR3FpWDYwUEQrY0FmTnFWNmt6aFo5WmZmQmVOZ2x3NThRQUEKQU1FQTBqbVF4VVc2WW9ZRnovUFg5aXgrNEd3VXh4WWFTdlVYRDJHZGt4cGtkYS9EV3lKUlJFd1FjTzhPQTdhWUFhV0hxSwp1T1ZCWVJlY3h0Z01SbzUreUNpZjVoNE9HNzVyVEtSQ0NRLy9Td2hyS25iQjFoOVJ0Q2dWNjlSd0tMSUhxcXo0dGQ0V20wCkw0NmFtditjd0ZrVVdxOFRtdzNkR1NlV3AydURQcjVxSjVGWDlEdmZRWUNKSEVkNThnN2lESXdzMUd3VExKaTJ3L0J1QlEKbzB2MUw4dGo0eG1MTUxpcW1zdDZLRHM3cHBlOGpJYTgycHVTSUJ1ZWJ5Y3pKdXljcmNBQUFBd1FEbU5SV25qcisxWmJSdgpPRjJVT2hGQ2I2UVlpQkFsTzVuWVZQUnQ2amhMWmdvMjlkUVUwUmRnYzNObmtOdzY1ZFpQbnZVMTlaamkzcFBlRnVQczJQCnEyaDg1aFNCK3VRR3JodEovRGM2MU1ZS2k5cjkxQmtvd0ZHSDR3YW9mSUsyYmF1V2VFMGg3UFFmajhrSzZVbndLbnpPSTcKc1o2anJTZStxaHQwMzkxUzhTb2F1bkhnMXNsOTRYS092bG1RQUpQMHNuS2VMcGIyalZIR0ZTR0JRdG1GQUh2aXV6Zm5nUgpGc3hrd2ROSU1ERGxLNmxVMnFhbkppL0NBM0VOQldDLzhBQUFEQkFNbXoyUkVEbllkSjM0N2prWWFDNzNHdGtjWDZDN0NxCjZ6cGRXQkZ6Zjd0NkhJbzJMdUlPenVFa2IxV0VjOFZibTBHbTA1YkZ4YnFEYjF2OWpJRmErTG9qTHVOUmFoSEZHVFRRUDYKTk9DMzA2SDd2TWgwMStNUVJNaERKYW9GRlRRVy9uSVBIQldwcDVJNzFVN0FNa0d6cXJoWVU5dlVNSXBNS2taQUQyYWF3dwpreUp6eFZzTFhUQXhrT3BVU3lWZmJsZVBKZXJpVmIydmVXbm5RUmRnRm02empSeXpSTXlYODFkaldzelNDTVZUeWI2YW9GCjdBYjZPZzlib0lnRmVQU1FBQUFCTnpjR2hwYm5oQU1qWmxNR05pWkRrM05UZGxBUUlEQkFVRwotLS0tLUVORCBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0K&quot;</span>
+<span class="s1">              "file": {</span>
+<span class="s1">                "ssh_private_key_file": "LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUJsd0FBQUFkemMyZ3RjbgpOaEFBQUFBd0VBQVFBQUFZRUF0V0ZvVVA5ZkZSRlhUTTV0U2s4cmU1dTVEVjNqclF3VVd5d2swMkwrZ0tkNElsOFQ4TnBkCk40Z3ZGVkMxM1VueGNxc1pxVWdEWk41NnphSnMrdThQcTBlVjl2R0dkWmZDcU11OHRrbzh5WUw2MGQ2VUVoVXFOVVJkb1UKSEJ3bngzbjZidlNWMVE0em56V0JBNVBqOFl3SENiL0swVGFEMndvMkRkbFhqTXhhTlpXTXlpRFVMbE1pSk02VFdCU0lYMwo2emE5ZnI2cGFmak5Vc0hBTk9YSTdGbUFQcC9Jcy80TmtJVkhZN2M1UkJkUTUvNWgrTCtxRmlVazhKbE9vcFdnMjJOWWlXCkpKUGM0U09iTWxtRUY1OEdMdloxZTlCS0FvaXEvdWIvVmlhZG9hRFlyTzlEM0U3UW1NTldWMjNNMnMyN2tnS0ZKcFJJSUMKbmllZlJyaTdkOVhEYldoclBFY1FlRUMyZnNrRzVyY3Q0RFhrQUtVVCtSTkdwMll6bWZqSHlHNkRPWkJIa1RCNnJ5OVF3SgpRaFpFTjEvM3k2K0Q1V1BpbWlxeVFBNmtXdnZYZUtHWkhzZEhLdG5QaGZra1EyUWlteFgyWFRHaGZwdjRSUkUzZWNGUmxRClQvenRLeWg5enIzWmd4UU1nWHgwdEJ5V2dZSUJwZVZHa1dFTTVkeTNBQUFGa1BlMkRlYjN0ZzNtQUFBQUIzTnphQzF5YzIKRUFBQUdCQUxWaGFGRC9YeFVSVjB6T2JVcFBLM3VidVExZDQ2ME1GRnNzSk5OaS9vQ25lQ0pmRS9EYVhUZUlMeFZRdGQxSgo4WEtyR2FsSUEyVGVlczJpYlBydkQ2dEhsZmJ4aG5XWHdxakx2TFpLUE1tQyt0SGVsQklWS2pWRVhhRkJ3Y0o4ZDUrbTcwCmxkVU9NNTgxZ1FPVDQvR01Cd20veXRFMmc5c0tOZzNaVjR6TVdqV1ZqTW9nMUM1VElpVE9rMWdVaUY5K3Mydlg2K3FXbjQKelZMQndEVGx5T3haZ0Q2ZnlMUCtEWkNGUjJPM09VUVhVT2YrWWZpL3FoWWxKUENaVHFLVm9OdGpXSWxpU1QzT0VqbXpKWgpoQmVmQmk3MmRYdlFTZ0tJcXY3bS8xWW1uYUdnMkt6dlE5eE8wSmpEVmxkdHpOck51NUlDaFNhVVNDQXA0bm4wYTR1M2ZWCncyMW9henhIRUhoQXRuN0pCdWEzTGVBMTVBQ2xFL2tUUnFkbU01bjR4OGh1Z3ptUVI1RXdlcTh2VU1DVUlXUkRkZjk4dXYKZytWajRwb3Fza0FPcEZyNzEzaWhtUjdIUnlyWno0WDVKRU5rSXBzVjlsMHhvWDZiK0VVUk4zbkJVWlVFLzg3U3NvZmM2OQoyWU1VRElGOGRMUWNsb0dDQWFYbFJwRmhET1hjdHdBQUFBTUJBQUVBQUFHQkFMRHVJTzBKL3YwMUdqeXhETWswNjB5N2ZjCnM5TUErb3ZkNmw5QkpEK2RFVUM4c3poZWNuaTFEVlJtQjdoN3dpR2lYcUk3RU9yMGpoQVZmQVBxQ1ZQR3F1L09tVGRyOFUKMSswQ09NWjFLbEREdE5tdVRqQkpkdy9ZN2FDVTNXWlROZm1GeE51QzdKbUsrUWFKWk4yRWZTZVRjWVlNYXViL2JtUWc1RwpXZkhka1kyOW9VVzJ1bU9wOHArRzV4SS9qVHZpQXpHS3dmWG5FaUkxKzc0anQzZndTVzFkUEExKzVFUDRVZmphRUdwUlQzCnpaTlFnTTgrWDdNVWJyRklTdjJzQ0VWSU54cGJDSE9iQkRZcTdodUljeDdKUVEvcW5EMVJGdFhBa3d4M1ZkMFF4elZUTDUKZXF6ci9jc3h6S3l1M08yVE5weWVodE1SWVB6M2dXZ2xieFI1SStObWl1VGlTQWFHa1o2OXJqblY0bVNmL25xUnJwUWRpeAozS1E1bUZldVNUUFdEdXZQNFdWNlJybzBPajRjalZnNTlGNHVWM05xQmpvMFpXYmt1QnhZeDRBK2hsZjcwMmdMLzVMZTBPCllTc1dFS0U5aFhueHZ5b0NBUTBCLy9meDFnaHkxY2xQWi9JR3FpWDYwUEQrY0FmTnFWNmt6aFo5WmZmQmVOZ2x3NThRQUEKQU1FQTBqbVF4VVc2WW9ZRnovUFg5aXgrNEd3VXh4WWFTdlVYRDJHZGt4cGtkYS9EV3lKUlJFd1FjTzhPQTdhWUFhV0hxSwp1T1ZCWVJlY3h0Z01SbzUreUNpZjVoNE9HNzVyVEtSQ0NRLy9Td2hyS25iQjFoOVJ0Q2dWNjlSd0tMSUhxcXo0dGQ0V20wCkw0NmFtditjd0ZrVVdxOFRtdzNkR1NlV3AydURQcjVxSjVGWDlEdmZRWUNKSEVkNThnN2lESXdzMUd3VExKaTJ3L0J1QlEKbzB2MUw4dGo0eG1MTUxpcW1zdDZLRHM3cHBlOGpJYTgycHVTSUJ1ZWJ5Y3pKdXljcmNBQUFBd1FEbU5SV25qcisxWmJSdgpPRjJVT2hGQ2I2UVlpQkFsTzVuWVZQUnQ2amhMWmdvMjlkUVUwUmRnYzNObmtOdzY1ZFpQbnZVMTlaamkzcFBlRnVQczJQCnEyaDg1aFNCK3VRR3JodEovRGM2MU1ZS2k5cjkxQmtvd0ZHSDR3YW9mSUsyYmF1V2VFMGg3UFFmajhrSzZVbndLbnpPSTcKc1o2anJTZStxaHQwMzkxUzhTb2F1bkhnMXNsOTRYS092bG1RQUpQMHNuS2VMcGIyalZIR0ZTR0JRdG1GQUh2aXV6Zm5nUgpGc3hrd2ROSU1ERGxLNmxVMnFhbkppL0NBM0VOQldDLzhBQUFEQkFNbXoyUkVEbllkSjM0N2prWWFDNzNHdGtjWDZDN0NxCjZ6cGRXQkZ6Zjd0NkhJbzJMdUlPenVFa2IxV0VjOFZibTBHbTA1YkZ4YnFEYjF2OWpJRmErTG9qTHVOUmFoSEZHVFRRUDYKTk9DMzA2SDd2TWgwMStNUVJNaERKYW9GRlRRVy9uSVBIQldwcDVJNzFVN0FNa0d6cXJoWVU5dlVNSXBNS2taQUQyYWF3dwpreUp6eFZzTFhUQXhrT3BVU3lWZmJsZVBKZXJpVmIydmVXbm5RUmRnRm02empSeXpSTXlYODFkaldzelNDTVZUeWI2YW9GCjdBYjZPZzlib0lnRmVQU1FBQUFCTnpjR2hwYm5oQU1qWmxNR05pWkRrM05UZGxBUUlEQkFVRwotLS0tLUVORCBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0K"</span>
 <span class="s1">              },</span>
-<span class="s1">              &quot;parameter&quot;: {</span>
-<span class="s1">                &quot;host&quot;: &quot;aap.example.com&quot;,</span>
-<span class="s1">                &quot;authentication_method&quot;: &quot;鍵認証(パスフレーズなし)&quot;,</span>
-<span class="s1">                &quot;user&quot;: &quot;awx&quot;,</span>
-<span class="s1">                &quot;password&quot;: null,</span>
-<span class="s1">                &quot;ssh_private_key_file&quot;: &quot;aap_id_rsa&quot;,</span>
-<span class="s1">                &quot;passphrase&quot;: null,</span>
-<span class="s1">                &quot;isolated_tower&quot;: &quot;False&quot;,</span>
-<span class="s1">                &quot;remarks&quot;: null</span>
+<span class="s1">              "parameter": {</span>
+<span class="s1">                "host": "aap.example.com",</span>
+<span class="s1">                "authentication_method": "鍵認証(パスフレーズなし)",</span>
+<span class="s1">                "user": "awx",</span>
+<span class="s1">                "password": null,</span>
+<span class="s1">                "ssh_private_key_file": "aap_id_rsa",</span>
+<span class="s1">                "passphrase": null,</span>
+<span class="s1">                "isolated_tower": "False",</span>
+<span class="s1">                "remarks": null</span>
 <span class="s1">              }</span>
 <span class="s1">            }</span>
 <span class="s1">          ],</span>
-<span class="s1">          &quot;interface_info_ansible&quot;: {</span>
-<span class="s1">            &quot;parameter&quot;: {</span>
-<span class="s1">              &quot;execution_engine&quot;: &quot;Ansible Automation Controller&quot;,</span>
-<span class="s1">              &quot;representative_server&quot;: &quot;aap.example.com&quot;,</span>
-<span class="s1">              &quot;ansible_automation_controller_protocol&quot;: &quot;https&quot;,</span>
-<span class="s1">              &quot;ansible_automation_controller_port&quot;: &quot;443&quot;,</span>
-<span class="s1">              &quot;organization_name&quot;: null,</span>
-<span class="s1">              &quot;authentication_token&quot;: &quot;LwWw3dwoHGx19ZhP1YQZU0JdZzobFv&quot;,</span>
-<span class="s1">              &quot;delete_runtime_data&quot;: &quot;True&quot;,</span>
-<span class="s1">              &quot;proxy_address&quot;: null,</span>
-<span class="s1">              &quot;proxy_port&quot;: null</span>
+<span class="s1">          "interface_info_ansible": {</span>
+<span class="s1">            "parameter": {</span>
+<span class="s1">              "execution_engine": "Ansible Automation Controller",</span>
+<span class="s1">              "representative_server": "aap.example.com",</span>
+<span class="s1">              "ansible_automation_controller_protocol": "https",</span>
+<span class="s1">              "ansible_automation_controller_port": "443",</span>
+<span class="s1">              "organization_name": null,</span>
+<span class="s1">              "authentication_token": "LwWw3dwoHGx19ZhP1YQZU0JdZzobFv",</span>
+<span class="s1">              "delete_runtime_data": "True",</span>
+<span class="s1">              "proxy_address": null,</span>
+<span class="s1">              "proxy_port": null</span>
 <span class="s1">            }</span>
 <span class="s1">          }</span>
 <span class="s1">        }</span>
-<span class="s1">      }&#39;</span>
+<span class="s1">      }'</span>
 </pre></div>
 </div>
 </div>
@@ -922,47 +923,47 @@ your<span class="w"> </span>password<span class="w"> </span>:<span class="w"> </
 <div class="literal-block-wrapper docutils container" id="id18">
 <div class="code-block-caption"><span class="caption-number">リスト 3.43 </span><span class="caption-text">実行結果(成功例)</span><a class="headerlink" href="#id18" title="Link to this code">¶</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;execution_engine_list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">      </span><span class="s2">&quot;Ansible Automation Controller&quot;</span>
+<span class="w">  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"execution_engine_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">"Ansible Automation Controller"</span>
 <span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;initial_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;ansible_automation_controller_host_list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"initial_data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"ansible_automation_controller_host_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;ssh_private_key_file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUJsd0FBQUFkemMyZ3RjbgpOaEFBQUFBd0VBQVFBQUFZRUF0V0ZvVVA5ZkZSRlhUTTV0U2s4cmU1dTVEVjNqclF3VVd5d2swMkwrZ0tkNElsOFQ4TnBkCk40Z3ZGVkMxM1VueGNxc1pxVWdEWk41NnphSnMrdThQcTBlVjl2R0dkWmZDcU11OHRrbzh5WUw2MGQ2VUVoVXFOVVJkb1UKSEJ3bngzbjZidlNWMVE0em56V0JBNVBqOFl3SENiL0swVGFEMndvMkRkbFhqTXhhTlpXTXlpRFVMbE1pSk02VFdCU0lYMwo2emE5ZnI2cGFmak5Vc0hBTk9YSTdGbUFQcC9Jcy80TmtJVkhZN2M1UkJkUTUvNWgrTCtxRmlVazhKbE9vcFdnMjJOWWlXCkpKUGM0U09iTWxtRUY1OEdMdloxZTlCS0FvaXEvdWIvVmlhZG9hRFlyTzlEM0U3UW1NTldWMjNNMnMyN2tnS0ZKcFJJSUMKbmllZlJyaTdkOVhEYldoclBFY1FlRUMyZnNrRzVyY3Q0RFhrQUtVVCtSTkdwMll6bWZqSHlHNkRPWkJIa1RCNnJ5OVF3SgpRaFpFTjEvM3k2K0Q1V1BpbWlxeVFBNmtXdnZYZUtHWkhzZEhLdG5QaGZra1EyUWlteFgyWFRHaGZwdjRSUkUzZWNGUmxRClQvenRLeWg5enIzWmd4UU1nWHgwdEJ5V2dZSUJwZVZHa1dFTTVkeTNBQUFGa1BlMkRlYjN0ZzNtQUFBQUIzTnphQzF5YzIKRUFBQUdCQUxWaGFGRC9YeFVSVjB6T2JVcFBLM3VidVExZDQ2ME1GRnNzSk5OaS9vQ25lQ0pmRS9EYVhUZUlMeFZRdGQxSgo4WEtyR2FsSUEyVGVlczJpYlBydkQ2dEhsZmJ4aG5XWHdxakx2TFpLUE1tQyt0SGVsQklWS2pWRVhhRkJ3Y0o4ZDUrbTcwCmxkVU9NNTgxZ1FPVDQvR01Cd20veXRFMmc5c0tOZzNaVjR6TVdqV1ZqTW9nMUM1VElpVE9rMWdVaUY5K3Mydlg2K3FXbjQKelZMQndEVGx5T3haZ0Q2ZnlMUCtEWkNGUjJPM09VUVhVT2YrWWZpL3FoWWxKUENaVHFLVm9OdGpXSWxpU1QzT0VqbXpKWgpoQmVmQmk3MmRYdlFTZ0tJcXY3bS8xWW1uYUdnMkt6dlE5eE8wSmpEVmxkdHpOck51NUlDaFNhVVNDQXA0bm4wYTR1M2ZWCncyMW9henhIRUhoQXRuN0pCdWEzTGVBMTVBQ2xFL2tUUnFkbU01bjR4OGh1Z3ptUVI1RXdlcTh2VU1DVUlXUkRkZjk4dXYKZytWajRwb3Fza0FPcEZyNzEzaWhtUjdIUnlyWno0WDVKRU5rSXBzVjlsMHhvWDZiK0VVUk4zbkJVWlVFLzg3U3NvZmM2OQoyWU1VRElGOGRMUWNsb0dDQWFYbFJwRmhET1hjdHdBQUFBTUJBQUVBQUFHQkFMRHVJTzBKL3YwMUdqeXhETWswNjB5N2ZjCnM5TUErb3ZkNmw5QkpEK2RFVUM4c3poZWNuaTFEVlJtQjdoN3dpR2lYcUk3RU9yMGpoQVZmQVBxQ1ZQR3F1L09tVGRyOFUKMSswQ09NWjFLbEREdE5tdVRqQkpkdy9ZN2FDVTNXWlROZm1GeE51QzdKbUsrUWFKWk4yRWZTZVRjWVlNYXViL2JtUWc1RwpXZkhka1kyOW9VVzJ1bU9wOHArRzV4SS9qVHZpQXpHS3dmWG5FaUkxKzc0anQzZndTVzFkUEExKzVFUDRVZmphRUdwUlQzCnpaTlFnTTgrWDdNVWJyRklTdjJzQ0VWSU54cGJDSE9iQkRZcTdodUljeDdKUVEvcW5EMVJGdFhBa3d4M1ZkMFF4elZUTDUKZXF6ci9jc3h6S3l1M08yVE5weWVodE1SWVB6M2dXZ2xieFI1SStObWl1VGlTQWFHa1o2OXJqblY0bVNmL25xUnJwUWRpeAozS1E1bUZldVNUUFdEdXZQNFdWNlJybzBPajRjalZnNTlGNHVWM05xQmpvMFpXYmt1QnhZeDRBK2hsZjcwMmdMLzVMZTBPCllTc1dFS0U5aFhueHZ5b0NBUTBCLy9meDFnaHkxY2xQWi9JR3FpWDYwUEQrY0FmTnFWNmt6aFo5WmZmQmVOZ2x3NThRQUEKQU1FQTBqbVF4VVc2WW9ZRnovUFg5aXgrNEd3VXh4WWFTdlVYRDJHZGt4cGtkYS9EV3lKUlJFd1FjTzhPQTdhWUFhV0hxSwp1T1ZCWVJlY3h0Z01SbzUreUNpZjVoNE9HNzVyVEtSQ0NRLy9Td2hyS25iQjFoOVJ0Q2dWNjlSd0tMSUhxcXo0dGQ0V20wCkw0NmFtditjd0ZrVVdxOFRtdzNkR1NlV3AydURQcjVxSjVGWDlEdmZRWUNKSEVkNThnN2lESXdzMUd3VExKaTJ3L0J1QlEKbzB2MUw4dGo0eG1MTUxpcW1zdDZLRHM3cHBlOGpJYTgycHVTSUJ1ZWJ5Y3pKdXljcmNBQUFBd1FEbU5SV25qcisxWmJSdgpPRjJVT2hGQ2I2UVlpQkFsTzVuWVZQUnQ2amhMWmdvMjlkUVUwUmRnYzNObmtOdzY1ZFpQbnZVMTlaamkzcFBlRnVQczJQCnEyaDg1aFNCK3VRR3JodEovRGM2MU1ZS2k5cjkxQmtvd0ZHSDR3YW9mSUsyYmF1V2VFMGg3UFFmajhrSzZVbndLbnpPSTcKc1o2anJTZStxaHQwMzkxUzhTb2F1bkhnMXNsOTRYS092bG1RQUpQMHNuS2VMcGIyalZIR0ZTR0JRdG1GQUh2aXV6Zm5nUgpGc3hrd2ROSU1ERGxLNmxVMnFhbkppL0NBM0VOQldDLzhBQUFEQkFNbXoyUkVEbllkSjM0N2prWWFDNzNHdGtjWDZDN0NxCjZ6cGRXQkZ6Zjd0NkhJbzJMdUlPenVFa2IxV0VjOFZibTBHbTA1YkZ4YnFEYjF2OWpJRmErTG9qTHVOUmFoSEZHVFRRUDYKTk9DMzA2SDd2TWgwMStNUVJNaERKYW9GRlRRVy9uSVBIQldwcDVJNzFVN0FNa0d6cXJoWVU5dlVNSXBNS2taQUQyYWF3dwpreUp6eFZzTFhUQXhrT3BVU3lWZmJsZVBKZXJpVmIydmVXbm5RUmRnRm02empSeXpSTXlYODFkaldzelNDTVZUeWI2YW9GCjdBYjZPZzlib0lnRmVQU1FBQUFCTnpjR2hwYm5oQU1qWmxNR05pWkRrM05UZGxBUUlEQkFVRwotLS0tLUVORCBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0K&quot;</span>
+<span class="w">          </span><span class="nt">"file"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"ssh_private_key_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUJsd0FBQUFkemMyZ3RjbgpOaEFBQUFBd0VBQVFBQUFZRUF0V0ZvVVA5ZkZSRlhUTTV0U2s4cmU1dTVEVjNqclF3VVd5d2swMkwrZ0tkNElsOFQ4TnBkCk40Z3ZGVkMxM1VueGNxc1pxVWdEWk41NnphSnMrdThQcTBlVjl2R0dkWmZDcU11OHRrbzh5WUw2MGQ2VUVoVXFOVVJkb1UKSEJ3bngzbjZidlNWMVE0em56V0JBNVBqOFl3SENiL0swVGFEMndvMkRkbFhqTXhhTlpXTXlpRFVMbE1pSk02VFdCU0lYMwo2emE5ZnI2cGFmak5Vc0hBTk9YSTdGbUFQcC9Jcy80TmtJVkhZN2M1UkJkUTUvNWgrTCtxRmlVazhKbE9vcFdnMjJOWWlXCkpKUGM0U09iTWxtRUY1OEdMdloxZTlCS0FvaXEvdWIvVmlhZG9hRFlyTzlEM0U3UW1NTldWMjNNMnMyN2tnS0ZKcFJJSUMKbmllZlJyaTdkOVhEYldoclBFY1FlRUMyZnNrRzVyY3Q0RFhrQUtVVCtSTkdwMll6bWZqSHlHNkRPWkJIa1RCNnJ5OVF3SgpRaFpFTjEvM3k2K0Q1V1BpbWlxeVFBNmtXdnZYZUtHWkhzZEhLdG5QaGZra1EyUWlteFgyWFRHaGZwdjRSUkUzZWNGUmxRClQvenRLeWg5enIzWmd4UU1nWHgwdEJ5V2dZSUJwZVZHa1dFTTVkeTNBQUFGa1BlMkRlYjN0ZzNtQUFBQUIzTnphQzF5YzIKRUFBQUdCQUxWaGFGRC9YeFVSVjB6T2JVcFBLM3VidVExZDQ2ME1GRnNzSk5OaS9vQ25lQ0pmRS9EYVhUZUlMeFZRdGQxSgo4WEtyR2FsSUEyVGVlczJpYlBydkQ2dEhsZmJ4aG5XWHdxakx2TFpLUE1tQyt0SGVsQklWS2pWRVhhRkJ3Y0o4ZDUrbTcwCmxkVU9NNTgxZ1FPVDQvR01Cd20veXRFMmc5c0tOZzNaVjR6TVdqV1ZqTW9nMUM1VElpVE9rMWdVaUY5K3Mydlg2K3FXbjQKelZMQndEVGx5T3haZ0Q2ZnlMUCtEWkNGUjJPM09VUVhVT2YrWWZpL3FoWWxKUENaVHFLVm9OdGpXSWxpU1QzT0VqbXpKWgpoQmVmQmk3MmRYdlFTZ0tJcXY3bS8xWW1uYUdnMkt6dlE5eE8wSmpEVmxkdHpOck51NUlDaFNhVVNDQXA0bm4wYTR1M2ZWCncyMW9henhIRUhoQXRuN0pCdWEzTGVBMTVBQ2xFL2tUUnFkbU01bjR4OGh1Z3ptUVI1RXdlcTh2VU1DVUlXUkRkZjk4dXYKZytWajRwb3Fza0FPcEZyNzEzaWhtUjdIUnlyWno0WDVKRU5rSXBzVjlsMHhvWDZiK0VVUk4zbkJVWlVFLzg3U3NvZmM2OQoyWU1VRElGOGRMUWNsb0dDQWFYbFJwRmhET1hjdHdBQUFBTUJBQUVBQUFHQkFMRHVJTzBKL3YwMUdqeXhETWswNjB5N2ZjCnM5TUErb3ZkNmw5QkpEK2RFVUM4c3poZWNuaTFEVlJtQjdoN3dpR2lYcUk3RU9yMGpoQVZmQVBxQ1ZQR3F1L09tVGRyOFUKMSswQ09NWjFLbEREdE5tdVRqQkpkdy9ZN2FDVTNXWlROZm1GeE51QzdKbUsrUWFKWk4yRWZTZVRjWVlNYXViL2JtUWc1RwpXZkhka1kyOW9VVzJ1bU9wOHArRzV4SS9qVHZpQXpHS3dmWG5FaUkxKzc0anQzZndTVzFkUEExKzVFUDRVZmphRUdwUlQzCnpaTlFnTTgrWDdNVWJyRklTdjJzQ0VWSU54cGJDSE9iQkRZcTdodUljeDdKUVEvcW5EMVJGdFhBa3d4M1ZkMFF4elZUTDUKZXF6ci9jc3h6S3l1M08yVE5weWVodE1SWVB6M2dXZ2xieFI1SStObWl1VGlTQWFHa1o2OXJqblY0bVNmL25xUnJwUWRpeAozS1E1bUZldVNUUFdEdXZQNFdWNlJybzBPajRjalZnNTlGNHVWM05xQmpvMFpXYmt1QnhZeDRBK2hsZjcwMmdMLzVMZTBPCllTc1dFS0U5aFhueHZ5b0NBUTBCLy9meDFnaHkxY2xQWi9JR3FpWDYwUEQrY0FmTnFWNmt6aFo5WmZmQmVOZ2x3NThRQUEKQU1FQTBqbVF4VVc2WW9ZRnovUFg5aXgrNEd3VXh4WWFTdlVYRDJHZGt4cGtkYS9EV3lKUlJFd1FjTzhPQTdhWUFhV0hxSwp1T1ZCWVJlY3h0Z01SbzUreUNpZjVoNE9HNzVyVEtSQ0NRLy9Td2hyS25iQjFoOVJ0Q2dWNjlSd0tMSUhxcXo0dGQ0V20wCkw0NmFtditjd0ZrVVdxOFRtdzNkR1NlV3AydURQcjVxSjVGWDlEdmZRWUNKSEVkNThnN2lESXdzMUd3VExKaTJ3L0J1QlEKbzB2MUw4dGo0eG1MTUxpcW1zdDZLRHM3cHBlOGpJYTgycHVTSUJ1ZWJ5Y3pKdXljcmNBQUFBd1FEbU5SV25qcisxWmJSdgpPRjJVT2hGQ2I2UVlpQkFsTzVuWVZQUnQ2amhMWmdvMjlkUVUwUmRnYzNObmtOdzY1ZFpQbnZVMTlaamkzcFBlRnVQczJQCnEyaDg1aFNCK3VRR3JodEovRGM2MU1ZS2k5cjkxQmtvd0ZHSDR3YW9mSUsyYmF1V2VFMGg3UFFmajhrSzZVbndLbnpPSTcKc1o2anJTZStxaHQwMzkxUzhTb2F1bkhnMXNsOTRYS092bG1RQUpQMHNuS2VMcGIyalZIR0ZTR0JRdG1GQUh2aXV6Zm5nUgpGc3hrd2ROSU1ERGxLNmxVMnFhbkppL0NBM0VOQldDLzhBQUFEQkFNbXoyUkVEbllkSjM0N2prWWFDNzNHdGtjWDZDN0NxCjZ6cGRXQkZ6Zjd0NkhJbzJMdUlPenVFa2IxV0VjOFZibTBHbTA1YkZ4YnFEYjF2OWpJRmErTG9qTHVOUmFoSEZHVFRRUDYKTk9DMzA2SDd2TWgwMStNUVJNaERKYW9GRlRRVy9uSVBIQldwcDVJNzFVN0FNa0d6cXJoWVU5dlVNSXBNS2taQUQyYWF3dwpreUp6eFZzTFhUQXhrT3BVU3lWZmJsZVBKZXJpVmIydmVXbm5RUmRnRm02empSeXpSTXlYODFkaldzelNDTVZUeWI2YW9GCjdBYjZPZzlib0lnRmVQU1FBQUFCTnpjR2hwYm5oQU1qWmxNR05pWkRrM05UZGxBUUlEQkFVRwotLS0tLUVORCBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0K"</span>
 <span class="w">          </span><span class="p">},</span>
-<span class="w">          </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;authentication_method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;\u9375\u8a8d\u8a3c(\u30d1\u30b9\u30d5\u30ec\u30fc\u30ba\u306a\u3057)&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;aap.example.com&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;isolated_tower&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;passphrase&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;remarks&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;ssh_private_key_file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;aap_id_rsa&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;awx&quot;</span>
+<span class="w">          </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"authentication_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"\u9375\u8a8d\u8a3c(\u30d1\u30b9\u30d5\u30ec\u30fc\u30ba\u306a\u3057)"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aap.example.com"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"isolated_tower"</span><span class="p">:</span><span class="w"> </span><span class="s2">"False"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"passphrase"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"remarks"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"ssh_private_key_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aap_id_rsa"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"awx"</span>
 <span class="w">          </span><span class="p">}</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">      </span><span class="p">],</span>
-<span class="w">      </span><span class="nt">&quot;interface_info_ansible&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;ansible_automation_controller_port&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;443&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;ansible_automation_controller_protocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;authentication_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LwWw3dwoHGx19ZhP1YQZU0JdZzobFv&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;delete_runtime_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;True&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;execution_engine&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ansible Automation Controller&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;organization_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;proxy_address&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;proxy_port&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;representative_server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;aap.example.com&quot;</span>
+<span class="w">      </span><span class="nt">"interface_info_ansible"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"ansible_automation_controller_port"</span><span class="p">:</span><span class="w"> </span><span class="s2">"443"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"ansible_automation_controller_protocol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"authentication_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LwWw3dwoHGx19ZhP1YQZU0JdZzobFv"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"delete_runtime_data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"True"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"execution_engine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ansible Automation Controller"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"organization_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"proxy_address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"proxy_port"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"representative_server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aap.example.com"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">      </span><span class="p">}</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;input_limit_setting&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="nt">"input_limit_setting"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;000-00000&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;ts&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-02-03T14:47:10.185Z&quot;</span>
+<span class="w">  </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESS"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000-00000"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"ts"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-02-03T14:47:10.185Z"</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -982,10 +983,10 @@ your<span class="w"> </span>password<span class="w"> </span>:<span class="w"> </
 <span class="o">{</span><span class="w"> </span><span class="o">[</span><span class="m">252</span><span class="w"> </span>bytes<span class="w"> </span>data<span class="o">]</span>
 *<span class="w"> </span>Closing<span class="w"> </span>connection<span class="w"> </span><span class="m">0</span>
 <span class="o">{</span>
-<span class="w">  </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span>null,
-<span class="w">  </span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;エラーメッセージ,</span>
-<span class="s2">  &quot;</span>result<span class="s2">&quot;: &quot;</span>エラーコード<span class="s2">&quot;,</span>
-<span class="s2">  &quot;</span>ts<span class="s2">&quot;: &quot;</span><span class="m">2022</span>-08-18T05:29:35.643Z<span class="s2">&quot;</span>
+<span class="w">  </span><span class="s2">"data"</span>:<span class="w"> </span>null,
+<span class="w">  </span><span class="s2">"message"</span>:<span class="w"> </span><span class="s2">"エラーメッセージ,</span>
+<span class="s2">  "</span>result<span class="s2">": "</span>エラーコード<span class="s2">",</span>
+<span class="s2">  "</span>ts<span class="s2">": "</span><span class="m">2022</span>-08-18T05:29:35.643Z<span class="s2">"</span>
 <span class="s2">}</span>
 </pre></div>
 </div>
@@ -994,9 +995,9 @@ your<span class="w"> </span>password<span class="w"> </span>:<span class="w"> </
 </ul>
 </div><div aria-labelledby="tab-1-UmVzdCBBUEkg5Yip55So" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-UmVzdCBBUEkg5Yip55So" name="UmVzdCBBUEkg5Yip55So" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id20">
 <div class="code-block-caption"><span class="caption-number">リスト 3.45 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id20" title="Link to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;GET&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s1">&#39;http://exastro-suite-mng.example.local/api/ita/org001/initial-settings/ansible/&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">   </span>-H<span class="w"> </span><span class="s1">&#39;accept: application/json&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">'GET'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s1">'http://exastro-suite-mng.example.local/api/ita/org001/initial-settings/ansible/'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-H<span class="w"> </span><span class="s1">'accept: application/json'</span>
 </pre></div>
 </div>
 </div>
@@ -1006,47 +1007,47 @@ your<span class="w"> </span>password<span class="w"> </span>:<span class="w"> </
 <div class="literal-block-wrapper docutils container" id="id21">
 <div class="code-block-caption"><span class="caption-number">リスト 3.46 </span><span class="caption-text">実行結果(成功例)</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;execution_engine_list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">      </span><span class="s2">&quot;Ansible Automation Controller&quot;</span>
+<span class="w">  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"execution_engine_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">"Ansible Automation Controller"</span>
 <span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;initial_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;ansible_automation_controller_host_list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"initial_data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"ansible_automation_controller_host_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;ssh_private_key_file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUJsd0FBQUFkemMyZ3RjbgpOaEFBQUFBd0VBQVFBQUFZRUF0V0ZvVVA5ZkZSRlhUTTV0U2s4cmU1dTVEVjNqclF3VVd5d2swMkwrZ0tkNElsOFQ4TnBkCk40Z3ZGVkMxM1VueGNxc1pxVWdEWk41NnphSnMrdThQcTBlVjl2R0dkWmZDcU11OHRrbzh5WUw2MGQ2VUVoVXFOVVJkb1UKSEJ3bngzbjZidlNWMVE0em56V0JBNVBqOFl3SENiL0swVGFEMndvMkRkbFhqTXhhTlpXTXlpRFVMbE1pSk02VFdCU0lYMwo2emE5ZnI2cGFmak5Vc0hBTk9YSTdGbUFQcC9Jcy80TmtJVkhZN2M1UkJkUTUvNWgrTCtxRmlVazhKbE9vcFdnMjJOWWlXCkpKUGM0U09iTWxtRUY1OEdMdloxZTlCS0FvaXEvdWIvVmlhZG9hRFlyTzlEM0U3UW1NTldWMjNNMnMyN2tnS0ZKcFJJSUMKbmllZlJyaTdkOVhEYldoclBFY1FlRUMyZnNrRzVyY3Q0RFhrQUtVVCtSTkdwMll6bWZqSHlHNkRPWkJIa1RCNnJ5OVF3SgpRaFpFTjEvM3k2K0Q1V1BpbWlxeVFBNmtXdnZYZUtHWkhzZEhLdG5QaGZra1EyUWlteFgyWFRHaGZwdjRSUkUzZWNGUmxRClQvenRLeWg5enIzWmd4UU1nWHgwdEJ5V2dZSUJwZVZHa1dFTTVkeTNBQUFGa1BlMkRlYjN0ZzNtQUFBQUIzTnphQzF5YzIKRUFBQUdCQUxWaGFGRC9YeFVSVjB6T2JVcFBLM3VidVExZDQ2ME1GRnNzSk5OaS9vQ25lQ0pmRS9EYVhUZUlMeFZRdGQxSgo4WEtyR2FsSUEyVGVlczJpYlBydkQ2dEhsZmJ4aG5XWHdxakx2TFpLUE1tQyt0SGVsQklWS2pWRVhhRkJ3Y0o4ZDUrbTcwCmxkVU9NNTgxZ1FPVDQvR01Cd20veXRFMmc5c0tOZzNaVjR6TVdqV1ZqTW9nMUM1VElpVE9rMWdVaUY5K3Mydlg2K3FXbjQKelZMQndEVGx5T3haZ0Q2ZnlMUCtEWkNGUjJPM09VUVhVT2YrWWZpL3FoWWxKUENaVHFLVm9OdGpXSWxpU1QzT0VqbXpKWgpoQmVmQmk3MmRYdlFTZ0tJcXY3bS8xWW1uYUdnMkt6dlE5eE8wSmpEVmxkdHpOck51NUlDaFNhVVNDQXA0bm4wYTR1M2ZWCncyMW9henhIRUhoQXRuN0pCdWEzTGVBMTVBQ2xFL2tUUnFkbU01bjR4OGh1Z3ptUVI1RXdlcTh2VU1DVUlXUkRkZjk4dXYKZytWajRwb3Fza0FPcEZyNzEzaWhtUjdIUnlyWno0WDVKRU5rSXBzVjlsMHhvWDZiK0VVUk4zbkJVWlVFLzg3U3NvZmM2OQoyWU1VRElGOGRMUWNsb0dDQWFYbFJwRmhET1hjdHdBQUFBTUJBQUVBQUFHQkFMRHVJTzBKL3YwMUdqeXhETWswNjB5N2ZjCnM5TUErb3ZkNmw5QkpEK2RFVUM4c3poZWNuaTFEVlJtQjdoN3dpR2lYcUk3RU9yMGpoQVZmQVBxQ1ZQR3F1L09tVGRyOFUKMSswQ09NWjFLbEREdE5tdVRqQkpkdy9ZN2FDVTNXWlROZm1GeE51QzdKbUsrUWFKWk4yRWZTZVRjWVlNYXViL2JtUWc1RwpXZkhka1kyOW9VVzJ1bU9wOHArRzV4SS9qVHZpQXpHS3dmWG5FaUkxKzc0anQzZndTVzFkUEExKzVFUDRVZmphRUdwUlQzCnpaTlFnTTgrWDdNVWJyRklTdjJzQ0VWSU54cGJDSE9iQkRZcTdodUljeDdKUVEvcW5EMVJGdFhBa3d4M1ZkMFF4elZUTDUKZXF6ci9jc3h6S3l1M08yVE5weWVodE1SWVB6M2dXZ2xieFI1SStObWl1VGlTQWFHa1o2OXJqblY0bVNmL25xUnJwUWRpeAozS1E1bUZldVNUUFdEdXZQNFdWNlJybzBPajRjalZnNTlGNHVWM05xQmpvMFpXYmt1QnhZeDRBK2hsZjcwMmdMLzVMZTBPCllTc1dFS0U5aFhueHZ5b0NBUTBCLy9meDFnaHkxY2xQWi9JR3FpWDYwUEQrY0FmTnFWNmt6aFo5WmZmQmVOZ2x3NThRQUEKQU1FQTBqbVF4VVc2WW9ZRnovUFg5aXgrNEd3VXh4WWFTdlVYRDJHZGt4cGtkYS9EV3lKUlJFd1FjTzhPQTdhWUFhV0hxSwp1T1ZCWVJlY3h0Z01SbzUreUNpZjVoNE9HNzVyVEtSQ0NRLy9Td2hyS25iQjFoOVJ0Q2dWNjlSd0tMSUhxcXo0dGQ0V20wCkw0NmFtditjd0ZrVVdxOFRtdzNkR1NlV3AydURQcjVxSjVGWDlEdmZRWUNKSEVkNThnN2lESXdzMUd3VExKaTJ3L0J1QlEKbzB2MUw4dGo0eG1MTUxpcW1zdDZLRHM3cHBlOGpJYTgycHVTSUJ1ZWJ5Y3pKdXljcmNBQUFBd1FEbU5SV25qcisxWmJSdgpPRjJVT2hGQ2I2UVlpQkFsTzVuWVZQUnQ2amhMWmdvMjlkUVUwUmRnYzNObmtOdzY1ZFpQbnZVMTlaamkzcFBlRnVQczJQCnEyaDg1aFNCK3VRR3JodEovRGM2MU1ZS2k5cjkxQmtvd0ZHSDR3YW9mSUsyYmF1V2VFMGg3UFFmajhrSzZVbndLbnpPSTcKc1o2anJTZStxaHQwMzkxUzhTb2F1bkhnMXNsOTRYS092bG1RQUpQMHNuS2VMcGIyalZIR0ZTR0JRdG1GQUh2aXV6Zm5nUgpGc3hrd2ROSU1ERGxLNmxVMnFhbkppL0NBM0VOQldDLzhBQUFEQkFNbXoyUkVEbllkSjM0N2prWWFDNzNHdGtjWDZDN0NxCjZ6cGRXQkZ6Zjd0NkhJbzJMdUlPenVFa2IxV0VjOFZibTBHbTA1YkZ4YnFEYjF2OWpJRmErTG9qTHVOUmFoSEZHVFRRUDYKTk9DMzA2SDd2TWgwMStNUVJNaERKYW9GRlRRVy9uSVBIQldwcDVJNzFVN0FNa0d6cXJoWVU5dlVNSXBNS2taQUQyYWF3dwpreUp6eFZzTFhUQXhrT3BVU3lWZmJsZVBKZXJpVmIydmVXbm5RUmRnRm02empSeXpSTXlYODFkaldzelNDTVZUeWI2YW9GCjdBYjZPZzlib0lnRmVQU1FBQUFCTnpjR2hwYm5oQU1qWmxNR05pWkRrM05UZGxBUUlEQkFVRwotLS0tLUVORCBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0K&quot;</span>
+<span class="w">          </span><span class="nt">"file"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"ssh_private_key_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUJsd0FBQUFkemMyZ3RjbgpOaEFBQUFBd0VBQVFBQUFZRUF0V0ZvVVA5ZkZSRlhUTTV0U2s4cmU1dTVEVjNqclF3VVd5d2swMkwrZ0tkNElsOFQ4TnBkCk40Z3ZGVkMxM1VueGNxc1pxVWdEWk41NnphSnMrdThQcTBlVjl2R0dkWmZDcU11OHRrbzh5WUw2MGQ2VUVoVXFOVVJkb1UKSEJ3bngzbjZidlNWMVE0em56V0JBNVBqOFl3SENiL0swVGFEMndvMkRkbFhqTXhhTlpXTXlpRFVMbE1pSk02VFdCU0lYMwo2emE5ZnI2cGFmak5Vc0hBTk9YSTdGbUFQcC9Jcy80TmtJVkhZN2M1UkJkUTUvNWgrTCtxRmlVazhKbE9vcFdnMjJOWWlXCkpKUGM0U09iTWxtRUY1OEdMdloxZTlCS0FvaXEvdWIvVmlhZG9hRFlyTzlEM0U3UW1NTldWMjNNMnMyN2tnS0ZKcFJJSUMKbmllZlJyaTdkOVhEYldoclBFY1FlRUMyZnNrRzVyY3Q0RFhrQUtVVCtSTkdwMll6bWZqSHlHNkRPWkJIa1RCNnJ5OVF3SgpRaFpFTjEvM3k2K0Q1V1BpbWlxeVFBNmtXdnZYZUtHWkhzZEhLdG5QaGZra1EyUWlteFgyWFRHaGZwdjRSUkUzZWNGUmxRClQvenRLeWg5enIzWmd4UU1nWHgwdEJ5V2dZSUJwZVZHa1dFTTVkeTNBQUFGa1BlMkRlYjN0ZzNtQUFBQUIzTnphQzF5YzIKRUFBQUdCQUxWaGFGRC9YeFVSVjB6T2JVcFBLM3VidVExZDQ2ME1GRnNzSk5OaS9vQ25lQ0pmRS9EYVhUZUlMeFZRdGQxSgo4WEtyR2FsSUEyVGVlczJpYlBydkQ2dEhsZmJ4aG5XWHdxakx2TFpLUE1tQyt0SGVsQklWS2pWRVhhRkJ3Y0o4ZDUrbTcwCmxkVU9NNTgxZ1FPVDQvR01Cd20veXRFMmc5c0tOZzNaVjR6TVdqV1ZqTW9nMUM1VElpVE9rMWdVaUY5K3Mydlg2K3FXbjQKelZMQndEVGx5T3haZ0Q2ZnlMUCtEWkNGUjJPM09VUVhVT2YrWWZpL3FoWWxKUENaVHFLVm9OdGpXSWxpU1QzT0VqbXpKWgpoQmVmQmk3MmRYdlFTZ0tJcXY3bS8xWW1uYUdnMkt6dlE5eE8wSmpEVmxkdHpOck51NUlDaFNhVVNDQXA0bm4wYTR1M2ZWCncyMW9henhIRUhoQXRuN0pCdWEzTGVBMTVBQ2xFL2tUUnFkbU01bjR4OGh1Z3ptUVI1RXdlcTh2VU1DVUlXUkRkZjk4dXYKZytWajRwb3Fza0FPcEZyNzEzaWhtUjdIUnlyWno0WDVKRU5rSXBzVjlsMHhvWDZiK0VVUk4zbkJVWlVFLzg3U3NvZmM2OQoyWU1VRElGOGRMUWNsb0dDQWFYbFJwRmhET1hjdHdBQUFBTUJBQUVBQUFHQkFMRHVJTzBKL3YwMUdqeXhETWswNjB5N2ZjCnM5TUErb3ZkNmw5QkpEK2RFVUM4c3poZWNuaTFEVlJtQjdoN3dpR2lYcUk3RU9yMGpoQVZmQVBxQ1ZQR3F1L09tVGRyOFUKMSswQ09NWjFLbEREdE5tdVRqQkpkdy9ZN2FDVTNXWlROZm1GeE51QzdKbUsrUWFKWk4yRWZTZVRjWVlNYXViL2JtUWc1RwpXZkhka1kyOW9VVzJ1bU9wOHArRzV4SS9qVHZpQXpHS3dmWG5FaUkxKzc0anQzZndTVzFkUEExKzVFUDRVZmphRUdwUlQzCnpaTlFnTTgrWDdNVWJyRklTdjJzQ0VWSU54cGJDSE9iQkRZcTdodUljeDdKUVEvcW5EMVJGdFhBa3d4M1ZkMFF4elZUTDUKZXF6ci9jc3h6S3l1M08yVE5weWVodE1SWVB6M2dXZ2xieFI1SStObWl1VGlTQWFHa1o2OXJqblY0bVNmL25xUnJwUWRpeAozS1E1bUZldVNUUFdEdXZQNFdWNlJybzBPajRjalZnNTlGNHVWM05xQmpvMFpXYmt1QnhZeDRBK2hsZjcwMmdMLzVMZTBPCllTc1dFS0U5aFhueHZ5b0NBUTBCLy9meDFnaHkxY2xQWi9JR3FpWDYwUEQrY0FmTnFWNmt6aFo5WmZmQmVOZ2x3NThRQUEKQU1FQTBqbVF4VVc2WW9ZRnovUFg5aXgrNEd3VXh4WWFTdlVYRDJHZGt4cGtkYS9EV3lKUlJFd1FjTzhPQTdhWUFhV0hxSwp1T1ZCWVJlY3h0Z01SbzUreUNpZjVoNE9HNzVyVEtSQ0NRLy9Td2hyS25iQjFoOVJ0Q2dWNjlSd0tMSUhxcXo0dGQ0V20wCkw0NmFtditjd0ZrVVdxOFRtdzNkR1NlV3AydURQcjVxSjVGWDlEdmZRWUNKSEVkNThnN2lESXdzMUd3VExKaTJ3L0J1QlEKbzB2MUw4dGo0eG1MTUxpcW1zdDZLRHM3cHBlOGpJYTgycHVTSUJ1ZWJ5Y3pKdXljcmNBQUFBd1FEbU5SV25qcisxWmJSdgpPRjJVT2hGQ2I2UVlpQkFsTzVuWVZQUnQ2amhMWmdvMjlkUVUwUmRnYzNObmtOdzY1ZFpQbnZVMTlaamkzcFBlRnVQczJQCnEyaDg1aFNCK3VRR3JodEovRGM2MU1ZS2k5cjkxQmtvd0ZHSDR3YW9mSUsyYmF1V2VFMGg3UFFmajhrSzZVbndLbnpPSTcKc1o2anJTZStxaHQwMzkxUzhTb2F1bkhnMXNsOTRYS092bG1RQUpQMHNuS2VMcGIyalZIR0ZTR0JRdG1GQUh2aXV6Zm5nUgpGc3hrd2ROSU1ERGxLNmxVMnFhbkppL0NBM0VOQldDLzhBQUFEQkFNbXoyUkVEbllkSjM0N2prWWFDNzNHdGtjWDZDN0NxCjZ6cGRXQkZ6Zjd0NkhJbzJMdUlPenVFa2IxV0VjOFZibTBHbTA1YkZ4YnFEYjF2OWpJRmErTG9qTHVOUmFoSEZHVFRRUDYKTk9DMzA2SDd2TWgwMStNUVJNaERKYW9GRlRRVy9uSVBIQldwcDVJNzFVN0FNa0d6cXJoWVU5dlVNSXBNS2taQUQyYWF3dwpreUp6eFZzTFhUQXhrT3BVU3lWZmJsZVBKZXJpVmIydmVXbm5RUmRnRm02empSeXpSTXlYODFkaldzelNDTVZUeWI2YW9GCjdBYjZPZzlib0lnRmVQU1FBQUFCTnpjR2hwYm5oQU1qWmxNR05pWkRrM05UZGxBUUlEQkFVRwotLS0tLUVORCBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0K"</span>
 <span class="w">          </span><span class="p">},</span>
-<span class="w">          </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;authentication_method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;\u9375\u8a8d\u8a3c(\u30d1\u30b9\u30d5\u30ec\u30fc\u30ba\u306a\u3057)&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;aap.example.com&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;isolated_tower&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;passphrase&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;remarks&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;ssh_private_key_file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;aap_id_rsa&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;awx&quot;</span>
+<span class="w">          </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"authentication_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"\u9375\u8a8d\u8a3c(\u30d1\u30b9\u30d5\u30ec\u30fc\u30ba\u306a\u3057)"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aap.example.com"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"isolated_tower"</span><span class="p">:</span><span class="w"> </span><span class="s2">"False"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"passphrase"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"remarks"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"ssh_private_key_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aap_id_rsa"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"awx"</span>
 <span class="w">          </span><span class="p">}</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">      </span><span class="p">],</span>
-<span class="w">      </span><span class="nt">&quot;interface_info_ansible&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;ansible_automation_controller_port&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;443&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;ansible_automation_controller_protocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;authentication_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LwWw3dwoHGx19ZhP1YQZU0JdZzobFv&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;delete_runtime_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;True&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;execution_engine&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ansible Automation Controller&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;organization_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;proxy_address&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;proxy_port&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;representative_server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;aap.example.com&quot;</span>
+<span class="w">      </span><span class="nt">"interface_info_ansible"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"ansible_automation_controller_port"</span><span class="p">:</span><span class="w"> </span><span class="s2">"443"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"ansible_automation_controller_protocol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"authentication_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LwWw3dwoHGx19ZhP1YQZU0JdZzobFv"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"delete_runtime_data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"True"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"execution_engine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ansible Automation Controller"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"organization_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"proxy_address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"proxy_port"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"representative_server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aap.example.com"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">      </span><span class="p">}</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;input_limit_setting&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="nt">"input_limit_setting"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;000-00000&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;ts&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-02-03T14:47:10.185Z&quot;</span>
+<span class="w">  </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESS"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000-00000"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"ts"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-02-03T14:47:10.185Z"</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1066,10 +1067,10 @@ your<span class="w"> </span>password<span class="w"> </span>:<span class="w"> </
 <span class="o">{</span><span class="w"> </span><span class="o">[</span><span class="m">252</span><span class="w"> </span>bytes<span class="w"> </span>data<span class="o">]</span>
 *<span class="w"> </span>Closing<span class="w"> </span>connection<span class="w"> </span><span class="m">0</span>
 <span class="o">{</span>
-<span class="w">  </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span>null,
-<span class="w">  </span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;エラーメッセージ,</span>
-<span class="s2">  &quot;</span>result<span class="s2">&quot;: &quot;</span>エラーコード<span class="s2">&quot;,</span>
-<span class="s2">  &quot;</span>ts<span class="s2">&quot;: &quot;</span><span class="m">2022</span>-08-18T05:29:35.643Z<span class="s2">&quot;</span>
+<span class="w">  </span><span class="s2">"data"</span>:<span class="w"> </span>null,
+<span class="w">  </span><span class="s2">"message"</span>:<span class="w"> </span><span class="s2">"エラーメッセージ,</span>
+<span class="s2">  "</span>result<span class="s2">": "</span>エラーコード<span class="s2">",</span>
+<span class="s2">  "</span>ts<span class="s2">": "</span><span class="m">2022</span>-08-18T05:29:35.643Z<span class="s2">"</span>
 <span class="s2">}</span>
 </pre></div>
 </div>
@@ -1124,7 +1125,7 @@ your<span class="w"> </span>password<span class="w"> </span>:<span class="w"> </
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.1/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

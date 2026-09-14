@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -74,8 +74,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/manuals/platform_management/organization.html">current</option>
-              <option value="../../../../ja/2.8/manuals/platform_management/organization.html">2.8(current)</option>
+              <option value="../../../../ja/2.9/manuals/platform_management/organization.html">current</option>
+              <option value="../../../../ja/2.9/manuals/platform_management/organization.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/manuals/platform_management/organization.html">2.8</option>
               <option value="../../../../ja/2.7/manuals/platform_management/organization.html">2.7</option>
               <option value="../../../../ja/2.6/manuals/platform_management/organization.html">2.6</option>
               <option value="../../../../ja/2.5/manuals/platform_management/organization.html">2.5</option>
@@ -439,31 +440,31 @@ vi<span class="w"> </span>./exastro-platform/tools/api-auth.conf
 </div>
 <details>
   <summary>create-organization.sample.json</summary><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span><span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="w">    </span><span class="p">:</span><span class="w">   </span><span class="s2">&quot;org001&quot;</span><span class="p">,</span>
-<span class="linenos"> 3</span><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="w">  </span><span class="p">:</span><span class="w">   </span><span class="s2">&quot;org001-name&quot;</span><span class="p">,</span>
-<span class="linenos"> 4</span><span class="w">    </span><span class="nt">&quot;organization_managers&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="nt">"id"</span><span class="w">    </span><span class="p">:</span><span class="w">   </span><span class="s2">"org001"</span><span class="p">,</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="nt">"name"</span><span class="w">  </span><span class="p">:</span><span class="w">   </span><span class="s2">"org001-name"</span><span class="p">,</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nt">"organization_managers"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="linenos"> 5</span><span class="w">        </span><span class="p">{</span>
-<span class="linenos"> 6</span><span class="w">            </span><span class="nt">&quot;username&quot;</span><span class="w">  </span><span class="p">:</span><span class="w">   </span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
-<span class="linenos"> 7</span><span class="w">            </span><span class="nt">&quot;email&quot;</span><span class="w">     </span><span class="p">:</span><span class="w">   </span><span class="s2">&quot;admin@example.com&quot;</span><span class="p">,</span>
-<span class="linenos"> 8</span><span class="w">            </span><span class="nt">&quot;firstName&quot;</span><span class="w"> </span><span class="p">:</span><span class="w">   </span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span><span class="w">            </span><span class="nt">&quot;lastName&quot;</span><span class="w">  </span><span class="p">:</span><span class="w">   </span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
-<span class="linenos">10</span><span class="w">            </span><span class="nt">&quot;credentials&quot;</span><span class="w">   </span><span class="p">:</span><span class="w">   </span><span class="p">[</span>
+<span class="linenos"> 6</span><span class="w">            </span><span class="nt">"username"</span><span class="w">  </span><span class="p">:</span><span class="w">   </span><span class="s2">"admin"</span><span class="p">,</span>
+<span class="linenos"> 7</span><span class="w">            </span><span class="nt">"email"</span><span class="w">     </span><span class="p">:</span><span class="w">   </span><span class="s2">"admin@example.com"</span><span class="p">,</span>
+<span class="linenos"> 8</span><span class="w">            </span><span class="nt">"firstName"</span><span class="w"> </span><span class="p">:</span><span class="w">   </span><span class="s2">"admin"</span><span class="p">,</span>
+<span class="linenos"> 9</span><span class="w">            </span><span class="nt">"lastName"</span><span class="w">  </span><span class="p">:</span><span class="w">   </span><span class="s2">"admin"</span><span class="p">,</span>
+<span class="linenos">10</span><span class="w">            </span><span class="nt">"credentials"</span><span class="w">   </span><span class="p">:</span><span class="w">   </span><span class="p">[</span>
 <span class="linenos">11</span><span class="w">                </span><span class="p">{</span>
-<span class="linenos">12</span><span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="w">      </span><span class="p">:</span><span class="w">   </span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
-<span class="linenos">13</span><span class="w">                    </span><span class="nt">&quot;value&quot;</span><span class="w">     </span><span class="p">:</span><span class="w">   </span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
-<span class="linenos">14</span><span class="w">                    </span><span class="nt">&quot;temporary&quot;</span><span class="w"> </span><span class="p">:</span><span class="w">   </span><span class="kc">true</span>
+<span class="linenos">12</span><span class="w">                    </span><span class="nt">"type"</span><span class="w">      </span><span class="p">:</span><span class="w">   </span><span class="s2">"password"</span><span class="p">,</span>
+<span class="linenos">13</span><span class="w">                    </span><span class="nt">"value"</span><span class="w">     </span><span class="p">:</span><span class="w">   </span><span class="s2">"password"</span><span class="p">,</span>
+<span class="linenos">14</span><span class="w">                    </span><span class="nt">"temporary"</span><span class="w"> </span><span class="p">:</span><span class="w">   </span><span class="kc">true</span>
 <span class="linenos">15</span><span class="w">                </span><span class="p">}</span>
 <span class="linenos">16</span><span class="w">            </span><span class="p">],</span>
-<span class="linenos">17</span><span class="w">            </span><span class="nt">&quot;requiredActions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="linenos">18</span><span class="w">                </span><span class="s2">&quot;UPDATE_PROFILE&quot;</span>
+<span class="linenos">17</span><span class="w">            </span><span class="nt">"requiredActions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos">18</span><span class="w">                </span><span class="s2">"UPDATE_PROFILE"</span>
 <span class="linenos">19</span><span class="w">            </span><span class="p">],</span>
-<span class="linenos">20</span><span class="w">            </span><span class="nt">&quot;enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="linenos">20</span><span class="w">            </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="linenos">21</span><span class="w">        </span><span class="p">}</span>
 <span class="linenos">22</span><span class="w">    </span><span class="p">],</span>
-<span class="linenos">23</span><span class="w">    </span><span class="nt">&quot;plan&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">24</span><span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;plan-1&quot;</span>
+<span class="linenos">23</span><span class="w">    </span><span class="nt">"plan"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">24</span><span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plan-1"</span>
 <span class="linenos">25</span><span class="w">    </span><span class="p">},</span>
-<span class="linenos">26</span><span class="w">    </span><span class="nt">&quot;options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<span class="linenos">26</span><span class="w">    </span><span class="nt">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
 <span class="linenos">27</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -513,10 +514,10 @@ vi<span class="w"> </span>./exastro-platform/tools/create-organization.json
 &lt;<span class="w"> </span>Content-Type:<span class="w"> </span>application/json
 &lt;
 <span class="o">{</span>
-<span class="w">  </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span>null,
-<span class="w">  </span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;000-00000&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;ts&quot;</span>:<span class="w"> </span><span class="s2">&quot;2022-08-18T01:49:17.251Z&quot;</span>
+<span class="w">  </span><span class="s2">"data"</span>:<span class="w"> </span>null,
+<span class="w">  </span><span class="s2">"message"</span>:<span class="w"> </span><span class="s2">"SUCCESS"</span>,
+<span class="w">  </span><span class="s2">"result"</span>:<span class="w"> </span><span class="s2">"000-00000"</span>,
+<span class="w">  </span><span class="s2">"ts"</span>:<span class="w"> </span><span class="s2">"2022-08-18T01:49:17.251Z"</span>
 <span class="o">}</span>
 *<span class="w"> </span>Connection<span class="w"> </span><span class="c1">#0 to host platform-auth left intact</span>
 </pre></div>
@@ -538,10 +539,10 @@ vi<span class="w"> </span>./exastro-platform/tools/create-organization.json
 <span class="o">{</span><span class="w"> </span><span class="o">[</span><span class="m">252</span><span class="w"> </span>bytes<span class="w"> </span>data<span class="o">]</span>
 *<span class="w"> </span>Closing<span class="w"> </span>connection<span class="w"> </span><span class="m">0</span>
 <span class="o">{</span>
-<span class="w">  </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span>null,
-<span class="w">  </span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;指定されたorganization(org002)は作成済みのため、作成できません。&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;400-23001&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;ts&quot;</span>:<span class="w"> </span><span class="s2">&quot;2022-08-18T05:29:35.643Z&quot;</span>
+<span class="w">  </span><span class="s2">"data"</span>:<span class="w"> </span>null,
+<span class="w">  </span><span class="s2">"message"</span>:<span class="w"> </span><span class="s2">"指定されたorganization(org002)は作成済みのため、作成できません。"</span>,
+<span class="w">  </span><span class="s2">"result"</span>:<span class="w"> </span><span class="s2">"400-23001"</span>,
+<span class="w">  </span><span class="s2">"ts"</span>:<span class="w"> </span><span class="s2">"2022-08-18T05:29:35.643Z"</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -700,17 +701,17 @@ vi<span class="w"> </span>./exastro-platform/tools/api-auth.conf
 
 organization id : org001                             # オーガナイゼーションIDを入力します
 organization name : org001-name                      # オーガナイゼーション名を入力します
-organization manager&#39;s username : admin              # オーガナイゼーション管理者のユーザ名（ログインするときのID）を入力します
-organization manager&#39;s email : admin@example.com     # オーガナイゼーション管理者のE-mailアドレスを入力します
-organization manager&#39;s first name : admin            # オーガナイゼーション管理者の名を入力します
-organization manager&#39;s last name : admin             # オーガナイゼーション管理者の姓を入力します
-organization manager&#39;s initial password : password   # オーガナイゼーション管理者の初期パスワードを入力します
+organization manager's username : admin              # オーガナイゼーション管理者のユーザ名（ログインするときのID）を入力します
+organization manager's email : admin@example.com     # オーガナイゼーション管理者のE-mailアドレスを入力します
+organization manager's first name : admin            # オーガナイゼーション管理者の名を入力します
+organization manager's last name : admin             # オーガナイゼーション管理者の姓を入力します
+organization manager's initial password : password   # オーガナイゼーション管理者の初期パスワードを入力します
 organization plan id (optional) :                    # リソースプランを指定(任意)します ※ 初期状態では未作成のため入力不要
 
 your username : INPUT-YOUR-USERNAME                  # システム管理者のユーザ名を入力します
 your password : INPUT-USER-PASSWORD                  # システム管理者のパスワードを入力します
 
-Create an organization, are you sure? (Y/other) : Y # &quot;Y&quot;を入力すると実行します
+Create an organization, are you sure? (Y/other) : Y # "Y"を入力すると実行します
 </pre></div>
 </div>
 </div>
@@ -727,10 +728,10 @@ Create an organization, are you sure? (Y/other) : Y # &quot;Y&quot;を入力す�
 &lt;<span class="w"> </span>Content-Type:<span class="w"> </span>application/json
 &lt;
 <span class="o">{</span>
-<span class="w">  </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span>null,
-<span class="w">  </span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;000-00000&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;ts&quot;</span>:<span class="w"> </span><span class="s2">&quot;2022-08-18T01:49:17.251Z&quot;</span>
+<span class="w">  </span><span class="s2">"data"</span>:<span class="w"> </span>null,
+<span class="w">  </span><span class="s2">"message"</span>:<span class="w"> </span><span class="s2">"SUCCESS"</span>,
+<span class="w">  </span><span class="s2">"result"</span>:<span class="w"> </span><span class="s2">"000-00000"</span>,
+<span class="w">  </span><span class="s2">"ts"</span>:<span class="w"> </span><span class="s2">"2022-08-18T01:49:17.251Z"</span>
 <span class="o">}</span>
 *<span class="w"> </span>Connection<span class="w"> </span><span class="c1">#0 to host platform-auth left intact</span>
 </pre></div>
@@ -752,10 +753,10 @@ Create an organization, are you sure? (Y/other) : Y # &quot;Y&quot;を入力す�
 <span class="o">{</span><span class="w"> </span><span class="o">[</span><span class="m">252</span><span class="w"> </span>bytes<span class="w"> </span>data<span class="o">]</span>
 *<span class="w"> </span>Closing<span class="w"> </span>connection<span class="w"> </span><span class="m">0</span>
 <span class="o">{</span>
-<span class="w">  </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span>null,
-<span class="w">  </span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;指定されたorganization(org002)は作成済みのため、作成できません。&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;400-23001&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;ts&quot;</span>:<span class="w"> </span><span class="s2">&quot;2022-08-18T05:29:35.643Z&quot;</span>
+<span class="w">  </span><span class="s2">"data"</span>:<span class="w"> </span>null,
+<span class="w">  </span><span class="s2">"message"</span>:<span class="w"> </span><span class="s2">"指定されたorganization(org002)は作成済みのため、作成できません。"</span>,
+<span class="w">  </span><span class="s2">"result"</span>:<span class="w"> </span><span class="s2">"400-23001"</span>,
+<span class="w">  </span><span class="s2">"ts"</span>:<span class="w"> </span><span class="s2">"2022-08-18T05:29:35.643Z"</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -868,39 +869,39 @@ Create an organization, are you sure? (Y/other) : Y # &quot;Y&quot;を入力す�
 <div class="line">また、Exastro Platform の管理用 URL 情報を <kbd class="kbd docutils literal notranslate">BASE_URL</kbd> に設定する必要があります。</div>
 <div class="line">例えば、 <a class="reference internal" href="../../installation/helm_on_kubernetes.html#ingress-setting"><span class="std std-ref">サービス公開の設定 (Ingress の設定)</span></a> をした場合は下記のようになります。</div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;KEYCLOAK_USER:KEYCLOAK_PASSWORD&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"KEYCLOAK_USER:KEYCLOAK_PASSWORD"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 <span class="nv">BASE_URL</span><span class="o">=</span>http://exastro-suite-mng.example.local
 
-curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/platform/organizations&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;accept: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
-<span class="s1">  &quot;id&quot;: &quot;org001&quot;,</span>
-<span class="s1">  &quot;name&quot;: &quot;org001-name&quot;,</span>
-<span class="s1">  &quot;organization_managers&quot;: [</span>
+curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">'POST'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/api/platform/organizations"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'accept: application/json'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'Content-Type: application/json'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">  "id": "org001",</span>
+<span class="s1">  "name": "org001-name",</span>
+<span class="s1">  "organization_managers": [</span>
 <span class="s1">    {</span>
-<span class="s1">      &quot;username&quot;: &quot;admin&quot;,</span>
-<span class="s1">      &quot;email&quot;: &quot;admin@example.com&quot;,</span>
-<span class="s1">      &quot;firstName&quot;: &quot;admin&quot;,</span>
-<span class="s1">      &quot;lastName&quot;: &quot;admin&quot;,</span>
-<span class="s1">      &quot;credentials&quot;: [</span>
+<span class="s1">      "username": "admin",</span>
+<span class="s1">      "email": "admin@example.com",</span>
+<span class="s1">      "firstName": "admin",</span>
+<span class="s1">      "lastName": "admin",</span>
+<span class="s1">      "credentials": [</span>
 <span class="s1">        {</span>
-<span class="s1">          &quot;type&quot;: &quot;password&quot;,</span>
-<span class="s1">          &quot;value&quot;: &quot;password&quot;,</span>
-<span class="s1">          &quot;temporary&quot;: true</span>
+<span class="s1">          "type": "password",</span>
+<span class="s1">          "value": "password",</span>
+<span class="s1">          "temporary": true</span>
 <span class="s1">        }</span>
 <span class="s1">      ],</span>
-<span class="s1">      &quot;requiredActions&quot;: [</span>
-<span class="s1">        &quot;UPDATE_PROFILE&quot;</span>
+<span class="s1">      "requiredActions": [</span>
+<span class="s1">        "UPDATE_PROFILE"</span>
 <span class="s1">      ],</span>
-<span class="s1">      &quot;enabled&quot;: true</span>
+<span class="s1">      "enabled": true</span>
 <span class="s1">    }</span>
 <span class="s1">  ],</span>
-<span class="s1">  &quot;plan&quot;: {},</span>
-<span class="s1">  &quot;options&quot;: {}</span>
-<span class="s1">}&#39;</span>
+<span class="s1">  "plan": {},</span>
+<span class="s1">  "options": {}</span>
+<span class="s1">}'</span>
 </pre></div>
 </div>
 </div></div>
@@ -977,7 +978,7 @@ curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;POST
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.0/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

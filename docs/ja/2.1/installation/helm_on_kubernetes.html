@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../_static/documentation_options.js?v=c033477b"></script>
@@ -74,8 +74,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../ja/2.8/installation/helm_on_kubernetes.html">current</option>
-              <option value="../../../ja/2.8/installation/helm_on_kubernetes.html">2.8(current)</option>
+              <option value="../../../ja/2.9/installation/helm_on_kubernetes.html">current</option>
+              <option value="../../../ja/2.9/installation/helm_on_kubernetes.html">2.9(current)</option>
+              <option value="../../../ja/2.8/installation/helm_on_kubernetes.html">2.8</option>
               <option value="../../../ja/2.7/installation/helm_on_kubernetes.html">2.7</option>
               <option value="../../../ja/2.6/installation/helm_on_kubernetes.html">2.6</option>
               <option value="../../../ja/2.5/installation/helm_on_kubernetes.html">2.5</option>
@@ -395,136 +396,136 @@ $(window).on('load', function () {
 <span class="linenos">  6</span><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ita-global</span>
 <span class="linenos">  7</span><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="linenos">  8</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">  9</span><span class="w">      </span><span class="nt">registry</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;docker.io&quot;</span>
+<span class="linenos">  9</span><span class="w">      </span><span class="nt">registry</span><span class="p">:</span><span class="w"> </span><span class="s">"docker.io"</span>
 <span class="linenos"> 10</span><span class="w">      </span><span class="nt">organization</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exastro</span>
 <span class="linenos"> 11</span><span class="w">      </span><span class="nt">package</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exastro-it-automation</span>
 <span class="linenos"> 12</span><span class="w">    </span><span class="nt">config</span><span class="p">:</span>
-<span class="linenos"> 13</span><span class="w">      </span><span class="nt">DEFAULT_LANGUAGE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ja&quot;</span>
-<span class="linenos"> 14</span><span class="w">      </span><span class="nt">LANGUAGE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;en&quot;</span>
-<span class="linenos"> 15</span><span class="w">      </span><span class="nt">CONTAINER_BASE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;kubernetes&quot;</span>
-<span class="linenos"> 16</span><span class="w">      </span><span class="nt">TZ</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Asia/Tokyo&quot;</span>
-<span class="linenos"> 17</span><span class="w">      </span><span class="nt">STORAGEPATH</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/storage/&quot;</span>
+<span class="linenos"> 13</span><span class="w">      </span><span class="nt">DEFAULT_LANGUAGE</span><span class="p">:</span><span class="w"> </span><span class="s">"ja"</span>
+<span class="linenos"> 14</span><span class="w">      </span><span class="nt">LANGUAGE</span><span class="p">:</span><span class="w"> </span><span class="s">"en"</span>
+<span class="linenos"> 15</span><span class="w">      </span><span class="nt">CONTAINER_BASE</span><span class="p">:</span><span class="w"> </span><span class="s">"kubernetes"</span>
+<span class="linenos"> 16</span><span class="w">      </span><span class="nt">TZ</span><span class="p">:</span><span class="w"> </span><span class="s">"Asia/Tokyo"</span>
+<span class="linenos"> 17</span><span class="w">      </span><span class="nt">STORAGEPATH</span><span class="p">:</span><span class="w"> </span><span class="s">"/storage/"</span>
 <span class="linenos"> 18</span><span class="w">    </span><span class="nt">secret</span><span class="p">:</span>
-<span class="linenos"> 19</span><span class="w">      </span><span class="nt">ENCRYPT_KEY</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos"> 19</span><span class="w">      </span><span class="nt">ENCRYPT_KEY</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos"> 20</span><span class="w">    </span><span class="nt">persistence</span><span class="p">:</span>
 <span class="linenos"> 21</span><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="linenos"> 22</span><span class="w">      </span><span class="nt">accessMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteMany</span>
 <span class="linenos"> 23</span><span class="w">      </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10Gi</span>
 <span class="linenos"> 24</span><span class="w">      </span><span class="nt">volumeType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hostPath</span><span class="w"> </span><span class="c1"># e.g.) hostPath or AKS</span>
-<span class="linenos"> 25</span><span class="w">      </span><span class="nt">storageClass</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="c1"># e.g.) azurefile or - (None)</span>
+<span class="linenos"> 25</span><span class="w">      </span><span class="nt">storageClass</span><span class="p">:</span><span class="w"> </span><span class="s">"-"</span><span class="w"> </span><span class="c1"># e.g.) azurefile or - (None)</span>
 <span class="linenos"> 26</span><span class="w">      </span><span class="c1"># matchLabels:</span>
-<span class="linenos"> 27</span><span class="w">      </span><span class="c1">#   release: &quot;stable&quot;</span>
+<span class="linenos"> 27</span><span class="w">      </span><span class="c1">#   release: "stable"</span>
 <span class="linenos"> 28</span><span class="w">      </span><span class="c1"># matchExpressions:</span>
 <span class="linenos"> 29</span><span class="w">      </span><span class="c1">#   - {key: environment, operator: In, values: [dev]}</span>
 <span class="linenos"> 30</span><span class="w">  </span><span class="nt">gitlabDefinition</span><span class="p">:</span>
 <span class="linenos"> 31</span><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitlab</span>
 <span class="linenos"> 32</span><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="linenos"> 33</span><span class="w">    </span><span class="nt">config</span><span class="p">:</span>
-<span class="linenos"> 34</span><span class="w">      </span><span class="nt">GITLAB_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
-<span class="linenos"> 35</span><span class="w">      </span><span class="nt">GITLAB_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;gitlab&quot;</span>
-<span class="linenos"> 36</span><span class="w">      </span><span class="nt">GITLAB_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;80&quot;</span>
+<span class="linenos"> 34</span><span class="w">      </span><span class="nt">GITLAB_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="s">"http"</span>
+<span class="linenos"> 35</span><span class="w">      </span><span class="nt">GITLAB_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"gitlab"</span>
+<span class="linenos"> 36</span><span class="w">      </span><span class="nt">GITLAB_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"80"</span>
 <span class="linenos"> 37</span><span class="w">    </span><span class="nt">secret</span><span class="p">:</span>
-<span class="linenos"> 38</span><span class="w">      </span><span class="nt">GITLAB_ROOT_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos"> 38</span><span class="w">      </span><span class="nt">GITLAB_ROOT_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos"> 39</span><span class="w">  </span><span class="nt">itaDatabaseDefinition</span><span class="p">:</span>
 <span class="linenos"> 40</span><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ita-database</span>
 <span class="linenos"> 41</span><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="linenos"> 42</span><span class="w">    </span><span class="nt">config</span><span class="p">:</span>
-<span class="linenos"> 43</span><span class="w">      </span><span class="nt">DB_VENDOR</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mariadb&quot;</span>
-<span class="linenos"> 44</span><span class="w">      </span><span class="nt">DB_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mariadb&quot;</span>
-<span class="linenos"> 45</span><span class="w">      </span><span class="nt">DB_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3306&quot;</span>
-<span class="linenos"> 46</span><span class="w">      </span><span class="nt">DB_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ITA_DB&quot;</span>
+<span class="linenos"> 43</span><span class="w">      </span><span class="nt">DB_VENDOR</span><span class="p">:</span><span class="w"> </span><span class="s">"mariadb"</span>
+<span class="linenos"> 44</span><span class="w">      </span><span class="nt">DB_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"mariadb"</span>
+<span class="linenos"> 45</span><span class="w">      </span><span class="nt">DB_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"3306"</span>
+<span class="linenos"> 46</span><span class="w">      </span><span class="nt">DB_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="s">"ITA_DB"</span>
 <span class="linenos"> 47</span><span class="w">    </span><span class="nt">secret</span><span class="p">:</span>
-<span class="linenos"> 48</span><span class="w">      </span><span class="nt">DB_ADMIN_USER</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<span class="linenos"> 49</span><span class="w">      </span><span class="nt">DB_ADMIN_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<span class="linenos"> 50</span><span class="w">      </span><span class="nt">DB_USER</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<span class="linenos"> 51</span><span class="w">      </span><span class="nt">DB_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos"> 48</span><span class="w">      </span><span class="nt">DB_ADMIN_USER</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
+<span class="linenos"> 49</span><span class="w">      </span><span class="nt">DB_ADMIN_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
+<span class="linenos"> 50</span><span class="w">      </span><span class="nt">DB_USER</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
+<span class="linenos"> 51</span><span class="w">      </span><span class="nt">DB_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos"> 52</span><span class="w">  </span><span class="nt">pfGlobalDefinition</span><span class="p">:</span>
 <span class="linenos"> 53</span><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pf-global</span>
 <span class="linenos"> 54</span><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="linenos"> 55</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos"> 56</span><span class="w">      </span><span class="nt">registry</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;docker.io&quot;</span>
+<span class="linenos"> 56</span><span class="w">      </span><span class="nt">registry</span><span class="p">:</span><span class="w"> </span><span class="s">"docker.io"</span>
 <span class="linenos"> 57</span><span class="w">      </span><span class="nt">organization</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exastro</span>
 <span class="linenos"> 58</span><span class="w">      </span><span class="nt">package</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exastro-platform</span>
 <span class="linenos"> 59</span><span class="w">    </span><span class="nt">config</span><span class="p">:</span>
-<span class="linenos"> 60</span><span class="w">      </span><span class="nt">DEFAULT_LANGUAGE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ja&quot;</span>
-<span class="linenos"> 61</span><span class="w">      </span><span class="nt">LANGUAGE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;en&quot;</span>
-<span class="linenos"> 62</span><span class="w">      </span><span class="nt">TZ</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Asia/Tokyo&quot;</span>
+<span class="linenos"> 60</span><span class="w">      </span><span class="nt">DEFAULT_LANGUAGE</span><span class="p">:</span><span class="w"> </span><span class="s">"ja"</span>
+<span class="linenos"> 61</span><span class="w">      </span><span class="nt">LANGUAGE</span><span class="p">:</span><span class="w"> </span><span class="s">"en"</span>
+<span class="linenos"> 62</span><span class="w">      </span><span class="nt">TZ</span><span class="p">:</span><span class="w"> </span><span class="s">"Asia/Tokyo"</span>
 <span class="linenos"> 63</span><span class="w">      </span><span class="nt">PYTHONIOENCODING</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">utf-8</span>
-<span class="linenos"> 64</span><span class="w">      </span><span class="nt">PLATFORM_API_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
-<span class="linenos"> 65</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos"> 66</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
-<span class="linenos"> 67</span><span class="w">      </span><span class="nt">PLATFORM_WEB_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
-<span class="linenos"> 68</span><span class="w">      </span><span class="nt">PLATFORM_WEB_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-web&quot;</span>
-<span class="linenos"> 69</span><span class="w">      </span><span class="nt">PLATFORM_WEB_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos"> 64</span><span class="w">      </span><span class="nt">PLATFORM_API_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="s">"http"</span>
+<span class="linenos"> 65</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos"> 66</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
+<span class="linenos"> 67</span><span class="w">      </span><span class="nt">PLATFORM_WEB_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="s">"http"</span>
+<span class="linenos"> 68</span><span class="w">      </span><span class="nt">PLATFORM_WEB_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-web"</span>
+<span class="linenos"> 69</span><span class="w">      </span><span class="nt">PLATFORM_WEB_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos"> 70</span><span class="w">    </span><span class="nt">secret</span><span class="p">:</span>
-<span class="linenos"> 71</span><span class="w">      </span><span class="nt">ENCRYPT_KEY</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos"> 71</span><span class="w">      </span><span class="nt">ENCRYPT_KEY</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos"> 72</span><span class="w">    </span><span class="nt">persistence</span><span class="p">:</span>
 <span class="linenos"> 73</span><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="linenos"> 74</span><span class="w">      </span><span class="nt">accessMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteMany</span>
 <span class="linenos"> 75</span><span class="w">      </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10Gi</span>
 <span class="linenos"> 76</span><span class="w">      </span><span class="nt">volumeType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hostPath</span><span class="w"> </span><span class="c1"># e.g.) hostPath or AKS</span>
-<span class="linenos"> 77</span><span class="w">      </span><span class="nt">storageClass</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="c1"># e.g.) azurefile or - (None)</span>
+<span class="linenos"> 77</span><span class="w">      </span><span class="nt">storageClass</span><span class="p">:</span><span class="w"> </span><span class="s">"-"</span><span class="w"> </span><span class="c1"># e.g.) azurefile or - (None)</span>
 <span class="linenos"> 78</span><span class="w">      </span><span class="c1"># matchLabels:</span>
-<span class="linenos"> 79</span><span class="w">      </span><span class="c1">#   release: &quot;stable&quot;</span>
+<span class="linenos"> 79</span><span class="w">      </span><span class="c1">#   release: "stable"</span>
 <span class="linenos"> 80</span><span class="w">      </span><span class="c1"># matchExpressions:</span>
 <span class="linenos"> 81</span><span class="w">      </span><span class="c1">#   - {key: environment, operator: In, values: [dev]}</span>
 <span class="linenos"> 82</span><span class="w">  </span><span class="nt">keycloakDefinition</span><span class="p">:</span>
 <span class="linenos"> 83</span><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">keycloak</span>
 <span class="linenos"> 84</span><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="linenos"> 85</span><span class="w">    </span><span class="nt">config</span><span class="p">:</span>
-<span class="linenos"> 86</span><span class="w">      </span><span class="nt">API_KEYCLOAK_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
-<span class="linenos"> 87</span><span class="w">      </span><span class="nt">API_KEYCLOAK_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;keycloak&quot;</span>
-<span class="linenos"> 88</span><span class="w">      </span><span class="nt">API_KEYCLOAK_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8080&quot;</span>
-<span class="linenos"> 89</span><span class="w">      </span><span class="nt">KEYCLOAK_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
-<span class="linenos"> 90</span><span class="w">      </span><span class="nt">KEYCLOAK_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;keycloak&quot;</span>
-<span class="linenos"> 91</span><span class="w">      </span><span class="nt">KEYCLOAK_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8080&quot;</span>
-<span class="linenos"> 92</span><span class="w">      </span><span class="nt">KEYCLOAK_MASTER_REALM</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;master&quot;</span>
-<span class="linenos"> 93</span><span class="w">      </span><span class="nt">KEYCLOAK_DB_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;keycloak&quot;</span>
+<span class="linenos"> 86</span><span class="w">      </span><span class="nt">API_KEYCLOAK_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="s">"http"</span>
+<span class="linenos"> 87</span><span class="w">      </span><span class="nt">API_KEYCLOAK_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"keycloak"</span>
+<span class="linenos"> 88</span><span class="w">      </span><span class="nt">API_KEYCLOAK_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8080"</span>
+<span class="linenos"> 89</span><span class="w">      </span><span class="nt">KEYCLOAK_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="s">"http"</span>
+<span class="linenos"> 90</span><span class="w">      </span><span class="nt">KEYCLOAK_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"keycloak"</span>
+<span class="linenos"> 91</span><span class="w">      </span><span class="nt">KEYCLOAK_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8080"</span>
+<span class="linenos"> 92</span><span class="w">      </span><span class="nt">KEYCLOAK_MASTER_REALM</span><span class="p">:</span><span class="w"> </span><span class="s">"master"</span>
+<span class="linenos"> 93</span><span class="w">      </span><span class="nt">KEYCLOAK_DB_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="s">"keycloak"</span>
 <span class="linenos"> 94</span><span class="w">    </span><span class="nt">secret</span><span class="p">:</span>
-<span class="linenos"> 95</span><span class="w">      </span><span class="nt">KEYCLOAK_USER</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<span class="linenos"> 96</span><span class="w">      </span><span class="nt">KEYCLOAK_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<span class="linenos"> 97</span><span class="w">      </span><span class="nt">KEYCLOAK_DB_USER</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<span class="linenos"> 98</span><span class="w">      </span><span class="nt">KEYCLOAK_DB_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos"> 95</span><span class="w">      </span><span class="nt">KEYCLOAK_USER</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
+<span class="linenos"> 96</span><span class="w">      </span><span class="nt">KEYCLOAK_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
+<span class="linenos"> 97</span><span class="w">      </span><span class="nt">KEYCLOAK_DB_USER</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
+<span class="linenos"> 98</span><span class="w">      </span><span class="nt">KEYCLOAK_DB_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos"> 99</span><span class="w">  </span><span class="nt">itaDefinition</span><span class="p">:</span>
 <span class="linenos">100</span><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ita</span>
 <span class="linenos">101</span><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="linenos">102</span><span class="w">    </span><span class="nt">config</span><span class="p">:</span>
-<span class="linenos">103</span><span class="w">      </span><span class="nt">ITA_WEB_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
-<span class="linenos">104</span><span class="w">      </span><span class="nt">ITA_WEB_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ita-web-server&quot;</span>
-<span class="linenos">105</span><span class="w">      </span><span class="nt">ITA_WEB_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
-<span class="linenos">106</span><span class="w">      </span><span class="nt">ITA_API_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
-<span class="linenos">107</span><span class="w">      </span><span class="nt">ITA_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ita-api-organization&quot;</span>
-<span class="linenos">108</span><span class="w">      </span><span class="nt">ITA_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8080&quot;</span>
-<span class="linenos">109</span><span class="w">      </span><span class="nt">ITA_API_ADMIN_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
-<span class="linenos">110</span><span class="w">      </span><span class="nt">ITA_API_ADMIN_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ita-api-admin&quot;</span>
-<span class="linenos">111</span><span class="w">      </span><span class="nt">ITA_API_ADMIN_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8080&quot;</span>
+<span class="linenos">103</span><span class="w">      </span><span class="nt">ITA_WEB_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="s">"http"</span>
+<span class="linenos">104</span><span class="w">      </span><span class="nt">ITA_WEB_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"ita-web-server"</span>
+<span class="linenos">105</span><span class="w">      </span><span class="nt">ITA_WEB_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
+<span class="linenos">106</span><span class="w">      </span><span class="nt">ITA_API_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="s">"http"</span>
+<span class="linenos">107</span><span class="w">      </span><span class="nt">ITA_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"ita-api-organization"</span>
+<span class="linenos">108</span><span class="w">      </span><span class="nt">ITA_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8080"</span>
+<span class="linenos">109</span><span class="w">      </span><span class="nt">ITA_API_ADMIN_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="s">"http"</span>
+<span class="linenos">110</span><span class="w">      </span><span class="nt">ITA_API_ADMIN_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"ita-api-admin"</span>
+<span class="linenos">111</span><span class="w">      </span><span class="nt">ITA_API_ADMIN_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8080"</span>
 <span class="linenos">112</span><span class="w">  </span><span class="nt">pfDatabaseDefinition</span><span class="p">:</span>
 <span class="linenos">113</span><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pf-database</span>
 <span class="linenos">114</span><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="linenos">115</span><span class="w">    </span><span class="nt">config</span><span class="p">:</span>
-<span class="linenos">116</span><span class="w">      </span><span class="nt">DB_VENDOR</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mariadb&quot;</span>
-<span class="linenos">117</span><span class="w">      </span><span class="nt">DB_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mariadb&quot;</span>
-<span class="linenos">118</span><span class="w">      </span><span class="nt">DB_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3306&quot;</span>
-<span class="linenos">119</span><span class="w">      </span><span class="nt">DB_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform&quot;</span>
+<span class="linenos">116</span><span class="w">      </span><span class="nt">DB_VENDOR</span><span class="p">:</span><span class="w"> </span><span class="s">"mariadb"</span>
+<span class="linenos">117</span><span class="w">      </span><span class="nt">DB_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"mariadb"</span>
+<span class="linenos">118</span><span class="w">      </span><span class="nt">DB_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"3306"</span>
+<span class="linenos">119</span><span class="w">      </span><span class="nt">DB_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="s">"platform"</span>
 <span class="linenos">120</span><span class="w">    </span><span class="nt">secret</span><span class="p">:</span>
-<span class="linenos">121</span><span class="w">      </span><span class="nt">DB_ADMIN_USER</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<span class="linenos">122</span><span class="w">      </span><span class="nt">DB_ADMIN_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<span class="linenos">123</span><span class="w">      </span><span class="nt">DB_USER</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<span class="linenos">124</span><span class="w">      </span><span class="nt">DB_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">121</span><span class="w">      </span><span class="nt">DB_ADMIN_USER</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
+<span class="linenos">122</span><span class="w">      </span><span class="nt">DB_ADMIN_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
+<span class="linenos">123</span><span class="w">      </span><span class="nt">DB_USER</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
+<span class="linenos">124</span><span class="w">      </span><span class="nt">DB_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">125</span><span class="w">  </span><span class="nt">databaseDefinition</span><span class="p">:</span>
 <span class="linenos">126</span><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb</span>
 <span class="linenos">127</span><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="linenos">128</span><span class="w">    </span><span class="nt">secret</span><span class="p">:</span>
-<span class="linenos">129</span><span class="w">      </span><span class="nt">MARIADB_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">129</span><span class="w">      </span><span class="nt">MARIADB_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">130</span><span class="w">    </span><span class="nt">persistence</span><span class="p">:</span>
 <span class="linenos">131</span><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="linenos">132</span><span class="w">      </span><span class="nt">reinstall</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="linenos">133</span><span class="w">      </span><span class="nt">accessMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span>
 <span class="linenos">134</span><span class="w">      </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20Gi</span>
 <span class="linenos">135</span><span class="w">      </span><span class="nt">volumeType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hostPath</span><span class="w"> </span><span class="c1"># e.g.) hostPath or AKS</span>
-<span class="linenos">136</span><span class="w">      </span><span class="nt">storageClass</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="c1"># e.g.) azurefile or - (None)</span>
+<span class="linenos">136</span><span class="w">      </span><span class="nt">storageClass</span><span class="p">:</span><span class="w"> </span><span class="s">"-"</span><span class="w"> </span><span class="c1"># e.g.) azurefile or - (None)</span>
 <span class="linenos">137</span><span class="w">      </span><span class="c1"># matchLabels:</span>
-<span class="linenos">138</span><span class="w">      </span><span class="c1">#   release: &quot;stable&quot;</span>
+<span class="linenos">138</span><span class="w">      </span><span class="c1">#   release: "stable"</span>
 <span class="linenos">139</span><span class="w">      </span><span class="c1"># matchExpressions:</span>
 <span class="linenos">140</span><span class="w">      </span><span class="c1">#   - {key: environment, operator: In, values: [dev]}</span>
 <span class="linenos">141</span>
@@ -532,270 +533,270 @@ $(window).on('load', function () {
 <span class="linenos">143</span><span class="w">  </span><span class="nt">ita-api-admin</span><span class="p">:</span>
 <span class="linenos">144</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">145</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">146</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-api-admin&quot;</span>
-<span class="linenos">147</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">146</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-api-admin"</span>
+<span class="linenos">147</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">148</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">149</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">150</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">151</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">150</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">151</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">152</span>
 <span class="linenos">153</span><span class="w">  </span><span class="nt">ita-api-organization</span><span class="p">:</span>
 <span class="linenos">154</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">155</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">156</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-api-organization&quot;</span>
-<span class="linenos">157</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">156</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-api-organization"</span>
+<span class="linenos">157</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">158</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">159</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">160</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">161</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">160</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">161</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">162</span>
 <span class="linenos">163</span><span class="w">  </span><span class="nt">ita-by-ansible-execute</span><span class="p">:</span>
 <span class="linenos">164</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">165</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">166</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-ansible-execute&quot;</span>
-<span class="linenos">167</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">166</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-ansible-execute"</span>
+<span class="linenos">167</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">168</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">169</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">170</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">171</span><span class="w">      </span><span class="nt">ANSIBLE_AGENT_IMAGE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-ansible-agent&quot;</span>
-<span class="linenos">172</span><span class="w">      </span><span class="nt">ANSIBLE_AGENT_IMAGE_TAG</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<span class="linenos">173</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">174</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">170</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">171</span><span class="w">      </span><span class="nt">ANSIBLE_AGENT_IMAGE</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-ansible-agent"</span>
+<span class="linenos">172</span><span class="w">      </span><span class="nt">ANSIBLE_AGENT_IMAGE_TAG</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
+<span class="linenos">173</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">174</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">175</span><span class="w">    </span><span class="nt">serviceAccount</span><span class="p">:</span>
 <span class="linenos">176</span><span class="w">      </span><span class="nt">create</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="linenos">177</span><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ita-by-ansible-execute-sa&quot;</span>
+<span class="linenos">177</span><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"ita-by-ansible-execute-sa"</span>
 <span class="linenos">178</span>
 <span class="linenos">179</span><span class="w">  </span><span class="nt">ita-by-ansible-legacy-role-vars-listup</span><span class="p">:</span>
 <span class="linenos">180</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">181</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">182</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">183</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">184</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">182</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">183</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">184</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">185</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">186</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-ansible-legacy-role-vars-listup&quot;</span>
-<span class="linenos">187</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">186</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-ansible-legacy-role-vars-listup"</span>
+<span class="linenos">187</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">188</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">189</span>
 <span class="linenos">190</span><span class="w">  </span><span class="nt">ita-by-ansible-legacy-vars-listup</span><span class="p">:</span>
 <span class="linenos">191</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">192</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">193</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">194</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">195</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">193</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">194</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">195</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">196</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">197</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-ansible-legacy-vars-listup&quot;</span>
-<span class="linenos">198</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">197</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-ansible-legacy-vars-listup"</span>
+<span class="linenos">198</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">199</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">200</span>
 <span class="linenos">201</span><span class="w">  </span><span class="nt">ita-by-ansible-pioneer-vars-listup</span><span class="p">:</span>
 <span class="linenos">202</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">203</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">204</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">205</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">206</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">204</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">205</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">206</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">207</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">208</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-ansible-pioneer-vars-listup&quot;</span>
-<span class="linenos">209</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">208</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-ansible-pioneer-vars-listup"</span>
+<span class="linenos">209</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">210</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">211</span>
 <span class="linenos">212</span><span class="w">  </span><span class="nt">ita-by-ansible-towermaster-sync</span><span class="p">:</span>
 <span class="linenos">213</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">214</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">215</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">216</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">217</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">215</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">216</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">217</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">218</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">219</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-ansible-towermaster-sync&quot;</span>
-<span class="linenos">220</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">219</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-ansible-towermaster-sync"</span>
+<span class="linenos">220</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">221</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">222</span>
 <span class="linenos">223</span><span class="w">  </span><span class="nt">ita-by-cicd-for-iac</span><span class="p">:</span>
 <span class="linenos">224</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">225</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">226</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">227</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">228</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">226</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">227</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">228</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">229</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">230</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-cicd-for-iac&quot;</span>
-<span class="linenos">231</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">230</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-cicd-for-iac"</span>
+<span class="linenos">231</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">232</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">233</span>
 <span class="linenos">234</span><span class="w">  </span><span class="nt">ita-by-collector</span><span class="p">:</span>
 <span class="linenos">235</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">236</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">237</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">238</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">239</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">237</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">238</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">239</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">240</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">241</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-collector&quot;</span>
-<span class="linenos">242</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">241</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-collector"</span>
+<span class="linenos">242</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">243</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">244</span>
 <span class="linenos">245</span><span class="w">  </span><span class="nt">ita-by-conductor-regularly</span><span class="p">:</span>
 <span class="linenos">246</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">247</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">248</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">249</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">250</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">248</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">249</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">250</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">251</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">252</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-conductor-regularly&quot;</span>
-<span class="linenos">253</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">252</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-conductor-regularly"</span>
+<span class="linenos">253</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">254</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">255</span>
 <span class="linenos">256</span><span class="w">  </span><span class="nt">ita-by-conductor-synchronize</span><span class="p">:</span>
 <span class="linenos">257</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">258</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">259</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">260</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">261</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">259</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">260</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">261</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">262</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">263</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-conductor-synchronize&quot;</span>
-<span class="linenos">264</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">263</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-conductor-synchronize"</span>
+<span class="linenos">264</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">265</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">266</span>
 <span class="linenos">267</span><span class="w">  </span><span class="nt">ita-by-excel-export-import</span><span class="p">:</span>
 <span class="linenos">268</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">269</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">270</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">271</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">272</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">270</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">271</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">272</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">273</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">274</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-excel-export-import&quot;</span>
-<span class="linenos">275</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">274</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-excel-export-import"</span>
+<span class="linenos">275</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">276</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">277</span>
 <span class="linenos">278</span><span class="w">  </span><span class="nt">ita-by-execinstance-dataautoclean</span><span class="p">:</span>
 <span class="linenos">279</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">280</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">281</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">282</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">283</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">281</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">282</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">283</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">284</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">285</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-execinstance-dataautoclean&quot;</span>
-<span class="linenos">286</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">285</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-execinstance-dataautoclean"</span>
+<span class="linenos">286</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">287</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">288</span>
 <span class="linenos">289</span><span class="w">  </span><span class="nt">ita-by-file-autoclean</span><span class="p">:</span>
 <span class="linenos">290</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">291</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">292</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">293</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">294</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">292</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">293</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">294</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">295</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">296</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-file-autoclean&quot;</span>
-<span class="linenos">297</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">296</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-file-autoclean"</span>
+<span class="linenos">297</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">298</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">299</span>
 <span class="linenos">300</span><span class="w">  </span><span class="nt">ita-by-hostgroup-split</span><span class="p">:</span>
 <span class="linenos">301</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">302</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">303</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">304</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">305</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">303</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">304</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">305</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">306</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">307</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-hostgroup-split&quot;</span>
-<span class="linenos">308</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">307</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-hostgroup-split"</span>
+<span class="linenos">308</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">309</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">310</span>
 <span class="linenos">311</span><span class="w">  </span><span class="nt">ita-by-menu-create</span><span class="p">:</span>
 <span class="linenos">312</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">313</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">314</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">315</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">316</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">314</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">315</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">316</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">317</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">318</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-menu-create&quot;</span>
-<span class="linenos">319</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">318</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-menu-create"</span>
+<span class="linenos">319</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">320</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">321</span>
 <span class="linenos">322</span><span class="w">  </span><span class="nt">ita-by-menu-export-import</span><span class="p">:</span>
 <span class="linenos">323</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">324</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">325</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">326</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">327</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">325</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">326</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">327</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">328</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">329</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-menu-export-import&quot;</span>
-<span class="linenos">330</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">329</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-menu-export-import"</span>
+<span class="linenos">330</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">331</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">332</span>
 <span class="linenos">333</span><span class="w">  </span><span class="nt">ita-by-terraform-cli-execute</span><span class="p">:</span>
 <span class="linenos">334</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">335</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">336</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">337</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">338</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">336</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">337</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">338</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">339</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">340</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-terraform-cli-execute&quot;</span>
-<span class="linenos">341</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">340</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-terraform-cli-execute"</span>
+<span class="linenos">341</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">342</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">343</span>
 <span class="linenos">344</span><span class="w">  </span><span class="nt">ita-by-terraform-cli-vars-listup</span><span class="p">:</span>
 <span class="linenos">345</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">346</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">347</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">348</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">349</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">347</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">348</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">349</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">350</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">351</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-terraform-cli-vars-listup&quot;</span>
-<span class="linenos">352</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">351</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-terraform-cli-vars-listup"</span>
+<span class="linenos">352</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">353</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">354</span>
 <span class="linenos">355</span><span class="w">  </span><span class="nt">ita-by-terraform-cloud-ep-execute</span><span class="p">:</span>
 <span class="linenos">356</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">357</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">358</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">359</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">360</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">358</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">359</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">360</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">361</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">362</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-terraform-cloud-ep-execute&quot;</span>
-<span class="linenos">363</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">362</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-terraform-cloud-ep-execute"</span>
+<span class="linenos">363</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">364</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">365</span>
 <span class="linenos">366</span><span class="w">  </span><span class="nt">ita-by-terraform-cloud-ep-vars-listup</span><span class="p">:</span>
 <span class="linenos">367</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">368</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">369</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
-<span class="linenos">370</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">371</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">369</span><span class="w">      </span><span class="nt">EXECUTE_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"10"</span>
+<span class="linenos">370</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">371</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">372</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">373</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-by-terraform-cloud-ep-vars-listup&quot;</span>
-<span class="linenos">374</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">373</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-by-terraform-cloud-ep-vars-listup"</span>
+<span class="linenos">374</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">375</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">376</span>
 <span class="linenos">377</span><span class="w">  </span><span class="nt">ita-database-setup-job</span><span class="p">:</span>
 <span class="linenos">378</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">379</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<span class="linenos">380</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">379</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
+<span class="linenos">380</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">381</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">382</span>
 <span class="linenos">383</span><span class="w">  </span><span class="nt">ita-web-server</span><span class="p">:</span>
 <span class="linenos">384</span><span class="w">    </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos">385</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">386</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-web-server&quot;</span>
-<span class="linenos">387</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">386</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-web-server"</span>
+<span class="linenos">387</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">388</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">389</span>
 <span class="linenos">390</span><span class="w">  </span><span class="nt">ita-migration</span><span class="p">:</span>
 <span class="linenos">391</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
-<span class="linenos">392</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;platform-api&quot;</span>
-<span class="linenos">393</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="linenos">392</span><span class="w">      </span><span class="nt">PLATFORM_API_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"platform-api"</span>
+<span class="linenos">393</span><span class="w">      </span><span class="nt">PLATFORM_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8000"</span>
 <span class="linenos">394</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">395</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-it-automation-migration&quot;</span>
-<span class="linenos">396</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">395</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-it-automation-migration"</span>
+<span class="linenos">396</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">397</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">398</span>
 <span class="linenos">399</span><span class="nt">exastro-platform</span><span class="p">:</span>
 <span class="linenos">400</span><span class="w">  </span><span class="nt">platform-api</span><span class="p">:</span>
 <span class="linenos">401</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">402</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-platform-api&quot;</span>
-<span class="linenos">403</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">402</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-platform-api"</span>
+<span class="linenos">403</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">404</span>
 <span class="linenos">405</span><span class="w">  </span><span class="nt">platform-auth</span><span class="p">:</span>
 <span class="linenos">406</span><span class="w">    </span><span class="nt">extraEnv</span><span class="p">:</span>
 <span class="linenos">407</span><span class="w">      </span><span class="c1"># Please set the URL to access</span>
-<span class="linenos">408</span><span class="w">      </span><span class="nt">EXTERNAL_URL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<span class="linenos">409</span><span class="w">      </span><span class="nt">EXTERNAL_URL_MNG</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">408</span><span class="w">      </span><span class="nt">EXTERNAL_URL</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
+<span class="linenos">409</span><span class="w">      </span><span class="nt">EXTERNAL_URL_MNG</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">410</span><span class="w">    </span><span class="nt">ingress</span><span class="p">:</span>
 <span class="linenos">411</span><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="linenos">412</span><span class="w">      </span><span class="nt">hosts</span><span class="p">:</span>
@@ -803,12 +804,12 @@ $(window).on('load', function () {
 <span class="linenos">414</span><span class="w">          </span><span class="nt">paths</span><span class="p">:</span>
 <span class="linenos">415</span><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/</span>
 <span class="linenos">416</span><span class="w">              </span><span class="nt">pathType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Prefix</span>
-<span class="linenos">417</span><span class="w">              </span><span class="nt">backend</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
+<span class="linenos">417</span><span class="w">              </span><span class="nt">backend</span><span class="p">:</span><span class="w"> </span><span class="s">"http"</span>
 <span class="linenos">418</span><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exastro-suite-mng.example.local</span>
 <span class="linenos">419</span><span class="w">          </span><span class="nt">paths</span><span class="p">:</span>
 <span class="linenos">420</span><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/</span>
 <span class="linenos">421</span><span class="w">              </span><span class="nt">pathType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Prefix</span>
-<span class="linenos">422</span><span class="w">              </span><span class="nt">backend</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;httpMng&quot;</span>
+<span class="linenos">422</span><span class="w">              </span><span class="nt">backend</span><span class="p">:</span><span class="w"> </span><span class="s">"httpMng"</span>
 <span class="linenos">423</span><span class="w">    </span><span class="nt">service</span><span class="p">:</span>
 <span class="linenos">424</span><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterIP</span>
 <span class="linenos">425</span><span class="w">      </span><span class="c1"># http:</span>
@@ -816,46 +817,46 @@ $(window).on('load', function () {
 <span class="linenos">427</span><span class="w">      </span><span class="c1"># httpMng:</span>
 <span class="linenos">428</span><span class="w">      </span><span class="c1">#   nodePort: 30081</span>
 <span class="linenos">429</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">430</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-platform-auth&quot;</span>
-<span class="linenos">431</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">430</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-platform-auth"</span>
+<span class="linenos">431</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">432</span>
 <span class="linenos">433</span><span class="w">  </span><span class="nt">platform-migration</span><span class="p">:</span>
 <span class="linenos">434</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">435</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-platform-migration&quot;</span>
-<span class="linenos">436</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">435</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-platform-migration"</span>
+<span class="linenos">436</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">437</span>
 <span class="linenos">438</span><span class="w">  </span><span class="nt">platform-web</span><span class="p">:</span>
 <span class="linenos">439</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">440</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/exastro-platform-web&quot;</span>
-<span class="linenos">441</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">440</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/exastro-platform-web"</span>
+<span class="linenos">441</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">442</span>
 <span class="linenos">443</span><span class="w">  </span><span class="nt">mariadb</span><span class="p">:</span>
 <span class="linenos">444</span><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="linenos">445</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">446</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mariadb&quot;</span>
-<span class="linenos">447</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10.9&quot;</span>
+<span class="linenos">446</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"mariadb"</span>
+<span class="linenos">447</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">"10.9"</span>
 <span class="linenos">448</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">449</span><span class="w">    </span><span class="nt">resources</span><span class="p">:</span>
 <span class="linenos">450</span><span class="w">      </span><span class="nt">requests</span><span class="p">:</span>
-<span class="linenos">451</span><span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;256Mi&quot;</span>
-<span class="linenos">452</span><span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1m&quot;</span>
+<span class="linenos">451</span><span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">"256Mi"</span>
+<span class="linenos">452</span><span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">"1m"</span>
 <span class="linenos">453</span><span class="w">      </span><span class="nt">limits</span><span class="p">:</span>
-<span class="linenos">454</span><span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2Gi&quot;</span>
-<span class="linenos">455</span><span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4&quot;</span>
+<span class="linenos">454</span><span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">"2Gi"</span>
+<span class="linenos">455</span><span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">"4"</span>
 <span class="linenos">456</span>
 <span class="linenos">457</span><span class="w">  </span><span class="nt">keycloak</span><span class="p">:</span>
 <span class="linenos">458</span><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="linenos">459</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span>
-<span class="linenos">460</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;exastro/keycloak&quot;</span>
-<span class="linenos">461</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="linenos">460</span><span class="w">      </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">"exastro/keycloak"</span>
+<span class="linenos">461</span><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">""</span>
 <span class="linenos">462</span><span class="w">      </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 <span class="linenos">463</span><span class="w">    </span><span class="nt">resources</span><span class="p">:</span>
 <span class="linenos">464</span><span class="w">      </span><span class="nt">requests</span><span class="p">:</span>
-<span class="linenos">465</span><span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;256Mi&quot;</span>
-<span class="linenos">466</span><span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1m&quot;</span>
+<span class="linenos">465</span><span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">"256Mi"</span>
+<span class="linenos">466</span><span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">"1m"</span>
 <span class="linenos">467</span><span class="w">      </span><span class="nt">limits</span><span class="p">:</span>
-<span class="linenos">468</span><span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2Gi&quot;</span>
-<span class="linenos">469</span><span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4&quot;</span>
+<span class="linenos">468</span><span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">"2Gi"</span>
+<span class="linenos">469</span><span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">"4"</span>
 </pre></div>
 </div>
 </details><div class="line-block">
@@ -1048,10 +1049,10 @@ $(window).on('load', function () {
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="linenos">232</span><span class="w"> </span>platform-auth:
 <span class="linenos">233</span><span class="w"> </span>  extraEnv:
 <span class="linenos">234</span><span class="w"> </span>    # Please set the URL to access
-<span class="linenos">235</span><span class="gd">-    EXTERNAL_URL: &quot;&quot;</span>
-<span class="linenos">236</span><span class="gd">-    EXTERNAL_URL_MNG: &quot;&quot;</span>
-<span class="linenos">237</span><span class="gi">+    EXTERNAL_URL: &quot;http://exastro-suite.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io&quot;</span>
-<span class="linenos">238</span><span class="gi">+    EXTERNAL_URL_MNG: &quot;http://exastro-suite-mng.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io&quot;</span>
+<span class="linenos">235</span><span class="gd">-    EXTERNAL_URL: ""</span>
+<span class="linenos">236</span><span class="gd">-    EXTERNAL_URL_MNG: ""</span>
+<span class="linenos">237</span><span class="gi">+    EXTERNAL_URL: "http://exastro-suite.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io"</span>
+<span class="linenos">238</span><span class="gi">+    EXTERNAL_URL_MNG: "http://exastro-suite-mng.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io"</span>
 <span class="linenos">239</span><span class="w"> </span>  ingress:
 <span class="linenos">240</span><span class="w"> </span>    enabled: true
 <span class="linenos">241</span><span class="gi">+    annotations:</span>
@@ -1067,13 +1068,13 @@ $(window).on('load', function () {
 <span class="linenos">251</span><span class="w"> </span>        paths:
 <span class="linenos">252</span><span class="w"> </span>          - path: /
 <span class="linenos">253</span><span class="w"> </span>            pathType: Prefix
-<span class="linenos">254</span><span class="w"> </span>            backend: &quot;http&quot;
+<span class="linenos">254</span><span class="w"> </span>            backend: "http"
 <span class="linenos">255</span><span class="gd">-      - host: exastro-suite-mng.example.local</span>
 <span class="linenos">256</span><span class="gi">+      - host: exastro-suite-mng.xxxxxxxxxxxxxxxxxx.japaneast.aksapp.io</span>
 <span class="linenos">257</span><span class="w"> </span>        paths:
 <span class="linenos">258</span><span class="w"> </span>          - path: /
 <span class="linenos">259</span><span class="w"> </span>            pathType: Prefix
-<span class="linenos">260</span><span class="w"> </span>            backend: &quot;httpMng&quot;
+<span class="linenos">260</span><span class="w"> </span>            backend: "httpMng"
 </pre></div>
 </div>
 </div>
@@ -1096,10 +1097,10 @@ $(window).on('load', function () {
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="linenos">232</span><span class="w"> </span>platform-auth:
 <span class="linenos">233</span><span class="w"> </span>  extraEnv:
 <span class="linenos">234</span><span class="w"> </span>    # Please set the URL to access
-<span class="linenos">235</span><span class="gd">-    EXTERNAL_URL: &quot;&quot;</span>
-<span class="linenos">236</span><span class="gd">-    EXTERNAL_URL_MNG: &quot;&quot;</span>
-<span class="linenos">237</span><span class="gi">+    EXTERNAL_URL: &quot;https://your-exastro.domain&quot;</span>
-<span class="linenos">238</span><span class="gi">+    EXTERNAL_URL_MNG: &quot;https://your-exastro-mng.domain&quot;</span>
+<span class="linenos">235</span><span class="gd">-    EXTERNAL_URL: ""</span>
+<span class="linenos">236</span><span class="gd">-    EXTERNAL_URL_MNG: ""</span>
+<span class="linenos">237</span><span class="gi">+    EXTERNAL_URL: "https://your-exastro.domain"</span>
+<span class="linenos">238</span><span class="gi">+    EXTERNAL_URL_MNG: "https://your-exastro-mng.domain"</span>
 <span class="linenos">239</span><span class="w"> </span>  ingress:
 <span class="linenos">240</span><span class="gd">-    enabled: true</span>
 <span class="linenos">241</span><span class="gi">+    enabled: false</span>
@@ -1108,12 +1109,12 @@ $(window).on('load', function () {
 <span class="linenos">244</span><span class="w"> </span>        paths:
 <span class="linenos">245</span><span class="w"> </span>          - path: /
 <span class="linenos">246</span><span class="w"> </span>            pathType: Prefix
-<span class="linenos">247</span><span class="w"> </span>            backend: &quot;http&quot;
+<span class="linenos">247</span><span class="w"> </span>            backend: "http"
 <span class="linenos">248</span><span class="w"> </span>      - host: exastro-suite-mng.example.local
 <span class="linenos">249</span><span class="w"> </span>        paths:
 <span class="linenos">250</span><span class="w"> </span>          - path: /
 <span class="linenos">251</span><span class="w"> </span>            pathType: Prefix
-<span class="linenos">252</span><span class="w"> </span>            backend: &quot;httpMng&quot;
+<span class="linenos">252</span><span class="w"> </span>            backend: "httpMng"
 <span class="linenos">253</span><span class="w"> </span>  service:
 <span class="linenos">254</span><span class="gd">-    type: ClusterIP</span>
 <span class="linenos">255</span><span class="gi">+    type: LoadBalancer</span>
@@ -1143,10 +1144,10 @@ $(window).on('load', function () {
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="linenos">232</span><span class="w"> </span> platform-auth:
 <span class="linenos">233</span><span class="w"> </span>   extraEnv:
 <span class="linenos">234</span><span class="w"> </span>     # Please set the URL to access
-<span class="linenos">235</span><span class="w"> </span>-    EXTERNAL_URL: &quot;&quot;
-<span class="linenos">236</span><span class="w"> </span>-    EXTERNAL_URL_MNG: &quot;&quot;
-<span class="linenos">237</span><span class="w"> </span>+    EXTERNAL_URL: &quot;http://10.10.10.10:30080&quot;
-<span class="linenos">238</span><span class="w"> </span>+    EXTERNAL_URL_MNG: &quot;http://10.10.10.10:30081&quot;
+<span class="linenos">235</span><span class="w"> </span>-    EXTERNAL_URL: ""
+<span class="linenos">236</span><span class="w"> </span>-    EXTERNAL_URL_MNG: ""
+<span class="linenos">237</span><span class="w"> </span>+    EXTERNAL_URL: "http://10.10.10.10:30080"
+<span class="linenos">238</span><span class="w"> </span>+    EXTERNAL_URL_MNG: "http://10.10.10.10:30081"
 <span class="linenos">239</span><span class="w"> </span>   ingress:
 <span class="linenos">240</span><span class="gd">-    enabled: true</span>
 <span class="linenos">241</span><span class="gi">+    enabled: false</span>
@@ -1155,12 +1156,12 @@ $(window).on('load', function () {
 <span class="linenos">244</span><span class="w"> </span>         paths:
 <span class="linenos">245</span><span class="w"> </span>           - path: /
 <span class="linenos">246</span><span class="w"> </span>             pathType: Prefix
-<span class="linenos">247</span><span class="w"> </span>             backend: &quot;http&quot;
+<span class="linenos">247</span><span class="w"> </span>             backend: "http"
 <span class="linenos">248</span><span class="w"> </span>       - host: exastro-suite-mng.example.local
 <span class="linenos">249</span><span class="w"> </span>         paths:
 <span class="linenos">250</span><span class="w"> </span>           - path: /
 <span class="linenos">251</span><span class="w"> </span>             pathType: Prefix
-<span class="linenos">252</span><span class="w"> </span>             backend: &quot;httpMng&quot;
+<span class="linenos">252</span><span class="w"> </span>             backend: "httpMng"
 <span class="linenos">253</span><span class="w"> </span>   service:
 <span class="linenos">254</span><span class="gd">-    type: ClusterIP</span>
 <span class="linenos">255</span><span class="gd">-    # http:</span>
@@ -1313,20 +1314,20 @@ $(window).on('load', function () {
 <span class="linenos">40</span><span class="w"> </span>   name: ita-database
 <span class="linenos">41</span><span class="w"> </span>   enabled: true
 <span class="linenos">42</span><span class="w"> </span>   config:
-<span class="linenos">43</span><span class="gd">-     DB_VENDOR: &quot;mariadb&quot;</span>
-<span class="linenos">44</span><span class="gd">-     DB_HOST: &quot;mariadb&quot;</span>
-<span class="linenos">45</span><span class="gd">-     DB_PORT: &quot;3306&quot;</span>
-<span class="linenos">46</span><span class="gi">+     DB_VENDOR: &quot;mariadb&quot;                # mariadb or mysql</span>
-<span class="linenos">47</span><span class="gi">+     DB_HOST: &quot;your.database.endpoint&quot;   # データベースのエンドポイント</span>
-<span class="linenos">48</span><span class="gi">+     DB_PORT: &quot;3306&quot;                     # データベース接続ポート</span>
-<span class="linenos">49</span><span class="w"> </span>     DB_DATABASE: &quot;ITA_DB&quot;               # 変更不要
+<span class="linenos">43</span><span class="gd">-     DB_VENDOR: "mariadb"</span>
+<span class="linenos">44</span><span class="gd">-     DB_HOST: "mariadb"</span>
+<span class="linenos">45</span><span class="gd">-     DB_PORT: "3306"</span>
+<span class="linenos">46</span><span class="gi">+     DB_VENDOR: "mariadb"                # mariadb or mysql</span>
+<span class="linenos">47</span><span class="gi">+     DB_HOST: "your.database.endpoint"   # データベースのエンドポイント</span>
+<span class="linenos">48</span><span class="gi">+     DB_PORT: "3306"                     # データベース接続ポート</span>
+<span class="linenos">49</span><span class="w"> </span>     DB_DATABASE: "ITA_DB"               # 変更不要
 <span class="linenos">50</span><span class="w"> </span>   secret:
-<span class="linenos">51</span><span class="gd">-     DB_ADMIN_USER: &quot;&quot;</span>
-<span class="linenos">52</span><span class="gd">-     DB_ADMIN_PASSWORD: &quot;&quot;s</span>
-<span class="linenos">53</span><span class="gi">+     DB_ADMIN_USER: &quot;your-admin-account&quot;      # データベースの管理権限を持つユーザ</span>
-<span class="linenos">54</span><span class="gi">+     DB_ADMIN_PASSWORD: &quot;your-admin-password&quot; # データベースの管理権限を持つユーザのパスワード</span>
-<span class="linenos">55</span><span class="w"> </span>     DB_USER: &quot;&quot;
-<span class="linenos">56</span><span class="w"> </span>     DB_PASSWORD: &quot;&quot;
+<span class="linenos">51</span><span class="gd">-     DB_ADMIN_USER: ""</span>
+<span class="linenos">52</span><span class="gd">-     DB_ADMIN_PASSWORD: ""s</span>
+<span class="linenos">53</span><span class="gi">+     DB_ADMIN_USER: "your-admin-account"      # データベースの管理権限を持つユーザ</span>
+<span class="linenos">54</span><span class="gi">+     DB_ADMIN_PASSWORD: "your-admin-password" # データベースの管理権限を持つユーザのパスワード</span>
+<span class="linenos">55</span><span class="w"> </span>     DB_USER: ""
+<span class="linenos">56</span><span class="w"> </span>     DB_PASSWORD: ""
 </pre></div>
 </div>
 </div>
@@ -1422,20 +1423,20 @@ $(window).on('load', function () {
 <span class="linenos">113</span><span class="w"> </span>   name: auth-database
 <span class="linenos">114</span><span class="w"> </span>   enabled: true
 <span class="linenos">115</span><span class="w"> </span>   config:
-<span class="linenos">116</span><span class="gd">-     DB_VENDOR: &quot;mariadb&quot;</span>
-<span class="linenos">117</span><span class="gd">-     DB_HOST: &quot;mariadb&quot;</span>
-<span class="linenos">118</span><span class="gd">-     DB_PORT: &quot;3306&quot;</span>
-<span class="linenos">119</span><span class="gi">+     DB_VENDOR: &quot;mariadb&quot;                # mariadb or mysql</span>
-<span class="linenos">120</span><span class="gi">+     DB_HOST: &quot;your.database.endpoint&quot;   # データベースのエンドポイント</span>
-<span class="linenos">121</span><span class="gi">+     DB_PORT: &quot;3306&quot;                     # データベース接続ポート</span>
-<span class="linenos">122</span><span class="w"> </span>     DB_DATABASE: &quot;platform&quot;             # 変更不要
+<span class="linenos">116</span><span class="gd">-     DB_VENDOR: "mariadb"</span>
+<span class="linenos">117</span><span class="gd">-     DB_HOST: "mariadb"</span>
+<span class="linenos">118</span><span class="gd">-     DB_PORT: "3306"</span>
+<span class="linenos">119</span><span class="gi">+     DB_VENDOR: "mariadb"                # mariadb or mysql</span>
+<span class="linenos">120</span><span class="gi">+     DB_HOST: "your.database.endpoint"   # データベースのエンドポイント</span>
+<span class="linenos">121</span><span class="gi">+     DB_PORT: "3306"                     # データベース接続ポート</span>
+<span class="linenos">122</span><span class="w"> </span>     DB_DATABASE: "platform"             # 変更不要
 <span class="linenos">123</span><span class="w"> </span>   secret:
-<span class="linenos">124</span><span class="gd">-     DB_ADMIN_USER: &quot;&quot;</span>
-<span class="linenos">125</span><span class="gd">-     DB_ADMIN_PASSWORD: &quot;&quot;</span>
-<span class="linenos">126</span><span class="gi">+     DB_ADMIN_USER: &quot;your-admin-account&quot;      # データベースの管理者ユーザ</span>
-<span class="linenos">127</span><span class="gi">+     DB_ADMIN_PASSWORD: &quot;your-admin-password&quot; # データベースの管理者ユーザのパスワード</span>
-<span class="linenos">128</span><span class="w"> </span>     DB_USER: &quot;&quot;
-<span class="linenos">129</span><span class="w"> </span>     DB_PASSWORD: &quot;&quot;
+<span class="linenos">124</span><span class="gd">-     DB_ADMIN_USER: ""</span>
+<span class="linenos">125</span><span class="gd">-     DB_ADMIN_PASSWORD: ""</span>
+<span class="linenos">126</span><span class="gi">+     DB_ADMIN_USER: "your-admin-account"      # データベースの管理者ユーザ</span>
+<span class="linenos">127</span><span class="gi">+     DB_ADMIN_PASSWORD: "your-admin-password" # データベースの管理者ユーザのパスワード</span>
+<span class="linenos">128</span><span class="w"> </span>     DB_USER: ""
+<span class="linenos">129</span><span class="w"> </span>     DB_PASSWORD: ""
 </pre></div>
 </div>
 </div>
@@ -1651,18 +1652,18 @@ $(window).on('load', function () {
 <span class="linenos">126</span><span class="w"> </span>     name: mariadb
 <span class="linenos">127</span><span class="w"> </span>     enabled: true
 <span class="linenos">128</span><span class="w"> </span>     secret:
-<span class="linenos">129</span><span class="gd">-     MARIADB_ROOT_PASSWORD: &quot;&quot;</span>
-<span class="linenos">130</span><span class="gi">+     MARIADB_ROOT_PASSWORD: &quot;root-password&quot;  # データベースコンテナの root のパスワード</span>
+<span class="linenos">129</span><span class="gd">-     MARIADB_ROOT_PASSWORD: ""</span>
+<span class="linenos">130</span><span class="gi">+     MARIADB_ROOT_PASSWORD: "root-password"  # データベースコンテナの root のパスワード</span>
 <span class="linenos">131</span><span class="w"> </span>     persistence:
 <span class="linenos">132</span><span class="w"> </span>       enabled: true
 <span class="linenos">133</span><span class="w"> </span>       reinstall: false
 <span class="linenos">134</span><span class="w"> </span>       accessMode: ReadWriteOnce
 <span class="linenos">135</span><span class="gd">-      size: 20Gi</span>
 <span class="linenos">136</span><span class="gd">-      volumeType: hostPath # e.g.) hostPath or AKS</span>
-<span class="linenos">137</span><span class="gd">-      storageClass: &quot;-&quot; # e.g.) azurefile or - (None)</span>
+<span class="linenos">137</span><span class="gd">-      storageClass: "-" # e.g.) azurefile or - (None)</span>
 <span class="linenos">138</span><span class="gi">+      size: XXGi                                       # 必要な容量に変更</span>
 <span class="linenos">139</span><span class="gi">+      volumeType: AKS                                  # AKS を選択</span>
-<span class="linenos">140</span><span class="gi">+      storageClass: &quot;exastro-suite-azurefile-csi-nfs&quot;  # 利用する Storage Class を指定</span>
+<span class="linenos">140</span><span class="gi">+      storageClass: "exastro-suite-azurefile-csi-nfs"  # 利用する Storage Class を指定</span>
 </pre></div>
 </div>
 </div>
@@ -1672,8 +1673,8 @@ $(window).on('load', function () {
 <span class="linenos">126</span><span class="w"> </span>     name: mariadb
 <span class="linenos">127</span><span class="w"> </span>     enabled: true
 <span class="linenos">128</span><span class="w"> </span>     secret:
-<span class="linenos">129</span><span class="gd">-     MARIADB_ROOT_PASSWORD: &quot;&quot;</span>
-<span class="linenos">130</span><span class="gi">+     MARIADB_ROOT_PASSWORD: &quot;root-password&quot;  # コンテナデータベースの root のパスワード</span>
+<span class="linenos">129</span><span class="gd">-     MARIADB_ROOT_PASSWORD: ""</span>
+<span class="linenos">130</span><span class="gi">+     MARIADB_ROOT_PASSWORD: "root-password"  # コンテナデータベースの root のパスワード</span>
 <span class="linenos">131</span><span class="w"> </span>     persistence:
 <span class="linenos">132</span><span class="w"> </span>       enabled: true
 <span class="linenos">133</span><span class="w"> </span>       reinstall: false
@@ -1682,7 +1683,7 @@ $(window).on('load', function () {
 <span class="linenos">136</span><span class="gd">-      volumeType: hostPath # e.g.) hostPath or AKS</span>
 <span class="linenos">137</span><span class="gi">+      size: XXGi                                       # 必要な容量に変更</span>
 <span class="linenos">138</span><span class="gi">+      volumeType: hostPath                             # AKS を選択</span>
-<span class="linenos">139</span><span class="w"> </span>       storageClass: &quot;-&quot; # e.g.) azurefile or - (None)
+<span class="linenos">139</span><span class="w"> </span>       storageClass: "-" # e.g.) azurefile or - (None)
 </pre></div>
 </div>
 </div>
@@ -1779,17 +1780,17 @@ $(window).on('load', function () {
 <span class="linenos">40</span><span class="w"> </span>   name: ita-database
 <span class="linenos">41</span><span class="w"> </span>   enabled: true
 <span class="linenos">42</span><span class="w"> </span>   config:
-<span class="linenos">43</span><span class="w"> </span>     DB_VENDOR: &quot;mariadb&quot;
-<span class="linenos">44</span><span class="w"> </span>     DB_HOST: &quot;mariadb&quot;
-<span class="linenos">45</span><span class="w"> </span>     DB_PORT: &quot;3306&quot;
-<span class="linenos">46</span><span class="w"> </span>     DB_DATABASE: &quot;ITA_DB&quot;
+<span class="linenos">43</span><span class="w"> </span>     DB_VENDOR: "mariadb"
+<span class="linenos">44</span><span class="w"> </span>     DB_HOST: "mariadb"
+<span class="linenos">45</span><span class="w"> </span>     DB_PORT: "3306"
+<span class="linenos">46</span><span class="w"> </span>     DB_DATABASE: "ITA_DB"
 <span class="linenos">47</span><span class="w"> </span>   secret:
-<span class="linenos">48</span><span class="gd">-     DB_ADMIN_USER: &quot;&quot;</span>
-<span class="linenos">49</span><span class="gd">-     DB_ADMIN_PASSWORD: &quot;&quot;</span>
-<span class="linenos">50</span><span class="gi">+     DB_ADMIN_USER: &quot;root&quot;                    # root を指定</span>
-<span class="linenos">51</span><span class="gi">+     DB_ADMIN_PASSWORD: &quot;your-admin-password&quot; # 「1.  データベースコンテナの設定」で設定したコンテナデータベースの root のパスワード</span>
-<span class="linenos">52</span><span class="w"> </span>     DB_USER: &quot;&quot;
-<span class="linenos">53</span><span class="w"> </span>     DB_PASSWORD: &quot;&quot;
+<span class="linenos">48</span><span class="gd">-     DB_ADMIN_USER: ""</span>
+<span class="linenos">49</span><span class="gd">-     DB_ADMIN_PASSWORD: ""</span>
+<span class="linenos">50</span><span class="gi">+     DB_ADMIN_USER: "root"                    # root を指定</span>
+<span class="linenos">51</span><span class="gi">+     DB_ADMIN_PASSWORD: "your-admin-password" # 「1.  データベースコンテナの設定」で設定したコンテナデータベースの root のパスワード</span>
+<span class="linenos">52</span><span class="w"> </span>     DB_USER: ""
+<span class="linenos">53</span><span class="w"> </span>     DB_PASSWORD: ""
 </pre></div>
 </div>
 </div>
@@ -1885,17 +1886,17 @@ $(window).on('load', function () {
 <span class="linenos">113</span><span class="w"> </span>   name: auth-database
 <span class="linenos">114</span><span class="w"> </span>   enabled: true
 <span class="linenos">115</span><span class="w"> </span>   config:
-<span class="linenos">116</span><span class="w"> </span>     DB_VENDOR: &quot;mariadb&quot;
-<span class="linenos">117</span><span class="w"> </span>     DB_HOST: &quot;mariadb&quot;
-<span class="linenos">118</span><span class="w"> </span>     DB_PORT: &quot;3306&quot;
-<span class="linenos">119</span><span class="w"> </span>     DB_DATABASE: &quot;platform&quot;
+<span class="linenos">116</span><span class="w"> </span>     DB_VENDOR: "mariadb"
+<span class="linenos">117</span><span class="w"> </span>     DB_HOST: "mariadb"
+<span class="linenos">118</span><span class="w"> </span>     DB_PORT: "3306"
+<span class="linenos">119</span><span class="w"> </span>     DB_DATABASE: "platform"
 <span class="linenos">120</span><span class="w"> </span>   secret:
-<span class="linenos">121</span><span class="gd">-     DB_ADMIN_USER: &quot;&quot;</span>
-<span class="linenos">122</span><span class="gd">-     DB_ADMIN_PASSWORD: &quot;&quot;</span>
-<span class="linenos">123</span><span class="gi">+     DB_ADMIN_USER: &quot;root&quot;                    # root を指定</span>
-<span class="linenos">124</span><span class="gi">+     DB_ADMIN_PASSWORD: &quot;your-admin-password&quot; # 「1.  データベースコンテナの設定」で設定したコンテナデータベースの root のパスワード</span>
-<span class="linenos">125</span><span class="w"> </span>     DB_USER: &quot;&quot;
-<span class="linenos">126</span><span class="w"> </span>     DB_PASSWORD: &quot;&quot;
+<span class="linenos">121</span><span class="gd">-     DB_ADMIN_USER: ""</span>
+<span class="linenos">122</span><span class="gd">-     DB_ADMIN_PASSWORD: ""</span>
+<span class="linenos">123</span><span class="gi">+     DB_ADMIN_USER: "root"                    # root を指定</span>
+<span class="linenos">124</span><span class="gi">+     DB_ADMIN_PASSWORD: "your-admin-password" # 「1.  データベースコンテナの設定」で設定したコンテナデータベースの root のパスワード</span>
+<span class="linenos">125</span><span class="w"> </span>     DB_USER: ""
+<span class="linenos">126</span><span class="w"> </span>     DB_PASSWORD: ""
 </pre></div>
 </div>
 </div>
@@ -2016,17 +2017,17 @@ $(window).on('load', function () {
 <span class="linenos">40</span><span class="w"> </span>   name: ita-database
 <span class="linenos">41</span><span class="w"> </span>   enabled: true
 <span class="linenos">42</span><span class="w"> </span>   config:
-<span class="linenos">43</span><span class="w"> </span>     DB_VENDOR: &quot;mariadb&quot;
-<span class="linenos">44</span><span class="w"> </span>     DB_HOST: &quot;mariadb&quot;
-<span class="linenos">45</span><span class="w"> </span>     DB_PORT: &quot;3306&quot;
-<span class="linenos">46</span><span class="w"> </span>     DB_DATABASE: &quot;ITA_DB&quot;
+<span class="linenos">43</span><span class="w"> </span>     DB_VENDOR: "mariadb"
+<span class="linenos">44</span><span class="w"> </span>     DB_HOST: "mariadb"
+<span class="linenos">45</span><span class="w"> </span>     DB_PORT: "3306"
+<span class="linenos">46</span><span class="w"> </span>     DB_DATABASE: "ITA_DB"
 <span class="linenos">47</span><span class="w"> </span>   secret:
-<span class="linenos">48</span><span class="w"> </span>     DB_ADMIN_USER: &quot;&quot;
-<span class="linenos">49</span><span class="w"> </span>     DB_ADMIN_PASSWORD: &quot;&quot;
-<span class="linenos">50</span><span class="gd">-     DB_USER: &quot;&quot;</span>
-<span class="linenos">51</span><span class="gd">-     DB_PASSWORD: &quot;&quot;</span>
-<span class="linenos">52</span><span class="gi">+     DB_USER: &quot;ita-db-user&quot;                # Exastro IT Automation のアプリが使うDBユーザ</span>
-<span class="linenos">53</span><span class="gi">+     DB_PASSWORD: &quot;ita-db-user-password&quot;   # Exastro IT Automation のアプリが使うDBユーザのパスワード</span>
+<span class="linenos">48</span><span class="w"> </span>     DB_ADMIN_USER: ""
+<span class="linenos">49</span><span class="w"> </span>     DB_ADMIN_PASSWORD: ""
+<span class="linenos">50</span><span class="gd">-     DB_USER: ""</span>
+<span class="linenos">51</span><span class="gd">-     DB_PASSWORD: ""</span>
+<span class="linenos">52</span><span class="gi">+     DB_USER: "ita-db-user"                # Exastro IT Automation のアプリが使うDBユーザ</span>
+<span class="linenos">53</span><span class="gi">+     DB_PASSWORD: "ita-db-user-password"   # Exastro IT Automation のアプリが使うDBユーザのパスワード</span>
 </pre></div>
 </div>
 </div>
@@ -2137,21 +2138,21 @@ $(window).on('load', function () {
 <span class="linenos"> 83</span><span class="w"> </span>   name: keycloak
 <span class="linenos"> 84</span><span class="w"> </span>   enabled: true
 <span class="linenos"> 85</span><span class="w"> </span>   config:
-<span class="linenos"> 86</span><span class="w"> </span>     API_KEYCLOAK_PROTOCOL: &quot;http&quot;
-<span class="linenos"> 87</span><span class="w"> </span>     API_KEYCLOAK_HOST: &quot;keycloak&quot;
-<span class="linenos"> 88</span><span class="w"> </span>     API_KEYCLOAK_PORT: &quot;8080&quot;
-<span class="linenos"> 89</span><span class="w"> </span>     KEYCLOAK_PROTOCOL: &quot;http&quot;
-<span class="linenos"> 90</span><span class="w"> </span>     KEYCLOAK_HOST: &quot;keycloak&quot;
-<span class="linenos"> 91</span><span class="w"> </span>     KEYCLOAK_PORT: &quot;8080&quot;
-<span class="linenos"> 92</span><span class="w"> </span>     KEYCLOAK_MASTER_REALM: &quot;master&quot;
-<span class="linenos"> 93</span><span class="w"> </span>     KEYCLOAK_DB_DATABASE: &quot;keycloak&quot;
+<span class="linenos"> 86</span><span class="w"> </span>     API_KEYCLOAK_PROTOCOL: "http"
+<span class="linenos"> 87</span><span class="w"> </span>     API_KEYCLOAK_HOST: "keycloak"
+<span class="linenos"> 88</span><span class="w"> </span>     API_KEYCLOAK_PORT: "8080"
+<span class="linenos"> 89</span><span class="w"> </span>     KEYCLOAK_PROTOCOL: "http"
+<span class="linenos"> 90</span><span class="w"> </span>     KEYCLOAK_HOST: "keycloak"
+<span class="linenos"> 91</span><span class="w"> </span>     KEYCLOAK_PORT: "8080"
+<span class="linenos"> 92</span><span class="w"> </span>     KEYCLOAK_MASTER_REALM: "master"
+<span class="linenos"> 93</span><span class="w"> </span>     KEYCLOAK_DB_DATABASE: "keycloak"
 <span class="linenos"> 94</span><span class="w"> </span>   secret:
-<span class="linenos"> 95</span><span class="w"> </span>     KEYCLOAK_USER: &quot;&quot;
-<span class="linenos"> 96</span><span class="w"> </span>     KEYCLOAK_PASSWORD: &quot;&quot;
-<span class="linenos"> 97</span><span class="gd">-     KEYCLOAK_DB_USER: &quot;&quot;</span>
-<span class="linenos"> 98</span><span class="gd">-     KEYCLOAK_DB_PASSWORD: &quot;&quot;</span>
-<span class="linenos"> 99</span><span class="gi">+     KEYCLOAK_DB_USER: &quot;keycloak-db-user&quot;               # Keycloak が使うDBユーザ</span>
-<span class="linenos">100</span><span class="gi">+     KEYCLOAK_DB_PASSWORD: &quot;keycloak-db-user-password&quot;  # Keycloak が使うDBユーザのパスワード</span>
+<span class="linenos"> 95</span><span class="w"> </span>     KEYCLOAK_USER: ""
+<span class="linenos"> 96</span><span class="w"> </span>     KEYCLOAK_PASSWORD: ""
+<span class="linenos"> 97</span><span class="gd">-     KEYCLOAK_DB_USER: ""</span>
+<span class="linenos"> 98</span><span class="gd">-     KEYCLOAK_DB_PASSWORD: ""</span>
+<span class="linenos"> 99</span><span class="gi">+     KEYCLOAK_DB_USER: "keycloak-db-user"               # Keycloak が使うDBユーザ</span>
+<span class="linenos">100</span><span class="gi">+     KEYCLOAK_DB_PASSWORD: "keycloak-db-user-password"  # Keycloak が使うDBユーザのパスワード</span>
 </pre></div>
 </div>
 </div>
@@ -2247,17 +2248,17 @@ $(window).on('load', function () {
 <span class="linenos">113</span><span class="w"> </span>   name: auth-database
 <span class="linenos">114</span><span class="w"> </span>   enabled: true
 <span class="linenos">115</span><span class="w"> </span>   config:
-<span class="linenos">116</span><span class="w"> </span>     DB_VENDOR: &quot;mariadb&quot;
-<span class="linenos">117</span><span class="w"> </span>     DB_HOST: &quot;mariadb&quot;
-<span class="linenos">118</span><span class="w"> </span>     DB_PORT: &quot;3306&quot;
-<span class="linenos">119</span><span class="w"> </span>     DB_DATABASE: &quot;platform&quot;
+<span class="linenos">116</span><span class="w"> </span>     DB_VENDOR: "mariadb"
+<span class="linenos">117</span><span class="w"> </span>     DB_HOST: "mariadb"
+<span class="linenos">118</span><span class="w"> </span>     DB_PORT: "3306"
+<span class="linenos">119</span><span class="w"> </span>     DB_DATABASE: "platform"
 <span class="linenos">120</span><span class="w"> </span>   secret:
-<span class="linenos">121</span><span class="w"> </span>     DB_ADMIN_USER: &quot;&quot;
-<span class="linenos">122</span><span class="w"> </span>     DB_ADMIN_PASSWORD: &quot;&quot;
-<span class="linenos">123</span><span class="gd">-     DB_USER: &quot;&quot;</span>
-<span class="linenos">124</span><span class="gd">-     DB_PASSWORD: &quot;&quot;</span>
-<span class="linenos">125</span><span class="gi">+     DB_USER: &quot;pf-db-user&quot;           # Exastro 共通基盤が使うDBユーザ</span>
-<span class="linenos">126</span><span class="gi">+     DB_PASSWORD: &quot;pf-db-password&quot;   # Exastro 共通基盤が使うDBユーザのパスワード</span>
+<span class="linenos">121</span><span class="w"> </span>     DB_ADMIN_USER: ""
+<span class="linenos">122</span><span class="w"> </span>     DB_ADMIN_PASSWORD: ""
+<span class="linenos">123</span><span class="gd">-     DB_USER: ""</span>
+<span class="linenos">124</span><span class="gd">-     DB_PASSWORD: ""</span>
+<span class="linenos">125</span><span class="gi">+     DB_USER: "pf-db-user"           # Exastro 共通基盤が使うDBユーザ</span>
+<span class="linenos">126</span><span class="gi">+     DB_PASSWORD: "pf-db-password"   # Exastro 共通基盤が使うDBユーザのパスワード</span>
 </pre></div>
 </div>
 </div>
@@ -2336,15 +2337,15 @@ $(window).on('load', function () {
 <span class="linenos">31</span><span class="w"> </span>     name: gitlab
 <span class="linenos">32</span><span class="w"> </span>     enabled: true
 <span class="linenos">33</span><span class="w"> </span>     config:
-<span class="linenos">34</span><span class="w"> </span> -     GITLAB_PROTOCOL: &quot;http&quot;
-<span class="linenos">35</span><span class="w"> </span> -     GITLAB_HOST: &quot;gitlab&quot;
-<span class="linenos">36</span><span class="w"> </span> -     GITLAB_PORT: &quot;80&quot;
-<span class="linenos">37</span><span class="w"> </span> +     GITLAB_PROTOCOL: &quot;接続プロトコル http or https&quot;
-<span class="linenos">38</span><span class="w"> </span> +     GITLAB_HOST: &quot;接続先&quot;
-<span class="linenos">39</span><span class="w"> </span> +     GITLAB_PORT: &quot;接続ポート&quot;
+<span class="linenos">34</span><span class="w"> </span> -     GITLAB_PROTOCOL: "http"
+<span class="linenos">35</span><span class="w"> </span> -     GITLAB_HOST: "gitlab"
+<span class="linenos">36</span><span class="w"> </span> -     GITLAB_PORT: "80"
+<span class="linenos">37</span><span class="w"> </span> +     GITLAB_PROTOCOL: "接続プロトコル http or https"
+<span class="linenos">38</span><span class="w"> </span> +     GITLAB_HOST: "接続先"
+<span class="linenos">39</span><span class="w"> </span> +     GITLAB_PORT: "接続ポート"
 <span class="linenos">40</span><span class="w"> </span>     secret:
-<span class="linenos">41</span><span class="w"> </span> -     GITLAB_ROOT_TOKEN: &quot;&quot;
-<span class="linenos">42</span><span class="w"> </span> +     GITLAB_ROOT_TOKEN: &quot;GitLabのRoot権限を持ったトークン&quot;
+<span class="linenos">41</span><span class="w"> </span> -     GITLAB_ROOT_TOKEN: ""
+<span class="linenos">42</span><span class="w"> </span> +     GITLAB_ROOT_TOKEN: "GitLabのRoot権限を持ったトークン"
 </pre></div>
 </div>
 </div>
@@ -2456,21 +2457,21 @@ $(window).on('load', function () {
 <span class="linenos"> 83</span><span class="w"> </span>   name: keycloak
 <span class="linenos"> 84</span><span class="w"> </span>   enabled: true
 <span class="linenos"> 85</span><span class="w"> </span>   config:
-<span class="linenos"> 86</span><span class="w"> </span>     API_KEYCLOAK_PROTOCOL: &quot;http&quot;
-<span class="linenos"> 87</span><span class="w"> </span>     API_KEYCLOAK_HOST: &quot;keycloak&quot;
-<span class="linenos"> 88</span><span class="w"> </span>     API_KEYCLOAK_PORT: &quot;8080&quot;
-<span class="linenos"> 89</span><span class="w"> </span>     KEYCLOAK_PROTOCOL: &quot;http&quot;
-<span class="linenos"> 90</span><span class="w"> </span>     KEYCLOAK_HOST: &quot;keycloak&quot;
-<span class="linenos"> 91</span><span class="w"> </span>     KEYCLOAK_PORT: &quot;8080&quot;
-<span class="linenos"> 92</span><span class="w"> </span>     KEYCLOAK_MASTER_REALM: &quot;master&quot;
-<span class="linenos"> 93</span><span class="w"> </span>     KEYCLOAK_DB_DATABASE: &quot;keycloak&quot;
+<span class="linenos"> 86</span><span class="w"> </span>     API_KEYCLOAK_PROTOCOL: "http"
+<span class="linenos"> 87</span><span class="w"> </span>     API_KEYCLOAK_HOST: "keycloak"
+<span class="linenos"> 88</span><span class="w"> </span>     API_KEYCLOAK_PORT: "8080"
+<span class="linenos"> 89</span><span class="w"> </span>     KEYCLOAK_PROTOCOL: "http"
+<span class="linenos"> 90</span><span class="w"> </span>     KEYCLOAK_HOST: "keycloak"
+<span class="linenos"> 91</span><span class="w"> </span>     KEYCLOAK_PORT: "8080"
+<span class="linenos"> 92</span><span class="w"> </span>     KEYCLOAK_MASTER_REALM: "master"
+<span class="linenos"> 93</span><span class="w"> </span>     KEYCLOAK_DB_DATABASE: "keycloak"
 <span class="linenos"> 94</span><span class="w"> </span>   secret:
-<span class="linenos"> 95</span><span class="gd">-     KEYCLOAK_USER: &quot;&quot;</span>
-<span class="linenos"> 96</span><span class="gd">-     KEYCLOAK_PASSWORD: &quot;&quot;</span>
-<span class="linenos"> 97</span><span class="gi">+     KEYCLOAK_USER: &quot;admin&quot;               # Exastro システムの管理者</span>
-<span class="linenos"> 98</span><span class="gi">+     KEYCLOAK_PASSWORD: &quot;admin-password&quot;  # Exastro システムの管理者のパスワード</span>
-<span class="linenos"> 99</span><span class="w"> </span>     KEYCLOAK_DB_USER: &quot;&quot;
-<span class="linenos">100</span><span class="w"> </span>     KEYCLOAK_DB_PASSWORD: &quot;&quot;
+<span class="linenos"> 95</span><span class="gd">-     KEYCLOAK_USER: ""</span>
+<span class="linenos"> 96</span><span class="gd">-     KEYCLOAK_PASSWORD: ""</span>
+<span class="linenos"> 97</span><span class="gi">+     KEYCLOAK_USER: "admin"               # Exastro システムの管理者</span>
+<span class="linenos"> 98</span><span class="gi">+     KEYCLOAK_PASSWORD: "admin-password"  # Exastro システムの管理者のパスワード</span>
+<span class="linenos"> 99</span><span class="w"> </span>     KEYCLOAK_DB_USER: ""
+<span class="linenos">100</span><span class="w"> </span>     KEYCLOAK_DB_PASSWORD: ""
 </pre></div>
 </div>
 </div>
@@ -2525,8 +2526,8 @@ $(window).on('load', function () {
 <span class="linenos"> 8</span><span class="w"> </span>     accessMode: ReadWriteMany
 <span class="linenos"> 9</span><span class="w"> </span>     size: 10Gi
 <span class="linenos">10</span><span class="w"> </span>     volumeType: hostPath # e.g.) hostPath or AKS
-<span class="linenos">11</span><span class="gd">-      storageClass: &quot;-&quot; # e.g.) azurefile or - (None)</span>
-<span class="linenos">12</span><span class="gi">+      storageClass: &quot;azurefile&quot; # e.g.) azurefile or - (None)</span>
+<span class="linenos">11</span><span class="gd">-      storageClass: "-" # e.g.) azurefile or - (None)</span>
+<span class="linenos">12</span><span class="gi">+      storageClass: "azurefile" # e.g.) azurefile or - (None)</span>
 </pre></div>
 </div>
 </div>
@@ -2542,8 +2543,8 @@ $(window).on('load', function () {
 <span class="linenos">43</span><span class="w"> </span>     accessMode: ReadWriteOnce
 <span class="linenos">44</span><span class="w"> </span>     size: 20Gi
 <span class="linenos">45</span><span class="w"> </span>     volumeType: hostPath # e.g.) hostPath or AKS
-<span class="linenos">46</span><span class="gd">-      storageClass: &quot;-&quot; # e.g.) azurefile or - (None)</span>
-<span class="linenos">47</span><span class="gi">+      storageClass: &quot;exastro-suite-azurefile-csi-nfs&quot; # e.g.) azurefile or - (None)</span>
+<span class="linenos">46</span><span class="gd">-      storageClass: "-" # e.g.) azurefile or - (None)</span>
+<span class="linenos">47</span><span class="gi">+      storageClass: "exastro-suite-azurefile-csi-nfs" # e.g.) azurefile or - (None)</span>
 </pre></div>
 </div>
 </div>
@@ -2700,19 +2701,19 @@ TEST<span class="w"> </span>SUITE:<span class="w"> </span>None
 NOTES:
 Exastro<span class="w"> </span>install<span class="w"> </span>completion!
 
-<span class="m">1</span>.<span class="w"> </span>Execute<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="nb">command</span><span class="w"> </span>and<span class="w"> </span><span class="nb">wait</span><span class="w"> </span><span class="k">until</span><span class="w"> </span>the<span class="w"> </span>pod<span class="w"> </span>becomes<span class="w"> </span><span class="s2">&quot;Running&quot;</span><span class="w"> </span>or<span class="w"> </span><span class="s2">&quot;Completed&quot;</span>:
+<span class="m">1</span>.<span class="w"> </span>Execute<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="nb">command</span><span class="w"> </span>and<span class="w"> </span><span class="nb">wait</span><span class="w"> </span><span class="k">until</span><span class="w"> </span>the<span class="w"> </span>pod<span class="w"> </span>becomes<span class="w"> </span><span class="s2">"Running"</span><span class="w"> </span>or<span class="w"> </span><span class="s2">"Completed"</span>:
 
-<span class="w">  </span><span class="c1"># NOTE: You can also append &quot;-w&quot; to the command or wait until the state changes with &quot;watch command&quot;</span>
+<span class="w">  </span><span class="c1"># NOTE: You can also append "-w" to the command or wait until the state changes with "watch command"</span>
 
 <span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--namespace<span class="w"> </span>exastro
 
 <span class="m">2</span>.<span class="w"> </span>Get<span class="w"> </span>the<span class="w"> </span>ENCRYPT_KEY<span class="w"> </span>by<span class="w"> </span>running<span class="w"> </span>these<span class="w"> </span>commands:
 
 <span class="w">  </span><span class="c1"># Exastro IT Automation ENCRYPT_KEY</span>
-<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>ita-secret-ita-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ENCRYPT_KEY}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>ita-secret-ita-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.ENCRYPT_KEY}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 
 <span class="w">  </span><span class="c1"># Exastro Platform ENCRYPT_KEY</span>
-<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>platform-secret-pf-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ENCRYPT_KEY}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>platform-secret-pf-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.ENCRYPT_KEY}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 
 <span class="w">  </span>!!!<span class="w"> </span>Please<span class="w"> </span>save<span class="w"> </span>the<span class="w"> </span>output<span class="w"> </span>ENCRYPT_KEY<span class="w"> </span>carefully.<span class="w"> </span>!!!
 
@@ -2801,7 +2802,7 @@ platform-web-88db7c489-wkmn9<span class="w">                              </span
 <div class="literal-block-wrapper docutils container" id="id60">
 <div class="code-block-caption"><span class="caption-number">リスト 2.27 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id60" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exastro IT Automation ENCRYPT_KEY</span>
-kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>ita-secret-ita-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ENCRYPT_KEY}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>ita-secret-ita-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.ENCRYPT_KEY}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 </pre></div>
 </div>
 </div>
@@ -2814,7 +2815,7 @@ kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w">
 <div class="literal-block-wrapper docutils container" id="id62">
 <div class="code-block-caption"><span class="caption-number">リスト 2.29 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id62" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exastro Platform ENCRYPT_KEY</span>
-kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>platform-secret-pf-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ENCRYPT_KEY}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>platform-secret-pf-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.ENCRYPT_KEY}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 </pre></div>
 </div>
 </div>
@@ -2879,29 +2880,29 @@ TEST<span class="w"> </span>SUITE:<span class="w"> </span>None
 NOTES:
 Exastro<span class="w"> </span>install<span class="w"> </span>completion!
 
-<span class="m">1</span>.<span class="w"> </span>Execute<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="nb">command</span><span class="w"> </span>and<span class="w"> </span><span class="nb">wait</span><span class="w"> </span><span class="k">until</span><span class="w"> </span>the<span class="w"> </span>pod<span class="w"> </span>becomes<span class="w"> </span><span class="s2">&quot;Running&quot;</span><span class="w"> </span>or<span class="w"> </span><span class="s2">&quot;Completed&quot;</span>:
+<span class="m">1</span>.<span class="w"> </span>Execute<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="nb">command</span><span class="w"> </span>and<span class="w"> </span><span class="nb">wait</span><span class="w"> </span><span class="k">until</span><span class="w"> </span>the<span class="w"> </span>pod<span class="w"> </span>becomes<span class="w"> </span><span class="s2">"Running"</span><span class="w"> </span>or<span class="w"> </span><span class="s2">"Completed"</span>:
 
-<span class="w">  </span><span class="c1"># NOTE: You can also append &quot;-w&quot; to the command or wait until the state changes with &quot;watch command&quot;</span>
+<span class="w">  </span><span class="c1"># NOTE: You can also append "-w" to the command or wait until the state changes with "watch command"</span>
 
 <span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--namespace<span class="w"> </span>exastro
 
 <span class="m">2</span>.<span class="w"> </span>Get<span class="w"> </span>the<span class="w"> </span>ENCRYPT_KEY<span class="w"> </span>by<span class="w"> </span>running<span class="w"> </span>these<span class="w"> </span>commands:
 
 <span class="w">  </span><span class="c1"># Exastro IT Automation ENCRYPT_KEY</span>
-<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>ita-secret-ita-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ENCRYPT_KEY}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>ita-secret-ita-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.ENCRYPT_KEY}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 
 <span class="w">  </span><span class="c1"># Exastro Platform ENCRYPT_KEY</span>
-<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>platform-secret-pf-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ENCRYPT_KEY}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>platform-secret-pf-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.ENCRYPT_KEY}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 
 <span class="w">  </span>!!!<span class="w"> </span>Please<span class="w"> </span>save<span class="w"> </span>the<span class="w"> </span>output<span class="w"> </span>ENCRYPT_KEY<span class="w"> </span>carefully.<span class="w"> </span>!!!
 
 <span class="m">3</span>.<span class="w"> </span>Run<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="nb">command</span><span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>the<span class="w"> </span>application<span class="w"> </span>URL<span class="w"> </span>and<span class="w"> </span>go<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>URL<span class="w"> </span>or<span class="w"> </span>go<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>displayed<span class="w"> </span>URL:
 <span class="w">  </span><span class="c1"># NOTE: It may take a few minutes for the LoadBalancer IP to be available.</span>
-<span class="w">  </span><span class="c1">#       You can watch the status of by running &#39;kubectl get --namespace exastro svc -w platform-auth&#39;</span>
+<span class="w">  </span><span class="c1">#       You can watch the status of by running 'kubectl get --namespace exastro svc -w platform-auth'</span>
 
-<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">NODE_SVC_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.spec.ports[0].nodePort}&quot;</span><span class="k">)</span>
-<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">NODE_MGT_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.spec.ports[1].nodePort}&quot;</span><span class="k">)</span>
-<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">NODE_IP</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.status.loadBalancer.ingress[0].ip}&quot;</span><span class="k">)</span>
+<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">NODE_SVC_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">"{.spec.ports[0].nodePort}"</span><span class="k">)</span>
+<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">NODE_MGT_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">"{.spec.ports[1].nodePort}"</span><span class="k">)</span>
+<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">NODE_IP</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">"{.status.loadBalancer.ingress[0].ip}"</span><span class="k">)</span>
 <span class="w">  </span><span class="c1"># *************************</span>
 <span class="w">  </span><span class="c1"># * Administrator Console *</span>
 <span class="w">  </span><span class="c1"># *************************</span>
@@ -2985,7 +2986,7 @@ platform-web-88db7c489-wkmn9<span class="w">                              </span
 <div class="literal-block-wrapper docutils container" id="id70">
 <div class="code-block-caption"><span class="caption-number">リスト 2.36 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id70" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exastro IT Automation ENCRYPT_KEY</span>
-kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>ita-secret-ita-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ENCRYPT_KEY}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>ita-secret-ita-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.ENCRYPT_KEY}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 </pre></div>
 </div>
 </div>
@@ -2998,7 +2999,7 @@ kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w">
 <div class="literal-block-wrapper docutils container" id="id72">
 <div class="code-block-caption"><span class="caption-number">リスト 2.38 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id72" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exastro Platform ENCRYPT_KEY</span>
-kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>platform-secret-pf-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ENCRYPT_KEY}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>platform-secret-pf-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.ENCRYPT_KEY}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 </pre></div>
 </div>
 </div>
@@ -3016,9 +3017,9 @@ kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w">
 <div class="literal-block-wrapper docutils container" id="id74">
 <div class="code-block-caption"><span class="caption-number">リスト 2.40 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id74" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># helm install コマンドの実行結果を貼り付けて実行</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">NODE_SVC_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.spec.ports[0].nodePort}&quot;</span><span class="k">)</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">NODE_MGT_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.spec.ports[1].nodePort}&quot;</span><span class="k">)</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">NODE_IP</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.status.loadBalancer.ingress[0].ip}&quot;</span><span class="k">)</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">NODE_SVC_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">"{.spec.ports[0].nodePort}"</span><span class="k">)</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">NODE_MGT_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">"{.spec.ports[1].nodePort}"</span><span class="k">)</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">NODE_IP</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">"{.status.loadBalancer.ingress[0].ip}"</span><span class="k">)</span>
 <span class="c1"># *************************</span>
 <span class="c1"># * Administrator Console *</span>
 <span class="c1"># *************************</span>
@@ -3084,28 +3085,28 @@ TEST<span class="w"> </span>SUITE:<span class="w"> </span>None
 NOTES:
 Exastro<span class="w"> </span>install<span class="w"> </span>completion!
 
-<span class="m">1</span>.<span class="w"> </span>Execute<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="nb">command</span><span class="w"> </span>and<span class="w"> </span><span class="nb">wait</span><span class="w"> </span><span class="k">until</span><span class="w"> </span>the<span class="w"> </span>pod<span class="w"> </span>becomes<span class="w"> </span><span class="s2">&quot;Running&quot;</span><span class="w"> </span>or<span class="w"> </span><span class="s2">&quot;Completed&quot;</span>:
+<span class="m">1</span>.<span class="w"> </span>Execute<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="nb">command</span><span class="w"> </span>and<span class="w"> </span><span class="nb">wait</span><span class="w"> </span><span class="k">until</span><span class="w"> </span>the<span class="w"> </span>pod<span class="w"> </span>becomes<span class="w"> </span><span class="s2">"Running"</span><span class="w"> </span>or<span class="w"> </span><span class="s2">"Completed"</span>:
 
-<span class="w">  </span><span class="c1"># NOTE: You can also append &quot;-w&quot; to the command or wait until the state changes with &quot;watch command&quot;</span>
+<span class="w">  </span><span class="c1"># NOTE: You can also append "-w" to the command or wait until the state changes with "watch command"</span>
 
 <span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--namespace<span class="w"> </span>exastro
 
 <span class="m">2</span>.<span class="w"> </span>Get<span class="w"> </span>the<span class="w"> </span>ENCRYPT_KEY<span class="w"> </span>by<span class="w"> </span>running<span class="w"> </span>these<span class="w"> </span>commands:
 
 <span class="w">  </span><span class="c1"># Exastro IT Automation ENCRYPT_KEY</span>
-<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>ita-secret-ita-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ENCRYPT_KEY}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>ita-secret-ita-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.ENCRYPT_KEY}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 
 <span class="w">  </span><span class="c1"># Exastro Platform ENCRYPT_KEY</span>
-<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>platform-secret-pf-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ENCRYPT_KEY}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+<span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>platform-secret-pf-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.ENCRYPT_KEY}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 
 <span class="w">  </span>!!!<span class="w"> </span>Please<span class="w"> </span>save<span class="w"> </span>the<span class="w"> </span>output<span class="w"> </span>ENCRYPT_KEY<span class="w"> </span>carefully.<span class="w"> </span>!!!
 
 <span class="m">3</span>.<span class="w"> </span>Run<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="nb">command</span><span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>the<span class="w"> </span>application<span class="w"> </span>URL<span class="w"> </span>and<span class="w"> </span>go<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>URL<span class="w"> </span>or<span class="w"> </span>go<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>displayed<span class="w"> </span>URL:
 
 
-<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">NODE_SVC_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.spec.ports[0].nodePort}&quot;</span><span class="k">)</span>
-<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">NODE_MGT_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.spec.ports[1].nodePort}&quot;</span><span class="k">)</span>
-<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">NODE_IP</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.items[0].status.addresses[0].address}&quot;</span><span class="k">)</span>
+<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">NODE_SVC_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">"{.spec.ports[0].nodePort}"</span><span class="k">)</span>
+<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">NODE_MGT_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">"{.spec.ports[1].nodePort}"</span><span class="k">)</span>
+<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">NODE_IP</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">"{.items[0].status.addresses[0].address}"</span><span class="k">)</span>
 <span class="w">  </span><span class="c1"># *************************</span>
 <span class="w">  </span><span class="c1"># * Administrator Console *</span>
 <span class="w">  </span><span class="c1"># *************************</span>
@@ -3189,7 +3190,7 @@ platform-web-88db7c489-wkmn9<span class="w">                              </span
 <div class="literal-block-wrapper docutils container" id="id81">
 <div class="code-block-caption"><span class="caption-number">リスト 2.46 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id81" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exastro IT Automation ENCRYPT_KEY</span>
-kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>ita-secret-ita-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ENCRYPT_KEY}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>ita-secret-ita-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.ENCRYPT_KEY}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 </pre></div>
 </div>
 </div>
@@ -3202,7 +3203,7 @@ kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w">
 <div class="literal-block-wrapper docutils container" id="id83">
 <div class="code-block-caption"><span class="caption-number">リスト 2.48 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id83" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exastro Platform ENCRYPT_KEY</span>
-kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>platform-secret-pf-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ENCRYPT_KEY}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>platform-secret-pf-global<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.ENCRYPT_KEY}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 </pre></div>
 </div>
 </div>
@@ -3219,9 +3220,9 @@ kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w">
 </div>
 <div class="literal-block-wrapper docutils container" id="id85">
 <div class="code-block-caption"><span class="caption-number">リスト 2.50 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id85" title="Link to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">NODE_SVC_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.spec.ports[0].nodePort}&quot;</span><span class="k">)</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">NODE_MGT_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.spec.ports[1].nodePort}&quot;</span><span class="k">)</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">NODE_IP</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.items[0].status.addresses[0].address}&quot;</span><span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">NODE_SVC_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">"{.spec.ports[0].nodePort}"</span><span class="k">)</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">NODE_MGT_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>services<span class="w"> </span>platform-auth<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">"{.spec.ports[1].nodePort}"</span><span class="k">)</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">NODE_IP</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">"{.items[0].status.addresses[0].address}"</span><span class="k">)</span>
 <span class="c1"># *************************</span>
 <span class="c1"># * Administrator Console *</span>
 <span class="c1"># *************************</span>
@@ -3320,7 +3321,7 @@ http://172.16.20.xxx:30080
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.1/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->

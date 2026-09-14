@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
     <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=3f76e5e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
     <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
     
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -72,8 +72,9 @@
         <dd>
           <div>
             <select name="version" style="height: 20px;" onchange="location.href=value;">
-              <option value="../../../../ja/2.8/manuals/api/api_record_operation.html">current</option>
-              <option value="../../../../ja/2.8/manuals/api/api_record_operation.html">2.8(current)</option>
+              <option value="../../../../ja/2.9/manuals/api/api_record_operation.html">current</option>
+              <option value="../../../../ja/2.9/manuals/api/api_record_operation.html">2.9(current)</option>
+              <option value="../../../../ja/2.8/manuals/api/api_record_operation.html">2.8</option>
               <option value="../../../../ja/2.7/manuals/api/api_record_operation.html">2.7</option>
               <option value="../../../../ja/2.6/manuals/api/api_record_operation.html">2.6</option>
               <option value="../../../../ja/2.5/manuals/api/api_record_operation.html">2.5</option>
@@ -278,10 +279,10 @@
 「<a class="reference internal" href="../it_automation_base/general.html#first-login"><span class="std std-ref">初回ログイン</span></a>」参照して、必要な対応を実施してください。</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
-<span class="w">    </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span>null,
-<span class="w">    </span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;認証に失敗しました。&quot;</span>,
-<span class="w">    </span><span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;401-00002&quot;</span>,
-<span class="w">    </span><span class="s2">&quot;ts&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-10-13T08:19:22.913Z&quot;</span>
+<span class="w">    </span><span class="s2">"data"</span>:<span class="w"> </span>null,
+<span class="w">    </span><span class="s2">"message"</span>:<span class="w"> </span><span class="s2">"認証に失敗しました。"</span>,
+<span class="w">    </span><span class="s2">"result"</span>:<span class="w"> </span><span class="s2">"401-00002"</span>,
+<span class="w">    </span><span class="s2">"ts"</span>:<span class="w"> </span><span class="s2">"2023-10-13T08:19:22.913Z"</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -328,19 +329,19 @@
 <div class="literal-block-wrapper docutils container" id="id15">
 <div class="code-block-caption"><span class="caption-number">リスト 2.53 </span><span class="caption-text">JSONデータを使用する場合</span><a class="headerlink" href="#id15" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<span class="s2">&quot;http://servername/api/organization_1/workspaces/workspace_1/ita/menu/playbook_files/maintenance/all/&quot;</span><span class="w"> </span><span class="se">\</span>
--H<span class="w"> </span><span class="s2">&quot;Authorization: Basic dXNlcl9pZDpwYXNzd29yZA==&quot;</span><span class="w"> </span><span class="se">\</span>
--H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
---data-raw<span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="se">\&quot;</span>file<span class="se">\&quot;</span>:<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="se">\&quot;</span>playbook_file<span class="se">\&quot;</span>:<span class="w"> </span><span class="se">\&quot;</span><span class="nv">LSBuYW1lOiBydW4gImVjaG8iCiAgY29tbWFuZDogZWNobyB7eyBWQVJfU1RSXzEgfX0</span><span class="o">=</span><span class="se">\&quot;</span><span class="w"> </span><span class="o">}</span>,<span class="w"> </span><span class="se">\&quot;</span>parameter<span class="se">\&quot;</span>:<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="se">\&quot;</span>discard<span class="se">\&quot;</span>:<span class="w"> </span><span class="se">\&quot;</span><span class="m">0</span><span class="se">\&quot;</span>,<span class="w"> </span><span class="se">\&quot;</span>item_no<span class="se">\&quot;</span>:<span class="w"> </span>null,<span class="w"> </span><span class="se">\&quot;</span>playbook_name<span class="se">\&quot;</span>:<span class="w"> </span><span class="se">\&quot;</span>echo<span class="se">\&quot;</span>,<span class="w"> </span><span class="se">\&quot;</span>playbook_file<span class="se">\&quot;</span>:<span class="w"> </span><span class="se">\&quot;</span>echo.yml<span class="se">\&quot;</span>,<span class="w"> </span><span class="se">\&quot;</span>remarks<span class="se">\&quot;</span>:<span class="w"> </span>null,<span class="w"> </span><span class="se">\&quot;</span>last_update_date_time<span class="se">\&quot;</span>:<span class="w"> </span>null,<span class="w"> </span><span class="se">\&quot;</span>last_updated_user<span class="se">\&quot;</span>:<span class="w"> </span>null<span class="w"> </span><span class="o">}</span>,<span class="w"> </span><span class="se">\&quot;</span>type<span class="se">\&quot;</span>:<span class="w"> </span><span class="se">\&quot;</span>Register<span class="se">\&quot;</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">]</span>
+<span class="s2">"http://servername/api/organization_1/workspaces/workspace_1/ita/menu/playbook_files/maintenance/all/"</span><span class="w"> </span><span class="se">\</span>
+-H<span class="w"> </span><span class="s2">"Authorization: Basic dXNlcl9pZDpwYXNzd29yZA=="</span><span class="w"> </span><span class="se">\</span>
+-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+--data-raw<span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="se">\"</span>file<span class="se">\"</span>:<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="se">\"</span>playbook_file<span class="se">\"</span>:<span class="w"> </span><span class="se">\"</span><span class="nv">LSBuYW1lOiBydW4gImVjaG8iCiAgY29tbWFuZDogZWNobyB7eyBWQVJfU1RSXzEgfX0</span><span class="o">=</span><span class="se">\"</span><span class="w"> </span><span class="o">}</span>,<span class="w"> </span><span class="se">\"</span>parameter<span class="se">\"</span>:<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="se">\"</span>discard<span class="se">\"</span>:<span class="w"> </span><span class="se">\"</span><span class="m">0</span><span class="se">\"</span>,<span class="w"> </span><span class="se">\"</span>item_no<span class="se">\"</span>:<span class="w"> </span>null,<span class="w"> </span><span class="se">\"</span>playbook_name<span class="se">\"</span>:<span class="w"> </span><span class="se">\"</span>echo<span class="se">\"</span>,<span class="w"> </span><span class="se">\"</span>playbook_file<span class="se">\"</span>:<span class="w"> </span><span class="se">\"</span>echo.yml<span class="se">\"</span>,<span class="w"> </span><span class="se">\"</span>remarks<span class="se">\"</span>:<span class="w"> </span>null,<span class="w"> </span><span class="se">\"</span>last_update_date_time<span class="se">\"</span>:<span class="w"> </span>null,<span class="w"> </span><span class="se">\"</span>last_updated_user<span class="se">\"</span>:<span class="w"> </span>null<span class="w"> </span><span class="o">}</span>,<span class="w"> </span><span class="se">\"</span>type<span class="se">\"</span>:<span class="w"> </span><span class="se">\"</span>Register<span class="se">\"</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">]</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id16">
 <div class="code-block-caption"><span class="caption-number">リスト 2.54 </span><span class="caption-text">JSONファイルを使用する場合</span><a class="headerlink" href="#id16" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<span class="s2">&quot;http://servername/api/organization_1/workspaces/workspace_1/ita/menu/playbook_files/maintenance/all/&quot;</span><span class="w"> </span><span class="se">\</span>
--H<span class="w"> </span><span class="s2">&quot;Authorization: Basic dXNlcl9pZDpwYXNzd29yZA==&quot;</span><span class="w"> </span><span class="se">\</span>
--H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="s2">"http://servername/api/organization_1/workspaces/workspace_1/ita/menu/playbook_files/maintenance/all/"</span><span class="w"> </span><span class="se">\</span>
+-H<span class="w"> </span><span class="s2">"Authorization: Basic dXNlcl9pZDpwYXNzd29yZA=="</span><span class="w"> </span><span class="se">\</span>
+-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
 -d<span class="w"> </span>@playbook_files_sample.json
 </pre></div>
 </div>
@@ -349,19 +350,19 @@
 <div class="code-block-caption"><span class="caption-number">リスト 2.55 </span><span class="caption-text">playbook_files_sampleの内容</span><a class="headerlink" href="#id17" title="Link to this code">¶</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;playbook_file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LSBuYW1lOiBydW4gImVjaG8iCiAgY29tbWFuZDogZWNobyB7eyBWQVJfU1RSXzEgfX0=&quot;</span>
+<span class="w">        </span><span class="nt">"file"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"playbook_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LSBuYW1lOiBydW4gImVjaG8iCiAgY29tbWFuZDogZWNobyB7eyBWQVJfU1RSXzEgfX0="</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;discard&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;item_no&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;playbook_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;echo&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;playbook_file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;echo.yml&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;remarks&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;last_update_date_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;last_updated_user&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">        </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"discard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"item_no"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"playbook_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"echo"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"playbook_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"echo.yml"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"remarks"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"last_update_date_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"last_updated_user"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Register&quot;</span>
+<span class="w">        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Register"</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">]</span>
 </pre></div>
@@ -370,10 +371,10 @@
 <div class="literal-block-wrapper docutils container" id="id18">
 <div class="code-block-caption"><span class="caption-number">リスト 2.56 </span><span class="caption-text">シングルクォーテーションを使用しない場合</span><a class="headerlink" href="#id18" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<span class="s2">&quot;http://servername/api/organization_1/workspaces/workspace_1/ita/menu/playbook_files/maintenance/all/&quot;</span><span class="w"> </span><span class="se">\</span>
--H<span class="w"> </span><span class="s2">&quot;Authorization: Basic dXNlcl9pZDpwYXNzd29yZA==&quot;</span><span class="w"> </span><span class="se">\</span>
--F<span class="w"> </span><span class="s2">&quot;json_parameters=[{\&quot;parameter\&quot;:{\&quot;discard\&quot;:\&quot;0\&quot;,\&quot;item_no\&quot;:null,\&quot;playbook_name\&quot;:\&quot;echo\&quot;,\&quot;playbook_file\&quot;:\&quot;echo.yml\&quot;,\&quot;remarks\&quot;:null,\&quot;last_update_date_time\&quot;:null,\&quot;last_updated_user\&quot;:null},\&quot;type\&quot;:\&quot;Register\&quot;}] &quot;</span><span class="w"> </span><span class="se">\</span>
--F<span class="w"> </span><span class="s2">&quot;0.playbook_file=@echo.yml&quot;</span>
+<span class="s2">"http://servername/api/organization_1/workspaces/workspace_1/ita/menu/playbook_files/maintenance/all/"</span><span class="w"> </span><span class="se">\</span>
+-H<span class="w"> </span><span class="s2">"Authorization: Basic dXNlcl9pZDpwYXNzd29yZA=="</span><span class="w"> </span><span class="se">\</span>
+-F<span class="w"> </span><span class="s2">"json_parameters=[{\"parameter\":{\"discard\":\"0\",\"item_no\":null,\"playbook_name\":\"echo\",\"playbook_file\":\"echo.yml\",\"remarks\":null,\"last_update_date_time\":null,\"last_updated_user\":null},\"type\":\"Register\"}] "</span><span class="w"> </span><span class="se">\</span>
+-F<span class="w"> </span><span class="s2">"0.playbook_file=@echo.yml"</span>
 </pre></div>
 </div>
 </div>
@@ -385,28 +386,28 @@
 </div>
 <div class="literal-block-wrapper docutils container" id="id19">
 <div class="code-block-caption"><span class="caption-number">リスト 2.57 </span><span class="caption-text">機器一覧のレコード取得APIを呼出</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://servername&quot;</span>
-<span class="w"> </span><span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
-<span class="w"> </span><span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">&quot;ワークスペースID&quot;</span>
-<span class="w"> </span><span class="nv">MENU</span><span class="o">=</span><span class="s2">&quot;device_list&quot;</span>
-<span class="w"> </span><span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
-<span class="w"> </span><span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
-<span class="w"> </span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;ユーザー名を設定してください:パスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://servername"</span>
+<span class="w"> </span><span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">"オーガナイゼーションID"</span>
+<span class="w"> </span><span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">"ワークスペースID"</span>
+<span class="w"> </span><span class="nv">MENU</span><span class="o">=</span><span class="s2">"device_list"</span>
+<span class="w"> </span><span class="nv">USERNAME</span><span class="o">=</span><span class="s2">"ユーザー名"</span>
+<span class="w"> </span><span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">"パスワード"</span>
+<span class="w"> </span><span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"ユーザー名を設定してください:パスワードを設定してください"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 
 <span class="w"> </span><span class="c1"># 機器一覧の全レコードを取得する</span>
-<span class="w"> </span>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/filter/&quot;</span>
+<span class="w"> </span>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span>-u<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/filter/"</span>
 
 <span class="w"> </span><span class="c1"># 機器一覧の全レコードを取得する</span>
 <span class="w"> </span>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
-<span class="w">   </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/filter/&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">   </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/filter/"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-H<span class="w"> </span><span class="s2">"Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
 
 <span class="w"> </span><span class="c1"># 機器一覧の条件指定した、レコードを取得する（条件：廃止済みを除く）</span>
 <span class="w"> </span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<span class="w">   </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/filter/&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">   </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">   </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">   </span>--data-raw<span class="w"> </span><span class="s2">&quot;{\&quot;discard\&quot;:{\&quot;LIST\&quot;:[\&quot;0\&quot;]}}&quot;</span>
+<span class="w">   </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/filter/"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-H<span class="w"> </span><span class="s2">"Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--data-raw<span class="w"> </span><span class="s2">"{\"discard\":{\"LIST\":[\"0\"]}}"</span>
 </pre></div>
 </div>
 </div>
@@ -460,19 +461,19 @@
 <div class="literal-block-wrapper docutils container" id="id21">
 <div class="code-block-caption"><span class="caption-number">リスト 2.58 </span><span class="caption-text">一覧取得時の条件のパラメータ構成について</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="p">{</span>
-<span class="w">     </span><span class="nt">&quot;対象のキー&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;NORMAL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;検索条件を指定&quot;</span>
+<span class="w">     </span><span class="nt">"対象のキー"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">"NORMAL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"検索条件を指定"</span>
 <span class="w">     </span><span class="p">},</span>
-<span class="w">     </span><span class="nt">&quot;対象のキー&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;LIST&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">             </span><span class="s2">&quot;検索条件を指定&quot;</span><span class="p">,</span>
-<span class="w">             </span><span class="s2">&quot;検索条件を指定&quot;</span>
+<span class="w">     </span><span class="nt">"対象のキー"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">"LIST"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">             </span><span class="s2">"検索条件を指定"</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">"検索条件を指定"</span>
 <span class="w">         </span><span class="p">]</span>
 <span class="w">     </span><span class="p">},</span>
-<span class="w">     </span><span class="nt">&quot;対象のキー&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;RANGE&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">             </span><span class="nt">&quot;START&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;検索条件を指定&quot;</span><span class="p">,</span>
-<span class="w">             </span><span class="nt">&quot;END&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;検索条件を指定&quot;</span>
+<span class="w">     </span><span class="nt">"対象のキー"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">"RANGE"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="nt">"START"</span><span class="p">:</span><span class="w"> </span><span class="s2">"検索条件を指定"</span><span class="p">,</span>
+<span class="w">             </span><span class="nt">"END"</span><span class="p">:</span><span class="w"> </span><span class="s2">"検索条件を指定"</span>
 <span class="w">         </span><span class="p">}</span>
 <span class="w">     </span><span class="p">}</span>
 <span class="w"> </span><span class="p">}</span>
@@ -490,18 +491,18 @@
 <div class="literal-block-wrapper docutils container" id="id22">
 <div class="code-block-caption"><span class="caption-number">リスト 2.59 </span><span class="caption-text">機器一覧の条件指定した検索例</span><a class="headerlink" href="#id22" title="Link to this code">¶</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="p">{</span>
-<span class="w">     </span><span class="nt">&quot;host_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;NORMAL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;host&quot;</span>
+<span class="w">     </span><span class="nt">"host_name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">"NORMAL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"host"</span>
 <span class="w">     </span><span class="p">},</span>
-<span class="w">     </span><span class="nt">&quot;discard&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;LIST&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">             </span><span class="s2">&quot;0&quot;</span>
+<span class="w">     </span><span class="nt">"discard"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">"LIST"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">             </span><span class="s2">"0"</span>
 <span class="w">         </span><span class="p">]</span>
 <span class="w">     </span><span class="p">},</span>
-<span class="w">     </span><span class="nt">&quot;last_update_date_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;RANGE&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">             </span><span class="nt">&quot;START&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023/01/01 00:00:00&quot;</span><span class="p">,</span>
-<span class="w">             </span><span class="nt">&quot;END&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023/12/31 00:00:00&quot;</span>
+<span class="w">     </span><span class="nt">"last_update_date_time"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">"RANGE"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="nt">"START"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023/01/01 00:00:00"</span><span class="p">,</span>
+<span class="w">             </span><span class="nt">"END"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023/12/31 00:00:00"</span>
 <span class="w">         </span><span class="p">}</span>
 <span class="w">     </span><span class="p">}</span>
 <span class="w"> </span><span class="p">}</span>
@@ -600,13 +601,13 @@
 <div class="code-block-caption"><span class="caption-number">リスト 2.60 </span><span class="caption-text">パラメータの構成について(application/json)</span><a class="headerlink" href="#id23" title="Link to this code">¶</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="p">[</span>
 <span class="w">     </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">             </span><span class="nt">&quot;対象のキー&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ファイルデータをbase64エンコードした文字列&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">"file"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="nt">"対象のキー"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ファイルデータをbase64エンコードした文字列"</span><span class="p">,</span>
 <span class="w">         </span><span class="p">},</span>
-<span class="w">         </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">             </span><span class="nt">&quot;対象のキー&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;値&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="nt">"対象のキー"</span><span class="p">:</span><span class="w"> </span><span class="s2">"値"</span><span class="p">,</span>
 <span class="w">         </span><span class="p">},</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;Register&quot;</span>
+<span class="w">         </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"Register"</span>
 <span class="w">     </span><span class="p">}</span>
 <span class="w"> </span><span class="p">]</span>
 </pre></div>
@@ -617,15 +618,15 @@
 </ul>
 <div class="literal-block-wrapper docutils container" id="id24">
 <div class="code-block-caption"><span class="caption-number">リスト 2.61 </span><span class="caption-text">パラメータの構成について(multipart/form-data)</span><a class="headerlink" href="#id24" title="Link to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="nv">json_parameters</span><span class="o">=</span><span class="s1">&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="nv">json_parameters</span><span class="o">=</span><span class="s1">'</span>
 <span class="s1">     [</span>
 <span class="s1">         {</span>
-<span class="s1">             &quot;parameter&quot;: {</span>
-<span class="s1">                 &quot;対象のキー&quot;: &quot;値&quot;,</span>
+<span class="s1">             "parameter": {</span>
+<span class="s1">                 "対象のキー": "値",</span>
 <span class="s1">             },</span>
-<span class="s1">             &quot;type&quot;:&quot;Register&quot;</span>
+<span class="s1">             "type":"Register"</span>
 <span class="s1">         }</span>
-<span class="s1">     ]&#39;</span>
+<span class="s1">     ]'</span>
 <span class="w"> </span>X.&lt;対象のキー&gt;<span class="o">=</span>@echo.yml
 
 <span class="w"> </span><span class="c1"># Xについては、json_parametersのインデックスに対応する数値を指定してください。</span>
@@ -642,19 +643,19 @@
 <div class="code-block-caption"><span class="caption-number">リスト 2.62 </span><span class="caption-text">Content-Type: application/jsonの場合の curlの --data-raw のパラメータ</span><a class="headerlink" href="#id25" title="Link to this code">¶</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="p">[</span>
 <span class="w">     </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">             </span><span class="nt">&quot;playbook_file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LSBuYW1lOiBydW4gImVjaG8iCiAgY29tbWFuZDogZWNobyB7eyBWQVJfU1RSXzEgfX0=&quot;</span>
+<span class="w">         </span><span class="nt">"file"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="nt">"playbook_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LSBuYW1lOiBydW4gImVjaG8iCiAgY29tbWFuZDogZWNobyB7eyBWQVJfU1RSXzEgfX0="</span>
 <span class="w">         </span><span class="p">},</span>
-<span class="w">         </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">             </span><span class="nt">&quot;discard&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
-<span class="w">             </span><span class="nt">&quot;item_no&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">             </span><span class="nt">&quot;playbook_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;echo&quot;</span><span class="p">,</span>
-<span class="w">             </span><span class="nt">&quot;playbook_file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;echo.yml&quot;</span><span class="p">,</span>
-<span class="w">             </span><span class="nt">&quot;remarks&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">             </span><span class="nt">&quot;last_update_date_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">             </span><span class="nt">&quot;last_updated_user&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">         </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="nt">"discard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+<span class="w">             </span><span class="nt">"item_no"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">             </span><span class="nt">"playbook_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"echo"</span><span class="p">,</span>
+<span class="w">             </span><span class="nt">"playbook_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"echo.yml"</span><span class="p">,</span>
+<span class="w">             </span><span class="nt">"remarks"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">             </span><span class="nt">"last_update_date_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">             </span><span class="nt">"last_updated_user"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
 <span class="w">         </span><span class="p">},</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Register&quot;</span>
+<span class="w">         </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Register"</span>
 <span class="w">     </span><span class="p">}</span>
 <span class="w"> </span><span class="p">]</span>
 </pre></div>
@@ -662,20 +663,20 @@
 </div>
 <div class="literal-block-wrapper docutils container" id="id26">
 <div class="code-block-caption"><span class="caption-number">リスト 2.63 </span><span class="caption-text">Content-Type: multipart/form-dataの場合の curlの -F のパラメータ</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">json_parameters</span><span class="o">=</span><span class="s1">&#39;[</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">json_parameters</span><span class="o">=</span><span class="s1">'[</span>
 <span class="s1">    {</span>
-<span class="s1">        &quot;parameter&quot;: {</span>
-<span class="s1">            &quot;discard&quot;: &quot;0&quot;,</span>
-<span class="s1">            &quot;item_no&quot;: null,</span>
-<span class="s1">            &quot;playbook_name&quot;: &quot;echo&quot;,</span>
-<span class="s1">            &quot;playbook_file&quot;: &quot;echo.yml&quot;,</span>
-<span class="s1">            &quot;remarks&quot;: null,</span>
-<span class="s1">            &quot;last_update_date_time&quot;: null,</span>
-<span class="s1">            &quot;last_updated_user&quot;: null</span>
+<span class="s1">        "parameter": {</span>
+<span class="s1">            "discard": "0",</span>
+<span class="s1">            "item_no": null,</span>
+<span class="s1">            "playbook_name": "echo",</span>
+<span class="s1">            "playbook_file": "echo.yml",</span>
+<span class="s1">            "remarks": null,</span>
+<span class="s1">            "last_update_date_time": null,</span>
+<span class="s1">            "last_updated_user": null</span>
 <span class="s1">        },</span>
-<span class="s1">        &quot;type&quot;: &quot;Register&quot;</span>
+<span class="s1">        "type": "Register"</span>
 <span class="s1">    }</span>
-<span class="s1">]&#39;</span>
+<span class="s1">]'</span>
 <span class="c1"># ファイルデータ</span>
 <span class="m">0</span>.playbook_file<span class="o">=</span>@echo.yml
 
@@ -690,19 +691,19 @@
 <div class="code-block-caption"><span class="caption-number">リスト 2.64 </span><span class="caption-text">Content-Type: application/jsonの場合の curlの --data-raw のパラメータ</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;playbook_file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LSBuYW1lOiBydW4gImVjaG8iDQogIGNvbW1hbmQ6IGVjaG8ge3sgVkFSX1NUUl8xIH19DQoNCi0gbmFtZTogcGF1c2UNCiAgcGF1c2U6DQogICAgc2Vjb25kczogMTAw&quot;</span>
+<span class="w">        </span><span class="nt">"file"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"playbook_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LSBuYW1lOiBydW4gImVjaG8iDQogIGNvbW1hbmQ6IGVjaG8ge3sgVkFSX1NUUl8xIH19DQoNCi0gbmFtZTogcGF1c2UNCiAgcGF1c2U6DQogICAgc2Vjb25kczogMTAw"</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;discard&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;item_no&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;playbook_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;echo_pause100&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;playbook_file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;echo_pause100.yml&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;remarks&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;last_update_date_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023/10/11 09:24:09.928044&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;last_updated_user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ユーザー名&quot;</span>
+<span class="w">        </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"discard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"item_no"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000000-0000-0000-0000-000000000000"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"playbook_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"echo_pause100"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"playbook_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"echo_pause100.yml"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"remarks"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"last_update_date_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023/10/11 09:24:09.928044"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"last_updated_user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ユーザー名"</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Update&quot;</span>
+<span class="w">        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Update"</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">]</span>
 </pre></div>
@@ -710,20 +711,20 @@
 </div>
 <div class="literal-block-wrapper docutils container" id="id28">
 <div class="code-block-caption"><span class="caption-number">リスト 2.65 </span><span class="caption-text">Content-Type: multipart/form-dataの場合の curlの -F のパラメータ</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">json_parameters</span><span class="o">=</span><span class="s1">&#39;[</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">json_parameters</span><span class="o">=</span><span class="s1">'[</span>
 <span class="s1">    {</span>
-<span class="s1">        &quot;parameter&quot;: {</span>
-<span class="s1">            &quot;discard&quot;: &quot;0&quot;,</span>
-<span class="s1">            &quot;item_no&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;,</span>
-<span class="s1">            &quot;playbook_name&quot;: &quot;echo_pause100&quot;,</span>
-<span class="s1">            &quot;playbook_file&quot;: &quot;echo_pause100.yml&quot;,</span>
-<span class="s1">            &quot;remarks&quot;: null,</span>
-<span class="s1">            &quot;last_update_date_time&quot;: &quot;2023/10/11 09:24:09.928044&quot;,</span>
-<span class="s1">            &quot;last_updated_user&quot;: &quot;ユーザー名&quot;</span>
+<span class="s1">        "parameter": {</span>
+<span class="s1">            "discard": "0",</span>
+<span class="s1">            "item_no": "00000000-0000-0000-0000-000000000000",</span>
+<span class="s1">            "playbook_name": "echo_pause100",</span>
+<span class="s1">            "playbook_file": "echo_pause100.yml",</span>
+<span class="s1">            "remarks": null,</span>
+<span class="s1">            "last_update_date_time": "2023/10/11 09:24:09.928044",</span>
+<span class="s1">            "last_updated_user": "ユーザー名"</span>
 <span class="s1">        },</span>
-<span class="s1">        &quot;type&quot;: &quot;Register&quot;</span>
+<span class="s1">        "type": "Register"</span>
 <span class="s1">    }</span>
-<span class="s1">]&#39;</span>
+<span class="s1">]'</span>
 <span class="c1"># ファイルデータ</span>
 <span class="m">0</span>.playbook_file<span class="o">=</span>@echo_pause100.yml
 
@@ -817,30 +818,30 @@
 <span id="api-execution-example-maintenance-device-list"></span><h3><span class="section-number">2.2.2. </span>Ansible共通 - 機器一覧<a class="headerlink" href="#ansible" title="Link to this heading">¶</a></h3>
 <div class="literal-block-wrapper docutils container" id="id29">
 <div class="code-block-caption"><span class="caption-number">リスト 2.66 </span><span class="caption-text">実行手順(サンプル)：機器一覧</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://servername&quot;</span>
-<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
-<span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">&quot;ワークスペースID&quot;</span>
-<span class="nv">MENU</span><span class="o">=</span><span class="s2">&quot;device_list&quot;</span>
-<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
-<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
-<span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;ユーザー名を設定してください:パスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://servername"</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">"オーガナイゼーションID"</span>
+<span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">"ワークスペースID"</span>
+<span class="nv">MENU</span><span class="o">=</span><span class="s2">"device_list"</span>
+<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">"ユーザー名"</span>
+<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">"パスワード"</span>
+<span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"ユーザー名を設定してください:パスワードを設定してください"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 
 <span class="c1"># Content-Type: application/json</span>
 curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/maintenance/all/&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--data-raw<span class="w"> </span><span class="s2">&quot;[{ \&quot;file\&quot;: {\&quot;ssh_private_key_file\&quot;: \&quot;\&quot;, \&quot;server_certificate\&quot;: \&quot;\&quot;}, \&quot;parameter\&quot;: { \&quot;authentication_method\&quot;: \&quot;パスワード認証\&quot;, \&quot;connection_options\&quot;: null, \&quot;connection_type\&quot;: \&quot;machine\&quot;, \&quot;discard\&quot;: \&quot;0\&quot;, \&quot;host_dns_name\&quot;: null, \&quot;host_name\&quot;: \&quot;exastro-test\&quot;, \&quot;hw_device_type\&quot;: null, \&quot;instance_group_name\&quot;: null, \&quot;inventory_file_additional_option\&quot;: null, \&quot;ip_address\&quot;: \&quot;127.0.0.1\&quot;, \&quot;lang\&quot;: \&quot;utf-8\&quot;, \&quot;login_password\&quot;: \&quot;password\&quot;, \&quot;login_user\&quot;: \&quot;root\&quot;, \&quot;os_type\&quot;: null, \&quot;passphrase\&quot;: null, \&quot;port_no\&quot;: null, \&quot;protocol\&quot;: \&quot;ssh\&quot;, \&quot;remarks\&quot;: null, \&quot;server_certificate\&quot;: null, \&quot;ssh_private_key_file\&quot;: null }} ]&quot;</span>
+<span class="w">  </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/maintenance/all/"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--data-raw<span class="w"> </span><span class="s2">"[{ \"file\": {\"ssh_private_key_file\": \"\", \"server_certificate\": \"\"}, \"parameter\": { \"authentication_method\": \"パスワード認証\", \"connection_options\": null, \"connection_type\": \"machine\", \"discard\": \"0\", \"host_dns_name\": null, \"host_name\": \"exastro-test\", \"hw_device_type\": null, \"instance_group_name\": null, \"inventory_file_additional_option\": null, \"ip_address\": \"127.0.0.1\", \"lang\": \"utf-8\", \"login_password\": \"password\", \"login_user\": \"root\", \"os_type\": null, \"passphrase\": null, \"port_no\": null, \"protocol\": \"ssh\", \"remarks\": null, \"server_certificate\": null, \"ssh_private_key_file\": null }} ]"</span>
 
 ※<span class="w"> </span>file配下のssh_private_key_file,<span class="w"> </span>server_certificateについて、ファイルをbase64エンコードしたものを指定してください。
 
 <span class="c1"># Content-Type: Multipart/form-data</span>
 curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/maintenance/all/&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-F<span class="w"> </span><span class="s1">&#39;json_parameters=&quot;[ { &quot;parameter&quot;: { &quot;discard&quot;: &quot;0&quot;, &quot;managed_system_item_number&quot;: null, &quot;hw_device_type&quot;: null, &quot;host_name&quot;: &quot;exastro-test&quot;, &quot;host_dns_name&quot;: null, &quot;ip_address&quot;: &quot;127.0.0.1&quot;, &quot;login_user&quot;: &quot;root&quot;, &quot;login_password&quot;: &quot;asdfghjkl&quot;, &quot;ssh_private_key_file&quot;: &quot;ssh_key_file.pem&quot;, &quot;authentication_method&quot;: &quot;パスワード認証&quot;,&quot;port_no&quot;: null, &quot;server_certificate&quot;: &quot;certificate_file.crt&quot;, &quot;protocol&quot;: &quot;ssh&quot;, &quot;os_type&quot;: null, &quot;lang&quot;: &quot;utf-8&quot;, &quot;connection_options&quot;: null, &quot;inventory_file_additional_option&quot;: null, &quot;instance_group_name&quot;: null,&quot;connection_type&quot;: &quot;machine&quot;, &quot;remarks&quot;: null,&quot;last_update_date_time&quot;: null, &quot;last_updated_user&quot;: null}, &quot;type&quot;: &quot;Register&quot; }]&quot;&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-F<span class="w"> </span><span class="s1">&#39;0.ssh_private_key_file=@/ssh_key_file.pem&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-F<span class="w"> </span><span class="s1">&#39;0.server_certificate=@/certificate_file.crt&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/maintenance/all/"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="s1">'json_parameters="[ { "parameter": { "discard": "0", "managed_system_item_number": null, "hw_device_type": null, "host_name": "exastro-test", "host_dns_name": null, "ip_address": "127.0.0.1", "login_user": "root", "login_password": "asdfghjkl", "ssh_private_key_file": "ssh_key_file.pem", "authentication_method": "パスワード認証","port_no": null, "server_certificate": "certificate_file.crt", "protocol": "ssh", "os_type": null, "lang": "utf-8", "connection_options": null, "inventory_file_additional_option": null, "instance_group_name": null,"connection_type": "machine", "remarks": null,"last_update_date_time": null, "last_updated_user": null}, "type": "Register" }]"'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="s1">'0.ssh_private_key_file=@/ssh_key_file.pem'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="s1">'0.server_certificate=@/certificate_file.crt'</span><span class="w"> </span><span class="se">\</span>
 </pre></div>
 </div>
 </div>
@@ -849,27 +850,27 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </spa
 <span id="api-execution-example-maintenance-playbook-files"></span><h3><span class="section-number">2.2.3. </span>Ansible-Legacy - Playbook素材集<a class="headerlink" href="#ansible-legacy-playbook" title="Link to this heading">¶</a></h3>
 <div class="literal-block-wrapper docutils container" id="id30">
 <div class="code-block-caption"><span class="caption-number">リスト 2.67 </span><span class="caption-text">実行手順(サンプル)：Playbook素材集</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://servername&quot;</span>
-<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
-<span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">&quot;ワークスペースID&quot;</span>
-<span class="nv">MENU</span><span class="o">=</span><span class="s2">&quot;playbook_files&quot;</span>
-<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
-<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
-<span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;ユーザー名を設定してください:パスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://servername"</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">"オーガナイゼーションID"</span>
+<span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">"ワークスペースID"</span>
+<span class="nv">MENU</span><span class="o">=</span><span class="s2">"playbook_files"</span>
+<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">"ユーザー名"</span>
+<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">"パスワード"</span>
+<span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"ユーザー名を設定してください:パスワードを設定してください"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 
 <span class="c1"># Content-Type: application/json</span>
 curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/maintenance/all/&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--data-raw<span class="w"> </span><span class="s2">&quot;[{\&quot;file\&quot;:{\&quot;playbook_file\&quot;:\&quot;LSBuYW1lOiBydW4gImVjaG8iCiAgY29tbWFuZDogZWNobyB7eyBWQVJfU1RSXzEgfX0=\&quot;},\&quot;parameter\&quot;:{\&quot;discard\&quot;:\&quot;0\&quot;,\&quot;item_no\&quot;:null,\&quot;playbook_name\&quot;:\&quot;echo\&quot;,\&quot;playbook_file\&quot;:\&quot;echo.yml\&quot;,\&quot;remarks\&quot;:null,\&quot;last_update_date_time\&quot;:null,\&quot;last_updated_user\&quot;:null},\&quot;type\&quot;:\&quot;Register\&quot;}]&quot;</span>
+<span class="w">  </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/maintenance/all/"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--data-raw<span class="w"> </span><span class="s2">"[{\"file\":{\"playbook_file\":\"LSBuYW1lOiBydW4gImVjaG8iCiAgY29tbWFuZDogZWNobyB7eyBWQVJfU1RSXzEgfX0=\"},\"parameter\":{\"discard\":\"0\",\"item_no\":null,\"playbook_name\":\"echo\",\"playbook_file\":\"echo.yml\",\"remarks\":null,\"last_update_date_time\":null,\"last_updated_user\":null},\"type\":\"Register\"}]"</span>
 
 <span class="c1"># Content-Type: Multipart/form-data</span>
 curl<span class="w"> </span>-X<span class="w"> </span>POST
-<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/maintenance/all/&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w"> </span>-F<span class="w"> </span><span class="s2">&quot;json_parameters=[{\&quot;parameter\&quot;:{\&quot;discard\&quot;:\&quot;0\&quot;,\&quot;item_no\&quot;:null,\&quot;playbook_name\&quot;:\&quot;echo\&quot;,\&quot;playbook_file\&quot;:\&quot;echo.yml\&quot;,\&quot;remarks\&quot;:null,\&quot;last_update_date_time\&quot;:null,\&quot;last_updated_user\&quot;:null},\&quot;type\&quot;:\&quot;Register\&quot;}] &quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w"> </span>-F<span class="w"> </span><span class="s2">&quot;0.playbook_file=@echo.yml&quot;</span>
+<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/maintenance/all/"</span><span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>-F<span class="w"> </span><span class="s2">"json_parameters=[{\"parameter\":{\"discard\":\"0\",\"item_no\":null,\"playbook_name\":\"echo\",\"playbook_file\":\"echo.yml\",\"remarks\":null,\"last_update_date_time\":null,\"last_updated_user\":null},\"type\":\"Register\"}] "</span><span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>-F<span class="w"> </span><span class="s2">"0.playbook_file=@echo.yml"</span>
 </pre></div>
 </div>
 </div>
@@ -897,47 +898,47 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST
 </div>
 <div class="literal-block-wrapper docutils container" id="id31">
 <div class="code-block-caption"><span class="caption-number">リスト 2.68 </span><span class="caption-text">メニューの構成情報取得API</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://servername&quot;</span>
-<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
-<span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">&quot;ワークスペースID&quot;</span>
-<span class="nv">MENU</span><span class="o">=</span><span class="s2">&quot;対象メニュー&quot;</span>
-<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
-<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
-<span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;ユーザー名を設定してください:パスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://servername"</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">"オーガナイゼーションID"</span>
+<span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">"ワークスペースID"</span>
+<span class="nv">MENU</span><span class="o">=</span><span class="s2">"対象メニュー"</span>
+<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">"ユーザー名"</span>
+<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">"パスワード"</span>
+<span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"ユーザー名を設定してください:パスワードを設定してください"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 
 curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/info/&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/info/"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id32">
 <div class="code-block-caption"><span class="caption-number">リスト 2.69 </span><span class="caption-text">メニューの構成情報について</span><a class="headerlink" href="#id32" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
-<span class="w">    </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span><span class="s2">&quot;column_group_info&quot;</span>:<span class="w"> </span><span class="o">{}</span>,
-<span class="w">        </span><span class="s2">&quot;column_info&quot;</span>:<span class="w"> </span><span class="o">{</span>
-<span class="w">            </span><span class="s2">&quot;cX&quot;</span>:<span class="w"> </span><span class="o">{</span>
-<span class="w">                </span><span class="s2">&quot;column_name&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,<span class="w">     </span><span class="c1"># 画面で表示される項目名</span>
-<span class="w">                </span><span class="s2">&quot;column_name_rest&quot;</span>:<span class="s2">&quot;&quot;</span>,<span class="w"> </span><span class="c1"># APIのパラメータで指定する項目名</span>
-<span class="w">                </span><span class="s2">&quot;auto_input&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,<span class="w">      </span><span class="c1"># 自動入力フラグ</span>
-<span class="w">                </span><span class="s2">&quot;input_item&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,<span class="w">      </span><span class="c1"># 入力対象フラグ</span>
-<span class="w">                </span><span class="s2">&quot;view_item&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w">        </span><span class="c1"># 出力対象フラグ</span>
-<span class="w">                </span><span class="s2">&quot;required_item&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,<span class="w">   </span><span class="c1"># 必須入力フラグ</span>
-<span class="w">                </span><span class="s2">&quot;unique_item&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,<span class="w">     </span><span class="c1"># 一意制約フラグ</span>
-<span class="w">                </span><span class="s2">&quot;...省略...&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,<span class="w">      </span><span class="c1">#</span>
+<span class="w">    </span><span class="s2">"data"</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">"column_group_info"</span>:<span class="w"> </span><span class="o">{}</span>,
+<span class="w">        </span><span class="s2">"column_info"</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">"cX"</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">                </span><span class="s2">"column_name"</span>:<span class="w"> </span><span class="s2">""</span>,<span class="w">     </span><span class="c1"># 画面で表示される項目名</span>
+<span class="w">                </span><span class="s2">"column_name_rest"</span>:<span class="s2">""</span>,<span class="w"> </span><span class="c1"># APIのパラメータで指定する項目名</span>
+<span class="w">                </span><span class="s2">"auto_input"</span>:<span class="w"> </span><span class="s2">""</span>,<span class="w">      </span><span class="c1"># 自動入力フラグ</span>
+<span class="w">                </span><span class="s2">"input_item"</span>:<span class="w"> </span><span class="s2">""</span>,<span class="w">      </span><span class="c1"># 入力対象フラグ</span>
+<span class="w">                </span><span class="s2">"view_item"</span>:<span class="w"> </span><span class="s2">""</span><span class="w">        </span><span class="c1"># 出力対象フラグ</span>
+<span class="w">                </span><span class="s2">"required_item"</span>:<span class="w"> </span><span class="s2">""</span>,<span class="w">   </span><span class="c1"># 必須入力フラグ</span>
+<span class="w">                </span><span class="s2">"unique_item"</span>:<span class="w"> </span><span class="s2">""</span>,<span class="w">     </span><span class="c1"># 一意制約フラグ</span>
+<span class="w">                </span><span class="s2">"...省略..."</span>:<span class="w"> </span><span class="s2">""</span>,<span class="w">      </span><span class="c1">#</span>
 <span class="w">            </span><span class="o">}</span>,
 <span class="w">        </span><span class="o">}</span>,
-<span class="w">        </span><span class="s2">&quot;custom_menu&quot;</span>:<span class="w"> </span><span class="o">{</span>
-<span class="w">            </span><span class="s2">&quot;...省略...&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
+<span class="w">        </span><span class="s2">"custom_menu"</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">"...省略..."</span>:<span class="w"> </span><span class="s2">""</span>,
 <span class="w">        </span><span class="o">}</span>,
-<span class="w">        </span><span class="s2">&quot;menu_info&quot;</span>:<span class="w"> </span><span class="o">{</span>
-<span class="w">            </span><span class="s2">&quot;...省略...&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
+<span class="w">        </span><span class="s2">"menu_info"</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">"...省略..."</span>:<span class="w"> </span><span class="s2">""</span>,
 <span class="w">        </span><span class="o">}</span>
 <span class="w">    </span><span class="o">}</span>,
-<span class="w">    </span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span>,
-<span class="w">    </span><span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;000-00000&quot;</span>,
-<span class="w">    </span><span class="s2">&quot;ts&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-10-11T05:41:27.678Z&quot;</span>
+<span class="w">    </span><span class="s2">"message"</span>:<span class="w"> </span><span class="s2">"SUCCESS"</span>,
+<span class="w">    </span><span class="s2">"result"</span>:<span class="w"> </span><span class="s2">"000-00000"</span>,
+<span class="w">    </span><span class="s2">"ts"</span>:<span class="w"> </span><span class="s2">"2023-10-11T05:41:27.678Z"</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -1047,17 +1048,17 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 </div>
 <div class="literal-block-wrapper docutils container" id="id34">
 <div class="code-block-caption"><span class="caption-number">リスト 2.70 </span><span class="caption-text">パラメータの項目取得API</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://servername&quot;</span>
-<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
-<span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">&quot;ワークスペースID&quot;</span>
-<span class="nv">MENU</span><span class="o">=</span><span class="s2">&quot;対象メニュー&quot;</span>
-<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
-<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
-<span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;ユーザー名を設定してください:パスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://servername"</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">"オーガナイゼーションID"</span>
+<span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">"ワークスペースID"</span>
+<span class="nv">MENU</span><span class="o">=</span><span class="s2">"対象メニュー"</span>
+<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">"ユーザー名"</span>
+<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">"パスワード"</span>
+<span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"ユーザー名を設定してください:パスワードを設定してください"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 
 curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/column/&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/column/"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
 </pre></div>
 </div>
 </div>
@@ -1070,18 +1071,18 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <div class="literal-block-wrapper docutils container" id="id35">
 <div class="code-block-caption"><span class="caption-number">リスト 2.71 </span><span class="caption-text">メニューのカラム情報について：Playbook素材集</span><a class="headerlink" href="#id35" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
-<span class="w">    </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span><span class="s2">&quot;discard&quot;</span>:<span class="w"> </span><span class="s2">&quot;廃止フラグ&quot;</span>,
-<span class="w">        </span><span class="s2">&quot;item_no&quot;</span>:<span class="w"> </span><span class="s2">&quot;項番&quot;</span>,
-<span class="w">        </span><span class="s2">&quot;last_update_date_time&quot;</span>:<span class="w"> </span><span class="s2">&quot;最終更新日時&quot;</span>,
-<span class="w">        </span><span class="s2">&quot;last_updated_user&quot;</span>:<span class="w"> </span><span class="s2">&quot;最終更新者&quot;</span>,
-<span class="w">        </span><span class="s2">&quot;playbook_file&quot;</span>:<span class="w"> </span><span class="s2">&quot;Playbook素材&quot;</span>,
-<span class="w">        </span><span class="s2">&quot;playbook_name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Playbook素材名&quot;</span>,
-<span class="w">        </span><span class="s2">&quot;remarks&quot;</span>:<span class="w"> </span><span class="s2">&quot;備考&quot;</span>
+<span class="w">    </span><span class="s2">"data"</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">"discard"</span>:<span class="w"> </span><span class="s2">"廃止フラグ"</span>,
+<span class="w">        </span><span class="s2">"item_no"</span>:<span class="w"> </span><span class="s2">"項番"</span>,
+<span class="w">        </span><span class="s2">"last_update_date_time"</span>:<span class="w"> </span><span class="s2">"最終更新日時"</span>,
+<span class="w">        </span><span class="s2">"last_updated_user"</span>:<span class="w"> </span><span class="s2">"最終更新者"</span>,
+<span class="w">        </span><span class="s2">"playbook_file"</span>:<span class="w"> </span><span class="s2">"Playbook素材"</span>,
+<span class="w">        </span><span class="s2">"playbook_name"</span>:<span class="w"> </span><span class="s2">"Playbook素材名"</span>,
+<span class="w">        </span><span class="s2">"remarks"</span>:<span class="w"> </span><span class="s2">"備考"</span>
 <span class="w">    </span><span class="o">}</span>,
-<span class="w">    </span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span>,
-<span class="w">    </span><span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;000-00000&quot;</span>,
-<span class="w">    </span><span class="s2">&quot;ts&quot;</span>:<span class="w"> </span><span class="s2">&quot;2023-10-11T06:48:10.697Z&quot;</span>
+<span class="w">    </span><span class="s2">"message"</span>:<span class="w"> </span><span class="s2">"SUCCESS"</span>,
+<span class="w">    </span><span class="s2">"result"</span>:<span class="w"> </span><span class="s2">"000-00000"</span>,
+<span class="w">    </span><span class="s2">"ts"</span>:<span class="w"> </span><span class="s2">"2023-10-11T06:48:10.697Z"</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -1100,17 +1101,17 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 </div>
 <div class="literal-block-wrapper docutils container" id="id36">
 <div class="code-block-caption"><span class="caption-number">リスト 2.72 </span><span class="caption-text">プルダウン項目情報取得API</span><a class="headerlink" href="#id36" title="Link to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">&quot;https://servername&quot;</span>
-<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">&quot;オーガナイゼーションID&quot;</span>
-<span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">&quot;ワークスペースID&quot;</span>
-<span class="nv">MENU</span><span class="o">=</span><span class="s2">&quot;対象メニュー&quot;</span>
-<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;ユーザー名&quot;</span>
-<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;パスワード&quot;</span>
-<span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;ユーザー名を設定してください:パスワードを設定してください&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BASEURL</span><span class="o">=</span><span class="s2">"https://servername"</span>
+<span class="nv">ORGANIZATION_ID</span><span class="o">=</span><span class="s2">"オーガナイゼーションID"</span>
+<span class="nv">WORKSPACE_ID</span><span class="o">=</span><span class="s2">"ワークスペースID"</span>
+<span class="nv">MENU</span><span class="o">=</span><span class="s2">"対象メニュー"</span>
+<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">"ユーザー名"</span>
+<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">"パスワード"</span>
+<span class="nv">BASE64_BASIC</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"ユーザー名を設定してください:パスワードを設定してください"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="k">)</span>
 
 curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/info/pulldown/&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/ita/menu/</span><span class="si">${</span><span class="nv">MENU</span><span class="si">}</span><span class="s2">/info/pulldown/"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Basic </span><span class="si">${</span><span class="nv">BASE64_BASIC</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
 </pre></div>
 </div>
 </div>
@@ -1123,39 +1124,39 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <div class="literal-block-wrapper docutils container" id="id37">
 <div class="code-block-caption"><span class="caption-number">リスト 2.73 </span><span class="caption-text">プルダウン項目の一覧について：機器一覧</span><a class="headerlink" href="#id37" title="Link to this code">¶</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;authentication_method&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;鍵認証(パスフレーズなし)&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;パスワード認証&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;4&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;鍵認証(パスフレーズあり)&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;5&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;パスワード認証(winrm)&quot;</span>
+<span class="w">    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"authentication_method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"鍵認証(パスフレーズなし)"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"パスワード認証"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"鍵認証(パスフレーズあり)"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"5"</span><span class="p">:</span><span class="w"> </span><span class="s2">"パスワード認証(winrm)"</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;connection_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;machine&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;4&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;network&quot;</span>
+<span class="w">        </span><span class="nt">"connection_type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"machine"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"network"</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;hw_device_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SV&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ST&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;3&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NW&quot;</span>
+<span class="w">        </span><span class="nt">"hw_device_type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SV"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ST"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"3"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NW"</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;instance_group_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"instance_group_name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shift_jis&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;3&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;euc&quot;</span>
+<span class="w">        </span><span class="nt">"lang"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"utf-8"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shift_jis"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"3"</span><span class="p">:</span><span class="w"> </span><span class="s2">"euc"</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;os_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"os_type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;protocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;telnet&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ssh&quot;</span>
+<span class="w">        </span><span class="nt">"protocol"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"telnet"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssh"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;000-00000&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;ts&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-10-13T09:07:04.036Z&quot;</span>
+<span class="w">    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESS"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000-00000"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"ts"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-10-13T09:07:04.036Z"</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1366,8 +1367,8 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <h3><span class="section-number">3.3.1. </span>既存オペレーションで登録済みパラメータを使用したConductorの作業実行<a class="headerlink" href="#conductor" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;conductor_class_name&quot;</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_conductor&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;operation_name&quot;</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_operation&quot;</span>
+<span class="w">  </span><span class="nt">"conductor_class_name"</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_conductor"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"operation_name"</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_operation"</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1377,9 +1378,9 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <h3><span class="section-number">3.3.2. </span>既存オペレーションで登録済みパラメータを使用したConductorの予約実行<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;conductor_class_name&quot;</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_conductor&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;operation_name&quot;</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_operation&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;schedule_date&quot;</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024/12/31 23:59&quot;</span>
+<span class="w">  </span><span class="nt">"conductor_class_name"</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_conductor"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"operation_name"</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_operation"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"schedule_date"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"2024/12/31 23:59"</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1392,22 +1393,22 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <img alt="../../_images/Apply_API_request_body_exp3.png" src="../../_images/Apply_API_request_body_exp3.png" />
 </figure>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;conductor_class_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_conductor&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;operation_name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_operation&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;schedule_date&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;parameter_info&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"conductor_class_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_conductor"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"operation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_operation"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"schedule_date"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"parameter_info"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;sample_menu_001&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="nt">"sample_menu_001"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Register&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;parameter&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;host_name&quot;</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_host1&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;operation_name_select&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024/01/01 00:00_sample_operation&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_1&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value.txt&quot;</span>
+<span class="w">                    </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Register"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"parameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"host_name"</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_host1"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"operation_name_select"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2024/01/01 00:00_sample_operation"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_1"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value.txt"</span>
 <span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;file&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c2FtcGxlIGZpbGU=&quot;</span>
+<span class="w">                    </span><span class="nt">"file"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"c2FtcGxlIGZpbGU="</span>
 <span class="w">                    </span><span class="p">}</span>
 <span class="w">                 </span><span class="p">}</span>
 <span class="w">             </span><span class="p">]</span>
@@ -1432,21 +1433,21 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <img alt="../../_images/Apply_API_request_body_exp4.png" src="../../_images/Apply_API_request_body_exp4.png" />
 </figure>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;conductor_class_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_conductor&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;operation_name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;new_operation&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;schedule_date&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;parameter_info&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"conductor_class_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_conductor"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"operation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"new_operation"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"schedule_date"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"parameter_info"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;sample_menu_001&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="nt">"sample_menu_001"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Register&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;parameter&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;host_name&quot;</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_host1&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_1&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value.txt&quot;</span>
+<span class="w">                    </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Register"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"parameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"host_name"</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_host1"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_1"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value.txt"</span>
 <span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;file&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c2FtcGxlIGZpbGU=&quot;</span>
+<span class="w">                    </span><span class="nt">"file"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"c2FtcGxlIGZpbGU="</span>
 <span class="w">                    </span><span class="p">}</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">]</span>
@@ -1471,20 +1472,20 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <img alt="../../_images/Apply_API_request_body_exp5.png" src="../../_images/Apply_API_request_body_exp5.png" />
 </figure>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;conductor_class_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_conductor&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;schedule_date&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;parameter_info&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"conductor_class_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_conductor"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"schedule_date"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"parameter_info"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;sample_menu_001&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="nt">"sample_menu_001"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Register&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;parameter&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;host_name&quot;</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_host1&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_1&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value.txt&quot;</span>
+<span class="w">                    </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Register"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"parameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"host_name"</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_host1"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_1"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value.txt"</span>
 <span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;file&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c2FtcGxlIGZpbGU=&quot;</span>
+<span class="w">                    </span><span class="nt">"file"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"c2FtcGxlIGZpbGU="</span>
 <span class="w">                    </span><span class="p">}</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">]</span>
@@ -1509,55 +1510,55 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <img alt="../../_images/Apply_API_request_body_exp6.png" src="../../_images/Apply_API_request_body_exp6.png" />
 </figure>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;conductor_class_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_conductor&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;operation_name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;schedule_date&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;parameter_info&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"conductor_class_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_conductor"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"operation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"schedule_date"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"parameter_info"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;sample_menu_001&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="nt">"sample_menu_001"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Register&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;parameter&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;host_name&quot;</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_host1&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_1&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value11&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value.txt&quot;</span>
+<span class="w">                    </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Register"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"parameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"host_name"</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_host1"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_1"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value11"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value.txt"</span>
 <span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;file&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c2FtcGxlIGZpbGU=&quot;</span>
+<span class="w">                    </span><span class="nt">"file"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"c2FtcGxlIGZpbGU="</span>
 <span class="w">                    </span><span class="p">}</span>
 <span class="w">                </span><span class="p">},{</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Register&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;parameter&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;host_name&quot;</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_host2&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_1&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value11&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value.txt&quot;</span>
+<span class="w">                    </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Register"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"parameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"host_name"</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_host2"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_1"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value11"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value.txt"</span>
 <span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;file&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c2FtcGxlIGZpbGU=&quot;</span>
+<span class="w">                    </span><span class="nt">"file"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"c2FtcGxlIGZpbGU="</span>
 <span class="w">                    </span><span class="p">}</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">]</span>
 <span class="w">        </span><span class="p">},{</span>
-<span class="w">            </span><span class="nt">&quot;sample_menu_002&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="nt">"sample_menu_002"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Register&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;parameter&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;host_name&quot;</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_host1&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_1&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value.txt&quot;</span>
+<span class="w">                    </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Register"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"parameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"host_name"</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_host1"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_1"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value.txt"</span>
 <span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;file&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c2FtcGxlIGZpbGU=&quot;</span>
+<span class="w">                    </span><span class="nt">"file"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"c2FtcGxlIGZpbGU="</span>
 <span class="w">                    </span><span class="p">}</span>
 <span class="w">                </span><span class="p">},{</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Register&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;parameter&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;host_name&quot;</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_host2&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_1&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value.txt&quot;</span>
+<span class="w">                    </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Register"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"parameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"host_name"</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_host2"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_1"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value.txt"</span>
 <span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;file&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c2FtcGxlIGZpbGU=&quot;</span>
+<span class="w">                    </span><span class="nt">"file"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"c2FtcGxlIGZpbGU="</span>
 <span class="w">                    </span><span class="p">}</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">]</span>
@@ -1575,57 +1576,57 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <img alt="../../_images/Apply_API_request_body_exp7.png" src="../../_images/Apply_API_request_body_exp7.png" />
 </figure>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;conductor_class_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_main_conductor&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;operation_name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;schedule_date&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;parameter_info&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"conductor_class_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_main_conductor"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"operation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"schedule_date"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"parameter_info"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;sample_menu_001&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="nt">"sample_menu_001"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Register&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;parameter&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;host_name&quot;</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_host1&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_1&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value11&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value.txt&quot;</span>
+<span class="w">                    </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Register"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"parameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"host_name"</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_host1"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_1"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value11"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value.txt"</span>
 <span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;file&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c2FtcGxlIGZpbGU=&quot;</span>
+<span class="w">                    </span><span class="nt">"file"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"c2FtcGxlIGZpbGU="</span>
 <span class="w">                    </span><span class="p">}</span>
 <span class="w">                </span><span class="p">},{</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Register&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;parameter&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;host_name&quot;</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_host2&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_1&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value11&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value.txt&quot;</span>
+<span class="w">                    </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Register"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"parameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"host_name"</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_host2"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_1"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value11"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value.txt"</span>
 <span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;file&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c2FtcGxlIGZpbGU=&quot;</span>
+<span class="w">                    </span><span class="nt">"file"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"c2FtcGxlIGZpbGU="</span>
 <span class="w">                    </span><span class="p">}</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">]</span>
 <span class="w">        </span><span class="p">},{</span>
-<span class="w">            </span><span class="nt">&quot;sample_menu_002&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="nt">"sample_menu_002"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Register&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;parameter&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;host_name&quot;</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_host1&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;operation_name_select&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024/01/01 00:00_sample_operation&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_1&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value.txt&quot;</span>
+<span class="w">                    </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Register"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"parameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"host_name"</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_host1"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"operation_name_select"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2024/01/01 00:00_sample_operation"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_1"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value.txt"</span>
 <span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;file&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c2FtcGxlIGZpbGU=&quot;</span>
+<span class="w">                    </span><span class="nt">"file"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"c2FtcGxlIGZpbGU="</span>
 <span class="w">                    </span><span class="p">}</span>
 <span class="w">                </span><span class="p">},{</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Register&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;parameter&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;host_name&quot;</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_host2&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;operation_name_select&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024/01/01 00:00_sample_operation&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_1&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value.txt&quot;</span>
+<span class="w">                    </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Register"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"parameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"host_name"</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_host2"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"operation_name_select"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2024/01/01 00:00_sample_operation"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_1"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"value.txt"</span>
 <span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;file&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;column_2&quot;</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c2FtcGxlIGZpbGU=&quot;</span>
+<span class="w">                    </span><span class="nt">"file"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"column_2"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"c2FtcGxlIGZpbGU="</span>
 <span class="w">                    </span><span class="p">}</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">]</span>
@@ -1646,12 +1647,12 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <div><div class="literal-block-wrapper docutils container" id="id40">
 <div class="code-block-caption"><span class="caption-number">リスト 3.14 </span><span class="caption-text">正常時</span><a class="headerlink" href="#id40" title="Link to this code">¶</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;conductor_instance_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;conductord作業実行時に採番されたID&quot;</span>
+<span class="w">    </span><span class="nt">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"conductor_instance_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"conductord作業実行時に採番されたID"</span>
 <span class="w">    </span><span class="p">}</span><span class="w">      </span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;000-00000&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;ts&quot;</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;処理日時&quot;</span>
+<span class="w">    </span><span class="nt">"message"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESS"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"result"</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="s2">"000-00000"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"ts"</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="s2">"処理日時"</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -1660,9 +1661,9 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <div class="literal-block-wrapper docutils container" id="id41">
 <div class="code-block-caption"><span class="caption-number">リスト 3.15 </span><span class="caption-text">異常時</span><a class="headerlink" href="#id41" title="Link to this code">¶</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;エラーメッセージ&quot;</span>
-<span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;エラーコード&quot;</span>
-<span class="w">    </span><span class="nt">&quot;ts&quot;</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;処理日時&quot;</span>
+<span class="w">    </span><span class="nt">"message"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nt">"エラーメッセージ"</span>
+<span class="w">    </span><span class="nt">"result"</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="nt">"エラーコード"</span>
+<span class="w">    </span><span class="nt">"ts"</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="s2">"処理日時"</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1671,13 +1672,13 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <div class="code-block-caption"><span class="caption-number">リスト 3.16 </span><span class="caption-text">エラーメッセージの例</span><a class="headerlink" href="#id42" title="Link to this code">¶</a></div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Request bodyで指定しているメニュー名(REST):sample_menu_001 の 1レコード目(0オリジン) の キー:column_1 に指定した値の文字数の不備でエラーが発生した場合の例
 {
-    &quot;message&quot;: {
-        &quot;1&quot;: {                                                                                    メニュー名(REST)のレコード番号が0オリジンで表示されます。
-           &quot;column_1&quot;: [ &quot;文字長エラー (閾値 : 値&lt;=8byte, 値 : 30byte), menu : sample_menu_001&quot;]  キー：エラーとなった項目のREST名、値：エラー内容、menu : エラーとなったメニュー名（REST)
+    "message": {
+        "1": {                                                                                    メニュー名(REST)のレコード番号が0オリジンで表示されます。
+           "column_1": [ "文字長エラー (閾値 : 値&lt;=8byte, 値 : 30byte), menu : sample_menu_001"]  キー：エラーとなった項目のREST名、値：エラー内容、menu : エラーとなったメニュー名（REST)
              }
     },
-    &quot;result&quot;: &quot;499-00201&quot;,
-    &quot;ts&quot;: &quot;実施日時&quot;
+    "result": "499-00201",
+    "ts": "実施日時"
 }
 </pre></div>
 </div>
@@ -1751,7 +1752,7 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 </div><!-- End #contents -->
 <div id="footer">
   <footer class="divInner">
-    <small>Copyright © 2019-2025 NEC Corporation</small>
+    <small>Copyright © 2019-2026 NEC Corporation</small>
     <small><a href="/ja/2.4/terms/ja.html">サイト規約</a></small>
   </footer>
 </div><!-- End #footer -->
