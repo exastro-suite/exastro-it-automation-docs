@@ -143,7 +143,7 @@ Ansible-LegacyRoleの作業フロー
    #. | **実行環境管理の登録（必要に応じて実施）**
       | :menuselection:`Ansible共通 --> 実行環境定義テンプレート管理` で登録した実行環境定義ファイル(execution-environment.yml)のテンプレートファイルと :menuselection:`パラメータシート「実行環境パラメータ定義」` の紐付を登録します。
       | 詳細は「 :ref:`ansible_execution_environment_list` 」を参照してください。
-      | 尚。ITAをインストールすると、 :menuselection:`パラメータシート「実行環境パラメータ定義」` と :menuselection:`Ansible共通 --> 実行環境定義テンプレート管理` の紐付が登録されます。
+      | 尚、ITAをインストールすると、 :menuselection:`パラメータシート「実行環境パラメータ定義」` と :menuselection:`Ansible共通 --> 実行環境定義テンプレート管理` の紐付が登録されます。
 
    #. | **Movementの登録**
       | :menuselection:`Ansible-LegacyRole --> Movement一覧` から、作業用のMovementを登録します。
@@ -337,22 +337,22 @@ Movement一覧
       |           |                         |                                                                                   |           |              |                                                       |
       |           +-------------+-----------+-----------------------------------------------------------------------------------+-----------+--------------+-------------------------------------------------------+
       |           | Ansible \   | 実行環境  | :menuselection:`Ansible共通 --> 実行環境定義` に登録されている :menuselection:`実\| ー        | リスト選択   | 説明欄記載のとおり。                                  |
-      |           | Execution \ |           | 行環境名` が表示されます。Ansible Execution Agent内にansibe-builderで実行環境     |           |              |                                                       |
+      |           | Execution \ |           | 行環境名` が表示されます。Ansible Execution Agent内にansible-builderで実行環境    |           |              |                                                       |
       |           | Agent \     |           | （コンテナ）をbuildする際に使用するテンプレートファイルとパラメータシート「実行\  |           |              |                                                       |
       |           | 利用情報    |           | 環境パラメータ定義」が紐付いている実行環境名を選択します。                        |           |              |                                                       |
       |           |             |           | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行\    |           |              |                                                       |
       |           |             |           | エンジン` で「Ansible Execution Agent」\                                          |           |              |                                                       |
       |           |             |           | を選択した場合、必須入力。                                                        |           |              |                                                       |
       |           +             +-----------+-----------------------------------------------------------------------------------+-----------+--------------+-------------------------------------------------------+
-      |           |             | ansible-\ | Ansible Execution Agent内にansibe-builderで実行環境をbuildする際の\               | ー        | 手動入力     | 最大長4000バイト                                      |
-      |           |             | builder\  | ansibe-builderのパラメータを入力します。                                          |           |              |                                                       |
-      |           |             | パラメ\   | 詳細については、 ansibe-builderのマニュアルを参照ください。                       |           |              |                                                       |
+      |           |             | ansible-\ | Ansible Execution Agent内にansible-builderで実行環境をbuildする際の\              | ー        | 手動入力     | 最大長4000バイト                                      |
+      |           |             | builder\  | ansible-builderのパラメータを入力します。                                         |           |              |                                                       |
+      |           |             | パラメ\   | 詳細については、 ansible-builderのマニュアルを参照ください。                      |           |              |                                                       |
       |           |             | ータ      |                                                                                   |           |              |                                                       |
       |           |             |           |                                                                                   |           |              |                                                       |
       |           |             |           |                                                                                   |           |              |                                                       |
       |           +-------------+-----------+-----------------------------------------------------------------------------------+-----------+--------------+-------------------------------------------------------+
       |           | Ansible \   | 実行\     | Ansible Automation Controllerに構築されている実行環境が表示されます。             | ー        | リスト選択   | 説明欄記載のとおり。                                  |
-      |           | Automatio \ | 環境※2    | 使用する実行環境を選択します。                                                    |           |              |                                                       |
+      |           | Automation \| 環境※2    | 使用する実行環境を選択します。                                                    |           |              |                                                       |
       |           | Controller\ |           | 未選択の場合は、Ansible Automation Controller\                                    |           |              |                                                       |
       |           | 利用情報    |           | に設定されているデフォルトの実行環境が使用されます。                              |           |              |                                                       |
       |           |             |           |                                                                                   |           |              |                                                       |
@@ -559,7 +559,7 @@ Movement-ロール紐付
 ~~~~~~~~~~~~~~
 
 #. | :menuselection:`Ansible-LegacyRole --> ロールパッケージ管理` で登録した :menuselection:`ロールパッケージファイル（ZIP形式）` で定義されている多段変数で、繰返配列が定義されているメンバー変数の配列の最大繰返数のメンテナンス（閲覧/更新）を行います。
-   | 利用方法については、「 :ref:`ansible_legacyrole_substitution_value_auto_registration_setting` 」を参照てください。
+   | 利用方法については、「 :ref:`ansible_legacyrole_substitution_value_auto_registration_setting` 」を参照してください。
 
    .. figure:: /images/ja/ansible-legacyrole/variable_nest_management/nested_variable_list.png
       :width: 800px
@@ -1117,7 +1117,7 @@ Movement-ロール紐付
 
    作業実行画面
 
-| 実行種別ついて以下に説明します。
+| 実行種別について以下に説明します。
 
 #. | **作業実行**
    | :guilabel:`作業実行` ボタンをクリックすると、作業対象に対して構築作業を実行します。
@@ -1130,7 +1130,7 @@ Movement-ロール紐付
    | :guilabel:`パラメータ確認` ボタンをクリックすると、実際に作業対象に対して構築作業をせず、 :menuselection:`Ansible-LegacyRole --> 代入値自動登録設定` に登録してある情報から作業対象のオペレーションとMovementに紐付く情報を :menuselection:`Ansible-LegacyRole --> 代入値管理` と :menuselection:`Ansible-LegacyRole --> 作業対象ホスト` に反映し、確認することが出来ます。
 
 .. tip:: |  **予約日時の指定**
-   | 「予約日時」を入力することで、実行を予約することがきます。
+   | 「予約日時」を入力することで、実行を予約することができます。
    | 「予約日時」には、未来の日時のみ入力可能です。
 
 
@@ -1496,7 +1496,7 @@ Movement-ロール紐付
    * - \（9）\　roles/[role 名①]/tasks
      - 〇
      - | tasksディレクトリは必須です。
-       | playbookファイルは、文字コードがUTF-8のBOMなで作成してください。
+       | playbookファイルは、文字コードがUTF-8のBOMなしで作成してください。
        | main.ymlがない場合はアップロードでエラーになります。
        | main.yml以外のファイルも配置できます。
        | サブディレクトリにmain.yml以外のファイルを配置できます。
@@ -1557,7 +1557,7 @@ Movement-ロール紐付
         # winrm接続の場合は「become: yes」は省略されます。
 
 #. | rolesセクション
-   | アップロードさたロールパッケージ内のロールを、 :menuselection:`Ansible-LegacyRole --> Movement-ロール紐付` の :menuselection:`インクルード順序` に従いroleで実行します。
+   | アップロードされたロールパッケージ内のロールを、 :menuselection:`Ansible-LegacyRole --> Movement-ロール紐付` の :menuselection:`インクルード順序` に従いroleで実行します。
 
    .. figure:: /images/ja/diagram/role_session.png
       :align: center
@@ -1594,7 +1594,7 @@ Movement-ロール紐付
 
 
 #. | ロールとして認識するディレクトリは、tasksディレクトリがあるディレクトリになります。
-   | この例だと、ロールして扱うディレクトリ階層（ロール名）は以下の3個になります。
+   | この例だと、ロールとして扱うディレクトリ階層（ロール名）は以下の3個になります。
 
    - parent/sample_role1
    - parent/sample_role2
@@ -1965,18 +1965,18 @@ Ansible-LegacyRole 結果データに保存されるファイル一覧
      -
    * - error.log
      - | 作業実行時のエラーメッセージ出力先ファイル
-       | Ansible-playbbokコマンドの標準エラー出力の出力先ファイル
+       | ansible-playbookコマンドの標準エラー出力の出力先ファイル
        | 作業実行確認のエラーログに表示される内容
      - 〇
      - 〇
      - 〇
    * - exec.log.org
-     - Ansible-playbbokコマンドの標準出力の出力先ファイル
+     - ansible-playbookコマンドの標準出力の出力先ファイル
      - 〇
      - 〇
      - 〇
    * - exec.log
-     - | Aexec.log.orgを加工したファイル
+     - | exec.log.orgを加工したファイル
        | 作業実行確認の実行ログに表示される内容
      - 〇
      - 〇

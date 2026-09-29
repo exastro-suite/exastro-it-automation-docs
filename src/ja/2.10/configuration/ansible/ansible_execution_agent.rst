@@ -35,7 +35,7 @@ Ansible Execution Agent
      - | Ansibleスケールアウト可否
    * - | Ansible Execution Agent
      - | Exastro IT Automation システムと Ansible Execution Agent を別環境(クローズド環境)に構成可能
-       | Ansible BuilderとAnsible Runnerを使った動的なAnsible作業実行環境の生成 ​（任意の環境・モジュールを利用可能）
+       | Ansible BuilderとAnsible Runnerを使った動的なAnsible作業実行環境の生成 （任意の環境・モジュールを利用可能）
      - | ○ (Kubernetes環境に限る)
 
 システム構成イメージ
@@ -196,14 +196,14 @@ OS要件
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 | 以下は、Exastro IT Automation に Ansible Execution Agent を導入するために必要なパッケージ一覧となります。
-| オフライン環境でのインストール場合、各パッケージのインストールが必要となります。
+| オフライン環境でのインストールの場合、各パッケージのインストールが必要となります。
 | 詳細については :doc:`Ansible Execution Agent - Offline<../../installation/offline/ansible_execution_agent/setup>` を参照してください。
 
 
     - 各種パッケージ一覧
 
 
-    .. list-table:: Red Hat Enterprize Linux
+    .. list-table:: Red Hat Enterprise Linux
        :widths: 14 79 7 7
        :header-rows: 1
        :align: left
@@ -264,7 +264,7 @@ OS要件
          - Pythonパッケージ管理
          - 〇
          - 
-       * - pthon3.11-devel	
+       * - python3.11-devel	
          - Python開発ヘッダー（ビルド用）
          - 〇
          - 
@@ -304,7 +304,7 @@ OS要件
          - ソースコード管理、バージョン管理
          - 〇
          - 〇
-       * - dokcer-compose	
+       * - docker-compose	
          - コンテナオーケストレーション（v2.20.3推奨）
          - 〇
          - 〇

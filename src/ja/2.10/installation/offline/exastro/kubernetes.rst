@@ -39,7 +39,7 @@ Exastro on Kubernetes - Offline
 | オフライン環境として使用するサーバはFirewalldがインストールされている必要があります。
 
 .. warning::
-  | kubernetesのオフライン用設定ファイルを適用するため、Exastroをインストールサーバは外部と通信できないことを確認してください。
+  | kubernetesのオフライン用設定ファイルを適用するため、Exastroをインストールするサーバは外部と通信できないことを確認してください。
 
 - クライアント要件
 
@@ -74,7 +74,7 @@ Exastro on Kubernetes - Offline
 - 通信要件
 
   - | クライアントからデプロイ先のコンテナ環境にアクセスできる必要があります。
-  - | Platform 管理者用と一般ユーザー用の2つ通信ポートが使用となります。
+  - | Platform 管理者用と一般ユーザー用の2つの通信ポートを使用します。
   - | コンテナ環境からコンテナイメージの取得のために、Docker Hub に接続できる必要があります。
 
 - 外部コンポーネント
@@ -83,7 +83,7 @@ Exastro on Kubernetes - Offline
   - | GitLab リポジトリ、および、アカウントの払い出しが可能なこと
 
   .. warning::
-    | GitLab 環境を同一クラスタに構築する場合は、GitLab のシステム要件に対応する最小要件を追加で容易する必要があります。
+    | GitLab 環境を同一クラスタに構築する場合は、GitLab のシステム要件に対応する最小要件を追加で用意する必要があります。
     | Database 環境を同一クラスタに構築する場合は、使用する Database のシステム要件に対応する最小要件を定義する必要があります
 
 
@@ -1106,7 +1106,7 @@ GitLab 連携設定
    #サーバのIPアドレス：xx.xx.xx.xx
    #サーバホスト名：xxx.cluster.local xxx
 
-| SSH Keyの作成を作成します。
+| SSH Keyを作成します。
 | .sshディレクトリにid_rsa.pubが存在する場合は再度作成する必要はありません。
 
 .. code-block:: shell
@@ -1315,7 +1315,7 @@ GitLab 連携設定
 
    openssl x509 -days 3650 -req -signkey /etc/nginx/ssl/server.key -in /etc/nginx/ssl/server.csr -out /etc/nginx/ssl/server.crt
 
-| 自己署名証明書(server.key server.csr server.srt )が作成されていることを確認します。
+| 自己署名証明書(server.key server.csr server.crt )が作成されていることを確認します。
 
 .. code-block:: shell
    :caption: コマンド
@@ -1369,7 +1369,7 @@ GitLab 連携設定
    https://xx.xx.xx.xx:81/v2/_catalog
 
 .. note::
-    | レジストリコンテナに登録したイメージを確認するには、ファイアウォールを無効にし、Nginxサービスを起動する必要あります。
+    | レジストリコンテナに登録したイメージを確認するには、ファイアウォールを無効にし、Nginxサービスを起動する必要があります。
 
 | Exastroをインストールするサーバに対して自己署名証明書を送信します。
 | xx.xx.xx.xxにはExastroをインストールするサーバのIPアドレスを指定します。
@@ -1533,7 +1533,7 @@ GitLab 連携設定
    </details>
 
 
-| Kubesparayを実行して、ExastroをインストールするサーバへKubernetesをインストールします。
+| Kubesprayを実行して、ExastroをインストールするサーバへKubernetesをインストールします。
 | 完了するまでに数十分程度の時間がかかります。(通信環境やサーバースペックによって状況は異なります。)
 
 .. code-block:: shell
@@ -1631,7 +1631,7 @@ GitLab 連携設定
    # *************************
    echo http://$NODE_IP:$NODE_SVC_PORT
 
-| 、:menuselection:`Administrator Console` の URL にアクセスします。
+| 出力結果に従って、:menuselection:`Administrator Console` の URL にアクセスします。
 | 下記は、実行例のため実際のコマンド実行結果に読み替えてください。
 
 .. code-block:: bash
@@ -1722,7 +1722,7 @@ kubespray及びExastroのインストール時にエラーが発生した場合�
 | Kubernetesの削除を行います。kubesprayのインストール時にエラーが発生した場合は以下の手順のみ実行します。
 | 完了するまでに数十分程度の時間がかかります。(通信環境やサーバースペックによって状況は異なります。)
 | 使用するreset.ymlはgit cloneで取得したkubesprayに含まれているため、作成する必要はありません。
-| 完了後、Kubesparayを実行してKubernetesクラスター環境へKubernetesをインストールする手順から再実行します。
+| 完了後、Kubesprayを実行してKubernetesクラスター環境へKubernetesをインストールする手順から再実行します。
 
 .. code-block:: shell
    :caption: コマンド

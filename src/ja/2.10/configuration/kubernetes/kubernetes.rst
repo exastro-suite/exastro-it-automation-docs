@@ -27,7 +27,7 @@ Kubernetesクラスター
 --------
 
 - | クライアントからデプロイ先のコンテナ環境にアクセスできる必要があります。
-- | Platform 管理者用と一般ユーザー用の2つ通信ポートが使用となります。
+- | Platform 管理者用と一般ユーザー用の2つの通信ポートを使用します。
 - | コンテナ環境からコンテナイメージの取得のために、Docker Hub に接続できる必要があります。
 
 外部コンポーネント
@@ -126,7 +126,7 @@ SSH key の作成
    ssh-keygen -t rsa
 
 
-| 作成したSSHキー( :file:`/root/.ssh/id_ras.pub` )は、作成するクラスタに配置します。
+| 作成したSSHキー( :file:`/root/.ssh/id_rsa.pub` )は、作成するクラスタに配置します。
 
 
 Kubesprayインストール
@@ -316,7 +316,7 @@ proxy設定
 Kubernetesインストール
 ~~~~~~~~~~~~~~~~~~~~~~
 
-| Kubesparayを実行して、Kubernetesクラスター環境へKubernetesをインストールします。
+| Kubesprayを実行して、Kubernetesクラスター環境へKubernetesをインストールします。
 
 .. code-block:: bash
    :caption: コマンド

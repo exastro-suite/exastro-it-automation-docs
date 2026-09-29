@@ -1,5 +1,5 @@
 
-| 下記ITA独自変数を利用してファイル出力をするPlyabookを含むMovementをクラスタ構成のAnsible Automation Controllerで作業実行した場合の留意事項について記載します。
+| 下記ITA独自変数を利用してファイル出力をするPlaybookを含むMovementをクラスタ構成のAnsible Automation Controllerで作業実行した場合の留意事項について記載します。
 |
 | 　対象のITA独自変数
 | 　・ __workflowdir_\_
@@ -31,5 +31,5 @@ ITA独自変数を利用して作成したファイルの取り扱い
 ^^^^^^^^
 
 #. | ファイル名はansible「inventory_hostname」を含めるなどして、Movementに紐づいている作業対象ホスト毎に同一ファイル名に出力しないように工夫してください。
-#. | conductorから実行する場合、複数のMovementで同一ファイル名への出力しないよう工夫してください。
+#. | conductorから実行する場合、複数のMovementで同一ファイル名へ出力しないよう工夫してください。
 

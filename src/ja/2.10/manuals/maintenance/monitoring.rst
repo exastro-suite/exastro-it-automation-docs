@@ -468,7 +468,7 @@ Zabbixエージェントの設定
    - 例) exastro-suite.exastro.ita-api-admin.log
  * - 深刻度
    - 軽度の障害
-   - 深刻度は運用に運用に合わせて設定
+   - 深刻度は運用に合わせて設定
  * - 条件式 - アイテム
    - 作成したアイテムを選択
    - 例) exastro-suite.exastro.ita-api-admin.log

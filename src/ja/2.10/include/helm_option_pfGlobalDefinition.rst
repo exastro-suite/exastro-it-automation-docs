@@ -93,18 +93,18 @@
      - | :program:`true` (デフォルト): 永続化する。
        | :program:`false`: 永続化しない。
    * - global.pfGlobalDefinition.persistence.accessMode
-     - | Exastro 共通基盤における Persisten Volume Claim のアクセスモード
+     - | Exastro 共通基盤における Persistent Volume Claim のアクセスモード
        | ※2.3にて削除されました。
      - 削除
      - | :program:`ReadWriteMany` (デフォルト): ボリュームは多数のNodeで読み取り専用としてマウント。
        | :program:`ReadWriteOnce`: ボリュームは単一のNodeで読み取り/書き込みとしてマウント。
    * - global.pfGlobalDefinition.persistence.size
-     - | Exastro 共通基盤における Persisten Volume Claim のボリュームに要求するサイズ(Bytes)
+     - | Exastro 共通基盤における Persistent Volume Claim のボリュームに要求するサイズ(Bytes)
        | ※2.3にて削除されました。
      - 削除
      - "10Gi"
    * - global.pfGlobalDefinition.persistence.volumeType
-     - | Exastro 共通基盤における Persisten Volume のボリュームタイプ
+     - | Exastro 共通基盤における Persistent Volume のボリュームタイプ
        | Storage Class を利用する場合は設定は不要です。
        | ※2.3にて削除されました。
      - 削除

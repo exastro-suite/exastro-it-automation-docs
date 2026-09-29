@@ -296,7 +296,7 @@
 --------------
 
 | Exastro IT Automation では、Movement という単位で作業を管理します。Movementは作業手順書における作業項目に該当します。
-| Movement は、Ansible Playbook のような IaC (Infrastrucure as Code) を紐付けたり、IaC 内の変数とパラメータシートの設定値を紐付ける際に利用します。
+| Movement は、Ansible Playbook のような IaC (Infrastructure as Code) を紐付けたり、IaC 内の変数とパラメータシートの設定値を紐付ける際に利用します。
 
 | :menuselection:`Ansible-Legacy --> Movement一覧` から、ユーザー登録のための Movement を登録します。
 

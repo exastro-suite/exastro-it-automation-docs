@@ -341,7 +341,7 @@ Ansible Playbook 登録
     ansible.builtin.hostname:
       name: "{{ VAR_hostname }}"
 
-| :menuselection:`Ansible-Legacy --> Playbook素材集` から、から、上記のPlaybookを登録します。
+| :menuselection:`Ansible-Legacy --> Playbook素材集` から、上記のPlaybookを登録します。
 
 .. figure:: /images/learn/quickstart/hostgroup/Ansible-Playbook登録設定.png
    :width: 1200px
@@ -537,7 +537,7 @@ Movement と Ansible Playbook の紐付け
 作業概要の作成
 --------------
 
-| 具体的なパラメータの設定や作業手順を考える前に、作業計画を立てるところから初めます。
+| 具体的なパラメータの設定や作業手順を考える前に、作業計画を立てるところから始めます。
 | まずは、いつ、どこの機器に対して、何を、どうするかといった情報を簡単に整理しておきましょう。
 
 .. list-table:: 作業の方針
@@ -842,7 +842,7 @@ Movement と Ansible Playbook の紐付け
 作業概要の作成(追加オペレーション)
 ----------------------------------
 
-| 具体的なパラメータの設定や作業手順を考える前に、作業計画を立てるところから初めます。
+| 具体的なパラメータの設定や作業手順を考える前に、作業計画を立てるところから始めます。
 | まずは、いつ、どこの機器に対して、何を、どうするかといった情報を簡単に整理しておきましょう。
 
 .. list-table:: 作業の方針

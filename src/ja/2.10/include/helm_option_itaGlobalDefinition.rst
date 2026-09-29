@@ -60,16 +60,16 @@
      - | :program:`true` (デフォルト): 永続化する。
        | :program:`false`: 永続化しない。
    * - global.itaGlobalDefinition.persistence.accessMode
-     - | Exastro IT Automation における Persisten Volume Claim のアクセスモード
+     - | Exastro IT Automation における Persistent Volume Claim のアクセスモード
      - 可 (データ永続化時)
      - | :program:`ReadWriteMany` (デフォルト): ボリュームは多数のNodeで読み取り専用としてマウント。
        | :program:`ReadWriteOnce`: ボリュームは単一のNodeで読み取り/書き込みとしてマウント。
    * - global.itaGlobalDefinition.persistence.size
-     - | Exastro IT Automation における Persisten Volume Claim のボリュームに要求するサイズ(Bytes)
+     - | Exastro IT Automation における Persistent Volume Claim のボリュームに要求するサイズ(Bytes)
      - 可 (データ永続化時)
      - "10Gi"
    * - global.itaGlobalDefinition.persistence.volumeType
-     - | Exastro IT Automation における Persisten Volume のボリュームタイプ
+     - | Exastro IT Automation における Persistent Volume のボリュームタイプ
        | Storage Class を利用する場合は設定は不要です。
      - 可 (データ永続化時)
      - "hostPath"

@@ -288,7 +288,7 @@ Ansible Execution Agentのインストール
          Input a REFRESH_TOKEN for a user that can log in to ITA. If the token cannot be input here, change the EXASTRO_REFRESH_TOKEN in the generated .env file.:
          Input Value [default:  ]:
 
-      | ⑫ サービスの起動を行う場合は、を選択してください。起動しない場合は、後ほど手動で起動してください。
+      | ⑫ サービスの起動を行う場合は、「y」を選択してください。起動しない場合は、後ほど手動で起動してください。
 
       .. code-block:: bash
 
@@ -373,7 +373,7 @@ Ansible Execution Agentのインストール
          Input a REFRESH_TOKEN for a user that can log in to ITA. If the token cannot be input here, change the EXASTRO_REFRESH_TOKEN in the generated .env file.:
          Input Value [default:  ]:
 
-      | ⑩ サービスの起動を行う場合は、を選択してください。起動しない場合は、後ほど手動で起動してください。
+      | ⑩ サービスの起動を行う場合は、「y」を選択してください。起動しない場合は、後ほど手動で起動してください。
 
       .. code-block:: bash
 
@@ -407,7 +407,7 @@ Ansible Execution Agentのインストール
          Input the full path for the .env file.:
          Input Value :
 
-      | ③ サービスの起動を行う場合は、を選択してください。起動しない場合は、後ほど手動で起動してください。
+      | ③ サービスの起動を行う場合は、「y」を選択してください。起動しない場合は、後ほど手動で起動してください。
 
       .. code-block:: bash
 
@@ -440,7 +440,7 @@ Ansible Execution Agentのインストール
 
 1. | エージェントのアンインストールモードを聞かれるので、指定してください。
    | 1: サービスの削除、データの削除を行います。
-   | 2: サービスの削除、を行います。データは削除されません。
+   | 2: サービスの削除を行います。データは削除されません。
    | 3: データの削除
    | ※ 3については、2が実行されている前提になります。
 
@@ -454,7 +454,7 @@ Ansible Execution Agentのインストール
     select value: (1, 2, 3, q):
 
 
-1.  以下、Enterを押下すると、必要な設定値を対話形式で、入力が開始されます。
+2.  以下、Enterを押下すると、必要な設定値を対話形式で、入力が開始されます。
 
 .. tabs::
 
@@ -738,7 +738,7 @@ Ansible Execution Agentのインストール
    ita-ag-ansible-execution-<サービスの一意な識別子:yyyyMMddHHmmssfff or 対話で指定した文字列>.log.xx
 
 .. tip::
-  | ログローテーションされたファイルは、末尾に数値が付与されます。ログのローテートのサイズ、保存期間は、を参照してください。
+  | ログローテーションされたファイルは、末尾に数値が付与されます。ログのローテートのサイズ、保存期間は、「 :ref:`ansible_execution_agent_parameter_list` 」の LOGGING_MAX_SIZE、LOGGING_MAX_FILE を参照してください。
 
 - | システムログ、各コンポーネントのログ
 

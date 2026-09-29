@@ -91,7 +91,7 @@ Ansible Automation Platform (Cloud)
 -----------------------------------
 
 | Ansible Automation Platform (Cloud) は、AAP 2.5以上、またはRed Hat Ansible Automation Platform (Managed Service)とも連携するための実行エンジンです。 :doc:`構成・構築ガイドはこちら<./ansible_automation_platform>`
-| 従来のITA固有の資材連携について、ITAから実行ノードへ通信を行うSSH方式とは異なり、実行ノードからのITAに通信を行うIaC (Infrastructure as Code) 方式による資材連携を採用しています。
+| 従来のITA固有の資材連携について、ITAから実行ノードへ通信を行うSSH方式とは異なり、実行ノードからITAに通信を行うIaC (Infrastructure as Code) 方式による資材連携を採用しています。
 | IaC (Infrastructure as Code) 方式における資材連携では、Execution Environment (EE) のローカルアクションを利用し、API経由でITAとの間で資材の同期・連携を行います。
 
 **主な特徴:**

@@ -1395,7 +1395,7 @@ Helm リポジトリの更新
 永続ボリュームを削除
 ^^^^^^^^^^^^^^^^^^^^
 
-| Persitent Volume（PV） を Kubernetes 上に hostPath で作成した場合の方法を記載します。
+| Persistent Volume（PV） を Kubernetes 上に hostPath で作成した場合の方法を記載します。
 | マネージドデータベースを含む外部データベースを利用している場合は、環境にあったデータ削除方法を実施してください。
 
 データベース用

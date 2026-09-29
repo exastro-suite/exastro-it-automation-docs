@@ -55,7 +55,7 @@
 #. | [Account security] > [Signing in] > [Two-factor authentication]より、二要素認証設定画面を表示します。
 
    .. figure:: /images/ja/manuals/platform/login/two_factor_authentication.png
-      :alt: アカウント管理_二要素認証設定外面
+      :alt: アカウント管理_二要素認証設定画面
       :width: 600px
       :align: left
       :class: with-border-thin

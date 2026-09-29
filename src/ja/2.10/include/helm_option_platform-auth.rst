@@ -63,7 +63,7 @@
      - 不可
      - "Prefix"
    * - exastro-platform.platform-auth.ingress.hosts[1].paths[0].backend
-     - Exastro Platform エンドポイントのエンドポイントのサービス名
+     - Exastro Platform エンドポイントのサービス名
      - 不可
      - "httpMng"
    * - exastro-platform.platform-auth.ingress.tls[0].secretName

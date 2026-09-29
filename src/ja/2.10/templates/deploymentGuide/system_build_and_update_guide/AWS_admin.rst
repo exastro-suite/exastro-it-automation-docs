@@ -90,13 +90,13 @@ AWSリソースの確認(Conductor実行後)
       | パスワード：P@ssw0rd
 
 2. | 「サービス > CloudFormation > スタック」へ移動する。
-   | “aws-1st-model-01”でフィルターをかけて以下のスタックが作成されていないことを確認する
+   | “aws-1st-model-01”でフィルターをかけて以下のスタックが作成されていることを確認する
 
       | aws-1st-model-01-Create-User-aws-admin
       | aws-1st-model-01-Create-User-aws-admin-sub
 
 3. | 「サービス > IAM > ユーザー」へ移動する。
-   | “aws-admin”でフィルターをかけて以下のユーザーが作成されていないことを確認する
+   | “aws-admin”でフィルターをかけて以下のユーザーが作成されていることを確認する
 
       | aws-admin
       | aws-admin-sub

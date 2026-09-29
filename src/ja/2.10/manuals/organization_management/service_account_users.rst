@@ -102,7 +102,7 @@
       :width: 200px
       :align: left
 
-#. | :menuselection:`サービスアカウントユーザー一覧` 画面が表示されるので、 再発行を行うサービスユーザーアカウントの明細の :guilabel:`トークン発行` をクリックします。
+#. | :menuselection:`サービスアカウントユーザー一覧` 画面が表示されるので、 再発行を行うサービスアカウントユーザーの明細の :guilabel:`トークン発行` をクリックします。
 
    .. image:: /images/ja/manuals/platform/service_account_users/サービスアカウント一覧.png
       :width: 600px
@@ -135,7 +135,7 @@
       :width: 200px
       :align: left
 
-#. | :menuselection:`サービスアカウントユーザー一覧` 画面が表示されるので、 削除するサービスユーザーアカウントの明細の :guilabel:`削除` をクリックします。
+#. | :menuselection:`サービスアカウントユーザー一覧` 画面が表示されるので、 削除するサービスアカウントユーザーの明細の :guilabel:`削除` をクリックします。
 
    .. image:: /images/ja/manuals/platform/service_account_users/サービスアカウント一覧.png
       :width: 600px
@@ -167,7 +167,7 @@
       :width: 200px
       :align: left
 
-#. | :menuselection:`サービスアカウントユーザー一覧` 画面が表示されるので、 対象のサービスユーザーアカウントの明細の :guilabel:`トークン発行` をクリックします。
+#. | :menuselection:`サービスアカウントユーザー一覧` 画面が表示されるので、 対象のサービスアカウントユーザーの明細の :guilabel:`トークン発行` をクリックします。
 
    .. image:: /images/ja/manuals/platform/service_account_users/サービスアカウント一覧.png
       :width: 600px

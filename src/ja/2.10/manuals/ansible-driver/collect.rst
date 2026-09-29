@@ -100,7 +100,7 @@
 
 2.  収集対象ディレクトリ構造
 
-| 収集対象ディレクトリについて、収集対象ディレクトリパス（ソースファイルの出力先として）をIaC(Playbook,Role)内にて、で以下の変数として扱えます。
+| 収集対象ディレクトリについて、収集対象ディレクトリパス（ソースファイルの出力先として）をIaC(Playbook,Role)内にて、以下の変数として扱えます。
 
 .. _table_ita_original_variable:
 .. list-table:: 収集機能対象ディレクトリITA独自変数
@@ -160,18 +160,18 @@
      - 備考
    * - Ansible-Legacy
      - legacy
-     - /<上位ディレクトリ(Ansible）>/legacy/
+     - /<上位ディレクトリ(Ansible)>/legacy/
      -
    * - Ansible-Pioneer
      - pioneer
-     - /<上位ディレクトリ(Ansible）>/pioneer/
+     - /<上位ディレクトリ(Ansible)>/pioneer/
      -
    * - Ansible-LegacyRole
      - legacy_role
-     - /<上位ディレクトリ(Ansible）>/legacy_role/
+     - /<上位ディレクトリ(Ansible)>/legacy_role/
      -
 
-.. note:: | ※上位ディレクトリ(Ansible）は、 :file:`/storage/<Organization>/<Workspace>/driver/ansible/` です。
+.. note:: | ※上位ディレクトリ(Ansible)は、 :file:`/storage/<Organization>/<Workspace>/driver/ansible/` です。
 
 
 | ■　e.g.) 収集対象ファイルのファイルパス、ディレクトリ構造
@@ -315,9 +315,9 @@
    :width: 6.67391in
    :height: 3.20028in
    :align: left
-   :alt: 設定項目値管理画面
+   :alt: 収集項目値管理画面
 
-   設定項目値管理画面
+   収集項目値管理画面
 
 
 #. | Ansible driver メニュー
@@ -375,7 +375,7 @@
 -  作業フロー詳細と参照先
 
    #. | パラメータシート（ホスト/オペレーションあり）の作成
-      | :menuselection:`パラメータシート作成` の :menuselection:`パラメータシート定義・作成` の画面からのパラメータシートを作成します。
+      | :menuselection:`パラメータシート作成` の :menuselection:`パラメータシート定義・作成` の画面からパラメータシートを作成します。
       | 詳細は「:doc:`../create_param/menu_creation`」を参照してください。
 
    #. | :menuselection:`収集項目値管理` の登録
@@ -495,7 +495,7 @@ Ansible 共通
    VAR_sample_config_1: yes
    VAR_sample_config_2: test_parameter
 
-   ■収集値項目管理の収集項目(FROM)の入力可能な値
+   ■収集項目値管理の収集項目(FROM)の入力可能な値
 
    PREFIX(ファイル名): SAMPLE
    変数名： VAR_sample_config_1
@@ -516,7 +516,7 @@ Ansible 共通
      - SAMPLE2
      - SAMPLE3
 
-   ■収集値項目管理の収集項目(FROM)の入力可能な値
+   ■収集項目値管理の収集項目(FROM)の入力可能な値
    PREFIX(ファイル名): SAMPLE_2
    変数名： VAR_sample2_conf
    メンバ変数：  [0]
@@ -538,7 +538,7 @@ Ansible 共通
      - key: PasswordAuthentication
        value: no
 
-    ■収集値項目管理の収集項目(FROM)の入力可能な値
+    ■収集項目値管理の収集項目(FROM)の入力可能な値
     PREFIX(ファイル名): RH_sshd
     変数名： VAR_RH_sshd_config:
     メンバ変数：  [0].key
@@ -564,7 +564,7 @@ Ansible 共通
          source: "localhost"
          community: "private"
 
-   ■収集値項目管理の収集項目(FROM)の入力可能な値
+   ■収集項目値管理の収集項目(FROM)の入力可能な値
    PREFIX(ファイル名): RH_snmp
    変数名： VAR_RH_snmp_config:
    メンバ変数：  com2sec[0].sec_name
@@ -651,7 +651,7 @@ Ansible-Legacy、Ansible-Pioneer、Ansible-LegacyRole
    * - 完了
      - あり
      - 対象
-     - 収集済み(通知あり）
+     - 収集済み(通知あり)
      - ログファイルあり
      -
    * - 完了
@@ -665,7 +665,7 @@ Ansible-Legacy、Ansible-Pioneer、Ansible-LegacyRole
 .. note:: | ※ステータスの表記について
           | 作業状態が完了でない場合、収集機能対象外の為、:menuselection:`収集状況` は更新されないため、空のままとなります。
           | 作業状態が完了で、収集対象ファイルが存在しない場合、ステータスは収集済み、収集ログは空の状態となります。
-          | :menuselection:`設定項目値管理` の不備により、登録処理が失敗した場合でも収集済み（通知あり）となります。詳細は、以下ログファイル出力内容例を参照してください。
+          | :menuselection:`収集項目値管理` の不備により、登録処理が失敗した場合でも収集済み（通知あり）となります。詳細は、以下ログファイル出力内容例を参照してください。
 
 | **ログファイル出力内容例**
 
@@ -883,19 +883,19 @@ BackYardコンテンツ
        | VAR_sample_config_X: “X”
 
 
-| **■ 収集値項目管理の設定と対象メニュー項目の収集例**
+| **■ 収集項目値管理の設定と対象メニュー項目の収集例**
 
-1. 収集値項目管理の設定と対象メニュー-項目
+1. 収集項目値管理の設定と対象メニュー-項目
 
 .. figure:: /images/ja/ansible_common/collect_flow/link_parameter_collected_item_value_list.drawio.png
    :width: 6.67391in
    :height: 3.20028in
    :align: left
-   :alt: 収集値項目管理の設定とパラメータシート
+   :alt: 収集項目値管理の設定とパラメータシート
 
-   収集値項目管理の設定とパラメータシート
+   収集項目値管理の設定とパラメータシート
 
-| **■対象ファイル、収集値項目管理の設定内容に沿って、ファイル単位に収集処理を実行**
+| **■対象ファイル、収集項目値管理の設定内容に沿って、ファイル単位に収集処理を実行**
 
 1. SAMPLE_01.yml の登録処理（登録）
 
@@ -1272,7 +1272,7 @@ BackYardコンテンツ
 ..     VAR_upload_file_2: ‘/<上位ディレクトリ>/_parameters_file/localhost/APP002/config’
 
 | ※上位ディレクトリについては、「:ref:`target_directory_file_structure`」をご参照ください。
-| 収集対象ファイルの内容収集時に対処となるファイルの実体は以下となります。
+| 収集対象ファイルの内容収集時に対象となるファイルの実体は以下となります。
 
 .. list-table:: 収集対象ファイルとファイルの実体
    :widths: 10 10 5

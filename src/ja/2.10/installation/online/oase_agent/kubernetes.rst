@@ -268,7 +268,7 @@ OASE Agentのパラメータ設定例
 
       1.  OASE Agentの設定
 
-          | OASE Agentの設定します。
+          | OASE Agentを設定します。
 
           .. code-block:: diff
            :caption: exastro-agent.yaml
@@ -319,7 +319,7 @@ OASE Agentのパラメータ設定例
 
       1.  OASE Agentの設定
 
-          | OASE Agentの設定します。
+          | OASE Agentを設定します。
 
           .. code-block:: diff
            :caption: exastro-agent.yaml
@@ -886,7 +886,7 @@ OASE Agentのパラメータ設定例
    # Pod の一覧を取得
    kubectl get po --namespace exastro
 
-| 正常に起動している場合は、Running” となります。
+| 正常に起動している場合は、“Running” となります。
 | ※正常に起動するまで数分かかる場合があります。
 
 .. code-block:: bash
@@ -927,7 +927,7 @@ OASE Agentのパラメータ設定例
 永続ボリュームを削除
 ^^^^^^^^^^^^^^^^^^^^
 
-| Persitent Volume（PV） を Kubernetes 上に hostPath で作成した場合の方法を記載します。
+| Persistent Volume（PV） を Kubernetes 上に hostPath で作成した場合の方法を記載します。
 | マネージドデータベースを含む外部データベースを利用している場合は、環境にあったデータ削除方法を実施してください。
 
 エージェント用

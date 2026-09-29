@@ -63,15 +63,15 @@ Ansible Automation Platform
 
 .. tabs::
 
-   .. tab:: AAP 2.5(ハイブリット)
+   .. tab:: AAP 2.5(ハイブリッド)
 
-      Ansible Automation Platform 2.5 (ハイブリットパターン)を下記に記載します。
+      Ansible Automation Platform 2.5 (ハイブリッドパターン)を下記に記載します。
 
       .. figure:: /images/ja/diagram/aap25_hybrid.drawio.png
-        :alt: Ansible Automation Platform 2.5 (ハイブリットパターン)
+        :alt: Ansible Automation Platform 2.5 (ハイブリッドパターン)
         :width: 900px
 
-        Ansible Automation Platform 2.5 (ハイブリットパターン)
+        Ansible Automation Platform 2.5 (ハイブリッドパターン)
 
       | ※Ansible Automation Platform構成内の通信の詳細については
       | 　`Chapter 6. Network ports and protocols | Planning your installation | Red Hat Ansible Automation Platform | 2.5 | Red Hat Documentation <https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/planning_your_installation/ref-network-ports-protocols_planning>`_ も併せてご参照ください。
@@ -703,15 +703,15 @@ Organization 追加時の作業
 | インスタンスの作成、及び構築手順について記載します。具体的な構築手順については、Redhat社及びサービス提供元のドキュメントを参照してください。
 
 #. Red Hat Ansible Automation Platform にログインします。
-#. ナビゲーションパネルで、インスタンス を選択し、Create instanse をクリックします。
-#. ホスト名 フィールドに、実行ノードのドメイン名または IP アドレスを入力し、Create instanse をクリックします。
+#. ナビゲーションパネルで、インスタンス を選択し、Create instance をクリックします。
+#. ホスト名 フィールドに、実行ノードのドメイン名または IP アドレスを入力し、Create instance をクリックします。
 #. バンドルをインストール の横にあるダウンロードアイコン download をクリックしてください。
 #. インベントリを編集
 #. receptorのインストールを実行
 
 .. note::
     | Ansible Automation Platformのデプロイ方式（インストールのアーキテクチャ）の違いにより、インスタンス追加の手順が異なります。
-    | 構築した環境、利用サービスに従ってインスタンスの作成、を組み込みを実施してください。
+    | 構築した環境、利用サービスに従ってインスタンスの作成、組み込みを実施してください。
 
 .. _platform_ansible_execution_environment:
 

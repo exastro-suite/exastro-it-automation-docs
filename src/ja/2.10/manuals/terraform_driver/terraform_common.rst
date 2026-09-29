@@ -152,7 +152,7 @@ Terraform driverについて
      - [1, 2, 3]
    * - tuple
      - | 配列型。予めn番目にどのtypeを設定するか決めておく必要があります。
-       | 値の入力数が決められているため、ITシステムA上ではメンバー変数としてプルダウンで選択します。
+       | 値の入力数が決められているため、ITA上ではメンバー変数としてプルダウンで選択します。
      - 〇
      - ×
      - tuple([string, number])
@@ -452,7 +452,7 @@ Moduleの記述
 Policyの記述
 ------------
 
-| Policyファイルは、Sentinel languageいうHashiCorp社独自の言語により記述します。
+| Policyファイルは、Sentinel languageというHashiCorp社独自の言語により記述します。
 | Sentinel languageの詳細については、Terraformの製品マニュアルを参照してください。
 
 

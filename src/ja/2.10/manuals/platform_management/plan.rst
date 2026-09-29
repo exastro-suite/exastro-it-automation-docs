@@ -95,7 +95,7 @@
 
 .. note:: ita.organization.common.maintenance_records_limitについて
 
-   | Coudのファイルストレージを利用した環境下では、ファイルの扱いで処理件数が多い更新(削除)応答エラーになる場合があります。その際は最大処理件数を小さくすることで応答エラーを回避することも可能となります。
+   | Cloudのファイルストレージを利用した環境下では、ファイルの扱いで処理件数が多い更新(削除)応答エラーになる場合があります。その際は最大処理件数を小さくすることで応答エラーを回避することも可能となります。
 
 .. tip::
 
@@ -773,7 +773,7 @@
 インストール時の設定
 ^^^^^^^^^^^^^^^^^^^^
 
-| Exastro インストール時に指定した環境変数（docker-compose版では.env、Kubenetes版では :ref:`helm_option_ita-migration` ）によって設定されます。
+| Exastro インストール時に指定した環境変数（docker-compose版では.env、Kubernetes版では :ref:`helm_option_ita-migration` ）によって設定されます。
 | 未定義の場合は既定値が使用されます。
 
 .. list-table:: システム全体の設定項目名一覧
@@ -783,7 +783,7 @@
    * - 項目名
      - 既定値
      - docker-compose版
-     - Kubenetes版
+     - Kubernetes版
    * - | ita.system.ansible.execution_limit
      - | 25
      - | SYSTEM_ANSIBLE_EXECUTION_LIMIT

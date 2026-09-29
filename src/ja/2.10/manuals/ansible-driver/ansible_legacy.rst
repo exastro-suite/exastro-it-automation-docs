@@ -132,7 +132,7 @@ Ansible-Legacy作業フロー
    #. | **実行環境管理の登録（必要に応じて実施）**
       | :menuselection:`Ansible共通 --> 実行環境定義テンプレート管理` で登録した実行環境定義ファイル(execution-environment.yml)のテンプレートファイルと :menuselection:`パラメータシート「実行環境パラメータ定義」` の紐付を登録します。
       | 詳細は「 :ref:`ansible_execution_environment_list` 」を参照してください。
-      | 尚。ITAをインストールすると、 :menuselection:`パラメータシート「実行環境パラメータ定義」` と :menuselection:`Ansible共通 --> 実行環境定義テンプレート管理` の紐付が登録されます。
+      | 尚、ITAをインストールすると、 :menuselection:`パラメータシート「実行環境パラメータ定義」` と :menuselection:`Ansible共通 --> 実行環境定義テンプレート管理` の紐付が登録されます。
 
    #. | **Movementの登録**
       | :menuselection:`Ansible-Legacy --> Movement一覧` から、作業用のMovementを登録します。
@@ -322,22 +322,22 @@ Movement一覧
       |           |                         |                                                                                   |           |              |                                                       |
       |           +-------------+-----------+-----------------------------------------------------------------------------------+-----------+--------------+-------------------------------------------------------+
       |           | Ansible \   | 実行環境  | :menuselection:`Ansible共通 --> 実行環境定義` に登録されている :menuselection:`実\| ー        | リスト選択   | 説明欄記載のとおり。                                  |
-      |           | Execution \ |           | 行環境名` が表示されます。Ansible Execution Agent内にansibe-builderで実行環境     |           |              |                                                       |
+      |           | Execution \ |           | 行環境名` が表示されます。Ansible Execution Agent内にansible-builderで実行環境    |           |              |                                                       |
       |           | Agent \     |           | （コンテナ）をbuildする際に使用するテンプレートファイルとパラメータシート「実行\  |           |              |                                                       |
       |           | 利用情報    |           | 環境パラメータ定義」が紐付いている実行環境名を選択します。                        |           |              |                                                       |
       |           |             |           | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行\    |           |              |                                                       |
       |           |             |           | エンジン` で「Ansible Execution Agent」\                                          |           |              |                                                       |
       |           |             |           | を選択した場合、必須入力。                                                        |           |              |                                                       |
       |           +             +-----------+-----------------------------------------------------------------------------------+-----------+--------------+-------------------------------------------------------+
-      |           |             | ansible-\ | Ansible Execution Agent内にansibe-builderで実行環境をbuildする際の\               | ー        | 手動入力     | 最大長4000バイト                                      |
-      |           |             | builder\  | ansibe-builderのパラメータを入力します。                                          |           |              |                                                       |
-      |           |             | パラメ\   | 詳細については、 ansibe-builderのマニュアルを参照ください。                       |           |              |                                                       |
+      |           |             | ansible-\ | Ansible Execution Agent内にansible-builderで実行環境をbuildする際の\              | ー        | 手動入力     | 最大長4000バイト                                      |
+      |           |             | builder\  | ansible-builderのパラメータを入力します。                                         |           |              |                                                       |
+      |           |             | パラメ\   | 詳細については、 ansible-builderのマニュアルを参照ください。                      |           |              |                                                       |
       |           |             | ータ      |                                                                                   |           |              |                                                       |
       |           |             |           |                                                                                   |           |              |                                                       |
       |           |             |           |                                                                                   |           |              |                                                       |
       |           +-------------+-----------+-----------------------------------------------------------------------------------+-----------+--------------+-------------------------------------------------------+
       |           | Ansible \   | 実行\     | Ansible Automation Controllerに構築されている実行環境が表示されます。             | ー        | リスト選択   | 説明欄記載のとおり。                                  |
-      |           | Automatio \ | 環境※2    | 使用する実行環境を選択します。                                                    |           |              |                                                       |
+      |           | Automation \| 環境※2    | 使用する実行環境を選択します。                                                    |           |              |                                                       |
       |           | Controller\ |           | 未選択の場合は、Ansible Automation Controller\                                    |           |              |                                                       |
       |           | 利用情報    |           | に設定されているデフォルトの実行環境が使用されます。                              |           |              |                                                       |
       |           |             |           |                                                                                   |           |              |                                                       |
@@ -362,7 +362,7 @@ Playbook素材集
 ~~~~~~~~~~~~~~
 
 #. | ユーザが作成したPlaybookのメンテナンス（閲覧/登録/更新/廃止）を行います。
-   | Playbookの記述など関しては、「 :ref:`ansible_legacy_write_playbook_ansible_legacy` 」を参照してください。
+   | Playbookの記述などに関しては、「 :ref:`ansible_legacy_write_playbook_ansible_legacy` 」を参照してください。
    | 利便性の向上を目的としたサンプルPlaybookが初期状態でPlaybook素材集に登録されています。
    | サンプルPlaybookのPlaybook素材名は、先頭に「~[Exastro standard]」が付与されています。
    | サンプルPlaybookをMovementと紐付けることにより、利用することが出来ます。
@@ -773,7 +773,7 @@ Movement-Playbook紐付
 
    作業実行画面
 
-| 実行種別ついて以下に説明します。
+| 実行種別について以下に説明します。
 
 #. | **作業実行**
    | :guilabel:`作業実行` ボタンをクリックすると、作業対象に対して構築作業を実行します。
@@ -786,7 +786,7 @@ Movement-Playbook紐付
    | :guilabel:`パラメータ確認` ボタンをクリックすると、実際に作業対象に対して構築作業をせず、 :menuselection:`Ansible-Legacy --> 代入値自動登録設定` に登録してある情報から作業対象のオペレーションとMovementに紐付く情報を :menuselection:`Ansible-Legacy --> 代入値管理` と :menuselection:`Ansible-Legacy --> 作業対象ホスト` に反映し、確認することが出来ます。
 
 .. tip:: |  **予約日時の指定**
-   | 「予約日時」を入力することで、実行を予約することがきます。
+   | 「予約日時」を入力することで、実行を予約することができます。
    | 「予約日時」には、未来の日時のみ入力可能です。
 
 
@@ -1091,7 +1091,7 @@ tasksセクション
        mode:  "{{ item.mode is none |ternary('0654', item.mode) }}"
 
 
-| アップロードさたPlaybookは、 :menuselection:`Ansible-Legacy --> Movement-Playbook紐付` の :menuselection:`インクルード順序` に従いincludeします。
+| アップロードされたPlaybookは、 :menuselection:`Ansible-Legacy --> Movement-Playbook紐付` の :menuselection:`インクルード順序` に従いincludeします。
 
 .. figure:: /images/ja/diagram/legacy_session.png
    :align: center
@@ -1278,18 +1278,18 @@ Legacy結果データに保存されるファイル一覧
      -
    * - error.log
      - | 作業実行時のエラーメッセージ出力先ファイル
-       | Ansible-playbbokコマンドの標準エラー出力の出力先ファイル
+       | ansible-playbookコマンドの標準エラー出力の出力先ファイル
        | 作業実行確認のエラーログに表示される内容
      - 〇
      - 〇
      - 〇
    * - exec.log.org
-     - Ansible-playbbokコマンドの標準出力の出力先ファイル
+     - ansible-playbookコマンドの標準出力の出力先ファイル
      - 〇
      - 〇
      - 〇
    * - exec.log
-     - | Aexec.log.orgを加工したファイル
+     - | exec.log.orgを加工したファイル
        | 作業実行確認の実行ログに表示される内容
      - 〇
      - 〇

@@ -266,7 +266,7 @@ Ansible Playbook 登録
        - "{{ action }}"
      when: item.1 == 'absent'
 
-| :menuselection:`Ansible-Legacy --> Playbook素材集` から、から、上記のPlaybookを登録します。
+| :menuselection:`Ansible-Legacy --> Playbook素材集` から、上記のPlaybookを登録します。
 
 .. figure:: /images/learn/quickstart/Legacy_scenario2/Ansible-Playbook登録.png
    :width: 1200px
@@ -452,7 +452,7 @@ Movement と Ansible Playbook の紐付け
 
 | これだけの項目の設定に設定値を入力するのは、 Web 画面の操作ではかなり苦労することでしょう。
 | このような大量のデータを一度に登録するような場合は、全件ダウンロード・ファイル一括登録を使って、ファイルからデータを投入する方法が適切です。
-| :menuselection:`Ansible-Legacy --> 代入値自動登録設定 --> 全件ダウンロード・ファイル一括登録` から、新規登録用ファイルをダウンロードします。ダウンロードしたファイルを編集し、ファイル一括登録にてファイルを登録すると代入値自動登録設定が簡単に行うことが出来ます。
+| :menuselection:`Ansible-Legacy --> 代入値自動登録設定 --> 全件ダウンロード・ファイル一括登録` から、新規登録用ファイルをダウンロードします。ダウンロードしたファイルを編集し、ファイル一括登録にてファイルを登録すると代入値自動登録設定を簡単に行うことが出来ます。
 
 .. figure:: /images/learn/quickstart/Legacy_scenario2/代入値自動登録設定_一括登録Excel.png
    :width: 1200px

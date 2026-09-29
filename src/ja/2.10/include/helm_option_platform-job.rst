@@ -45,7 +45,7 @@
      - 可
      - "5"
    * - exastro-platform.platform-job.extraEnv.SUB_PROCESS_MAX_CANCEL_TIMEOUT
-     - JOBを処理するプロセスを再起動を実施する、JOBの中断処理のタイムアウト発生回数
+     - JOBを処理するプロセスの再起動を実施する、JOBの中断処理のタイムアウト発生回数
      - 可
      - "10"
    * - exastro-platform.platform-job.extraEnv.JOB_STATUS_WATCH_INTERVAL_SECONDS

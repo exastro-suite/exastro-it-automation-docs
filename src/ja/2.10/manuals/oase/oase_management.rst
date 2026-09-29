@@ -235,7 +235,7 @@ OASE管理
       |                                    | クエリパラメータ(接続先に追加される、"?"以降の値）\    |              |              |                 |
       |                                    | として使用されます。                                   |              |              |                 |
       |                                    |                                                        |              |              |                 |
-      |                                    | ・リクエストメソッドがPOSTの場、\                      |              |              |                 |
+      |                                    | ・リクエストメソッドがPOSTの場合、\                    |              |              |                 |
       |                                    | リクエストのペイロードとして使用されます。             |              |              |                 |
       |                                    |                                                        |              |              |                 |
       |                                    | ・使用可能な予約変数の詳細は\                          |              |              |                 |
@@ -709,12 +709,12 @@ ITAの画面で見た場合
 
 レスポンスキー
 ^^^^^^^^^^^^^^
-| レスポンスのペイロードから、イベントを抽出すためのキーを :dfn:`レスポンスキー` といいます。
+| レスポンスのペイロードから、イベントを抽出するためのキーを :dfn:`レスポンスキー` といいます。
 
 .. note::
    | ・監視ソフトは、監視対象マシンで発出されたアラートやメトリックス（状態）をHTTP APIで取得できる機能があり、
    | ・エージェントは、そのHTTP APIを利用して、アラートやメトリックスを取得します。
-   | ・但し、監視ソフトが返却するレスポンスのぺーロードが、JSON形式のみ、エージェントは処理対象とします。
+   | ・但し、監視ソフトが返却するレスポンスのペイロードが、JSON形式のみ、エージェントは処理対象とします。
 
 |  :dfn:`レスポンスキー` として指定できる項目は、
 
@@ -739,7 +739,7 @@ JMESPath
 | 　と指定します。
 
 | JMESPathの指定方法について、
-| Azure RESET-API `Get Metric for data <https://learn.microsoft.com/ja-jp/rest/api/monitor/metrics/list?view=rest-monitor-2023-10-01&tabs=HTTP>`_ のSample Responseの一部を利用して説明します。
+| Azure REST API `Get Metric for data <https://learn.microsoft.com/ja-jp/rest/api/monitor/metrics/list?view=rest-monitor-2023-10-01&tabs=HTTP>`_ のSample Responseの一部を利用して説明します。
 
 .. code-block:: json
    :linenos:
@@ -898,7 +898,7 @@ JMESPath
 |  :dfn:`イベントIDキー` は、 :dfn:`レスポンスキー` で抽出した結果に存在するキーを指定します。
 
 | :dfn:`イベントIDキー` も、 :dfn:`JMESPath形式` で指定します。
-| 上記Azure RESET-APIのJSONで、 :dfn:`レスポンスキー` と :dfn:`レスポンスリストフラグ` を、下記の通り指定した場合、
+| 上記Azure REST APIのJSONで、 :dfn:`レスポンスキー` と :dfn:`レスポンスリストフラグ` を、下記の通り指定した場合、
 
 .. list-table::
  :widths: 1, 1
@@ -1142,7 +1142,7 @@ Zabbix
      }
 
   | <Zabbix APIトークン>を、  :menuselection:`OASE管理 --> イベント収集` の :menuselection:`パラメータ` の <Zabbix APIトークン> の箇所に貼り付けます。
-  | ※ <Zabbix APIトークン>作成は、ブラウザでもを作成できます。
+  | ※ <Zabbix APIトークン>作成は、ブラウザでも作成できます。
   | ブラウザでログイン後、サイドメニュー > ユーザー設定 > APIトークン の :guilabel:`APIトークンの作成` で作成できます。
 
 Grafana
@@ -1510,7 +1510,7 @@ BODYについて
 
 - | 使用するパラメータについては、ServiceNow の 利用するアプリケーションに応じて、 マニュアルや、REST API リファレンスを参照してください。
 
-  - `ServiceNowテーブルAPIマニュアル <https://www.servicenow.com/docs/ja-JP/bundle/washingtondc-api-reference/page/integrate/inbound-rest/concept/c_TableAPI.html>`_ 参照してください
+  - `ServiceNowテーブルAPIマニュアル <https://www.servicenow.com/docs/ja-JP/bundle/washingtondc-api-reference/page/integrate/inbound-rest/concept/c_TableAPI.html>`_ を参照してください
 
   - REST APIエクスプローラー
 
@@ -1624,7 +1624,7 @@ ServiceNowのインシデントテーブルにレコード登録を行う設定�
 
    - 使用するパラメータについては、ServiceNow の 利用するアプリケーションに応じて、 マニュアルや、REST API リファレンスを参照してください。
 
-     - `ServiceNowテーブルAPIマニュアル <https://www.servicenow.com/docs/ja-JP/bundle/washingtondc-api-reference/page/integrate/inbound-rest/concept/c_TableAPI.html>`_ 参照してください
+     - `ServiceNowテーブルAPIマニュアル <https://www.servicenow.com/docs/ja-JP/bundle/washingtondc-api-reference/page/integrate/inbound-rest/concept/c_TableAPI.html>`_ を参照してください
 
      - REST APIエクスプローラー
 

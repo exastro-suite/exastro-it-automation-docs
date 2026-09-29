@@ -10,7 +10,7 @@ Terraform Cloud/EP driver
 コンソールメニュー構成
 ======================
 
-| 本章では、Terraform Cloud/EP driverで利用するのメニュー構成について説明します。
+| 本章では、Terraform Cloud/EP driverで利用するメニュー構成について説明します。
 
 メニュー/画面一覧
 -----------------
@@ -63,7 +63,7 @@ Terraform Cloud/EP driver
       |       |              |              |                                        |
       +-------+              +--------------+----------------------------------------+
       | 7     |              | Policy \     | Policy Setを管理します                 |
-      |       |              | set管理      | Policy SetはPolicyおよび。\            |
+      |       |              | set管理      | Policy SetはPolicyおよび\              |
       |       |              |              | Workspaceと紐づけることで、\           |
       |       |              |              | 作業実行時に対象のWorkspace\           |
       |       |              |              | に対してPolicyを有効にします。\        |
@@ -117,11 +117,11 @@ Terraform Cloud/EP driver
       |       |              | 変数管理\    |                                        |
       |       |              | (※1)         |                                        |
       +-------+              +--------------+----------------------------------------+
-      | 20    |              | Movement-\   | Movmentと変数の紐付を管理します。      |
+      | 20    |              | Movement-\   | Movementと変数の紐付を管理します。     |
       |       |              | 変数紐付\    |                                        |
       |       |              | (※1)         |                                        |
       +-------+              +--------------+----------------------------------------+
-      | 21    |              | Movement-\   | Movmentとメンバー変数の紐付\           |
+      | 21    |              | Movement-\   | Movementとメンバー変数の紐付\          |
       |       |              | メンバー\    | を管理します。                         |
       |       |              | 変数紐付\    |                                        |
       |       |              | (※1)         |                                        |
@@ -364,7 +364,7 @@ Terraform Cloud/EP メニュー
       +-----------------+--------+--------+------------------------------+-----------+--------------+-----------------+
       | 状態監視周期（単位ミリ秒）        | 「:ref:`terraform_cloud_ep\  | ○         | 手動入力     | 最小値1000\     |
       |                                   | _check_operation_status`」\  |           |              | ミリ秒          |
-      |                                   | 表示されるログのリフレッ\    |           |              |                 |
+      |                                   | で表示されるログのリフレッ\  |           |              |                 |
       |                                   | シュ間隔を入力します。通常\  |           |              |                 |
       |                                   | は1000ミリ秒程度が推奨値\    |           |              |                 |
       |                                   | です。                       |           |              |                 |
@@ -451,7 +451,7 @@ Organization管理
       |                                   | を入力します。               |           |              |                 |
       +-----------------+--------+--------+------------------------------+-----------+--------------+-----------------+
       | Terraform連携   | 状態チェック    | 対象のOrganizationと連携先\  | ー        | ボタン       | ー              |
-      |                 |                 | Terraformとの連携状態を。\   |           |              |                 |
+      |                 |                 | Terraformとの連携状態を\     |           |              |                 |
       |                 |                 | チェックします。             |           |              |                 |
       |                 |                 |                              |           |              |                 |
       |                 |                 | ボタン押下後、ポップアップ\  |           |              |                 |
@@ -557,7 +557,7 @@ Workspace管理
       |                                   | ンが自動的に適用されます。   |           |              |                 |
       +-----------------+--------+--------+------------------------------+-----------+--------------+-----------------+
       | Terraform連携   | 状態チェック    | 対象のWorkspaceと連携先\     | ー        | ボタン       | ー              |
-      |                 |                 | Terraformとの連携状態を。\   |           |              |                 |
+      |                 |                 | Terraformとの連携状態を\     |           |              |                 |
       |                 |                 | チェックします。             |           |              |                 |
       |                 |                 |                              |           |              |                 |
       |                 |                 | ボタン押下後、ポップアップ\  |           |              |                 |
@@ -667,7 +667,7 @@ Movement一覧
       |                       | ません。  |           |           |           |
       +-----------+-----------+-----------+-----------+-----------+-----------+
       | Terra\    | Organ\    | 「:ref:`\ | ○         | リスト選\ |           |
-      | formm\    | ization:\ | terrafor\ |           | 択        |           |
+      | form\     | ization:\ | terrafor\ |           | 択        |           |
       | 利用情報  | Workspace | m_cloud_\ |           |           |           |
       |           |           | ep_works\ |           |           |           |
       |           |           | pace_l\   |           |           |           |
@@ -1199,7 +1199,7 @@ Movement-Module紐付
       +-----------------+--------+--------+------------------------------+-----------+--------------+-----------------+
 
 | ※1:パラメータシートのバンドルが有効の場合のみ必須。
-| ※2:選択した「Movement名:変数名」のメンバー変数が存在する場合は必須し、かつ「HCL設定」が「False」の場合のみ必須。
+| ※2:選択した「Movement名:変数名」のメンバー変数が存在し、かつ「HCL設定」が「False」の場合のみ必須。
 | ※3:選択した「Movement名:変数名」および「Movement名:変数名:メンバー変数」が代入順序を必要とする形式である場合のみ必須。
 
 .. note:: | **バンドルが有効なパラメータシートの場合**
@@ -1589,10 +1589,10 @@ Movement-Module紐付
 
 .. _terraform_cloud_ep_linked_terraform_management:
 
-連携先Terrraform管理
+連携先Terraform管理
 ********************
 
-#. | :menuselection:`Terraform Cloud/EP-->連携先Terrraform管理` では「:ref:`terraform_cloud_ep_interface_information`」に登録した情報をもとにTerraformへ接続し、Terraformに登録されているOrganizaiton/Workspace/Policy/ Policy setの一覧をそれぞれ表示できます。
+#. | :menuselection:`Terraform Cloud/EP-->連携先Terraform管理` では「:ref:`terraform_cloud_ep_interface_information`」に登録した情報をもとにTerraformへ接続し、Terraformに登録されているOrganization/Workspace/Policy/ Policy setの一覧をそれぞれ表示できます。
    | 表示された一覧からITAに登録されている対象を、Terraformから削除することができます。
    | Workspaceごとに構成・管理されたリソースの削除を実行することができます。
    | また、Policy setに紐付いたWorkspaceおよびPolicyの紐付けを解除することができます。
@@ -1600,9 +1600,9 @@ Movement-Module紐付
 
    .. figure:: /images/ja/terraform_cloud_ep_driver/operation_method_explanation/linked_terraform_management.gif
       :width: 800px
-      :alt: サブメニュー画面（連携先Terrraform管理）
+      :alt: サブメニュー画面（連携先Terraform管理）
 
-      サブメニュー画面（連携先Terrraform管理）
+      サブメニュー画面（連携先Terraform管理）
 
 #. | 各一覧取得により表示される項目一覧は以下の通りです。
 

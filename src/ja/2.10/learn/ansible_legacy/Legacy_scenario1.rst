@@ -87,7 +87,7 @@
 --------------
 
 | Exastro IT Automation では、Movement という単位で作業を管理します。Movementは作業手順書における作業項目に該当します。
-| Movement は、Ansible Playbook のような IaC (Infrastrucure as Code) を紐付けたり、IaC 内の変数とパラメータシートの設定値を紐付ける際に利用します。
+| Movement は、Ansible Playbook のような IaC (Infrastructure as Code) を紐付けたり、IaC 内の変数とパラメータシートの設定値を紐付ける際に利用します。
 
 | :menuselection:`Ansible-Legacy --> Movement一覧` から、ホスト名設定のための Movement を登録します。
 
@@ -253,7 +253,7 @@ Movement と Ansible Playbook の紐付け
 作業概要の作成(1回目)
 ---------------------
 
-| 具体的なパラメータの設定や作業手順を考える前に、作業計画を立てるところから初めます。
+| 具体的なパラメータの設定や作業手順を考える前に、作業計画を立てるところから始めます。
 | まずは、いつ、どこの機器に対して、何を、どうするかといった情報を簡単に整理しておきましょう。
 
 .. list-table:: 作業の方針
@@ -373,7 +373,7 @@ Movement と Ansible Playbook の紐付け
 作業概要の作成(2回目)
 ---------------------
 
-| 具体的なパラメータの設定や作業手順を考える前に、作業計画を立てるところから初めます。
+| 具体的なパラメータの設定や作業手順を考える前に、作業計画を立てるところから始めます。
 | まずは、いつ、どこの機器に対して、何を、どうするかといった情報を簡単に整理しておきましょう。
 
 .. list-table:: 作業の方針
@@ -518,5 +518,5 @@ Movement と Ansible Playbook の紐付け
 ======
 
 | RHEL8 サーバに対してホスト名を設定するシナリオを通して、Exastro IT Automation の基本的な操作方法を学習しました。
-| また、Exastro IT Automation により自動化の最大のメリットである、繰り返し作業による作業の効率化について学習しました。
+| また、Exastro IT Automation による自動化の最大のメリットである、繰り返し作業による作業の効率化について学習しました。
 | :doc:`次のシナリオ <../ansible_legacy/Legacy_scenario2>` では、より実用的なパラメータシートの管理方法について紹介をします。

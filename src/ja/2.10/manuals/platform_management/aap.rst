@@ -571,7 +571,7 @@ Ansible Automation Controller 連携の確認
 Ansible Automation Controller 登録を再実行する場合
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-| Ansible Automation Controller 登録の再実行する場合は、設定ファイルを編集後、再度スクリプトを実行して下さい。
+| Ansible Automation Controller 登録を再実行する場合は、設定ファイルを編集後、再度スクリプトを実行して下さい。
 
 .. code-block:: bash
    :caption: コマンド

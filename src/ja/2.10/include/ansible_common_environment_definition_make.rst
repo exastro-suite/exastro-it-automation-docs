@@ -52,7 +52,7 @@
    
    #. | パラメータシート名（rest）は、先頭が「execution_environment_parameter_definition_sheet」で始まる名称にしてください。
    #. | 作成対象は、データシートを選択してください。
-   #. | パラメータシートの項目に以下の項目を含んでください。
+   #. | パラメータシートの項目に以下の項目を含めてください。
 
       .. list-table::
          :header-rows: 1

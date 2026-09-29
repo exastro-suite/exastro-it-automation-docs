@@ -96,7 +96,7 @@ Ansible作業時のビルドにカスタマイズ工程を追加する例
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 | 「exastro/exastro-it-automation-by-ansible-agent」の2.6.0には標準で下記のようなコレクションが含まれています。
-| そのため下記以外のコレクションを追加する場合、及びコレクションに必要なライブラリをインストール場合の手順となります。
+| そのため下記以外のコレクションを追加する場合、及びコレクションに必要なライブラリをインストールする場合の手順となります。
 
 .. code-block:: console
    :caption:  :command:`ansible-galaxy collection list` で確認されたコレクション
@@ -222,8 +222,8 @@ Ansible作業時にカスタマイズを施したイメージを使用する例
    [user01@ita-sv ~]$ docker images | grep exastro-ansible-agent-custom
    exastro-ansible-agent-custom                      devel    18493d96333g   12 hours ago   953MB
 
-| なお、Kubenetesではタグ名が「latest」又は「none」であるとローカルイメージを使用しないため、
-| Kubenetesで使用する場合はこの時点でタグ名を「latest」又は「none」以外としておくことを推奨します。
+| なお、Kubernetesではタグ名が「latest」又は「none」であるとローカルイメージを使用しないため、
+| Kubernetesで使用する場合はこの時点でタグ名を「latest」又は「none」以外としておくことを推奨します。
 | （参考：https://kubernetes.io/docs/concepts/containers/images/#imagepullpolicy-defaulting）
 
 .. code-block:: console
@@ -305,8 +305,8 @@ docker-compose版
 
 
 
-Kubenetes版
-~~~~~~~~~~~
+Kubernetes版
+~~~~~~~~~~~~
 
 | 予め、クラスタ内の全てのノードに対して :file:`/tmp/custom-docker-image.tar.gz` を転送します。
 

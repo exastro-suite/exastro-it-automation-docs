@@ -32,8 +32,8 @@
      - | 認証方式の選択
        | Ansible Core または Ansible Automation Controller から作業対象の機器へ接続する際の認証方式を選択します。
      - | :kbd:`パスワード認証` : ログインパスワードの管理で●の選択と、ログインパスワードの入力が必須です。
-       | :kbd:`鍵認証(パスフレーズなし)` : SSH 秘密鍵ファイル(id_ras)のアップロードが必須です。
-       | :kbd:`鍵認証(パスフレーズあり)` : SSH 秘密鍵ファイル(id_ras)のアップロードと、パスフレーズの入力が必須です。
+       | :kbd:`鍵認証(パスフレーズなし)` : SSH 秘密鍵ファイル(id_rsa)のアップロードが必須です。
+       | :kbd:`鍵認証(パスフレーズあり)` : SSH 秘密鍵ファイル(id_rsa)のアップロードと、パスフレーズの入力が必須です。
    * - initial_data.ansible_automation_controller_host_list[*].parameter.user
      - | Ansible Automation Controller に SSH 接続する場合のユーザ名を指定。
        | プロジェクトパス(/var/lib/awx/projects)への書き込み制限が必要
@@ -91,7 +91,7 @@
        | ※ 実行エンジンが Ansible Automation Controller の場合に入力必須
      - 認証トークン文字列
    * - initial_data.parameter.delete_runtime_data
-     - | 作業実行時に Exastro IT Automation と Ansible Automation Controller 内に一時的に生成されるデータリソースを作業終了後に削するかを選択します。
+     - | 作業実行時に Exastro IT Automation と Ansible Automation Controller 内に一時的に生成されるデータリソースを作業終了後に削除するかを選択します。
        | ※ 実行エンジンが Ansible Automation Controller の場合に入力必須
      - | :kbd:`True` : 作業終了時にリソースを削除する
        | :kbd:`False` : 作業終了時にリソースを削除しない

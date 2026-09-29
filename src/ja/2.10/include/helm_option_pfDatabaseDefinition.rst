@@ -23,7 +23,7 @@
      - | :program:`"mariadb"` (デフォルト): MariaDB を利用
        | :program:`"mysql"`: MySQL を利用
    * - global.pfDatabaseDefinition.config.DB_HOST
-     - | 認証機能用データベース利用するDB
+     - | 認証機能用データベースで利用するDB
        | デフォルト状態では、同一の Kubernetes クラスタ内にデプロイされるコンテナを指定しています。
        | クラスタ外部の DB を利用する場合には設定が必要となります。
      - 可 (外部データベース利用時)

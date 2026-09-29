@@ -97,6 +97,6 @@
    +-------------------------------------------------------------------+-----------------------+-----------------------------------------------+
 
 .. note::
-   | <storage>: Ansible Execution Agentインストール時にSpecify full path for the data storage locationで設定したバス
+   | <storage>: Ansible Execution Agentインストール時にSpecify full path for the data storage locationで設定したパス
    | <org>:Ansible Execution Agentインストール時にInput ORGANIZATION_ID.で設定したORGANIZATION ID
    | <ws>:Ansible Execution Agentインストール時にInput WORKSPACE_ID.で設定したWORKSPACE ID

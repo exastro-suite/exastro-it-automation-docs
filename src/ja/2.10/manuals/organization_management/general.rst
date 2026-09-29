@@ -45,7 +45,7 @@
       :align: left
       :class: with-border-thin
 
-#. | アカウント情報の更新し、 :guilabel:`更新` ボタンを押下します。
+#. | アカウント情報を更新し、 :guilabel:`更新` ボタンを押下します。
 
    .. figure:: /images/ja/diagram/login3.png
       :alt: 初回ログイン

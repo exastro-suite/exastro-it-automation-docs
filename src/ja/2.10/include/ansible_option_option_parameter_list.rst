@@ -47,13 +47,13 @@
      - :menuselection:`テンプレート` の :menuselection:`フォーク` にFORKSの値が設定される。
      - | ・FORKSには数値を指定
        | ・複数定義した場合、最後に定義したパラメータが有効
-       | 例：-f 1-forks=10の場合、--forks=10が有効となる
+       | 例：-f 1 --forks=10の場合、--forks=10が有効となる
        | ・数値以外が指定された場合、エラーとなる
    * - | -l
        | --limit
      - | -l SUBSET
        | --limit=SUBSET
-     - :menuselection:`テンプレート` の :menuselection:`制限` にSUBMITの値が設定される。
+     - :menuselection:`テンプレート` の :menuselection:`制限` にSUBSETの値が設定される。
      - | ・SUBSET:機器一覧にあるホスト名
        | ・複数定義した場合、最後に定義したパラメータが有効
    * - | -e

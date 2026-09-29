@@ -19,7 +19,7 @@
      - 不可
      - "8000"
    * - exastro-it-automation.ita-migration.extraEnv.SYSTEM_ANSIBLE_EXECUTION_LIMIT
-     - Exastro 共通基盤のリソース既定値用の初期値(システム全体のメAnsible driver の Movement 最大実行数の既定値)
+     - Exastro 共通基盤のリソース既定値用の初期値(システム全体のAnsible driver の Movement 最大実行数の既定値)
      - 不可
      - "25"
    * - exastro-it-automation.ita-migration.extraEnv.ORG_ANSIBLE_EXECUTION_LIMIT_DEFAULT
