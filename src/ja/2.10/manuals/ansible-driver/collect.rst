@@ -218,6 +218,8 @@
      - VAR_FILE_NAME : ‘/<上位ディレクトリ>/_parameters_file/localhost/<階層X>/<ファイル名>’
      -
 
+.. note:: | アップロード対象ファイルは、拡張子を含めたファイル名で指定してください。
+
 .. tip:: | ファイル名指定時、該当するファイルが複数存在する場合、対象となるファイルは、ランダムとなります。
          | ファイルパス指定(後方一致)時、該当するファイルが複数ある場合、対象となるファイルは、ランダムとなります。
 
@@ -612,6 +614,9 @@ Ansible-Legacy、Ansible-Pioneer、Ansible-LegacyRole
      - 収集機能実行のログをダウンロード
      -
 
+.. note:: | ソースファイルで指定したアップロード対象ファイルが \_parameters_file 配下に存在しない場合、該当するファイルアップロード項目は空で登録されます。
+          | すでに登録済みのレコードを更新する場合も、空で上書きされます。
+
 .. list-table:: 収集状況詳細
    :header-rows: 1
    :align: left
@@ -701,6 +706,17 @@ Ansible-Legacy、Ansible-Pioneer、Ansible-LegacyRole
    {'item_1': [{'status_code': '', 'msg_args': '', 'msg': 'Regular expression error (1,Value:sample_value)'}]}
    [Process] Failed to register or update data in CMDB. (1/1)
    Collect END (host name: exastro-test-3 file name: ['Ansible_conf'])
+
+
+.. code-block:: text
+   :caption: ログファイル出力例 - 収集済み(通知あり)[アップロード対象ファイルなし]
+
+   Collect START (host name: exastro-test-1 file name: ['Ansible_conf'])
+   [Process] The specified file was not found in the collected files. The item is registered as empty. (File name: os_info Host name: exastro-test-1 Variable name: VAR_COLLECT Member variable: [0].file)
+   REST DATA (host name: exastro-test-1 menu ID: collect_001 operation NO: 4001e182-51d2-4918-96e0-5981c4dc6d5f)
+   Collect END (host name: exastro-test-1 file name: ['Ansible_conf'])
+
+.. tip:: | Member variable には、変数が配列やハッシュ構造の場合に対象の要素（例: [0].file）が出力されます。通常変数の場合は空となります。
 
 
 .. code-block:: text
