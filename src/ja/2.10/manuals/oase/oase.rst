@@ -1259,7 +1259,7 @@ OASE メニュー
 
 1. | :menuselection:`OASE --> 評価結果` では、評価結果を閲覧できます。
 
-.. figure:: /images/ja/oase/oase/evaluation_results_menu.png
+.. figure:: /images/ja/oase/oase/evaluation_results_menu.v2-10.drawio.png
    :width: 800px
    :alt: 評価結果画面
 
@@ -1276,7 +1276,7 @@ OASE メニュー
    * - 項目
      - 説明
    * - アクション履歴ID
-     - ラベルキーを半角英数字と利用可能な記号(_-)で入力できます。
+     - 自動採番のため編集不可。
    * - ルールID
      - | [元データ]
        | OASE/ルール/ルールID
@@ -1295,12 +1295,20 @@ OASE メニュー
        | ・完了確認待ち
        | ・完了確認済み
        | ・完了確認却下済み
+       | ・起動失敗
+       |
+       | ※起動失敗：イベントからアクションへの連携情報（パラメータシート連携や対象ホストなど）の不備などにより、アクションを実行できなかった状態です。
    * - アクションID
      - | [元データ]
        | OASE/アクション/アクションID
    * - アクション名
      - | [元データ]
        | OASE/アクション/アクション名
+   * - アクション結果
+     - | アクションの起動・実行時の詳細をJSON形式で表示します。
+       | ・type：アクションの種別（Conductor）
+       | ・result：アクションの結果（true / false）。falseの場合、何らかの理由でアクションが正常に完了していないことを示します。
+       | ・msg：起動に失敗した理由などのメッセージ。メッセージがない場合はnullになります。
    * - ConductorインスタンスID
      - | [元データ]
        | Conductor/Conductor作業履歴/ConductorインスタンスID
@@ -1341,6 +1349,49 @@ OASE メニュー
      - YYYY/MM/DD HH:MM:SS
    * - 備考
      - 自由記述欄。レコードの廃止・復活時にも記載可能。
+
+
+.. note::
+   | ステータスおよびアクション結果の表示パターンは以下の通りです。
+
+   - アクションの起動（Conductorの登録）に失敗した場合：【ステータス：起動失敗】
+   - アクションが実行され、Conductorが正常終了した場合：【ステータス：完了】
+   - アクションが実行され、Conductorが異常終了した場合：【ステータス：完了（異常）】
+
+   | 完了（異常）の場合は、:guilabel:`詳細` ボタンから :menuselection:`Conductor --> 作業状態確認` に遷移し、原因を確認してください。
+
+   .. code-block:: none
+      :name: ステータスおよびアクション結果の表示例（ドキュメント用に整形済み）
+      :caption: ステータスおよびアクション結果の表示例（ドキュメント用に整形済み）
+      :lineno-start: 1
+
+      # アクションの起動（Conductorの登録）に失敗した場合：【ステータス：起動失敗】
+      # ※メッセージの内容は起動失敗の理由に応じて変わります。（以下は対象ホストに関する不備の場合の例）
+      {
+          "action": {
+              "msg": "Cannot execute the Action because host_name is invalid.(action_log_id=4a73447e-cd62-49ca-a0f1-cac3904bc8f7)",
+              "result": false,
+              "type": "Conductor"
+          }
+      }
+
+      # アクションが実行され、Conductorが正常終了した場合：【ステータス：完了】
+      {
+          "action": {
+              "msg": null,
+              "result": true,
+              "type": "Conductor"
+          }
+      }
+
+      # アクションが実行され、Conductorが異常終了した場合：【ステータス：完了（異常）】
+      {
+          "action": {
+              "msg": null,
+              "result": false,
+              "type": "Conductor"
+          }
+      }
 
 
 付録
@@ -1680,6 +1731,7 @@ OASE メニュー
   | 完了確認待ち     → Waiting for completion confirmation
   | 完了確認済み     → Completion confirmed
   | 完了確認却下済み → Completion confirmation rejected
+  | 起動失敗         → Launch failed
   |
 
 - | rule.action_label_inheritance_flag
