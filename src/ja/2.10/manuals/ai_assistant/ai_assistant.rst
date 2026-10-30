@@ -211,19 +211,23 @@ Movement実行表示画面
    :alt: Movement実行表示
 
 .. list-table:: Movement実行表示
-   :widths: 5 10
+   :widths: 1 5 10
    :header-rows: 1
    :align: left
 
-   * - 項目名
+   * - No
+     - 項目名
      - 説明
-   * - | :guilabel:` 作業状態確認``
+   * - | 1
+     - | :guilabel:` 作業状態確認``
      - | Movementの作業状況を表示する画面が表示されます。
        | 詳細は「 :ref:`ansible_legacy_check_operation_status` 」を参照してください。
-   * - | :guilabel:` 結果データ`
+   * - | 2
+     - | :guilabel:` 結果データ`
      - | ansibleで実行した結果をダウンロードします。
        | 詳細は「 :ref:`ansible_legacy_the_linkage_between_the_output_data_used_during_ansible_execution_and_ita_menu` 」を参照してください。
-   * - | :guilabel:` 緊急停止`
+   * - | 3
+     - | :guilabel:` 緊急停止`
      - | 実行中のMovementを緊急停止します。
 
 
@@ -334,31 +338,42 @@ AI解析ONのデータ連携
    :alt: 会話履歴画面
 
 .. list-table:: 会話履歴画面
-   :widths: 5 10
+   :widths: 1 5 10
    :header-rows: 1
    :align: left
 
-   * - 項目名
+   * - No 
+     - 項目名
      - 説明
-   * - | :guilabel:` 再読込` ボタン
+   * - | 1
+     - | :guilabel:` 再読込` ボタン
      - | 会話履歴の一覧を再表示します。
-   * - | :guilabel:` 削除` ボタン
+   * - | 2
+     - | :guilabel:` 削除` ボタン
      - | 選択した会話を削除します。
-   * - | :guilabel:` インポート` ボタン
+   * - | 3
+     - | :guilabel:` インポート` ボタン
      - | 会話のエクスポートファイル(json)をインポートします。
-   * - | :guilabel:` エクスポート` ボタン
+   * - | 4
+     - | :guilabel:` エクスポート` ボタン
      - | 選択した会話をエクスポートします。
-   * - | :guilabel:`` （再開）ボタン
+   * - | 5
+     - | :guilabel:`` （再開）ボタン
      - | 会話を再開します。
-   * - | :guilabel:`` （確認）ボタン
+   * - | 6
+     - | :guilabel:`` （確認）ボタン
      - | 会話を内容を確認します。
-   * - | :guilabel:`` （編集）ボタン
+   * - | 7
+     - | :guilabel:`` （編集）ボタン
      - | 会話をタイトルを変更します。
-   * - | タイトル
+   * - | 8
+     - | タイトル
      - | 会話をタイトルを表示します。会話のタイトルのデフォルトはチャットの１つ目のメッセージが入ります。
-   * - | メッセージ数
+   * - | 9
+     - | メッセージ数
      - | 会話のメッセージ数が表示されます。
-   * - | トークン数
+   * - | 10
+     - | トークン数
      - | 会話のトークン数が表示されます。
 
 .. _ai_assistant_lesson:
