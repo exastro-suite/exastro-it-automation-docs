@@ -15,6 +15,7 @@
    NAME                                                      READY   STATUS      RESTARTS   AGE
    ita-api-admin-dcf7c8768-wkwtx                             1/1     Running     0          3m34s
    ita-api-ansible-execution-receiver-7776748868-kt7b2       1/1     Running     0          3m34s
+   ita-api-mcp-server-5b76bf9f96-75t66                       1/1     Running     0          3m34s
    ita-api-oase-receiver-75588c6cff-jbmqr                    1/1     Running     0          3m34s
    ita-api-organization-645954959f-lpskv                     1/1     Running     0          3m34s
    ita-by-ansible-execute-dbd8d7dbc-8jk76                    1/1     Running     0          3m34s
@@ -36,6 +37,7 @@
    ita-by-terraform-cloud-ep-execute-bcc864cf9-4qqhx         1/1     Running     0          3m31s
    ita-by-terraform-cloud-ep-vars-listup-c4fcd48dc-g55rl     1/1     Running     0          3m31s
    ita-migration-2-6-1-suhp                                  0/1     Completed   0          24m
+   ita-qdrant-555c74d97-qkdsg                                1/1     Running     0          3m31s
    ita-web-server-5fcccd684f-lfxmm                           1/1     Running     0          3m31s
    keycloak-0                                                1/1     Running     0          3m30s
    mariadb-5945c44d44-djxkl                                  1/1     Running     0          3m31s

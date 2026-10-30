@@ -113,6 +113,23 @@ Amazon Bedrock (Login Cache)
        | ファイルの内容を転記するか、:guilabel:`` ボタンからファイルをアップロードします。
 
 .. tip::
+   | 認証情報 (Login Cache)の取得方法
+   | awsコマンドを実行可能なターミナル（Windowsの場合はPowerShell / Linuxの場合はsshで接続したターミナル）を起動します。
+
+   .. code-block:: shell
+      :caption: aws loginコマンド
+
+      aws login --remote
+   
+   | 画面の指示に従ってログインします。
+
+   .. code-block:: shell
+      :caption: 認証情報 (Login Cache)の表示
+
+      cat ~/.aws/login/cache/*.json
+
+   | 画面に認証情報 (Login Cache)に設定する値が表示されます。
+   |
    | aws loginを複数のアカウントで実施している場合、~/.aws/login/cache配下に複数のjsonファイルが存在することがあります。
    | その場合は、aws loginした時間帯のjsonファイルを使用してください。
 

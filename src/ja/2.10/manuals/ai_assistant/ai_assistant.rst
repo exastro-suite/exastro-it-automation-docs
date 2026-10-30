@@ -205,12 +205,30 @@ Movement実行表示画面
 ^^^^^^^^^^^^^^^^^^^^
 
 | Movementが実行されたときは以下の表示がされます。
-| TODO
 
-.. _ai_assistant_chat_end:
+.. figure:: /images/ja/ai_assistant/ai_assistant/movement-execute-1.png
+   :width: 1061px
+   :alt: Movement実行表示
 
-チャット終了画面
-^^^^^^^^^^^^^^^^
+.. list-table:: Movement実行表示
+   :widths: 5 10
+   :header-rows: 1
+   :align: left
+
+   * - 項目名
+     - 説明
+   * - | :guilabel:` 作業状態確認``
+     - | Movementの作業状況を表示する画面が表示されます。
+       | 詳細は「 :ref:`ansible_legacy_check_operation_status` 」を参照してください。
+   * - | :guilabel:` 結果データ`
+     - | ansibleで実行した結果をダウンロードします。
+       | 詳細は「 :ref:`ansible_legacy_the_linkage_between_the_output_data_used_during_ansible_execution_and_ita_menu` 」を参照してください。
+   * - | :guilabel:` 緊急停止`
+     - | 実行中のMovementを緊急停止します。
+
+
+チャット終了
+^^^^^^^^^^^^
 
 | チャット終了ボタンをクリックした際に表示されます。
 
