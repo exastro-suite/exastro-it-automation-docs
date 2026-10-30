@@ -1,0 +1,28 @@
+# Exastro IT Automation 2.4.1
+
+リリース日: 2024年07月09日
+
+## 機能追加
+
+### SSL verify有効化ビルド対応（[#1093](https://github.com/exastro-suite/exastro-platform/issues/1093)）
+SSL証明書の検証（SSL verify）を有効な状態でビルドできるように対応しました。これにより、セキュリティ要件の高い環境でも安全にシステムを構築・運用できるようになりました。
+
+## バグ修正
+
+### 収集・比較・初回起動・インストール関連の不具合修正（[#2437](https://github.com/exastro-suite/exastro-it-automation/issues/2437), [#2444](https://github.com/exastro-suite/exastro-it-automation/issues/2444), [#2516](https://github.com/exastro-suite/exastro-it-automation/issues/2516), [#2432](https://github.com/exastro-suite/exastro-it-automation/issues/2432), [#2492](https://github.com/exastro-suite/exastro-it-automation/issues/2492)）
+WIN_DirectorySetting収集結果やファイルタイプデータの比較結果の不整合、収集結果のyamlファイルに複数VARがある場合の登録不備、初回起動時のシステムエラー、ドライバインストール時のワークスペース情報未更新など、運用現場で発生しやすい不具合を修正しました。
+
+### OASE・比較機能の不具合修正（[#2504](https://github.com/exastro-suite/exastro-it-automation/issues/2504), [#2506](https://github.com/exastro-suite/exastro-it-automation/issues/2506), [#2503](https://github.com/exastro-suite/exastro-it-automation/issues/2503)）
+OASEのラベル付与メニューでラベル/キーが正しく参照されない問題や、比較機能で比較対象がない場合の表示不備、一度設定した基準日時がクリアできない問題など、日常運用の利便性に直結する不具合を修正しました。
+
+## 改善
+
+### アプリケーションログの改善（[#2507](https://github.com/exastro-suite/exastro-it-automation/issues/2507)）
+アプリケーションログの出力内容や可読性を改善しました。これにより、障害発生時の原因特定や運用監視がより効率的に行えるようになりました。
+
+### PyMYSQLバージョンアップ（[#2494](https://github.com/exastro-suite/exastro-it-automation/issues/2494)）
+PyMYSQLのバージョンを最新化し、パフォーマンスや安定性、セキュリティ面での向上を図りました。
+
+### v2.4.1バージョンアップ対応（[#2511](https://github.com/exastro-suite/exastro-it-automation/issues/2511)）
+本バージョンへのアップデートに伴う各種調整・最適化を実施しました。これにより、システム全体の安定性と運用性がさらに向上しています。
+

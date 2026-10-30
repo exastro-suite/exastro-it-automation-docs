@@ -1,0 +1,20 @@
+# Exastro IT Automation 2.6.1
+
+リリース日: 2025年09月01日
+
+## 機能追加
+
+### 2.6.1バージョンアップ対応（[#2804](https://github.com/exastro-suite/exastro-it-automation/issues/2804)）
+本バージョンで実施された各種修正内容を反映し、全体の安定性と運用性を向上させました。システムの信頼性や保守性を高めるための内部的な改善も含まれています。
+
+## バグ修正
+
+### Ansible変数の復活処理の改善（[#2622](https://github.com/exastro-suite/exastro-it-automation/issues/2622)）
+Ansibleで変数を新規作成する際、既存の廃止済み変数がある場合は新規作成ではなく復活させるように修正しました。これにより、変数管理の一貫性が保たれ、不要な重複や管理ミスを防止します。
+
+### 2.5.4マイグレーション処理の失敗パターン修正（[#2803](https://github.com/exastro-suite/exastro-it-automation/issues/2803)）
+2.5.4からのバージョンアップ時、特定の条件下でマイグレーション処理が失敗する問題を修正しました。これにより、アップグレード作業の信頼性が向上しています。
+
+### Terraform変数刈り取りの入れ子構造対応（[#2806](https://github.com/exastro-suite/exastro-it-automation/issues/2806)）
+Terraformで入れ子構造の変数にdefault値が無い場合、変数刈り取りに失敗する不具合を修正しました。複雑な変数構造でも正しく処理できるようになり、Terraform連携の安定性が向上しています。
+

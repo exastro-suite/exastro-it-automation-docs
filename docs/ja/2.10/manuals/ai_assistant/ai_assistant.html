@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144561796-1');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>3. AIアシスタント &#8212; Documentation  ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fe63c2af" />
+    <link rel="stylesheet" type="text/css" href="../../_static/option.css?v=49ab891d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exastro_documents.css?v=826bbf11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/swagger/swagger-ui.css?v=ab82c586" />
+    
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3e58b9f8"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/jquery-3.6.3.min.js?v=25455f10"></script>
+    <script src="../../_static/exastro_documents.js?v=ff50fb31"></script>
+    <script src="../../_static/swagger/swagger-ui-bundle.js?v=ec73a32a"></script>
+    <script src="../../_static/swagger/swagger-ui-standalone-preset.js?v=88d26966"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="OASE" href="../oase/index.html" />
+    <link rel="prev" title="2. AIサービス設定" href="settings.html" /> 
+  </head>
+<body id="page" class="ja">
+
+
+<div id="container">
+
+<div id="header">
+  <header class="divInner">
+    <!-- Exastro logo -->
+    <div id="logo"><a href="https://ita.exastro.org/"><img src="../../_static/img/exastro.svg" alt="Exastro"></a></div>
+    <!-- Project name -->
+    <div id="projectName"><a href="../../index.html">Documentation</a></div>
+    <!-- Heaedr navigation -->
+    <div id="headerSearch">
+      <form class="search" action="../../search.html" method="get">
+        <input type="text" name="q" aria-labelledby="searchlabel">
+        <button type="submit" value="検索"><img src="../../_static/img/search.png" alt="検索"></button>
+      </form>
+    </div>
+  </header>
+</div><!-- End #header -->
+
+
+<div id="toolbar">
+  <div class="divInner">
+    
+    <div id="documentVersion">
+      <dl>
+        <dt>Document version</dt>
+        <dd>
+          <div>
+            <select name="version" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.10/manuals/ai_assistant/ai_assistant.html" selected>current</option>
+              <option value="../../../../ja/2.10/manuals/ai_assistant/ai_assistant.html" selected>2.10(current)</option>
+              <option value="../../../../ja/2.9/manuals/ai_assistant/ai_assistant.html">2.9</option>
+              <option value="../../../../ja/2.8/manuals/ai_assistant/ai_assistant.html">2.8</option>
+              <option value="../../../../ja/2.7/manuals/ai_assistant/ai_assistant.html">2.7</option>
+              <option value="../../../../ja/2.6/manuals/ai_assistant/ai_assistant.html">2.6</option>
+              <option value="../../../../ja/2.5/manuals/ai_assistant/ai_assistant.html">2.5</option>
+              <option value="../../../../ja/2.4/manuals/ai_assistant/ai_assistant.html">2.4</option>
+              <option value="../../../../ja/2.3/manuals/ai_assistant/ai_assistant.html">2.3</option>
+              <option value="../../../../ja/2.2/manuals/ai_assistant/ai_assistant.html">2.2</option>
+              <option value="../../../../ja/2.1/manuals/ai_assistant/ai_assistant.html">2.1</option>
+              <option value="../../../../ja/2.0/manuals/ai_assistant/ai_assistant.html">2.0</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="documentLanguage">
+      <dl>
+        <dt>Language</dt>
+        <dd>
+          <div>
+            <select name="lang" style="height: 20px;" onchange="location.href=value;">
+              <option value="../../../../ja/2.10/manuals/ai_assistant/ai_assistant.html" selected>日本語</option>
+              <option value="../../../../en/2.10/manuals/ai_assistant/ai_assistant.html">English</option>
+            </select>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div id="toolbarNavigation">
+      <ul>
+        <li class="prev"><a href="settings.html" title="前のトピックへ"><span class="section-number">2. </span>AIサービス設定</a></li>
+        <li class="next"><a href="../oase/index.html" title="次のトピックへ">OASE</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- End #toolbar -->
+
+<div id="sideMenu">
+
+  <div id="menuButton"></div>
+  
+  <aside class="divInner">
+   <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">構成・構築ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">インストール／アップグレード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learn/index.html">Learn</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platform_management/index.html">システム管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization_management/index.html">オーガナイゼーション管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../it_automation_base/index.html">基本操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_param/index.html">パラメータ管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../host_group/index.html">ホストグループ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ansible-driver/index.html">Ansible ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../terraform_driver/index.html">Terraform ドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import/index.html">エクスポート・インポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cicd_for_iac/index.html">CI/CD for IaC</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">AI アシスタント</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="overview.html">1. AIアシスタント概要</a></li>
+<li class="toctree-l3"><a class="reference internal" href="settings.html">2. AIサービス設定</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3. AIアシスタント</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">3.1. はじめに</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id2">3.1.1. コードエディタ対応一覧</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">3.2. 機能・画面説明</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id4">3.2.1. AIアシスタント画面</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#ai-assistant-history">3.2.2. 会話履歴画面</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#ai-assistant-lesson">3.2.3. 学習事項画面</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../oase/index.html">OASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maintenance/index.html">メンテナンス</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">テンプレート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">リファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kb/index.html">ナレッジベース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">用語集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/index.html">リリースノート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">貢献</a></li>
+</ul>
+
+   <!-- <ul>
+      <li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">索引</a></li>
+    </ul> -->
+    
+  </aside>
+</div><!-- End #sideMenu -->
+
+
+<div id="tableOfContents">
+  <div id="tocButton"></div>
+  <ul>
+<li><a class="reference internal" href="#">3. AIアシスタント</a><ul>
+<li><a class="reference internal" href="#id1">3.1. はじめに</a><ul>
+<li><a class="reference internal" href="#id2">3.1.1. コードエディタ対応一覧</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id3">3.2. 機能・画面説明</a><ul>
+<li><a class="reference internal" href="#id4">3.2.1. AIアシスタント画面</a><ul>
+<li><a class="reference internal" href="#id5">チャット画面</a><ul>
+<li><a class="reference internal" href="#id6">コードブロック</a></li>
+<li><a class="reference internal" href="#ai-assistant-codeblock-diff-view">コードブロックとの差分確認画面</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#movement">Movement実行表示画面</a></li>
+<li><a class="reference internal" href="#id8">チャット終了</a><ul>
+<li><a class="reference internal" href="#ai-assistant-lesson-confirm">学習事項の登録確認画面</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ai-assistant-attachment-file">添付ファイル機能</a><ul>
+<li><a class="reference internal" href="#aioff">AI解析OFFのデータ連携</a></li>
+<li><a class="reference internal" href="#aion">AI解析ONのデータ連携</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ai-assistant-history">3.2.2. 会話履歴画面</a></li>
+<li><a class="reference internal" href="#ai-assistant-lesson">3.2.3. 学習事項画面</a><ul>
+<li><a class="reference internal" href="#ai-assistant-lesson-registration">学習事項登録・編集画面</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div id="contents">
+<main class="divInner">
+
+ <div id="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">HOME</a></li>
+    <li><a href="../index.html">マニュアル</a></li>
+    <li><a href="index.html">AI アシスタント</a></li>
+    
+    <li><span class="section-number">3. </span>AIアシスタント</li>
+  </ul>
+</div>
+
+<div id="article">
+<article class="divInner">
+<div class="body" role="main">
+
+  <section id="ai">
+<h1><span class="section-number">3. </span>AIアシスタント<a class="headerlink" href="#ai" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2><span class="section-number">3.1. </span>はじめに<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">本書は、ITAのAIアシスタントの機能および操作方法について説明します。</div>
+</div>
+<div class="line-block">
+<div class="line">AIアシスタントは、<span class="menuselection">AIアシスタント ▶ AIアシスタント</span> のメニューから起動する方法と、ITAのコードエディタの画面の <span class="guilabel"></span> アイコンから起動する方法があります。</div>
+<div class="line">メニューから起動した場合は、Exastroの機能を使ってさまざまな作業を実施します。</div>
+<div class="line">コードエディタの画面から起動した場合は、Exastroに登録済みの情報を参照しながら、コードの作成を支援します。</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">AIアシスタントの画面で、「ご用件を入力してください。」のテキストボックスが表示されていない場合は、AIサービス設定を行う必要があります。</div>
+<div class="line">詳細は「 <a class="reference internal" href="settings.html#ai-service-settings"><span class="std std-ref">AIサービス設定</span></a> 」を参照してください。</div>
+</div>
+</div>
+<section id="id2">
+<h3><span class="section-number">3.1.1. </span>コードエディタ対応一覧<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">ITAのコードエディタで対応している画面は以下のとおりです。</div>
+</div>
+<table class="docutils align-left" id="id14">
+<caption><span class="caption-number">表 3.92 </span><span class="caption-text">コードエディタ対応一覧</span><a class="headerlink" href="#id14" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 6.2%" />
+<col style="width: 31.2%" />
+<col style="width: 62.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><div class="line-block">
+<div class="line">Ansible-Legacy - Playbook素材集</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Playbookとしてのチャット機能を提供しています。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><div class="line-block">
+<div class="line">Ansible-Pioneer - 対話ファイル素材集</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">対話ファイルとしてのチャット機能を提供しています。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><div class="line-block">
+<div class="line">Ansible共通 - 実行環境定義テンプレート管理</div>
+<div class="line">OASE管理 - 通知テンプレート（共通）</div>
+<div class="line">OASE - ルール - ルール</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Jinja2形式としてのチャット機能を提供しています。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><div class="line-block">
+<div class="line">その他のコードエディタの画面</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">通常のチャットとして機能します。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id3">
+<h2><span class="section-number">3.2. </span>機能・画面説明<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<section id="id4">
+<h3><span class="section-number">3.2.1. </span>AIアシスタント画面<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">本画面でAIサービスへの指示を行ったり、AIサービスからの返答を確認したりします。</div>
+</div>
+<section id="id5">
+<h4>チャット画面<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h4>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ai-assistant-ui-1.png"><img alt="AIアシスタント画面1" src="../../_images/ai-assistant-ui-1.png" style="width: 1000px;" />
+</a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ai-assistant-ui-2.png"><img alt="AIアシスタント画面2" src="../../_images/ai-assistant-ui-2.png" style="width: 1000px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id15">
+<caption><span class="caption-number">表 3.93 </span><span class="caption-text">AIアシスタント画面項目説明</span><a class="headerlink" href="#id15" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 6.2%" />
+<col style="width: 31.2%" />
+<col style="width: 62.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><div class="line-block">
+<div class="line">指示入力欄</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">AIに対しての指示を入力します。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><div class="line-block">
+<div class="line">添付ファイル追加（）ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">AIへの指示に添付するファイルを追加する際にクリックします。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><div class="line-block">
+<div class="line">指示送信（）ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">AIへの指示を送信します。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><div class="line-block">
+<div class="line">添付ファイル</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">添付ファイルのファイル名およびファイルサイズが表示されます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><div class="line-block">
+<div class="line">添付ファイルAI解析</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">添付ファイルの内容をAIに解析させる(ON)か解析させない(OFF)かを指定します。</div>
+<div class="line">指示をAIが実施するにあたってファイルの内容を解析する必要がある場合はONにしてください。</div>
+<div class="line">AIに解析させない(OFF)がデフォルトです。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#ai-assistant-attachment-file"><span class="std std-ref">添付ファイル機能</span></a> 」を参照してください。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><div class="line-block">
+<div class="line">添付ファイルプレビュー（）</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">添付ファイルの内容を確認できます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><div class="line-block">
+<div class="line">添付ファイル取り消し（）</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">添付ファイルを添付対象から削除します。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><div class="line-block">
+<div class="line">AIサービス</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">使用中のAIサービスが表示されます。会話の途中から変更することはできません。</div>
+<div class="line">変更する場合は会話を始める前にAIサービス設定で変更してください。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><div class="line-block">
+<div class="line">モデル</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">AIモデルを選択します。会話の途中でも変更することが可能です。</div>
+<div class="line">AIの実施内容によって適切なAIモデルに切り替えることで、推論レベルやAIサービスの使用料をコントロールすることが可能です。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><div class="line-block">
+<div class="line"> 新しいチャットボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">新しいチャットを始めます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><div class="line-block">
+<div class="line"> チャット終了ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">チャットを終了します。</div>
+<div class="line">クリックすると、「 <span class="xref std std-ref">ai_assistant_chat_end</span> 」が表示されます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><div class="line-block">
+<div class="line">会話履歴タブ</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">チャットの会話の履歴を見ることができます。また、会話の履歴よりチャットを再開することも可能です。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#ai-assistant-history"><span class="std std-ref">会話履歴画面</span></a> 」を参照してください。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><div class="line-block">
+<div class="line">学習事項タブ</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">学習事項を見ることができます。ここに登録されている学習事項はシステムプロンプトの一部として追加でAIに送られます。</div>
+<div class="line">詳細は「 <a class="reference internal" href="#ai-assistant-lesson"><span class="std std-ref">学習事項画面</span></a> 」を参照してください。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><div class="line-block">
+<div class="line">回答選択肢候補</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">AIからの確認事項に対する、回答の候補が表示される場合があります。</div>
+<div class="line">表示された候補を選択するか、下の指示入力欄に任意の内容を入力することで回答できます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><div class="line-block">
+<div class="line">回答選択表示</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">「〇件の選択肢から選択」をクリックすると、表示された回答の選択肢と選択した回答を確認できます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><div class="line-block">
+<div class="line">設定確認</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><span class="guilabel"> パラメータシート名</span> をクリックすると、設定を行ったパラメータシートのレコードを確認できます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>17</p></td>
+<td><div class="line-block">
+<div class="line">会話の巻き戻し（）</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ボタンの位置まで会話を巻き戻して、そこから会話を再開することが可能です。</div>
+<div class="line">ただし、Exastroに設定した内容や実行した作業がロールバックされることはありません。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<div class="line-block">
+<div class="line">添付ファイルAI解析の指定について、鍵ファイルのような機密情報を含むファイルは解析させない(OFF)を指定してください。</div>
+<div class="line">解析させる(ON)にするとファイルがAIに解析され、使用しているAIサービスによってはファイルの内容が学習に利用される可能性があります。</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">添付ファイルAI解析の指定について、次のようなファイルをAIに解析させると、解析に失敗したり、大量のトークンを消費したりすることがあるので注意してください。</div>
+<div class="line">・バイナリファイル</div>
+<div class="line">・Base64などでエンコードしたファイル</div>
+<div class="line">・数MBを超えるサイズのファイル</div>
+</div>
+</div>
+<section id="id6">
+<h5>コードブロック<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">コードエディタ画面での会話の中で、コードブロックが表示された際に、以下の操作で表示されたコードを反映することができます。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ai-assistant-chat-codeblock.png"><img alt="AIアシスタント チャットのコードブロック" src="../../_images/ai-assistant-chat-codeblock.png" style="width: 600px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id16">
+<caption><span class="caption-number">表 3.94 </span><span class="caption-text">コードブロックのアイコン説明</span><a class="headerlink" href="#id16" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 6.2%" />
+<col style="width: 31.2%" />
+<col style="width: 62.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><div class="line-block">
+<div class="line">クリップボードにコピー（）ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">該当のコードブロックをクリップボードにコピーする際にクリックします。</div>
+<div class="line">※ HTTP（非SSL）環境では、アイコンが表示されません。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><div class="line-block">
+<div class="line">入力欄にセット（）ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">AIへの指示入力欄へ、コードブロックの内容を設定する際にクリックします。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><div class="line-block">
+<div class="line">編集中のファイルへ反映（）ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">編集中のファイルへ、コードブロックの内容を反映する際にクリックします。</div>
+<div class="line">クリック後、「 <a class="reference internal" href="#ai-assistant-codeblock-diff-view"><span class="std std-ref">コードブロックとの差分確認画面</span></a> 」が表示されます。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ai-assistant-codeblock-diff-view">
+<span id="id7"></span><h5>コードブロックとの差分確認画面<a class="headerlink" href="#ai-assistant-codeblock-diff-view" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">編集中のファイルへ反映（）ボタンをクリックした際に表示されます。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ai-assistant-chat-diff-view.png"><img alt="AIアシスタント コードブロックとの差分確認" src="../../_images/ai-assistant-chat-diff-view.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id17">
+<caption><span class="caption-number">表 3.95 </span><span class="caption-text">差分確認の項目説明</span><a class="headerlink" href="#id17" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 6.2%" />
+<col style="width: 31.2%" />
+<col style="width: 62.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><div class="line-block">
+<div class="line">差分内容</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">編集中のファイル内容との差分が表示されます。</div>
+<div class="line">左側が編集中のファイル内容、右側がコードブロックで表示された内容となります。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><div class="line-block">
+<div class="line">適用ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">表示された差分の内容で、編集中のファイル内容を置き換える場合にクリックします。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><div class="line-block">
+<div class="line">キャンセルボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">置き換えずに閉じる場合にクリックします。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="movement">
+<h4>Movement実行表示画面<a class="headerlink" href="#movement" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">Movementが実行されたときは以下の表示がされます。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/movement-execute-1.png"><img alt="Movement実行表示" src="../../_images/movement-execute-1.png" style="width: 1061px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id18">
+<caption><span class="caption-number">表 3.96 </span><span class="caption-text">Movement実行表示</span><a class="headerlink" href="#id18" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 6.2%" />
+<col style="width: 31.2%" />
+<col style="width: 62.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">1</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><span class="guilabel"> 作業状態確認`</span></div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Movementの作業状況を表示する画面が表示されます。</div>
+<div class="line">詳細は「 <a class="reference internal" href="../ansible-driver/ansible_legacy.html#ansible-legacy-check-operation-status"><span class="std std-ref">作業状態確認</span></a> 」を参照してください。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">2</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><span class="guilabel"> 結果データ</span></div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">ansibleで実行した結果をダウンロードします。</div>
+<div class="line">詳細は「 <a class="reference internal" href="../ansible-driver/ansible_legacy.html#ansible-legacy-the-linkage-between-the-output-data-used-during-ansible-execution-and-ita-menu"><span class="std std-ref">Ansible実行時に作成される結果データ</span></a> 」を参照してください。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">3</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><span class="guilabel"> 緊急停止</span></div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">実行中のMovementを緊急停止します。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id8">
+<h4>チャット終了<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">チャット終了ボタンをクリックした際に表示されます。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ai-assistant-chat-end.png"><img alt="AIアシスタント チャット終了画面" src="../../_images/ai-assistant-chat-end.png" style="width: 500px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id19">
+<caption><span class="caption-number">表 3.97 </span><span class="caption-text">AIアシスタント チャット終了画面の項目説明</span><a class="headerlink" href="#id19" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 6.2%" />
+<col style="width: 31.2%" />
+<col style="width: 62.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><div class="line-block">
+<div class="line">会話の要約を作成する</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">会話の要約を作成したい場合にチェックします。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><div class="line-block">
+<div class="line">・レポートを作成しない</div>
+<div class="line">・作業レポートを作成する</div>
+<div class="line">・グラフィカルなレポートを作成する</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">レポートの作成有無について、該当する項目をチェックします。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><div class="line-block">
+<div class="line">学習事項を登録する</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">今回の会話の中から、次回のチャットで活用できる学習事項をAIに抽出してほしい場合にチェックします。</div>
+<div class="line">チェックして終了した際に、「 <a class="reference internal" href="#ai-assistant-lesson-confirm"><span class="std std-ref">学習事項の登録確認画面</span></a> 」が表示されます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><div class="line-block">
+<div class="line">このチャットのタイトルをAIに付けてもらう</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">会話履歴に残すタイトルを、AIに自動的に付けてもらう際にチェックします。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<section id="ai-assistant-lesson-confirm">
+<span id="id9"></span><h5>学習事項の登録確認画面<a class="headerlink" href="#ai-assistant-lesson-confirm" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">チャット終了時に「学習事項を登録する」が選択された際に表示されます。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ai-assistant-lesson-confirm.png"><img alt="AIアシスタント 学習事項の登録確認画面" src="../../_images/ai-assistant-lesson-confirm.png" style="width: 600px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id20">
+<caption><span class="caption-number">表 3.98 </span><span class="caption-text">AIアシスタント 学習事項の登録確認画面の項目説明</span><a class="headerlink" href="#id20" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 6.2%" />
+<col style="width: 31.2%" />
+<col style="width: 62.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><div class="line-block">
+<div class="line">登録する</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">学習事項として登録したい場合にチェックします。</div>
+<div class="line">「すべて選択」をチェックすると、一覧のすべての学習事項をまとめてチェックできます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><div class="line-block">
+<div class="line">分類</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">学習事項の分類を入力することができます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><div class="line-block">
+<div class="line">重要度</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">1から10までの数値で重要度（優先順位）を設定できます。</div>
+<div class="line">10が最も高く、1が最も低くなります。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><div class="line-block">
+<div class="line">内容</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">チャットで問い合わせる際に、プロンプトに付加される内容です。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="ai-assistant-attachment-file">
+<span id="id10"></span><h4>添付ファイル機能<a class="headerlink" href="#ai-assistant-attachment-file" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">添付ファイルは個人ごとに管理されます。他のユーザーがアップロードした添付ファイルは参照できません。</div>
+<div class="line">アップロードから1日（デフォルト）以上経過した添付ファイルは、日次のバッチ処理で削除されます。</div>
+</div>
+<section id="aioff">
+<h5>AI解析OFFのデータ連携<a class="headerlink" href="#aioff" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">添付ファイルAI解析をOFF(デフォルト)にしたときの添付ファイルのデータの連携イメージです。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/attach-file-flow-ai-off.png"><img alt="AI解析指定OFFのデータ連携" src="../../_images/attach-file-flow-ai-off.png" style="width: 992px;" />
+</a>
+</figure>
+</section>
+<section id="aion">
+<h5>AI解析ONのデータ連携<a class="headerlink" href="#aion" title="Link to this heading">¶</a></h5>
+<div class="line-block">
+<div class="line">添付ファイルAI解析をONにしたときの添付ファイルのデータの連携イメージです。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/attach-file-flow-ai-on.png"><img alt="AI解析指定ONのデータ連携" src="../../_images/attach-file-flow-ai-on.png" style="width: 992px;" />
+</a>
+</figure>
+</section>
+</section>
+</section>
+<section id="ai-assistant-history">
+<span id="id11"></span><h3><span class="section-number">3.2.2. </span>会話履歴画面<a class="headerlink" href="#ai-assistant-history" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">AIアシスタントの画面での会話は自動的にこの会話履歴に保存されています。</div>
+<div class="line">今までの会話の一覧を確認および会話を再開することができます。</div>
+<div class="line">会話の履歴は個人単位で保存されるため、他人の会話は参照することができません。他人に会話の内容を共有する場合は、会話のエクスポート・インポートで行います。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ai-service-history-1.png"><img alt="会話履歴画面" src="../../_images/ai-service-history-1.png" style="width: 1920px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id21">
+<caption><span class="caption-number">表 3.99 </span><span class="caption-text">会話履歴画面</span><a class="headerlink" href="#id21" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 6.2%" />
+<col style="width: 31.2%" />
+<col style="width: 62.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">1</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><span class="guilabel"> 再読込</span> ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">会話履歴の一覧を再表示します。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">2</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><span class="guilabel"> 削除</span> ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">選択した会話を削除します。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">3</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><span class="guilabel"> インポート</span> ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">会話のエクスポートファイル(json)をインポートします。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">4</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><span class="guilabel"> エクスポート</span> ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">選択した会話をエクスポートします。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">5</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><span class="guilabel"></span> （再開）ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">会話を再開します。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">6</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><span class="guilabel"></span> （確認）ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">会話を内容を確認します。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">7</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><span class="guilabel"></span> （編集）ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">会話をタイトルを変更します。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">8</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">タイトル</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">会話をタイトルを表示します。会話のタイトルのデフォルトはチャットの１つ目のメッセージが入ります。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">9</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">メッセージ数</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">会話のメッセージ数が表示されます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">10</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">トークン数</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">会話のトークン数が表示されます。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ai-assistant-lesson">
+<span id="id12"></span><h3><span class="section-number">3.2.3. </span>学習事項画面<a class="headerlink" href="#ai-assistant-lesson" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">チャット終了時の「学習事項を登録する」で登録された学習事項と、本画面で新たに登録した学習事項が一覧表示されます。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ai-assistant-lesson-list.png"><img alt="学習事項画面" src="../../_images/ai-assistant-lesson-list.png" style="width: 992px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id22">
+<caption><span class="caption-number">表 3.100 </span><span class="caption-text">AIアシスタント 学習事項画面の項目説明</span><a class="headerlink" href="#id22" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 6.2%" />
+<col style="width: 31.2%" />
+<col style="width: 62.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><div class="line-block">
+<div class="line">再読み込みボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">画面の一覧を更新する場合にクリックします。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><div class="line-block">
+<div class="line">登録ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">新たに学習事項を登録する場合にクリックします。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><div class="line-block">
+<div class="line">無効ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">一覧で選択された学習事項を無効にする場合にクリックします。</div>
+<div class="line">無効となっている学習事項は、プロンプトに含まれなくなります。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><div class="line-block">
+<div class="line">有効ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">一覧で選択された学習事項を有効にする場合にクリックします。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><div class="line-block">
+<div class="line">削除ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">一覧で選択された学習事項を、削除（物理削除）する場合にクリックします。</div>
+<div class="line">削除した学習事項は元に戻せません。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><div class="line-block">
+<div class="line">一覧</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">登録されている学習事項が一覧表示されます。</div>
+<div class="line">チェックすることで、上記のボタンで操作できるようになります。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><div class="line-block">
+<div class="line">一覧の編集（）ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">選択した学習事項を編集する場合にクリックします。</div>
+<div class="line">クリックすると、「 <a class="reference internal" href="#ai-assistant-lesson-registration"><span class="std std-ref">学習事項登録・編集画面</span></a> 」が表示されます。（選択した学習事項の内容が初期表示されます。）</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<section id="ai-assistant-lesson-registration">
+<span id="id13"></span><h4>学習事項登録・編集画面<a class="headerlink" href="#ai-assistant-lesson-registration" title="Link to this heading">¶</a></h4>
+<div class="line-block">
+<div class="line">学習事項を登録・編集する際に表示されます。</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ai-assistant-lesson-registration.png"><img alt="学習事項登録・編集画面" src="../../_images/ai-assistant-lesson-registration.png" style="width: 800px;" />
+</a>
+</figure>
+<table class="docutils align-left" id="id23">
+<caption><span class="caption-number">表 3.101 </span><span class="caption-text">AIアシスタント 学習事項登録・編集画面の項目説明</span><a class="headerlink" href="#id23" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 6.2%" />
+<col style="width: 31.2%" />
+<col style="width: 62.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><div class="line-block">
+<div class="line">分類</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">学習事項の分類を入力することができます。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><div class="line-block">
+<div class="line">重要度</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">1から10までの数値で重要度（優先順位）を設定できます。</div>
+<div class="line">10が最も高く、1が最も低くなります。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><div class="line-block">
+<div class="line">内容</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">チャットで問い合わせる際に、プロンプトに付加される内容です。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><div class="line-block">
+<div class="line">登録ボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">登録する場合にクリックします。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><div class="line-block">
+<div class="line">キャンセルボタン</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">登録せずに画面を閉じる場合にクリックします。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+</section>
+
+
+</div>
+
+
+<div id="articleNavigation">
+  <ul>
+    <li class="prev"><a href="settings.html" title="前のトピックへ"><span>前のトピックへ</span><span class="section-number">2. </span>AIサービス設定</a></li>
+    <li class="next"><a href="../oase/index.html" title="次のトピックへ"><span>次のトピックへ</span>OASE</a></li>
+  </ul>
+</div>
+
+
+<div id="pageTopLink">
+  <a href="#container"><i>↑</i> Page Top</a>
+</div>
+
+</article>
+</div>
+</main>
+</div><!-- End #contents -->
+<div id="footer">
+  <footer class="divInner">
+    <small>Copyright © 2019-2026 NEC Corporation</small>
+    <small><a href="/ja/2.10/terms/ja.html">サイト規約</a></small>
+  </footer>
+</div><!-- End #footer -->
+
+<div id="overlay"></div>
+<div id="grayBack"></div>
+
+</div><!-- End #container -->
+  </body>
+</html>
