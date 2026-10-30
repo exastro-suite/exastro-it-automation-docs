@@ -42,6 +42,7 @@
       NAME                                                     READY   UP-TO-DATE   AVAILABLE   AGE
       deployment.apps/ita-api-admin                            1/1     1            1           22m
       deployment.apps/ita-api-ansible-execution-receiver       1/1     1            1           22m
+      deployment.apps/ita-api-mcp-server                       1/1     1            1           22m
       deployment.apps/ita-api-oase-receiver                    1/1     1            1           22m
       deployment.apps/ita-api-organization                     1/1     1            1           22m
       deployment.apps/ita-by-ansible-execute                   1/1     1            1           22m
@@ -62,6 +63,7 @@
       deployment.apps/ita-by-terraform-cli-vars-listup         1/1     1            1           22m
       deployment.apps/ita-by-terraform-cloud-ep-execute        1/1     1            1           22m
       deployment.apps/ita-by-terraform-cloud-ep-vars-listup    1/1     1            1           22m
+      deployment.apps/ita-qdrant                               1/1     1            1           22m
       deployment.apps/ita-web-server                           1/1     1            1           22m
       deployment.apps/mariadb                                  1/1     1            1           22m
       deployment.apps/platform-api                             1/1     1            1           22m
