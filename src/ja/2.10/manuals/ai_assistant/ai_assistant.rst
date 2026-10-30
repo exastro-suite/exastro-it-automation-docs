@@ -115,14 +115,52 @@ Movement実行表示画面
 ^^^^^^^^^^^^^^^^^^^^
 
 | Movementが実行されたときは以下の表示がされます。
-| TODO
+
+.. figure:: /images/ja/ai_assistant/ai_assistant/movement-execute-1.png
+   :width: 1061px
+   :alt: Movement実行表示
+
+.. list-table:: Movement実行表示
+   :widths: 5 10
+   :header-rows: 1
+   :align: left
+
+   * - 項目名
+     - 説明
+   * - | :guilabel:` 作業状態確認``
+     - | Movementの作業状況を表示する画面が表示されます。
+       | 詳細は「 :ref:`ansible_legacy_check_operation_status` 」を参照してください。
+   * - | :guilabel:` 結果データ`
+     - | ansibleで実行した結果をダウンロードします。
+       | 詳細は「 :ref:`ansible_legacy_the_linkage_between_the_output_data_used_during_ansible_execution_and_ita_menu` 」を参照してください。
+   * - | :guilabel:` 緊急停止`
+     - | 実行中のMovementを緊急停止します。
 
 
 チャット終了
 ^^^^^^^^^^^^
 
-| チャット終了
-| TODO
+| :guilabel:` チャット終了` ボタン`をクリックすると、チャットの一連な内容の総括を行うことができます。
+
+.. figure:: /images/ja/ai_assistant/ai_assistant/chat-end-1.png
+   :width: 529px
+   :alt: チャット終了
+
+.. list-table:: チャット終了指定
+   :widths: 5 10
+   :header-rows: 1
+   :align: left
+
+   * - 項目名
+     - 説明
+   * - | 会話の要約を作成する
+     - | 一連の会話等を要約した内容を出力します。
+   * - | レポートの作成
+     - | 作業内容やシステムに対する変更などのレポートの作成についての指定項目です。
+   * - | 学習事項を登録する
+     - | 作業内容を振り返り、次回以降への申し送りを作成します。
+   * - | このチャットのタイトルをAIに付けてもらう
+     - | 会話履歴のタイトルを会話の内容で修正します。
 
 
 .. _ai_service_attachment_file:
