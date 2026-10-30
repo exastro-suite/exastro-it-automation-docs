@@ -12,6 +12,8 @@
       :caption: 実行結果
 
       ita-api-admin:1
+      ita-api-ansible-execution-receiver:1
+      ita-api-mcp-server:1
       ita-api-oase-receiver:1
       ita-api-organization:1
       ita-by-ansible-execute:1
@@ -32,6 +34,7 @@
       ita-by-terraform-cli-vars-listup:1
       ita-by-terraform-cloud-ep-execute:1
       ita-by-terraform-cloud-ep-vars-listup:1
+      ita-qdrant:1
       ita-web-server:1
       mariadb:1
       platform-api:1
@@ -60,6 +63,8 @@
      :caption: 実行結果
 
      deployment.apps/ita-api-admin scaled
+     deployment.apps/ita-api-ansible-execution-receiver scaled
+     deployment.apps/ita-api-mcp-server scaled
      deployment.apps/ita-api-oase-receiver scaled
      deployment.apps/ita-api-organization scaled
      deployment.apps/ita-by-ansible-execute scaled
@@ -80,6 +85,7 @@
      deployment.apps/ita-by-terraform-cli-vars-listup scaled
      deployment.apps/ita-by-terraform-cloud-ep-execute scaled
      deployment.apps/ita-by-terraform-cloud-ep-vars-listup scaled
+     deployment.apps/ita-qdrant scaled
      deployment.apps/ita-web-server scaled
      deployment.apps/mariadb scaled
      deployment.apps/platform-api scaled
@@ -106,6 +112,8 @@
 
      NAME                                                     READY   UP-TO-DATE   AVAILABLE   AGE
      deployment.apps/ita-api-admin                            0/0     0            0           26h
+     deployment.apps/ita-api-ansible-execution-receiver       0/0     0            0           26h
+     deployment.apps/ita-api-mcp-server                       0/0     0            0           26h
      deployment.apps/ita-api-oase-receiver                    0/0     0            0           26h
      deployment.apps/ita-api-organization                     0/0     0            0           26h
      deployment.apps/ita-by-ansible-execute                   0/0     0            0           26h
@@ -126,6 +134,7 @@
      deployment.apps/ita-by-terraform-cli-vars-listup         0/0     0            0           26h
      deployment.apps/ita-by-terraform-cloud-ep-execute        0/0     0            0           26h
      deployment.apps/ita-by-terraform-cloud-ep-vars-listup    0/0     0            0           26h
+     deployment.apps/ita-qdrant                               0/0     0            0           26h
      deployment.apps/ita-web-server                           0/0     0            0           26h
      deployment.apps/mariadb                                  0/0     0            0           26h
      deployment.apps/platform-api                             0/0     0            0           26h
