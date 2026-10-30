@@ -6,8 +6,8 @@
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 PROJECTDIR    = .
-VERSION       = 2.9
-VERSIONS      = 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9
+VERSION       = 2.10
+VERSIONS      = 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 2.10
 SOURCEDIR     = $(PROJECTDIR)/src
 BUILDDIR      = $(PROJECTDIR)/_build
 DOCSDIR       = $(PROJECTDIR)/docs
@@ -80,7 +80,7 @@ html-all:
 	done ; \
 	done
 	touch $(DOCSDIR)/.nojekyll
-	version=`ls -1r "$(SOURCEDIR)/ja/" | head -n 1` ; \
+	version=`ls -1 "$(SOURCEDIR)/ja/" | sort -V | tail -n 1` ; \
 	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/index.html > $(DOCSDIR)/index.html ; \
 	sed -e "s/#__version__#/$$version/" $(SOURCEDIR)/redirect.html > $(DOCSDIR)/redirect.html
 
