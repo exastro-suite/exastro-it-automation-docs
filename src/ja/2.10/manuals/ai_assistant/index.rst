@@ -11,4 +11,3 @@ AI アシスタント
    overview
    settings
    ai_assistant
-   llm_editor

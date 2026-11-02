@@ -34,13 +34,19 @@ AIサービス設定画面の起動
       :width: 931px
       :alt: AIアシスタントヘッダー1
 
-
 #. | :guilabel:` AIサービスを追加` ボタンをクリックします。
 
    .. figure:: /images/ja/ai_assistant/settings/ai-service-setting-1.png
       :width: 810px
       :alt: AIサービス設定1
 
+.. tip::
+   | 以下のような画面が表示された際は、認証情報の有効期限が切れている可能性があるので、:guilabel:` AIサービス設定` ボタンをクリックして、AIサービスの更新を行ってください。
+
+   .. figure:: /images/ja/ai_assistant/settings/ai-service-setting-expired.png
+      :width: 931px
+      :alt: AIサービスの認証に失敗しました
+      
 
 AIサービスの追加・更新
 ----------------------
