@@ -22,6 +22,7 @@
 
    api/index
    helm/values
+   mcp/index
 
 .. raw:: html
 
