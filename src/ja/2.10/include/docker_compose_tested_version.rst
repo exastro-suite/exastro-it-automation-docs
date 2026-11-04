@@ -18,4 +18,4 @@
  * - AlmaLinux release 9.6 (Sage Margay)
    - ー
    - ー
-   - Docker version 29.5.3, build d1c06ef
+   - Docker version 29.9.1, build dfc520d
