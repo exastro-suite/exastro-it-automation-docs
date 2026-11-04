@@ -76,4 +76,7 @@
 
 .. include:: ../it_automation_base/setting_profile_account_management.rst
 
+
+.. _get_refresh_token:
+
 .. include:: ../it_automation_base/setting_profile_refresh_token.rst

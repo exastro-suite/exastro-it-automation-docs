@@ -32,6 +32,10 @@ AIアシスタント全体図
 .. figure:: /images/ja/ai_assistant/overview/overhead_view.png
    :width: 1200px
 
+.. note::
+   | ExastroのAIアシスタント機能以外のAIエージェントからExastroのMCPサーバーへ接続することも可能です。
+   | 詳細は「 :ref:`mcp_external_agent` 」を参照してください。
+
 
 対応状況
 ========
