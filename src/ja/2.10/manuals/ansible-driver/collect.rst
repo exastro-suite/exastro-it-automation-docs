@@ -716,9 +716,6 @@ Ansible-Legacy、Ansible-Pioneer、Ansible-LegacyRole
    REST DATA (host name: exastro-test-1 menu ID: collect_001 operation NO: 4001e182-51d2-4918-96e0-5981c4dc6d5f)
    Collect END (host name: exastro-test-1 file name: ['Ansible_conf'])
 
-.. tip:: | Member variable には、変数が配列やハッシュ構造の場合に対象の要素（例: [0].file）が出力されます。通常変数の場合は空となります。
-
-
 .. code-block:: text
    :caption: ログファイル出力例 - 収集エラー[Operation]
 
