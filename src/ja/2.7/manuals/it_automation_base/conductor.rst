@@ -100,7 +100,7 @@ ITA Conductor利用手順
 Conductorインターフェース情報
 ------------------------------
 
-1. :menuselection:`「Conductorインターフェース情報」メニュー` では、Conductorから実行される各Movementで共有するディレクトリのパスと :menuselection:`「Conductor作業確認」メニュー` のリフレッシュ間隔を設定します。
+1. :menuselection:`「Conductorインターフェース情報」メニュー` では、:menuselection:`「Conductor作業確認」メニュー` のリフレッシュ間隔を設定します。
 
    .. figure:: /images/ja/conductor/conductor_interface/conductor_interface.png
       :width: 800px
