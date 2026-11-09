@@ -232,7 +232,7 @@
 <h2>機能追加<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
 <section id="ai-agentic-ai-for-exastro-3079-3080-3081-3082">
 <h3>AIアシスタント機能（Agentic AI for Exastro）（<a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3079">#3079</a>, <a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3080">#3080</a>, <a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3081">#3081</a>, <a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3082">#3082</a>）<a class="headerlink" href="#ai-agentic-ai-for-exastro-3079-3080-3081-3082" title="Link to this heading">¶</a></h3>
-<p>自然言語の指示でパラメータシートの設計・操作やAnsible Legacyの実行を行えるAIアシスタント画面を追加しました。
+<p>自然言語の指示でパラメータシートの設計・操作やAnsible Legacyの実行を行えるAIアシスタント画面を追加しました。<br />
 AIエージェントがExastro IT Automation MCPサーバーを介して、パラメータシートやAnsible Legacyの各種操作を実行できるようになりました。これにより、Exastro IT Automation の知見が少ない担当者でも自然言語での指示により運用作業を進められます。</p>
 <p>あわせて、以下の機能を追加しました。</p>
 <ul class="simple">
@@ -242,24 +242,27 @@ AIエージェントがExastro IT Automation MCPサーバーを介して、パ�
 </section>
 <section id="id2">
 <h3>メニューエクスポート・インポート時の権限チェック（<a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/2600">#2600</a>）<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
-<p>メニュー一括エクスポート・インポートにおいて、ロールに付与されたメニューの権限をチェックするようにしました。
-エクスポートには対象メニューの閲覧以上の権限、既存メニューへのインポートにはメンテナンス可の権限が必要になります（インポート先に存在しないメニューは権限チェックの対象外です）。また、メニューエクスポート・インポート管理からのファイルダウンロードでも同様の権限チェックを行い、権限のないメニューを含むファイルはダウンロードできません。これにより、権限を持たないユーザーが機微情報を含むデータを持ち出すことを防げます。
-なお、メニュー定義やMovementと変数の紐付けなど、環境移行に必要な一部の内部メニューは、従来どおり権限チェックの対象外です。</p>
+<p>メニュー一括エクスポート・インポートで、ロール・メニュー紐付管理に設定したメニューの権限をチェックするようにしました。メニューエクスポート・インポート管理からのファイルダウンロードも同様です。これにより、権限を持たないユーザーが機微情報を含むデータを持ち出すことを防げます。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>これまで実行できていたメニューエクスポート・インポートが、権限不足によって実行できなくなる場合があります。<br />
+必要な権限と権限チェックの対象外となるメニューは <a class="reference internal" href="../manuals/export_import/menu_export_import.html#menu-export-import-permission"><span class="std std-ref">メニューエクスポート・インポートに必要な権限について</span></a> を参照し、ロール・メニュー紐付管理の設定を見直してください。</p>
+</div>
 </section>
 <section id="id3">
 <h3>メニューの表示・非表示設定（<a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/2667">#2667</a>）<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
-<p>メニュー管理の「メニュー表示」で、メニューごとにサイドメニューへの表示・非表示を設定できるようにしました。
-独自メニューなどから別のパラメータシートを参照している場合に、利用者に見せる必要のないメニューを非表示にすることで、同じパラメータを2か所で管理しているように見えてしまう混乱を防げます。
+<p>メニュー管理の「メニュー表示」で、メニューごとにサイドメニューへの表示・非表示を設定できるようにしました。<br />
+独自メニューなどから別のパラメータシートを参照している場合に、利用者に見せる必要のないメニューを非表示にすることで、同じパラメータを2か所で管理しているように見えてしまう混乱を防げます。<br />
 設定はメニュー単位で全ユーザー共通です。</p>
 </section>
 <section id="id4">
 <h3>パラメータシートの項目単位の入力制御と表示色の設定（<a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/2987">#2987</a>）<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
-<p>パラメータシート作成において、項目（カラム）ごとに、画面からの編集の禁止と、ヘッダー・ボディの背景色を設定できるようにしました。
+<p>パラメータシート作成において、項目（カラム）ごとに、画面からの編集の禁止と、ヘッダー・ボディの背景色を設定できるようにしました。<br />
 編集させたくない項目を画面から編集できなくすることで入力ミスを防げるほか、項目を色分けすることでパラメータシートが見やすくなります。</p>
 </section>
 <section id="api-3101">
 <h3>通知ジョブ取得APIの追加（<a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3101">#3101</a>）<a class="headerlink" href="#api-3101" title="Link to this heading">¶</a></h3>
-<p>通知ジョブの詳細および一覧を取得できるAPIを追加しました。詳細は通知IDを指定して取得でき、一覧は通知ステータス・機能・宛先・日時範囲で絞り込めます。
+<p>通知ジョブの詳細および一覧を取得できるAPIを追加しました。詳細は通知IDを指定して取得でき、一覧は通知ステータス・機能・宛先・日時範囲で絞り込めます。<br />
 これにより通知の送信状況を確認でき、運用監視やエラー発生時の調査がしやすくなります。</p>
 </section>
 </section>
@@ -267,22 +270,22 @@ AIエージェントがExastro IT Automation MCPサーバーを介して、パ�
 <h2>改善<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
 <section id="iac-exastro-ai-assistant-3076-3077">
 <h3>IaC開発支援機能（Exastro AI Assistant）の強化（<a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3076">#3076</a>, <a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3077">#3077</a>）<a class="headerlink" href="#iac-exastro-ai-assistant-3076-3077" title="Link to this heading">¶</a></h3>
-<p>AIアシスタントで利用する認証情報（APIキーなど）を、ブラウザではなくサーバー側で暗号化して管理するようにしました。利用者の端末に認証情報が残らなくなるため、情報漏えいのリスクが低減され、端末ごとの再設定も不要になります。
+<p>AIアシスタントで利用する認証情報（APIキーなど）を、ブラウザではなくサーバー側で暗号化して管理するようにしました。利用者の端末に認証情報が残らなくなるため、情報漏えいのリスクが低減され、端末ごとの再設定も不要になります。<br />
 また、AIアシスタントが生成するPlaybookの精度を向上させ、従来よりも正確な内容を提案できるようにしました。あわせて、応答に含まれるPlaybookを、既存の内容との差分を確認したうえで、Playbook素材集の編集画面へ反映できるようにしました。コピー＆ペーストによる転記の手間や、転記時の記載ミスを減らせます。</p>
 </section>
 <section id="id6">
 <h3>変数刈取の性能改善（<a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3057">#3057</a>, <a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3072">#3072</a>）<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
-<p>Ansibleドライバの変数刈取処理を見直し、処理時間を大幅に短縮しました。
+<p>Ansibleドライバの変数刈取処理を見直し、処理時間を大幅に短縮しました。<br />
 パラメータシートや代入値自動登録設定のレコードが大量にある場合や、Ansible Legacy Roleでメンバー変数の多いロールを複数のMovementで共通利用している場合に、変数刈取に長い時間がかかっていた問題が改善されます。</p>
 </section>
 <section id="oase-3088">
 <h3>OASEで複数のイベントがルールにマッチした場合のアクション実行の修正（<a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3088">#3088</a>）<a class="headerlink" href="#oase-3088" title="Link to this heading">¶</a></h3>
-<p>キューイングやグルーピングのフィルター条件を利用している場合に、同じタイミングで同一ルールにマッチした複数のイベントのアクションがまとめて登録されず、アクションの実行が遅れる問題を改善しました。
+<p>キューイングやグルーピングのフィルター条件を利用している場合に、同じタイミングで同一ルールにマッチした複数のイベントのアクションがまとめて登録されず、アクションの実行が遅れる問題を改善しました。<br />
 この結果、アクションが同時に複数登録されることで、アクションの同時実行数が増える可能性があるため、同時作業実行数の想定と、それに関する設計を見直す必要があるかもしれません。</p>
 </section>
 <section id="oase-2784-3011">
 <h3>OASEの評価結果・イベント履歴の確認しやすさの向上（<a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/2784">#2784</a>, <a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3011">#3011</a>）<a class="headerlink" href="#oase-2784-3011" title="Link to this heading">¶</a></h3>
-<p>評価結果画面のステータスに「起動失敗」を追加し、アクションの起動・実行の詳細を表示する「アクション結果」項目を追加しました。これまでは、アクションの起動（Conductorの登録）の失敗とConductor自体の異常終了が「完了（異常）」としか表示されず、区別できませんでした。今回の追加で両者を見分けられるようになり、失敗の理由も確認できます。
+<p>評価結果画面のステータスに「起動失敗」を追加し、アクションの起動・実行の詳細を表示する「アクション結果」項目を追加しました。これまでは、アクションの起動（Conductorの登録）の失敗とConductor自体の異常終了が「完了（異常）」としか表示されず、区別できませんでした。今回の追加で両者を見分けられるようになり、失敗の理由も確認できます。<br />
 また、イベント履歴画面に「グルーピング情報」項目を追加し、イベントのGroupIdを確認できるようにしました。</p>
 </section>
 <section id="ansible-2-19playbook-3036">
@@ -299,12 +302,12 @@ AIエージェントがExastro IT Automation MCPサーバーを介して、パ�
 </section>
 <section id="id9">
 <h3>インターフェース情報画面の項目構成と説明の見直し（<a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/2781">#2781</a>, <a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3073">#3073</a>）<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
-<p>Ansible共通のインターフェース情報画面で、Ansible Automation Controller利用時に使用するProxyの項目（Proxy Address、Proxy Port）を、「Ansible Automation Controller インターフェース」のグループ内に移動しました。どの実行エンジンで使用する設定なのかがわかりやすくなります。
+<p>Ansible共通のインターフェース情報画面で、Ansible Automation Controller利用時に使用するProxyの項目（Proxy Address、Proxy Port）を、「Ansible Automation Controller インターフェース」のグループ内に移動しました。どの実行エンジンで使用する設定なのかがわかりやすくなります。<br />
 また、実行エンジンの説明に、Ansible Execution AgentとAnsible Automation Platform (Cloud)の記載がなかったため追加しました。</p>
 </section>
 <section id="id10">
 <h3>その他の改善（<a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3085">#3085</a>, <a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3087">#3087</a>, <a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/2801">#2801</a>）<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
-<p>メニューインポート・マイグレーション・ワークスペース削除の処理中であることを理由にバックヤード処理をスキップしている場合のログを、debugレベルからinfoレベルに変更しました。バックヤード処理が開始されない原因をログから判断しやすくなります。
+<p>メニューインポート・マイグレーション・ワークスペース削除の処理中であることを理由にバックヤード処理をスキップしている場合のログを、debugレベルからinfoレベルに変更しました。バックヤード処理が開始されない原因をログから判断しやすくなります。<br />
 また、実行環境パラメータ定義の新規登録時の「image」の初期値をubi8からubi9に変更したほか、Migration処理の冪等性を改善しました。</p>
 </section>
 </section>
@@ -325,7 +328,7 @@ AIエージェントがExastro IT Automation MCPサーバーを介して、パ�
 </section>
 <section id="ansible-pioneerstate-2776-3089">
 <h3>Ansible Pioneerのstateモジュールに関する不具合の修正（<a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/2776">#2776</a>, <a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3089">#3089</a>）<a class="headerlink" href="#ansible-pioneerstate-2776-3089" title="Link to this heading">¶</a></h3>
-<p>Ansible Pioneerの対話ファイルでstateモジュールを使用した場合に、標準出力の検査が行われず、合否判定が常に成功になる問題を修正しました。
+<p>Ansible Pioneerの対話ファイルでstateモジュールを使用した場合に、標準出力の検査が行われず、合否判定が常に成功になる問題を修正しました。<br />
 あわせて、以下の問題も修正しました。</p>
 <ul class="simple">
 <li><p>stdout_fileに指定したファイルが作業後に削除される問題</p></li>
@@ -336,7 +339,7 @@ AIエージェントがExastro IT Automation MCPサーバーを介して、パ�
 </section>
 <section id="ansible-3091-3092">
 <h3>Ansible作業実行のバックヤード処理に関する不具合の修正（<a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3091">#3091</a>, <a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3092">#3092</a>）<a class="headerlink" href="#ansible-3091-3092" title="Link to this heading">¶</a></h3>
-<p>特定の環境においてAnsibleの作業実行が開始されない問題を修正しました。
+<p>特定の環境においてAnsibleの作業実行が開始されない問題を修正しました。<br />
 また、作業実行を行うバックヤード処理で想定外の例外が発生した場合に、エラーメッセージやトレースバックがログに出力されない問題を修正しました。</p>
 </section>
 <section id="id13">
@@ -345,12 +348,12 @@ AIエージェントがExastro IT Automation MCPサーバーを介して、パ�
 </section>
 <section id="id14">
 <h3>収集機能で指定したファイルが見つからない場合のメッセージの修正（<a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/2847">#2847</a>）<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
-<p>収集機能において、収集対象として指定したファイルが収集結果に存在しない場合に、原因と関係のないメッセージが出力されていた問題を修正しました。
+<p>収集機能において、収集対象として指定したファイルが収集結果に存在しない場合に、原因と関係のないメッセージが出力されていた問題を修正しました。<br />
 適切なメッセージを、ファイル名・ホスト名・変数名・メンバ変数とあわせて出力するようになり、ファイル名の指定誤りなどに気づきやすくなります。</p>
 </section>
 <section id="id15">
 <h3>その他の不具合の修正（<a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3002">#3002</a>, <a class="reference external" href="https://github.com/exastro-suite/exastro-it-automation/issues/3095">#3095</a>）<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
-<p>ファイル一括登録（Excel）で、対象メニューの編集用Excelファイル以外のファイルをアップロードすると、一時ファイルが削除されずに残る問題を修正しました。
+<p>ファイル一括登録（Excel）で、対象メニューの編集用Excelファイル以外のファイルをアップロードすると、一時ファイルが削除されずに残る問題を修正しました。<br />
 また、ファイルのダウンロードなどでAPIがエラーを返した場合でも、ブラウザには常に正常（200 OK）のレスポンスが返り、画面に適切なエラーメッセージが表示されない問題を修正しました。</p>
 </section>
 </section>

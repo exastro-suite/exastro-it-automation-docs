@@ -548,7 +548,7 @@
 </li>
 <li><div class="line-block">
 <div class="line"><strong>インターフェース情報の登録</strong></div>
-<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> から、Ansible Core、Ansible Automation Controller、Ansible Execution Agentのいずれの実行エンジンを使用するかを選択し、実行エンジンのサーバへの接続情報を登録します。</div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> から、Ansible Core、Ansible Automation Controller、Ansible Execution Agent、Ansible Automation Platform(Cloud)のいずれの実行エンジンを使用するかを選択し、実行エンジンのサーバへの接続情報を登録します。</div>
 <div class="line">詳細は「 <a class="reference internal" href="ansible_common.html#ansible-common-interface-information"><span class="std std-ref">インターフェース情報</span></a> 」を参照してください。</div>
 </div>
 </li>
@@ -801,7 +801,7 @@
 </div>
 </li>
 <li><div class="line-block">
-<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Automation Controller」の場合</div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Automation Controller」「Ansible Automation Platform(Cloud)」の場合</div>
 </div>
 <div class="line-block">
 <div class="line">ジョブテンプレートのパラメータを入力します。</div>
@@ -3051,7 +3051,7 @@
 <td><p>インターフェース情報</p></td>
 <td><p>オプションパラメータ</p></td>
 <td><div class="line-block">
-<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Core」「Ansible Automation Controller」の場合</div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Core」「Ansible Automation Controller」「Ansible Automation Platform(Cloud)」の場合</div>
 <div class="line">/AnsibleExecOption.txt</div>
 <div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Execution Agent」の場合</div>
 <div class="line">/env/cmdline</div>
@@ -3063,7 +3063,7 @@
 <td><p>Movement一覧</p></td>
 <td><p>オプションパラメータ</p></td>
 <td><div class="line-block">
-<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Core」「Ansible Automation Controller」の場合</div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Core」「Ansible Automation Controller」「Ansible Automation Platform(Cloud)」の場合</div>
 <div class="line">/AnsibleExecOption.txt</div>
 <div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Execution Agent」の場合</div>
 <div class="line">/env/cmdline</div>
@@ -3085,7 +3085,7 @@
 </div>
 </td>
 <td><div class="line-block">
-<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Core」「Ansible Automation Controller」の場合</div>
+<div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Core」「Ansible Automation Controller」「Ansible Automation Platform(Cloud)」の場合</div>
 <div class="line">/hosts</div>
 <div class="line"><span class="menuselection">Ansible共通 ▶ インターフェース情報</span> の <span class="menuselection">実行エンジン</span> が「Ansible Execution Agent」の場合</div>
 <div class="line">/inventory/hosts</div>
@@ -3137,16 +3137,20 @@
 <caption><span class="caption-number">表 4.46 </span><span class="caption-text">Ansible-LegacyRole結果データに保存されるファイル一覧</span><a class="headerlink" href="#id81" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 15.4%" />
-<col style="width: 38.5%" />
+<col style="width: 30.8%" />
 <col style="width: 15.4%" />
-<col style="width: 15.4%" />
+<col style="width: 23.1%" />
 <col style="width: 15.4%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>ファイル名</p></th>
 <th class="head"><p>記録内容</p></th>
 <th class="head"><p>Ansible Coreの場合</p></th>
-<th class="head"><p>Ansible Automation Controllerの場合</p></th>
+<th class="head"><div class="line-block">
+<div class="line">Ansible Automation Controller/</div>
+<div class="line">Ansible Automation Platform(Cloud)の場合</div>
+</div>
+</th>
 <th class="head"><p>Ansible Execution Agentの場合</p></th>
 </tr>
 </thead>

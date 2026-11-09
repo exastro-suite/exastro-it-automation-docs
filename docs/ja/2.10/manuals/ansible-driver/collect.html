@@ -552,11 +552,11 @@ VAR_RH_sshd_config:
 <tbody>
 <tr class="row-even"><td><p>ファイル名指定</p></td>
 <td><p>VAR_FILE_NAME : &lt;‘ファイル名&gt; ’</p></td>
-<td></td>
+<td><p>拡張子を含めたファイル名で指定してください。</p></td>
 </tr>
 <tr class="row-odd"><td><p>ファイルパス指定 (後方一致)</p></td>
 <td><p>VAR_FILE_NAME : ‘/&lt;階層X&gt;/&lt;ファイル名&gt;’</p></td>
-<td></td>
+<td><p>同上</p></td>
 </tr>
 </tbody>
 </table>
@@ -1046,6 +1046,13 @@ PREFIX(ファイル名): RH_snmp
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">ソースファイルで指定したアップロード対象ファイルが _parameters_file 配下に存在しない場合、該当するファイルアップロード項目は空で登録されます。</div>
+<div class="line">既に登録済みのレコードを更新する場合も、空で上書きされます。</div>
+</div>
+</div>
 <table class="docutils align-left" id="id55">
 <caption><span class="caption-number">表 5.41 </span><span class="caption-text">収集状況詳細</span><a class="headerlink" href="#id55" title="Link to this table">¶</a></caption>
 <thead>
@@ -1157,21 +1164,30 @@ Collect END (host name: exastro-test-3 file name: ['Ansible_conf'])
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id58">
-<div class="code-block-caption"><span class="caption-number">リスト 5.42 </span><span class="caption-text">ログファイル出力例 - 収集エラー[Operation]</span><a class="headerlink" href="#id58" title="Link to this code">¶</a></div>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[Process] Operation is abolished, so registration and update processing is skipped (Operation No: 4001e182-51d2-4918-96e0-5981c4dc6d5f)
+<div class="code-block-caption"><span class="caption-number">リスト 5.42 </span><span class="caption-text">ログファイル出力例 - 収集済み(通知あり)[アップロード対象ファイルなし]</span><a class="headerlink" href="#id58" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Collect START (host name: exastro-test-1 file name: ['Ansible_conf'])
+[Process] The specified file was not found in the collected files. The item is registered as empty. (File name: os_info Host name: exastro-test-1 Variable name: VAR_COLLECT Member variable: [0].file)
+REST DATA (host name: exastro-test-1 menu ID: collect_001 operation NO: 4001e182-51d2-4918-96e0-5981c4dc6d5f)
+Collect END (host name: exastro-test-1 file name: ['Ansible_conf'])
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id59">
-<div class="code-block-caption"><span class="caption-number">リスト 5.43 </span><span class="caption-text">ログファイル出力例 - 収集エラー[host]</span><a class="headerlink" href="#id59" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 5.43 </span><span class="caption-text">ログファイル出力例 - 収集エラー[Operation]</span><a class="headerlink" href="#id59" title="Link to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[Process] Operation is abolished, so registration and update processing is skipped (Operation No: 4001e182-51d2-4918-96e0-5981c4dc6d5f)
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id60">
+<div class="code-block-caption"><span class="caption-number">リスト 5.44 </span><span class="caption-text">ログファイル出力例 - 収集エラー[host]</span><a class="headerlink" href="#id60" title="Link to this code">¶</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[Process] The registration / update process is skipped because the target device has not been registered or has been abolished (host name: exastro-test-1).
 [Process] The registration / update process is skipped because the target device has not been registered or has been abolished (host name: exastro-test-2).
 [Process] The registration / update process is skipped because the target device has not been registered or has been abolished (host name: exastro-test-3).
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id60">
-<div class="code-block-caption"><span class="caption-number">リスト 5.44 </span><span class="caption-text">ログファイル出力例 - 対象外</span><a class="headerlink" href="#id60" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id61">
+<div class="code-block-caption"><span class="caption-number">リスト 5.45 </span><span class="caption-text">ログファイル出力例 - 対象外</span><a class="headerlink" href="#id61" title="Link to this code">¶</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[Process] There is no file in the collection target directory.
 </pre></div>
 </div>
@@ -1249,7 +1265,7 @@ Collect END (host name: exastro-test-3 file name: ['Ansible_conf'])
 <div class="line">Ansibleコンフィグ取得、パラメータ生成Playbook</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="makeyml-ansible-yml">
-<div class="code-block-caption"><span class="caption-number">リスト 5.45 </span><span class="caption-text">makeYml_Ansible.yml</span><a class="headerlink" href="#makeyml-ansible-yml" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 5.46 </span><span class="caption-text">makeYml_Ansible.yml</span><a class="headerlink" href="#makeyml-ansible-yml" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>-<span class="w"> </span>name:<span class="w"> </span>make<span class="w"> </span>yaml<span class="w"> </span>file
 <span class="w">   </span>blockinfile:
 <span class="w">     </span>create:<span class="w"> </span>yes
@@ -1312,8 +1328,8 @@ Collect END (host name: exastro-test-3 file name: ['Ansible_conf'])
 <div class="line">設定変更については、「<a class="reference internal" href="index.html"><span class="doc">Ansible ドライバ</span></a>」を参照してください。</div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id61">
-<div class="code-block-caption"><span class="caption-number">リスト 5.46 </span><span class="caption-text">gather_facts有効設定例</span><a class="headerlink" href="#id61" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id62">
+<div class="code-block-caption"><span class="caption-number">リスト 5.47 </span><span class="caption-text">gather_facts有効設定例</span><a class="headerlink" href="#id62" title="Link to this code">¶</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span>
 <span class="w">  </span><span class="nt">remote_user</span><span class="p">:</span><span class="w"> </span><span class="s">"{{</span><span class="nv"> </span><span class="s">__loginuser__</span><span class="nv"> </span><span class="s">}}"</span>
 <span class="w">  </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
@@ -1330,7 +1346,7 @@ Collect END (host name: exastro-test-3 file name: ['Ansible_conf'])
 <div class="line">収集項目値管理にて、一つの「メニュー-項目」に対して、複数の「PREFIX(ファイル名)-変数名」の設定をしている場合、対象ホストの収集対象ディレクトリ内に、該当する複数のソースファイルがある場合の収集処理の例について記載します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id24">
-<div class="code-block-caption"><span class="caption-number">リスト 5.47 </span><span class="caption-text">収集対象ファイル</span><a class="headerlink" href="#id24" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 5.48 </span><span class="caption-text">収集対象ファイル</span><a class="headerlink" href="#id24" title="Link to this code">¶</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【上位ディレクトリ】
    |-  _parameters
        |-  ita-sample01
@@ -1345,8 +1361,8 @@ Collect END (host name: exastro-test-3 file name: ['Ansible_conf'])
 <div class="line-block">
 <div class="line">■ファイル名：SAMPLE_01.yml ,SAMPLE_02.yml</div>
 </div>
-<table class="docutils align-left" id="id62">
-<caption><span class="caption-number">表 5.42 </span><span class="caption-text">ファイルの内容</span><a class="headerlink" href="#id62" title="Link to this table">¶</a></caption>
+<table class="docutils align-left" id="id63">
+<caption><span class="caption-number">表 5.42 </span><span class="caption-text">ファイルの内容</span><a class="headerlink" href="#id63" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -1378,11 +1394,11 @@ Collect END (host name: exastro-test-3 file name: ['Ansible_conf'])
 <ol class="arabic simple">
 <li><p>収集項目値管理の設定と対象メニュー-項目</p></li>
 </ol>
-<figure class="align-left" id="id63">
+<figure class="align-left" id="id64">
 <a class="reference internal image-reference" href="../../_images/link_parameter_collected_item_value_list.drawio.png"><img alt="収集項目値管理の設定とパラメータシート" src="../../_images/link_parameter_collected_item_value_list.drawio.png" style="width: 6.67391in; height: 3.20028in;" />
 </a>
 <figcaption>
-<p><span class="caption-number">図 5.14 </span><span class="caption-text">収集項目値管理の設定とパラメータシート</span><a class="headerlink" href="#id63" title="Link to this image">¶</a></p>
+<p><span class="caption-number">図 5.14 </span><span class="caption-text">収集項目値管理の設定とパラメータシート</span><a class="headerlink" href="#id64" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <div class="line-block">
@@ -1416,7 +1432,7 @@ Collect END (host name: exastro-test-3 file name: ['Ansible_conf'])
 <div class="line">Yaml形式で出力された収集対象ファイルについて、パラメータシートへの登録処理時の値の取り扱いについて以下として扱います。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id26">
-<div class="code-block-caption"><span class="caption-number">リスト 5.48 </span><span class="caption-text">Sample.yml</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 5.49 </span><span class="caption-text">Sample.yml</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VAR_TEST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TEST</span>
 <span class="nt">VAR_STR_TEST1</span><span class="p">:</span><span class="w"> </span><span class="s">'TEST1'</span>
 <span class="nt">VAR_STR_TEST2</span><span class="p">:</span><span class="w"> </span><span class="s">"TEST2"</span>
@@ -1442,8 +1458,8 @@ Collect END (host name: exastro-test-3 file name: ['Ansible_conf'])
 <div class="line-block">
 <div class="line">■ 収集対象YAML(sample.yml)のキーと値</div>
 </div>
-<table class="docutils align-left" id="id64">
-<caption><span class="caption-number">表 5.43 </span><span class="caption-text">収集対象YAML(sample.yml)のキーと値</span><a class="headerlink" href="#id64" title="Link to this table">¶</a></caption>
+<table class="docutils align-left" id="id65">
+<caption><span class="caption-number">表 5.43 </span><span class="caption-text">収集対象YAML(sample.yml)のキーと値</span><a class="headerlink" href="#id65" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 10.7%" />
 <col style="width: 35.7%" />
@@ -1558,8 +1574,8 @@ Collect END (host name: exastro-test-3 file name: ['Ansible_conf'])
 <div class="line-block">
 <div class="line">■ 収集対象YAML(sample.yml)の収集</div>
 </div>
-<table class="docutils align-left" id="id65">
-<caption><span class="caption-number">表 5.44 </span><span class="caption-text">収集対象YAML(sample.yml)の収集</span><a class="headerlink" href="#id65" title="Link to this table">¶</a></caption>
+<table class="docutils align-left" id="id66">
+<caption><span class="caption-number">表 5.44 </span><span class="caption-text">収集対象YAML(sample.yml)の収集</span><a class="headerlink" href="#id66" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>No</p></th>
 <th class="head"><p>収集対象 (キー:値)</p></th>
@@ -1724,25 +1740,25 @@ Collect END (host name: exastro-test-3 file name: ['Ansible_conf'])
 <ul class="simple">
 <li><p>対象パラメータシートの画面上の表示結果</p></li>
 </ul>
-<figure class="align-default" id="id66">
+<figure class="align-default" id="id67">
 <a class="reference internal image-reference" href="../../_images/val_test_filter_item1_9.png"><img alt="対象パラメータシートの画面上の表示結果1" src="../../_images/val_test_filter_item1_9.png" style="width: 6.96252in; height: 1.98221in;" />
 </a>
 <figcaption>
-<p><span class="caption-number">図 5.15 </span><span class="caption-text">対象パラメータシートの画面上の表示結果1</span><a class="headerlink" href="#id66" title="Link to this image">¶</a></p>
+<p><span class="caption-number">図 5.15 </span><span class="caption-text">対象パラメータシートの画面上の表示結果1</span><a class="headerlink" href="#id67" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="id67">
+<figure class="align-default" id="id68">
 <a class="reference internal image-reference" href="../../_images/val_test_filter_item10_19.png"><img alt="対象パラメータシートの画面上の表示結果2" src="../../_images/val_test_filter_item10_19.png" style="width: 6.96252in; height: 1.98221in;" />
 </a>
 <figcaption>
-<p><span class="caption-number">図 5.16 </span><span class="caption-text">対象パラメータシートの画面上の表示結果2</span><a class="headerlink" href="#id67" title="Link to this image">¶</a></p>
+<p><span class="caption-number">図 5.16 </span><span class="caption-text">対象パラメータシートの画面上の表示結果2</span><a class="headerlink" href="#id68" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
 <li><p>対象パラメータシートのRESTAPI(filter)での取得結果</p></li>
 </ul>
-<div class="literal-block-wrapper docutils container" id="id68">
-<div class="code-block-caption"><span class="caption-number">リスト 5.49 </span><span class="caption-text">RESTAPI(filter)のレスポンス</span><a class="headerlink" href="#id68" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id69">
+<div class="code-block-caption"><span class="caption-number">リスト 5.50 </span><span class="caption-text">RESTAPI(filter)のレスポンス</span><a class="headerlink" href="#id69" title="Link to this code">¶</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
@@ -1794,8 +1810,8 @@ Collect END (host name: exastro-test-3 file name: ['Ansible_conf'])
 <div class="line-block">
 <div class="line">Yaml形式で出力された収集対象ファイルについて、同一ホストで、階層別で同一ファイル名を取り扱う必要がある場合に、アップロード対象ファイルの指定例について記載します。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id69">
-<div class="code-block-caption"><span class="caption-number">リスト 5.50 </span><span class="caption-text">収集対象ファイルのファイルパス、ディレクトリ構造(複数の同一ファイル名)</span><a class="headerlink" href="#id69" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id70">
+<div class="code-block-caption"><span class="caption-number">リスト 5.51 </span><span class="caption-text">収集対象ファイルのファイルパス、ディレクトリ構造(複数の同一ファイル名)</span><a class="headerlink" href="#id70" title="Link to this code">¶</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【上位ディレクトリ】
    |-  _parameters
    |   |-  localhost
@@ -1824,8 +1840,8 @@ Collect END (host name: exastro-test-3 file name: ['Ansible_conf'])
 <div class="line">※上位ディレクトリについては、「<a class="reference internal" href="#target-directory-file-structure"><span class="std std-ref">収集対象ディレクトリ、ファイル構造</span></a>」をご参照ください。</div>
 <div class="line">収集対象ファイルの内容収集時に対象となるファイルの実体は以下となります。</div>
 </div>
-<table class="docutils align-left" id="id70">
-<caption><span class="caption-number">表 5.45 </span><span class="caption-text">収集対象ファイルとファイルの実体</span><a class="headerlink" href="#id70" title="Link to this table">¶</a></caption>
+<table class="docutils align-left" id="id71">
+<caption><span class="caption-number">表 5.45 </span><span class="caption-text">収集対象ファイルとファイルの実体</span><a class="headerlink" href="#id71" title="Link to this table">¶</a></caption>
 <colgroup>
 <col style="width: 40.0%" />
 <col style="width: 40.0%" />
@@ -1863,8 +1879,8 @@ Collect END (host name: exastro-test-3 file name: ['Ansible_conf'])
 <div class="line">ファイルアップロード項目のファイル削除する場合の収集対象ファイルの指定例について記載します。</div>
 <div class="line">削除するファイルについて対象の変数名の値を空文字として設定することで削除可能です。</div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id71">
-<div class="code-block-caption"><span class="caption-number">リスト 5.51 </span><span class="caption-text">ファイルアップロード項目の削除収集対象ファイルのファイルパス、ディレクトリ構造</span><a class="headerlink" href="#id71" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id72">
+<div class="code-block-caption"><span class="caption-number">リスト 5.52 </span><span class="caption-text">ファイルアップロード項目の削除収集対象ファイルのファイルパス、ディレクトリ構造</span><a class="headerlink" href="#id72" title="Link to this code">¶</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>【上位ディレクトリ】
    |-  _parameters
    |   |-  localhost

@@ -416,7 +416,7 @@
 <section id="id7">
 <h3><span class="section-number">7.5.1. </span>Conductorインターフェース情報<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
-<li><p><span class="menuselection">「Conductorインターフェース情報」メニュー</span> では、Conductorから実行される各Movementで共有するディレクトリのパスと <span class="menuselection">「Conductor作業確認」メニュー</span> のリフレッシュ間隔を設定します。</p>
+<li><p><span class="menuselection">「Conductorインターフェース情報」メニュー</span> では、<span class="menuselection">「Conductor作業確認」メニュー</span> のリフレッシュ間隔を設定します。</p>
 <figure class="align-default" id="id27">
 <a class="reference internal image-reference" href="../../_images/conductor_interface.png"><img alt="Conductorインターフェース情報" src="../../_images/conductor_interface.png" style="width: 800px;" />
 </a>
@@ -2403,6 +2403,14 @@ backyard が「次回実行日付」を自動更新するタイミングで「�
 <h3><span class="section-number">7.6.1. </span>Conductor通知先定義について<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
 <section id="id21">
 <h4><span class="section-number">7.6.1.1. </span>Conductor通知先定義設定例<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h4>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">TeamsのIncoming Webhookは廃止されました。</div>
+<div class="line">Teamsへ通知する場合は、Teamsのワークフローで発行したWebhook URLを通知先URLに設定して下さい。</div>
+<div class="line">ワークフローのWebhookでは、MessageCard形式またはAdaptiveCard形式のメッセージが使用できます。</div>
+</div>
+</div>
 <table class="docutils align-left" id="id71">
 <caption><span class="caption-number">表 7.29 </span><span class="caption-text">Teams設定例</span><a class="headerlink" href="#id71" title="Link to this table">¶</a></caption>
 <thead>
@@ -2414,48 +2422,149 @@ backyard が「次回実行日付」を自動更新するタイミングで「�
 <tr class="row-even"><td><p>通知名称</p></td>
 <td><p>test</p></td>
 </tr>
-<tr class="row-odd"><td><p>ヘッダー
-(CURLOPT_HTTPHEADER)</p></td>
-<td><p>[ &quot;Content-Type: application/json&quot; ]</p></td>
+<tr class="row-odd"><td><p>通知先URL(CURLOPT_URL)</p></td>
+<td><p>Teamsのワークフローで発行したWebhook URLを入力して下さい。</p></td>
 </tr>
-<tr class="row-even"><td><p>メッセージ(CURLOPT_POSTFIELDS)</p></td>
-<td><p>{&quot;text&quot;: &quot;通知名：__NOTICE_NAME__, &lt;br&gt;
-Conductor名称: __CONDUCTOR_NAME__, &lt;br&gt;
-Con
-ductorインスタンスID:__CONDUCTOR_INSTANCE_ID__,
-&lt;br&gt;ステータスID: __STATUS_ID__,
-作業URL: __JUMP_URL__, &lt;br&gt; &quot;}</p></td>
+<tr class="row-even"><td><p>ヘッダー(CURLOPT_HTTPHEADER)</p></td>
+<td><p>{&quot;Content-Type&quot;: &quot;application/json&quot;}</p></td>
 </tr>
-<tr class="row-odd"><td><p>PROXY / URL
+<tr class="row-odd"><td><p>メッセージ(CURLOPT_POSTFIELDS)</p></td>
+<td><p><a class="reference internal" href="#conductor-message-card"><span class="std std-ref">メッセージ例(MessageCard形式)</span></a>または<a class="reference internal" href="#conductor-adaptive-card"><span class="std std-ref">メッセージ例(AdaptiveCard形式)</span></a>を参照して下さい。</p></td>
+</tr>
+<tr class="row-even"><td><p>PROXY / URL
 (CURLOPT_PROXY)</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>PROXY / PORT
+<tr class="row-odd"><td><p>PROXY / PORT
 (CURLOPT_PROXYPORT)</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>作業確認URL(FQDN)</p></td>
+<tr class="row-even"><td><p>作業確認URL(FQDN)</p></td>
 <td><p><a class="reference external" href="http://localhost:38000">http://localhost:38000</a></p></td>
 </tr>
-<tr class="row-even"><td><p>その他</p></td>
+<tr class="row-odd"><td><p>抑止開始日時</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>開始日時</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>終了日時</p></td>
+<tr class="row-even"><td><p>抑止終了日時</p></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<figure class="align-default" id="id72">
-<img alt="Teams通知表示例" src="../../_images/conductor_teams_notice.png" />
+<div class="literal-block-wrapper docutils container" id="id72">
+<span id="conductor-message-card"></span><div class="code-block-caption"><span class="caption-number">リスト 7.1 </span><span class="caption-text">メッセージ例(MessageCard形式)</span><a class="headerlink" href="#id72" title="Link to this code">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MessageCard"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://schema.org/extensions"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"themeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0076D7"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ITA Conductor 状況通知"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ITA Conductor 状況通知 (MessageCard版)"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"sections"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"activityTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"実行ステータス情報"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"activitySubtitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Exastro IT Automation からの自動通知です。"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"facts"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Conductor名:"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"__CONDUCTOR_NAME__"</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ステータス:"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"__STATUS_ID__"</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ID:"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"__CONDUCTOR_INSTANCE_ID__"</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"開始時間:"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"__TIME_START__"</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"実行ユーザー:"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"__EXECUTION_USER__"</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"作業URL:"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"__JUMP_URL__"</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">"markdown"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<figure class="align-default" id="id73">
+<img alt="Teams通知表示例(MessageCard形式)" src="../../_images/conductor_teams_notice_message_card.png" />
 <figcaption>
-<p><span class="caption-number">図 7.19 </span><span class="caption-text">Teams通知表示例</span><a class="headerlink" href="#id72" title="Link to this image">¶</a></p>
+<p><span class="caption-number">図 7.19 </span><span class="caption-text">Teams通知表示例(MessageCard形式)</span><a class="headerlink" href="#id73" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
-<table class="docutils align-left" id="id73">
-<caption><span class="caption-number">表 7.30 </span><span class="caption-text">Slack設定例</span><a class="headerlink" href="#id73" title="Link to this table">¶</a></caption>
+<div class="literal-block-wrapper docutils container" id="id74">
+<span id="conductor-adaptive-card"></span><div class="code-block-caption"><span class="caption-number">リスト 7.2 </span><span class="caption-text">メッセージ例(AdaptiveCard形式)</span><a class="headerlink" href="#id74" title="Link to this code">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"message"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"attachments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"contentType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/vnd.microsoft.card.adaptive"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AdaptiveCard"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TextBlock"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Conductor状況通知"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Large"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bolder"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accent"</span>
+<span class="w">          </span><span class="p">},</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FactSet"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"facts"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">              </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Conductor名:"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"__CONDUCTOR_NAME__"</span>
+<span class="w">              </span><span class="p">},</span>
+<span class="w">              </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ステータス:"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"__STATUS_ID__"</span>
+<span class="w">              </span><span class="p">},</span>
+<span class="w">              </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ID:"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"__CONDUCTOR_INSTANCE_ID__"</span>
+<span class="w">              </span><span class="p">},</span>
+<span class="w">              </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"開始時間:"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"__TIME_START__"</span>
+<span class="w">              </span><span class="p">},</span>
+<span class="w">              </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"実行ユーザー:"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"__EXECUTION_USER__"</span>
+<span class="w">              </span><span class="p">},</span>
+<span class="w">              </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"作業URL:"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"__JUMP_URL__"</span>
+<span class="w">              </span><span class="p">}</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://adaptivecards.io/schemas/adaptive-card.json"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.4"</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<figure class="align-default" id="id75">
+<img alt="Teams通知表示例(AdaptiveCard形式)" src="../../_images/conductor_teams_notice_adaptive_card.png" />
+<figcaption>
+<p><span class="caption-number">図 7.20 </span><span class="caption-text">Teams通知表示例(AdaptiveCard形式)</span><a class="headerlink" href="#id75" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-left" id="id76">
+<caption><span class="caption-number">表 7.30 </span><span class="caption-text">Slack設定例</span><a class="headerlink" href="#id76" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>項目</p></th>
 <th class="head"><p>設定値</p></th>
@@ -2465,17 +2574,16 @@ ductorインスタンスID:__CONDUCTOR_INSTANCE_ID__,
 <tr class="row-even"><td><p>通知名称</p></td>
 <td><p>test2</p></td>
 </tr>
-<tr class="row-odd"><td><p>通知先(CURLOPT_URL)</p></td>
+<tr class="row-odd"><td><p>通知先URL(CURLOPT_URL)</p></td>
 <td><p>通知先のSlackのWebhook URLを入力して下さい。</p></td>
 </tr>
 <tr class="row-even"><td><p>ヘッダー(CURLOPT_HTTPHEADER)</p></td>
-<td><p>[ &quot;Content-Type: application/json&quot; ]</p></td>
+<td><p>{&quot;Content-Type&quot;: &quot;application/json&quot;}</p></td>
 </tr>
 <tr class="row-odd"><td><p>メッセージ(CURLOPT_POSTFIELDS)</p></td>
 <td><p>{&quot;text&quot;: &quot;通知名：__NOTICE_NAME__, &lt;br&gt;
 Conductor名称: __CONDUCTOR_NAME__, &lt;br&gt;
-Con
-ductorインスタンスID:__CONDUCTOR_INSTANCE_ID__,
+ConductorインスタンスID: __CONDUCTOR_INSTANCE_ID__,
 &lt;br&gt;ステータスID: __STATUS_ID__,
 作業URL: __JUMP_URL__, &lt;br&gt; &quot;}</p></td>
 </tr>
@@ -2490,36 +2598,33 @@ ductorインスタンスID:__CONDUCTOR_INSTANCE_ID__,
 <tr class="row-even"><td><p>作業確認URL(FQDN)</p></td>
 <td><p><a class="reference external" href="http://localhost:38000">http://localhost:38000</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>その他</p></td>
+<tr class="row-odd"><td><p>抑止開始日時</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>開始日時</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>終了日時</p></td>
+<tr class="row-even"><td><p>抑止終了日時</p></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<figure class="align-default" id="id74">
+<figure class="align-default" id="id77">
 <img alt="Slack通知表示例" src="../../_images/conductor_slack_notice.png" />
 <figcaption>
-<p><span class="caption-number">図 7.20 </span><span class="caption-text">Slack通知表示例</span><a class="headerlink" href="#id74" title="Link to this image">¶</a></p>
+<p><span class="caption-number">図 7.21 </span><span class="caption-text">Slack通知表示例</span><a class="headerlink" href="#id77" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
-<table class="docutils align-left" id="id75">
-<caption><span class="caption-number">表 7.31 </span><span class="caption-text">設定サンプル(Proxy設定、通知抑止設定、その他設定あり)</span><a class="headerlink" href="#id75" title="Link to this table">¶</a></caption>
+<table class="docutils align-left" id="id78">
+<caption><span class="caption-number">表 7.31 </span><span class="caption-text">設定サンプル(Proxy設定、通知抑止設定あり)</span><a class="headerlink" href="#id78" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>通知名称</p></th>
 <th class="head"><p>通知サンプル</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>通知先(CURLOPT_URL)</p></td>
+<tr class="row-even"><td><p>通知先URL(CURLOPT_URL)</p></td>
 <td><p><a class="reference external" href="https://sample.webhook.xxx.com/yyyyyyyy">https://sample.webhook.xxx.com/yyyyyyyy</a></p></td>
 </tr>
 <tr class="row-odd"><td><p>ヘッダー(CURLOPT_HTTPHEADER)</p></td>
-<td><p>[ &quot;Content-Type: application/json&quot; ]</p></td>
+<td><p>{&quot;Content-Type&quot;: &quot;application/json&quot;}</p></td>
 </tr>
 <tr class="row-even"><td><p>メッセージ(CURLOPT_POSTFIELDS)</p></td>
 <td><p>{&quot;text&quot;: &quot;通知内容&quot;}</p></td>
@@ -2535,16 +2640,13 @@ ductorインスタンスID:__CONDUCTOR_INSTANCE_ID__,
 <tr class="row-odd"><td><p>作業確認URL(FQDN)</p></td>
 <td><p><a class="reference external" href="http://exastro-it-automation.local">http://exastro-it-automation.local</a></p></td>
 </tr>
-<tr class="row-even"><td><p>その他</p></td>
-<td><p>{&quot;CURLOPT_TIMEOUT&quot;:&quot;10&quot;}</p></td>
-</tr>
-<tr class="row-odd"><td><p>開始日時</p></td>
+<tr class="row-even"><td><p>抑止開始日時</p></td>
 <td><p>2020/01/01 00:00:00</p></td>
 </tr>
-<tr class="row-even"><td><p>終了日時</p></td>
+<tr class="row-odd"><td><p>抑止終了日時</p></td>
 <td><p>2020/01/01 00:00:00</p></td>
 </tr>
-<tr class="row-odd"><td><p>備考</p></td>
+<tr class="row-even"><td><p>備考</p></td>
 <td><p>自由記述欄です</p></td>
 </tr>
 </tbody>
