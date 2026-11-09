@@ -124,7 +124,7 @@ Ansible-Pioneer作業フロー
       | 詳細は「 :ref:`ansible_common_ansible_automation_controller_hosts` 」を参照してください。
 
    #. | **インターフェース情報の登録**
-      | :menuselection:`Ansible共通 --> インターフェース情報` から、Ansible Core、Ansible Automation Controller、Ansible Execution Agentのいずれの実行エンジンを使用するかを選択し、実行エンジンのサーバへの接続情報を登録します。
+      | :menuselection:`Ansible共通 --> インターフェース情報` から、Ansible Core、Ansible Automation Controller、Ansible Execution Agent、Ansible Automation Platform(Cloud)のいずれの実行エンジンを使用するかを選択し、実行エンジンのサーバへの接続情報を登録します。
       | 詳細は「 :ref:`ansible_common_interface_information` 」を参照してください。
 
    #. | **実行環境定義テンプレート管理の登録（必要に応じて実施）**
@@ -2224,7 +2224,7 @@ Ansible-Pioneer投入データ
    * - Ansible共通
      - インターフェース情報
      - オプションパラメータ
-     - | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Core」「Ansible Automation Controller」の場合
+     - | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Core」「Ansible Automation Controller」「Ansible Automation Platform(Cloud)」の場合
        | /AnsibleExecOption.txt
        | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Execution Agent」の場合
        | /env/cmdline
@@ -2232,7 +2232,7 @@ Ansible-Pioneer投入データ
    * - Ansible-Pioneer
      - Movement一覧
      - 並列実行数
-     - | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Core」「Ansible Automation Controller」の場合
+     - | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Core」「Ansible Automation Controller」「Ansible Automation Platform(Cloud)」の場合
        | /AnsibleExecOption.txt
        | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Execution Agent」の場合
        | /env/cmdline
@@ -2242,7 +2242,7 @@ Ansible-Pioneer投入データ
      - | ホスト名
        | DNSホスト名
        | IP アドレス
-     - | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Core」「Ansible Automation Controller」の場合
+     - | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Core」「Ansible Automation Controller」「Ansible Automation Platform(Cloud)」の場合
        | /hosts
        | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Execution Agent」の場合
        | /inventory/hosts
@@ -2289,14 +2289,15 @@ Ansible-Pioneer結果データに保存されるファイル一覧
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table:: Ansible-Pioneer結果データに保存されるファイル一覧
-   :widths: 20 50 20 20 20
+   :widths: 20 40 20 30 20
    :header-rows: 1
    :align: left
 
    * - ファイル名
      - 記録内容
      - Ansible Coreの場合
-     - Ansible Automation Controllerの場合
+     - | Ansible Automation Controller/
+       | Ansible Automation Platform(Cloud)の場合
      - Ansible Execution Agentの場合
    * - result.txt
      - Ansibleの実行結果を記録

@@ -14,18 +14,19 @@
    ansible-playbook -h
 
 |
-| ▼ :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Automation Controller」の場合に
+| ▼ :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Automation Controller」と「Ansible Automation Platform(Cloud)」の場合に
 | 　　入力可能なオプションパラメータは以下のとおりです。
 |
 
-.. list-table:: Ansible Automation Controllerの場合に指定可能なオプションパラメータ一覧
+.. list-table:: Ansible Automation Controller、Ansible Automation Platform(Cloud)の場合に指定可能なオプションパラメータ一覧
    :widths: 20 30 40 50
    :header-rows: 1
    :align: left
 
    * - オプションパラメータ
      - 指定方法
-     - Ansible Automation Controllerの設定箇所
+     - | Ansible Automation Controller/
+       | Ansible Automation Platform(Cloud)の設定箇所
      - 備考
    * - | -v
        | --verbose
