@@ -320,7 +320,7 @@
 <div class="line">helm chartsでインストールする際に使用する <kbd class="kbd docutils literal notranslate">values.yaml</kbd> は、以下のコマンドで抽出して、編集する</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id19">
-<div class="code-block-caption"><span class="caption-number">リスト 5.52 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 5.53 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>helm<span class="w"> </span>show<span class="w"> </span>values<span class="w"> </span>zabbix-chart-6.4/zabbix-helm-chrt<span class="w"> </span>&gt;<span class="w"> </span>./zabbix_agent_values.yaml
 </pre></div>
 </div>
@@ -331,7 +331,7 @@
 <div class="line">Zabbixエージェントのhelmリポジトリ登録は以下のコマンドで実施できます。 <kbd class="kbd docutils literal notranslate">helm</kbd> <kbd class="kbd docutils literal notranslate">show</kbd> <kbd class="kbd docutils literal notranslate">values</kbd> を実行する前に１度だけ必要となります。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id20">
-<div class="code-block-caption"><span class="caption-number">リスト 5.53 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id20" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 5.54 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id20" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Zabbixエージェントの Helm リポジトリを登録</span>
 helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>zabbix-chart-6.4<span class="w">  </span>https://cdn.zabbix.com/zabbix/integrations/kubernetes-helm/6.4
 <span class="c1"># リポジトリ情報の更新</span>
@@ -344,7 +344,7 @@ helm<span class="w"> </span>repo<span class="w"> </span>update
 <div class="line">出力された <kbd class="kbd docutils literal notranslate">zabbix_agent_values.yaml</kbd> を以下のように修正します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id21">
-<div class="code-block-caption"><span class="caption-number">リスト 5.54 </span><span class="caption-text">zabbix_agent_values.yaml</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 5.55 </span><span class="caption-text">zabbix_agent_values.yaml</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
 <div class="highlight-udiff notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="gd">--- /home/runner/work/exastro-it-automation-docs/exastro-it-automation-docs/workspace/src/ja/2.10/share/ja/manuals/maintenance/literal_includes/zabbix_agent_values.org.yaml</span>
 <span class="linenos"> 2</span><span class="gi">+++ /home/runner/work/exastro-it-automation-docs/exastro-it-automation-docs/workspace/src/ja/2.10/share/ja/manuals/maintenance/literal_includes/zabbix_agent_values.yaml</span>
 <span class="linenos"> 3</span><span class="gu">@@ -56,7 +56,7 @@</span>
@@ -391,7 +391,7 @@ helm<span class="w"> </span>repo<span class="w"> </span>update
 <div class="line">namespaceの作成</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id22">
-<div class="code-block-caption"><span class="caption-number">リスト 5.55 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id22" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 5.56 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id22" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span>monitoring
 </pre></div>
 </div>
@@ -401,7 +401,7 @@ helm<span class="w"> </span>repo<span class="w"> </span>update
 <div class="line">Zabbixエージェント: インストール</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id23">
-<div class="code-block-caption"><span class="caption-number">リスト 5.56 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id23" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 5.57 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id23" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>helm<span class="w"> </span>install<span class="w"> </span>zabbix<span class="w"> </span>zabbix-chart-6.4/zabbix-helm-chrt<span class="w"> </span>--dependency-update<span class="w"> </span>-f<span class="w"> </span>./zabbix_agent_values.yaml<span class="w"> </span>-n<span class="w"> </span>monitoring
 </pre></div>
 </div>
@@ -411,13 +411,13 @@ helm<span class="w"> </span>repo<span class="w"> </span>update
 <div class="line">インストールされた <kbd class="kbd docutils literal notranslate">Zabbixエージェント</kbd> の確認</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id24">
-<div class="code-block-caption"><span class="caption-number">リスト 5.57 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id24" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 5.58 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id24" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>po<span class="w"> </span>-n<span class="w"> </span>monitoring
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id25">
-<div class="code-block-caption"><span class="caption-number">リスト 5.58 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id25" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 5.59 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id25" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>NAME<span class="w">                                               </span>READY<span class="w">   </span>STATUS<span class="w">    </span>RESTARTS<span class="w">   </span>AGE
 zabbix-agent-85cmm<span class="w">                                 </span><span class="m">1</span>/1<span class="w">     </span>Running<span class="w">   </span><span class="m">0</span><span class="w">          </span>54s
 zabbix-agent-86r8k<span class="w">                                 </span><span class="m">1</span>/1<span class="w">     </span>Running<span class="w">   </span><span class="m">0</span><span class="w">          </span>54s
@@ -440,7 +440,7 @@ zabbix-proxy-d8cb67dfc-88ns9<span class="w">                       </span><span 
 <div class="line">ZabbixのKubernetes nodes by HTTPテンプレートの設定に必要なtokenを取得します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id26">
-<div class="code-block-caption"><span class="caption-number">リスト 5.59 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 5.60 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>zabbix-service-account<span class="w"> </span>-n<span class="w"> </span>monitoring<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">={</span>.data.token<span class="o">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 </pre></div>
 </div>
@@ -514,7 +514,7 @@ zabbix-proxy-d8cb67dfc-88ns9<span class="w">                       </span><span 
 <div class="line">ZabbixのKubernetes nodes by HTTPテンプレートの設定に必要なtokenを取得します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id29">
-<div class="code-block-caption"><span class="caption-number">リスト 5.60 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 5.61 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>zabbix-service-account<span class="w"> </span>-n<span class="w"> </span>monitoring<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">={</span>.data.token<span class="o">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 </pre></div>
 </div>
@@ -768,7 +768,7 @@ zabbix-proxy-d8cb67dfc-88ns9<span class="w">                       </span><span 
 <div class="line">以下のコマンドで監視対象のログファイル（正規表現）の一覧を取得できます。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id34">
-<div class="code-block-caption"><span class="caption-number">リスト 5.61 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 5.62 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">(</span><span class="se">\</span>
 <span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .items[*]}{@.metadata.name}{"\n"}'</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>kubectl<span class="w"> </span>get<span class="w"> </span>sts<span class="w">  </span>-n<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .items[*]}{@.metadata.name}{"\n"}'</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
@@ -783,7 +783,7 @@ zabbix-proxy-d8cb67dfc-88ns9<span class="w">                       </span><span 
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id35">
-<div class="code-block-caption"><span class="caption-number">リスト 5.62 </span><span class="caption-text">実行結果（抜粋）</span><a class="headerlink" href="#id35" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 5.63 </span><span class="caption-text">実行結果（抜粋）</span><a class="headerlink" href="#id35" title="Link to this code">¶</a></div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>^exastro-suite<span class="se">\.</span>exastro<span class="se">\.</span>ita-api-admin<span class="se">\.</span>.*<span class="se">\.</span>log$
 ^exastro-suite<span class="se">\.</span>exastro<span class="se">\.</span>ita-api-oase-receiver<span class="se">\.</span>.*<span class="se">\.</span>log$
 ^exastro-suite<span class="se">\.</span>exastro<span class="se">\.</span>ita-api-organization<span class="se">\.</span>.*<span class="se">\.</span>log$

@@ -281,25 +281,25 @@
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id15">
-<div class="code-block-caption"><span class="caption-number">リスト 7.1 </span><span class="caption-text">コマンド（Exastro IT Automation ENCRYPT_KEY）</span><a class="headerlink" href="#id15" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.3 </span><span class="caption-text">コマンド（Exastro IT Automation ENCRYPT_KEY）</span><a class="headerlink" href="#id15" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>ita-secret-ita-global<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.ENCRYPT_KEY}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id16">
-<div class="code-block-caption"><span class="caption-number">リスト 7.2 </span><span class="caption-text">出力結果</span><a class="headerlink" href="#id16" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.4 </span><span class="caption-text">出力結果</span><a class="headerlink" href="#id16" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">JnIoXzJtPic2MXFqRl1yI1chMj8hWzQrNypmVn41Pk8</span><span class="o">=</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id17">
-<div class="code-block-caption"><span class="caption-number">リスト 7.3 </span><span class="caption-text">コマンド（Exastro Platform ENCRYPT_KEY）</span><a class="headerlink" href="#id17" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.5 </span><span class="caption-text">コマンド（Exastro Platform ENCRYPT_KEY）</span><a class="headerlink" href="#id17" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>platform-secret-pf-global<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.ENCRYPT_KEY}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id18">
-<div class="code-block-caption"><span class="caption-number">リスト 7.4 </span><span class="caption-text">出力結果</span><a class="headerlink" href="#id18" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.6 </span><span class="caption-text">出力結果</span><a class="headerlink" href="#id18" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">bHFZe2VEVVM2PmFeQDMqNG4oZT4lTlglLjJJekxBTHE</span><span class="o">=</span>
 </pre></div>
 </div>
@@ -351,13 +351,13 @@
 <div class="line">作業前の Pod 起動数の確認をし、状態を記録します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id19">
-<div class="code-block-caption"><span class="caption-number">リスト 7.5 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.7 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy,statefulset<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .items[*]}{@.metadata.name}:{@.spec.replicas}{"\n"}'</span><span class="w"> </span>-n<span class="w"> </span>exastro
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id20">
-<div class="code-block-caption"><span class="caption-number">リスト 7.6 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id20" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.8 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id20" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ita-api-admin:1
 ita-api-oase-receiver:1
 ita-api-organization:1
@@ -406,13 +406,13 @@ mongo:1
 <div class="line">アプリケーション (platform-auth) の Pod 起動数を 0 に変更し、アクセスを制限します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id21">
-<div class="code-block-caption"><span class="caption-number">リスト 7.7 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.9 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">0</span><span class="w"> </span>--all<span class="o">=</span><span class="nb">true</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id22">
-<div class="code-block-caption"><span class="caption-number">リスト 7.8 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id22" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.10 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id22" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>deployment.apps/ita-api-admin<span class="w"> </span>scaled
 deployment.apps/ita-api-oase-receiver<span class="w"> </span>scaled
 deployment.apps/ita-api-organization<span class="w"> </span>scaled
@@ -457,7 +457,7 @@ statefulset.apps/mongo<span class="w"> </span>scaled
 <div class="line">作業のため、データベースのサービスのみ再起動します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id23">
-<div class="code-block-caption"><span class="caption-number">リスト 7.9 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id23" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.11 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id23" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deployment<span class="w"> </span>mariadb<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">1</span>
 </pre></div>
 </div>
@@ -466,7 +466,7 @@ statefulset.apps/mongo<span class="w"> </span>scaled
 <div class="line">OASE ドライバをインストールしている場合は、MongoDB のサービスを起動します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id24">
-<div class="code-block-caption"><span class="caption-number">リスト 7.10 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id24" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.12 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id24" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>statefulset<span class="w"> </span>mongo<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">1</span>
 </pre></div>
 </div>
@@ -477,13 +477,13 @@ statefulset.apps/mongo<span class="w"> </span>scaled
 <div class="line">データベース以外の Pod 数が 0 になっていることを確認します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id25">
-<div class="code-block-caption"><span class="caption-number">リスト 7.11 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id25" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.13 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id25" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id26">
-<div class="code-block-caption"><span class="caption-number">リスト 7.12 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.14 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME<span class="w">                                                     </span>READY<span class="w">   </span>UP-TO-DATE<span class="w">   </span>AVAILABLE<span class="w">   </span>AGE
 deployment.apps/ita-api-admin<span class="w">                            </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
 deployment.apps/ita-api-oase-receiver<span class="w">                    </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
@@ -539,7 +539,7 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">データベース、ファイルのバックアップ作業用コンテナの作成をします。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id27">
-<div class="code-block-caption"><span class="caption-number">リスト 7.13 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.15 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>cat<span class="w"> </span><span class="s">&lt;&lt;_EOF_ | kubectl apply -f - --namespace exastro</span>
 <span class="linenos"> 2</span><span class="s">apiVersion: v1</span>
 <span class="linenos"> 3</span><span class="s">kind: Pod</span>
@@ -640,7 +640,7 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">インストール時に設定したMongoDBを利用している場合、MongoDBのバックアップ作業用コンテナの作成をします。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id28">
-<div class="code-block-caption"><span class="caption-number">リスト 7.14 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.16 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>cat<span class="w"> </span><span class="s">&lt;&lt;_EOF_ | kubectl apply -f - --namespace exastro</span>
 <span class="linenos"> 2</span><span class="s">apiVersion: v1</span>
 <span class="linenos"> 3</span><span class="s">kind: Pod</span>
@@ -707,37 +707,37 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 </div>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" name="44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" role="tab" tabindex="0">データベースサーバを共有</button><button aria-controls="panel-0-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" name="44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" role="tab" tabindex="-1">データベースサーバを分離</button></div><div aria-labelledby="tab-0-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" class="sphinx-tabs-panel group-tab" id="panel-0-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" name="44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id29">
-<div class="code-block-caption"><span class="caption-number">リスト 7.15 </span><span class="caption-text">アプリケーション用データベースバックアップコマンド</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.17 </span><span class="caption-text">アプリケーション用データベースバックアップコマンド</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'mysqldump -h ${PF_DB_HOST} -P ${PF_DB_PORT} -u ${PF_DB_ADMIN_USER} -p${PF_DB_ADMIN_PASSWORD} --all-databases --ignore-table=mysql.global_priv --add-drop-table'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>exastro_mysqldump_platform_db_<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">"%Y%m%d-%H%M%S"</span><span class="sb">`</span>.sql.gz
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id30">
-<div class="code-block-caption"><span class="caption-number">リスト 7.16 </span><span class="caption-text">ユーザ用データベースバックアップコマンド</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.18 </span><span class="caption-text">ユーザ用データベースバックアップコマンド</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'mysqldump -h ${PF_DB_HOST} -P ${PF_DB_PORT} -u ${PF_DB_ADMIN_USER} -p${PF_DB_ADMIN_PASSWORD} --allow-keywords --no-create-info mysql global_priv --where="user NOT IN (\"mariadb.sys\", \"root\", \"keycloak\", \"admin\", \"healthcheck\", \"pf-user\", \"ITA_USER\")"'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>exastro_mysqldump_platform_user_<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">"%Y%m%d-%H%M%S"</span><span class="sb">`</span>.sql.gz
 </pre></div>
 </div>
 </div>
 </div><div aria-labelledby="tab-0-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" name="44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id31">
-<div class="code-block-caption"><span class="caption-number">リスト 7.17 </span><span class="caption-text">Exastro Platform アプリケーション用データベースバックアップコマンド</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.19 </span><span class="caption-text">Exastro Platform アプリケーション用データベースバックアップコマンド</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'mysqldump -h ${PF_DB_HOST} -P ${PF_DB_PORT} -u ${PF_DB_ADMIN_USER} -p${PF_DB_ADMIN_PASSWORD} --all-databases --ignore-table=mysql.global_priv --add-drop-table'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>exastro_mysqldump_platform_db_<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">"%Y%m%d-%H%M%S"</span><span class="sb">`</span>.sql.gz
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id32">
-<div class="code-block-caption"><span class="caption-number">リスト 7.18 </span><span class="caption-text">Exastro Platform ユーザ用データベースバックアップコマンド</span><a class="headerlink" href="#id32" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.20 </span><span class="caption-text">Exastro Platform ユーザ用データベースバックアップコマンド</span><a class="headerlink" href="#id32" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'mysqldump -h ${PF_DB_HOST} -P ${PF_DB_PORT} -u ${PF_DB_ADMIN_USER} -p${PF_DB_ADMIN_PASSWORD} --allow-keywords --no-create-info mysql global_priv --where="user NOT IN (\"mariadb.sys\", \"root\", \"keycloak\", \"admin\", \"healthcheck\", \"pf-user\", \"ITA_USER\")"'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>exastro_mysqldump_platform_user_<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">"%Y%m%d-%H%M%S"</span><span class="sb">`</span>.sql.gz
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id33">
-<div class="code-block-caption"><span class="caption-number">リスト 7.19 </span><span class="caption-text">Exastro IT Automation アプリケーション用データベースバックアップコマンド</span><a class="headerlink" href="#id33" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.21 </span><span class="caption-text">Exastro IT Automation アプリケーション用データベースバックアップコマンド</span><a class="headerlink" href="#id33" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'mysqldump -h ${ITA_DB_HOST} -P ${ITA_DB_PORT} -u ${ITA_DB_ADMIN_USER} -p${ITA_DB_ADMIN_PASSWORD} --all-databases --add-drop-table'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>exastro_mysqldump_ita_db_<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">"%Y%m%d-%H%M%S"</span><span class="sb">`</span>.sql.gz
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id34">
-<div class="code-block-caption"><span class="caption-number">リスト 7.20 </span><span class="caption-text">Exastro IT Automation ユーザ用データベースバックアップコマンド</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.22 </span><span class="caption-text">Exastro IT Automation ユーザ用データベースバックアップコマンド</span><a class="headerlink" href="#id34" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'mysqldump -h ${ITA_DB_HOST} -P ${ITA_DB_PORT} -u ${ITA_DB_ADMIN_USER} -p${ITA_DB_ADMIN_PASSWORD} --allow-keywords --no-create-info mysql global_priv --where="user NOT IN (\"mariadb.sys\", \"root\", \"keycloak\", \"admin\", \"healthcheck\", \"pf-user\", \"ITA_USER\")"'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>exastro_mysqldump_ita_user_<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">"%Y%m%d-%H%M%S"</span><span class="sb">`</span>.sql.gz
 </pre></div>
 </div>
@@ -749,7 +749,7 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">Exastro IT Automation のファイルのバックアップを取得します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id35">
-<div class="code-block-caption"><span class="caption-number">リスト 7.21 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id35" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.23 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id35" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'tar zcvf - ${ITA_STORAGEPATH}'</span><span class="w"> </span>&gt;<span class="w"> </span>exastro_storage_backup_ita_<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">"%Y%m%d-%H%M%S"</span><span class="sb">`</span>.tar.gz
 </pre></div>
 </div>
@@ -760,7 +760,7 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">OASEでインストール時に設定したMongoDBを利用している場合、MongoDBに対して <strong class="command">mongodump</strong> バックアップを取得します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id36">
-<div class="code-block-caption"><span class="caption-number">リスト 7.22 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id36" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.24 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id36" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>exastro-oase-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'mongodump --host=${ITA_MONGO_HOST} --port=${ITA_MONGO_PORT} --username=${ITA_MONGO_ADMIN_USER} --password=${ITA_MONGO_ADMIN_PASSWORD} --out=/storage/exastro_mongodump'</span>
 </pre></div>
 </div>
@@ -774,7 +774,7 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">バックアップ作業用コンテナを削除します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id37">
-<div class="code-block-caption"><span class="caption-number">リスト 7.23 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id37" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.25 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id37" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro
 </pre></div>
 </div>
@@ -796,7 +796,7 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">サービス停止時に取得した各 Deployment の Pod 起動数を元に戻します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id38">
-<div class="code-block-caption"><span class="caption-number">リスト 7.24 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id38" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.26 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id38" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">1</span><span class="w"> </span>--all<span class="o">=</span><span class="nb">true</span>
 </pre></div>
 </div>
@@ -806,7 +806,7 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">サービス名は、停止時に確認した内容を入力してください。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id39">
-<div class="code-block-caption"><span class="caption-number">リスト 7.25 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id39" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.27 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id39" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deployment<span class="w"> </span><span class="o">[</span>サービス名<span class="o">]</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=[</span>replicas数<span class="o">]</span>
 </pre></div>
 </div>
@@ -815,7 +815,7 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">Ver.2.4.0以降、サービス名：keycloak、mongodbについては以下のコマンドで再開します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id40">
-<div class="code-block-caption"><span class="caption-number">リスト 7.26 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id40" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.28 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id40" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>statefulset<span class="w"> </span><span class="o">[</span>サービス名<span class="o">]</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=[</span>replicas数<span class="o">]</span>
 </pre></div>
 </div>
@@ -832,13 +832,13 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">上記で起動した対象の Pod 数が元に戻りすべて <kbd class="kbd docutils literal notranslate">READY</kbd> になっていることを確認します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id41">
-<div class="code-block-caption"><span class="caption-number">リスト 7.27 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id41" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.29 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id41" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id42">
-<div class="code-block-caption"><span class="caption-number">リスト 7.28 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id42" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.30 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id42" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME<span class="w">                                                     </span>READY<span class="w">   </span>UP-TO-DATE<span class="w">   </span>AVAILABLE<span class="w">   </span>AGE
 deployment.apps/ita-api-admin<span class="w">                            </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
 deployment.apps/ita-api-oase-receiver<span class="w">                    </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
@@ -894,13 +894,13 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">作業前の Pod 起動数の確認をし、状態を記録します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id43">
-<div class="code-block-caption"><span class="caption-number">リスト 7.29 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id43" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.31 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id43" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy,statefulset<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .items[*]}{@.metadata.name}:{@.spec.replicas}{"\n"}'</span><span class="w"> </span>-n<span class="w"> </span>exastro
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id44">
-<div class="code-block-caption"><span class="caption-number">リスト 7.30 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id44" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.32 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id44" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ita-api-admin:1
 ita-api-oase-receiver:1
 ita-api-organization:1
@@ -949,13 +949,13 @@ mongo:1
 <div class="line">アプリケーション (platform-auth) の Pod 起動数を 0 に変更し、アクセスを制限します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id45">
-<div class="code-block-caption"><span class="caption-number">リスト 7.31 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id45" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.33 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id45" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">0</span><span class="w"> </span>--all<span class="o">=</span><span class="nb">true</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id46">
-<div class="code-block-caption"><span class="caption-number">リスト 7.32 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id46" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.34 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id46" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>deployment.apps/ita-api-admin<span class="w"> </span>scaled
 deployment.apps/ita-api-oase-receiver<span class="w"> </span>scaled
 deployment.apps/ita-api-organization<span class="w"> </span>scaled
@@ -1000,7 +1000,7 @@ statefulset.apps/mongo<span class="w"> </span>scaled
 <div class="line">作業のため、データベースのサービスのみ再起動します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id47">
-<div class="code-block-caption"><span class="caption-number">リスト 7.33 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id47" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.35 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id47" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deployment<span class="w"> </span>mariadb<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">1</span>
 </pre></div>
 </div>
@@ -1009,7 +1009,7 @@ statefulset.apps/mongo<span class="w"> </span>scaled
 <div class="line">OASE ドライバをインストールしている場合は、MongoDB のサービスを起動します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id48">
-<div class="code-block-caption"><span class="caption-number">リスト 7.34 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id48" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.36 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id48" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>statefulset<span class="w"> </span>mongo<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">1</span>
 </pre></div>
 </div>
@@ -1020,13 +1020,13 @@ statefulset.apps/mongo<span class="w"> </span>scaled
 <div class="line">データベース以外の Pod 数が 0 になっていることを確認します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id49">
-<div class="code-block-caption"><span class="caption-number">リスト 7.35 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id49" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.37 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id49" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id50">
-<div class="code-block-caption"><span class="caption-number">リスト 7.36 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id50" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.38 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id50" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME<span class="w">                                                     </span>READY<span class="w">   </span>UP-TO-DATE<span class="w">   </span>AVAILABLE<span class="w">   </span>AGE
 deployment.apps/ita-api-admin<span class="w">                            </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
 deployment.apps/ita-api-oase-receiver<span class="w">                    </span><span class="m">0</span>/0<span class="w">     </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>26h
@@ -1082,7 +1082,7 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">データベース、ファイルのリストア作業用コンテナの作成をします。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id51">
-<div class="code-block-caption"><span class="caption-number">リスト 7.37 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id51" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.39 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id51" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>cat<span class="w"> </span><span class="s">&lt;&lt;_EOF_ | kubectl apply -f - --namespace exastro</span>
 <span class="linenos"> 2</span><span class="s">apiVersion: v1</span>
 <span class="linenos"> 3</span><span class="s">kind: Pod</span>
@@ -1183,7 +1183,7 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">インストール時に設定したMongoDBを利用している場合、MongoDBのリストア作業用コンテナの作成をします。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id52">
-<div class="code-block-caption"><span class="caption-number">リスト 7.38 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id52" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.40 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id52" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>cat<span class="w"> </span><span class="s">&lt;&lt;_EOF_ | kubectl apply -f - --namespace exastro</span>
 <span class="linenos"> 2</span><span class="s">apiVersion: v1</span>
 <span class="linenos"> 3</span><span class="s">kind: Pod</span>
@@ -1250,55 +1250,55 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 </div>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" name="44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" role="tab" tabindex="0">データベースサーバを共有</button><button aria-controls="panel-1-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" name="44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" role="tab" tabindex="-1">データベースサーバを分離</button></div><div aria-labelledby="tab-1-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" class="sphinx-tabs-panel group-tab" id="panel-1-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" name="44OH44O844K/44OZ44O844K544K144O844OQ44KS5YWx5pyJ" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id53">
-<div class="code-block-caption"><span class="caption-number">リスト 7.39 </span><span class="caption-text">ユーザ用データベースリストアコマンド</span><a class="headerlink" href="#id53" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.41 </span><span class="caption-text">ユーザ用データベースリストアコマンド</span><a class="headerlink" href="#id53" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gzip<span class="w"> </span>-dc<span class="w"> </span>exastro_mysqldump_platform_user_YYYYMMDD-HHmmss.sql.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'mysql -h ${PF_DB_HOST} -P ${PF_DB_PORT} -u ${PF_DB_ADMIN_USER} -p${PF_DB_ADMIN_PASSWORD} mysql'</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id54">
-<div class="code-block-caption"><span class="caption-number">リスト 7.40 </span><span class="caption-text">アプリケーション用データベースリストアコマンド</span><a class="headerlink" href="#id54" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.42 </span><span class="caption-text">アプリケーション用データベースリストアコマンド</span><a class="headerlink" href="#id54" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gzip<span class="w"> </span>-dc<span class="w"> </span>exastro_mysqldump_platform_db_YYYYMMDD-HHmmss.sql.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">'s/DEFINER[ ]*=[ ]*[^*]*\*/\*/'</span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'mysql -h ${PF_DB_HOST} -P ${PF_DB_PORT} -u ${PF_DB_ADMIN_USER} -p${PF_DB_ADMIN_PASSWORD}'</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id55">
-<div class="code-block-caption"><span class="caption-number">リスト 7.41 </span><span class="caption-text">データベース権限更新コマンド</span><a class="headerlink" href="#id55" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.43 </span><span class="caption-text">データベース権限更新コマンド</span><a class="headerlink" href="#id55" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;MariaDB<span class="w"> </span>Pod名&gt;<span class="w"> </span>--bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"mysql -u root -ppassword -e 'FLUSH PRIVILEGES;'"</span>
 </pre></div>
 </div>
 </div>
 </div><div aria-labelledby="tab-1-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" name="44OH44O844K/44OZ44O844K544K144O844OQ44KS5YiG6Zui" role="tabpanel" tabindex="0"><div class="literal-block-wrapper docutils container" id="id56">
-<div class="code-block-caption"><span class="caption-number">リスト 7.42 </span><span class="caption-text">Exastro Platform ユーザ用データベースリストアコマンド</span><a class="headerlink" href="#id56" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.44 </span><span class="caption-text">Exastro Platform ユーザ用データベースリストアコマンド</span><a class="headerlink" href="#id56" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gzip<span class="w"> </span>-dc<span class="w"> </span>exastro_mysqldump_platform_user_YYYYMMDD-HHmmss.sql.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'mysql -h ${PF_DB_HOST} -P ${PF_DB_PORT} -u ${PF_DB_ADMIN_USER} -p${PF_DB_ADMIN_PASSWORD} mysql'</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id57">
-<div class="code-block-caption"><span class="caption-number">リスト 7.43 </span><span class="caption-text">Exastro Platform アプリケーション用データベースリストアコマンド</span><a class="headerlink" href="#id57" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.45 </span><span class="caption-text">Exastro Platform アプリケーション用データベースリストアコマンド</span><a class="headerlink" href="#id57" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gzip<span class="w"> </span>-dc<span class="w"> </span>exastro_mysqldump_platform_db_YYYYMMDD-HHmmss.sql.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">'s/DEFINER[ ]*=[ ]*[^*]*\*/\*/'</span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'mysql -h ${PF_DB_HOST} -P ${PF_DB_PORT} -u ${PF_DB_ADMIN_USER} -p${PF_DB_ADMIN_PASSWORD}'</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id58">
-<div class="code-block-caption"><span class="caption-number">リスト 7.44 </span><span class="caption-text">Exastro Platform データベース権限更新コマンド</span><a class="headerlink" href="#id58" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.46 </span><span class="caption-text">Exastro Platform データベース権限更新コマンド</span><a class="headerlink" href="#id58" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;MariaDB<span class="w"> </span>Pod名&gt;<span class="w"> </span>--bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"mysql -u root -ppassword -e 'FLUSH PRIVILEGES;'"</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id59">
-<div class="code-block-caption"><span class="caption-number">リスト 7.45 </span><span class="caption-text">Exastro IT Automation ユーザ用データベースリストアコマンド</span><a class="headerlink" href="#id59" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.47 </span><span class="caption-text">Exastro IT Automation ユーザ用データベースリストアコマンド</span><a class="headerlink" href="#id59" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gzip<span class="w"> </span>-dc<span class="w"> </span>exastro_mysqldump_ita_user_YYYYMMDD-HHmmss.sql.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'mysql -h ${ITA_DB_HOST} -P ${ITA_DB_PORT} -u ${ITA_DB_ADMIN_USER} -p${ITA_DB_ADMIN_PASSWORD} mysql'</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id60">
-<div class="code-block-caption"><span class="caption-number">リスト 7.46 </span><span class="caption-text">Exastro IT Automation アプリケーション用データベースリストアコマンド</span><a class="headerlink" href="#id60" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.48 </span><span class="caption-text">Exastro IT Automation アプリケーション用データベースリストアコマンド</span><a class="headerlink" href="#id60" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gzip<span class="w"> </span>-dc<span class="w"> </span>exastro_mysqldump_ita_db_YYYYMMDD-HHmmss.sql.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">'s/DEFINER[ ]*=[ ]*[^*]*\*/\*/'</span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'mysql -h ${ITA_DB_HOST} -P ${ITA_DB_PORT} -u ${ITA_DB_ADMIN_USER} -p${ITA_DB_ADMIN_PASSWORD}'</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id61">
-<div class="code-block-caption"><span class="caption-number">リスト 7.47 </span><span class="caption-text">Exastro IT Automation データベース権限更新コマンド</span><a class="headerlink" href="#id61" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.49 </span><span class="caption-text">Exastro IT Automation データベース権限更新コマンド</span><a class="headerlink" href="#id61" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;MariaDB<span class="w"> </span>Pod名&gt;<span class="w"> </span>--bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"mysql -u root -ppassword -e 'FLUSH PRIVILEGES;'"</span>
 </pre></div>
 </div>
@@ -1310,7 +1310,7 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">Exastro IT Automation のファイルのリストアを実施します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id62">
-<div class="code-block-caption"><span class="caption-number">リスト 7.48 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id62" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.50 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id62" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro<span class="w"> </span>--<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'tar zxvf - -C /'</span><span class="w"> </span>&lt;<span class="w"> </span>exastro_storage_backup_ita_YYYYMMDD-HHmmss.tar.gz
 </pre></div>
 </div>
@@ -1321,7 +1321,7 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">OASEでインストール時に設定したMongoDBを利用している場合、MongoDBのリストアを実施します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id63">
-<div class="code-block-caption"><span class="caption-number">リスト 7.49 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id63" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.51 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id63" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>-zxvf<span class="w"> </span>exastro_mongodump_YYYYMMDD-HHmmss.tar.gz<span class="w"> </span>-C<span class="w"> </span>/var/data/exastro-suite/exastro-it-automation/ita-common
 </pre></div>
 </div>
@@ -1338,7 +1338,7 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">バックアップ作業用コンテナを削除します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id64">
-<div class="code-block-caption"><span class="caption-number">リスト 7.50 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id64" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.52 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id64" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>exastro-maintenance<span class="w"> </span>--namespace<span class="w"> </span>exastro
 </pre></div>
 </div>
@@ -1360,7 +1360,7 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">サービス停止時に取得した各 Deployment の Pod 起動数を元に戻します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id65">
-<div class="code-block-caption"><span class="caption-number">リスト 7.51 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id65" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.53 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id65" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=</span><span class="m">1</span><span class="w"> </span>--all<span class="o">=</span><span class="nb">true</span>
 </pre></div>
 </div>
@@ -1370,7 +1370,7 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">サービス名は、停止時に確認した内容を入力してください。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id66">
-<div class="code-block-caption"><span class="caption-number">リスト 7.52 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id66" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.54 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id66" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>deployment<span class="w"> </span><span class="o">[</span>サービス名<span class="o">]</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=[</span>replicas数<span class="o">]</span>
 </pre></div>
 </div>
@@ -1379,7 +1379,7 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">Ver.2.4.0以降、サービス名：keycloak、mongodbについては以下のコマンドで再開します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id67">
-<div class="code-block-caption"><span class="caption-number">リスト 7.53 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id67" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.55 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id67" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>scale<span class="w"> </span>statefulset<span class="w"> </span><span class="o">[</span>サービス名<span class="o">]</span><span class="w"> </span>-n<span class="w"> </span>exastro<span class="w"> </span>--replicas<span class="o">=[</span>replicas数<span class="o">]</span>
 </pre></div>
 </div>
@@ -1396,13 +1396,13 @@ statefulset.apps/mongo<span class="w">      </span><span class="m">1</span>/1<sp
 <div class="line">上記で起動した対象の Pod 数が元に戻りすべて <kbd class="kbd docutils literal notranslate">READY</kbd> になっていることを確認します。</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id68">
-<div class="code-block-caption"><span class="caption-number">リスト 7.54 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id68" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.56 </span><span class="caption-text">コマンド</span><a class="headerlink" href="#id68" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>deploy,statefulset<span class="w"> </span>-n<span class="w"> </span>exastro
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id69">
-<div class="code-block-caption"><span class="caption-number">リスト 7.55 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id69" title="Link to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">リスト 7.57 </span><span class="caption-text">実行結果</span><a class="headerlink" href="#id69" title="Link to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME<span class="w">                                                     </span>READY<span class="w">   </span>UP-TO-DATE<span class="w">   </span>AVAILABLE<span class="w">   </span>AGE
 deployment.apps/ita-api-admin<span class="w">                            </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h
 deployment.apps/ita-api-oase-receiver<span class="w">                    </span><span class="m">1</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">1</span><span class="w">           </span>26h

@@ -516,6 +516,19 @@
 <td><p>ソートキー</p></td>
 <td><p>「一覧」に表示する並び順を設定できます。</p></td>
 </tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p>エクスポート権限チェック</p></td>
+<td><p>メニューエクスポート・インポート時に、ロール・メニュー紐付の権限をチェックするかどうかを設定できます。</p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p>メニュー表示</p></td>
+<td><p>メニュー表示、非表示の設定ができます。</p>
+<div class="line-block">
+<div class="line">・true or 空白 → 表示</div>
+<div class="line">・false → 非表示</div>
+</div>
+</td>
+</tr>
 </tbody>
 </table>
 <div class="admonition warning">
@@ -527,6 +540,23 @@
 </li>
 <li><div class="line-block">
 <div class="line">ソートキーはJSON形式の表記で設定する必要があります。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">エクスポート権限チェックは、通常は初期状態のまま使用してください。変更する場合の影響は <a class="reference internal" href="../export_import/menu_export_import.html#menu-export-import-permission"><span class="std std-ref">メニューエクスポート・インポートに必要な権限について</span></a> を参照してください。</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<ul>
+<li><div class="line-block">
+<div class="line">メニューを非表示にした場合でも、権限設定はそのまま保持されます。</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">非表示にした場合、画面上からは参照できなくなりますが、URLを入力すれば、非表示にしたメニューへアクセスが可能です。</div>
 </div>
 </li>
 </ul>
