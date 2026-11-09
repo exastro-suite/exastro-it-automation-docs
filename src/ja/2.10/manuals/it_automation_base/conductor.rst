@@ -100,7 +100,7 @@ ITA Conductor利用手順
 Conductorインターフェース情報
 ------------------------------
 
-1. :menuselection:`「Conductorインターフェース情報」メニュー` では、Conductorから実行される各Movementで共有するディレクトリのパスと :menuselection:`「Conductor作業確認」メニュー` のリフレッシュ間隔を設定します。
+1. :menuselection:`「Conductorインターフェース情報」メニュー` では、:menuselection:`「Conductor作業確認」メニュー` のリフレッシュ間隔を設定します。
 
    .. figure:: /images/ja/conductor/conductor_interface/conductor_interface.png
       :width: 800px
@@ -1479,6 +1479,11 @@ Conductor通知先定義について
 
 Conductor通知先定義設定例
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+.. note::
+   | TeamsのIncoming Webhookは廃止されました。
+   | Teamsへ通知する場合は、Teamsのワークフローで発行したWebhook URLを通知先URLに設定して下さい。
+   | ワークフローのWebhookでは、MessageCard形式またはAdaptiveCard形式のメッセージが使用できます。
+
 .. table:: Teams設定例
    :align: left
 
@@ -1487,15 +1492,15 @@ Conductor通知先定義設定例
    +=======================+==================================================+
    | 通知名称              | test                                             |
    +-----------------------+--------------------------------------------------+
-   | ヘッダー              |  [ "Content-Type: application/json" ]            |
-   | (CURLOPT_HTTPHEADER)  |                                                  |
+   | 通知先URL\            | Teamsのワークフローで発行した\                   |
+   | (CURLOPT_URL)         | Webhook URLを入力して下さい。                    |
    +-----------------------+--------------------------------------------------+
-   | メッセージ(C\         | {"text": "通知名：__NOTICE_NAME__, <br>          |
-   | URLOPT_POSTFIELDS)    | Conductor名称: \__CONDUCTOR_NAME__, <br>         |
-   |                       | Con                                              |
-   |                       | ductorインスタンスID:__CONDUCTOR_INSTANCE_ID__,  |
-   |                       | <br>ステータスID: \__STATUS_ID__,                |
-   |                       | 作業URL: \__JUMP_URL__, <br> "}                  |
+   | ヘッダー(C\           | {"Content-Type": "application/json"}             |
+   | URLOPT_HTTPHEADER)    |                                                  |
+   +-----------------------+--------------------------------------------------+
+   | メッセージ(C\         | :ref:`conductor_message_card`\ または\           |
+   | URLOPT_POSTFIELDS)    | :ref:`conductor_adaptive_card`\ を参照して\      |
+   |                       | 下さい。                                         |
    +-----------------------+--------------------------------------------------+
    | PROXY / URL           |                                                  |
    | (CURLOPT_PROXY)       |                                                  |
@@ -1506,17 +1511,124 @@ Conductor通知先定義設定例
    +-----------------------+--------------------------------------------------+
    | 作業確認URL(FQDN)     | http://localhost:38000                           |
    +-----------------------+--------------------------------------------------+
-   | その他                |                                                  |
+   | 抑止開始日時          |                                                  |
    +-----------------------+--------------------------------------------------+
-   | 開始日時              |                                                  |
-   +-----------------------+--------------------------------------------------+
-   | 終了日時              |                                                  |
+   | 抑止終了日時          |                                                  |
    +-----------------------+--------------------------------------------------+
 
-.. figure:: /images/ja/conductor/conductor_notice/conductor_teams_notice.png
-   :alt: Teams通知表示例
+.. _conductor_message_card:
 
-   Teams通知表示例
+.. code-block:: json
+   :caption: メッセージ例(MessageCard形式)
+
+   {
+     "@type": "MessageCard",
+     "@context": "http://schema.org/extensions",
+     "themeColor": "0076D7",
+     "summary": "ITA Conductor 状況通知",
+     "title": "ITA Conductor 状況通知 (MessageCard版)",
+     "sections": [
+       {
+         "activityTitle": "実行ステータス情報",
+         "activitySubtitle": "Exastro IT Automation からの自動通知です。",
+         "facts": [
+           {
+             "name": "Conductor名:",
+             "value": "__CONDUCTOR_NAME__"
+           },
+           {
+             "name": "ステータス:",
+             "value": "__STATUS_ID__"
+           },
+           {
+             "name": "ID:",
+             "value": "__CONDUCTOR_INSTANCE_ID__"
+           },
+           {
+             "name": "開始時間:",
+             "value": "__TIME_START__"
+           },
+           {
+             "name": "実行ユーザー:",
+             "value": "__EXECUTION_USER__"
+           },
+           {
+             "name": "作業URL:",
+             "value": "__JUMP_URL__"
+           }
+         ],
+         "markdown": true
+       }
+     ]
+   }
+
+.. figure:: /images/ja/conductor/conductor_notice/conductor_teams_notice_message_card.png
+   :alt: Teams通知表示例(MessageCard形式)
+
+   Teams通知表示例(MessageCard形式)
+
+.. _conductor_adaptive_card:
+
+.. code-block:: json
+   :caption: メッセージ例(AdaptiveCard形式)
+
+   {
+     "type": "message",
+     "attachments": [
+       {
+         "contentType": "application/vnd.microsoft.card.adaptive",
+         "content": {
+           "type": "AdaptiveCard",
+           "body": [
+             {
+               "type": "TextBlock",
+               "text": "Conductor状況通知",
+               "size": "Large",
+               "weight": "Bolder",
+               "color": "Accent"
+             },
+             {
+               "type": "FactSet",
+               "facts": [
+                 {
+                   "title": "Conductor名:",
+                   "value": "__CONDUCTOR_NAME__"
+                 },
+                 {
+                   "title": "ステータス:",
+                   "value": "__STATUS_ID__"
+                 },
+                 {
+                   "title": "ID:",
+                   "value": "__CONDUCTOR_INSTANCE_ID__"
+                 },
+                 {
+                   "title": "開始時間:",
+                   "value": "__TIME_START__"
+                 },
+                 {
+                   "title": "実行ユーザー:",
+                   "value": "__EXECUTION_USER__"
+                 },
+                 {
+                   "title": "作業URL:",
+                   "value": "__JUMP_URL__"
+                 }
+               ]
+             }
+           ],
+           "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+           "version": "1.4"
+         }
+       }
+     ]
+   }
+
+.. figure:: /images/ja/conductor/conductor_notice/conductor_teams_notice_adaptive_card.png
+   :alt: Teams通知表示例(AdaptiveCard形式)
+
+   Teams通知表示例(AdaptiveCard形式)
+
 
 .. table:: Slack設定例
    :align: left
@@ -1526,16 +1638,16 @@ Conductor通知先定義設定例
    +=======================+==================================================+
    | 通知名称              | test2                                            |
    +-----------------------+--------------------------------------------------+
-   | 通\                   | 通知先のSlackのWebhook URLを入力して下さい。     |
-   | 知先(CURLOPT_URL)     |                                                  |
+   | 通知先URL\            | 通知先のSlackのWebhook URLを入力して下さい。     |
+   | (CURLOPT_URL)         |                                                  |
    +-----------------------+--------------------------------------------------+
-   | ヘッダー(C\           | [ "Content-Type: application/json" ]             |
+   | ヘッダー(C\           | {"Content-Type": "application/json"}             |
    | URLOPT_HTTPHEADER)    |                                                  |
    +-----------------------+--------------------------------------------------+
    | メッセージ(C\         | {"text": "通知名：__NOTICE_NAME__, <br>          |
    | URLOPT_POSTFIELDS)    | Conductor名称: \__CONDUCTOR_NAME__, <br>         |
-   |                       | Con                                              |
-   |                       | ductorインスタンスID:__CONDUCTOR_INSTANCE_ID__,  |
+   |                       | ConductorインスタンスID: \                       |
+   |                       | \__CONDUCTOR_INSTANCE_ID__,                      |
    |                       | <br>ステータスID: \__STATUS_ID__,                |
    |                       | 作業URL: \__JUMP_URL__, <br> "}                  |
    +-----------------------+--------------------------------------------------+
@@ -1548,11 +1660,9 @@ Conductor通知先定義設定例
    +-----------------------+--------------------------------------------------+
    | 作業確認URL(FQDN)     | http://localhost:38000                           |
    +-----------------------+--------------------------------------------------+
-   | その他                |                                                  |
+   | 抑止開始日時          |                                                  |
    +-----------------------+--------------------------------------------------+
-   | 開始日時              |                                                  |
-   +-----------------------+--------------------------------------------------+
-   | 終了日時              |                                                  |
+   | 抑止終了日時          |                                                  |
    +-----------------------+--------------------------------------------------+
 
 .. figure:: /images/ja/conductor/conductor_notice/conductor_slack_notice.png
@@ -1560,16 +1670,16 @@ Conductor通知先定義設定例
 
    Slack通知表示例
 
-.. table:: 設定サンプル(Proxy設定、通知抑止設定、その他設定あり)
+.. table:: 設定サンプル(Proxy設定、通知抑止設定あり)
    :align: left
 
    +--------------------+-------------------------------------------------+
    | 通知名称           | 通知サンプル                                    |
    +====================+=================================================+
-   | 通\                | https://sample.webhook.xxx.com/yyyyyyyy         |
-   | 知先(CURLOPT_URL)  |                                                 |
+   | 通知先\            | https://sample.webhook.xxx.com/yyyyyyyy         |
+   | URL(CURLOPT_URL)   |                                                 |
    +--------------------+-------------------------------------------------+
-   | ヘッダー(C\        | [ "Content-Type: application/json" ]            |
+   | ヘッダー(C\        | {"Content-Type": "application/json"}            |
    | URLOPT_HTTPHEADER) |                                                 |
    +--------------------+-------------------------------------------------+
    | メッセージ(C\      | {"text": "通知内容"}                            |
@@ -1584,11 +1694,9 @@ Conductor通知先定義設定例
    +--------------------+-------------------------------------------------+
    | 作業確認URL(FQDN)  | http://exastro-it-automation.local              |
    +--------------------+-------------------------------------------------+
-   | その他             | {"CURLOPT_TIMEOUT":"10"}                        |
+   | 抑止開始日時       | 2020/01/01 00:00:00                             |
    +--------------------+-------------------------------------------------+
-   | 開始日時           | 2020/01/01 00:00:00                             |
-   +--------------------+-------------------------------------------------+
-   | 終了日時           | 2020/01/01 00:00:00                             |
+   | 抑止終了日時       | 2020/01/01 00:00:00                             |
    +--------------------+-------------------------------------------------+
    | 備考               | 自由記述欄です                                  |
    +--------------------+-------------------------------------------------+

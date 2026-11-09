@@ -116,7 +116,7 @@ Ansible-Legacy作業フロー
       | 詳細は「 :ref:`ansible_common_ansible_automation_controller_hosts` 」を参照してください。
 
    #. | **インターフェース情報の登録**
-      | :menuselection:`Ansible共通 --> インターフェース情報` から、Ansible Core、Ansible Automation Controller、Ansible Execution Agentのいずれの実行エンジンを使用するかを選択し、実行エンジンのサーバへの接続情報を登録します。
+      | :menuselection:`Ansible共通 --> インターフェース情報` から、Ansible Core、Ansible Automation Controller、Ansible Execution Agent、Ansible Automation Platform(Cloud)のいずれの実行エンジンを使用するかを選択し、実行エンジンのサーバへの接続情報を登録します。
       | 詳細は「 :ref:`ansible_common_interface_information` 」を参照してください。
 
    #. | **実行環境定義テンプレート管理の登録（必要に応じて実施）**
@@ -302,7 +302,7 @@ Movement一覧
       |           |                         |                                                                                   |           |              |                                                       |
       |           |                         | + | :menuselection:`Ansible共通 --> インターフェース情報`\                        |           |              |                                                       |
       |           |                         |     の :menuselection:`実行エンジン` が\                                          |           |              |                                                       |
-      |           |                         |    「Ansible Automation Controller」の場合                                        |           |              |                                                       |
+      |           |                         |    「Ansible Automation Controller」「Ansible Automation Platform(Cloud)」の場合  |           |              |                                                       |
       |           |                         |                                                                                   |           |              |                                                       |
       |           |                         |   | ジョブテンプレートのパラメータを入力します。                                  |           |              |                                                       |
       |           |                         |   | ジョブテンプレートについての詳細は、\                                         |           |              |                                                       |
@@ -1199,7 +1199,7 @@ Ansible-Legacy投入データ
    * - Ansible共通
      - インターフェース情報
      - オプションパラメータ
-     - | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Core」「Ansible Automation Controller」の場合
+     - | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Core」「Ansible Automation Controller」「Ansible Automation Platform(Cloud)」の場合
        | /AnsibleExecOption.txt
        | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Execution Agent」の場合
        | /env/cmdline
@@ -1207,7 +1207,7 @@ Ansible-Legacy投入データ
    * - Ansible-Legacy
      - Movement 一覧
      - オプションパラメータ
-     - | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Core」「Ansible Automation Controller」の場合
+     - | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Core」「Ansible Automation Controller」「Ansible Automation Platform(Cloud)」の場合
        | /AnsibleExecOption.txt
        | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Execution Agent」の場合
        | /env/cmdline
@@ -1222,7 +1222,7 @@ Ansible-Legacy投入データ
        | インベントリファイル追加オプション
        | WinRM 接続情報
        | 接続オプション
-     - | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Core」「Ansible Automation Controller」の場合
+     - | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Core」「Ansible Automation Controller」「Ansible Automation Platform(Cloud)」の場合
        | /hosts
        | :menuselection:`Ansible共通 --> インターフェース情報` の :menuselection:`実行エンジン` が「Ansible Execution Agent」の場合
        | /inventory/hosts
@@ -1262,14 +1262,15 @@ Legacy結果データに保存されるファイル一覧
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table:: Ansible-Legacy結果データに保存されるファイル一覧
-   :widths: 20 50 20 20 20
+   :widths: 20 40 20 30 20
    :header-rows: 1
    :align: left
 
    * - ファイル名
      - 記録内容
      - Ansible Coreの場合
-     - Ansible Automation Controllerの場合
+     - | Ansible Automation Controller/
+       | Ansible Automation Platform(Cloud)の場合
      - Ansible Execution Agentの場合
    * - result.txt
      - Ansibleの実行結果を記録
