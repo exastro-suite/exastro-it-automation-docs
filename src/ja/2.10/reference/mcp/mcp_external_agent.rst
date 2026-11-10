@@ -140,7 +140,7 @@ MCPサーバー接続情報
    fi
 
 
-| claude.shでClaude Codeを起動し、ExastroのMCPの呼び出し例
+| 上記設定を行い、Claude CodeからExastroのMCPサーバーに接続できた際のイメージ
 
 .. figure:: /images/ja/ai_assistant/reference/claude-code-01.png
    :width: 1000px
