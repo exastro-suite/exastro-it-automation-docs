@@ -214,8 +214,8 @@ RPMパッケージ一覧
 
 
 
-動作確認済み実績
-================
+OS/ソフトウェア要件
+-------------------
 
 | 以下は、動作確認済みのオペレーティングシステムとコンテナプラットフォームのバージョンとなります。
 
@@ -248,3 +248,10 @@ RPMパッケージ一覧
    .. code-block:: shell
 
     sudo dnf downgrade podman-4.9.4-rhel
+
+外部コンポーネント
+------------------
+
+| 以下は、動作確認済みの外部コンポーネント(MariaDB、MySQL、GitLab、Mongo)のバージョンとなります。
+
+..  include:: ../../include/docker_compose_tested_component_version.rst
