@@ -132,6 +132,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#mcp">MCPサーバーのアクセス（認証）について</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id1">MCPサーバー接続情報</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id2">実行手順（サンプル）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#claude-code">参考:Claude Codeとの連携</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mcp_tools.html">MCPツール</a></li>
@@ -160,6 +161,7 @@
 <li><a class="reference internal" href="#mcp">MCPサーバーのアクセス（認証）について</a></li>
 <li><a class="reference internal" href="#id1">MCPサーバー接続情報</a></li>
 <li><a class="reference internal" href="#id2">実行手順（サンプル）</a></li>
+<li><a class="reference internal" href="#claude-code">参考:Claude Codeとの連携</a></li>
 </ul>
 </li>
 </ul>
@@ -274,6 +276,69 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </spa
 <span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASEURL</span><span class="si">}</span><span class="s2">/api/</span><span class="si">${</span><span class="nv">ORG_ID</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">WORKSPACE_ID</span><span class="si">}</span><span class="s2">/mcp"</span>
 </pre></div>
 </div>
+</section>
+<section id="claude-code">
+<h2>参考:Claude Codeとの連携<a class="headerlink" href="#claude-code" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">以下の設定を行うことでClaude CodeからExastroのMCPサーバーを呼び出せるようになります。</div>
+<div class="line">以下のファイルは同一のディレクトリに格納し、claude.shでClaude Codeを起動します。</div>
+<div class="line">また、必要に応じてCLAUDE.mdを作成してください。</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="claude-sh">
+<div class="code-block-caption"><span class="caption-number">リスト 572 </span><span class="caption-text">claude.sh</span><a class="headerlink" href="#claude-sh" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1"># Exastro MCPサーバー接続用のパラメータ</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">BASE_URL</span><span class="o">=</span>http://localhost:8000
+<span class="nb">export</span><span class="w"> </span><span class="nv">ORGANIZATION_ID</span><span class="o">=</span>org1
+<span class="nb">export</span><span class="w"> </span><span class="nv">WORKSPACE_ID</span><span class="o">=</span>ws1
+<span class="c1"># Exastroで払い出したリフレッシュトークン</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">REFRESH_TKN</span><span class="o">=</span><span class="s1">'eyJhbGci...'</span>
+
+<span class="nb">cd</span><span class="w"> </span><span class="k">$(</span>dirname<span class="w"> </span><span class="nv">$0</span><span class="k">)</span>
+claude
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="mcp-json">
+<div class="code-block-caption"><span class="caption-number">リスト 573 </span><span class="caption-text">.mcp.json</span><a class="headerlink" href="#mcp-json" title="Link to this code">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"exastro-mcp"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${BASE_URL}/api/${ORGANIZATION_ID}/workspaces/${WORKSPACE_ID}/mcp"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"headersHelper"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bash ./mcp-headers.sh"</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="mcp-headers-sh">
+<div class="code-block-caption"><span class="caption-number">リスト 574 </span><span class="caption-text">mcp-headers.sh</span><a class="headerlink" href="#mcp-headers-sh" title="Link to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="nv">ACCESS_TOKEN</span><span class="o">=</span><span class="k">$(</span><span class="se">\</span>
+<span class="w">    </span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-d<span class="w"> </span><span class="s2">"client_id=_</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">-api"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-d<span class="w"> </span><span class="s2">"grant_type=refresh_token"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-d<span class="w"> </span><span class="s2">"refresh_token=</span><span class="si">${</span><span class="nv">REFRESH_TKN</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">/auth/realms/</span><span class="si">${</span><span class="nv">ORGANIZATION_ID</span><span class="si">}</span><span class="s2">/protocol/openid-connect/token"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s2">".access_token"</span><span class="w"> </span><span class="se">\</span>
+<span class="k">)</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">ACCESS_TOKEN</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">printf</span><span class="w"> </span><span class="s1">'{"Authorization": "Bearer %s"}\n'</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">ACCESS_TOKEN</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">fi</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">上記設定を行い、Claude CodeからExastroのMCPサーバーに接続できた際のイメージ</div>
+</div>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/claude-code-01.png"><img alt="../../_images/claude-code-01.png" src="../../_images/claude-code-01.png" style="width: 1000px;" />
+</a>
+</figure>
 </section>
 </section>
 

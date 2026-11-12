@@ -136,7 +136,7 @@
 <li class="toctree-l5"><a class="reference internal" href="#conductor">3.2. Conductor実行</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#aws-conductor">3.3. AWSリソースの確認(Conductor実行後)</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#id2">3.4. AWS認証情報管理の設定</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#ms-teams-webhook">3.5. MS Teams Webhookを取得</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#ms-teams-webhook">3.5. MS Teams ワークフローのWebhookを取得</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#ms-teams">3.6. MS Teamsメニューの更新</a></li>
 </ul>
 </li>
@@ -178,7 +178,7 @@
 <li><a class="reference internal" href="#conductor">3.2. Conductor実行</a></li>
 <li><a class="reference internal" href="#aws-conductor">3.3. AWSリソースの確認(Conductor実行後)</a></li>
 <li><a class="reference internal" href="#id2">3.4. AWS認証情報管理の設定</a></li>
-<li><a class="reference internal" href="#ms-teams-webhook">3.5. MS Teams Webhookを取得</a></li>
+<li><a class="reference internal" href="#ms-teams-webhook">3.5. MS Teams ワークフローのWebhookを取得</a></li>
 <li><a class="reference internal" href="#ms-teams">3.6. MS Teamsメニューの更新</a></li>
 </ul>
 </li>
@@ -388,24 +388,37 @@
 </ol>
 </section>
 <section id="ms-teams-webhook">
-<h2><span class="section-number">3.5. </span>MS Teams Webhookを取得<a class="headerlink" href="#ms-teams-webhook" title="Link to this heading">¶</a></h2>
+<h2><span class="section-number">3.5. </span>MS Teams ワークフローのWebhookを取得<a class="headerlink" href="#ms-teams-webhook" title="Link to this heading">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">TeamsのIncoming Webhookは廃止されました。</div>
+<div class="line">Teamsへ通知する場合は、Teamsのワークフローで発行したWebhook URLを設定して下さい。</div>
+</div>
+</div>
 <div class="line-block">
 <div class="line">Teams通知機能を使用しない場合、本手順の実施は不要です。</div>
 <div class="line">以下の手順はTeamsアプリケーション内で実施します。</div>
+<div class="line">例として「Webhook アラートを チャネル に送信する」テンプレートを選択した場合を説明します。</div>
 </div>
 <ol class="arabic">
-<li><p>通知したいチームの「コネクタ」&gt;「Incoming Webhook」を選択する</p></li>
-<li><p>通知するAPIの名前を入力して「作成」を押下する</p></li>
-<li><div class="line-block">
-<div class="line">各オペレーションで通知先が違う場合それぞれのMS Teams Webhookを取得する</div>
-</div>
+<li><p>Teamsのサイドメニューから「…（その他のアプリを表示する）」&gt;「ワークフロー」を選択する</p></li>
+<li><p>テンプレート「Webhook アラートを チャネル に送信する」を選択し、送信先のチーム・チャネルを指定して「保存」ボタンを押下する</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../../../_images/ms_teams_webhook.png"><img alt="../../../_images/ms_teams_webhook.png" src="../../../_images/ms_teams_webhook.png" style="width: 4.72721in; height: 4.6604in;" />
+<a class="reference internal image-reference" href="../../../_images/ms_teams_workflow_webhook_setting.png"><img alt="../../../_images/ms_teams_workflow_webhook_setting.png" src="../../../_images/ms_teams_workflow_webhook_setting.png" style="width: 4.72721in;" />
 </a>
 </figure>
+</li>
+<li><p>「Webhook リンクをコピー」を押下する</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/ms_teams_workflow_webhook_link.png"><img alt="../../../_images/ms_teams_workflow_webhook_link.png" src="../../../_images/ms_teams_workflow_webhook_link.png" style="width: 4.72721in;" />
+</a>
+</figure>
+</li>
+<li><p>各オペレーションで通知先が違う場合それぞれのMS Teams Webhookを取得する</p>
 <div class="line-block">
-<div class="line">参考URL(受信Webhookの取得)：</div>
-<div class="line"><a class="reference external" href="https://docs.microsoft.com/ja-jp/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook">https://docs.microsoft.com/ja-jp/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook</a></div>
+<div class="line">参考URL(受信 Webhook を使用して Teams でメッセージを送信する)：</div>
+<div class="line"><a class="reference external" href="https://support.microsoft.com/ja-jp/workflows/send-messages-in-teams-using-incoming-webhooks">https://support.microsoft.com/ja-jp/workflows/send-messages-in-teams-using-incoming-webhooks</a></div>
 </div>
 </li>
 </ol>

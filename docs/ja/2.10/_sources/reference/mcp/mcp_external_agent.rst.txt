@@ -82,3 +82,66 @@ MCPサーバー接続情報
    -H "Content-Type: application/json" \
    -d '{"jsonrpc": "2.0", "id": 2, "method": "tools/call", "params": {"name": "list-accessible-menus", "arguments": {}}}' \
    "${BASEURL}/api/${ORG_ID}/workspaces/${WORKSPACE_ID}/mcp"
+
+
+参考:Claude Codeとの連携
+========================
+
+| 以下の設定を行うことでClaude CodeからExastroのMCPサーバーを呼び出せるようになります。
+| 以下のファイルは同一のディレクトリに格納し、claude.shでClaude Codeを起動します。
+| また、必要に応じてCLAUDE.mdを作成してください。
+
+.. code-block:: bash
+   :name: claude.sh
+   :caption: claude.sh
+ 
+   #!/bin/bash
+   # Exastro MCPサーバー接続用のパラメータ
+   export BASE_URL=http://localhost:8000
+   export ORGANIZATION_ID=org1
+   export WORKSPACE_ID=ws1
+   # Exastroで払い出したリフレッシュトークン
+   export REFRESH_TKN='eyJhbGci...'
+
+   cd $(dirname $0)
+   claude
+
+.. code-block:: json
+   :name: .mcp.json
+   :caption: .mcp.json
+ 
+   {
+       "mcpServers": {
+           "exastro-mcp": {
+               "type": "http",
+               "url": "${BASE_URL}/api/${ORGANIZATION_ID}/workspaces/${WORKSPACE_ID}/mcp",
+               "headersHelper": "bash ./mcp-headers.sh"
+           }
+       }
+   }
+
+.. code-block:: bash
+   :name: mcp-headers.sh
+   :caption: mcp-headers.sh
+
+   #!/bin/bash
+
+   ACCESS_TOKEN=$(\
+       curl -X POST \
+       -d "client_id=_${ORGANIZATION_ID}-api" \
+       -d "grant_type=refresh_token" \
+       -d "refresh_token=${REFRESH_TKN}" \
+       "${BASE_URL}/auth/realms/${ORGANIZATION_ID}/protocol/openid-connect/token" \
+       | jq -r ".access_token" \
+   )
+
+   if [ -n "${ACCESS_TOKEN}" ]; then 
+       printf '{"Authorization": "Bearer %s"}\n' "${ACCESS_TOKEN}"
+   fi
+
+
+| 上記設定を行い、Claude CodeからExastroのMCPサーバーに接続できた際のイメージ
+
+.. figure:: /images/ja/ai_assistant/reference/claude-code-01.png
+   :width: 1000px
+   :align: left

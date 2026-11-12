@@ -755,6 +755,51 @@
      - | ITAにおけるメニュー一括エクスポート・インポート時の非同期処理中に、データベースから一度に取得するデータ量の上限値
        | リソースプラン設定項目の ita.organization.menu_export_import.buffer_size と比較し、いずれか小さい方が使用されます。
 
+| 以外のシステム全体の設定としては以下の通りです。
+
+.. list-table:: システム全体の設定項目一覧(その他)
+   :widths: 70 30 30 120
+   :header-rows: 1
+
+   * - 項目名
+     - 既定値
+     - 最大値
+     - 説明
+   * - | platform.system.audit_log.cleanup_time
+     - | 04:00
+     - | 無し
+     - | 監査ログのクリーンアップ処理の起動時刻
+   * - | platform.system.audit_log.download_exp_days
+     - | 7
+     - | 無し
+     - | 監査ログのダウンロードファイルの有効期限（日数）
+   * - | platform.system.audit_log.download_file_limit
+     - | 100
+     - | 無し
+     - | 監査ログのダウンロードファイルの最大数
+   * - | platform.system.audit_log.retention_days
+     - | 365
+     - | 無し
+     - | 監査ログの保持日数
+   * - | platform.system.chunk_size
+     - | 102400
+     - | 無し
+     - | Upload / DownloadのChunk Size
+   * - | platform.system.notification.webhook_allowed_hosts
+     - | -
+     - | 無し
+     - | 通知先の許可ホスト
+       | 通知を許可するホスト名もしくはIPをカンマ区切りで複数記入可能、未指定時は"-"を指定します。
+       | ※グローバルIPを持つホストについては設定不要です。（設定無しで許可されます）
+   * - | platform.system.user_export_import.cleanup_time
+     - | 04:01
+     - | 無し
+     - | ユーザーエクスポート・インポートのファイルのクリーンアップ処理の起動時間
+   * - | platform.system.user_export_import.exp_days
+     - | 7
+     - | 無し
+     - | ユーザーエクスポート・インポートのファイルの有効期限（日数）
+
 
 設定値の確認・更新
 ------------------
@@ -814,7 +859,7 @@
      -H "Content-Type: application/json" \
      -H "Authorization: basic ${BASE64_BASIC}" \
      -d  @- \
-     "${BASE_URL}/api/platform/settings/common" | jq '.data[] | select(.key == "ita.system.ansible.execution_limit" or .key == "ita.system.menu_export_import.buffer_size" )'
+     "${BASE_URL}/api/platform/settings/common" | jq '.data[]'
 
 
 | 出力例は下記です。
@@ -826,7 +871,7 @@
   "description": "Maximum number of movement executions for whole of IT automation",
   "key": "ita.system.ansible.execution_limit",
   "value": "25"
- }
+ },
  {
    "description": "Maximum buffer size of menu Export/import for System default (Used for DB fetch size, file stream read size)",
    "key": "ita.system.menu_export_import.buffer_size",
