@@ -36,6 +36,8 @@ Kubernetesクラスター
 - | MariaDB、もしくは、MySQL サーバ
 - | GitLab リポジトリ、および、アカウントの払い出しが可能なこと
 
+..  include:: ../../include/kubernetes_tested_component_version.rst
+
 .. warning::
   | GitLab 環境を同一クラスタに構築する場合は、GitLab のシステム要件に対応する最小要件を追加で用意する必要があります。
   | Database 環境を同一クラスタに構築する場合は、使用する Database のシステム要件に対応する最小要件を定義する必要があります
