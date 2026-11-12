@@ -381,7 +381,7 @@ Ansible Automation Platform
 | ここでは Ansible Automation Platform のシステム要件を記載します。
 
 ..  include:: ../../include/aap_versions.rst
-
+ 
 
 Playbook連携
 ============
