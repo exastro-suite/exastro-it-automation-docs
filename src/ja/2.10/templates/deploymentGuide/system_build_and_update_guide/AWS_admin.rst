@@ -143,24 +143,35 @@ AWS認証情報管理の設定
       :height: 4.6604in
 
 
-MS Teams Webhookを取得
-======================
+MS Teams ワークフローのWebhookを取得
+====================================
+
+.. note::
+   | TeamsのIncoming Webhookは廃止されました。
+   | Teamsへ通知する場合は、Teamsのワークフローで発行したWebhook URLを設定して下さい。
 
 | Teams通知機能を使用しない場合、本手順の実施は不要です。
 | 以下の手順はTeamsアプリケーション内で実施します。
+| 例として「Webhook アラートを チャネル に送信する」テンプレートを選択した場合を説明します。
 
-1. 通知したいチームの「コネクタ」>「Incoming Webhook」を選択する
+1. Teamsのサイドメニューから「…（その他のアプリを表示する）」>「ワークフロー」を選択する
 
-2. 通知するAPIの名前を入力して「作成」を押下する
+2. テンプレート「Webhook アラートを チャネル に送信する」を選択し、送信先のチーム・チャネルを指定して「保存」ボタンを押下する
 
-3. | 各オペレーションで通知先が違う場合それぞれのMS Teams Webhookを取得する
-
-   .. figure:: /images/ja/templates/deploymentGuide/system_build_and_update_guide/AWS_admin/ms_teams_webhook.png
+   .. figure:: /images/ja/templates/deploymentGuide/system_build_and_update_guide/AWS_admin/ms_teams_workflow_webhook_setting.png
       :width: 4.72721in
-      :height: 4.6604in
 
-   | 参考URL(受信Webhookの取得)：
-   | https://docs.microsoft.com/ja-jp/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook
+3. 「Webhook リンクをコピー」を押下する
+
+   .. figure:: /images/ja/templates/deploymentGuide/system_build_and_update_guide/AWS_admin/ms_teams_workflow_webhook_link.png
+      :width: 4.72721in
+
+4. 各オペレーションで通知先が違う場合それぞれのMS Teams Webhookを取得する
+
+
+
+   | 参考URL(受信 Webhook を使用して Teams でメッセージを送信する)：
+   | https://support.microsoft.com/ja-jp/workflows/send-messages-in-teams-using-incoming-webhooks
 
 
 MS Teamsメニューの更新
